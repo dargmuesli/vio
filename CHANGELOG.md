@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/dargmuesli/vio/compare/1.2.0...1.2.1) (2023-04-04)
+
+
+### Bug Fixes
+
+* **package:** export plugins ([43f2a09](https://github.com/dargmuesli/vio/commit/43f2a0957cd090caeb8e71e7c22e6f49a5110327))
+
 # [1.2.0](https://github.com/dargmuesli/vio/compare/1.1.0...1.2.0) (2023-04-04)
 
 
