@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/dargmuesli/vio/compare/1.2.1...1.2.2) (2023-04-04)
+
+
+### Bug Fixes
+
+* **package:** depend on vue-gtag ([d8c8e45](https://github.com/dargmuesli/vio/commit/d8c8e4555749da5e51e76e75994a0afdd2415ac5))
+
 ## [1.2.1](https://github.com/dargmuesli/vio/compare/1.2.0...1.2.1) (2023-04-04)
 
 
