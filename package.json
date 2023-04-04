@@ -12,6 +12,7 @@
   "files": [
     "composables",
     "server",
+    "plugins",
     "utils",
     "nuxt.config.ts"
   ],
