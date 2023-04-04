@@ -13,6 +13,9 @@ devDependencies:
   typescript:
     specifier: 5.0.3
     version: 5.0.3
+  vue-gtag:
+    specifier: 2.0.1
+    version: 2.0.1(vue@3.2.47)
 
 packages:
 
@@ -5961,6 +5964,14 @@ packages:
       semver: 7.3.8
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /vue-gtag@2.0.1(vue@3.2.47):
+    resolution: {integrity: sha512-aM4A58FVL0wV2ptYi+xzAjeg+pQVRyUcfBc5UkXAwQrR4t3WBhor50Izp2I+3Oo7+l+vWJ7u78DGcNzReb8S/A==}
+    peerDependencies:
+      vue: ^3.0.0
+    dependencies:
+      vue: 3.2.47
     dev: true
 
   /vue-router@4.1.6(vue@3.2.47):
