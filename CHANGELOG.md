@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/dargmuesli/vio/compare/1.1.0...1.2.0) (2023-04-04)
+
+
+### Features
+
+* **nuxt:** configure nitro to compress assets ([4b5ddea](https://github.com/dargmuesli/vio/commit/4b5ddead238a229d88d72e4e6109496ef2741de1))
+
 # [1.1.0](https://github.com/dargmuesli/vio/compare/1.0.1...1.1.0) (2023-04-04)
 
 
