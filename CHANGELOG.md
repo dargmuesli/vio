@@ -1,3 +1,12 @@
+# [1.4.0](https://github.com/dargmuesli/vio/compare/1.3.0...1.4.0) (2023-04-11)
+
+
+### Features
+
+* **app:** use site name ([f36de1b](https://github.com/dargmuesli/vio/commit/f36de1bf1c04a3aad851a54018f384eeb4a452f3))
+* **nuxt:** add style and typescript configuration ([0af7b63](https://github.com/dargmuesli/vio/commit/0af7b63b25247928a8d00de04e05e61d9cef710b))
+* **utils:** add constants ([e5465a8](https://github.com/dargmuesli/vio/commit/e5465a865116add971645b5742446af29f83397e))
+
 # [1.3.0](https://github.com/dargmuesli/vio/compare/1.2.3...1.3.0) (2023-04-11)
 
 
