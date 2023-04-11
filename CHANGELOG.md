@@ -1,3 +1,11 @@
+# [1.3.0](https://github.com/dargmuesli/vio/compare/1.2.3...1.3.0) (2023-04-11)
+
+
+### Features
+
+* add components ([7094232](https://github.com/dargmuesli/vio/commit/7094232adcca7fa773693467b70bdb4d2684e0e7))
+* add layout ([d14a70a](https://github.com/dargmuesli/vio/commit/d14a70a0283998a65e74e8b5222cfa2b8e42d2a0))
+
 ## [1.2.3](https://github.com/dargmuesli/vio/compare/1.2.2...1.2.3) (2023-04-11)
 
 
