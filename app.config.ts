@@ -1,14 +1,11 @@
+import { SITE_NAME } from './utils/constants'
+
 export default defineAppConfig({
-  project: {
-    name: 'Vio'
-  }
+  siteName: SITE_NAME,
 })
 
 declare module '@nuxt/schema' {
   interface AppConfigInput {
-    project?: {
-      /** Project name */
-      name?: string
-    }
+    siteName: string
   }
 }
