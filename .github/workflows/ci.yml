@@ -5,8 +5,14 @@ on:
   push:
 
 jobs:
-  semantic-release:
-    name: Semantic Release
+  build:
+    name: Build
+    uses: dargmuesli/github-actions/.github/workflows/docker-ghcr.yml@0.35.6
+    permissions:
+      packages: write
+  release-semantic:
+    needs: build
+    name: Release (semantic)
     uses: dargmuesli/github-actions/.github/workflows/release-semantic.yml@0.35.6
     secrets:
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
