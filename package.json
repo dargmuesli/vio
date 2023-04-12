@@ -17,7 +17,8 @@
     "server",
     "plugins",
     "utils",
-    "nuxt.config.ts"
+    "nuxt.config.ts",
+    "tailwind.config.ts"
   ],
   "main": "./nuxt.config.ts",
   "scripts": {
