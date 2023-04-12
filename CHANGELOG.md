@@ -1,3 +1,15 @@
+# [1.7.0](https://github.com/dargmuesli/vio/compare/1.6.1...1.7.0) (2023-04-12)
+
+
+### Bug Fixes
+
+* **package:** export tailwind configuration ([2eb54a4](https://github.com/dargmuesli/vio/commit/2eb54a4988d97c0c9cce5a2a32621e09dff5acb1))
+
+
+### Features
+
+* add error component ([ffc5205](https://github.com/dargmuesli/vio/commit/ffc5205ff5bed2eeac816760cdef27456d4fed09))
+
 ## [1.6.1](https://github.com/dargmuesli/vio/compare/1.6.0...1.6.1) (2023-04-12)
 
 
