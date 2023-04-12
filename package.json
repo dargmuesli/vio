@@ -24,7 +24,9 @@
     "build": "nuxi build .playground",
     "generate": "nuxi generate .playground",
     "preview": "nuxi preview .playground",
-    "lint": "eslint ."
+    "prepare": "pnpm husky install && pnpm nuxt prepare",
+    "lint": "eslint .",
+    "lint:staged": "pnpm lint-staged"
   },
   "dependencies": {
     "@dargmuesli/nuxt-cookie-control": "5.4.0",
@@ -39,6 +41,7 @@
     "@nuxtjs/eslint-config-typescript": "12.0.0",
     "eslint": "8.38.0",
     "husky": "8.0.3",
+    "lint-staged": "13.2.1",
     "nuxt": "3.4.0",
     "typescript": "5.0.4"
   }
