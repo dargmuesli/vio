@@ -1,3 +1,10 @@
+## [1.7.1](https://github.com/dargmuesli/vio/compare/1.7.0...1.7.1) (2023-04-12)
+
+
+### Bug Fixes
+
+* **package:** export error component ([d758991](https://github.com/dargmuesli/vio/commit/d758991ee5435a48f1a2e422bafde6887991ae50))
+
 # [1.7.0](https://github.com/dargmuesli/vio/compare/1.6.1...1.7.0) (2023-04-12)
 
 
