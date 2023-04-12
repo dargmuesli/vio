@@ -5,16 +5,13 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: {
-        lang: "en", // fallback data to prevent invalid html at generation
+        lang: 'en', // fallback data to prevent invalid html at generation
       },
       titleTemplate: `%s`,
       title: SITE_NAME, // fallback data to prevent invalid html at generation
     },
   },
-  modules: [
-    '@dargmuesli/nuxt-cookie-control',
-    '@nuxtjs/tailwindcss',
-  ],
+  modules: ['@dargmuesli/nuxt-cookie-control', '@nuxtjs/tailwindcss'],
   nitro: {
     compressPublicAssets: true,
   },
@@ -27,4 +24,4 @@ export default defineNuxtConfig({
       },
     },
   },
-});
+})

@@ -2,11 +2,12 @@ import colors from 'tailwindcss/colors'
 import { PluginAPI } from 'tailwindcss/types/config'
 import typographyPlugin from '@tailwindcss/typography'
 
-const heading = (theme: PluginAPI['theme']) => ({
-  fontWeight: theme('fontWeight.bold'),
-  overflow: 'hidden',
-  textOverflow: 'ellipsis',
-} as Record<string, string>)
+const heading = (theme: PluginAPI['theme']) =>
+  ({
+    fontWeight: theme('fontWeight.bold'),
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+  } as Record<string, string>)
 
 const gray = colors.gray // or slate, zinc, neutral, stone
 
