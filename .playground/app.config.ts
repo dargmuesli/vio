@@ -1,5 +1,3 @@
 export default defineAppConfig({
-  project: {
-    name: 'Playground'
-  }
+  siteName: 'Playground'
 })
