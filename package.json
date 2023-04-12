@@ -25,7 +25,7 @@
     "generate": "nuxi generate .playground",
     "preview": "nuxi preview .playground",
     "prepare": "pnpm husky install && pnpm nuxt prepare",
-    "lint": "eslint .",
+    "lint": "eslint --cache --ext .js,.ts,.vue --ignore-path .gitignore .",
     "lint:staged": "pnpm lint-staged"
   },
   "dependencies": {
