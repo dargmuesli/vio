@@ -1,4 +1,9 @@
+import { dirname, join } from 'node:path'
+import { fileURLToPath } from 'node:url'
+
 import { LOCALES, SITE_NAME } from './utils/constants'
+
+const currentDir = dirname(fileURLToPath(import.meta.url))
 
 const BASE_URL =
   'https://' +
@@ -110,5 +115,8 @@ export default defineNuxtConfig({
   },
   site: {
     splash: false,
+  },
+  tailwindcss: {
+    cssPath: join(currentDir, './assets/css/tailwind.css'),
   },
 })

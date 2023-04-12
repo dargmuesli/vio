@@ -10,6 +10,7 @@
   },
   "packageManager": "pnpm@8.2.0",
   "files": [
+    "assets",
     "components",
     "composables",
     "layouts",
