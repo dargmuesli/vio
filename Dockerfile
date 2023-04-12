@@ -163,7 +163,7 @@ COPY --from=lint /srv/app/package.json /tmp/lint/package.json
 # Requires node (cannot be static) as the server acts as backend too.
 
 # Should be the specific version of `node:alpine`.
-FROM node:18.15.0-alpine@sha256:19eaf41f3b8c2ac2f609ac8103f9246a6a6d46716cdbe49103fdb116e55ff0cc AS production
+FROM node:18.15.0-alpine@sha256:a3f2350bd3eb48525f801b57934300c11aa3610086b708854ab1c1045c018519 AS production
 
 ENV NODE_ENV=production
 
