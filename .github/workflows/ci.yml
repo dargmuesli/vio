@@ -8,6 +8,8 @@ jobs:
   build:
     name: Build
     uses: dargmuesli/github-actions/.github/workflows/docker-ghcr.yml@0.35.6
+    permissions:
+      packages: write
   release-semantic:
     needs: build
     name: Release (semantic)
