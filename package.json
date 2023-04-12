@@ -20,11 +20,11 @@
   ],
   "main": "./nuxt.config.ts",
   "scripts": {
-    "dev": "nuxi prepare & nuxi dev .playground",
+    "dev": "nuxi dev .playground",
     "build": "nuxi build .playground",
     "generate": "nuxi generate .playground",
     "preview": "nuxi preview .playground",
-    "prepare": "pnpm husky install && pnpm nuxt prepare",
+    "prepare": "pnpm husky install && pnpm nuxt prepare .playground",
     "lint": "eslint --cache --ext .js,.ts,.vue --ignore-path .gitignore .",
     "lint:staged": "pnpm lint-staged"
   },
