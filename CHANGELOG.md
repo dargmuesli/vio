@@ -1,3 +1,11 @@
+## [1.6.1](https://github.com/dargmuesli/vio/compare/1.6.0...1.6.1) (2023-04-12)
+
+
+### Bug Fixes
+
+* add stylelint ([a7ccb4a](https://github.com/dargmuesli/vio/commit/a7ccb4a73bfd15105a8f4a88519455fc9a06031f))
+* **tailwind:** add assets ([bab95ee](https://github.com/dargmuesli/vio/commit/bab95ee53b5148aa595e5626d228e9344f31ffa6))
+
 # [1.6.0](https://github.com/dargmuesli/vio/compare/1.5.0...1.6.0) (2023-04-12)
 
 
