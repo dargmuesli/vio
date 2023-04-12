@@ -11,12 +11,12 @@ export default defineNuxtConfig({
       title: SITE_NAME, // fallback data to prevent invalid html at generation
     },
   },
-  css: ['@/assets/css/main.css'],
+  modules: [
+    '@dargmuesli/nuxt-cookie-control',
+    '@nuxtjs/tailwindcss',
+  ],
   nitro: {
     compressPublicAssets: true,
-  },
-  postcss: {
-    plugins: { tailwindcss: {}, autoprefixer: {} },
   },
   typescript: {
     shim: false,
