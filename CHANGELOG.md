@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/dargmuesli/vio/compare/1.5.0...1.6.0) (2023-04-12)
+
+
+### Features
+
+* **nuxt:** add modules ([c8bcf1d](https://github.com/dargmuesli/vio/commit/c8bcf1d8556d8e342e6452014d1974788937c224))
+
 # [1.5.0](https://github.com/dargmuesli/vio/compare/1.4.0...1.5.0) (2023-04-12)
 
 
