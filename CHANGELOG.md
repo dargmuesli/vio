@@ -1,3 +1,18 @@
+# [1.5.0](https://github.com/dargmuesli/vio/compare/1.4.0...1.5.0) (2023-04-12)
+
+
+### Bug Fixes
+
+* add docker configuration ([bd86427](https://github.com/dargmuesli/vio/commit/bd864271ba451c08b2fd3b03e7e39757bdf52258))
+* **node:** use v18 ([5a2a2ae](https://github.com/dargmuesli/vio/commit/5a2a2aea91b0cc64a3fb016bc905820d834db58a))
+* **package:** correct prepare ([7e4b910](https://github.com/dargmuesli/vio/commit/7e4b9102f181077a873a1fcef9561d75d639d39b))
+* **playground:** correct app configuration ([9977410](https://github.com/dargmuesli/vio/commit/9977410a84c8901035522c6adde7de0366029e07))
+
+
+### Features
+
+* **css:** add tailwind ([3c2b599](https://github.com/dargmuesli/vio/commit/3c2b5995180edd730cd15b467de7981128fa530f))
+
 # [1.4.0](https://github.com/dargmuesli/vio/compare/1.3.0...1.4.0) (2023-04-11)
 
 
