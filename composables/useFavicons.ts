@@ -1,4 +1,6 @@
 export const useFavicons = () => {
+  const appConfig = useAppConfig()
+
   useHead({
     link: [
       {
@@ -28,7 +30,7 @@ export const useFavicons = () => {
         rel: 'manifest',
       },
       {
-        color: '#202020',
+        color: appConfig.themeColor,
         href: '/assets/static/favicon/safari-pinned-tab.svg?v=bOXMwoKlJr',
         rel: 'mask-icon',
       },

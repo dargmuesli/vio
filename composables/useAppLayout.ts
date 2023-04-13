@@ -1,4 +1,5 @@
 export const useAppLayout = () => {
+  const appConfig = useAppConfig()
   const head = useLocaleHead({ addSeoAttributes: true })
 
   useHead(head.value)
@@ -9,16 +10,14 @@ export const useAppLayout = () => {
     },
     meta: [
       {
-        content: '#202020',
+        content: appConfig.themeColor,
         name: 'msapplication-TileColor',
       },
       {
-        content: '#202020',
+        content: appConfig.themeColor,
         name: 'theme-color',
       },
     ],
   })
-  useSeoMeta({
-    twitterSite: '@dargmuesli',
-  })
+  useSeoMeta(appConfig.seoMeta)
 }

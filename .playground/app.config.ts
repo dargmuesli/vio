@@ -1,3 +1,3 @@
 export default defineAppConfig({
-  siteName: 'Playground'
+  siteName: 'Playground',
 })
