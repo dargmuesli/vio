@@ -15,6 +15,7 @@
     "composables",
     "layouts",
     "server",
+    "pages",
     "plugins",
     "utils",
     "error.vue",
