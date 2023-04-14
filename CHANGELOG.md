@@ -1,3 +1,10 @@
+## [1.8.2](https://github.com/dargmuesli/vio/compare/1.8.1...1.8.2) (2023-04-14)
+
+
+### Bug Fixes
+
+* move app and layout to components ([64729ff](https://github.com/dargmuesli/vio/commit/64729ff74d6e2c0019e9c8f2d36eef896ae68ca0))
+
 ## [1.8.1](https://github.com/dargmuesli/vio/compare/1.8.0...1.8.1) (2023-04-14)
 
 
