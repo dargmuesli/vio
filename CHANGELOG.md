@@ -1,3 +1,13 @@
+# [1.8.0](https://github.com/dargmuesli/vio/compare/1.7.1...1.8.0) (2023-04-14)
+
+
+### Features
+
+* add app.vue content ([a2e9684](https://github.com/dargmuesli/vio/commit/a2e9684d86758eed4b358aa6944b4e062627b3b9))
+* add composables ([0dc4e1f](https://github.com/dargmuesli/vio/commit/0dc4e1f06e6b0fce57041b023754b534d111c912))
+* add pages ([dc32d3c](https://github.com/dargmuesli/vio/commit/dc32d3c078ba44a9c525bb279d9f71c377e9bfc5))
+* move custom properties to app configuration ([c39d210](https://github.com/dargmuesli/vio/commit/c39d210439f9a7199f9eb7e15a1507f32ebc91f0))
+
 ## [1.7.1](https://github.com/dargmuesli/vio/compare/1.7.0...1.7.1) (2023-04-12)
 
 
