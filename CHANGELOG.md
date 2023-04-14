@@ -1,3 +1,10 @@
+## [1.8.1](https://github.com/dargmuesli/vio/compare/1.8.0...1.8.1) (2023-04-14)
+
+
+### Bug Fixes
+
+* **package:** export app ([0b69fd0](https://github.com/dargmuesli/vio/commit/0b69fd0a370d4b88ac44bb32147707e4aee69afc))
+
 # [1.8.0](https://github.com/dargmuesli/vio/compare/1.7.1...1.8.0) (2023-04-14)
 
 
