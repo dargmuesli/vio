@@ -15,6 +15,7 @@
     "composables",
     "layouts",
     "server",
+    "pages",
     "plugins",
     "utils",
     "error.vue",
@@ -35,7 +36,7 @@
     "lint:ts": "pnpm nuxt typecheck"
   },
   "dependencies": {
-    "@dargmuesli/nuxt-cookie-control": "5.4.0",
+    "@dargmuesli/nuxt-cookie-control": "5.6.0",
     "@http-util/status-i18n": "0.6.2",
     "@nuxtjs/html-validator": "1.2.4",
     "@nuxtjs/i18n": "8.0.0-beta.10",
@@ -45,8 +46,8 @@
     "vue-gtag": "2.0.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "17.5.1",
-    "@commitlint/config-conventional": "17.4.4",
+    "@commitlint/cli": "17.6.0",
+    "@commitlint/config-conventional": "17.6.0",
     "@intlify/eslint-plugin-vue-i18n": "2.0.0",
     "@nuxtjs/eslint-config-typescript": "12.0.0",
     "eslint": "8.38.0",
