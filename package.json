@@ -19,7 +19,6 @@
     "plugins",
     "utils",
     "app.config.ts",
-    "app.vue",
     "error.vue",
     "nuxt.config.ts",
     "tailwind.config.ts"
