@@ -1,3 +1,15 @@
+# [1.9.0](https://github.com/dargmuesli/vio/compare/1.8.3...1.9.0) (2023-04-24)
+
+
+### Bug Fixes
+
+* **deps:** update dargmuesli/github-actions action to v0.37.2 ([db61101](https://github.com/dargmuesli/vio/commit/db61101ee99bcc1b2108d9c859ca7da591089763))
+
+
+### Features
+
+* **components:** add button ([68e9fd2](https://github.com/dargmuesli/vio/commit/68e9fd2af681cbd19a63ff61eeb8eb9faf437a26))
+
 ## [1.8.3](https://github.com/dargmuesli/vio/compare/1.8.2...1.8.3) (2023-04-22)
 
 
