@@ -34,7 +34,7 @@
     "lint:js": "eslint --cache --ext .js,.ts,.vue --ignore-path .gitignore .",
     "lint:staged": "pnpm lint-staged",
     "lint:style": "stylelint **/*.{vue,css} --ignore-path .gitignore",
-    "lint:ts": "pnpm nuxt typecheck"
+    "lint:ts": "nuxt typecheck"
   },
   "dependencies": {
     "@dargmuesli/nuxt-cookie-control": "5.7.0",
