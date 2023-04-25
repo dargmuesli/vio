@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/dargmuesli/vio/compare/1.9.0...1.10.0) (2023-04-25)
+
+
+### Features
+
+* **util:** add toast ([7f506a5](https://github.com/dargmuesli/vio/commit/7f506a5274a912e80c68c3e6272853dbaf61e6ca))
+
 # [1.9.0](https://github.com/dargmuesli/vio/compare/1.8.3...1.9.0) (2023-04-24)
 
 
