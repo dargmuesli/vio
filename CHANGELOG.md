@@ -1,3 +1,11 @@
+## [1.10.3](https://github.com/dargmuesli/vio/compare/1.10.2...1.10.3) (2023-04-25)
+
+
+### Bug Fixes
+
+* **modal:** show modal in bottom right ([2cef74d](https://github.com/dargmuesli/vio/commit/2cef74d91c2d42fa7485464cdfe0d0e288ef9e86))
+* **nuxt:** add sweetalert alias ([16a349f](https://github.com/dargmuesli/vio/commit/16a349f0406216b70ad1d0d1343f4b2e6bf4f9fb))
+
 ## [1.10.2](https://github.com/dargmuesli/vio/compare/1.10.1...1.10.2) (2023-04-25)
 
 
