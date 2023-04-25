@@ -12,6 +12,9 @@ const BASE_URL =
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
+  alias: {
+    sweetalert2: 'sweetalert2', // TODO: remove (https://github.com/nuxt/nuxt/issues/19426)
+  },
   app: {
     head: {
       htmlAttrs: {
