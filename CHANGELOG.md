@@ -1,3 +1,10 @@
+## [1.10.1](https://github.com/dargmuesli/vio/compare/1.10.0...1.10.1) (2023-04-25)
+
+
+### Bug Fixes
+
+* **typescript:** enable es module interoperability ([577d361](https://github.com/dargmuesli/vio/commit/577d361958c883cbf9523dd9bc189b13937028fe))
+
 # [1.10.0](https://github.com/dargmuesli/vio/compare/1.9.0...1.10.0) (2023-04-25)
 
 
