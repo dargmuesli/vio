@@ -45,7 +45,7 @@ export default defineNuxtConfig({
     strict: true,
     tsConfig: {
       compilerOptions: {
-        esModuleInterop: true,
+        esModuleInterop: true, // needed for sweetalert2 e.g.
       },
       vueCompilerOptions: {
         htmlAttributes: [], // https://github.com/johnsoncodehk/volar/issues/1970#issuecomment-1276994634
