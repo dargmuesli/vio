@@ -44,9 +44,6 @@ export default defineNuxtConfig({
     shim: false,
     strict: true,
     tsConfig: {
-      compilerOptions: {
-        esModuleInterop: true,
-      },
       vueCompilerOptions: {
         htmlAttributes: [], // https://github.com/johnsoncodehk/volar/issues/1970#issuecomment-1276994634
       },
