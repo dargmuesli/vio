@@ -1,3 +1,11 @@
+## [1.10.2](https://github.com/dargmuesli/vio/compare/1.10.1...1.10.2) (2023-04-25)
+
+
+### Bug Fixes
+
+* revert "chore(nuxt): add compiler option explanation comment" ([df91db3](https://github.com/dargmuesli/vio/commit/df91db31b163b47e72aed2e72942c621513c0f1a))
+* revert "fix(typescript): enable es module interoperability" ([02669bc](https://github.com/dargmuesli/vio/commit/02669bc04877bdf6350dfa5051698320752f4585))
+
 ## [1.10.1](https://github.com/dargmuesli/vio/compare/1.10.0...1.10.1) (2023-04-25)
 
 
