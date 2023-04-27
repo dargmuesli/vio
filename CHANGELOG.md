@@ -1,3 +1,52 @@
+## [1.10.3](https://github.com/dargmuesli/vio/compare/1.10.2...1.10.3) (2023-04-25)
+
+
+### Bug Fixes
+
+* **modal:** show modal in bottom right ([2cef74d](https://github.com/dargmuesli/vio/commit/2cef74d91c2d42fa7485464cdfe0d0e288ef9e86))
+* **nuxt:** add sweetalert alias ([16a349f](https://github.com/dargmuesli/vio/commit/16a349f0406216b70ad1d0d1343f4b2e6bf4f9fb))
+
+## [1.10.2](https://github.com/dargmuesli/vio/compare/1.10.1...1.10.2) (2023-04-25)
+
+
+### Bug Fixes
+
+* revert "chore(nuxt): add compiler option explanation comment" ([df91db3](https://github.com/dargmuesli/vio/commit/df91db31b163b47e72aed2e72942c621513c0f1a))
+* revert "fix(typescript): enable es module interoperability" ([02669bc](https://github.com/dargmuesli/vio/commit/02669bc04877bdf6350dfa5051698320752f4585))
+
+## [1.10.1](https://github.com/dargmuesli/vio/compare/1.10.0...1.10.1) (2023-04-25)
+
+
+### Bug Fixes
+
+* **typescript:** enable es module interoperability ([577d361](https://github.com/dargmuesli/vio/commit/577d361958c883cbf9523dd9bc189b13937028fe))
+
+# [1.10.0](https://github.com/dargmuesli/vio/compare/1.9.0...1.10.0) (2023-04-25)
+
+
+### Features
+
+* **util:** add toast ([7f506a5](https://github.com/dargmuesli/vio/commit/7f506a5274a912e80c68c3e6272853dbaf61e6ca))
+
+# [1.9.0](https://github.com/dargmuesli/vio/compare/1.8.3...1.9.0) (2023-04-24)
+
+
+### Bug Fixes
+
+* **deps:** update dargmuesli/github-actions action to v0.37.2 ([db61101](https://github.com/dargmuesli/vio/commit/db61101ee99bcc1b2108d9c859ca7da591089763))
+
+
+### Features
+
+* **components:** add button ([68e9fd2](https://github.com/dargmuesli/vio/commit/68e9fd2af681cbd19a63ff61eeb8eb9faf437a26))
+
+## [1.8.3](https://github.com/dargmuesli/vio/compare/1.8.2...1.8.3) (2023-04-22)
+
+
+### Bug Fixes
+
+* schedule release ([81c5213](https://github.com/dargmuesli/vio/commit/81c52135f779e3646a581158c67e91986bcbf82a))
+
 ## [1.8.2](https://github.com/dargmuesli/vio/compare/1.8.1...1.8.2) (2023-04-14)
 
 
