@@ -2,8 +2,8 @@ lockfileVersion: '6.0'
 
 dependencies:
   '@dargmuesli/nuxt-cookie-control':
-    specifier: 5.7.0
-    version: 5.7.0(webpack@5.81.0)
+    specifier: 5.7.1
+    version: 5.7.1(webpack@5.81.0)
   '@http-util/status-i18n':
     specifier: 0.6.2
     version: 0.6.2
@@ -615,13 +615,13 @@ packages:
     dependencies:
       postcss-selector-parser: 6.0.12
 
-  /@dargmuesli/nuxt-cookie-control@5.7.0(webpack@5.81.0):
-    resolution: {integrity: sha512-SnNT72XNynnwYI2zIT2mhM3i0/pfJHPcRAq0GE+gK60bOHHemzlh4bO8bHowR7w2fTs573P5qejHKTduo/UnkA==}
+  /@dargmuesli/nuxt-cookie-control@5.7.1(webpack@5.81.0):
+    resolution: {integrity: sha512-Gk3y3lRE4KGd2mAEVSNBcnBkoJBnF5aS3XSXstmgZ/zj1ncBKEwRofSQO/AXbS7KQkwPo/LoVQxdRH0fgJzI4g==}
     dependencies:
-      '@nuxt/kit': 3.4.2
+      '@nuxt/kit': 3.4.3
       '@sindresorhus/slugify': 2.2.0
       css-vars-ponyfill: 2.4.8
-      js-cookie: 3.0.1
+      js-cookie: 3.0.5
       string-replace-loader: 3.1.0(webpack@5.81.0)
     transitivePeerDependencies:
       - rollup
@@ -5406,11 +5406,6 @@ packages:
   /jiti@1.18.2:
     resolution: {integrity: sha512-QAdOptna2NYiSSpv0O/BwoHBSmz4YhpzJHyi+fnMRTXFjp7B8i/YG5Z8IfusxB1ufjcD2Sre1F3R+nX3fvy7gg==}
     hasBin: true
-
-  /js-cookie@3.0.1:
-    resolution: {integrity: sha512-+0rgsUXZu4ncpPxRL+lNEptWMOWl9etvPHc/koSRp6MPwpRYAhmk0dUG00J4bxVV3r9uUzfo24wW0knS07SKSw==}
-    engines: {node: '>=12'}
-    dev: false
 
   /js-cookie@3.0.5:
     resolution: {integrity: sha512-cEiJEAEoIbWfCZYKWhVwFuvPX1gETRYPw6LlaTKoxD3s2AkXzkCjnp6h0V77ozyqj0jakteJ4YqDJT830+lVGw==}
