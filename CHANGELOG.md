@@ -1,3 +1,24 @@
+# [2.0.0-beta.1](https://github.com/dargmuesli/vio/compare/1.10.4...2.0.0-beta.1) (2023-05-07)
+
+
+### Bug Fixes
+
+* **i18n:** enable browser language detection ([b04b862](https://github.com/dargmuesli/vio/commit/b04b8624eede0d9d9d0dcd45b308ba615f1138af))
+
+
+* feat(legal)!: extract components ([853a00e](https://github.com/dargmuesli/vio/commit/853a00e4051d2da13cf2412dffb9cec403e733cd))
+
+
+### Features
+
+* **legal:** optimize components ([cc32b55](https://github.com/dargmuesli/vio/commit/cc32b5500c99495cca0f22fee28319cdcaa50470))
+* **prose:** remove scheme variant ([457a259](https://github.com/dargmuesli/vio/commit/457a259b66928650f9a7d2ee2a8827667e755a30))
+
+
+### BREAKING CHANGES
+
+* changes to app configuration required
+
 ## [1.10.4](https://github.com/dargmuesli/vio/compare/1.10.3...1.10.4) (2023-05-06)
 
 
