@@ -1,3 +1,16 @@
+# [1.11.0-beta.1](https://github.com/dargmuesli/vio/compare/1.10.4...1.11.0-beta.1) (2023-05-07)
+
+
+### Bug Fixes
+
+* **i18n:** enable browser language detection ([b04b862](https://github.com/dargmuesli/vio/commit/b04b8624eede0d9d9d0dcd45b308ba615f1138af))
+
+
+### Features
+
+* **legal:** extract components ([da9669b](https://github.com/dargmuesli/vio/commit/da9669b013969d1bc1c60d316d006e86b34a238a))
+* **prose:** remove scheme variant ([457a259](https://github.com/dargmuesli/vio/commit/457a259b66928650f9a7d2ee2a8827667e755a30))
+
 ## [1.10.4](https://github.com/dargmuesli/vio/compare/1.10.3...1.10.4) (2023-05-06)
 
 
