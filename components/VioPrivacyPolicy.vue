@@ -1,365 +1,427 @@
 <template>
   <div class="vio-prose">
     <h1>{{ title }}</h1>
-    <div v-if="isEnabled">
-      <section v-if="isEnabled.summary">
-        <h2>{{ t('summary') }}</h2>
+    <ol v-if="isEnabled">
+      <li v-if="isEnabled.summary">
+        <section>
+          <h2>{{ t('summary') }}</h2>
 
-        <section v-if="isEnabled.summary.generalNotes">
-          <h3>{{ t('generalNotesTitle') }}</h3>
-          <p>{{ t('generalNotesDescription') }}</p>
-        </section>
-
-        <section v-if="isEnabled.summary.dataCollection">
-          <h3>{{ t('dataCollection') }}</h3>
-
-          <section v-if="isEnabled.summary.dataCollection.liability">
-            <h4>{{ t('dataCollectionLiabilityTitle') }}</h4>
-            <p>{{ t('dataCollectionLiabilityDescription') }}</p>
+          <section v-if="isEnabled.summary.generalNotes">
+            <h3>{{ t('generalNotesTitle') }}</h3>
+            <p>{{ t('generalNotesDescription') }}</p>
           </section>
 
-          <section v-if="isEnabled.summary.dataCollection.method">
-            <h4>{{ t('dataCollectionMethodTitle') }}</h4>
-            <p>{{ t('dataCollectionMethodDescription1') }}</p>
-            <p>{{ t('dataCollectionMethodDescription2') }}</p>
+          <section v-if="isEnabled.summary.dataCollection">
+            <h3>{{ t('dataCollection') }}</h3>
+
+            <section v-if="isEnabled.summary.dataCollection.liability">
+              <h4>{{ t('dataCollectionLiabilityTitle') }}</h4>
+              <p>{{ t('dataCollectionLiabilityDescription') }}</p>
+            </section>
+
+            <section v-if="isEnabled.summary.dataCollection.method">
+              <h4>{{ t('dataCollectionMethodTitle') }}</h4>
+              <p>{{ t('dataCollectionMethodDescription1') }}</p>
+              <p>{{ t('dataCollectionMethodDescription2') }}</p>
+            </section>
+
+            <section v-if="isEnabled.summary.dataCollection.use">
+              <h4>{{ t('dataCollectionUseTitle') }}</h4>
+              <p>{{ t('dataCollectionUseDescription') }}</p>
+            </section>
+
+            <section v-if="isEnabled.summary.dataCollection.rights">
+              <h4>{{ t('dataCollectionRightsTitle') }}</h4>
+              <p>{{ t('dataCollectionRightsDescription1') }}</p>
+              <p>{{ t('dataCollectionRightsDescription2') }}</p>
+            </section>
           </section>
 
-          <section v-if="isEnabled.summary.dataCollection.use">
-            <h4>{{ t('dataCollectionUseTitle') }}</h4>
-            <p>{{ t('dataCollectionUseDescription') }}</p>
-          </section>
-
-          <section v-if="isEnabled.summary.dataCollection.rights">
-            <h4>{{ t('dataCollectionRightsTitle') }}</h4>
-            <p>{{ t('dataCollectionRightsDescription1') }}</p>
-            <p>{{ t('dataCollectionRightsDescription2') }}</p>
+          <section v-if="isEnabled.summary.dataCollectionTools">
+            <h3>{{ t('dataCollectionToolsTitle') }}</h3>
+            <p>{{ t('dataCollectionToolsDescription1') }}</p>
+            <p>{{ t('dataCollectionToolsDescription2') }}</p>
           </section>
         </section>
+      </li>
+      <li v-if="isEnabled.hostingCdn">
+        <section>
+          <h2>{{ t('hostingCdn') }}</h2>
 
-        <section v-if="isEnabled.summary.dataCollectionTools">
-          <h3>{{ t('dataCollectionToolsTitle') }}</h3>
-          <p>{{ t('dataCollectionToolsDescription1') }}</p>
-          <p>{{ t('dataCollectionToolsDescription2') }}</p>
-        </section>
-      </section>
+          <section v-if="isEnabled.hostingCdn.external">
+            <h3>{{ t('hostingCdnExternalTitle') }}</h3>
+            <p>{{ t('hostingCdnExternalDescription1') }}</p>
+            <p>{{ t('hostingCdnExternalDescription2') }}</p>
+            <p>{{ t('hostingCdnExternalDescription3') }}</p>
+            <p>{{ t('hostingCdnExternalDescription4') }}</p>
+            <address>
+              <slot
+                v-if="$slots.hostingCdnExternalAddress"
+                name="hostingCdnExternalAddress"
+              />
+              <i18n-t v-else keypath="hostingCdnExternalAddress">
+                <template #br>
+                  <br />
+                </template>
+                <template #city>
+                  {{ appConfig.privacyPolicy.hostingCdn.external.address.city }}
+                </template>
+                <template #name>
+                  {{ appConfig.privacyPolicy.hostingCdn.external.address.name }}
+                </template>
+                <template #street>
+                  {{
+                    appConfig.privacyPolicy.hostingCdn.external.address.street
+                  }}
+                </template>
+              </i18n-t>
+            </address>
 
-      <section v-if="isEnabled.hostingCdn">
-        <h2>{{ t('hostingCdn') }}</h2>
-
-        <section v-if="isEnabled.hostingCdn.external">
-          <h3>{{ t('hostingCdnExternalTitle') }}</h3>
-          <p>{{ t('hostingCdnExternalDescription1') }}</p>
-          <p>{{ t('hostingCdnExternalDescription2') }}</p>
-          <p>{{ t('hostingCdnExternalDescription3') }}</p>
-          <p>{{ t('hostingCdnExternalDescription4') }}</p>
-          <address>
-            <slot name="hostingCdnExternalAddress" />
-          </address>
-
-          <section v-if="isEnabled.hostingCdn.external.processingContract">
-            <h4>{{ t('hostingCdnExternalProcessingContractTitle') }}</h4>
-            <p>{{ t('hostingCdnExternalProcessingContractDescription') }}</p>
+            <section v-if="isEnabled.hostingCdn.external.processingContract">
+              <h4>{{ t('hostingCdnExternalProcessingContractTitle') }}</h4>
+              <p>{{ t('hostingCdnExternalProcessingContractDescription') }}</p>
+            </section>
           </section>
         </section>
-      </section>
+      </li>
+      <li v-if="isEnabled.mandatoryInfo">
+        <section>
+          <h2>{{ t('mandatoryInfo') }}</h2>
 
-      <section v-if="isEnabled.mandatoryInfo">
-        <h2>{{ t('mandatoryInfo') }}</h2>
-
-        <section v-if="isEnabled.mandatoryInfo.privacy">
-          <h3>{{ t('mandatoryInfoPrivacyTitle') }}</h3>
-          <p>{{ t('mandatoryInfoPrivacyDescription1') }}</p>
-          <p>{{ t('mandatoryInfoPrivacyDescription2') }}</p>
-          <p>{{ t('mandatoryInfoPrivacyDescription3') }}</p>
-        </section>
-
-        <section v-if="isEnabled.mandatoryInfo.responsible">
-          <h3>{{ t('mandatoryInfoResponsibleTitle') }}</h3>
-          <p>{{ t('mandatoryInfoResponsibleDescription1') }}</p>
-          <address>
-            <slot name="mandatoryInfoResponsibleAddress" />
-          </address>
-          <p>{{ t('mandatoryInfoResponsibleDescription2') }}</p>
-        </section>
-
-        <section v-if="isEnabled.mandatoryInfo.storageDuration">
-          <h3>{{ t('mandatoryInfoStorageDurationTitle') }}</h3>
-          <p>{{ t('mandatoryInfoStorageDurationDescription') }}</p>
-        </section>
-
-        <section v-if="isEnabled.mandatoryInfo.dataSharingUsa">
-          <h3>{{ t('mandatoryInfoDataSharingUsaTitle') }}</h3>
-          <p>{{ t('mandatoryInfoDataSharingUsaDescription') }}</p>
-        </section>
-
-        <section v-if="isEnabled.mandatoryInfo.consentRevocation">
-          <h3>{{ t('mandatoryInfoConsentRevocationTitle') }}</h3>
-          <p>{{ t('mandatoryInfoConsentRevocationDescription') }}</p>
-        </section>
-
-        <section v-if="isEnabled.mandatoryInfo.consentRevocationSpecial">
-          <h3>{{ t('mandatoryInfoConsentRevocationSpecialTitle') }}</h3>
-          <p class="font-bold">
-            {{ t('mandatoryInfoConsentRevocationSpecialDescription1') }}
-          </p>
-          <p class="font-bold">
-            {{ t('mandatoryInfoConsentRevocationSpecialDescription2') }}
-          </p>
-        </section>
-
-        <section v-if="isEnabled.mandatoryInfo.complaint">
-          <h3>{{ t('mandatoryInfoComplaintTitle') }}</h3>
-          <p>{{ t('mandatoryInfoComplaintDescription') }}</p>
-        </section>
-
-        <section v-if="isEnabled.mandatoryInfo.portability">
-          <h3>{{ t('mandatoryInfoPortabilityTitle') }}</h3>
-          <p>{{ t('mandatoryInfoPortabilityDescription') }}</p>
-        </section>
-
-        <section v-if="isEnabled.mandatoryInfo.sslTls">
-          <h3>{{ t('mandatoryInfoSslTlsTitle') }}</h3>
-          <p>{{ t('mandatoryInfoSslTlsDescription1') }}</p>
-          <p>{{ t('mandatoryInfoSslTlsDescription2') }}</p>
-        </section>
-
-        <section v-if="isEnabled.mandatoryInfo.dataChange">
-          <h3>{{ t('mandatoryInfoDataChangeTitle') }}</h3>
-          <p>{{ t('mandatoryInfoDataChangeDescription') }}</p>
-        </section>
-
-        <section v-if="isEnabled.mandatoryInfo.processingRestriction">
-          <h3>{{ t('mandatoryInfoProcessingRestrictionTitle') }}</h3>
-          <p>{{ t('mandatoryInfoProcessingRestrictionDescription1') }}</p>
-          <ul>
-            <li>{{ t('mandatoryInfoProcessingRestrictionList1') }}</li>
-            <li>{{ t('mandatoryInfoProcessingRestrictionList2') }}</li>
-            <li>{{ t('mandatoryInfoProcessingRestrictionList3') }}</li>
-            <li>{{ t('mandatoryInfoProcessingRestrictionList4') }}</li>
-          </ul>
-          <p>{{ t('mandatoryInfoProcessingRestrictionDescription2') }}</p>
-        </section>
-
-        <section v-if="isEnabled.mandatoryInfo.opposition">
-          <h3>{{ t('mandatoryInfoOppositionTitle') }}</h3>
-          <p>{{ t('mandatoryInfoOppositionDescription') }}</p>
-        </section>
-      </section>
-
-      <section v-if="isEnabled.dataAcquisition">
-        <h2>{{ t('dataAcquisition') }}</h2>
-
-        <section v-if="isEnabled.dataAcquisition.cookies">
-          <h3>{{ t('dataAcquisitionCookiesTitle') }}</h3>
-          <p>{{ t('dataAcquisitionCookiesDescription1') }}</p>
-          <p>{{ t('dataAcquisitionCookiesDescription2') }}</p>
-          <p>{{ t('dataAcquisitionCookiesDescription3') }}</p>
-          <p>{{ t('dataAcquisitionCookiesDescription4') }}</p>
-          <p>{{ t('dataAcquisitionCookiesDescription5') }}</p>
-          <p>{{ t('dataAcquisitionCookiesDescription6') }}</p>
-        </section>
-
-        <section v-if="isEnabled.dataAcquisition.log">
-          <h3>{{ t('dataAcquisitionLogTitle') }}</h3>
-          <p>{{ t('dataAcquisitionLogDescription1') }}</p>
-          <ul>
-            <li>{{ t('dataAcquisitionLogItem1') }}</li>
-            <li>{{ t('dataAcquisitionLogItem2') }}</li>
-            <li>{{ t('dataAcquisitionLogItem3') }}</li>
-            <li>{{ t('dataAcquisitionLogItem4') }}</li>
-            <li>{{ t('dataAcquisitionLogItem5') }}</li>
-            <li>{{ t('dataAcquisitionLogItem6') }}</li>
-          </ul>
-          <p>{{ t('dataAcquisitionLogDescription2') }}</p>
-          <p>{{ t('dataAcquisitionLogDescription3') }}</p>
-        </section>
-
-        <section v-if="isEnabled.dataAcquisition.contactForm">
-          <h3>{{ t('dataAcquisitionContactFormTitle') }}</h3>
-          <p>{{ t('dataAcquisitionContactFormDescription1') }}</p>
-          <p>{{ t('dataAcquisitionContactFormDescription2') }}</p>
-          <p>{{ t('dataAcquisitionContactFormDescription3') }}</p>
-        </section>
-
-        <section v-if="isEnabled.dataAcquisition.contactExternal">
-          <h3>{{ t('dataAcquisitionContactExternalTitle') }}</h3>
-          <p>{{ t('dataAcquisitionContactExternalDescription1') }}</p>
-          <p>{{ t('dataAcquisitionContactExternalDescription2') }}</p>
-          <p>{{ t('dataAcquisitionContactExternalDescription3') }}</p>
-        </section>
-
-        <section v-if="isEnabled.dataAcquisition.comments">
-          <h3>{{ t('dataAcquisitionCommentsTitle') }}</h3>
-          <p>{{ t('dataAcquisitionCommentsDescription') }}</p>
-
-          <section v-if="isEnabled.dataAcquisition.comments.ip">
-            <h4>{{ t('dataAcquisitionCommentsIpTitle') }}</h4>
-            <p>{{ t('dataAcquisitionCommentsIpDescription') }}</p>
+          <section v-if="isEnabled.mandatoryInfo.privacy">
+            <h3>{{ t('mandatoryInfoPrivacyTitle') }}</h3>
+            <p>{{ t('mandatoryInfoPrivacyDescription1') }}</p>
+            <p>{{ t('mandatoryInfoPrivacyDescription2') }}</p>
+            <p>{{ t('mandatoryInfoPrivacyDescription3') }}</p>
           </section>
 
-          <section v-if="isEnabled.dataAcquisition.comments.subscribe">
-            <h4>{{ t('dataAcquisitionCommentsSubscribeTitle') }}</h4>
-            <p>{{ t('dataAcquisitionCommentsSubscribeDescription') }}</p>
+          <section v-if="isEnabled.mandatoryInfo.responsible">
+            <h3>{{ t('mandatoryInfoResponsibleTitle') }}</h3>
+            <p>{{ t('mandatoryInfoResponsibleDescription1') }}</p>
+            <address>
+              <slot
+                v-if="$slots.mandatoryInfoResponsibleAddress"
+                name="mandatoryInfoResponsibleAddress"
+              />
+              <i18n-t v-else keypath="mandatoryInfoResponsibleAddress">
+                <template #br>
+                  <br />
+                </template>
+                <template #city>
+                  {{
+                    appConfig.privacyPolicy.mandatoryInfo.responsible.address
+                      .city
+                  }}
+                </template>
+                <template #email>
+                  {{
+                    t('email', {
+                      email:
+                        appConfig.privacyPolicy.mandatoryInfo.responsible
+                          .address.email,
+                    })
+                  }}
+                </template>
+                <template #name>
+                  {{
+                    appConfig.privacyPolicy.mandatoryInfo.responsible.address
+                      .name
+                  }}
+                </template>
+                <template #street>
+                  {{
+                    appConfig.privacyPolicy.mandatoryInfo.responsible.address
+                      .street
+                  }}
+                </template>
+              </i18n-t>
+            </address>
+            <p>{{ t('mandatoryInfoResponsibleDescription2') }}</p>
           </section>
 
-          <section v-if="isEnabled.dataAcquisition.comments.storageDuration">
-            <h4>{{ t('dataAcquisitionCommentsStorageDurationTitle') }}</h4>
-            <p>{{ t('dataAcquisitionCommentsStorageDurationDescription') }}</p>
+          <section v-if="isEnabled.mandatoryInfo.storageDuration">
+            <h3>{{ t('mandatoryInfoStorageDurationTitle') }}</h3>
+            <p>{{ t('mandatoryInfoStorageDurationDescription') }}</p>
           </section>
 
-          <section v-if="isEnabled.dataAcquisition.comments.legalBasis">
-            <h4>{{ t('dataAcquisitionCommentsLegalBasisTitle') }}</h4>
-            <p>{{ t('dataAcquisitionCommentsLegalBasisDescription') }}</p>
+          <section v-if="isEnabled.mandatoryInfo.dataSharingUsa">
+            <h3>{{ t('mandatoryInfoDataSharingUsaTitle') }}</h3>
+            <p>{{ t('mandatoryInfoDataSharingUsaDescription') }}</p>
+          </section>
+
+          <section v-if="isEnabled.mandatoryInfo.consentRevocation">
+            <h3>{{ t('mandatoryInfoConsentRevocationTitle') }}</h3>
+            <p>{{ t('mandatoryInfoConsentRevocationDescription') }}</p>
+          </section>
+
+          <section v-if="isEnabled.mandatoryInfo.consentRevocationSpecial">
+            <h3>{{ t('mandatoryInfoConsentRevocationSpecialTitle') }}</h3>
+            <p class="font-bold">
+              {{ t('mandatoryInfoConsentRevocationSpecialDescription1') }}
+            </p>
+            <p class="font-bold">
+              {{ t('mandatoryInfoConsentRevocationSpecialDescription2') }}
+            </p>
+          </section>
+
+          <section v-if="isEnabled.mandatoryInfo.complaint">
+            <h3>{{ t('mandatoryInfoComplaintTitle') }}</h3>
+            <p>{{ t('mandatoryInfoComplaintDescription') }}</p>
+          </section>
+
+          <section v-if="isEnabled.mandatoryInfo.portability">
+            <h3>{{ t('mandatoryInfoPortabilityTitle') }}</h3>
+            <p>{{ t('mandatoryInfoPortabilityDescription') }}</p>
+          </section>
+
+          <section v-if="isEnabled.mandatoryInfo.sslTls">
+            <h3>{{ t('mandatoryInfoSslTlsTitle') }}</h3>
+            <p>{{ t('mandatoryInfoSslTlsDescription1') }}</p>
+            <p>{{ t('mandatoryInfoSslTlsDescription2') }}</p>
+          </section>
+
+          <section v-if="isEnabled.mandatoryInfo.dataChange">
+            <h3>{{ t('mandatoryInfoDataChangeTitle') }}</h3>
+            <p>{{ t('mandatoryInfoDataChangeDescription') }}</p>
+          </section>
+
+          <section v-if="isEnabled.mandatoryInfo.processingRestriction">
+            <h3>{{ t('mandatoryInfoProcessingRestrictionTitle') }}</h3>
+            <p>{{ t('mandatoryInfoProcessingRestrictionDescription1') }}</p>
+            <ul>
+              <li>{{ t('mandatoryInfoProcessingRestrictionList1') }}</li>
+              <li>{{ t('mandatoryInfoProcessingRestrictionList2') }}</li>
+              <li>{{ t('mandatoryInfoProcessingRestrictionList3') }}</li>
+              <li>{{ t('mandatoryInfoProcessingRestrictionList4') }}</li>
+            </ul>
+            <p>{{ t('mandatoryInfoProcessingRestrictionDescription2') }}</p>
+          </section>
+
+          <section v-if="isEnabled.mandatoryInfo.opposition">
+            <h3>{{ t('mandatoryInfoOppositionTitle') }}</h3>
+            <p>{{ t('mandatoryInfoOppositionDescription') }}</p>
           </section>
         </section>
-      </section>
+      </li>
+      <li v-if="isEnabled.dataAcquisition">
+        <section>
+          <h2>{{ t('dataAcquisition') }}</h2>
 
-      <section v-if="isEnabled.newsletter">
-        <h2>{{ t('newsletter') }}</h2>
+          <section v-if="isEnabled.dataAcquisition.cookies">
+            <h3>{{ t('dataAcquisitionCookiesTitle') }}</h3>
+            <p>{{ t('dataAcquisitionCookiesDescription1') }}</p>
+            <p>{{ t('dataAcquisitionCookiesDescription2') }}</p>
+            <p>{{ t('dataAcquisitionCookiesDescription3') }}</p>
+            <p>{{ t('dataAcquisitionCookiesDescription4') }}</p>
+            <p>{{ t('dataAcquisitionCookiesDescription5') }}</p>
+            <p>{{ t('dataAcquisitionCookiesDescription6') }}</p>
+          </section>
 
-        <section v-if="isEnabled.newsletter.data">
-          <h3>{{ t('newsletterDataTitle') }}</h3>
-          <p>{{ t('newsletterDataDescription1') }}</p>
-          <p>{{ t('newsletterDataDescription2') }}</p>
-          <p>{{ t('newsletterDataDescription3') }}</p>
+          <section v-if="isEnabled.dataAcquisition.log">
+            <h3>{{ t('dataAcquisitionLogTitle') }}</h3>
+            <p>{{ t('dataAcquisitionLogDescription1') }}</p>
+            <ul>
+              <li>{{ t('dataAcquisitionLogItem1') }}</li>
+              <li>{{ t('dataAcquisitionLogItem2') }}</li>
+              <li>{{ t('dataAcquisitionLogItem3') }}</li>
+              <li>{{ t('dataAcquisitionLogItem4') }}</li>
+              <li>{{ t('dataAcquisitionLogItem5') }}</li>
+              <li>{{ t('dataAcquisitionLogItem6') }}</li>
+            </ul>
+            <p>{{ t('dataAcquisitionLogDescription2') }}</p>
+            <p>{{ t('dataAcquisitionLogDescription3') }}</p>
+          </section>
 
-          <i18n-t keypath="newsletterDataDescription4" tag="p">
-            <template #strong>
-              <strong>{{ t('newsletterDataDescription4s') }}</strong>
-            </template>
-          </i18n-t>
+          <section v-if="isEnabled.dataAcquisition.contactForm">
+            <h3>{{ t('dataAcquisitionContactFormTitle') }}</h3>
+            <p>{{ t('dataAcquisitionContactFormDescription1') }}</p>
+            <p>{{ t('dataAcquisitionContactFormDescription2') }}</p>
+            <p>{{ t('dataAcquisitionContactFormDescription3') }}</p>
+          </section>
+
+          <section v-if="isEnabled.dataAcquisition.contactExternal">
+            <h3>{{ t('dataAcquisitionContactExternalTitle') }}</h3>
+            <p>{{ t('dataAcquisitionContactExternalDescription1') }}</p>
+            <p>{{ t('dataAcquisitionContactExternalDescription2') }}</p>
+            <p>{{ t('dataAcquisitionContactExternalDescription3') }}</p>
+          </section>
+
+          <section v-if="isEnabled.dataAcquisition.comments">
+            <h3>{{ t('dataAcquisitionCommentsTitle') }}</h3>
+            <p>{{ t('dataAcquisitionCommentsDescription') }}</p>
+
+            <section v-if="isEnabled.dataAcquisition.comments.ip">
+              <h4>{{ t('dataAcquisitionCommentsIpTitle') }}</h4>
+              <p>{{ t('dataAcquisitionCommentsIpDescription') }}</p>
+            </section>
+
+            <section v-if="isEnabled.dataAcquisition.comments.subscribe">
+              <h4>{{ t('dataAcquisitionCommentsSubscribeTitle') }}</h4>
+              <p>{{ t('dataAcquisitionCommentsSubscribeDescription') }}</p>
+            </section>
+
+            <section v-if="isEnabled.dataAcquisition.comments.storageDuration">
+              <h4>{{ t('dataAcquisitionCommentsStorageDurationTitle') }}</h4>
+              <p>
+                {{ t('dataAcquisitionCommentsStorageDurationDescription') }}
+              </p>
+            </section>
+
+            <section v-if="isEnabled.dataAcquisition.comments.legalBasis">
+              <h4>{{ t('dataAcquisitionCommentsLegalBasisTitle') }}</h4>
+              <p>{{ t('dataAcquisitionCommentsLegalBasisDescription') }}</p>
+            </section>
+          </section>
         </section>
-      </section>
+      </li>
+      <li v-if="isEnabled.newsletter">
+        <section>
+          <h2>{{ t('newsletter') }}</h2>
 
-      <section v-if="isEnabled.pluginsTools">
-        <h2>{{ t('pluginsTools') }}</h2>
+          <section v-if="isEnabled.newsletter.data">
+            <h3>{{ t('newsletterDataTitle') }}</h3>
+            <p>{{ t('newsletterDataDescription1') }}</p>
+            <p>{{ t('newsletterDataDescription2') }}</p>
+            <p>{{ t('newsletterDataDescription3') }}</p>
 
-        <section v-if="isEnabled.pluginsTools.youTube">
-          <h3>{{ t('pluginsToolsYouTubeTitle') }}</h3>
-          <p>{{ t('pluginsToolsYouTubeDescription1') }}</p>
-          <p>{{ t('pluginsToolsYouTubeDescription2') }}</p>
-          <p>{{ t('pluginsToolsYouTubeDescription3') }}</p>
-          <p>{{ t('pluginsToolsYouTubeDescription4') }}</p>
-          <p>{{ t('pluginsToolsYouTubeDescription5') }}</p>
-          <p>{{ t('pluginsToolsYouTubeDescription6') }}</p>
-          <i18n-t keypath="pluginsToolsYouTubeDescription7" tag="p">
-            <template #linkPrivacy>
-              <VioLink
-                :aria-label="t('pluginsToolsYouTubeDescription7s')"
-                :to="t('pluginsToolsYouTubeDescription7s')"
-              >
-                {{ t('pluginsToolsYouTubeDescription7s') }}
-              </VioLink>
-            </template>
-          </i18n-t>
+            <i18n-t keypath="newsletterDataDescription4" tag="p">
+              <template #strong>
+                <strong>{{ t('newsletterDataDescription4s') }}</strong>
+              </template>
+            </i18n-t>
+          </section>
         </section>
+      </li>
+      <li v-if="isEnabled.pluginsTools">
+        <section>
+          <h2>{{ t('pluginsTools') }}</h2>
 
-        <section v-if="isEnabled.pluginsTools.googleWebFonts">
-          <h3>{{ t('pluginsToolsGoogleWebFontsTitle') }}</h3>
-          <p>{{ t('pluginsToolsGoogleWebFontsDescription1') }}</p>
-          <i18n-t keypath="pluginsToolsGoogleWebFontsDescription2" tag="p">
-            <template #linkFaq>
-              <VioLink
-                :aria-label="t('pluginsToolsGoogleWebFontsDescription2s1')"
-                :to="t('pluginsToolsGoogleWebFontsDescription2s1')"
-              >
-                {{ t('pluginsToolsGoogleWebFontsDescription2s1') }}
-              </VioLink>
-            </template>
-            <template #linkPrivacy>
-              <VioLink
-                :aria-label="t('pluginsToolsGoogleWebFontsDescription2s2')"
-                :to="t('pluginsToolsGoogleWebFontsDescription2s2')"
-              >
-                {{ t('pluginsToolsGoogleWebFontsDescription2s2') }}
-              </VioLink>
-            </template>
-          </i18n-t>
+          <section v-if="isEnabled.pluginsTools.youTube">
+            <h3>{{ t('pluginsToolsYouTubeTitle') }}</h3>
+            <p>{{ t('pluginsToolsYouTubeDescription1') }}</p>
+            <p>{{ t('pluginsToolsYouTubeDescription2') }}</p>
+            <p>{{ t('pluginsToolsYouTubeDescription3') }}</p>
+            <p>{{ t('pluginsToolsYouTubeDescription4') }}</p>
+            <p>{{ t('pluginsToolsYouTubeDescription5') }}</p>
+            <p>{{ t('pluginsToolsYouTubeDescription6') }}</p>
+            <i18n-t keypath="pluginsToolsYouTubeDescription7" tag="p">
+              <template #linkPrivacy>
+                <VioLink
+                  :aria-label="t('pluginsToolsYouTubeDescription7s')"
+                  :to="t('pluginsToolsYouTubeDescription7s')"
+                >
+                  {{ t('pluginsToolsYouTubeDescription7s') }}
+                </VioLink>
+              </template>
+            </i18n-t>
+          </section>
+
+          <section v-if="isEnabled.pluginsTools.googleWebFonts">
+            <h3>{{ t('pluginsToolsGoogleWebFontsTitle') }}</h3>
+            <p>{{ t('pluginsToolsGoogleWebFontsDescription1') }}</p>
+            <i18n-t keypath="pluginsToolsGoogleWebFontsDescription2" tag="p">
+              <template #linkFaq>
+                <VioLink
+                  :aria-label="t('pluginsToolsGoogleWebFontsDescription2s1')"
+                  :to="t('pluginsToolsGoogleWebFontsDescription2s1')"
+                >
+                  {{ t('pluginsToolsGoogleWebFontsDescription2s1') }}
+                </VioLink>
+              </template>
+              <template #linkPrivacy>
+                <VioLink
+                  :aria-label="t('pluginsToolsGoogleWebFontsDescription2s2')"
+                  :to="t('pluginsToolsGoogleWebFontsDescription2s2')"
+                >
+                  {{ t('pluginsToolsGoogleWebFontsDescription2s2') }}
+                </VioLink>
+              </template>
+            </i18n-t>
+          </section>
+
+          <section v-if="isEnabled.pluginsTools.fontAwesome">
+            <h3>{{ t('pluginsToolsFontAwesomeTitle') }}</h3>
+            <p>{{ t('pluginsToolsFontAwesomeDescription1') }}</p>
+            <i18n-t keypath="pluginsToolsFontAwesomeDescription2" tag="p">
+              <template #linkPrivacy>
+                <VioLink
+                  :aria-label="t('pluginsToolsFontAwesomeDescription2s')"
+                  :to="t('pluginsToolsFontAwesomeDescription2s')"
+                >
+                  {{ t('pluginsToolsFontAwesomeDescription2s') }}
+                </VioLink>
+              </template>
+            </i18n-t>
+          </section>
+
+          <section v-if="isEnabled.pluginsTools.googleMaps">
+            <h3>{{ t('pluginsToolsGoogleMapsTitle') }}</h3>
+            <p>{{ t('pluginsToolsGoogleMapsDescription1') }}</p>
+            <p>{{ t('pluginsToolsGoogleMapsDescription2') }}</p>
+            <p>{{ t('pluginsToolsGoogleMapsDescription3') }}</p>
+            <i18n-t keypath="pluginsToolsGoogleMapsDescription4" tag="p">
+              <template #linkGdpr>
+                <VioLink
+                  :aria-label="t('pluginsToolsGoogleMapsDescription4s1')"
+                  to="https://privacy.google.com/businesses/gdprcontrollerterms/"
+                >
+                  {{ t('pluginsToolsGoogleMapsDescription4s1') }}
+                </VioLink>
+              </template>
+              <template #linkGdprScss>
+                <VioLink
+                  :aria-label="t('pluginsToolsGoogleMapsDescription4s1')"
+                  to="https://privacy.google.com/businesses/gdprcontrollerterms/sccs/"
+                >
+                  {{ t('pluginsToolsGoogleMapsDescription4s2') }}
+                </VioLink>
+              </template>
+            </i18n-t>
+            <i18n-t keypath="pluginsToolsGoogleMapsDescription5" tag="p">
+              <template #linkPrivacy>
+                <VioLink
+                  :aria-label="t('pluginsToolsGoogleMapsDescription5s')"
+                  :to="t('pluginsToolsGoogleMapsDescription5s')"
+                >
+                  {{ t('pluginsToolsGoogleMapsDescription5s') }}
+                </VioLink>
+              </template>
+            </i18n-t>
+          </section>
+
+          <section v-if="isEnabled.pluginsTools.googleReCaptcha">
+            <h3>{{ t('pluginsToolsGoogleReCaptchaTitle') }}</h3>
+            <p>{{ t('pluginsToolsGoogleReCaptchaDescription1') }}</p>
+            <p>{{ t('pluginsToolsGoogleReCaptchaDescription2') }}</p>
+            <p>{{ t('pluginsToolsGoogleReCaptchaDescription3') }}</p>
+            <p>{{ t('pluginsToolsGoogleReCaptchaDescription4') }}</p>
+            <i18n-t keypath="pluginsToolsGoogleReCaptchaDescription5" tag="p">
+              <template #linkPrivacy>
+                <VioLink
+                  :aria-label="t('pluginsToolsGoogleReCaptchaDescription5s1')"
+                  :to="t('pluginsToolsGoogleReCaptchaDescription5s1')"
+                >
+                  {{ t('pluginsToolsGoogleReCaptchaDescription5s1') }}
+                </VioLink>
+              </template>
+              <template #linkTerms>
+                <VioLink
+                  :aria-label="t('pluginsToolsGoogleReCaptchaDescription5s2')"
+                  :to="t('pluginsToolsGoogleReCaptchaDescription5s2')"
+                >
+                  {{ t('pluginsToolsGoogleReCaptchaDescription5s2') }}
+                </VioLink>
+              </template>
+            </i18n-t>
+          </section>
         </section>
-
-        <section v-if="isEnabled.pluginsTools.fontAwesome">
-          <h3>{{ t('pluginsToolsFontAwesomeTitle') }}</h3>
-          <p>{{ t('pluginsToolsFontAwesomeDescription1') }}</p>
-          <i18n-t keypath="pluginsToolsFontAwesomeDescription2" tag="p">
-            <template #linkPrivacy>
-              <VioLink
-                :aria-label="t('pluginsToolsFontAwesomeDescription2s')"
-                :to="t('pluginsToolsFontAwesomeDescription2s')"
-              >
-                {{ t('pluginsToolsFontAwesomeDescription2s') }}
-              </VioLink>
-            </template>
-          </i18n-t>
-        </section>
-
-        <section v-if="isEnabled.pluginsTools.googleMaps">
-          <h3>{{ t('pluginsToolsGoogleMapsTitle') }}</h3>
-          <p>{{ t('pluginsToolsGoogleMapsDescription1') }}</p>
-          <p>{{ t('pluginsToolsGoogleMapsDescription2') }}</p>
-          <p>{{ t('pluginsToolsGoogleMapsDescription3') }}</p>
-          <i18n-t keypath="pluginsToolsGoogleMapsDescription4" tag="p">
-            <template #linkGdpr>
-              <VioLink
-                :aria-label="t('pluginsToolsGoogleMapsDescription4s1')"
-                to="https://privacy.google.com/businesses/gdprcontrollerterms/"
-              >
-                {{ t('pluginsToolsGoogleMapsDescription4s1') }}
-              </VioLink>
-            </template>
-            <template #linkGdprScss>
-              <VioLink
-                :aria-label="t('pluginsToolsGoogleMapsDescription4s1')"
-                to="https://privacy.google.com/businesses/gdprcontrollerterms/sccs/"
-              >
-                {{ t('pluginsToolsGoogleMapsDescription4s2') }}
-              </VioLink>
-            </template>
-          </i18n-t>
-          <i18n-t keypath="pluginsToolsGoogleMapsDescription5" tag="p">
-            <template #linkPrivacy>
-              <VioLink
-                :aria-label="t('pluginsToolsGoogleMapsDescription5s')"
-                :to="t('pluginsToolsGoogleMapsDescription5s')"
-              >
-                {{ t('pluginsToolsGoogleMapsDescription5s') }}
-              </VioLink>
-            </template>
-          </i18n-t>
-        </section>
-
-        <section v-if="isEnabled.pluginsTools.googleReCaptcha">
-          <h3>{{ t('pluginsToolsGoogleReCaptchaTitle') }}</h3>
-          <p>{{ t('pluginsToolsGoogleReCaptchaDescription1') }}</p>
-          <p>{{ t('pluginsToolsGoogleReCaptchaDescription2') }}</p>
-          <p>{{ t('pluginsToolsGoogleReCaptchaDescription3') }}</p>
-          <p>{{ t('pluginsToolsGoogleReCaptchaDescription4') }}</p>
-          <i18n-t keypath="pluginsToolsGoogleReCaptchaDescription5" tag="p">
-            <template #linkPrivacy>
-              <VioLink
-                :aria-label="t('pluginsToolsGoogleReCaptchaDescription5s1')"
-                :to="t('pluginsToolsGoogleReCaptchaDescription5s1')"
-              >
-                {{ t('pluginsToolsGoogleReCaptchaDescription5s1') }}
-              </VioLink>
-            </template>
-            <template #linkTerms>
-              <VioLink
-                :aria-label="t('pluginsToolsGoogleReCaptchaDescription5s2')"
-                :to="t('pluginsToolsGoogleReCaptchaDescription5s2')"
-              >
-                {{ t('pluginsToolsGoogleReCaptchaDescription5s2') }}
-              </VioLink>
-            </template>
-          </i18n-t>
-        </section>
-
-        <p>
-          <VioLink :aria-label="t('source')" to="https://www.e-recht24.de">
-            {{ t('source') }}
-          </VioLink>
-        </p>
-      </section>
-    </div>
+      </li>
+    </ol>
+    <p>
+      <VioLink :aria-label="t('source')" to="https://www.e-recht24.de">
+        {{ t('source') }}
+      </VioLink>
+    </p>
   </div>
 </template>
 
@@ -433,6 +495,7 @@ withDefaults(defineProps<Props>(), {
   }),
 })
 
+const appConfig = useAppConfig()
 const { t } = useI18n()
 
 // data
@@ -444,7 +507,7 @@ useSeoMeta({ title })
 
 <i18n lang="yaml">
 de:
-  dataAcquisition: 4. Datenerfassung auf dieser Website
+  dataAcquisition: Datenerfassung auf dieser Website
   dataAcquisitionCommentsDescription: Für die Kommentarfunktion auf dieser Seite werden neben Ihrem Kommentar auch Angaben zum Zeitpunkt der Erstellung des Kommentars, Ihre E-Mail-Adresse und, wenn Sie nicht anonym posten, der von Ihnen gewählte Nutzername gespeichert.
   dataAcquisitionCommentsIpDescription: Unsere Kommentarfunktion speichert die IP-Adressen der Nutzer, die Kommentare verfassen. Da wir Kommentare auf dieser Website nicht vor der Freischaltung prüfen, benötigen wir diese Daten, um im Falle von Rechtsverletzungen wie Beleidigungen oder Propaganda gegen den Verfasser vorgehen zu können.
   dataAcquisitionCommentsIpTitle: Speicherung der IP-Adresse
@@ -494,9 +557,11 @@ de:
   dataCollectionToolsTitle: Analyse-Tools und Tools von Drittanbietern
   dataCollectionUseDescription: Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Andere Daten können zur Analyse Ihres Nutzerverhaltens verwendet werden.
   dataCollectionUseTitle: Wofür nutzen wir Ihre Daten?
+  email: 'E-Mail: {email}'
   generalNotesDescription: Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Ausführliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgeführten Datenschutzerklärung.
   generalNotesTitle: Allgemeine Hinweise
-  hostingCdn: 2. Hosting und Content Delivery Networks (CDN)
+  hostingCdn: Hosting und Content Delivery Networks (CDN)
+  hostingCdnExternalAddress: '{name}{br}{street}{br}{city}'
   hostingCdnExternalDescription1: Diese Website wird bei einem externen Dienstleister gehostet (Hoster). Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den Servern des Hosters gespeichert. Hierbei kann es sich v. a. um IP-Adressen, Kontaktanfragen, Meta- und Kommunikationsdaten, Vertragsdaten, Kontaktdaten, Namen, Websitezugriffe und sonstige Daten, die über eine Website generiert werden, handeln.
   hostingCdnExternalDescription2: Der Einsatz des Hosters erfolgt zum Zwecke der Vertragserfüllung gegenüber unseren potenziellen und bestehenden Kunden (Art. 6 Abs. 1 lit. b DSGVO) und im Interesse einer sicheren, schnellen und effizienten Bereitstellung unseres Online-Angebots durch einen professionellen Anbieter (Art. 6 Abs. 1 lit. f DSGVO).
   hostingCdnExternalDescription3: Unser Hoster wird Ihre Daten nur insoweit verarbeiten, wie dies zur Erfüllung seiner Leistungspflichten erforderlich ist und unsere Weisungen in Bezug auf diese Daten befolgen.
@@ -504,7 +569,7 @@ de:
   hostingCdnExternalProcessingContractDescription: Um die datenschutzkonforme Verarbeitung zu gewährleisten, haben wir einen Vertrag über Auftragsverarbeitung mit unserem Hoster geschlossen.
   hostingCdnExternalProcessingContractTitle: Abschluss eines Vertrages über Auftragsverarbeitung
   hostingCdnExternalTitle: Externes Hosting
-  mandatoryInfo: 3. Allgemeine Hinweise und Pflichtinformationen
+  mandatoryInfo: Allgemeine Hinweise und Pflichtinformationen
   mandatoryInfoComplaintDescription: Im Falle von Verstößen gegen die DSGVO steht den Betroffenen ein Beschwerderecht bei einer Aufsichtsbehörde, insbesondere in dem Mitgliedstaat ihres gewöhnlichen Aufenthalts, ihres Arbeitsplatzes oder des Orts des mutmaßlichen Verstoßes zu. Das Beschwerderecht besteht unbeschadet anderweitiger verwaltungsrechtlicher oder gerichtlicher Rechtsbehelfe.
   mandatoryInfoComplaintTitle: Beschwerderecht bei der zuständigen Aufsichtsbehörde
   mandatoryInfoConsentRevocationDescription: Viele Datenverarbeitungsvorgänge sind nur mit Ihrer ausdrücklichen Einwilligung möglich. Sie können eine bereits erteilte Einwilligung jederzeit widerrufen. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf unberührt.
@@ -531,6 +596,7 @@ de:
   mandatoryInfoProcessingRestrictionList3: Wenn wir Ihre personenbezogenen Daten nicht mehr benötigen, Sie sie jedoch zur Ausübung, Verteidigung oder Geltendmachung von Rechtsansprüchen benötigen, haben Sie das Recht, statt der Löschung die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.
   mandatoryInfoProcessingRestrictionList4: Wenn Sie einen Widerspruch nach Art. 21 Abs. 1 DSGVO eingelegt haben, muss eine Abwägung zwischen Ihren und unseren Interessen vorgenommen werden. Solange noch nicht feststeht, wessen Interessen überwiegen, haben Sie das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.
   mandatoryInfoProcessingRestrictionTitle: Recht auf Einschränkung der Verarbeitung
+  mandatoryInfoResponsibleAddress: '{name}{br}{street}{br}{city}{br}{br}{email}'
   mandatoryInfoResponsibleDescription1: 'Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:'
   mandatoryInfoResponsibleDescription2: Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z. B. Namen, E-Mail-Adressen o. Ä.) entscheidet.
   mandatoryInfoResponsibleTitle: Hinweis zur verantwortlichen Stelle
@@ -539,14 +605,14 @@ de:
   mandatoryInfoSslTlsTitle: SSL- bzw. TLS-Verschlüsselung
   mandatoryInfoStorageDurationDescription: Soweit innerhalb dieser Datenschutzerklärung keine speziellere Speicherdauer genannt wurde, verbleiben Ihre personenbezogenen Daten bei uns, bis der Zweck für die Datenverarbeitung entfällt. Wenn Sie ein berechtigtes Löschersuchen geltend machen oder eine Einwilligung zur Datenverarbeitung widerrufen, werden Ihre Daten gelöscht, sofern wir keinen anderen rechtlich zulässigen Gründe für die Speicherung Ihrer personenbezogenen Daten haben (z.B. steuer- oder handelsrechtliche Aufbewahrungsfristen); im letztgenannten Fall erfolgt die Löschung nach Fortfall dieser Gründe.
   mandatoryInfoStorageDurationTitle: Speicherdauer
-  newsletter: 5. Newsletter
+  newsletter: Newsletter
   newsletterDataDescription1: Wenn Sie den auf der Website angebotenen Newsletter beziehen möchten, benötigen wir von Ihnen eine E-Mail-Adresse sowie Informationen, welche uns die Überprüfung gestatten, dass Sie der Inhaber der angegebenen E-Mail-Adresse sind und mit dem Empfang des Newsletters einverstanden sind. Weitere Daten werden nicht bzw. nur auf freiwilliger Basis erhoben. Diese Daten verwenden wir ausschließlich für den Versand der angeforderten Informationen und geben diese nicht an Dritte weiter.
   newsletterDataDescription2: Die Verarbeitung der in das Newsletteranmeldeformular eingegebenen Daten erfolgt ausschließlich auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Die erteilte Einwilligung zur Speicherung der Daten, der E-Mail-Adresse sowie deren Nutzung zum Versand des Newsletters können Sie jederzeit widerrufen, etwa über den „Austragen“-Link im Newsletter. Die Rechtmäßigkeit der bereits erfolgten Datenverarbeitungsvorgänge bleibt vom Widerruf unberührt.
   newsletterDataDescription3: Die von Ihnen zum Zwecke des Newsletter-Bezugs bei uns hinterlegten Daten werden von uns bis zu Ihrer Austragung aus dem Newsletter bei uns bzw. dem Newsletterdiensteanbieter gespeichert und nach der Abbestellung des Newsletters aus der Newsletterverteilerliste gelöscht. Daten, die zu anderen Zwecken bei uns gespeichert wurden bleiben hiervon unberührt.
   newsletterDataDescription4s: Sie können der Speicherung widersprechen, sofern Ihre Interessen unser berechtigtes Interesse überwiegen.
   newsletterDataDescription4: Nach Ihrer Austragung aus der Newsletterverteilerliste wird Ihre E-Mail-Adresse bei uns bzw. dem Newsletterdiensteanbieter ggf. in einer Blacklist gespeichert, um künftige Mailings zu verhindern. Die Daten aus der Blacklist werden nur für diesen Zweck verwendet und nicht mit anderen Daten zusammengeführt. Dies dient sowohl Ihrem Interesse als auch unserem Interesse an der Einhaltung der gesetzlichen Vorgaben beim Versand von Newslettern (berechtigtes Interesse im Sinne des Art. 6 Abs. 1 lit. f DSGVO). Die Speicherung in der Blacklist ist zeitlich nicht befristet. {strong}
   newsletterDataTitle: Newsletterdaten
-  pluginsTools: 6. Plugins und Tools
+  pluginsTools: Plugins und Tools
   pluginsToolsFontAwesomeDescription1: Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten Font Awesome. Font Awesome ist lokal installiert. Eine Verbindung zu Servern von Fonticons, Inc. findet dabei nicht statt.
   pluginsToolsFontAwesomeDescription2s: https://fontawesome.com/privacy
   pluginsToolsFontAwesomeDescription2: 'Weitere Informationen zu Font Awesome finden Sie und in der Datenschutzerklärung für Font Awesome unter: {linkPrivacy}.'
@@ -583,10 +649,10 @@ de:
   pluginsToolsYouTubeDescription7: 'Weitere Informationen über Datenschutz bei YouTube finden Sie in deren Datenschutzerklärung unter: {linkPrivacy}.'
   pluginsToolsYouTubeTitle: YouTube mit erweitertem Datenschutz
   source: Quelle
-  summary: 1. Datenschutz auf einen Blick
+  summary: Datenschutz auf einen Blick
   title: Datenschutzerklärung
 en:
-  dataAcquisition: 4. Data collection on this website
+  dataAcquisition: Data collection on this website
   dataAcquisitionCommentsDescription: For the comment function on this page, in addition to your comment, information on the time of creation of the comment, your e-mail address and, if you do not post anonymously, the username you have chosen will be stored.
   dataAcquisitionCommentsIpDescription: Our comment function stores the IP addresses of users who post comments. Since we do not check comments on this website before they are activated, we need this data to be able to take action against the author in the event of legal violations such as insults or propaganda.
   dataAcquisitionCommentsIpTitle: IP address storage
@@ -636,9 +702,11 @@ en:
   dataCollectionToolsTitle: Third-party analytics and tools
   dataCollectionUseDescription: Some of the data is collected to ensure error-free provision of the website. Other data may be used to analyze your user behavior.
   dataCollectionUseTitle: What do we use your data for?
+  email: 'Email: {email}'
   generalNotesDescription: The following notices provide a simple overview of what happens to your personal data when you visit this website. Personal data is any data that can be used to identify you personally. For detailed information on the subject of data protection, please refer to our privacy policy listed below this text.
   generalNotesTitle: General notes
-  hostingCdn: 2. Hosting and Content Delivery Networks (CDN)
+  hostingCdn: Hosting and Content Delivery Networks (CDN)
+  hostingCdnExternalAddress: '{name}{br}{street}{br}{city}'
   hostingCdnExternalDescription1: This website is hosted by an external service provider (hoster). The personal data collected on this website is stored on the hoster's servers. This may include IP addresses, contact requests, meta and communication data, contract data, contact data, names, website accesses and other data generated via a website.
   hostingCdnExternalDescription2: The hoster is used for the purpose of fulfilling contracts with our potential and existing customers (Art. 6 para. 1 lit. b GDPR) and in the interest of a secure, fast and efficient provision of our online offer by a professional provider (Art. 6 para. 1 lit. f GDPR).
   hostingCdnExternalDescription3: Our hoster will only process your data to the extent necessary to fulfill its service obligations and will follow our instructions regarding this data.
@@ -646,7 +714,7 @@ en:
   hostingCdnExternalProcessingContractDescription: To ensure data protection-compliant processing, we have concluded an order processing contract with our hoster.
   hostingCdnExternalProcessingContractTitle: Conclusion of a contract for order processing
   hostingCdnExternalTitle: External hosting
-  mandatoryInfo: 3. General notes and mandatory information
+  mandatoryInfo: General notes and mandatory information
   mandatoryInfoComplaintDescription: In the event of breaches of the GDPR, data subjects shall have a right of appeal to a supervisory authority, in particular in the Member State of their habitual residence, their place of work or the place of the alleged breach. The right of appeal is without prejudice to other administrative or judicial remedies.
   mandatoryInfoComplaintTitle: Right of appeal to the competent supervisory authority
   mandatoryInfoConsentRevocationDescription: Many data processing operations are only possible with your express consent. You can revoke consent you have already given at any time. The legality of the data processing carried out until the revocation remains unaffected by the revocation.
@@ -673,6 +741,7 @@ en:
   mandatoryInfoProcessingRestrictionList3: If we no longer need your personal data, but you need it to exercise, defend or enforce legal claims, you have the right to request restriction of the processing of your personal data instead of deletion.
   mandatoryInfoProcessingRestrictionList4: If you have lodged an objection pursuant to Art. 21 (1) GDPR, a balancing of your and our interests must be carried out. As long as it has not yet been determined whose interests prevail, you have the right to request the restriction of the processing of your personal data.
   mandatoryInfoProcessingRestrictionTitle: Right to restriction of processing
+  mandatoryInfoResponsibleAddress: '{name}{br}{street}{br}{city}{br}{br}{email}'
   mandatoryInfoResponsibleDescription1: 'The responsible party for data processing on this website is:'
   mandatoryInfoResponsibleDescription2: The controller is the natural or legal person who alone or jointly with others determines the purposes and means of the processing of personal data (e.g. names, e-mail addresses, etc.).
   mandatoryInfoResponsibleTitle: Note on the responsible body
@@ -681,14 +750,14 @@ en:
   mandatoryInfoSslTlsTitle: SSL or TLS encryption
   mandatoryInfoStorageDurationDescription: Unless a more specific storage period has been specified within this privacy policy, your personal data will remain with us until the purpose for data processing no longer applies. If you assert a legitimate request for deletion or revoke your consent to data processing, your data will be deleted unless we have other legally permissible reasons for storing your personal data (e.g. retention periods under tax or commercial law); in the latter case, the data will be deleted once these reasons no longer apply.
   mandatoryInfoStorageDurationTitle: Storage duration
-  newsletter: 5. Newsletter
+  newsletter: Newsletter
   newsletterDataDescription1: If you would like to receive the newsletter offered on the website, we require an e-mail address from you as well as information that allows us to verify that you are the owner of the specified e-mail address and agree to receive the newsletter. Further data is not collected or only on a voluntary basis. We use this data exclusively for sending the requested information and do not pass it on to third parties.
   newsletterDataDescription2: The processing of the data entered in the newsletter registration form is based exclusively on your consent (Art. 6 para. 1 lit. a GDPR). You can revoke your consent to the storage of the data, the e-mail address and their use for sending the newsletter at any time, for example via the „unsubscribe“-link in the newsletter. The legality of the data processing operations already carried out remains unaffected by the revocation.
   newsletterDataDescription3: The data you provide for the purpose of receiving the newsletter will be stored by us or the newsletter service provider until you unsubscribe from the newsletter and will be deleted from the newsletter distribution list after you unsubscribe from the newsletter. Data that has been stored by us for other purposes remains unaffected by this.
   newsletterDataDescription4s: You can object to the storage if your interests outweigh our legitimate interest.
   newsletterDataDescription4: After you have unsubscribed from the newsletter distribution list, your e-mail address will be stored by us or the newsletter service provider in a blacklist, if necessary, in order to prevent future mailings. The data from the blacklist will only be used for this purpose and will not be merged with other data. This serves both your interest and our interest in complying with legal requirements when sending newsletters (legitimate interest within the meaning of Art. 6 (1) lit. f GDPR). The storage in the blacklist is not limited in time. {strong}
   newsletterDataTitle: Newsletter data
-  pluginsTools: 6. Plugins and tools
+  pluginsTools: Plugins and tools
   pluginsToolsFontAwesomeDescription1: This site uses Font Awesome for consistent font rendering. Font Awesome is installed locally. A connection to servers of Fonticons, Inc. does not take place.
   pluginsToolsFontAwesomeDescription2s: https://fontawesome.com/privacy
   pluginsToolsFontAwesomeDescription2: 'For more information about Font Awesome, please see and Font Awesome privacy policy at: {linkPrivacy}.'
@@ -725,6 +794,6 @@ en:
   pluginsToolsYouTubeDescription7: 'For more information about privacy at YouTube, please see their privacy policy at: {linkPrivacy}.'
   pluginsToolsYouTubeTitle: YouTube with enhanced privacy
   source: Source
-  summary: 1. Data protection at a glance
+  summary: Data protection at a glance
   title: Privacy Policy
 </i18n>

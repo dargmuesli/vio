@@ -3,6 +3,27 @@ import { useSeoMeta } from '@unhead/vue'
 import { SITE_NAME } from './utils/constants'
 
 export default defineAppConfig({
+  legalNotice: undefined as
+    | {
+        contact: {
+          email: string
+        }
+        responsibility: {
+          address: {
+            city: string
+            name: string
+            street: string
+          }
+        }
+        tmg: {
+          address: {
+            city: string
+            name: string
+            street: string
+          }
+        }
+      }
+    | undefined,
   privacyPolicy: undefined as
     | {
         hostingCdn?: {

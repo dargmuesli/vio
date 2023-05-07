@@ -1,22 +1,31 @@
+const address = {
+  city: '12345 City, Country',
+  email: 'contact@doma.in',
+  name: 'Company Name',
+  street: 'Street 0',
+}
+
 export default defineAppConfig({
+  legalNotice: {
+    contact: {
+      email: address.email
+    },
+    responsibility: {
+      address
+    },
+    tmg: {
+      address
+    }
+  },
   privacyPolicy: {
     hostingCdn: {
       external: {
-        address: {
-          city: '12345 City, Country',
-          name: 'Company Name',
-          street: 'Street 0',
-        },
+        address
       },
     },
     mandatoryInfo: {
       responsible: {
-        address: {
-          city: '12345 City, Country',
-          email: "E-Mail: contact{'@'}doma.in",
-          name: 'Firstname Lastname',
-          street: 'Street 0',
-        },
+        address
       },
     },
   },
