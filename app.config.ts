@@ -3,17 +3,30 @@ import { useSeoMeta } from '@unhead/vue'
 import { SITE_NAME } from './utils/constants'
 
 export default defineAppConfig({
-  seoMeta: {
-    twitterSite: '@dargmuesli',
-  },
+  privacyPolicy: undefined as
+    | {
+        hostingCdn?: {
+          external: {
+            address: {
+              city: string
+              name: string
+              street: string
+            }
+          }
+        }
+        mandatoryInfo?: {
+          responsible: {
+            address: {
+              city: string
+              email: string
+              name: string
+              street: string
+            }
+          }
+        }
+      }
+    | undefined,
+  seoMeta: undefined as Parameters<typeof useSeoMeta>[0] | undefined,
   siteName: SITE_NAME,
-  themeColor: '#202020',
+  themeColor: undefined as string | undefined,
 })
-
-declare module '@nuxt/schema' {
-  interface AppConfigInput {
-    seoMeta?: Parameters<typeof useSeoMeta>[0]
-    siteName: string
-    themeColor?: string
-  }
-}
