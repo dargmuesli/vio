@@ -1,5 +1,5 @@
 <template>
-  <div class="vio-prose-scheme">
+  <div class="vio-prose">
     <h1>{{ title }}</h1>
     <div>
       <h2>{{ t('summary') }}</h2>

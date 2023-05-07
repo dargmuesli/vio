@@ -22,11 +22,7 @@
 
 @layer utilities {
   .vio-prose {
-    @apply m-auto prose prose-sm sm:prose-base lg:prose-lg xl:prose-xl; /* 2xl:prose-2xl */
-  }
-
-  .vio-prose-scheme {
-    @apply vio-prose dark:prose-invert;
+    @apply m-auto prose dark:prose-invert prose-sm sm:prose-base lg:prose-lg xl:prose-xl; /* 2xl:prose-2xl */
   }
 
   .vio-prose-fullwidth {
