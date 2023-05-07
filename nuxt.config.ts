@@ -107,7 +107,10 @@ export default defineNuxtConfig({
   i18n: {
     baseUrl: BASE_URL,
     defaultLocale: 'en', // Must be set for the default prefix_except_default prefix strategy.
-    detectBrowserLanguage: false, // Enabling browser language detection does not generate (!) other languages than the default one.
+    detectBrowserLanguage: {
+      cookieSecure: true,
+      redirectOn: 'root',
+    },
     locales: LOCALES,
     vueI18n: {
       fallbackWarn: false, // TODO: don't show incorrect warnings (https://github.com/intlify/vue-i18n-next/issues/776)
