@@ -2,8 +2,8 @@ lockfileVersion: '6.0'
 
 dependencies:
   '@dargmuesli/nuxt-cookie-control':
-    specifier: 5.8.5
-    version: 5.8.5(webpack@5.81.0)
+    specifier: 5.9.0
+    version: 5.9.0(webpack@5.81.0)
   '@http-util/status-i18n':
     specifier: 0.6.2
     version: 0.6.2
@@ -615,8 +615,8 @@ packages:
     dependencies:
       postcss-selector-parser: 6.0.12
 
-  /@dargmuesli/nuxt-cookie-control@5.8.5(webpack@5.81.0):
-    resolution: {integrity: sha512-9GBFsNlHdYSdAfJe5Ktc4LonzEC8OON0xRdcfGQUjDUjwS0tcdJ8rLMRseP9hwsJg9CczotERzmOeLXuYaNJMg==}
+  /@dargmuesli/nuxt-cookie-control@5.9.0(webpack@5.81.0):
+    resolution: {integrity: sha512-BuddHgZWrt5TjZQlv8VfytTt4z22qb4gXW5zA9udDv8b4cq46+c5rBCqWVbv8xzeCdI3dFDpxAOSRRdct31+mg==}
     engines: {node: '>=16'}
     dependencies:
       '@nuxt/kit': 3.4.3
