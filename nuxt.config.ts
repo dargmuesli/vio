@@ -41,6 +41,9 @@ export default defineNuxtConfig({
         siteName: SITE_NAME,
         siteUrl: BASE_URL,
       },
+      i18n: {
+        baseUrl: BASE_URL,
+      },
     },
   },
   typescript: {
@@ -105,13 +108,10 @@ export default defineNuxtConfig({
     logLevel: 'warning',
   },
   i18n: {
-    baseUrl: BASE_URL,
     defaultLocale: 'en', // Must be set for the default prefix_except_default prefix strategy.
     detectBrowserLanguage: false, // Enabling browser language detection does not generate (!) other languages than the default one.
     locales: LOCALES,
-    vueI18n: {
-      fallbackWarn: false, // TODO: don't show incorrect warnings (https://github.com/intlify/vue-i18n-next/issues/776)
-    },
+    vueI18n: '~/i18n.config.ts',
   },
   linkChecker: {
     failOn404: false, // TODO: enable (https://github.com/harlan-zw/nuxt-seo-kit/issues/4#issuecomment-1434522124)
