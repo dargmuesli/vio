@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@dargmuesli/nuxt-cookie-control':
-    specifier: 5.10.0
-    version: 5.10.0(webpack@5.85.1)
+    specifier: 5.10.1
+    version: 5.10.1(webpack@5.85.1)
   '@http-util/status-i18n':
     specifier: 0.7.0
     version: 0.7.0
@@ -619,8 +619,8 @@ packages:
     dependencies:
       postcss-selector-parser: 6.0.13
 
-  /@dargmuesli/nuxt-cookie-control@5.10.0(webpack@5.85.1):
-    resolution: {integrity: sha512-3YfQqNCJ/7sJJbRTy/Osa9Fo2QbcQzUy4DdvkmQyBMhnpMRctGMswFxczJXG9hLGT7UbJeL0bYZn6AP9JIOLsA==}
+  /@dargmuesli/nuxt-cookie-control@5.10.1(webpack@5.85.1):
+    resolution: {integrity: sha512-+KSFdehiX6XXtUu08JofzM859f87TebS6Lv9xBHetyvdQFb+kWlG4spbLa0hC6BDMyhINevXKQV5UTY3wwOVzg==}
     engines: {node: '>=16'}
     dependencies:
       '@nuxt/kit': 3.5.3
