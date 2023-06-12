@@ -1,4 +1,4 @@
-lockfileVersion: '6.1'
+lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: true
@@ -15,8 +15,8 @@ dependencies:
     specifier: 1.4.0
     version: 1.4.0
   '@nuxtjs/i18n':
-    specifier: npm:@nuxtjs/i18n-edge@8.0.0-beta.12-28104842.5ed73d5
-    version: /@nuxtjs/i18n-edge@8.0.0-beta.12-28104842.5ed73d5(vue@3.3.4)
+    specifier: npm:@nuxtjs/i18n-edge@8.0.0-beta.12-28109464.1b74b01
+    version: /@nuxtjs/i18n-edge@8.0.0-beta.12-28109464.1b74b01(vue@3.3.4)
   '@nuxtjs/tailwindcss':
     specifier: 6.7.0
     version: 6.7.0(ts-node@10.9.1)(webpack@5.85.1)
@@ -1556,8 +1556,8 @@ packages:
       - supports-color
     dev: false
 
-  /@nuxtjs/i18n-edge@8.0.0-beta.12-28104842.5ed73d5(vue@3.3.4):
-    resolution: {integrity: sha512-Wm5zpxWIYNqhB3Fx6t1nsBtaAXlxzdRRQ+OEEDWYcwyRM70JJjLg/83R/gxJX19yJhXjMOmVWFDw7cHcX7i0/w==}
+  /@nuxtjs/i18n-edge@8.0.0-beta.12-28109464.1b74b01(vue@3.3.4):
+    resolution: {integrity: sha512-u5p0SWIr5TVwNK9CSFzTNtZTgkPG3vjliQ7btukfmQTul257pFXnsFcVq6gPLL6KU/aYczgWBmpyxTRYFZqVZw==}
     engines: {node: ^14.16.0 || >=16.11.0}
     dependencies:
       '@intlify/bundle-utils': 5.5.0(vue-i18n@9.3.0-beta.19)
