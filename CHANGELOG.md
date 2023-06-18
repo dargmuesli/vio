@@ -1,3 +1,10 @@
+## [1.10.10](https://github.com/dargmuesli/vio/compare/1.10.9...1.10.10) (2023-06-18)
+
+
+### Bug Fixes
+
+* **legal:** update email address ([790d266](https://github.com/dargmuesli/vio/commit/790d26639ebaf3b93f025a6bc6607e3f4c5ec49b))
+
 ## [1.10.9](https://github.com/dargmuesli/vio/compare/1.10.8...1.10.9) (2023-06-17)
 
 
