@@ -1,3 +1,10 @@
+## [1.10.11](https://github.com/dargmuesli/vio/compare/1.10.10...1.10.11) (2023-06-18)
+
+
+### Performance Improvements
+
+* **i18n:** use lazy loading ([853dbe1](https://github.com/dargmuesli/vio/commit/853dbe11196ddef709cd6f30f4c247822b02de61))
+
 ## [1.10.10](https://github.com/dargmuesli/vio/compare/1.10.9...1.10.10) (2023-06-18)
 
 
