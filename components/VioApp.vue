@@ -1,5 +1,5 @@
 <template>
-  <div :data-is-loading="isLoading">
+  <div :data-is-loading="isLoading" data-testid="is-loading">
     <NuxtLayout>
       <SeoKit :site-description="siteDescription" :language="locale" />
       <OgImageStatic :alt="ogImageAlt" component="OgImage" />
