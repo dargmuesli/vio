@@ -8,7 +8,11 @@ const currentDir = dirname(fileURLToPath(import.meta.url))
 const BASE_URL =
   'https://' +
   (process.env.NUXT_PUBLIC_STACK_DOMAIN ||
-    `${process.env.HOST || 'localhost'}:3000`)
+    `${process.env.HOST || 'localhost'}:${
+      !process.env.NODE_ENV || process.env.NODE_ENV === 'development'
+        ? '3000'
+        : '3001'
+    }`)
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({

@@ -171,4 +171,4 @@ WORKDIR /srv/app/
 COPY --from=collect /srv/app/ ./
 
 CMD ["node", ".output/server/index.mjs"]
-HEALTHCHECK --interval=10s CMD wget -O /dev/null http://localhost:3000/api/healthcheck || exit 1
+HEALTHCHECK --interval=10s CMD wget -O /dev/null http://localhost:3001/api/healthcheck || exit 1
