@@ -1,3 +1,11 @@
+# [1.11.0](https://github.com/dargmuesli/vio/compare/1.10.11...1.11.0) (2023-06-21)
+
+
+### Features
+
+* **app:** add test id ([f69cf4e](https://github.com/dargmuesli/vio/commit/f69cf4ef526779a1c8f343179693340525efe61e))
+* **nuxt:** run production on port 3001 ([43485c5](https://github.com/dargmuesli/vio/commit/43485c5d3517d80c4fca319a30322661a16f8e89))
+
 ## [1.10.11](https://github.com/dargmuesli/vio/compare/1.10.10...1.10.11) (2023-06-18)
 
 
