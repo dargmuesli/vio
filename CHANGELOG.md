@@ -1,3 +1,10 @@
+## [1.11.1](https://github.com/dargmuesli/vio/compare/1.11.0...1.11.1) (2023-06-22)
+
+
+### Reverts
+
+* Revert "Merge pull request #12 from dargmuesli/renovate/master-nuxtjs-i18n-8.x" ([10d2a77](https://github.com/dargmuesli/vio/commit/10d2a77ebd11378e7538b72a76e6d7c0c16c9a23)), closes [#12](https://github.com/dargmuesli/vio/issues/12)
+
 # [1.11.0](https://github.com/dargmuesli/vio/compare/1.10.11...1.11.0) (2023-06-21)
 
 
