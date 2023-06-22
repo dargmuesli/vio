@@ -1,3 +1,10 @@
+## [1.11.2](https://github.com/dargmuesli/vio/compare/1.11.1...1.11.2) (2023-06-22)
+
+
+### Bug Fixes
+
+* **test:** configure testing by runtime ([f965316](https://github.com/dargmuesli/vio/commit/f96531656d071ea9da14aac576da79cc61026175))
+
 ## [1.11.1](https://github.com/dargmuesli/vio/compare/1.11.0...1.11.1) (2023-06-22)
 
 
