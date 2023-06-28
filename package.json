@@ -37,7 +37,7 @@
     "lint:ts": "nuxt typecheck"
   },
   "dependencies": {
-    "@dargmuesli/nuxt-cookie-control": "5.10.2",
+    "@dargmuesli/nuxt-cookie-control": "5.10.3",
     "@http-util/status-i18n": "0.7.0",
     "@nuxtjs/html-validator": "1.4.0",
     "@nuxtjs/i18n": "8.0.0-beta.10",
