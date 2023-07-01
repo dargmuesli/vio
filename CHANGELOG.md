@@ -1,3 +1,10 @@
+## [1.11.4](https://github.com/dargmuesli/vio/compare/1.11.3...1.11.4) (2023-07-01)
+
+
+### Bug Fixes
+
+* **vio-app:** use single child for `NuxtLayout` ([de90064](https://github.com/dargmuesli/vio/commit/de90064a92c765bf77716c83af201a996f82c005))
+
 ## [1.11.3](https://github.com/dargmuesli/vio/compare/1.11.2...1.11.3) (2023-07-01)
 
 
