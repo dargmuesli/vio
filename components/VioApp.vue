@@ -1,10 +1,13 @@
 <template>
   <div :data-is-loading="isLoading" data-testid="is-loading">
     <NuxtLayout>
-      <SeoKit :site-description="siteDescription" :language="locale" />
-      <OgImageStatic :alt="ogImageAlt" component="OgImage" />
-      <NuxtPage />
-      <CookieControl :locale="locale" />
+      <!-- `NuxtLayout` can't have mulitple child nodes (https://github.com/nuxt/nuxt/issues/21759) -->
+      <div>
+        <SeoKit :site-description="siteDescription" :language="locale" />
+        <OgImageStatic :alt="ogImageAlt" component="OgImage" />
+        <NuxtPage />
+        <CookieControl :locale="locale" />
+      </div>
     </NuxtLayout>
   </div>
 </template>
