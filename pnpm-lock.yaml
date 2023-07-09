@@ -12,8 +12,8 @@ dependencies:
     specifier: 0.7.0
     version: 0.7.0
   '@nuxtjs/html-validator':
-    specifier: 1.5.0
-    version: 1.5.0
+    specifier: 1.5.1
+    version: 1.5.1
   '@nuxtjs/i18n':
     specifier: 8.0.0-beta.10
     version: 8.0.0-beta.10(vue@3.3.4)
@@ -1474,7 +1474,7 @@ packages:
       globby: 13.2.1
       hash-sum: 2.0.0
       ignore: 5.2.4
-      jiti: 1.18.2
+      jiti: 1.19.1
       knitwork: 1.0.0
       lodash.template: 4.5.0
       mlly: 1.4.0
@@ -1483,7 +1483,7 @@ packages:
       scule: 1.0.0
       semver: 7.5.3
       unctx: 2.3.1
-      unimport: 3.0.11
+      unimport: 3.0.14(rollup@3.26.0)
       untyped: 1.3.2
     transitivePeerDependencies:
       - rollup
@@ -1540,7 +1540,6 @@ packages:
     transitivePeerDependencies:
       - rollup
       - supports-color
-    dev: true
 
   /@nuxt/postcss8@1.1.3(webpack@5.88.1):
     resolution: {integrity: sha512-CdHtErhvQwueNZPBOmlAAKrNCK7aIpZDYhtS7TzXlSgPHHox1g3cSlf+Ke9oB/8t4mNNjdB+prclme2ibuCOEA==}
@@ -1565,14 +1564,14 @@ packages:
       create-require: 1.1.1
       defu: 6.1.2
       hookable: 5.5.3
-      jiti: 1.18.2
+      jiti: 1.19.1
       pathe: 1.1.1
       pkg-types: 1.0.3
       postcss-import-resolver: 2.0.0
       scule: 1.0.0
       std-env: 3.3.3
       ufo: 1.1.2
-      unimport: 3.0.11
+      unimport: 3.0.14(rollup@3.26.0)
       untyped: 1.3.2
     transitivePeerDependencies:
       - rollup
@@ -1590,7 +1589,7 @@ packages:
       postcss-import-resolver: 2.0.0
       std-env: 3.3.3
       ufo: 1.1.2
-      unimport: 3.0.11
+      unimport: 3.0.14(rollup@3.26.0)
       untyped: 1.3.2
     transitivePeerDependencies:
       - rollup
@@ -1631,7 +1630,6 @@ packages:
     transitivePeerDependencies:
       - rollup
       - supports-color
-    dev: true
 
   /@nuxt/telemetry@2.3.0:
     resolution: {integrity: sha512-sXO8Qt0A1GKy6otyicKIO+FuhqzSWDJdWIY5RohxxaB9MOLuf7us39geZb+hIZYdXl7ILsypTGGj9TfR8byjOA==}
@@ -1766,10 +1764,10 @@ packages:
       - supports-color
     dev: true
 
-  /@nuxtjs/html-validator@1.5.0:
-    resolution: {integrity: sha512-z5V4b/Ff84Hgqhjzqec5BFWp0XIGd0AxRJDx/le6Kidt1VR9SDzY+z7aYQvYZiERpzrziVlguqXAUSybsqQCqg==}
+  /@nuxtjs/html-validator@1.5.1:
+    resolution: {integrity: sha512-4CmDk9DCIRrDTqAkpGmmJJxJZ6Ns+rZAFsEAOQfUB4vWKlzCOx1m1XQH+hyhGBylZvPYwZ7W1H0UN2biUbEV3w==}
     dependencies:
-      '@nuxt/kit': 3.6.1
+      '@nuxt/kit': 3.6.2
       chalk: 5.3.0
       html-validate: 8.0.5
       pathe: 1.1.1
@@ -5772,6 +5770,7 @@ packages:
   /jiti@1.18.2:
     resolution: {integrity: sha512-QAdOptna2NYiSSpv0O/BwoHBSmz4YhpzJHyi+fnMRTXFjp7B8i/YG5Z8IfusxB1ufjcD2Sre1F3R+nX3fvy7gg==}
     hasBin: true
+    dev: false
 
   /jiti@1.19.1:
     resolution: {integrity: sha512-oVhqoRDaBXf7sjkll95LHVS6Myyyb1zaunVwk4Z0+WPSW4gjS0pl01zYKHScTuyEhQsFxV5L4DR5r+YqSyqyyg==}
@@ -6793,7 +6792,7 @@ packages:
   /nuxt-schema-org@2.2.0(@unhead/vue@1.1.30):
     resolution: {integrity: sha512-V0LHh4A3tZSRLGv9P+SG8zm9N4e1qZt2x6z7FgL9qYjpNDyCJ5G186vmTqT4kN0JErjRiYVxantBjDQa7DcVKQ==}
     dependencies:
-      '@nuxt/kit': 3.6.1
+      '@nuxt/kit': 3.6.2
       '@unhead/schema-org-vue': 0.6.0(@unhead/vue@1.1.30)
       pathe: 1.1.1
     transitivePeerDependencies:
@@ -8816,7 +8815,7 @@ packages:
       fast-glob: 3.3.0
       glob-parent: 6.0.2
       is-glob: 4.0.3
-      jiti: 1.18.2
+      jiti: 1.19.1
       lilconfig: 2.1.0
       micromatch: 4.0.5
       normalize-path: 3.0.0
@@ -9236,7 +9235,6 @@ packages:
       unplugin: 1.3.2
     transitivePeerDependencies:
       - rollup
-    dev: true
 
   /universalify@0.1.2:
     resolution: {integrity: sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg==}
@@ -9304,7 +9302,6 @@ packages:
       chokidar: 3.5.3
       webpack-sources: 3.2.3
       webpack-virtual-modules: 0.5.0
-    dev: true
 
   /unstorage@1.7.0:
     resolution: {integrity: sha512-f78UtR4HyUGWuET35iNPdKMvCh9YPQpC7WvkGpP6XiLlolT/9wjyAICYN9AMD/tlB8ZdOqWQHZn+j7mXcTSO4w==}
@@ -9366,7 +9363,7 @@ packages:
       '@babel/standalone': 7.22.5
       '@babel/types': 7.22.5
       defu: 6.1.2
-      jiti: 1.18.2
+      jiti: 1.19.1
       mri: 1.2.0
       scule: 1.0.0
     transitivePeerDependencies:
