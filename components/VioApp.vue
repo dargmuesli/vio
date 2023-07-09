@@ -39,7 +39,7 @@ watch(
       window.location.reload()
     }
   },
-  { deep: true }
+  { deep: true },
 )
 // initialization
 useAppLayout()
