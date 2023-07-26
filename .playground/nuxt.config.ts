@@ -3,4 +3,7 @@ export default defineNuxtConfig({
   typescript: {
     includeWorkspace: true,
   },
+  site: {
+    name: 'Playground',
+  },
 })
