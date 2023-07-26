@@ -1,3 +1,10 @@
+## [1.11.7](https://github.com/dargmuesli/vio/compare/1.11.6...1.11.7) (2023-07-26)
+
+
+### Bug Fixes
+
+* **error:** correct locale value ([06e9ee5](https://github.com/dargmuesli/vio/commit/06e9ee5be11116c6923490dcb1c9a73c96f81573))
+
 ## [1.11.6](https://github.com/dargmuesli/vio/compare/1.11.5...1.11.6) (2023-07-26)
 
 
