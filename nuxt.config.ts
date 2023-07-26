@@ -120,10 +120,10 @@ export default defineNuxtConfig({
     failOn404: false, // TODO: enable (https://github.com/harlan-zw/nuxt-seo-kit/issues/4#issuecomment-1434522124)
   },
   site: {
-    debug: process.env.NODE_ENV === 'development',
-    name: SITE_NAME,
+    // debug: process.env.NODE_ENV === 'development',
+    // name: SITE_NAME,
     splash: false,
-    url: BASE_URL,
+    // url: BASE_URL,
   },
   tailwindcss: {
     cssPath: join(currentDir, './assets/css/tailwind.css'),
