@@ -5,7 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  nuxt-og-image: 2.0.10
+  nuxt-og-image: 2.0.11
 
 dependencies:
   '@dargmuesli/nuxt-cookie-control':
@@ -3485,15 +3485,15 @@ packages:
     resolution: {integrity: sha512-bIomtDF5KGpdogkLd9VspvFzk9KfpyyGlS8YFVZl7TGPBHL5snIOnxeshwVgPteQ9b4Eydl+pVbIyE1DcvCWgQ==}
     engines: {node: '>=10'}
 
-  /chrome-launcher@0.15.2:
-    resolution: {integrity: sha512-zdLEwNo3aUVzIhKhTtXfxhdvZhUghrnmkvcAq2NoDd+LeOHKf03H5jwZ8T/STsAlzyALkBVK552iaG1fGf1xVQ==}
+  /chrome-launcher@1.0.0:
+    resolution: {integrity: sha512-74IMFVfgni/bQ4GotUNJpH2vDR+Sh9cXNPVhPXiedeiB0+5j7/8i8LAqS7WlyNSKqtxJ/CgbOpBDPLkzqDVhlw==}
     engines: {node: '>=12.13.0'}
     hasBin: true
     dependencies:
       '@types/node': 20.3.3
       escape-string-regexp: 4.0.0
       is-wsl: 2.2.0
-      lighthouse-logger: 1.4.2
+      lighthouse-logger: 2.0.1
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -5000,6 +5000,17 @@ packages:
       merge2: 1.4.1
       micromatch: 4.0.5
 
+  /fast-glob@3.3.1:
+    resolution: {integrity: sha512-kNFPyjhh5cKjrUltxs+wFx+ZkbRaxxmZ+X0ZU31SOsxCEtP9VPgtq2teZw1DebupL5GmDaNQ6yKMMVcM41iqDg==}
+    engines: {node: '>=8.6.0'}
+    dependencies:
+      '@nodelib/fs.stat': 2.0.5
+      '@nodelib/fs.walk': 1.2.8
+      glob-parent: 5.1.2
+      merge2: 1.4.1
+      micromatch: 4.0.5
+    dev: false
+
   /fast-json-stable-stringify@2.1.0:
     resolution: {integrity: sha512-lhd/wF+Lk98HZoTCtlVraHtfh5XYijIjalXck7saUtuanSDyLMxnHhSXEDJqHxD7msR8D0uCmqlkwjCV8xvwHw==}
 
@@ -6363,8 +6374,8 @@ packages:
       type-check: 0.4.0
     dev: true
 
-  /lighthouse-logger@1.4.2:
-    resolution: {integrity: sha512-gPWxznF6TKmUHrOQjlVo2UbaL2EJ71mb2CCeRs/2qBpi4L/g4LUVc9+3lKQ6DTUZwJswfM7ainGrLO1+fOqa2g==}
+  /lighthouse-logger@2.0.1:
+    resolution: {integrity: sha512-ioBrW3s2i97noEmnXxmUq7cjIcVRjT5HBpAYy8zE11CxU9HqlWHHeRxfeN1tn8F7OEMVPIC9x1f8t3Z7US9ehQ==}
     dependencies:
       debug: 2.6.9
       marky: 1.2.5
@@ -7136,8 +7147,8 @@ packages:
       - supports-color
     dev: false
 
-  /nuxt-og-image@2.0.10:
-    resolution: {integrity: sha512-1oLJJmSetuM8GoVPlO2TqLqmXf2zBXQVMaFjwmIHqCSguDYp1FppvBKBQ0EzlXel4bDvty8aib2lGsLfxKuNvg==}
+  /nuxt-og-image@2.0.11:
+    resolution: {integrity: sha512-j+xChUts5coF1wxHpmWAWL9zdRQNmeT772PDvpidW+VwWNKiwKBKVrKc0BzfaptFlWpmbuGhPkka1RbXyvXy+Q==}
     dependencies:
       '@nuxt/kit': 3.6.5
       '@resvg/resvg-js': 2.4.1
@@ -7145,10 +7156,10 @@ packages:
       '@types/fs-extra': 11.0.1
       birpc: 0.2.12
       chalk: 5.3.0
-      chrome-launcher: 0.15.2
+      chrome-launcher: 1.0.0
       defu: 6.1.2
       execa: 7.1.1
-      fast-glob: 3.3.0
+      fast-glob: 3.3.1
       flatted: 3.2.7
       fs-extra: 11.1.1
       globby: 13.2.2
@@ -7198,7 +7209,7 @@ packages:
       '@nuxt/kit': 3.6.1
       defu: 6.1.2
       nuxt-link-checker: 1.0.4
-      nuxt-og-image: 2.0.10
+      nuxt-og-image: 2.0.11
       nuxt-schema-org: 2.2.0(@unhead/vue@1.1.30)
       nuxt-simple-robots: 1.0.9
       nuxt-simple-sitemap: 1.0.11
