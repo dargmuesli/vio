@@ -4,7 +4,6 @@
       <!-- `NuxtLayout` can't have mulitple child nodes (https://github.com/nuxt/nuxt/issues/21759) -->
       <div>
         <SeoKit :site-description="siteDescription" :language="locale" />
-        <OgImageStatic :alt="ogImageAlt" component="OgImage" />
         <NuxtPage />
         <CookieControl :locale="locale" />
       </div>
@@ -17,12 +16,17 @@ export interface Props {
   siteDescription: string
   ogImageAlt: string
 }
-withDefaults(defineProps<Props>(), {})
+const props = withDefaults(defineProps<Props>(), {})
 
 const { locale } = useI18n()
 const cookieControl = useCookieControl()
 
 const { loadingIds, indicateLoadingDone } = useLoadingDoneIndicator('app')
+
+// data
+const ogImageOptions = {
+  alt: props.ogImageAlt,
+}
 
 // computations
 const isLoading = computed(() => !!loadingIds.value.length)
@@ -41,7 +45,9 @@ watch(
   },
   { deep: true },
 )
+
 // initialization
+defineOgImage(ogImageOptions)
 useAppLayout()
 useFavicons()
 </script>
