@@ -1,21 +1,23 @@
 <template>
   <NuxtLayout>
     <VioError
-      :status-code="error?.statusCode ? +error?.statusCode : undefined"
+      :status-code="error.statusCode"
+      :status-message="error.statusMessage"
+      :description="error.message"
+      :stack="error.stack"
     />
   </NuxtLayout>
 </template>
 
 <script setup lang="ts">
-export type Error = { statusCode: string }
+import { NuxtError } from 'nuxt/app'
+
 export interface Props {
-  error?: Error
+  error: NuxtError
 }
-const props = withDefaults(defineProps<Props>(), {
-  error: undefined,
-})
+const props = withDefaults(defineProps<Props>(), {})
 
 useHead({
-  title: props.error?.statusCode?.toString(),
+  title: `${props.error.statusCode} - ${props.error.message}`,
 })
 </script>

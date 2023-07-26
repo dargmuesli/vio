@@ -1,17 +1,26 @@
 <template>
-  <h1>{{ statusCode ? `${statusCode} - ` : '' }}{{ statusReason }}</h1>
+  <h1>{{ `${statusCode} - ${statusReason}` }}</h1>
+  <div>
+    {{ description }}
+  </div>
+  <div v-if="stack && !runtimeConfig.public.isInProduction" v-html="stack" />
 </template>
 
 <script setup lang="ts">
 import { status } from '@http-util/status-i18n'
 
 export interface Props {
-  statusCode?: number
+  statusCode: number
+  statusMessage?: string
+  description: string
+  stack?: string
 }
 const props = withDefaults(defineProps<Props>(), {
-  statusCode: undefined,
+  statusMessage: undefined,
+  stack: undefined,
 })
 
+const runtimeConfig = useRuntimeConfig()
 const { locale, t } = useI18n()
 
 // computations
