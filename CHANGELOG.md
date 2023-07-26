@@ -1,3 +1,11 @@
+# [1.12.0](https://github.com/dargmuesli/vio/compare/1.11.7...1.12.0) (2023-07-26)
+
+
+### Features
+
+* **error:** add stacktrace ([e84f8cb](https://github.com/dargmuesli/vio/commit/e84f8cbaae5688d4e31885f575d8ca5179ffd523))
+* **nuxt-seo-kit:** use nuxt-og-image v2 ([3b8e662](https://github.com/dargmuesli/vio/commit/3b8e66276e0172b336f38c4c5af8ad1964f6dc1a))
+
 ## [1.11.7](https://github.com/dargmuesli/vio/compare/1.11.6...1.11.7) (2023-07-26)
 
 
