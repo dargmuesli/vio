@@ -41,11 +41,12 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       googleAnalyticsId: '', // set via environment variable `NUXT_PUBLIC_GOOGLE_ANALYTICS_ID` only
+      isInProduction: process.env.NODE_ENV === 'production',
       isTesting: false,
       ...{
         siteName: SITE_NAME,
         siteUrl: BASE_URL,
-      },
+      }, // TODO: remove once http://localhost:3000/api/__site-config__/debug shows correct data without this extension.
     },
   },
   typescript: {
@@ -119,7 +120,10 @@ export default defineNuxtConfig({
     failOn404: false, // TODO: enable (https://github.com/harlan-zw/nuxt-seo-kit/issues/4#issuecomment-1434522124)
   },
   site: {
+    // debug: process.env.NODE_ENV === 'development',
+    // name: SITE_NAME,
     splash: false,
+    // url: BASE_URL,
   },
   tailwindcss: {
     cssPath: join(currentDir, './assets/css/tailwind.css'),
