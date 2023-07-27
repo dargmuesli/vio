@@ -14,8 +14,11 @@
 export interface Props {
   siteDescription: string
   ogImageAlt: string
+  ogImageComponent?: string
 }
-const props = withDefaults(defineProps<Props>(), {})
+const props = withDefaults(defineProps<Props>(), {
+  ogImageComponent: undefined,
+})
 
 const { locale } = useI18n()
 const cookieControl = useCookieControl()
@@ -46,6 +49,7 @@ updateSiteConfig({
 })
 defineOgImage({
   alt: props.ogImageAlt,
+  component: props.ogImageComponent,
   description: props.siteDescription,
 })
 useAppLayout()
