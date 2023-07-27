@@ -1,3 +1,10 @@
+# [1.14.0](https://github.com/dargmuesli/vio/compare/1.13.0...1.14.0) (2023-07-27)
+
+
+### Features
+
+* **app:** add og image component property ([9283fad](https://github.com/dargmuesli/vio/commit/9283fad4ed1a7fcce8768412986cc4803abaee33))
+
 # [1.13.0](https://github.com/dargmuesli/vio/compare/1.12.0...1.13.0) (2023-07-27)
 
 
