@@ -1,3 +1,10 @@
+# [1.13.0](https://github.com/dargmuesli/vio/compare/1.12.0...1.13.0) (2023-07-27)
+
+
+### Features
+
+* **deps:** upgrade to nuxt-seo-kit v2 beta ([eaeee01](https://github.com/dargmuesli/vio/commit/eaeee0189c80e3049991241a690d907f9d3e43da))
+
 # [1.12.0](https://github.com/dargmuesli/vio/compare/1.11.7...1.12.0) (2023-07-26)
 
 
