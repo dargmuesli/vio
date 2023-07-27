@@ -1,7 +1,7 @@
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-import { LOCALES, SITE_NAME } from './utils/constants'
+import { SITE_NAME } from './utils/constants'
 
 const currentDir = dirname(fileURLToPath(import.meta.url))
 
@@ -28,12 +28,12 @@ export default defineNuxtConfig({
       title: SITE_NAME, // fallback data to prevent invalid html at generation
     },
   },
-  extends: ['nuxt-seo-kit'],
   modules: [
     '@dargmuesli/nuxt-cookie-control',
     '@nuxtjs/html-validator',
     '@nuxtjs/i18n',
     '@nuxtjs/tailwindcss',
+    'nuxt-seo-kit-module',
   ],
   nitro: {
     compressPublicAssets: true,
@@ -43,10 +43,6 @@ export default defineNuxtConfig({
       googleAnalyticsId: '', // set via environment variable `NUXT_PUBLIC_GOOGLE_ANALYTICS_ID` only
       isInProduction: process.env.NODE_ENV === 'production',
       isTesting: false,
-      ...{
-        siteName: SITE_NAME,
-        siteUrl: BASE_URL,
-      }, // TODO: remove once http://localhost:3000/api/__site-config__/debug shows correct data without this extension.
     },
   },
   typescript: {
@@ -111,7 +107,20 @@ export default defineNuxtConfig({
     detectBrowserLanguage: false, // Enabling browser language detection does not generate (!) other languages than the default one.
     langDir: 'locales',
     lazy: true,
-    locales: LOCALES,
+    locales: [
+      {
+        code: 'en',
+        file: 'en.json',
+        name: 'English',
+        iso: 'en', // Will be used as catchall locale by default.
+      },
+      {
+        code: 'de',
+        file: 'de.json',
+        name: 'Deutsch',
+        iso: 'de',
+      },
+    ],
     vueI18n: {
       fallbackWarn: false, // TODO: don't show incorrect warnings (https://github.com/intlify/vue-i18n-next/issues/776)
     },
@@ -119,11 +128,13 @@ export default defineNuxtConfig({
   linkChecker: {
     failOn404: false, // TODO: enable (https://github.com/harlan-zw/nuxt-seo-kit/issues/4#issuecomment-1434522124)
   },
-  site: {
-    // debug: process.env.NODE_ENV === 'development',
-    // name: SITE_NAME,
+  seoKit: {
     splash: false,
-    // url: BASE_URL,
+  },
+  site: {
+    debug: process.env.NODE_ENV === 'development',
+    name: SITE_NAME,
+    url: BASE_URL,
   },
   tailwindcss: {
     cssPath: join(currentDir, './assets/css/tailwind.css'),
