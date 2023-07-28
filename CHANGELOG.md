@@ -1,3 +1,10 @@
+## [1.14.2](https://github.com/dargmuesli/vio/compare/1.14.1...1.14.2) (2023-07-28)
+
+
+### Bug Fixes
+
+* **package:** export locales ([5fc992b](https://github.com/dargmuesli/vio/commit/5fc992b42e6b8ff6d64001f54f9d553fa5a0a406))
+
 ## [1.14.1](https://github.com/dargmuesli/vio/compare/1.14.0...1.14.1) (2023-07-28)
 
 
