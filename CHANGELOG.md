@@ -1,3 +1,13 @@
+## [1.14.1](https://github.com/dargmuesli/vio/compare/1.14.0...1.14.1) (2023-07-28)
+
+
+### Bug Fixes
+
+* **app:** cast locale type ([a9ecea6](https://github.com/dargmuesli/vio/commit/a9ecea6ec92800f5d4db1c3946e53e5581f25188))
+* **i18n:** add quotation marks around string with escaped character ([919fdef](https://github.com/dargmuesli/vio/commit/919fdefc8c71f7f921a2346f09227c948dcc6369))
+* **playgroud:** add package link ([579a6ad](https://github.com/dargmuesli/vio/commit/579a6ad882524933c06ad603d1613b7ca0b0a5af))
+* schedule release ([e05af95](https://github.com/dargmuesli/vio/commit/e05af955709950e448b5b3a7a2287f4b5f399344))
+
 # [1.14.0](https://github.com/dargmuesli/vio/compare/1.13.0...1.14.0) (2023-07-27)
 
 
