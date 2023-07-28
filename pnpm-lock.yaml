@@ -11,6 +11,9 @@ dependencies:
   '@dargmuesli/nuxt-cookie-control':
     specifier: 6.1.5
     version: 6.1.5(webpack@5.88.2)
+  '@dargmuesli/nuxt-vio':
+    specifier: link:.
+    version: 'link:'
   '@http-util/status-i18n':
     specifier: 0.7.0
     version: 0.7.0
