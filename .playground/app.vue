@@ -9,11 +9,11 @@
 const { t } = useI18n()
 </script>
 
-<i18n lang="yml">
+<i18n lang="yaml">
 de:
-  siteDescription: Vio ist {'@'}dargmueslis Nuxt layer.
+  siteDescription: "Vio ist {'@'}dargmueslis Nuxt layer."
   ogImageAlt: Social Preview Image für eine Vio Webseite.
 en:
-  siteDescription: Vio is {'@'}dargmuesli's Nuxt layer.
+  siteDescription: "Vio is {'@'}dargmuesli's Nuxt layer."
   ogImageAlt: Social Preview Image for a Vio webpage.
 </i18n>
