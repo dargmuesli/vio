@@ -41,6 +41,9 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       googleAnalyticsId: '', // set via environment variable `NUXT_PUBLIC_GOOGLE_ANALYTICS_ID` only
+      i18n: {
+        baseUrl: BASE_URL,
+      },
       isInProduction: process.env.NODE_ENV === 'production',
       isTesting: false,
     },
@@ -102,7 +105,6 @@ export default defineNuxtConfig({
     logLevel: 'warning',
   },
   i18n: {
-    baseUrl: BASE_URL,
     defaultLocale: 'en', // Must be set for the default prefix_except_default prefix strategy.
     detectBrowserLanguage: false, // Enabling browser language detection does not generate (!) other languages than the default one.
     langDir: 'locales',
@@ -121,9 +123,6 @@ export default defineNuxtConfig({
         iso: 'de',
       },
     ],
-    vueI18n: {
-      fallbackWarn: false, // TODO: don't show incorrect warnings (https://github.com/intlify/vue-i18n-next/issues/776)
-    },
   },
   linkChecker: {
     failOn404: false, // TODO: enable (https://github.com/harlan-zw/nuxt-seo-kit/issues/4#issuecomment-1434522124)

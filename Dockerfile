@@ -69,60 +69,91 @@ RUN corepack enable && \
 
 
 # ########################
-# # Nuxt: test (integration)
+# # Nuxt: test (e2e)
 
-# FROM cypress/included:12.9.0@sha256:61b5e72183aa11f6a88f4789171d8044825706391ca4e08445edf20949a1d9b4 AS test-integration_base
+# FROM mcr.microsoft.com/playwright:v1.36.2@sha256:11ef7660a29bb886c8bfb1d59e7ebcb1c49fc7c43d116d225b1c8e881b1147a3 AS test-e2e_base
 
-# ARG UNAME=cypress
+# ARG UNAME=e2e
 # ARG UID=1000
 # ARG GID=1000
 
+# # The `CI` environment variable must be set for pnpm to run in headless mode
+# ENV CI=true
+# ENV NODE_ENV=development
+# ENV PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1
+
 # WORKDIR /srv/app/
+
+# COPY ./docker/entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
 # RUN corepack enable \
 #     # user
 #     && groupadd -g $GID -o $UNAME \
-#     && useradd -m -u $UID -g $GID -o -s /bin/bash $UNAME
-
-# # Use the Cypress version installed by pnpm, not as provided by the Docker image.
-# COPY --from=prepare --chown=$UNAME /root/.cache/Cypress /root/.cache/Cypress
+#     && useradd -m -l -u $UID -g $GID -o -s /bin/bash $UNAME
 
 # USER $UNAME
 
+# VOLUME /srv/.pnpm-store
 # VOLUME /srv/app
 
+# ENTRYPOINT ["docker-entrypoint.sh"]
+
 
 # ########################
-# # Nuxt: test (integration, development)
+# # Nuxt: test (e2e, preparation)
 
-# FROM cypress/included:12.9.0@sha256:61b5e72183aa11f6a88f4789171d8044825706391ca4e08445edf20949a1d9b4 AS test-integration-dev
+# FROM mcr.microsoft.com/playwright:v1.36.2@sha256:11ef7660a29bb886c8bfb1d59e7ebcb1c49fc7c43d116d225b1c8e881b1147a3 AS test-e2e-prepare
 
-# RUN corepack enable
+# # The `CI` environment variable must be set for pnpm to run in headless mode
+# ENV CI=true
+# ENV PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1
 
 # WORKDIR /srv/app/
 
-# # Use the Cypress version installed by pnpm, not as provided by the Docker image.
-# COPY --from=prepare /root/.cache/Cypress /root/.cache/Cypress
+# RUN corepack enable
+
 # COPY --from=prepare /srv/app/ ./
 
-# RUN pnpm test:integration:dev
+# RUN pnpm rebuild
 
 
 # ########################
-# # Nuxt: test (integration, production)
+# # Nuxt: test (e2e, development)
 
-# FROM cypress/included:12.9.0@sha256:61b5e72183aa11f6a88f4789171d8044825706391ca4e08445edf20949a1d9b4 AS test-integration-prod
+# FROM mcr.microsoft.com/playwright:v1.36.2@sha256:11ef7660a29bb886c8bfb1d59e7ebcb1c49fc7c43d116d225b1c8e881b1147a3 AS test-e2e-dev
 
-# RUN corepack enable
+# # The `CI` environment variable must be set for pnpm to run in headless mode
+# ENV CI=true
+# ENV NODE_ENV=development
 
 # WORKDIR /srv/app/
 
-# # Use the Cypress version installed by pnpm, not as provided by the Docker image.
-# COPY --from=prepare /root/.cache/Cypress /root/.cache/Cypress
-# COPY --from=build /srv/app/ /srv/app/
-# COPY --from=test-integration-dev /srv/app/package.json /tmp/test/package.json
+# RUN corepack enable
 
-# RUN pnpm test:integration:prod
+# COPY --from=test-e2e-prepare /srv/app/ ./
+
+# RUN pnpm --dir nuxt run test:e2e:dev
+
+
+# ########################
+# # Nuxt: test (e2e, production)
+
+# FROM mcr.microsoft.com/playwright:v1.36.2@sha256:11ef7660a29bb886c8bfb1d59e7ebcb1c49fc7c43d116d225b1c8e881b1147a3 AS test-e2e-prod
+
+# # The `CI` environment variable must be set for pnpm to run in headless mode
+# ENV CI=true
+
+# WORKDIR /srv/app/
+
+# RUN corepack enable
+
+# COPY --from=test-e2e-prepare /srv/app/ ./
+# COPY --from=build /srv/app/nuxt/.output /srv/app/nuxt/.output
+
+# # # Do not run in parallel with `test-e2e-dev`
+# # COPY --from=test-e2e-dev /srv/app/package.json /tmp/test/package.json
+
+# RUN pnpm --dir nuxt run test:e2e:prod
 
 
 #######################
