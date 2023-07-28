@@ -20,6 +20,7 @@
     "utils",
     "app.config.ts",
     "error.vue",
+    "i18n.config.ts",
     "nuxt.config.ts",
     "tailwind.config.ts"
   ],
@@ -41,7 +42,7 @@
     "@dargmuesli/nuxt-cookie-control": "6.1.5",
     "@http-util/status-i18n": "0.7.0",
     "@nuxtjs/html-validator": "1.5.2",
-    "@nuxtjs/i18n": "8.0.0-beta.10",
+    "@nuxtjs/i18n": "npm:@nuxtjs/i18n-edge@8.0.0-beta.13-28175294.3a94c60",
     "@nuxtjs/tailwindcss": "6.8.0",
     "@tailwindcss/typography": "0.5.9",
     "nuxt-seo-kit-module": "2.0.0-beta.5",
