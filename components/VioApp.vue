@@ -4,13 +4,15 @@
       <!-- `NuxtLayout` can't have mulitple child nodes (https://github.com/nuxt/nuxt/issues/21759) -->
       <div>
         <NuxtPage />
-        <CookieControl :locale="locale" />
+        <CookieControl :locale="locale as Locale" />
       </div>
     </NuxtLayout>
   </div>
 </template>
 
 <script setup lang="ts">
+import { Locale } from '@dargmuesli/nuxt-cookie-control/dist/runtime/types'
+
 export interface Props {
   siteDescription: string
   ogImageAlt: string
