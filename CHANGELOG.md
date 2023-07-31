@@ -19,6 +19,170 @@
 
 * changes to app configuration required
 
+# [1.16.0](https://github.com/dargmuesli/vio/compare/1.15.0...1.16.0) (2023-07-31)
+
+
+### Bug Fixes
+
+* **i18n:** enable browser language detection ([bf71fe9](https://github.com/dargmuesli/vio/commit/bf71fe95ae73b2a0c39a2ed25d8cfd55704b3857))
+
+
+### Features
+
+* **sitemap:** exclude api paths ([6185a3e](https://github.com/dargmuesli/vio/commit/6185a3e3d04d566d02773c18e10b3aec9223b4b0))
+
+# [1.15.0](https://github.com/dargmuesli/vio/compare/1.14.2...1.15.0) (2023-07-31)
+
+
+### Features
+
+* **i18n:** export constants ([d69177f](https://github.com/dargmuesli/vio/commit/d69177fbaea99077bda2e96078995064719a6903))
+
+## [1.14.2](https://github.com/dargmuesli/vio/compare/1.14.1...1.14.2) (2023-07-28)
+
+
+### Bug Fixes
+
+* **package:** export locales ([5fc992b](https://github.com/dargmuesli/vio/commit/5fc992b42e6b8ff6d64001f54f9d553fa5a0a406))
+
+## [1.14.1](https://github.com/dargmuesli/vio/compare/1.14.0...1.14.1) (2023-07-28)
+
+
+### Bug Fixes
+
+* **app:** cast locale type ([a9ecea6](https://github.com/dargmuesli/vio/commit/a9ecea6ec92800f5d4db1c3946e53e5581f25188))
+* **i18n:** add quotation marks around string with escaped character ([919fdef](https://github.com/dargmuesli/vio/commit/919fdefc8c71f7f921a2346f09227c948dcc6369))
+* **playgroud:** add package link ([579a6ad](https://github.com/dargmuesli/vio/commit/579a6ad882524933c06ad603d1613b7ca0b0a5af))
+* schedule release ([e05af95](https://github.com/dargmuesli/vio/commit/e05af955709950e448b5b3a7a2287f4b5f399344))
+
+# [1.14.0](https://github.com/dargmuesli/vio/compare/1.13.0...1.14.0) (2023-07-27)
+
+
+### Features
+
+* **app:** add og image component property ([9283fad](https://github.com/dargmuesli/vio/commit/9283fad4ed1a7fcce8768412986cc4803abaee33))
+
+# [1.13.0](https://github.com/dargmuesli/vio/compare/1.12.0...1.13.0) (2023-07-27)
+
+
+### Features
+
+* **deps:** upgrade to nuxt-seo-kit v2 beta ([eaeee01](https://github.com/dargmuesli/vio/commit/eaeee0189c80e3049991241a690d907f9d3e43da))
+
+# [1.12.0](https://github.com/dargmuesli/vio/compare/1.11.7...1.12.0) (2023-07-26)
+
+
+### Features
+
+* **error:** add stacktrace ([e84f8cb](https://github.com/dargmuesli/vio/commit/e84f8cbaae5688d4e31885f575d8ca5179ffd523))
+* **nuxt-seo-kit:** use nuxt-og-image v2 ([3b8e662](https://github.com/dargmuesli/vio/commit/3b8e66276e0172b336f38c4c5af8ad1964f6dc1a))
+
+## [1.11.7](https://github.com/dargmuesli/vio/compare/1.11.6...1.11.7) (2023-07-26)
+
+
+### Bug Fixes
+
+* **error:** correct locale value ([06e9ee5](https://github.com/dargmuesli/vio/commit/06e9ee5be11116c6923490dcb1c9a73c96f81573))
+
+## [1.11.6](https://github.com/dargmuesli/vio/compare/1.11.5...1.11.6) (2023-07-26)
+
+
+### Bug Fixes
+
+* schedule release ([599e1df](https://github.com/dargmuesli/vio/commit/599e1df15f5e5c162118557b9546010153504a9b))
+
+## [1.11.5](https://github.com/dargmuesli/vio/compare/1.11.4...1.11.5) (2023-07-15)
+
+
+### Bug Fixes
+
+* schedule release ([7b04fa6](https://github.com/dargmuesli/vio/commit/7b04fa63e6fb0f9152f481dedc61e387e1dd915d))
+
+## [1.11.4](https://github.com/dargmuesli/vio/compare/1.11.3...1.11.4) (2023-07-01)
+
+
+### Bug Fixes
+
+* **vio-app:** use single child for `NuxtLayout` ([de90064](https://github.com/dargmuesli/vio/commit/de90064a92c765bf77716c83af201a996f82c005))
+
+## [1.11.3](https://github.com/dargmuesli/vio/compare/1.11.2...1.11.3) (2023-07-01)
+
+
+### Bug Fixes
+
+* schedule release ([cdb235c](https://github.com/dargmuesli/vio/commit/cdb235c52baf819b32b80ce59f910c8b6ea83bfb))
+
+## [1.11.2](https://github.com/dargmuesli/vio/compare/1.11.1...1.11.2) (2023-06-22)
+
+
+### Bug Fixes
+
+* **test:** configure testing by runtime ([f965316](https://github.com/dargmuesli/vio/commit/f96531656d071ea9da14aac576da79cc61026175))
+
+## [1.11.1](https://github.com/dargmuesli/vio/compare/1.11.0...1.11.1) (2023-06-22)
+
+
+### Reverts
+
+* Revert "Merge pull request #12 from dargmuesli/renovate/master-nuxtjs-i18n-8.x" ([10d2a77](https://github.com/dargmuesli/vio/commit/10d2a77ebd11378e7538b72a76e6d7c0c16c9a23)), closes [#12](https://github.com/dargmuesli/vio/issues/12)
+
+# [1.11.0](https://github.com/dargmuesli/vio/compare/1.10.11...1.11.0) (2023-06-21)
+
+
+### Features
+
+* **app:** add test id ([f69cf4e](https://github.com/dargmuesli/vio/commit/f69cf4ef526779a1c8f343179693340525efe61e))
+* **nuxt:** run production on port 3001 ([43485c5](https://github.com/dargmuesli/vio/commit/43485c5d3517d80c4fca319a30322661a16f8e89))
+
+## [1.10.11](https://github.com/dargmuesli/vio/compare/1.10.10...1.10.11) (2023-06-18)
+
+
+### Performance Improvements
+
+* **i18n:** use lazy loading ([853dbe1](https://github.com/dargmuesli/vio/commit/853dbe11196ddef709cd6f30f4c247822b02de61))
+
+## [1.10.10](https://github.com/dargmuesli/vio/compare/1.10.9...1.10.10) (2023-06-18)
+
+
+### Bug Fixes
+
+* **legal:** update email address ([790d266](https://github.com/dargmuesli/vio/commit/790d26639ebaf3b93f025a6bc6607e3f4c5ec49b))
+
+## [1.10.9](https://github.com/dargmuesli/vio/compare/1.10.8...1.10.9) (2023-06-17)
+
+
+### Bug Fixes
+
+* schedule release ([453505e](https://github.com/dargmuesli/vio/commit/453505eb470927428847e890c210639a100e5b04))
+
+## [1.10.8](https://github.com/dargmuesli/vio/compare/1.10.7...1.10.8) (2023-06-03)
+
+
+### Bug Fixes
+
+* schedule release ([069e637](https://github.com/dargmuesli/vio/commit/069e637c4d30fe3e3ed443d680949c89698d05b3))
+
+## [1.10.7](https://github.com/dargmuesli/vio/compare/1.10.6...1.10.7) (2023-05-21)
+
+
+### Bug Fixes
+
+* schedule release ([8d26d80](https://github.com/dargmuesli/vio/commit/8d26d80eb438c1b2b691e0577ccb159c94675fd7))
+
+## [1.10.6](https://github.com/dargmuesli/vio/compare/1.10.5...1.10.6) (2023-05-21)
+
+
+### Bug Fixes
+
+* schedule release ([c788e8b](https://github.com/dargmuesli/vio/commit/c788e8bb0e6e8a962c4e9059e83c15f38793c9d4))
+
+## [1.10.5](https://github.com/dargmuesli/vio/compare/1.10.4...1.10.5) (2023-05-15)
+
+
+### Bug Fixes
+
+* schedule release ([114cd7c](https://github.com/dargmuesli/vio/commit/114cd7c3567ba827f98ac27f1ad615bbcbe76aab))
+
 ## [1.10.4](https://github.com/dargmuesli/vio/compare/1.10.3...1.10.4) (2023-05-06)
 
 

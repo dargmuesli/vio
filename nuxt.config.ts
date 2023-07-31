@@ -1,14 +1,18 @@
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-import { LOCALES, SITE_NAME } from './utils/constants'
+import { I18N_MODULE_CONFIG, SITE_NAME } from './utils/constants'
 
 const currentDir = dirname(fileURLToPath(import.meta.url))
 
 const BASE_URL =
   'https://' +
   (process.env.NUXT_PUBLIC_STACK_DOMAIN ||
-    `${process.env.HOST || 'localhost'}:3000`)
+    `${process.env.HOST || 'localhost'}:${
+      !process.env.NODE_ENV || process.env.NODE_ENV === 'development'
+        ? '3000'
+        : '3001'
+    }`)
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
@@ -24,12 +28,12 @@ export default defineNuxtConfig({
       title: SITE_NAME, // fallback data to prevent invalid html at generation
     },
   },
-  extends: ['nuxt-seo-kit'],
   modules: [
     '@dargmuesli/nuxt-cookie-control',
     '@nuxtjs/html-validator',
     '@nuxtjs/i18n',
     '@nuxtjs/tailwindcss',
+    'nuxt-seo-kit-module',
   ],
   nitro: {
     compressPublicAssets: true,
@@ -37,20 +41,16 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       googleAnalyticsId: '', // set via environment variable `NUXT_PUBLIC_GOOGLE_ANALYTICS_ID` only
-      ...{
-        siteName: SITE_NAME,
-        siteUrl: BASE_URL,
+      i18n: {
+        baseUrl: BASE_URL,
       },
+      isInProduction: process.env.NODE_ENV === 'production',
+      isTesting: false,
     },
   },
   typescript: {
     shim: false,
     strict: true,
-    tsConfig: {
-      vueCompilerOptions: {
-        htmlAttributes: [], // https://github.com/johnsoncodehk/volar/issues/1970#issuecomment-1276994634
-      },
-    },
   },
 
   // modules
@@ -105,23 +105,25 @@ export default defineNuxtConfig({
     logLevel: 'warning',
   },
   i18n: {
-    baseUrl: BASE_URL,
+    ...I18N_MODULE_CONFIG,
     defaultLocale: 'en', // Must be set for the default prefix_except_default prefix strategy.
     detectBrowserLanguage: {
       cookieSecure: true,
-      redirectOn: 'root',
-    },
-    locales: LOCALES,
-    vueI18n: {
-      fallbackWarn: false, // covered by linting
-      missingWarn: false, // covered by linting
     },
   },
   linkChecker: {
-    failOn404: false, // TODO: enable (https://github.com/harlan-zw/nuxt-seo-kit/issues/4#issuecomment-1434522124)
+    failOnError: false, // TODO: enable (https://github.com/harlan-zw/nuxt-seo-kit/issues/4#issuecomment-1434522124)
+  },
+  seoKit: {
+    splash: false,
   },
   site: {
-    splash: false,
+    debug: process.env.NODE_ENV === 'development',
+    name: SITE_NAME,
+    url: BASE_URL,
+  },
+  sitemap: {
+    exclude: ['/api/**'],
   },
   tailwindcss: {
     cssPath: join(currentDir, './assets/css/tailwind.css'),

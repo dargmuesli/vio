@@ -1,20 +1,26 @@
 <template>
-  <div :data-is-loading="isLoading">
+  <div :data-is-loading="isLoading" data-testid="is-loading">
     <NuxtLayout>
-      <SeoKit :site-description="siteDescription" :language="locale" />
-      <OgImageStatic :alt="ogImageAlt" component="OgImage" />
-      <NuxtPage />
-      <CookieControl :locale="locale" />
+      <!-- `NuxtLayout` can't have mulitple child nodes (https://github.com/nuxt/nuxt/issues/21759) -->
+      <div>
+        <NuxtPage />
+        <CookieControl :locale="locale as Locale" />
+      </div>
     </NuxtLayout>
   </div>
 </template>
 
 <script setup lang="ts">
+import { Locale } from '@dargmuesli/nuxt-cookie-control/dist/runtime/types'
+
 export interface Props {
   siteDescription: string
   ogImageAlt: string
+  ogImageComponent?: string
 }
-withDefaults(defineProps<Props>(), {})
+const props = withDefaults(defineProps<Props>(), {
+  ogImageComponent: undefined,
+})
 
 const { locale } = useI18n()
 const cookieControl = useCookieControl()
@@ -36,9 +42,18 @@ watch(
       window.location.reload()
     }
   },
-  { deep: true }
+  { deep: true },
 )
+
 // initialization
+updateSiteConfig({
+  description: props.siteDescription,
+})
+defineOgImage({
+  alt: props.ogImageAlt,
+  component: props.ogImageComponent,
+  description: props.siteDescription,
+})
 useAppLayout()
 useFavicons()
 </script>
