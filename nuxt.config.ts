@@ -125,7 +125,7 @@ export default defineNuxtConfig({
     ],
   },
   linkChecker: {
-    failOn404: false, // TODO: enable (https://github.com/harlan-zw/nuxt-seo-kit/issues/4#issuecomment-1434522124)
+    failOnError: false, // TODO: enable (https://github.com/harlan-zw/nuxt-seo-kit/issues/4#issuecomment-1434522124)
   },
   seoKit: {
     splash: false,
