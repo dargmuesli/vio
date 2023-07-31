@@ -6,7 +6,4 @@ export default defineNuxtConfig({
   site: {
     name: 'Playground',
   },
-  typescript: {
-    includeWorkspace: true,
-  },
 })
