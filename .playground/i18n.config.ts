@@ -1,3 +1,3 @@
-import { i18nConfig } from '@dargmuesli/nuxt-vio/i18n.config'
+import { I18N_VUE_CONFIG } from '@dargmuesli/nuxt-vio/utils/constants'
 
-export default defineI18nConfig(() => i18nConfig)
+export default defineI18nConfig(() => I18N_VUE_CONFIG)
