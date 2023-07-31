@@ -1,3 +1,15 @@
+# [1.16.0](https://github.com/dargmuesli/vio/compare/1.15.0...1.16.0) (2023-07-31)
+
+
+### Bug Fixes
+
+* **i18n:** enable browser language detection ([bf71fe9](https://github.com/dargmuesli/vio/commit/bf71fe95ae73b2a0c39a2ed25d8cfd55704b3857))
+
+
+### Features
+
+* **sitemap:** exclude api paths ([6185a3e](https://github.com/dargmuesli/vio/commit/6185a3e3d04d566d02773c18e10b3aec9223b4b0))
+
 # [1.15.0](https://github.com/dargmuesli/vio/compare/1.14.2...1.15.0) (2023-07-31)
 
 
