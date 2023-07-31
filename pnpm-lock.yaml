@@ -5,7 +5,8 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  nuxt-og-image: 2.0.11
+  eslint-plugin-vue: 9.15.1
+  nuxt-og-image: 2.0.12
 
 dependencies:
   '@dargmuesli/nuxt-cookie-control':
@@ -1776,7 +1777,7 @@ packages:
       eslint: 8.46.0
       eslint-import-resolver-typescript: 3.5.5(@typescript-eslint/parser@5.62.0)(eslint-plugin-import@2.28.0)(eslint@8.46.0)
       eslint-plugin-import: 2.28.0(@typescript-eslint/parser@5.62.0)(eslint-import-resolver-typescript@3.5.5)(eslint@8.46.0)
-      eslint-plugin-vue: 9.16.1(eslint@8.46.0)
+      eslint-plugin-vue: 9.15.1(eslint@8.46.0)
     transitivePeerDependencies:
       - eslint-import-resolver-node
       - eslint-import-resolver-webpack
@@ -1796,7 +1797,7 @@ packages:
       eslint-plugin-node: 11.1.0(eslint@8.46.0)
       eslint-plugin-promise: 6.1.1(eslint@8.46.0)
       eslint-plugin-unicorn: 44.0.2(eslint@8.46.0)
-      eslint-plugin-vue: 9.16.1(eslint@8.46.0)
+      eslint-plugin-vue: 9.15.1(eslint@8.46.0)
       local-pkg: 0.4.3
     transitivePeerDependencies:
       - '@typescript-eslint/parser'
@@ -5208,7 +5209,7 @@ packages:
   /eslint-plugin-nuxt@4.0.0(eslint@8.46.0):
     resolution: {integrity: sha512-v3Vwdk8YKe52bAz8eSIDqQuTtfL/T1r9dSl1uhC5SyR5pgLxgKkQdxXVf/Bf6Ax7uyd9rHqiAuYVdqqDb7ILdA==}
     dependencies:
-      eslint-plugin-vue: 9.16.1(eslint@8.46.0)
+      eslint-plugin-vue: 9.15.1(eslint@8.46.0)
       semver: 7.5.4
       vue-eslint-parser: 9.3.1(eslint@8.46.0)
     transitivePeerDependencies:
@@ -5269,8 +5270,8 @@ packages:
       strip-indent: 3.0.0
     dev: true
 
-  /eslint-plugin-vue@9.16.1(eslint@8.46.0):
-    resolution: {integrity: sha512-2FtnTqazA6aYONfDuOZTk0QzwhAwi7Z4+uJ7+GHeGxcKapjqWlDsRWDenvyG/utyOfAS5bVRmAG3cEWiYEz2bA==}
+  /eslint-plugin-vue@9.15.1(eslint@8.46.0):
+    resolution: {integrity: sha512-CJE/oZOslvmAR9hf8SClTdQ9JLweghT6JCBQNrT2Iel1uVw0W0OLJxzvPd6CxmABKCvLrtyDnqGV37O7KQv6+A==}
     engines: {node: ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: ^6.2.0 || ^7.0.0 || ^8.0.0
@@ -7993,8 +7994,8 @@ packages:
       - webpack
     dev: false
 
-  /nuxt-og-image@2.0.11:
-    resolution: {integrity: sha512-j+xChUts5coF1wxHpmWAWL9zdRQNmeT772PDvpidW+VwWNKiwKBKVrKc0BzfaptFlWpmbuGhPkka1RbXyvXy+Q==}
+  /nuxt-og-image@2.0.12:
+    resolution: {integrity: sha512-up0s0WAlLZw77AKMZCfiahL02i/eRzjns3+cOg2kcDc9Eje8KqaBDuZNmcT1QMpEN6u98/IQ3fSzE3oegxSWNw==}
     dependencies:
       '@nuxt/kit': 3.6.5
       '@resvg/resvg-js': 2.4.1
@@ -8075,7 +8076,7 @@ packages:
       chalk: 5.3.0
       defu: 6.1.2
       nuxt-link-checker: 2.0.2(@nuxt/devtools@0.7.2)(nuxt@3.6.5)(postcss@8.4.27)(vite@4.4.7)(vue@3.3.4)(webpack@5.88.2)
-      nuxt-og-image: 2.0.11
+      nuxt-og-image: 2.0.12
       nuxt-schema-org: 2.2.0(@unhead/vue@1.1.35)
       nuxt-seo-experiments: 3.0.7
       nuxt-seo-ui: 0.3.1
