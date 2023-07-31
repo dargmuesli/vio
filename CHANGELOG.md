@@ -1,3 +1,10 @@
+# [1.15.0](https://github.com/dargmuesli/vio/compare/1.14.2...1.15.0) (2023-07-31)
+
+
+### Features
+
+* **i18n:** export constants ([d69177f](https://github.com/dargmuesli/vio/commit/d69177fbaea99077bda2e96078995064719a6903))
+
 ## [1.14.2](https://github.com/dargmuesli/vio/compare/1.14.1...1.14.2) (2023-07-28)
 
 
