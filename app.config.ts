@@ -48,6 +48,5 @@ export default defineAppConfig({
   seoMeta: {
     twitterSite: '@dargmuesli',
   } as Parameters<typeof useSeoMeta>[0] | undefined,
-  siteName: SITE_NAME,
   themeColor: '#202020' as string | undefined,
 })
