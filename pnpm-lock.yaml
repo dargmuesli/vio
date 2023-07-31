@@ -6,7 +6,6 @@ settings:
 
 overrides:
   eslint-plugin-vue: 9.15.1
-  nuxt-og-image: 2.0.12
 
 dependencies:
   '@dargmuesli/nuxt-cookie-control':
