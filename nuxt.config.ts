@@ -107,7 +107,9 @@ export default defineNuxtConfig({
   i18n: {
     ...I18N_MODULE_CONFIG,
     defaultLocale: 'en', // Must be set for the default prefix_except_default prefix strategy.
-    detectBrowserLanguage: false, // Enabling browser language detection does not generate (!) other languages than the default one.
+    detectBrowserLanguage: {
+      cookieSecure: true,
+    },
   },
   linkChecker: {
     failOnError: false, // TODO: enable (https://github.com/harlan-zw/nuxt-seo-kit/issues/4#issuecomment-1434522124)
