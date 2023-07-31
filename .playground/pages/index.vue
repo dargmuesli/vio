@@ -1,7 +1,7 @@
 <template>
   <div class="flex justify-center items-center vio-prose">
     <h1>{{ t('title') }}</h1>
-    <VioLink to="#">{{ t('globalLoading') }}</VioLink>
+    <VioLink to="/">{{ t('globalLoading') }}</VioLink>
   </div>
 </template>
 
