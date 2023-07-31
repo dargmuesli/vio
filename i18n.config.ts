@@ -1,6 +1,3 @@
-export const i18nConfig = {
-  fallbackWarn: false, // covered by linting
-  missingWarn: false, // covered by linting
-}
+import { I18N_VUE_CONFIG } from './utils/constants'
 
-export default defineI18nConfig(() => i18nConfig)
+export default defineI18nConfig(() => I18N_VUE_CONFIG)

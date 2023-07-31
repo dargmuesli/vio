@@ -1,7 +1,7 @@
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-import { SITE_NAME } from './utils/constants'
+import { I18N_MODULE_CONFIG, SITE_NAME } from './utils/constants'
 
 const currentDir = dirname(fileURLToPath(import.meta.url))
 
@@ -105,24 +105,9 @@ export default defineNuxtConfig({
     logLevel: 'warning',
   },
   i18n: {
+    ...I18N_MODULE_CONFIG,
     defaultLocale: 'en', // Must be set for the default prefix_except_default prefix strategy.
     detectBrowserLanguage: false, // Enabling browser language detection does not generate (!) other languages than the default one.
-    langDir: 'locales',
-    lazy: true,
-    locales: [
-      {
-        code: 'en',
-        file: 'en.json',
-        name: 'English',
-        iso: 'en', // Will be used as catchall locale by default.
-      },
-      {
-        code: 'de',
-        file: 'de.json',
-        name: 'Deutsch',
-        iso: 'de',
-      },
-    ],
   },
   linkChecker: {
     failOnError: false, // TODO: enable (https://github.com/harlan-zw/nuxt-seo-kit/issues/4#issuecomment-1434522124)

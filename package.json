@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "@dargmuesli/nuxt-cookie-control": "6.1.5",
-    "@dargmuesli/nuxt-vio": "link:.",
+    "@dargmuesli/nuxt-vio": "link:",
     "@http-util/status-i18n": "0.7.0",
     "@nuxtjs/html-validator": "1.5.2",
     "@nuxtjs/i18n": "8.0.0-rc.1",
