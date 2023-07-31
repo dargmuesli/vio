@@ -12,7 +12,7 @@ dependencies:
     specifier: 6.1.5
     version: 6.1.5(webpack@5.88.2)
   '@dargmuesli/nuxt-vio':
-    specifier: link:.
+    specifier: 'link:'
     version: 'link:'
   '@http-util/status-i18n':
     specifier: 0.7.0
@@ -11225,7 +11225,7 @@ packages:
       '@vue/compiler-dom': 3.3.4
       esno: 0.16.3
       kolorist: 1.8.0
-      magic-string: 0.30.1
+      magic-string: 0.30.2
       shell-quote: 1.8.1
       vite: 4.4.7(@types/node@20.4.5)
     transitivePeerDependencies:
