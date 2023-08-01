@@ -1,3 +1,25 @@
+# [2.0.0](https://github.com/dargmuesli/vio/compare/1.16.0...2.0.0) (2023-08-01)
+
+
+### Bug Fixes
+
+* **app:** remove `siteName` property ([dde0874](https://github.com/dargmuesli/vio/commit/dde087433d00d520c8bb7e996e29df169ffee9a6))
+* **i18n:** enable browser language detection ([b04b862](https://github.com/dargmuesli/vio/commit/b04b8624eede0d9d9d0dcd45b308ba615f1138af))
+
+
+* feat(legal)!: extract components ([853a00e](https://github.com/dargmuesli/vio/commit/853a00e4051d2da13cf2412dffb9cec403e733cd))
+
+
+### Features
+
+* **legal:** optimize components ([cc32b55](https://github.com/dargmuesli/vio/commit/cc32b5500c99495cca0f22fee28319cdcaa50470))
+* **prose:** remove scheme variant ([457a259](https://github.com/dargmuesli/vio/commit/457a259b66928650f9a7d2ee2a8827667e755a30))
+
+
+### BREAKING CHANGES
+
+* changes to app configuration required
+
 # [2.0.0-beta.3](https://github.com/dargmuesli/vio/compare/2.0.0-beta.2...2.0.0-beta.3) (2023-08-01)
 
 
