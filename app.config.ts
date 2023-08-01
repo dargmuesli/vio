@@ -1,52 +1,57 @@
 import { useSeoMeta } from '@unhead/vue'
 
 export default defineAppConfig({
-  legalNotice: undefined as
-    | {
-        contact: {
-          email: string
-        }
-        responsibility: {
-          address: {
-            city: string
-            name: string
-            street: string
-          }
-        }
-        tmg: {
-          address: {
-            city: string
-            name: string
-            street: string
-          }
-        }
-      }
-    | undefined,
-  privacyPolicy: undefined as
-    | {
-        hostingCdn?: {
-          external: {
-            address: {
-              city: string
-              name: string
-              street: string
-            }
-          }
-        }
-        mandatoryInfo?: {
-          responsible: {
-            address: {
-              city: string
-              email: string
-              name: string
-              street: string
-            }
-          }
-        }
-      }
-    | undefined,
+  legalNotice: undefined,
+  privacyPolicy: undefined,
   seoMeta: {
     twitterSite: '@dargmuesli',
-  } as Parameters<typeof useSeoMeta>[0] | undefined,
-  themeColor: '#202020' as string | undefined,
+  },
+  themeColor: '#202020',
 })
+
+declare module 'nuxt/schema' {
+  interface AppConfigInput {
+    legalNotice?: {
+      contact: {
+        email: string
+      }
+      responsibility: {
+        address: {
+          city: string
+          name: string
+          street: string
+        }
+      }
+      tmg: {
+        address: {
+          city: string
+          name: string
+          street: string
+        }
+      }
+    }
+    privacyPolicy?: {
+      hostingCdn?: {
+        external: {
+          address: {
+            city: string
+            name: string
+            street: string
+          }
+        }
+      }
+      mandatoryInfo?: {
+        responsible: {
+          address: {
+            city: string
+            email: string
+            name: string
+            street: string
+          }
+        }
+      }
+    }
+    seoMeta?: Parameters<typeof useSeoMeta>[0]
+    themeColor?: string
+  }
+}
