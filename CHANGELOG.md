@@ -1,3 +1,10 @@
+# [2.0.0-beta.3](https://github.com/dargmuesli/vio/compare/2.0.0-beta.2...2.0.0-beta.3) (2023-08-01)
+
+
+### Bug Fixes
+
+* **app:** remove `siteName` property ([dde0874](https://github.com/dargmuesli/vio/commit/dde087433d00d520c8bb7e996e29df169ffee9a6))
+
 # [2.0.0-beta.2](https://github.com/dargmuesli/vio/compare/2.0.0-beta.1...2.0.0-beta.2) (2023-07-31)
 
 
