@@ -26,7 +26,7 @@ jobs:
     needs: prepare_jobs
     name: Release (semantic, dry)
     uses: dargmuesli/github-actions/.github/workflows/release-semantic-next.yml@0.40.15
-    if: needs.prepare_jobs.outputs.pr_found == 'false' || github.event_name == 'pull_request'
+    if: contains(fromJSON('["beta", "alpha"]'), github.ref_name) || needs.prepare_jobs.outputs.pr_found == 'false' || github.event_name == 'pull_request'
     permissions:
       contents: write
     secrets:
