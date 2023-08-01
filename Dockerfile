@@ -114,7 +114,7 @@ RUN corepack enable && \
 
 # COPY --from=prepare /srv/app/ ./
 
-# RUN pnpm rebuild
+# RUN pnpm rebuild -r
 
 
 # ########################
