@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/dargmuesli/vio/compare/2.0.0...2.0.1) (2023-08-01)
+
+
+### Bug Fixes
+
+* **app:** declare module ([99f0e0d](https://github.com/dargmuesli/vio/commit/99f0e0d4b93697d948ef100234f631796cd3b6e1))
+
 # [2.0.0](https://github.com/dargmuesli/vio/compare/1.16.0...2.0.0) (2023-08-01)
 
 
