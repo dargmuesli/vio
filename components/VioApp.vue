@@ -14,13 +14,16 @@
 import { Locale } from '@dargmuesli/nuxt-cookie-control/dist/runtime/types'
 
 export interface Props {
-  siteDescription: string
   ogImageAlt: string
   ogImageComponent?: string
+  siteDescription: string
 }
 const props = withDefaults(defineProps<Props>(), {
   ogImageComponent: undefined,
 })
+const ogImageAltProp = toRef(() => props.ogImageAlt)
+const ogImageComponentProp = toRef(() => props.ogImageComponent)
+const siteDescriptionProp = toRef(() => props.siteDescription)
 
 const { locale } = useI18n()
 const cookieControl = useCookieControl()
@@ -47,12 +50,12 @@ watch(
 
 // initialization
 updateSiteConfig({
-  description: props.siteDescription,
+  description: siteDescriptionProp.value,
 })
 defineOgImage({
-  alt: props.ogImageAlt,
-  component: props.ogImageComponent,
-  description: props.siteDescription,
+  alt: ogImageAltProp.value,
+  component: ogImageComponentProp.value,
+  description: siteDescriptionProp.value,
 })
 useAppLayout()
 useFavicons()

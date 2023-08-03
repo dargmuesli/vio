@@ -16,8 +16,9 @@ export interface Props {
   error: NuxtError
 }
 const props = withDefaults(defineProps<Props>(), {})
+const errorProp = toRef(() => props.error)
 
 useHead({
-  title: `${props.error.statusCode} - ${props.error.message}`,
+  title: `${errorProp.value.statusCode} - ${errorProp.value.message}`,
 })
 </script>
