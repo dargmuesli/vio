@@ -1,3 +1,4 @@
+export const I18N_COOKIE_NAME = 'i18n_r'
 export const I18N_MODULE_CONFIG = {
   langDir: 'locales',
   lazy: true,

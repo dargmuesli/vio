@@ -1,7 +1,11 @@
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-import { I18N_MODULE_CONFIG, SITE_NAME } from './utils/constants'
+import {
+  I18N_COOKIE_NAME,
+  I18N_MODULE_CONFIG,
+  SITE_NAME,
+} from './utils/constants'
 
 const currentDir = dirname(fileURLToPath(import.meta.url))
 
@@ -79,7 +83,7 @@ export default defineNuxtConfig({
             de: 'Sprache',
             en: 'Language',
           },
-          targetCookieIds: ['i18n_redirected'],
+          targetCookieIds: [I18N_COOKIE_NAME],
         },
       ],
       optional: [
@@ -108,6 +112,7 @@ export default defineNuxtConfig({
     ...I18N_MODULE_CONFIG,
     defaultLocale: 'en', // Must be set for the default prefix_except_default prefix strategy.
     detectBrowserLanguage: {
+      cookieKey: I18N_COOKIE_NAME,
       cookieSecure: true,
     },
   },
