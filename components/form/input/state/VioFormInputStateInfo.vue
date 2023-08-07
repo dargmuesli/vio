@@ -1,5 +1,5 @@
 <template>
-  <FormInputState
+  <VioFormInputState
     v-if="
       (!formInput && !validationProperty) ||
       (formInput &&
@@ -13,7 +13,7 @@
   >
     <IconInformationCircle />
     <slot />
-  </FormInputState>
+  </VioFormInputState>
 </template>
 
 <script setup lang="ts">

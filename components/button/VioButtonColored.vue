@@ -1,5 +1,5 @@
 <template>
-  <Button
+  <VioButton
     :is-to-relative="isToRelative"
     :aria-label="ariaLabel"
     class="rounded-md border px-4 py-2 font-medium"
@@ -26,7 +26,7 @@
     <template #suffix>
       <slot name="suffix" />
     </template>
-  </Button>
+  </VioButton>
 </template>
 
 <script setup lang="ts">

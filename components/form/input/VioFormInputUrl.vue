@@ -1,5 +1,5 @@
 <template>
-  <FormInput
+  <VioFormInput
     v-if="formInput"
     :is-optional="isOptional"
     :id-label="`input-${id}`"
@@ -10,20 +10,20 @@
     @input="emit('input', $event)"
   >
     <template #stateError>
-      <FormInputStateError
+      <VioFormInputStateError
         :form-input="formInput"
         validation-property="maxLength"
       >
         {{ t('globalValidationLength') }}
-      </FormInputStateError>
-      <FormInputStateError
+      </VioFormInputStateError>
+      <VioFormInputStateError
         :form-input="formInput"
         validation-property="formatUrlHttps"
       >
         {{ t('globalValidationFormatUrlHttps') }}
-      </FormInputStateError>
+      </VioFormInputStateError>
     </template>
-  </FormInput>
+  </VioFormInput>
 </template>
 
 <script setup lang="ts">

@@ -8,11 +8,11 @@
     novalidate
     @submit="(e) => emit('submit', e)"
   >
-    <Card class="flex flex-col" is-high>
+    <VioCard class="flex flex-col" is-high>
       <div class="flex flex-col min-h-0 overflow-y-auto gap-6">
         <slot />
         <div class="flex flex-col items-center justify-between">
-          <ButtonColored
+          <VioButtonColored
             :aria-label="submitName || t('submit')"
             :class="{
               'animate-shake': form.$error,
@@ -24,19 +24,19 @@
             <template #prefix>
               <slot name="submit-icon" />
             </template>
-          </ButtonColored>
-          <FormInputStateError v-if="form.$error" class="mt-2">
+          </VioButtonColored>
+          <VioFormInputStateError v-if="form.$error" class="mt-2">
             {{ t('globalValidationFailed') }}
-          </FormInputStateError>
+          </VioFormInputStateError>
         </div>
-        <CardStateAlert v-if="errorMessages?.length" class="my-4">
-          <SpanList :span="errorMessages" />
-        </CardStateAlert>
+        <VioCardStateAlert v-if="errorMessages?.length" class="my-4">
+          <VioLayoutSpanList :span="errorMessages" />
+        </VioCardStateAlert>
         <div v-if="$slots.assistance" class="flex justify-center">
           <slot name="assistance" />
         </div>
       </div>
-    </Card>
+    </VioCard>
   </form>
 </template>
 

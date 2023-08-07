@@ -1,7 +1,7 @@
 <template>
-  <CardState background-color="bg-red-600" :is-edgy="isEdgy" role="alert">
+  <VioCardState background-color="bg-red-600" :is-edgy="isEdgy" role="alert">
     <slot />
-  </CardState>
+  </VioCardState>
 </template>
 
 <script setup lang="ts">

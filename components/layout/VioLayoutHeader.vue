@@ -1,34 +1,34 @@
 <template>
   <header class="flex items-center justify-between gap-4 mb-8">
-    <Button :aria-label="t('creal')" :to="localePath('/')">
+    <VioButton :aria-label="t('creal')" :to="localePath('/')">
       <span class="text-lg font-bold">{{ t('creal') }}</span>
       <template #prefix>
         <IconLogo class="h-10 w-10" />
       </template>
-    </Button>
-    <AppLink
+    </VioButton>
+    <VioLink
       v-if="eventsCurrentCount"
       class="flex items-center gap-2 rounded-full border px-4 py-2 font-bold focus:rounded-full sm:px-4"
       :is-colored="false"
       :to="localePath('/events')"
     >
-      <LivePulse />
+      <VioLayoutLivePulse />
       <span class="hidden whitespace-nowrap sm:inline">
         {{ t('live') }}
       </span>
-    </AppLink>
-    <AppLink
+    </VioLink>
+    <VioLink
       v-else-if="eventsFutureCount"
       class="flex items-center gap-2 rounded-full border px-2 py-2 font-bold focus:rounded-full sm:px-4"
       :is-colored="false"
       :to="localePath('/events')"
     >
-      <LivePulse />
+      <VioLayoutLivePulse />
       <span class="hidden whitespace-nowrap sm:inline">
         {{ t('eventsFuture') }}
       </span>
-    </AppLink>
-    <Button
+    </VioLink>
+    <VioButton
       :aria-label="t('bookCreal')"
       class="basis-0 text-lg font-bold"
       :is-colored="false"
@@ -40,7 +40,7 @@
       <template #suffix>
         <IconArrowRight />
       </template>
-    </Button>
+    </VioButton>
   </header>
 </template>
 

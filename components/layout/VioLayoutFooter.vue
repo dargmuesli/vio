@@ -2,9 +2,9 @@
   <footer class="text-sm leading-6">
     <div class="flex flex-col gap-8">
       <div class="flex items-center">
-        <LayoutHr />
+        <VioLayoutHr />
         <IconLogo class="mx-12 h-12 w-12 brightness-0 opacity-60 invert" />
-        <LayoutHr />
+        <VioLayoutHr />
       </div>
       <!-- Justifying evenly, instead of "between", centers a single element. -->
       <div class="flex flex-wrap justify-evenly">

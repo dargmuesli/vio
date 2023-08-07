@@ -1,5 +1,5 @@
 <template>
-  <VioPrivacyPolicy
+  <VioPagePrivacyPolicy
     :is-enabled="{
       summary: {
         generalNotes: true,
