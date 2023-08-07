@@ -37,6 +37,12 @@ export default defineNuxtConfig({
       name: 'layout',
     },
   },
+  devtools: {
+    enabled: process.env.NODE_ENV !== 'production',
+    timeline: {
+      enabled: true,
+    },
+  },
   modules: [
     '@dargmuesli/nuxt-cookie-control',
     '@nuxtjs/color-mode',
