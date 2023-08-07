@@ -3,7 +3,7 @@
     <NuxtLayout>
       <!-- `NuxtLayout` can't have mulitple child nodes (https://github.com/nuxt/nuxt/issues/21759) -->
       <div>
-        <NuxtPage />
+        <NuxtPage :site-description="siteDescriptionProp" />
         <CookieControl :locale="locale" />
       </div>
     </NuxtLayout>
@@ -29,6 +29,7 @@ const siteDescriptionProp = toRef(() => props.siteDescription)
 const { $dayjs } = useNuxtApp()
 const i18n = useI18n()
 const cookieControl = useCookieControl()
+const siteConfig = useSiteConfig()
 
 const { loadingIds, indicateLoadingDone } = useLoadingDoneIndicator('app')
 
@@ -68,7 +69,6 @@ watch(
 )
 
 // initialization
-init()
 updateSiteConfig({
   description: siteDescriptionProp.value,
 })
@@ -78,5 +78,14 @@ defineOgImage({
   description: siteDescriptionProp.value,
 })
 useAppLayout()
-useFavicons()
+useFavicons() // TODO: move to head default
+useSchemaOrg([
+  defineWebSite({
+    description: siteDescriptionProp,
+    inLanguage: locale,
+    name: siteConfig.name,
+  }),
+  defineWebPage(),
+])
+init()
 </script>

@@ -151,6 +151,7 @@ export default defineNuxtConfig({
   site: {
     debug: process.env.NODE_ENV === 'development',
     name: SITE_NAME,
+    titleSeparator: '·',
     url: BASE_URL,
   },
   sitemap: {

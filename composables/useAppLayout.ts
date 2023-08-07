@@ -1,5 +1,6 @@
 export const useAppLayout = () => {
   const appConfig = useAppConfig()
+  const siteConfig = useSiteConfig()
 
   useServerHeadSafe({
     ...useLocaleHead({ addSeoAttributes: true }).value,
@@ -7,23 +8,16 @@ export const useAppLayout = () => {
       class:
         'bg-background-bright dark:bg-background-dark font-sans text-text-dark dark:text-text-bright',
     },
-    ...(appConfig.themeColor
-      ? {
-          meta: [
-            {
-              content: appConfig.themeColor,
-              name: 'msapplication-TileColor',
-            },
-            {
-              content: appConfig.themeColor,
-              name: 'theme-color',
-            },
-          ],
-        }
-      : {}),
   })
 
-  if (appConfig.seoMeta) {
-    useServerSeoMeta(appConfig.seoMeta)
-  }
+  useServerSeoMeta({
+    msapplicationTileColor: appConfig.vio.themeColor,
+    themeColor: appConfig.vio.themeColor,
+    titleTemplate: (titleChunk) => {
+      return titleChunk && titleChunk !== siteConfig.name
+        ? `${titleChunk} ${siteConfig.titleSeparator} ${siteConfig.name}`
+        : siteConfig.name
+    },
+    ...appConfig.vio.seoMeta,
+  })
 }

@@ -1,34 +1,21 @@
 import { defu } from 'defu'
-import type { UseHeadSafeInput } from '@unhead/vue'
 import type { ComputedRef } from 'vue'
 
-export const useHeadDefault = (
-  title: string | ComputedRef<string>,
-  extension?: UseHeadSafeInput,
-) => {
-  const host = useHost()
-  const router = useRouter()
+export const useHeadDefault = ({
+  extension,
+  title,
+}: {
+  extension?: Parameters<typeof useServerSeoMeta>[0]
+  title: string | ComputedRef<string>
+}) => {
+  const attrs = useAttrs()
 
-  const defaults: UseHeadSafeInput = {
-    meta: [
-      {
-        id: 'og:title',
-        property: 'og:title',
-        content: title,
-      },
-      {
-        id: 'og:url',
-        property: 'og:url',
-        content: `https://${host}${router.currentRoute.value.fullPath}`,
-      },
-      {
-        id: 'twitter:title',
-        property: 'twitter:title',
-        content: title,
-      },
-    ],
+  const defaults: Parameters<typeof useServerSeoMeta>[0] = {
+    msapplicationConfig: `/assets/static/favicon/browserconfig.xml?v=${CACHE_VERSION}`,
     title,
+    twitterDescription: attrs['site-description'] as string,
+    twitterTitle: title,
   }
 
-  return useServerHeadSafe(defu(extension, defaults))
+  return useSeoMeta(defu(extension, defaults)) // TODO: use `useServerSeoMeta`
 }
