@@ -30,6 +30,20 @@ const cookieControl = useCookieControl()
 
 const { loadingIds, indicateLoadingDone } = useLoadingDoneIndicator('app')
 
+// methods
+const init = () => {
+  if (process.client) {
+    const cookieTimezone = useCookie(TIMEZONE_COOKIE_NAME, {
+      // default: () => undefined, // setting `default` on the client side only does not write the cookie
+      httpOnly: false,
+      sameSite: 'strict',
+      secure: true,
+    })
+    // @ts-ignore `tz` should be part of `$dayjs` (https://github.com/iamkun/dayjs/issues/2106)
+    cookieTimezone.value = $dayjs.tz.guess()
+  }
+}
+
 // computations
 const isLoading = computed(() => !!loadingIds.value.length)
 
@@ -49,6 +63,7 @@ watch(
 )
 
 // initialization
+init()
 updateSiteConfig({
   description: siteDescriptionProp.value,
 })
