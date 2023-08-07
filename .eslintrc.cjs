@@ -28,6 +28,7 @@ module.exports = {
     'yml/quotes': ['error', { prefer: 'single' }],
   },
   settings: {
+    polyfills: ['Promise'],
     'vue-i18n': {
       localeDir: './locales/*.json',
       messageSyntaxVersion: '^9.0.0',
