@@ -12,7 +12,7 @@
   >
     <slot />
   </a>
-  <NuxtLink
+  <NuxtLinkLocale
     v-else
     :aria-label="ariaLabel"
     :class="classes"
@@ -20,7 +20,7 @@
     @click="emit('click')"
   >
     <slot />
-  </NuxtLink>
+  </NuxtLinkLocale>
 </template>
 
 <script setup lang="ts">
