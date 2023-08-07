@@ -1,3 +1,9 @@
 {
-  "globalLoading": "Lade..."
+  "globalLoading": "Lade...",
+  "globalPlaceholderUrl": "https://websei.te",
+  "globalStatusError": "Fehler",
+  "globalValidationFailed": "Bitte überprüfe deine Eingaben 🙈",
+  "globalValidationFormatUrlHttps": "Muss mit \"https://\" beginnen",
+  "globalValidationLength": "Zu lang",
+  "globalValidationRequired": "Pflichtfeld"
 }
