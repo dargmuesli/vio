@@ -17,9 +17,3 @@ withDefaults(defineProps<Props>(), {
   isHigh: false,
 })
 </script>
-
-<script lang="ts">
-export default {
-  name: 'VioCard',
-}
-</script>

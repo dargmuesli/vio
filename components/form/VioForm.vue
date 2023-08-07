@@ -76,12 +76,6 @@ const errorMessages = computed(() =>
 )
 </script>
 
-<script lang="ts">
-export default {
-  name: 'VioForm',
-}
-</script>
-
 <i18n lang="yaml">
 de:
   submit: Absenden
