@@ -1,0 +1,5 @@
+{
+    "ignoredFiles": [
+        "src/tests/e2e/specs/*"
+    ]
+}
