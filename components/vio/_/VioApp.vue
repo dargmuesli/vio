@@ -4,14 +4,15 @@
       <!-- `NuxtLayout` can't have mulitple child nodes (https://github.com/nuxt/nuxt/issues/21759) -->
       <div>
         <NuxtPage />
-        <CookieControl :locale="locale as Locale" />
+        <CookieControl :locale="locale" />
       </div>
     </NuxtLayout>
   </div>
 </template>
 
 <script setup lang="ts">
-import { Locale } from '@dargmuesli/nuxt-cookie-control/dist/runtime/types'
+import type { Locale } from '@dargmuesli/nuxt-cookie-control/dist/runtime/types'
+import type { WritableComputedRef } from 'vue'
 
 export interface Props {
   ogImageAlt: string
@@ -25,10 +26,14 @@ const ogImageAltProp = toRef(() => props.ogImageAlt)
 const ogImageComponentProp = toRef(() => props.ogImageComponent)
 const siteDescriptionProp = toRef(() => props.siteDescription)
 
-const { locale } = useI18n()
+const { $dayjs } = useNuxtApp()
+const i18n = useI18n()
 const cookieControl = useCookieControl()
 
 const { loadingIds, indicateLoadingDone } = useLoadingDoneIndicator('app')
+
+// data
+const locale = i18n.locale as WritableComputedRef<Locale>
 
 // methods
 const init = () => {
