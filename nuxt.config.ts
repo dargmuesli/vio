@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url'
 import {
   I18N_COOKIE_NAME,
   I18N_MODULE_CONFIG,
+  TIMEZONE_COOKIE_NAME,
   SITE_NAME,
 } from './utils/constants'
 
@@ -86,6 +87,18 @@ export default defineNuxtConfig({
             en: 'Language',
           },
           targetCookieIds: [I18N_COOKIE_NAME],
+        },
+        {
+          description: {
+            de: 'Dieser Cookie von uns speichert die Zeitzone, in der sich das Gerät zu befinden scheint.',
+            en: 'This cookie of ours saves the timezone in which the device appears to be located.',
+          },
+          id: 't',
+          name: {
+            de: 'Zeitzone',
+            en: 'Timezone',
+          },
+          targetCookieIds: [TIMEZONE_COOKIE_NAME],
         },
       ],
       optional: [
