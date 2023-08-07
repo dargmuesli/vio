@@ -32,6 +32,9 @@ export default defineNuxtConfig({
       titleTemplate: `%s`,
       title: SITE_NAME, // fallback data to prevent invalid html at generation
     },
+    pageTransition: {
+      name: 'layout',
+    },
   },
   modules: [
     '@dargmuesli/nuxt-cookie-control',
