@@ -26,18 +26,6 @@ export default defineNuxtPlugin((_nuxtApp) => {
   }
 })
 
-// declare module '#app' {
-//   interface NuxtApp {
-//     $dayjs: DayjsFn
-//   }
-// }
-
-// declare module 'nuxt/dist/app/nuxt' {
-//   interface NuxtApp {
-//     $dayjs: DayjsFn
-//   }
-// }
-
 /*
   [1]
   https://github.com/nuxt/framework/issues/7534#issuecomment-1248596609
