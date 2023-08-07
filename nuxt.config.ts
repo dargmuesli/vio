@@ -29,8 +29,8 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'en', // fallback data to prevent invalid html at generation
       },
-      titleTemplate: `%s`,
       title: SITE_NAME, // fallback data to prevent invalid html at generation
+      titleTemplate: '%s', // fully set in `composables/useAppLayout.ts`
     },
     pageTransition: {
       name: 'layout',
@@ -60,7 +60,6 @@ export default defineNuxtConfig({
   },
   typescript: {
     shim: false,
-    strict: true,
     // tsConfig: {
     //   compilerOptions: {
     //     esModuleInterop: true,
