@@ -1,3 +1,14 @@
+# [3.0.0-beta.2](https://github.com/dargmuesli/vio/compare/3.0.0-beta.1...3.0.0-beta.2) (2023-08-07)
+
+
+### Bug Fixes
+
+* **components:** add vio directory ([27d61e3](https://github.com/dargmuesli/vio/commit/27d61e3c05877f8844dd5291dfdc2110f128e4a5))
+* **error:** use `pre` element for stack trace ([084f58e](https://github.com/dargmuesli/vio/commit/084f58e6719464c282c89c9bbca327755976eecc))
+* **error:** use app layout ([9c243c5](https://github.com/dargmuesli/vio/commit/9c243c5e53106d96923d2490348c27ac4a5b1a82))
+* **layout:** center content ([4a0fc5d](https://github.com/dargmuesli/vio/commit/4a0fc5da24d2c7e4fe49716b280407020c7c1915))
+* **tailwind:** remove line clamp plugin ([583872b](https://github.com/dargmuesli/vio/commit/583872badc908c85935bcc0e2208876a0e1d36fa))
+
 # [3.0.0-beta.1](https://github.com/dargmuesli/vio/compare/2.0.1...3.0.0-beta.1) (2023-08-07)
 
 
