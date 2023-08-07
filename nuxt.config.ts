@@ -137,7 +137,7 @@ export default defineNuxtConfig({
     locales: ['en', 'de'],
   },
   htmlValidator: {
-    // failOnError: true,
+    failOnError: false, // TODO: fix invalid html in nuxt html template (https://github.com/nuxt/nuxt/issues/22526)
     logLevel: 'warning',
   },
   i18n: {
