@@ -34,9 +34,11 @@ export default defineNuxtConfig({
   },
   modules: [
     '@dargmuesli/nuxt-cookie-control',
+    '@nuxtjs/color-mode',
     '@nuxtjs/html-validator',
     '@nuxtjs/i18n',
     '@nuxtjs/tailwindcss',
+    '@pinia/nuxt',
     'nuxt-seo-kit-module',
   ],
   nitro: {
