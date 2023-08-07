@@ -82,12 +82,6 @@ try {
 } catch (error: any) {}
 </script>
 
-<script lang="ts">
-export default {
-  name: 'VioHeader',
-}
-</script>
-
 <i18n lang="yaml">
 en:
   bookCreal: Book cReal
