@@ -1,7 +1,7 @@
 export const useFavicons = () => {
   const appConfig = useAppConfig()
 
-  useHead({
+  useServerHeadSafe({
     link: [
       {
         href: '/assets/static/favicon/apple-touch-icon.png?v=bOXMwoKlJr',
@@ -30,7 +30,7 @@ export const useFavicons = () => {
         rel: 'manifest',
       },
       {
-        color: appConfig.themeColor,
+        color: appConfig.vio.themeColor,
         href: '/assets/static/favicon/safari-pinned-tab.svg?v=bOXMwoKlJr',
         rel: 'mask-icon',
       },

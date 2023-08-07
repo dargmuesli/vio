@@ -1,7 +1,7 @@
 export const useAppLayout = () => {
   const appConfig = useAppConfig()
 
-  useHead({
+  useServerHeadSafe({
     ...useLocaleHead({ addSeoAttributes: true }).value,
     bodyAttrs: {
       class:
@@ -24,6 +24,6 @@ export const useAppLayout = () => {
   })
 
   if (appConfig.seoMeta) {
-    useSeoMeta(appConfig.seoMeta)
+    useServerSeoMeta(appConfig.seoMeta)
   }
 }

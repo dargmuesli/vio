@@ -18,7 +18,7 @@ export interface Props {
 const props = withDefaults(defineProps<Props>(), {})
 const errorProp = toRef(() => props.error)
 
-useHead({
+useServerHeadSafe({
   title: `${errorProp.value.statusCode} - ${errorProp.value.message}`,
 })
 </script>

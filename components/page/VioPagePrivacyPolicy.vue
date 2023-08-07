@@ -502,7 +502,7 @@ const { t } = useI18n()
 const title = t('title')
 
 // initialization
-useSeoMeta({ title })
+useServerSeoMeta({ title })
 </script>
 
 <i18n lang="yaml">
