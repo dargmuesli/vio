@@ -1,11 +1,11 @@
 <template>
-  <Card
+  <VioCard
     :background-color="backgroundColor"
     class="border-0 text-center font-medium text-white"
     :class="{ 'rounded-none': isEdgy }"
   >
     <slot />
-  </Card>
+  </VioCard>
 </template>
 
 <script setup lang="ts">

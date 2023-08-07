@@ -50,20 +50,20 @@
             @click="emit('click')"
           />
           <div v-if="validationProperty && isValidatable">
-            <FormInputIconWrapper v-if="validationProperty.$pending">
+            <VioFormInputIconWrapper v-if="validationProperty.$pending">
               <IconHourglass
                 class="text-blue-600"
                 :title="t('globalLoading')"
               />
-            </FormInputIconWrapper>
-            <FormInputIconWrapper
+            </VioFormInputIconWrapper>
+            <VioFormInputIconWrapper
               v-else-if="
                 validationProperty.$model && !validationProperty.$invalid
               "
             >
               <IconCheckCircle class="text-green-600" :title="t('valid')" />
-            </FormInputIconWrapper>
-            <FormInputIconWrapper
+            </VioFormInputIconWrapper>
+            <VioFormInputIconWrapper
               v-else-if="
                 validationProperty.$model && validationProperty.$invalid
               "
@@ -72,7 +72,7 @@
                 class="text-red-600"
                 :title="t('validNot')"
               />
-            </FormInputIconWrapper>
+            </VioFormInputIconWrapper>
           </div>
         </div>
         <span
@@ -90,9 +90,9 @@
       <div class="md:w-1/3" />
       <div class="md:w-2/3">
         <slot name="stateInfo" />
-        <FormInputStateInfo v-if="value?.$pending">
+        <VioFormInputStateInfo v-if="value?.$pending">
           {{ t('globalLoading') }}
-        </FormInputStateInfo>
+        </VioFormInputStateInfo>
       </div>
       <div class="md:w-1/3" />
       <div class="md:w-2/3">

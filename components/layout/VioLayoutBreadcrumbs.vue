@@ -1,13 +1,13 @@
 <template>
   <div class="mb-4 flex items-center gap-2 overflow-auto p-1">
-    <AppLink
+    <VioLink
       :aria-label="t('home')"
       data-testid="breadcrumb-prefix-/"
       :is-colored="false"
       :to="localePath('/')"
     >
       <IconHome classes="h-6 w-6" />
-    </AppLink>
+    </VioLink>
     <ul v-if="prefixes" class="flex items-center gap-2">
       <li
         v-for="prefix in prefixes"
@@ -15,25 +15,25 @@
         class="flex items-center gap-2"
       >
         <span>{{ t('separator') }}</span>
-        <AppLink
+        <VioLink
           class="whitespace-nowrap text-2xl"
           :data-testid="`breadcrumb-prefix-${prefix.to}`"
           :is-colored="false"
           :to="prefix.to"
         >
           {{ prefix.name }}
-        </AppLink>
+        </VioLink>
       </li>
     </ul>
     <span>{{ t('separator') }}</span>
-    <AppLink :is-colored="false" to="?">
+    <VioLink :is-colored="false" to="?">
       <span
         class="whitespace-nowrap text-2xl font-bold"
         data-testid="breadcrumb"
       >
         <slot />
       </span>
-    </AppLink>
+    </VioLink>
     <ul v-if="suffixes" class="flex items-center gap-2">
       <li
         v-for="suffix in suffixes"
@@ -41,14 +41,14 @@
         class="flex items-center gap-2"
       >
         <span>{{ t('separator') }}</span>
-        <AppLink
+        <VioLink
           class="whitespace-nowrap text-2xl"
           :data-testid="`breadcrumb-suffix-${suffix.to}`"
           :is-colored="false"
           :to="suffix.to"
         >
           {{ suffix.name }}
-        </AppLink>
+        </VioLink>
       </li>
     </ul>
   </div>
