@@ -11,7 +11,8 @@ import {
 const currentDir = dirname(fileURLToPath(import.meta.url))
 
 const BASE_URL =
-  'https://' +
+  (process.env.NUXT_PUBLIC_STACK_DOMAIN ? 'https' : 'http') +
+  '://' +
   (process.env.NUXT_PUBLIC_STACK_DOMAIN ||
     `${process.env.HOST || 'localhost'}:${
       !process.env.NODE_ENV || process.env.NODE_ENV === 'development'
