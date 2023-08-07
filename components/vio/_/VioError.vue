@@ -3,7 +3,7 @@
   <div>
     {{ description }}
   </div>
-  <div v-if="stack && !runtimeConfig.public.isInProduction" v-html="stack" />
+  <pre v-if="stack && !runtimeConfig.public.isInProduction" v-html="stack" />
 </template>
 
 <script setup lang="ts">
