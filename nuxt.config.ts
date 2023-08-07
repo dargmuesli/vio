@@ -56,11 +56,6 @@ export default defineNuxtConfig({
       },
       isInProduction: process.env.NODE_ENV === 'production',
       isTesting: false,
-      stagingHost:
-        process.env.NODE_ENV !== 'production' &&
-        !process.env.NUXT_PUBLIC_STACK_DOMAIN
-          ? 'jonas-thelemann.de'
-          : undefined,
     },
   },
   typescript: {

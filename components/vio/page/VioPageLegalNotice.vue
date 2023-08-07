@@ -9,13 +9,13 @@
           <br />
         </template>
         <template #city>
-          {{ appConfig.legalNotice.tmg.address.city }}
+          {{ appConfig.vio.pages.legalNotice.tmg.address.city }}
         </template>
         <template #name>
-          {{ appConfig.legalNotice.tmg.address.name }}
+          {{ appConfig.vio.pages.legalNotice.tmg.address.name }}
         </template>
         <template #street>
-          {{ appConfig.legalNotice.tmg.address.street }}
+          {{ appConfig.vio.pages.legalNotice.tmg.address.street }}
         </template>
       </i18n-t>
     </address>
@@ -24,7 +24,9 @@
     <p>
       <slot v-if="$slots.contactEmail" name="contactEmail" />
       <span v-else>
-        {{ t('email', { email: appConfig.legalNotice.contact.email }) }}
+        {{
+          t('email', { email: appConfig.vio.pages.legalNotice.contact.email })
+        }}
       </span>
     </p>
 
@@ -36,13 +38,13 @@
           <br />
         </template>
         <template #city>
-          {{ appConfig.legalNotice.responsibility.address.city }}
+          {{ appConfig.vio.pages.legalNotice.responsibility.address.city }}
         </template>
         <template #name>
-          {{ appConfig.legalNotice.responsibility.address.name }}
+          {{ appConfig.vio.pages.legalNotice.responsibility.address.name }}
         </template>
         <template #street>
-          {{ appConfig.legalNotice.responsibility.address.street }}
+          {{ appConfig.vio.pages.legalNotice.responsibility.address.street }}
         </template>
       </i18n-t>
     </address>

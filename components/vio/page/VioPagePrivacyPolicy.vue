@@ -64,14 +64,21 @@
                   <br />
                 </template>
                 <template #city>
-                  {{ appConfig.privacyPolicy.hostingCdn.external.address.city }}
+                  {{
+                    appConfig.vio.pages.privacyPolicy.hostingCdn.external
+                      .address.city
+                  }}
                 </template>
                 <template #name>
-                  {{ appConfig.privacyPolicy.hostingCdn.external.address.name }}
+                  {{
+                    appConfig.vio.pages.privacyPolicy.hostingCdn.external
+                      .address.name
+                  }}
                 </template>
                 <template #street>
                   {{
-                    appConfig.privacyPolicy.hostingCdn.external.address.street
+                    appConfig.vio.pages.privacyPolicy.hostingCdn.external
+                      .address.street
                   }}
                 </template>
               </i18n-t>
@@ -109,29 +116,29 @@
                 </template>
                 <template #city>
                   {{
-                    appConfig.privacyPolicy.mandatoryInfo.responsible.address
-                      .city
+                    appConfig.vio.pages.privacyPolicy.mandatoryInfo.responsible
+                      .address.city
                   }}
                 </template>
                 <template #email>
                   {{
                     t('email', {
                       email:
-                        appConfig.privacyPolicy.mandatoryInfo.responsible
-                          .address.email,
+                        appConfig.vio.pages.privacyPolicy.mandatoryInfo
+                          .responsible.address.email,
                     })
                   }}
                 </template>
                 <template #name>
                   {{
-                    appConfig.privacyPolicy.mandatoryInfo.responsible.address
-                      .name
+                    appConfig.vio.pages.privacyPolicy.mandatoryInfo.responsible
+                      .address.name
                   }}
                 </template>
                 <template #street>
                   {{
-                    appConfig.privacyPolicy.mandatoryInfo.responsible.address
-                      .street
+                    appConfig.vio.pages.privacyPolicy.mandatoryInfo.responsible
+                      .address.street
                   }}
                 </template>
               </i18n-t>

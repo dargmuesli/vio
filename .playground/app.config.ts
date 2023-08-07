@@ -6,27 +6,35 @@ const address = {
 }
 
 export default defineAppConfig({
-  legalNotice: {
-    contact: {
-      email: address.email
-    },
-    responsibility: {
-      address
-    },
-    tmg: {
-      address
-    }
-  },
-  privacyPolicy: {
-    hostingCdn: {
-      external: {
-        address
+  vio: {
+    pages: {
+      legalNotice: {
+        contact: {
+          email: address.email,
+        },
+        responsibility: {
+          address,
+        },
+        tmg: {
+          address,
+        },
+      },
+      privacyPolicy: {
+        hostingCdn: {
+          external: {
+            address,
+          },
+        },
+        mandatoryInfo: {
+          responsible: {
+            address,
+          },
+        },
       },
     },
-    mandatoryInfo: {
-      responsible: {
-        address
-      },
+    seoMeta: {
+      twitterSite: '@dargmuesli',
     },
+    themeColor: '#202020',
   },
 })

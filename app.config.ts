@@ -2,11 +2,8 @@ import { useServerSeoMeta } from '@unhead/vue'
 
 export default defineAppConfig({
   vio: {
-    legalNotice: undefined,
-    privacyPolicy: undefined,
-    seoMeta: {
-      twitterSite: '@dargmuesli',
-    },
+    pages: undefined,
+    seoMeta: undefined,
     server: {
       middleware: {
         headers: {
@@ -37,35 +34,27 @@ export default defineAppConfig({
         },
       },
     },
-    themeColor: '#202020',
+    stagingHost: undefined,
+    themeColor: undefined,
   },
 })
 
 declare module 'nuxt/schema' {
-  interface AppConfig {
+  interface AppConfigInput {
     vio: {
-      legalNotice?: {
-        contact: {
-          email: string
-        }
-        responsibility: {
-          address: {
-            city: string
-            name: string
-            street: string
+      pages?: {
+        legalNotice?: {
+          contact: {
+            email: string
           }
-        }
-        tmg: {
-          address: {
-            city: string
-            name: string
-            street: string
+          responsibility: {
+            address: {
+              city: string
+              name: string
+              street: string
+            }
           }
-        }
-      }
-      privacyPolicy?: {
-        hostingCdn?: {
-          external: {
+          tmg: {
             address: {
               city: string
               name: string
@@ -73,19 +62,30 @@ declare module 'nuxt/schema' {
             }
           }
         }
-        mandatoryInfo?: {
-          responsible: {
-            address: {
-              city: string
-              email: string
-              name: string
-              street: string
+        privacyPolicy?: {
+          hostingCdn?: {
+            external: {
+              address: {
+                city: string
+                name: string
+                street: string
+              }
+            }
+          }
+          mandatoryInfo?: {
+            responsible: {
+              address: {
+                city: string
+                email: string
+                name: string
+                street: string
+              }
             }
           }
         }
       }
       seoMeta?: Parameters<typeof useServerSeoMeta>[0]
-      server: {
+      server?: {
         middleware: {
           headers: {
             csp: {
@@ -95,6 +95,7 @@ declare module 'nuxt/schema' {
           }
         }
       }
+      stagingHost?: string
       themeColor?: string
     }
   }
