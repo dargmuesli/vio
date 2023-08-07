@@ -2,7 +2,6 @@ import { Config } from 'tailwindcss'
 import colors from 'tailwindcss/colors'
 import { PluginAPI } from 'tailwindcss/types/config'
 import formsPlugin from '@tailwindcss/forms'
-import lineClampPlugin from '@tailwindcss/line-clamp'
 import typographyPlugin from '@tailwindcss/typography'
 
 const heading = (theme: PluginAPI['theme']): Record<string, string> => ({
@@ -54,7 +53,6 @@ export default {
   darkMode: 'class',
   plugins: [
     formsPlugin,
-    lineClampPlugin,
     typographyPlugin,
     ({ addBase, addComponents, addUtilities, theme }: PluginAPI) => {
       addBase({
