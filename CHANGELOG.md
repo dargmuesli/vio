@@ -1,3 +1,35 @@
+# [3.0.0-beta.1](https://github.com/dargmuesli/vio/compare/2.0.1...3.0.0-beta.1) (2023-08-07)
+
+
+### Bug Fixes
+
+* **components:** add `Vio` prefix ([75846d4](https://github.com/dargmuesli/vio/commit/75846d45adaed75f5c21746e33b4226c3a007b67))
+
+
+* feat(app)!: move configuration to `vio` key ([f747b44](https://github.com/dargmuesli/vio/commit/f747b44033abf37b3a370ca6de6ff20af6736af6))
+
+
+### Features
+
+* add types ([74254c2](https://github.com/dargmuesli/vio/commit/74254c29ac49d9b5b7343e54821673a501d3b8f6))
+* **color-mode:** add class suffix ([8185cf8](https://github.com/dargmuesli/vio/commit/8185cf894dbaf0467ea78f07a9cf792e9b9b37a8))
+* **components:** add content ([a71c5a1](https://github.com/dargmuesli/vio/commit/a71c5a1473bbdc11ee3f930ba7d174a03fafb081))
+* **composables:** add new content ([989ce0b](https://github.com/dargmuesli/vio/commit/989ce0b47654bfd146fe2e286f8e2ac98b352680))
+* **headers:** use app configuration's csp ([83460e0](https://github.com/dargmuesli/vio/commit/83460e0980a2266627c808c6ada2faea4513eb34))
+* **i18n:** add translations ([f74e122](https://github.com/dargmuesli/vio/commit/f74e122a4733bb41dae146bf90df80e39f6e4bac))
+* **nuxt:** add staging host to runtime configuration ([c4f6d65](https://github.com/dargmuesli/vio/commit/c4f6d65713abf5603ee5d229b1bf37222ec4fa6b))
+* **nuxt:** add timezone cookie ([7498784](https://github.com/dargmuesli/vio/commit/7498784f43dbb40d0633b754112aa4d10f6d0e45))
+* **nuxt:** use page transition ([8537239](https://github.com/dargmuesli/vio/commit/8537239ecc08257b989e5d62fb16bbfa13d332eb))
+* **plugins:** add content ([e8360fa](https://github.com/dargmuesli/vio/commit/e8360fadf80d71a9dd97011dbe3bcdd67e3b6569))
+* **store:** add pinia ([5c182c2](https://github.com/dargmuesli/vio/commit/5c182c238e996f74dbbb3c6251e0aa98452f419e))
+* **tailwindcss:** add plugins ([9750686](https://github.com/dargmuesli/vio/commit/97506864c31739335e9b19d82cf41b820b94f139))
+* **utils:** add content ([587be69](https://github.com/dargmuesli/vio/commit/587be69b6e78cc1ce123b4aa817b35f219a50402))
+
+
+### BREAKING CHANGES
+
+* the app configuration needs to be updates
+
 ## [2.0.1](https://github.com/dargmuesli/vio/compare/2.0.0...2.0.1) (2023-08-01)
 
 
