@@ -7,6 +7,7 @@
   "devDependencies": {
     "@commitlint/cli": "17.6.7",
     "@commitlint/config-conventional": "17.6.7",
+    "@dargmuesli/nuxt-vio": "link:src",
     "husky": "8.0.3"
   },
   "scripts": {

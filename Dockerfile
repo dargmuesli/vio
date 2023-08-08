@@ -177,7 +177,7 @@ ENV CI=true
 
 WORKDIR /srv/app/
 
-COPY --from=build /srv/app/.playground/.output ./.output
+COPY --from=build /srv/app/src/.playground/.output ./.output
 COPY --from=lint /srv/app/package.json /tmp/package.json
 # COPY --from=test-e2e-dev /srv/app/package.json /tmp/package.json
 # COPY --from=test-e2e-prod /srv/app/package.json /tmp/package.json

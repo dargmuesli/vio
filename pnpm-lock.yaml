@@ -14,6 +14,9 @@ importers:
       '@commitlint/config-conventional':
         specifier: 17.6.7
         version: 17.6.7
+      '@dargmuesli/nuxt-vio':
+        specifier: link:src
+        version: link:src
       husky:
         specifier: 8.0.3
         version: 8.0.3
@@ -23,9 +26,6 @@ importers:
       '@dargmuesli/nuxt-cookie-control':
         specifier: 6.1.5
         version: 6.1.5(webpack@5.88.2)
-      '@dargmuesli/nuxt-vio':
-        specifier: 'link:'
-        version: 'link:'
       '@http-util/status-i18n':
         specifier: 0.7.0
         version: 0.7.0
