@@ -1,3 +1,12 @@
+# [3.0.0-beta.5](https://github.com/dargmuesli/vio/compare/3.0.0-beta.4...3.0.0-beta.5) (2023-08-08)
+
+
+### Bug Fixes
+
+* **dayjs:** use default export only ([4a309ba](https://github.com/dargmuesli/vio/commit/4a309ba6e259b8a95524d924578689e7e55c0d81))
+* **use-app-layout:** apply `seoMeta` if set only ([c0c26c2](https://github.com/dargmuesli/vio/commit/c0c26c2753ccd024d25fda9fde2199d90dc7027d))
+* **vio-form:** use relative import path ([8feefa2](https://github.com/dargmuesli/vio/commit/8feefa26b9ca02a19951390f96e2c74bf1e4a9d1))
+
 # [3.0.0-beta.4](https://github.com/dargmuesli/vio/compare/3.0.0-beta.3...3.0.0-beta.4) (2023-08-08)
 
 
