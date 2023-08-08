@@ -149,6 +149,7 @@ export default defineNuxtConfig({
     },
   },
   linkChecker: {
+    debug: process.env.NODE_ENV === 'development',
     failOnError: true,
   },
   seoKit: {
