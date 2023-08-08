@@ -2,7 +2,7 @@
   <div class="vio-prose">
     <h1>{{ t('title') }}</h1>
     <p>
-      {{ t('globalLoading') }}
+      {{ t('globalStatusLoading') }}
       <br />
       <VioLink to="/">/</VioLink>
       <br />

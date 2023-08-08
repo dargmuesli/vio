@@ -1,5 +1,5 @@
 {
-  "globalLoading": "Lade...",
+  "globalStatusLoading": "Lade...",
   "globalPlaceholderUrl": "https://websei.te",
   "globalStatusError": "Fehler",
   "globalValidationFailed": "Bitte überprüfe deine Eingaben 🙈",

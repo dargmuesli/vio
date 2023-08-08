@@ -1,7 +1,7 @@
 <template>
   <div
     class="flex h-full items-center justify-center"
-    :title="t('globalLoading')"
+    :title="t('globalStatusLoading')"
   >
     <div class="flex items-center justify-center w-1/2">
       <slot />
