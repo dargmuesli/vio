@@ -164,7 +164,7 @@ export default defineNuxtConfig({
     url: BASE_URL,
   },
   sitemap: {
-    exclude: ['/api/**'],
+    exclude: ['/api/pages/**'],
   },
   tailwindcss: {
     cssPath: join(currentDir, './assets/css/tailwind.css'),
