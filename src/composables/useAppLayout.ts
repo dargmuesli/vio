@@ -18,6 +18,6 @@ export const useAppLayout = () => {
         ? `${titleChunk} ${siteConfig.titleSeparator} ${siteConfig.name}`
         : siteConfig.name
     },
-    ...appConfig.vio.seoMeta,
+    ...(appConfig.vio.seoMeta ? appConfig.vio.seoMeta : {}),
   })
 }
