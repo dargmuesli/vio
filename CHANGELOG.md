@@ -1,3 +1,27 @@
+# [3.0.0-beta.3](https://github.com/dargmuesli/vio/compare/3.0.0-beta.2...3.0.0-beta.3) (2023-08-08)
+
+
+### Bug Fixes
+
+* **nuxt:** make base url protocol variable ([d49606d](https://github.com/dargmuesli/vio/commit/d49606d3140fa3e31befe44cf8a3244575d3fd91))
+
+
+* feat(app)!: rework configuration ([b10886e](https://github.com/dargmuesli/vio/commit/b10886e9159ff2ac446ac902e6cee6f5580b86f3))
+
+
+### Features
+
+* **nuxt:** enable link checker ([2665c2e](https://github.com/dargmuesli/vio/commit/2665c2e1d105ec58c59976453b94ebcfff66fdd0))
+* **playground:** add favicons ([f49b859](https://github.com/dargmuesli/vio/commit/f49b859d5b4a8e7d87ed7c4f19c7da311616ac47))
+* **playground:** make name more specific ([22e5bca](https://github.com/dargmuesli/vio/commit/22e5bcaf889c91316f3c04a974d6994cc3848d9a))
+* **seo:** rework site metadata ([54f4e2e](https://github.com/dargmuesli/vio/commit/54f4e2e3d59aa4e328f545c2a61941b804bca6d2))
+* **vio-link:** use `NuxtLinkLocale` ([cbab19e](https://github.com/dargmuesli/vio/commit/cbab19e35480f2a7bd7da65659257edfe998c81f))
+
+
+### BREAKING CHANGES
+
+* `appConfig` needs to be updated
+
 # [3.0.0-beta.2](https://github.com/dargmuesli/vio/compare/3.0.0-beta.1...3.0.0-beta.2) (2023-08-07)
 
 
