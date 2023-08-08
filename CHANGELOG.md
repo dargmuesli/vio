@@ -1,3 +1,15 @@
+# [3.0.0-beta.4](https://github.com/dargmuesli/vio/compare/3.0.0-beta.3...3.0.0-beta.4) (2023-08-08)
+
+
+### Bug Fixes
+
+* **nuxt:** alias `dayjs` ([6acad0f](https://github.com/dargmuesli/vio/commit/6acad0fcce4df442a9974b9b5131cc0d83c8bf60))
+
+
+### Features
+
+* **nuxt:** add image module ([be73809](https://github.com/dargmuesli/vio/commit/be73809c5016a0043493d2f7add07001600564af))
+
 # [3.0.0-beta.3](https://github.com/dargmuesli/vio/compare/3.0.0-beta.2...3.0.0-beta.3) (2023-08-08)
 
 
