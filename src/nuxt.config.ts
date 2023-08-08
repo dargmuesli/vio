@@ -46,6 +46,7 @@ export default defineNuxtConfig({
   },
   modules: [
     '@dargmuesli/nuxt-cookie-control',
+    '@nuxt/image',
     '@nuxtjs/color-mode',
     '@nuxtjs/html-validator',
     '@nuxtjs/i18n',
