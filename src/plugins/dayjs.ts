@@ -1,4 +1,5 @@
-import dayjs, { extend, locale } from 'dayjs'
+/* eslint-disable import/no-named-as-default-member */
+import dayjs from 'dayjs'
 
 // workaround for [1]
 import de from 'dayjs/locale/de'
@@ -10,13 +11,13 @@ import timezone from 'dayjs/plugin/timezone'
 import utc from 'dayjs/plugin/utc'
 
 export default defineNuxtPlugin((_nuxtApp) => {
-  extend(isSameOrBefore)
-  extend(localizedFormat)
-  extend(timezone)
-  extend(utc)
+  dayjs.extend(isSameOrBefore)
+  dayjs.extend(localizedFormat)
+  dayjs.extend(timezone)
+  dayjs.extend(utc)
 
   // workaround for [1]
-  locale(de)
+  dayjs.locale(de)
   // dayjs.locale(en) makes `format` error
 
   return {
