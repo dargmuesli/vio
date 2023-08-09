@@ -1,8 +1,8 @@
-import { Config } from 'tailwindcss'
-import colors from 'tailwindcss/colors'
-import { PluginAPI } from 'tailwindcss/types/config'
 import formsPlugin from '@tailwindcss/forms'
 import typographyPlugin from '@tailwindcss/typography'
+import type { Config } from 'tailwindcss'
+import colors from 'tailwindcss/colors'
+import type { PluginAPI } from 'tailwindcss/types/config'
 
 const heading = (theme: PluginAPI['theme']): Record<string, string> => ({
   fontWeight: theme('fontWeight.bold'),
