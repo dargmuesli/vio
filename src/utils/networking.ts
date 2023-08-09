@@ -114,7 +114,7 @@ export const getTimezone = async (event: H3Event) => {
   }
 
   if (event.node.req.headers['x-real-ip']) {
-    const ipApiResult = await ofetch(
+    const ipApiResult = await ofetch<{ timezone: string }>(
       `http://ip-api.com/json/${event.node.req.headers['x-real-ip']}`,
     ).catch(() => {})
 
