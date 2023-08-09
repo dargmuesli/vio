@@ -34,7 +34,6 @@ export default defineAppConfig({
         },
       },
     },
-    stagingHost: undefined,
     themeColor: undefined,
   },
 })
@@ -95,7 +94,6 @@ declare module 'nuxt/schema' {
           }
         }
       }
-      stagingHost?: string
       themeColor?: string
     }
   }
