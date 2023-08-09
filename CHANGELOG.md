@@ -1,3 +1,12 @@
+# [3.0.0-beta.6](https://github.com/dargmuesli/vio/compare/3.0.0-beta.5...3.0.0-beta.6) (2023-08-09)
+
+
+### Bug Fixes
+
+* **networking:** make timezone function more resilient ([3991d32](https://github.com/dargmuesli/vio/commit/3991d32c8fa0207bb3d6c15a78f5ec47dbfab216))
+* **sitemap:** only exclude pages ([f0b0405](https://github.com/dargmuesli/vio/commit/f0b0405d9e70d71d686c9f00cf67578fe5513514))
+* **types:** import type reference ([b07dc91](https://github.com/dargmuesli/vio/commit/b07dc91ec4518323b70d97642159a3aace89b932))
+
 # [3.0.0-beta.5](https://github.com/dargmuesli/vio/compare/3.0.0-beta.4...3.0.0-beta.5) (2023-08-08)
 
 
