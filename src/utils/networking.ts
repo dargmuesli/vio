@@ -106,10 +106,22 @@ export const getServiceHref = ({
   }
 }
 
-export const getTimezone = async (event: H3Event) =>
-  getCookie(event, TIMEZONE_COOKIE_NAME) ||
-  (
-    await ofetch(
+export const getTimezone = async (event: H3Event) => {
+  const timezoneCookie = getCookie(event, TIMEZONE_COOKIE_NAME)
+
+  if (timezoneCookie) {
+    return timezoneCookie
+  }
+
+  if (event.node.req.headers['x-real-ip']) {
+    const ipApiResult = await ofetch(
       `http://ip-api.com/json/${event.node.req.headers['x-real-ip']}`,
-    )
-  ).timezone
+    ).catch(() => {})
+
+    if (ipApiResult) {
+      return ipApiResult.timezone
+    }
+  }
+
+  return undefined
+}
