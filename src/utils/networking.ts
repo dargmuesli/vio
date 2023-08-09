@@ -60,9 +60,6 @@ export const getCombinedErrorMessages = (
   return errorMessages
 }
 
-export const getCspAsString = (csp = {} as Record<string, Array<string>>) =>
-  Object.keys(csp).reduce((p, c) => (p += `${c} ${csp[c].join(' ')};`), '')
-
 export const getDomainTldPort = (host: string) => {
   const hostParts = host.split('.')
 
