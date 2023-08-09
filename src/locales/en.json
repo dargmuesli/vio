@@ -1,7 +1,7 @@
 {
-  "globalStatusLoading": "Loading...",
   "globalPlaceholderUrl": "https://websi.te",
   "globalStatusError": "Error",
+  "globalStatusLoading": "Loading...",
   "globalValidationFailed": "Please check your input 🙈",
   "globalValidationFormatUrlHttps": "Must start with \"https://\"",
   "globalValidationLength": "Too long",
