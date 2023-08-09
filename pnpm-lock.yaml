@@ -68,12 +68,15 @@ importers:
       '@vuelidate/core':
         specifier: 2.0.3
         version: 2.0.3(vue@3.3.4)
+      '@vuelidate/validators':
+        specifier: 2.0.3
+        version: 2.0.3(vue@3.3.4)
       clipboard:
         specifier: 2.0.11
         version: 2.0.11
       dayjs:
-        specifier: 1.11.9
-        version: 1.11.9
+        specifier: 2.0.0-alpha.4
+        version: 2.0.0-alpha.4
       is-https:
         specifier: 4.0.0
         version: 4.0.0
@@ -147,9 +150,6 @@ importers:
       tailwindcss:
         specifier: 3.3.3
         version: 3.3.3(ts-node@10.9.1)
-      typescript:
-        specifier: 5.1.6
-        version: 5.1.6
       vue:
         specifier: 3.3.4
         version: 3.3.4
@@ -3221,6 +3221,19 @@ packages:
       vue-demi: 0.13.11(vue@3.3.4)
     dev: false
 
+  /@vuelidate/validators@2.0.3(vue@3.3.4):
+    resolution: {integrity: sha512-P4WtmczPRbwmVihKlSAs3pIjIil4xjHW+Qoi58MCw7vnKuYr/IHarOFkwp0K8eIIqiQqY4URM5Gb4aeDjna6Yw==}
+    peerDependencies:
+      '@vue/composition-api': ^1.0.0-rc.1
+      vue: ^2.0.0 || >=3.0.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+    dependencies:
+      vue: 3.3.4
+      vue-demi: 0.13.11(vue@3.3.4)
+    dev: false
+
   /@vueuse/core@10.3.0(vue@3.3.4):
     resolution: {integrity: sha512-BEM5yxcFKb5btFjTSAFjTu5jmwoW66fyV9uJIP4wUXXU8aR5Hl44gndaaXp7dC5HSObmgbnR2RN+Un1p68Mf5Q==}
     dependencies:
@@ -4728,8 +4741,8 @@ packages:
     resolution: {integrity: sha512-0R9ikRb668HB7QDxT1vkpuUBtqc53YyAwMwGeUFKRojY/NWKvdZ+9UYtRfGmhqNbRkTSVpMbmyhXipFFv2cb/A==}
     engines: {node: '>= 12'}
 
-  /dayjs@1.11.9:
-    resolution: {integrity: sha512-QvzAURSbQ0pKdIye2txOzNaHmxtUBXerpY0FJsFXUMKbIZeFm5ht1LS/jFsrncjnmtv8HsG0W2g6c0zUjZWmpA==}
+  /dayjs@2.0.0-alpha.4:
+    resolution: {integrity: sha512-1iNcyGuh1/uip1b3tP2LSK8pWIO0CZuBC3XI4ShYO9oeJUJP7DfvDEOkr1I8aElvATTYKeY4J+N1b4d+qA5XEg==}
     dev: false
 
   /de-indent@1.0.2:
