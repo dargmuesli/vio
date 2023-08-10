@@ -30,8 +30,8 @@ dependencies:
     specifier: 2.0.0-beta.9
     version: 2.0.0-beta.9(@nuxt/devtools@0.7.5)(@unhead/vue@1.2.2)(nuxt@3.6.5)(postcss@8.4.27)(vite@4.4.8)(vue@3.3.4)(webpack@5.88.2)
   sweetalert2:
-    specifier: 11.7.21
-    version: 11.7.21
+    specifier: 11.7.22
+    version: 11.7.22
   vue-gtag:
     specifier: 2.0.1
     version: 2.0.1(vue@3.3.4)
@@ -10394,8 +10394,8 @@ packages:
       csso: 5.0.5
       picocolors: 1.0.0
 
-  /sweetalert2@11.7.21:
-    resolution: {integrity: sha512-7CU2s2FmCrf/NNuHRINN79oaXB6PQbbG7CyZ9itmRuu9Q73ccCyFznFYwXzzxwusOUeLHkH4AlhavIDR2gE8Vw==}
+  /sweetalert2@11.7.22:
+    resolution: {integrity: sha512-Xu5now8VnxBKtdnoQw562zXldCOJ/pNsFHTcmSGgJHH+702Bulh4Ps00/js9HqFv00mZ6Hf1wm4BXxqssWyREg==}
     dev: false
 
   /synckit@0.8.5:
