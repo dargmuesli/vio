@@ -1,3 +1,10 @@
+# [3.0.0-beta.8](https://github.com/dargmuesli/vio/compare/3.0.0-beta.7...3.0.0-beta.8) (2023-08-18)
+
+
+### Bug Fixes
+
+* **header:** allow for undefined timezone ([e7b0ed1](https://github.com/dargmuesli/vio/commit/e7b0ed18870f899b08aae65c0891416b96abed87))
+
 # [3.0.0-beta.7](https://github.com/dargmuesli/vio/compare/3.0.0-beta.6...3.0.0-beta.7) (2023-08-18)
 
 
