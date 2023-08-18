@@ -38,6 +38,8 @@ jobs:
     name: Build
     uses: dargmuesli/github-actions/.github/workflows/docker.yml@0.41.4
     needs: release_semantic_dry
+    permissions:
+      packages: write
     with:
       PUSH: false
       TAG: ${{ needs.release_semantic_dry.outputs.new_release_version }}
