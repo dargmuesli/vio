@@ -1,3 +1,12 @@
+# [3.0.0-beta.7](https://github.com/dargmuesli/vio/compare/3.0.0-beta.6...3.0.0-beta.7) (2023-08-18)
+
+
+### Bug Fixes
+
+* **headers:** add timezone fallback ([e11382b](https://github.com/dargmuesli/vio/commit/e11382b829fd6d8d1de1d537a0b371023af3e255))
+* **nuxt:** revert `stagingHost` to runtime configuration ([97f78ea](https://github.com/dargmuesli/vio/commit/97f78ea1a0eb90f71582ad8fa8561fc04a146000))
+* **utils:** move csp functionality to server ([e726236](https://github.com/dargmuesli/vio/commit/e7262366a180e899ab4901ea3f4aeec642938305))
+
 # [3.0.0-beta.6](https://github.com/dargmuesli/vio/compare/3.0.0-beta.5...3.0.0-beta.6) (2023-08-09)
 
 
