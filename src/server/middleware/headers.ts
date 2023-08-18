@@ -6,7 +6,11 @@ import { TIMEZONE_HEADER_KEY } from '../../utils/constants'
 import { getTimezone } from '../../utils/networking'
 
 export default defineEventHandler(async (event) => {
-  setRequestHeader(event, TIMEZONE_HEADER_KEY, await getTimezone(event))
+  setRequestHeader(
+    event,
+    TIMEZONE_HEADER_KEY,
+    (await getTimezone(event)) || 'UTC',
+  )
   // setContentSecurityPolicy(event);
   setResponseHeaders(event)
 })
