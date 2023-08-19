@@ -27,8 +27,8 @@ dependencies:
     specifier: 0.5.9
     version: 0.5.9(tailwindcss@3.3.3)
   nuxt-seo-kit-module:
-    specifier: 2.0.0-beta.11
-    version: 2.0.0-beta.11(@nuxt/devtools@0.7.6)(@unhead/vue@1.2.2)(nuxt@3.6.5)(postcss@8.4.27)(vite@4.4.9)(vue@3.3.4)(webpack@5.88.2)
+    specifier: 2.0.0-beta.13
+    version: 2.0.0-beta.13(@nuxt/devtools@0.7.6)(@unhead/vue@1.2.2)(nuxt@3.6.5)(postcss@8.4.27)(vite@4.4.9)(vue@3.3.4)(webpack@5.88.2)
   sweetalert2:
     specifier: 11.7.26
     version: 11.7.26
@@ -8250,8 +8250,8 @@ packages:
       - supports-color
     dev: false
 
-  /nuxt-seo-kit-module@2.0.0-beta.11(@nuxt/devtools@0.7.6)(@unhead/vue@1.2.2)(nuxt@3.6.5)(postcss@8.4.27)(vite@4.4.9)(vue@3.3.4)(webpack@5.88.2):
-    resolution: {integrity: sha512-7fBB2UXhKHSyCYxAkM4FG7CwxPdOMQCjBRM+VU4JyIC1BwWGqZBU38r/ob74YsnESoyNtVcn1q/nSySITPe49Q==}
+  /nuxt-seo-kit-module@2.0.0-beta.13(@nuxt/devtools@0.7.6)(@unhead/vue@1.2.2)(nuxt@3.6.5)(postcss@8.4.27)(vite@4.4.9)(vue@3.3.4)(webpack@5.88.2):
+    resolution: {integrity: sha512-B2tgFOGdNhrp6m7saaq3HN6tUJjXCKiWuqbMmB9MT88aLAm6POOcwUcM2fznnc/QerP4gXFoWNMjmkWJfO0EHw==}
     dependencies:
       '@nuxt/kit': 3.6.5
       chalk: 5.3.0
