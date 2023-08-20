@@ -1,3 +1,10 @@
+# [3.0.0-beta.9](https://github.com/dargmuesli/vio/compare/3.0.0-beta.8...3.0.0-beta.9) (2023-08-20)
+
+
+### Features
+
+* **gtag:** set cookie flags ([dc095ef](https://github.com/dargmuesli/vio/commit/dc095ef200cdf1df184bcd1401153358d2a4df54))
+
 # [3.0.0-beta.8](https://github.com/dargmuesli/vio/compare/3.0.0-beta.7...3.0.0-beta.8) (2023-08-18)
 
 
