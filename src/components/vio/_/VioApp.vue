@@ -78,7 +78,8 @@ defineOgImage({
   description: siteDescriptionProp.value,
 })
 useAppLayout()
-useFavicons() // TODO: move to head default
+useFavicons()
+usePolyfills()
 useSchemaOrg([
   defineWebSite({
     description: siteDescriptionProp,
