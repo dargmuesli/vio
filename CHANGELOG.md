@@ -1,3 +1,10 @@
+# [3.0.0-beta.10](https://github.com/dargmuesli/vio/compare/3.0.0-beta.9...3.0.0-beta.10) (2023-08-20)
+
+
+### Features
+
+* add polyfill ([2234bf5](https://github.com/dargmuesli/vio/commit/2234bf5f19aa0278770a11bab2bd48ff79d7e4e6))
+
 # [3.0.0-beta.9](https://github.com/dargmuesli/vio/compare/3.0.0-beta.8...3.0.0-beta.9) (2023-08-20)
 
 
