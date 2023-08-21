@@ -1,3 +1,15 @@
+# [3.0.0-beta.11](https://github.com/dargmuesli/vio/compare/3.0.0-beta.10...3.0.0-beta.11) (2023-08-21)
+
+
+### Bug Fixes
+
+* **package:** use `vue-tsc` as dependency ([2d65544](https://github.com/dargmuesli/vio/commit/2d65544aa74a5495c0a86ac719814183167761e7))
+
+
+### Features
+
+* **app:** set `dayjs` locale on initialization ([bc5ad61](https://github.com/dargmuesli/vio/commit/bc5ad61d73e698e9e9ec3865fa0428a7e971c47c))
+
 # [3.0.0-beta.10](https://github.com/dargmuesli/vio/compare/3.0.0-beta.9...3.0.0-beta.10) (2023-08-20)
 
 
