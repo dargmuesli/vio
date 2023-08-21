@@ -9,7 +9,7 @@
     @submit="(e) => emit('submit', e)"
   >
     <VioCard class="flex flex-col" is-high>
-      <div class="flex flex-col min-h-0 overflow-y-auto gap-6">
+      <div class="flex min-h-0 flex-col gap-6 overflow-y-auto">
         <slot />
         <div class="flex flex-col items-center justify-between">
           <VioButtonColored
