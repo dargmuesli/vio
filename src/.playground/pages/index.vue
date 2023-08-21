@@ -4,6 +4,8 @@
     <p>
       {{ t('globalStatusLoading') }}
       <br />
+      {{  t('globalValidationFailed') }}
+      <br />
       <VioLink to="/">/</VioLink>
       <br />
       <VioLink to="https://jonas-thelemann.de">
