@@ -38,6 +38,8 @@ const locale = i18n.locale as WritableComputedRef<Locale>
 
 // methods
 const init = () => {
+  $dayjs.locale(locale.value)
+
   if (process.client) {
     const cookieTimezone = useCookie(TIMEZONE_COOKIE_NAME, {
       // default: () => undefined, // setting `default` on the client side only does not write the cookie
