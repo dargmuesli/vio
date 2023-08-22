@@ -1,3 +1,10 @@
+# [3.0.0-beta.15](https://github.com/dargmuesli/vio/compare/3.0.0-beta.14...3.0.0-beta.15) (2023-08-22)
+
+
+### Bug Fixes
+
+* **components:** add icon prefix ([f08ce72](https://github.com/dargmuesli/vio/commit/f08ce7298414e21810536ffd3c65162f6565a2c3))
+
 # [3.0.0-beta.14](https://github.com/dargmuesli/vio/compare/3.0.0-beta.13...3.0.0-beta.14) (2023-08-22)
 
 
