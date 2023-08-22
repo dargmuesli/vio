@@ -11,7 +11,7 @@
     "
     class="text-gray-500 dark:text-gray-400"
   >
-    <IconInformationCircle />
+    <VioIconInformationCircle />
     <slot />
   </VioFormInputState>
 </template>

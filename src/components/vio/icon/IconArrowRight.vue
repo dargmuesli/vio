@@ -1,5 +1,5 @@
 <template>
-  <IconContainer
+  <VioIconContainer
     fill="none"
     viewBox="0 0 24 24"
     stroke="currentColor"
@@ -11,7 +11,7 @@
       stroke-linejoin="round"
       d="M14 5l7 7m0 0l-7 7m7-7H3"
     />
-  </IconContainer>
+  </VioIconContainer>
 </template>
 
 <script setup lang="ts">

@@ -6,7 +6,7 @@
       :is-colored="false"
       :to="localePath('/')"
     >
-      <IconHome classes="h-6 w-6" />
+      <VioIconHome classes="h-6 w-6" />
     </VioLink>
     <ul v-if="prefixes" class="flex items-center gap-2">
       <li

@@ -3,7 +3,7 @@
     <VioButton :aria-label="t('creal')" :to="localePath('/')">
       <span class="text-lg font-bold">{{ t('creal') }}</span>
       <template #prefix>
-        <IconLogo class="h-10 w-10" />
+        <VioIconLogo class="h-10 w-10" />
       </template>
     </VioButton>
     <VioLink
@@ -38,7 +38,7 @@
     >
       <span class="basis-0 whitespace-nowrap">{{ t('bookCreal') }}</span>
       <template #suffix>
-        <IconArrowRight />
+        <VioIconArrowRight />
       </template>
     </VioButton>
   </header>

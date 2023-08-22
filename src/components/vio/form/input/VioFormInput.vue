@@ -51,7 +51,7 @@
           />
           <div v-if="validationProperty && isValidatable">
             <VioFormInputIconWrapper v-if="validationProperty.$pending">
-              <IconHourglass
+              <VioIconHourglass
                 class="text-blue-600"
                 :title="t('globalStatusLoading')"
               />
@@ -61,14 +61,14 @@
                 validationProperty.$model && !validationProperty.$invalid
               "
             >
-              <IconCheckCircle class="text-green-600" :title="t('valid')" />
+              <VioIconCheckCircle class="text-green-600" :title="t('valid')" />
             </VioFormInputIconWrapper>
             <VioFormInputIconWrapper
               v-else-if="
                 validationProperty.$model && validationProperty.$invalid
               "
             >
-              <IconExclamationCircle
+              <VioIconExclamationCircle
                 class="text-red-600"
                 :title="t('validNot')"
               />
