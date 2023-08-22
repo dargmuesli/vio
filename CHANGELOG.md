@@ -1,3 +1,10 @@
+# [3.0.0-beta.14](https://github.com/dargmuesli/vio/compare/3.0.0-beta.13...3.0.0-beta.14) (2023-08-22)
+
+
+### Performance Improvements
+
+* **layout-header:** use `dateTime` ([0c7b02d](https://github.com/dargmuesli/vio/commit/0c7b02d19000498c9541dffe48f1899c27fa6090))
+
 # [3.0.0-beta.13](https://github.com/dargmuesli/vio/compare/3.0.0-beta.12...3.0.0-beta.13) (2023-08-22)
 
 
