@@ -1,3 +1,10 @@
+# [3.0.0-beta.13](https://github.com/dargmuesli/vio/compare/3.0.0-beta.12...3.0.0-beta.13) (2023-08-22)
+
+
+### Bug Fixes
+
+* **nuxt:** alias `clipboard` ([73a4168](https://github.com/dargmuesli/vio/commit/73a4168fb136437f54af1d2ac700aae3233a6a20))
+
 # [3.0.0-beta.12](https://github.com/dargmuesli/vio/compare/3.0.0-beta.11...3.0.0-beta.12) (2023-08-21)
 
 
