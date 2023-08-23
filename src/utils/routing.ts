@@ -1,2 +1,4 @@
-export const append = (path: string, pathToAppend: string) =>
-  path + (path.endsWith('/') ? '' : '/') + pathToAppend
+import { RouteLocationRaw } from '#vue-router'
+
+export const append = (path: string, pathToAppend?: RouteLocationRaw) =>
+  path + (path.endsWith('/') ? '' : '/') + (pathToAppend ?? '')

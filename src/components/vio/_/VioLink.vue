@@ -1,9 +1,9 @@
 <template>
   <a
-    v-if="to.match(/^((ftp|http(s)?):\/\/|(mailto):)/)"
+    v-if="to?.toString().match(/^((ftp|http(s)?):\/\/|(mailto):)/)"
     :aria-label="ariaLabel"
     :class="classes"
-    :href="to"
+    :href="to.toString()"
     :rel="
       [...(nofollow ? ['nofollow'] : []), 'noopener', 'noreferrer'].join(' ')
     "
@@ -24,13 +24,15 @@
 </template>
 
 <script setup lang="ts">
+import { NuxtLinkProps } from '#app'
+
 export interface Props {
   ariaLabel?: string
   isColored?: boolean
   isToRelative?: boolean
   isUnderlined?: boolean
   nofollow?: boolean
-  to: string
+  to: NuxtLinkProps['to']
 }
 const props = withDefaults(defineProps<Props>(), {
   ariaLabel: undefined,
