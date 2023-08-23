@@ -1,3 +1,15 @@
+# [3.0.0-beta.16](https://github.com/dargmuesli/vio/compare/3.0.0-beta.15...3.0.0-beta.16) (2023-08-23)
+
+
+### Bug Fixes
+
+* **layout:** correct component modularity ([2f6b73c](https://github.com/dargmuesli/vio/commit/2f6b73ca67670678d7aec9f0205b897b70456db2))
+
+
+### Features
+
+* **constants:** add nuxt base configuration function ([3a11f7b](https://github.com/dargmuesli/vio/commit/3a11f7ba3de486fca78909c5fc6f2e78b79c2b7b))
+
 # [3.0.0-beta.15](https://github.com/dargmuesli/vio/compare/3.0.0-beta.14...3.0.0-beta.15) (2023-08-22)
 
 
