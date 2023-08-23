@@ -1,3 +1,217 @@
+# [3.0.0-beta.21](https://github.com/dargmuesli/vio/compare/3.0.0-beta.20...3.0.0-beta.21) (2023-08-23)
+
+
+### Bug Fixes
+
+* **tailwind:** reset margin on prose ([53f25a0](https://github.com/dargmuesli/vio/commit/53f25a0e5fa665bd5d2c63440df79f357a5bc6e2))
+
+# [3.0.0-beta.20](https://github.com/dargmuesli/vio/compare/3.0.0-beta.19...3.0.0-beta.20) (2023-08-23)
+
+
+### Features
+
+* **link:** accept nuxt link properties ([62167f5](https://github.com/dargmuesli/vio/commit/62167f590e0a20b99f1df8aed937d41cb4c0f699))
+
+# [3.0.0-beta.19](https://github.com/dargmuesli/vio/compare/3.0.0-beta.18...3.0.0-beta.19) (2023-08-23)
+
+
+### Features
+
+* **runtime:** move custom configuration to `vio` property ([fd54e3e](https://github.com/dargmuesli/vio/commit/fd54e3ec71ceb0625a03f5846ecb8bdb02aa7202))
+
+# [3.0.0-beta.18](https://github.com/dargmuesli/vio/compare/3.0.0-beta.17...3.0.0-beta.18) (2023-08-23)
+
+
+### Bug Fixes
+
+* **constants:** make nuxt base configuration parameters optional ([fc767ba](https://github.com/dargmuesli/vio/commit/fc767ba2b34c5328d78c20e124db1a15d2e5e015))
+
+# [3.0.0-beta.17](https://github.com/dargmuesli/vio/compare/3.0.0-beta.16...3.0.0-beta.17) (2023-08-23)
+
+
+### Bug Fixes
+
+* **head:** correct title ([3ce7aa8](https://github.com/dargmuesli/vio/commit/3ce7aa8065c116e59a1f6674bdf4575977bcb29b))
+
+# [3.0.0-beta.16](https://github.com/dargmuesli/vio/compare/3.0.0-beta.15...3.0.0-beta.16) (2023-08-23)
+
+
+### Bug Fixes
+
+* **layout:** correct component modularity ([2f6b73c](https://github.com/dargmuesli/vio/commit/2f6b73ca67670678d7aec9f0205b897b70456db2))
+
+
+### Features
+
+* **constants:** add nuxt base configuration function ([3a11f7b](https://github.com/dargmuesli/vio/commit/3a11f7ba3de486fca78909c5fc6f2e78b79c2b7b))
+
+# [3.0.0-beta.15](https://github.com/dargmuesli/vio/compare/3.0.0-beta.14...3.0.0-beta.15) (2023-08-22)
+
+
+### Bug Fixes
+
+* **components:** add icon prefix ([f08ce72](https://github.com/dargmuesli/vio/commit/f08ce7298414e21810536ffd3c65162f6565a2c3))
+
+# [3.0.0-beta.14](https://github.com/dargmuesli/vio/compare/3.0.0-beta.13...3.0.0-beta.14) (2023-08-22)
+
+
+### Performance Improvements
+
+* **layout-header:** use `dateTime` ([0c7b02d](https://github.com/dargmuesli/vio/commit/0c7b02d19000498c9541dffe48f1899c27fa6090))
+
+# [3.0.0-beta.13](https://github.com/dargmuesli/vio/compare/3.0.0-beta.12...3.0.0-beta.13) (2023-08-22)
+
+
+### Bug Fixes
+
+* **nuxt:** alias `clipboard` ([73a4168](https://github.com/dargmuesli/vio/commit/73a4168fb136437f54af1d2ac700aae3233a6a20))
+
+# [3.0.0-beta.12](https://github.com/dargmuesli/vio/compare/3.0.0-beta.11...3.0.0-beta.12) (2023-08-21)
+
+
+### Bug Fixes
+
+* **deps:** upgrade ([8973e1a](https://github.com/dargmuesli/vio/commit/8973e1a598a9e35b9d254faf03fa9e2f62ea1095))
+
+# [3.0.0-beta.11](https://github.com/dargmuesli/vio/compare/3.0.0-beta.10...3.0.0-beta.11) (2023-08-21)
+
+
+### Bug Fixes
+
+* **package:** use `vue-tsc` as dependency ([2d65544](https://github.com/dargmuesli/vio/commit/2d65544aa74a5495c0a86ac719814183167761e7))
+
+
+### Features
+
+* **app:** set `dayjs` locale on initialization ([bc5ad61](https://github.com/dargmuesli/vio/commit/bc5ad61d73e698e9e9ec3865fa0428a7e971c47c))
+
+# [3.0.0-beta.10](https://github.com/dargmuesli/vio/compare/3.0.0-beta.9...3.0.0-beta.10) (2023-08-20)
+
+
+### Features
+
+* add polyfill ([2234bf5](https://github.com/dargmuesli/vio/commit/2234bf5f19aa0278770a11bab2bd48ff79d7e4e6))
+
+# [3.0.0-beta.9](https://github.com/dargmuesli/vio/compare/3.0.0-beta.8...3.0.0-beta.9) (2023-08-20)
+
+
+### Features
+
+* **gtag:** set cookie flags ([dc095ef](https://github.com/dargmuesli/vio/commit/dc095ef200cdf1df184bcd1401153358d2a4df54))
+
+# [3.0.0-beta.8](https://github.com/dargmuesli/vio/compare/3.0.0-beta.7...3.0.0-beta.8) (2023-08-18)
+
+
+### Bug Fixes
+
+* **header:** allow for undefined timezone ([e7b0ed1](https://github.com/dargmuesli/vio/commit/e7b0ed18870f899b08aae65c0891416b96abed87))
+
+# [3.0.0-beta.7](https://github.com/dargmuesli/vio/compare/3.0.0-beta.6...3.0.0-beta.7) (2023-08-18)
+
+
+### Bug Fixes
+
+* **headers:** add timezone fallback ([e11382b](https://github.com/dargmuesli/vio/commit/e11382b829fd6d8d1de1d537a0b371023af3e255))
+* **nuxt:** revert `stagingHost` to runtime configuration ([97f78ea](https://github.com/dargmuesli/vio/commit/97f78ea1a0eb90f71582ad8fa8561fc04a146000))
+* **utils:** move csp functionality to server ([e726236](https://github.com/dargmuesli/vio/commit/e7262366a180e899ab4901ea3f4aeec642938305))
+
+# [3.0.0-beta.6](https://github.com/dargmuesli/vio/compare/3.0.0-beta.5...3.0.0-beta.6) (2023-08-09)
+
+
+### Bug Fixes
+
+* **networking:** make timezone function more resilient ([3991d32](https://github.com/dargmuesli/vio/commit/3991d32c8fa0207bb3d6c15a78f5ec47dbfab216))
+* **sitemap:** only exclude pages ([f0b0405](https://github.com/dargmuesli/vio/commit/f0b0405d9e70d71d686c9f00cf67578fe5513514))
+* **types:** import type reference ([b07dc91](https://github.com/dargmuesli/vio/commit/b07dc91ec4518323b70d97642159a3aace89b932))
+
+# [3.0.0-beta.5](https://github.com/dargmuesli/vio/compare/3.0.0-beta.4...3.0.0-beta.5) (2023-08-08)
+
+
+### Bug Fixes
+
+* **dayjs:** use default export only ([4a309ba](https://github.com/dargmuesli/vio/commit/4a309ba6e259b8a95524d924578689e7e55c0d81))
+* **use-app-layout:** apply `seoMeta` if set only ([c0c26c2](https://github.com/dargmuesli/vio/commit/c0c26c2753ccd024d25fda9fde2199d90dc7027d))
+* **vio-form:** use relative import path ([8feefa2](https://github.com/dargmuesli/vio/commit/8feefa26b9ca02a19951390f96e2c74bf1e4a9d1))
+
+# [3.0.0-beta.4](https://github.com/dargmuesli/vio/compare/3.0.0-beta.3...3.0.0-beta.4) (2023-08-08)
+
+
+### Bug Fixes
+
+* **nuxt:** alias `dayjs` ([6acad0f](https://github.com/dargmuesli/vio/commit/6acad0fcce4df442a9974b9b5131cc0d83c8bf60))
+
+
+### Features
+
+* **nuxt:** add image module ([be73809](https://github.com/dargmuesli/vio/commit/be73809c5016a0043493d2f7add07001600564af))
+
+# [3.0.0-beta.3](https://github.com/dargmuesli/vio/compare/3.0.0-beta.2...3.0.0-beta.3) (2023-08-08)
+
+
+### Bug Fixes
+
+* **nuxt:** make base url protocol variable ([d49606d](https://github.com/dargmuesli/vio/commit/d49606d3140fa3e31befe44cf8a3244575d3fd91))
+
+
+* feat(app)!: rework configuration ([b10886e](https://github.com/dargmuesli/vio/commit/b10886e9159ff2ac446ac902e6cee6f5580b86f3))
+
+
+### Features
+
+* **nuxt:** enable link checker ([2665c2e](https://github.com/dargmuesli/vio/commit/2665c2e1d105ec58c59976453b94ebcfff66fdd0))
+* **playground:** add favicons ([f49b859](https://github.com/dargmuesli/vio/commit/f49b859d5b4a8e7d87ed7c4f19c7da311616ac47))
+* **playground:** make name more specific ([22e5bca](https://github.com/dargmuesli/vio/commit/22e5bcaf889c91316f3c04a974d6994cc3848d9a))
+* **seo:** rework site metadata ([54f4e2e](https://github.com/dargmuesli/vio/commit/54f4e2e3d59aa4e328f545c2a61941b804bca6d2))
+* **vio-link:** use `NuxtLinkLocale` ([cbab19e](https://github.com/dargmuesli/vio/commit/cbab19e35480f2a7bd7da65659257edfe998c81f))
+
+
+### BREAKING CHANGES
+
+* `appConfig` needs to be updated
+
+# [3.0.0-beta.2](https://github.com/dargmuesli/vio/compare/3.0.0-beta.1...3.0.0-beta.2) (2023-08-07)
+
+
+### Bug Fixes
+
+* **components:** add vio directory ([27d61e3](https://github.com/dargmuesli/vio/commit/27d61e3c05877f8844dd5291dfdc2110f128e4a5))
+* **error:** use `pre` element for stack trace ([084f58e](https://github.com/dargmuesli/vio/commit/084f58e6719464c282c89c9bbca327755976eecc))
+* **error:** use app layout ([9c243c5](https://github.com/dargmuesli/vio/commit/9c243c5e53106d96923d2490348c27ac4a5b1a82))
+* **layout:** center content ([4a0fc5d](https://github.com/dargmuesli/vio/commit/4a0fc5da24d2c7e4fe49716b280407020c7c1915))
+* **tailwind:** remove line clamp plugin ([583872b](https://github.com/dargmuesli/vio/commit/583872badc908c85935bcc0e2208876a0e1d36fa))
+
+# [3.0.0-beta.1](https://github.com/dargmuesli/vio/compare/2.0.1...3.0.0-beta.1) (2023-08-07)
+
+
+### Bug Fixes
+
+* **components:** add `Vio` prefix ([75846d4](https://github.com/dargmuesli/vio/commit/75846d45adaed75f5c21746e33b4226c3a007b67))
+
+
+* feat(app)!: move configuration to `vio` key ([f747b44](https://github.com/dargmuesli/vio/commit/f747b44033abf37b3a370ca6de6ff20af6736af6))
+
+
+### Features
+
+* add types ([74254c2](https://github.com/dargmuesli/vio/commit/74254c29ac49d9b5b7343e54821673a501d3b8f6))
+* **color-mode:** add class suffix ([8185cf8](https://github.com/dargmuesli/vio/commit/8185cf894dbaf0467ea78f07a9cf792e9b9b37a8))
+* **components:** add content ([a71c5a1](https://github.com/dargmuesli/vio/commit/a71c5a1473bbdc11ee3f930ba7d174a03fafb081))
+* **composables:** add new content ([989ce0b](https://github.com/dargmuesli/vio/commit/989ce0b47654bfd146fe2e286f8e2ac98b352680))
+* **headers:** use app configuration's csp ([83460e0](https://github.com/dargmuesli/vio/commit/83460e0980a2266627c808c6ada2faea4513eb34))
+* **i18n:** add translations ([f74e122](https://github.com/dargmuesli/vio/commit/f74e122a4733bb41dae146bf90df80e39f6e4bac))
+* **nuxt:** add staging host to runtime configuration ([c4f6d65](https://github.com/dargmuesli/vio/commit/c4f6d65713abf5603ee5d229b1bf37222ec4fa6b))
+* **nuxt:** add timezone cookie ([7498784](https://github.com/dargmuesli/vio/commit/7498784f43dbb40d0633b754112aa4d10f6d0e45))
+* **nuxt:** use page transition ([8537239](https://github.com/dargmuesli/vio/commit/8537239ecc08257b989e5d62fb16bbfa13d332eb))
+* **plugins:** add content ([e8360fa](https://github.com/dargmuesli/vio/commit/e8360fadf80d71a9dd97011dbe3bcdd67e3b6569))
+* **store:** add pinia ([5c182c2](https://github.com/dargmuesli/vio/commit/5c182c238e996f74dbbb3c6251e0aa98452f419e))
+* **tailwindcss:** add plugins ([9750686](https://github.com/dargmuesli/vio/commit/97506864c31739335e9b19d82cf41b820b94f139))
+* **utils:** add content ([587be69](https://github.com/dargmuesli/vio/commit/587be69b6e78cc1ce123b4aa817b35f219a50402))
+
+
+### BREAKING CHANGES
+
+* the app configuration needs to be updates
+
 ## [2.0.1](https://github.com/dargmuesli/vio/compare/2.0.0...2.0.1) (2023-08-01)
 
 

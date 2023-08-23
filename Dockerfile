@@ -3,20 +3,24 @@
 
 FROM node:20.5.1-alpine@sha256:254989045b0555ee411cd8fe7bd8e3ae306fef34b4c9d5dfd020bdda86cdad97 AS development
 
-COPY ./docker/entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+# The `CI` environment variable must be set for pnpm to run in headless mode
+ENV CI=true
 
 RUN corepack enable
 
 WORKDIR /srv/app/
 
+COPY ./docker/entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+
 VOLUME /srv/.pnpm-store
 VOLUME /srv/app
 
 ENTRYPOINT ["docker-entrypoint.sh"]
-CMD ["pnpm", "run", "dev"]
+CMD ["pnpm", "run", "--dir", "src", "dev"]
+EXPOSE 3000
 
-# Waiting for https://github.com/nuxt/framework/issues/6915
-# HEALTHCHECK --interval=10s CMD wget -O /dev/null http://localhost:3000/api/healthcheck || exit 1
+# TODO: support healthcheck while starting (https://github.com/nuxt/framework/issues/6915)
+# HEALTHCHECK --interval=10s --start-period=60s CMD wget -O /dev/null http://localhost:3000/api/healthcheck || exit 1
 
 
 ########################
@@ -38,6 +42,7 @@ COPY ./ ./
 
 RUN pnpm install --offline
 
+
 ########################
 # Build Nuxt.
 
@@ -46,13 +51,16 @@ FROM node:20.5.1-alpine@sha256:254989045b0555ee411cd8fe7bd8e3ae306fef34b4c9d5dfd
 ARG NUXT_PUBLIC_STACK_DOMAIN=jonas-thelemann.de
 ENV NUXT_PUBLIC_STACK_DOMAIN=${NUXT_PUBLIC_STACK_DOMAIN}
 
+# The `CI` environment variable must be set for pnpm to run in headless mode
+ENV CI=true
+
 WORKDIR /srv/app/
 
 COPY --from=prepare /srv/app/ ./
 
 ENV NODE_ENV=production
 RUN corepack enable && \
-    pnpm run build
+    pnpm --dir src run build
 
 
 ########################
@@ -60,12 +68,15 @@ RUN corepack enable && \
 
 FROM node:20.5.1-alpine@sha256:254989045b0555ee411cd8fe7bd8e3ae306fef34b4c9d5dfd020bdda86cdad97 AS lint
 
+# The `CI` environment variable must be set for pnpm to run in headless mode
+ENV CI=true
+
 WORKDIR /srv/app/
 
 COPY --from=prepare /srv/app/ ./
 
 RUN corepack enable && \
-    pnpm run lint
+    pnpm --dir src run lint
 
 
 # ########################
@@ -132,7 +143,7 @@ RUN corepack enable && \
 
 # COPY --from=test-e2e-prepare /srv/app/ ./
 
-# RUN pnpm --dir nuxt run test:e2e:dev
+# RUN pnpm --dir src run test:e2e:dev
 
 
 # ########################
@@ -148,12 +159,12 @@ RUN corepack enable && \
 # RUN corepack enable
 
 # COPY --from=test-e2e-prepare /srv/app/ ./
-# COPY --from=build /srv/app/nuxt/.output /srv/app/nuxt/.output
+# COPY --from=build /srv/app/src/.output /srv/app/src/.output
 
 # # # Do not run in parallel with `test-e2e-dev`
 # # COPY --from=test-e2e-dev /srv/app/package.json /tmp/test/package.json
 
-# RUN pnpm --dir nuxt run test:e2e:prod
+# RUN pnpm --dir src run test:e2e:prod
 
 
 #######################
@@ -161,18 +172,25 @@ RUN corepack enable && \
 
 FROM node:20.5.1-alpine@sha256:254989045b0555ee411cd8fe7bd8e3ae306fef34b4c9d5dfd020bdda86cdad97 AS collect
 
+# The `CI` environment variable must be set for pnpm to run in headless mode
+ENV CI=true
+
 WORKDIR /srv/app/
 
-COPY --from=build /srv/app/.playground/.output ./.output
-COPY --from=lint /srv/app/package.json /tmp/lint/package.json
-# COPY --from=test-integration-dev /srv/app/package.json /tmp/test/package.json
-# COPY --from=test-integration-prod /srv/app/package.json /tmp/test/package.json
+COPY --from=build /srv/app/src/.playground/.output ./.output
+COPY --from=lint /srv/app/package.json /tmp/package.json
+# COPY --from=test-e2e-dev /srv/app/package.json /tmp/package.json
+# COPY --from=test-e2e-prod /srv/app/package.json /tmp/package.json
 
 
 # #######################
 # # Provide a web server.
 
-# FROM nginx:1.23.4-alpine@sha256:dd2a9179765849767b10e2adde7e10c4ad6b7e4d4846e6b77ec93f080cd2db27 AS production
+# FROM nginx:1.25.1-alpine@sha256:2d194184b067db3598771b4cf326cfe6ad5051937ba1132b8b7d4b0184e0d0a6 AS production
+
+# # The `CI` environment variable must be set for pnpm to run in headless mode
+# ENV CI=true
+# ENV NODE_ENV=production
 
 # WORKDIR /usr/share/nginx/html
 
@@ -180,7 +198,8 @@ COPY --from=lint /srv/app/package.json /tmp/lint/package.json
 
 # COPY --from=collect /srv/app/.output/public/ ./
 
-# HEALTHCHECK --interval=10s CMD wget -O /dev/null http://localhost/api/healthcheck || exit 1
+# HEALTHCHECK --interval=10s CMD wget -O /dev/null http://localhost:3001/api/healthcheck || exit 1
+# EXPOSE 3001
 
 
 #######################

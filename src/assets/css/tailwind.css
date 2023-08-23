@@ -1,0 +1,58 @@
+/* stylelint-disable at-rule-no-unknown */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* stylelint-enable at-rule-no-unknown */
+
+/* doiuse-disable css-cascade-layers */
+@layer base {
+  /* doiuse-enable css-cascade-layers */
+  a:focus {
+    /* doiuse-disable css-nesting */
+    @apply outline-none ring; /* doiuse-enable css-nesting */
+  }
+
+  button:focus {
+    /* doiuse-disable css-nesting */
+    @apply outline-none ring; /* doiuse-enable css-nesting */
+  }
+
+  thead {
+    /* doiuse-disable css-nesting */
+    @apply vio-bg-darken sticky top-0 z-10; /* doiuse-enable css-nesting */
+  }
+
+  tbody {
+    /* doiuse-disable css-nesting */
+    @apply vio-divide-darken divide-y; /* doiuse-enable css-nesting */
+  }
+}
+
+/* doiuse-disable css-cascade-layers */
+@layer utilities {
+  /* doiuse-enable css-cascade-layers */
+  .vio-prose {
+    /* doiuse-disable css-nesting */
+    @apply prose prose-sm dark:prose-invert sm:prose-base lg:prose-lg xl:prose-xl; /* 2xl:prose-2xl */ /* doiuse-enable css-nesting */
+  }
+
+  .vio-prose-fullwidth {
+    /* doiuse-disable css-nesting */
+    @apply vio-prose max-w-full sm:max-w-full md:max-w-full xl:max-w-full 2xl:max-w-full; /* doiuse-enable css-nesting */
+  }
+
+  .vio-divide-darken {
+    /* doiuse-disable css-nesting */
+    @apply divide-background-brighten dark:divide-background-darken; /* doiuse-enable css-nesting */
+  }
+
+  .vio-bg-darken {
+    /* doiuse-disable css-nesting */
+    @apply bg-background-brighten dark:bg-background-darken; /* doiuse-enable css-nesting */
+  }
+
+  .vio-border-darken {
+    /* doiuse-disable css-nesting */
+    @apply border-background-brighten dark:border-background-darken; /* doiuse-enable css-nesting */
+  }
+}
