@@ -1,3 +1,10 @@
+## [3.1.1](https://github.com/dargmuesli/vio/compare/3.1.0...3.1.1) (2023-08-23)
+
+
+### Performance Improvements
+
+* **app-layout:** only add theme color if set ([ad97b5c](https://github.com/dargmuesli/vio/commit/ad97b5c435a59c5b74560d2420ed7c32a5077794))
+
 # [3.1.0](https://github.com/dargmuesli/vio/compare/3.0.0...3.1.0) (2023-08-23)
 
 
