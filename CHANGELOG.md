@@ -1,3 +1,10 @@
+# [3.0.0-beta.21](https://github.com/dargmuesli/vio/compare/3.0.0-beta.20...3.0.0-beta.21) (2023-08-23)
+
+
+### Bug Fixes
+
+* **tailwind:** reset margin on prose ([53f25a0](https://github.com/dargmuesli/vio/commit/53f25a0e5fa665bd5d2c63440df79f357a5bc6e2))
+
 # [3.0.0-beta.20](https://github.com/dargmuesli/vio/compare/3.0.0-beta.19...3.0.0-beta.20) (2023-08-23)
 
 
