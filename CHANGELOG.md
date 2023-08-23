@@ -1,3 +1,10 @@
+# [3.0.0-beta.19](https://github.com/dargmuesli/vio/compare/3.0.0-beta.18...3.0.0-beta.19) (2023-08-23)
+
+
+### Features
+
+* **runtime:** move custom configuration to `vio` property ([fd54e3e](https://github.com/dargmuesli/vio/commit/fd54e3ec71ceb0625a03f5846ecb8bdb02aa7202))
+
 # [3.0.0-beta.18](https://github.com/dargmuesli/vio/compare/3.0.0-beta.17...3.0.0-beta.18) (2023-08-23)
 
 
