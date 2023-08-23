@@ -1,3 +1,10 @@
+# [3.0.0-beta.17](https://github.com/dargmuesli/vio/compare/3.0.0-beta.16...3.0.0-beta.17) (2023-08-23)
+
+
+### Bug Fixes
+
+* **head:** correct title ([3ce7aa8](https://github.com/dargmuesli/vio/commit/3ce7aa8065c116e59a1f6674bdf4575977bcb29b))
+
 # [3.0.0-beta.16](https://github.com/dargmuesli/vio/compare/3.0.0-beta.15...3.0.0-beta.16) (2023-08-23)
 
 
