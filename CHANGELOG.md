@@ -1,3 +1,10 @@
+# [3.0.0-beta.20](https://github.com/dargmuesli/vio/compare/3.0.0-beta.19...3.0.0-beta.20) (2023-08-23)
+
+
+### Features
+
+* **link:** accept nuxt link properties ([62167f5](https://github.com/dargmuesli/vio/commit/62167f590e0a20b99f1df8aed937d41cb4c0f699))
+
 # [3.0.0-beta.19](https://github.com/dargmuesli/vio/compare/3.0.0-beta.18...3.0.0-beta.19) (2023-08-23)
 
 
