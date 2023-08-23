@@ -16,6 +16,7 @@
     v-else
     :aria-label="ariaLabel"
     :class="classes"
+    :locale="locale"
     :to="isToRelative ? append(route.path, to) : to"
     @click="emit('click')"
   >
@@ -31,6 +32,7 @@ export interface Props {
   isColored?: boolean
   isToRelative?: boolean
   isUnderlined?: boolean
+  locale?: string
   nofollow?: boolean
   to: NuxtLinkProps['to']
 }
@@ -39,6 +41,7 @@ const props = withDefaults(defineProps<Props>(), {
   isColored: true,
   isToRelative: false,
   isUnderlined: false,
+  locale: undefined,
   nofollow: false,
 })
 
