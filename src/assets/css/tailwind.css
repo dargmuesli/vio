@@ -33,7 +33,7 @@
   /* doiuse-enable css-cascade-layers */
   .vio-prose {
     /* doiuse-disable css-nesting */
-    @apply prose prose-sm m-auto dark:prose-invert sm:prose-base lg:prose-lg xl:prose-xl; /* 2xl:prose-2xl */ /* doiuse-enable css-nesting */
+    @apply prose prose-sm dark:prose-invert sm:prose-base lg:prose-lg xl:prose-xl; /* 2xl:prose-2xl */ /* doiuse-enable css-nesting */
   }
 
   .vio-prose-fullwidth {

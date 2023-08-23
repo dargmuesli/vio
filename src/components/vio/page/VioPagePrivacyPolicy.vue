@@ -1,5 +1,5 @@
 <template>
-  <div class="vio-prose">
+  <div class="vio-prose m-auto">
     <h1>{{ title }}</h1>
     <ol v-if="isEnabled">
       <li v-if="isEnabled.summary">
