@@ -1,3 +1,10 @@
+# [3.1.0](https://github.com/dargmuesli/vio/compare/3.0.0...3.1.0) (2023-08-23)
+
+
+### Features
+
+* **link:** add locale property ([97c5038](https://github.com/dargmuesli/vio/commit/97c50384e9f5a914b60a8d1d43c71cd9b68cc241))
+
 # [3.0.0](https://github.com/dargmuesli/vio/compare/2.0.1...3.0.0) (2023-08-23)
 
 
