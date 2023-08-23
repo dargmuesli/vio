@@ -1,3 +1,10 @@
+# [3.0.0-beta.18](https://github.com/dargmuesli/vio/compare/3.0.0-beta.17...3.0.0-beta.18) (2023-08-23)
+
+
+### Bug Fixes
+
+* **constants:** make nuxt base configuration parameters optional ([fc767ba](https://github.com/dargmuesli/vio/commit/fc767ba2b34c5328d78c20e124db1a15d2e5e015))
+
 # [3.0.0-beta.17](https://github.com/dargmuesli/vio/compare/3.0.0-beta.16...3.0.0-beta.17) (2023-08-23)
 
 
