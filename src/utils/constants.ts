@@ -1,5 +1,14 @@
 export const SITE_NAME = 'Vio'
 
+export const BASE_URL =
+  (process.env.NUXT_PUBLIC_STACK_DOMAIN ? 'https' : 'http') +
+  '://' +
+  (process.env.NUXT_PUBLIC_STACK_DOMAIN ||
+    `${process.env.HOST || 'localhost'}:${
+      !process.env.NODE_ENV || process.env.NODE_ENV === 'development'
+        ? '3000'
+        : '3001'
+    }`)
 export const CACHE_VERSION = 'bOXMwoKlJr'
 export const COOKIE_PREFIX = SITE_NAME.toLocaleLowerCase()
 export const COOKIE_SEPARATOR = '_'
@@ -38,44 +47,36 @@ export const VIO_NUXT_BASE_CONFIG = ({
   baseUrl?: string
   siteName: string
   stagingHost?: string
-}) => ({
-  app: {
-    head: {
-      title: SITE_NAME, // fallback data to prevent invalid html at generation
-    },
-  },
-  runtimeConfig: {
-    public: {
-      i18n: {
-        ...(baseUrl ? { baseUrl } : {}),
-      },
-      vio: {
-        ...(stagingHost
-          ? {
-              stagingHost:
-                process.env.NODE_ENV !== 'production' &&
-                !process.env.NUXT_PUBLIC_STACK_DOMAIN
-                  ? stagingHost
-                  : undefined,
-            }
-          : {}),
+}) =>
+  ({
+    app: {
+      head: {
+        title: SITE_NAME, // fallback data to prevent invalid html at generation
       },
     },
-  },
-  typescript: {
-    tsConfig: {
-      compilerOptions: {
-        esModuleInterop: true,
-        // moduleResolution: 'bundler',
-        // noErrorTruncation: true,
+    runtimeConfig: {
+      public: {
+        i18n: {
+          ...(baseUrl ? { baseUrl } : {}),
+        },
+        vio: {
+          ...(stagingHost
+            ? {
+                stagingHost:
+                  process.env.NODE_ENV !== 'production' &&
+                  !process.env.NUXT_PUBLIC_STACK_DOMAIN
+                    ? stagingHost
+                    : undefined,
+              }
+            : {}),
+        },
       },
     },
-  },
 
-  // modules
-  i18n: I18N_MODULE_CONFIG, // `langDir`, `lazy` and `locales` must be configured to extend a layer having lazy-loaded translations (https://v8.i18n.nuxtjs.org/guide/layers#locales)
-  site: {
-    name: siteName,
-    ...(baseUrl ? { url: baseUrl } : {}),
-  },
-})
+    // modules
+    i18n: I18N_MODULE_CONFIG, // `langDir`, `lazy` and `locales` must be configured to extend a layer having lazy-loaded translations (https://v8.i18n.nuxtjs.org/guide/layers#locales)
+    site: {
+      name: siteName,
+      ...(baseUrl ? { url: baseUrl } : {}),
+    },
+  }) as Parameters<typeof defineNuxtConfig>[0]
