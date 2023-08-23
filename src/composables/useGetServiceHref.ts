@@ -16,6 +16,6 @@ export const useGetServiceHref = () => {
       isSsr,
       name,
       port,
-      stagingHost: runtimeConfig.public.stagingHost,
+      stagingHost: runtimeConfig.public.vio.stagingHost,
     })
 }

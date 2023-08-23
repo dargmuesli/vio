@@ -28,7 +28,7 @@ const runtimeConfig = useRuntimeConfig()
 
 // computations
 const year = computed(() =>
-  runtimeConfig.public.isTesting ? 1337 : new Date().getFullYear(),
+  runtimeConfig.public.vio.isTesting ? 1337 : new Date().getFullYear(),
 )
 </script>
 
