@@ -3,7 +3,7 @@
     <div class="flex flex-col gap-8">
       <div class="flex items-center">
         <VioLayoutHr />
-        <VioIconLogo class="mx-12 h-12 w-12 opacity-60 brightness-0 invert" />
+        <slot name="logo" />
         <VioLayoutHr />
       </div>
       <!-- Justifying evenly, instead of "between", centers a single element. -->
