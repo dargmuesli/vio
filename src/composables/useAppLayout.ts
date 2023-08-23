@@ -11,8 +11,12 @@ export const useAppLayout = () => {
   })
 
   useServerSeoMeta({
-    msapplicationTileColor: appConfig.vio.themeColor,
-    themeColor: appConfig.vio.themeColor,
+    ...(appConfig.vio.themeColor
+      ? {
+          msapplicationTileColor: appConfig.vio.themeColor,
+          themeColor: appConfig.vio.themeColor,
+        }
+      : {}),
     titleTemplate: (titleChunk) => {
       return titleChunk && titleChunk !== siteConfig.name
         ? `${titleChunk} ${siteConfig.titleSeparator} ${siteConfig.name}`
