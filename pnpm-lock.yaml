@@ -53,6 +53,9 @@ importers:
       '@tailwindcss/typography':
         specifier: 0.5.9
         version: 0.5.9(tailwindcss@3.3.3)
+      '@types/cookie':
+        specifier: 0.5.1
+        version: 0.5.1
       '@urql/core':
         specifier: 4.1.1
         version: 4.1.1(graphql@16.8.0)
@@ -74,6 +77,9 @@ importers:
       clipboard:
         specifier: 2.0.11
         version: 2.0.11
+      cookie:
+        specifier: 0.5.0
+        version: 0.5.0
       dayjs:
         specifier: 2.0.0-alpha.4
         version: 2.0.0-alpha.4
@@ -108,18 +114,12 @@ importers:
       '@nuxtjs/eslint-config-typescript':
         specifier: 12.0.0
         version: 12.0.0(eslint@8.47.0)(typescript@5.1.6)
-      '@types/cookie':
-        specifier: 0.5.1
-        version: 0.5.1
       '@types/lodash-es':
         specifier: 4.17.8
         version: 4.17.8
       '@types/marked':
         specifier: 5.0.1
         version: 5.0.1
-      cookie:
-        specifier: 0.5.0
-        version: 0.5.0
       eslint:
         specifier: 8.47.0
         version: 8.47.0
@@ -2589,7 +2589,7 @@ packages:
 
   /@types/cookie@0.5.1:
     resolution: {integrity: sha512-COUnqfB2+ckwXXSFInsFdOAWQzCCx+a5hq2ruyj+Vjund94RJQd4LG2u9hnvJrTgunKAaax7ancBYlDrNYxA0g==}
-    dev: true
+    dev: false
 
   /@types/eslint-scope@3.7.4:
     resolution: {integrity: sha512-9K4zoImiZc3HlIp6AVUDE4CWYx22a+lhSZMYNpbjW04+YF0KWj4pJXnEMjdnFTiQibFFmElcsasJXDbdI/EPhA==}
@@ -4603,7 +4603,7 @@ packages:
   /cookie@0.5.0:
     resolution: {integrity: sha512-YZ3GUyn/o8gfKJlnlX7g7xq4gyO6OSuhGPKaaGssGB2qgDUS0gPgtTvoyZLTt9Ab6dC4hfc9dV5arkvc/OCmrw==}
     engines: {node: '>= 0.6'}
-    dev: true
+    dev: false
 
   /cookiejar@2.1.4:
     resolution: {integrity: sha512-LDx6oHrK+PhzLKJU9j5S7/Y3jM/mUHvD/DeI1WQmJn652iPC5Y4TBzC9l+5OMOXlyTTA+SmVUPm0HQUwpD5Jqw==}

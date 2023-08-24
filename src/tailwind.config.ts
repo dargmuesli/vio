@@ -98,6 +98,29 @@ export default {
         h6: {
           ...heading(theme),
         },
+        img: {
+          '&::before': {
+            alignItems: 'center',
+            display: 'flex',
+            height: '100%',
+            justifyContent: 'center',
+          },
+        },
+        table: {
+          width: '100%',
+        },
+        td: {
+          padding: theme('padding.4') + ' ' + theme('padding.6'),
+          whiteSpace: 'nowrap',
+        },
+        th: {
+          padding: theme('padding.3') + ' ' + theme('padding.6'),
+          textAlign: 'left',
+          fontSize: theme('fontSize.xs'),
+          fontWeight: theme('fontWeight.medium'),
+          textTransform: 'uppercase',
+          letterSpacing: theme('letterSpacing.wider'),
+        },
       })
       addComponents({
         '::placeholder': {
