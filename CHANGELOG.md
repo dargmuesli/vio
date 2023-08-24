@@ -1,3 +1,12 @@
+# [3.2.0](https://github.com/dargmuesli/vio/compare/3.1.1...3.2.0) (2023-08-24)
+
+
+### Features
+
+* extend content ([758f534](https://github.com/dargmuesli/vio/commit/758f5349ae88e793351d75185a624da4b2e009ad))
+* extend content ([b19588a](https://github.com/dargmuesli/vio/commit/b19588aaafa3f96be54e4d404ed1131ebb7d649c))
+* **style:** extend color palette ([c81693e](https://github.com/dargmuesli/vio/commit/c81693ea3124654d5cad6f5652b81f91bb44d09d))
+
 # [3.2.0-beta.2](https://github.com/dargmuesli/vio/compare/3.2.0-beta.1...3.2.0-beta.2) (2023-08-24)
 
 
