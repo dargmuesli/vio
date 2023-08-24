@@ -209,6 +209,12 @@ export default {
           bright: gray['50'],
           dark: gray['900'],
         },
+        vio: {
+          primary: {
+            bg: gray['100'],
+            text: gray['900'],
+          },
+        },
       },
       keyframes: {
         shake: {
