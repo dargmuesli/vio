@@ -8,8 +8,8 @@
     <path
       stroke-linecap="round"
       stroke-linejoin="round"
-      stroke-width="2"
-      d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+      stroke-width="1.5"
+      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
     />
   </VioIconContainer>
 </template>
@@ -25,7 +25,7 @@ const { t } = useI18n()
 
 <i18n lang="yaml">
 de:
-  title: Herunterladen
+  title: Kalender
 en:
-  title: Download
+  title: Calendar
 </i18n>

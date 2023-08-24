@@ -56,9 +56,7 @@ const emit = defineEmits<{
 const classesComputed = computed(() => {
   return [
     props.classes,
-    ...(props.isBlock
-      ? ['block']
-      : ['inline-flex items-center justify-center gap-2']),
+    ...(props.isBlock ? ['block'] : ['inline-flex items-center gap-2']),
     ...(props.isLinkColored ? ['text-link-dark dark:text-link-bright'] : []),
   ].join(' ')
 })
