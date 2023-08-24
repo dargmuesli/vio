@@ -2,12 +2,12 @@
   <VioButton
     :is-to-relative="isToRelative"
     :aria-label="ariaLabel"
-    class="rounded-md border px-4 py-2 font-medium"
+    class="justify-center rounded-md border px-4 py-2 font-medium"
     :class="
       [
         ...(isPrimary
           ? [
-              'border-transparent bg-gray-800 text-text-bright hover:bg-black dark:bg-yellow-500  dark:text-gray-800 dark:hover:bg-yellow-600',
+              'border-transparent bg-gray-800 text-text-bright hover:bg-black dark:bg-vio-primary-bg dark:text-vio-primary-text dark:hover:bg-gray-200',
             ]
           : [
               'border-gray-300 text-text-dark hover:bg-black/5 dark:border-gray-600 dark:text-text-bright dark:hover:bg-black/30',

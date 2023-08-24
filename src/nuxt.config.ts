@@ -63,6 +63,7 @@ export default defineNuxtConfig(
       },
       typescript: {
         shim: false,
+        strict: true,
         tsConfig: {
           compilerOptions: {
             esModuleInterop: true,

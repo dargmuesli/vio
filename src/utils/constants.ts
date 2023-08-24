@@ -1,3 +1,5 @@
+import { helpers } from '@vuelidate/validators'
+
 export const SITE_NAME = 'Vio'
 
 export const BASE_URL =
@@ -36,9 +38,14 @@ export const I18N_VUE_CONFIG = {
   fallbackWarn: false, // covered by linting
   missingWarn: false, // covered by linting
 }
+export const JWT_NAME = () =>
+  `${process.env.NODE_ENV === 'production' ? '__Secure-' : ''}jwt`
+export const REGEX_UUID =
+  /^[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}$/
 export const TIMEZONE_COOKIE_NAME = [COOKIE_PREFIX, 'tz'].join(COOKIE_SEPARATOR)
 export const TIMEZONE_HEADER_KEY = `X-${SITE_NAME}-Timezone`
 export const VALIDATION_SUGGESTION_TITLE_LENGTH_MAXIMUM = 300
+export const VERIFICATION_FORMAT_UUID = helpers.regex(REGEX_UUID)
 export const VIO_NUXT_BASE_CONFIG = ({
   baseUrl,
   siteName,
