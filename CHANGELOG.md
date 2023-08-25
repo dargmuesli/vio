@@ -1,3 +1,10 @@
+## [3.2.1](https://github.com/dargmuesli/vio/compare/3.2.0...3.2.1) (2023-08-25)
+
+
+### Bug Fixes
+
+* **deps:** move lodash to dependencies ([1f6c0a6](https://github.com/dargmuesli/vio/commit/1f6c0a65ea7062a5024cb7eab386218fda0430cc))
+
 # [3.2.0](https://github.com/dargmuesli/vio/compare/3.1.1...3.2.0) (2023-08-24)
 
 
