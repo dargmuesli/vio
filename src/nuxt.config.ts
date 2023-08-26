@@ -46,8 +46,8 @@ export default defineNuxtConfig(
         '@nuxtjs/html-validator',
         '@nuxtjs/i18n',
         '@nuxtjs/tailwindcss',
+        '@nuxtseo/module',
         '@pinia/nuxt',
-        'nuxt-seo-kit-module',
       ],
       nitro: {
         compressPublicAssets: true,
@@ -150,7 +150,7 @@ export default defineNuxtConfig(
         debug: process.env.NODE_ENV === 'development',
         failOnError: true,
       },
-      seoKit: {
+      seo: {
         splash: false,
       },
       site: {
