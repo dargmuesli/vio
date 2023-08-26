@@ -1,3 +1,10 @@
+## [3.2.3](https://github.com/dargmuesli/vio/compare/3.2.2...3.2.3) (2023-08-26)
+
+
+### Bug Fixes
+
+* **head:** use server seo meta ([8db10bb](https://github.com/dargmuesli/vio/commit/8db10bbbe30a5a3800e3a9d06fda650afe8aa2c0))
+
 ## [3.2.2](https://github.com/dargmuesli/vio/compare/3.2.1...3.2.2) (2023-08-26)
 
 
