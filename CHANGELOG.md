@@ -1,3 +1,10 @@
+## [3.2.2](https://github.com/dargmuesli/vio/compare/3.2.1...3.2.2) (2023-08-26)
+
+
+### Bug Fixes
+
+* **deps:** upgrade ([6271d51](https://github.com/dargmuesli/vio/commit/6271d5104db9513018a90bcc2af5a3395844171d))
+
 ## [3.2.1](https://github.com/dargmuesli/vio/compare/3.2.0...3.2.1) (2023-08-25)
 
 
