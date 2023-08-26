@@ -17,5 +17,5 @@ export const useHeadDefault = ({
     twitterTitle: title,
   }
 
-  useSeoMeta(defu(extension, defaults)) // TODO: use `useServerSeoMeta` when Nuxt 3.7 is used
+  useServerSeoMeta(defu(extension, defaults))
 }
