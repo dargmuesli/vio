@@ -67,7 +67,7 @@
     "is-https": "4.0.0",
     "jose": "4.14.4",
     "lodash-es": "4.17.21",
-    "marked": "7.0.4",
+    "marked": "7.0.5",
     "pinia": "2.1.6",
     "sweetalert2": "11.7.27",
     "vue-gtag": "2.0.1",
