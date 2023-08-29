@@ -1,8 +1,8 @@
 *
+!docker/
 !src/
 src/.nuxt/
 src/node_modules/
-src/.nuxt
 src/.eslintcache
 !.npmrc
 !package.json

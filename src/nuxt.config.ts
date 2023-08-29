@@ -34,7 +34,9 @@ export default defineNuxtConfig(
         },
       },
       devtools: {
-        enabled: process.env.NODE_ENV !== 'production',
+        enabled:
+          process.env.NODE_ENV !== 'production' &&
+          !process.env.NUXT_PUBLIC_IS_TESTING,
         timeline: {
           enabled: true,
         },
