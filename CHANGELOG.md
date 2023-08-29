@@ -1,3 +1,11 @@
+## [3.2.4](https://github.com/dargmuesli/vio/compare/3.2.3...3.2.4) (2023-08-29)
+
+
+### Bug Fixes
+
+* **deps:** downgrade nuxt to v3.6.5 ([f3ba9c5](https://github.com/dargmuesli/vio/commit/f3ba9c53c0fa6fb64a67b6f49283ce5192feb5d6))
+* schedule release ([68fe0df](https://github.com/dargmuesli/vio/commit/68fe0dfa991185438d19355173bed21c695a6030))
+
 ## [3.2.3](https://github.com/dargmuesli/vio/compare/3.2.2...3.2.3) (2023-08-26)
 
 
