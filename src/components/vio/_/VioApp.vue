@@ -2,18 +2,12 @@
   <div :data-is-loading="isLoading" data-testid="is-loading">
     <NuxtLayout>
       <!-- `NuxtLayout` can't have mulitple child nodes (https://github.com/nuxt/nuxt/issues/21759) -->
-      <div>
-        <NuxtPage :site-description="siteDescriptionProp" />
-        <CookieControl :locale="locale" />
-      </div>
+      <NuxtPage :site-description="siteDescriptionProp" />
     </NuxtLayout>
   </div>
 </template>
 
 <script setup lang="ts">
-import type { Locale } from '@dargmuesli/nuxt-cookie-control/dist/runtime/types'
-import type { WritableComputedRef } from 'vue'
-
 export interface Props {
   ogImageAlt: string
   ogImageComponent?: string
@@ -27,14 +21,11 @@ const ogImageComponentProp = toRef(() => props.ogImageComponent)
 const siteDescriptionProp = toRef(() => props.siteDescription)
 
 const { $dayjs } = useNuxtApp()
-const i18n = useI18n()
+const { locale } = useI18n()
 const cookieControl = useCookieControl()
 const siteConfig = useSiteConfig()
 
 const { loadingIds, indicateLoadingDone } = useLoadingDoneIndicator('app')
-
-// data
-const locale = i18n.locale as WritableComputedRef<Locale>
 
 // methods
 const init = () => {
