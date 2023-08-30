@@ -7,7 +7,7 @@
       [
         ...(isPrimary
           ? [
-              'border-transparent bg-gray-800 text-text-bright hover:bg-black dark:bg-vio-primary-bg dark:text-vio-primary-text dark:hover:bg-gray-200',
+              'border-transparent bg-gray-800 text-text-bright hover:brightness-90 dark:bg-vio-primary-bg dark:text-vio-primary-text',
             ]
           : [
               'border-gray-300 text-text-dark hover:bg-black/5 dark:border-gray-600 dark:text-text-bright dark:hover:bg-black/30',
