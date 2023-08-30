@@ -24,13 +24,14 @@ test.describe('a11y', () => {
     // expect(
     //   accessibilityScanResults.violations
     //     .map(
-    //       (x) => `${x.id} - ${x.nodes.map((y) => y.failureSummary + y.html)}`,
+    //       (x) =>
+    //         `${x.id}\n${x.nodes.map(
+    //           (y) => `${y.failureSummary}\n(${y.html})`,
+    //         )}`,
     //     )
-    //     .join(),
-    // ).toEqual(
-    //   'color-contrast - Ensures the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds,region - Ensures all page content is contained by landmarks,scrollable-region-focusable - Ensure elements that have scrollable content are accessible by keyboard',
-    // ) // TODO: get rid of all violations
-    expect(accessibilityScanResults.violations.length).toEqual(2) // TODO: get rid of all violations
+    //     .join('\n'),
+    // ).toEqual('')
+    expect(accessibilityScanResults.violations.length).toEqual(1) // TODO: get rid of all violations (https://github.com/harlan-zw/unhead-schema-org/pull/31)
   })
 })
 
