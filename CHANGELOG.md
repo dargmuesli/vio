@@ -1,3 +1,10 @@
+## [3.3.1](https://github.com/dargmuesli/vio/compare/3.3.0...3.3.1) (2023-08-30)
+
+
+### Bug Fixes
+
+* schedule release ([6e327ef](https://github.com/dargmuesli/vio/commit/6e327ef7d2c568d27ccabaf040c256b2084b573b))
+
 ## [3.3.0](https://github.com/dargmuesli/vio/compare/3.2.5...3.3.0) (2023-08-30)
 
 
