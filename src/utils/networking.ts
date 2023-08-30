@@ -74,7 +74,7 @@ export const getDomainTldPort = (host: string) => {
   if (/^localhost(:[0-9]+)?$/.test(hostParts[hostParts.length - 1]))
     return hostParts[hostParts.length - 1]
 
-  if (hostParts.length === 1) throw new Error('Host is too short!')
+  if (hostParts.length === 1) return hostParts[0]
 
   return `${hostParts[hostParts.length - 2]}.${hostParts[hostParts.length - 1]}`
 }
