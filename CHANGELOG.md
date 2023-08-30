@@ -1,3 +1,15 @@
+## [3.3.0](https://github.com/dargmuesli/vio/compare/3.2.5...3.3.0) (2023-08-30)
+
+
+### Features
+
+* **button-colored:** decrease brightness on hover ([57c32d3](https://github.com/dargmuesli/vio/commit/57c32d39a09457b560d262f874154395da1e0d24))
+
+
+### Bug Fixes
+
+* **networking:** return single host part instead of throwing an error ([fa54d3f](https://github.com/dargmuesli/vio/commit/fa54d3f8c78f17c602efcf02be2fd93b68dbd23f))
+
 ## [3.2.5](https://github.com/dargmuesli/vio/compare/3.2.4...3.2.5) (2023-08-30)
 
 
