@@ -1,3 +1,10 @@
+## [3.2.5](https://github.com/dargmuesli/vio/compare/3.2.4...3.2.5) (2023-08-30)
+
+
+### Bug Fixes
+
+* **head:** workaround bugs ([b5b16ff](https://github.com/dargmuesli/vio/commit/b5b16ff58986634b2d01c250c816adf01465760e))
+
 ## [3.2.4](https://github.com/dargmuesli/vio/compare/3.2.3...3.2.4) (2023-08-29)
 
 
