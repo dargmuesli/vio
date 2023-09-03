@@ -108,8 +108,8 @@ importers:
         specifier: 4.17.21
         version: 4.17.21
       marked:
-        specifier: 7.0.5
-        version: 7.0.5
+        specifier: 8.0.0
+        version: 8.0.0
       pinia:
         specifier: 2.1.6
         version: 2.1.6(typescript@5.2.2)(vue@3.3.4)
@@ -8356,8 +8356,8 @@ packages:
     resolution: {integrity: sha512-hdN1wVrZbb29eBGiGjJbeP8JbKjq1urkHJ/LIP/NY48MZ1QVXUsQBV1G1zvYFHn1XE06cwjBsOI2K3Ulnj1YXQ==}
     engines: {node: '>=8'}
 
-  /marked@7.0.5:
-    resolution: {integrity: sha512-lwNAFTfXgqpt/XvK17a/8wY9/q6fcSPZT1aP6QW0u74VwaJF/Z9KbRcX23sWE4tODM+AolJNcUtErTkgOeFP/Q==}
+  /marked@8.0.0:
+    resolution: {integrity: sha512-RI/D5csFVreNrFchdKFSdV38GDHJdD7OdmbNWYzGvApPb0A9pyypgfHC/FBH4ugmRE8cr7yg/TH7tu8585eMhA==}
     engines: {node: '>= 16'}
     hasBin: true
     dev: false
