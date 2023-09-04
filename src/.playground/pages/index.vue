@@ -13,7 +13,6 @@
       </VioLink>
     </p>
     <SBreadcrumb />
-    <SchemaOrgDebug />
   </div>
 </template>
 
