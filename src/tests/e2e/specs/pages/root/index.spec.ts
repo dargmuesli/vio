@@ -44,6 +44,12 @@ test.describe('page', () => {
 
     expect(await page.title()).toStrictEqual('Title · Vio Playground')
 
+    const host =
+      process.env.NODE_ENV === 'production'
+        ? process.env.CI === 'true'
+          ? 'https://example.com'
+          : 'http://localhost:3001'
+        : 'http://localhost:3000'
     const meta = [
       {
         tag: 'html',
@@ -81,10 +87,7 @@ test.describe('page', () => {
           },
           {
             key: 'href',
-            value:
-              process.env.NODE_ENV === 'production'
-                ? 'http://localhost:3001/'
-                : 'http://localhost:3000/',
+            value: `${host}/`,
           },
         ],
       },
@@ -194,10 +197,7 @@ test.describe('page', () => {
         attributes: [
           {
             key: 'href',
-            value:
-              process.env.NODE_ENV === 'production'
-                ? 'http://localhost:3001/'
-                : 'http://localhost:3000/',
+            value: `${host}/`,
           },
           {
             key: 'hreflang',
@@ -214,10 +214,7 @@ test.describe('page', () => {
         attributes: [
           {
             key: 'href',
-            value:
-              process.env.NODE_ENV === 'production'
-                ? 'http://localhost:3001/de'
-                : 'http://localhost:3000/de',
+            value: `${host}/de`,
           },
           {
             key: 'hreflang',
@@ -234,10 +231,7 @@ test.describe('page', () => {
         attributes: [
           {
             key: 'href',
-            value:
-              process.env.NODE_ENV === 'production'
-                ? 'http://localhost:3001/'
-                : 'http://localhost:3000/',
+            value: `${host}/`,
           },
           {
             key: 'hreflang',
@@ -373,10 +367,7 @@ test.describe('page', () => {
           },
           {
             key: 'content',
-            value:
-              process.env.NODE_ENV === 'production'
-                ? 'http://localhost:3001/__og_image__/og.png'
-                : 'http://localhost:3000/__og_image__/og.png',
+            value: `${host}/__og_image__/og.png`,
           },
         ],
       },
@@ -440,10 +431,7 @@ test.describe('page', () => {
           },
           {
             key: 'content',
-            value:
-              process.env.NODE_ENV === 'production'
-                ? 'http://localhost:3001/'
-                : 'http://localhost:3000/',
+            value: `${host}/`,
           },
         ],
       },
@@ -517,10 +505,7 @@ test.describe('page', () => {
           },
           {
             key: 'content',
-            value:
-              process.env.NODE_ENV === 'production'
-                ? 'http://localhost:3001/__og_image__/og.png'
-                : 'http://localhost:3000/__og_image__/og.png',
+            value: `${host}/__og_image__/og.png`,
           },
         ],
       },
