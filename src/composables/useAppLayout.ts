@@ -10,18 +10,22 @@ export const useAppLayout = () => {
     },
   })
 
+  // TODO: convert to `useServerHeadSafe` (https://github.com/harlan-zw/nuxt-seo-kit/issues/98)
   useServerSeoMeta({
-    ...(appConfig.vio.themeColor
-      ? {
-          msapplicationTileColor: appConfig.vio.themeColor,
-          themeColor: appConfig.vio.themeColor,
-        }
-      : {}),
-    titleTemplate: (titleChunk) => {
-      return titleChunk && titleChunk !== siteConfig.name
-        ? `${titleChunk} ${siteConfig.titleSeparator} ${siteConfig.name}`
-        : siteConfig.name
-    },
-    ...(appConfig.vio.seoMeta ? appConfig.vio.seoMeta : {}),
+    titleTemplate: (title) =>
+      title && title !== siteConfig.name
+        ? `${title} ${siteConfig.titleSeparator} ${siteConfig.name}`
+        : siteConfig.name,
   })
+
+  if (appConfig.vio.seoMeta) {
+    useServerSeoMeta(appConfig.vio.seoMeta)
+  }
+
+  if (appConfig.vio.themeColor) {
+    useServerSeoMeta({
+      msapplicationTileColor: appConfig.vio.themeColor,
+      themeColor: appConfig.vio.themeColor,
+    })
+  }
 }
