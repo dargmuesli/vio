@@ -13,15 +13,15 @@ test.beforeEach(async ({ context }) => {
   ])
 })
 
-test.describe('page load', () => {
-  test('loads the page successfully', async ({ request }) => {
+test.describe('page', () => {
+  test('status code', async ({ request }) => {
     const resp = await request.get('/privacy-policy')
     expect(resp.status()).toBe(200)
   })
 })
 
 test.describe('visual regression', () => {
-  test('looks as before', async ({ page }) => {
+  test('consistent appearance', async ({ page }) => {
     await page.goto('/privacy-policy')
     await PAGE_READY({ page })
     await expect(page).toHaveScreenshot({
