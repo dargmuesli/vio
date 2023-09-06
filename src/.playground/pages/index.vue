@@ -1,5 +1,5 @@
 <template>
-  <div class="vio-prose">
+  <div class="vio-prose m-auto">
     <h1>{{ t('title') }}</h1>
     <p>
       {{ t('globalStatusLoading') }}
@@ -13,15 +13,10 @@
       </VioLink>
     </p>
     <SBreadcrumb />
-    <SchemaOrgDebug />
   </div>
 </template>
 
 <script setup lang="ts">
-definePageMeta({
-  colorMode: 'light',
-})
-
 const { t } = useI18n()
 
 useHeadDefault({
