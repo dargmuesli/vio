@@ -8,7 +8,7 @@
   "engines": {
     "node": "20"
   },
-  "packageManager": "pnpm@8.7.1",
+  "packageManager": "pnpm@8.7.4",
   "files": [
     "assets",
     "components",
