@@ -1,3 +1,15 @@
+## [3.4.0](https://github.com/dargmuesli/vio/compare/3.3.1...3.4.0) (2023-09-06)
+
+
+### Features
+
+* **app:** move cookie control to layout ([8d0cb0a](https://github.com/dargmuesli/vio/commit/8d0cb0a3104b37db2b251965d27292f8e9ea0c80))
+
+
+### Bug Fixes
+
+* **app-layout:** use server head composable ([47d5b17](https://github.com/dargmuesli/vio/commit/47d5b177ed41da1d3a91635578bf18e5b386194e))
+
 ## [3.3.1](https://github.com/dargmuesli/vio/compare/3.3.0...3.3.1) (2023-08-30)
 
 
