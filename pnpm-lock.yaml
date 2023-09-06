@@ -51,8 +51,8 @@ importers:
         specifier: 6.8.0
         version: 6.8.0(ts-node@10.9.1)(webpack@5.88.2)
       '@nuxtseo/module':
-        specifier: 2.0.0-beta.25
-        version: 2.0.0-beta.25(@nuxt/devtools@0.8.2)(@unhead/shared@1.5.2)(nuxt@3.7.1)(postcss@8.4.29)(unhead@1.5.2)(vite@4.4.9)(vue@3.3.4)(webpack@5.88.2)
+        specifier: 2.0.0-beta.26
+        version: 2.0.0-beta.26(@nuxt/devtools@0.8.2)(@unhead/shared@1.5.2)(nuxt@3.7.1)(postcss@8.4.29)(unhead@1.5.2)(vite@4.4.9)(vue@3.3.4)(webpack@5.88.2)
       '@pinia/nuxt':
         specifier: 0.4.11
         version: 0.4.11(typescript@5.2.2)(vue@3.3.4)
@@ -2082,21 +2082,21 @@ packages:
       - webpack
     dev: false
 
-  /@nuxtseo/module@2.0.0-beta.25(@nuxt/devtools@0.8.2)(@unhead/shared@1.5.2)(nuxt@3.7.1)(postcss@8.4.29)(unhead@1.5.2)(vite@4.4.9)(vue@3.3.4)(webpack@5.88.2):
-    resolution: {integrity: sha512-isTuO6pM3JX4Kx+BQdUA0yq0KlhS0A0m0jB8wxarJyDOgWxvMeAG4w044iZ1QEaDzvb8sm7afNMvuvUAv+RBMw==}
+  /@nuxtseo/module@2.0.0-beta.26(@nuxt/devtools@0.8.2)(@unhead/shared@1.5.2)(nuxt@3.7.1)(postcss@8.4.29)(unhead@1.5.2)(vite@4.4.9)(vue@3.3.4)(webpack@5.88.2):
+    resolution: {integrity: sha512-J4CBYiaIbyqSvtLJ7ZMzKZM6JG8y6E0EV+vKJB6TKEgzZgIqkLjmilP1pelOsyger9V2AkLoVTUPCuQuu6ZAHQ==}
     dependencies:
       '@nuxt/kit': 3.7.1
       chalk: 5.3.0
       defu: 6.1.2
-      nuxt-link-checker: 2.1.5(@nuxt/devtools@0.8.2)(nuxt@3.7.1)(postcss@8.4.29)(vite@4.4.9)(vue@3.3.4)(webpack@5.88.2)
-      nuxt-og-image: 2.0.24
+      nuxt-link-checker: 2.1.8(@nuxt/devtools@0.8.2)(nuxt@3.7.1)(postcss@8.4.29)(vite@4.4.9)(vue@3.3.4)(webpack@5.88.2)
+      nuxt-og-image: 2.0.25
       nuxt-schema-org: 3.0.0-beta.1(@unhead/shared@1.5.2)(unhead@1.5.2)
       nuxt-seo-experiments: 3.1.1
-      nuxt-seo-ui: 0.3.1
+      nuxt-seo-ui: 0.3.4
       nuxt-simple-robots: 3.1.2
       nuxt-simple-sitemap: 3.2.6(nuxt@3.7.1)(vite@4.4.9)
-      nuxt-site-config: 1.0.11
-      nuxt-site-config-kit: 1.0.11
+      nuxt-site-config: 1.0.12
+      nuxt-site-config-kit: 1.0.12
       ufo: 1.3.0
     transitivePeerDependencies:
       - '@nuxt/devtools'
@@ -4152,10 +4152,6 @@ packages:
     dependencies:
       file-uri-to-path: 1.0.0
 
-  /birpc@0.2.13:
-    resolution: {integrity: sha512-30rz9OBSJoGfiWox7dpyqoSVo6664PBEYSTfmmG1GBridUxnMysyovNpnwhaPMvjtKn3Y1UfII+HMTU0kqJFjA==}
-    dev: false
-
   /birpc@0.2.14:
     resolution: {integrity: sha512-37FHE8rqsYM5JEKCnXFyHpBCzvgHEExwVVTq+nUmloInU7l8ezD1TpOhKpS8oe1DTYFqEK27rFZVKG43oTqXRA==}
     dev: false
@@ -6062,6 +6058,18 @@ packages:
     resolution: {integrity: sha512-aIL5Fx7mawVa300al2BnEE4iNvo1qETxLrPI/o05L7z6go7fCw1J6EQmbK4FmJ2AS7kgVF/KEZWufBfdClMcPg==}
     engines: {node: '>= 0.6'}
 
+  /event-stream@3.3.4:
+    resolution: {integrity: sha512-QHpkERcGsR0T7Qm3HNJSyXKEEj8AHNxkY3PK8TS2KJvQ7NiSHe3DDpwVKKtoYprL/AreyzFBeIkBIWChAqn60g==}
+    dependencies:
+      duplexer: 0.1.2
+      from: 0.1.7
+      map-stream: 0.1.0
+      pause-stream: 0.0.11
+      split: 0.3.3
+      stream-combiner: 0.0.4
+      through: 2.3.8
+    dev: false
+
   /eventemitter3@5.0.1:
     resolution: {integrity: sha512-GWkBvjiSZK87ELrYOSESUYeVIc9mvLLf/nXalMOS5dYrgZq9o5OVkbZAVM06CVxYsCwH9BDZFPlQTlPA1j4ahA==}
     dev: true
@@ -6337,6 +6345,10 @@ packages:
   /fresh@0.5.2:
     resolution: {integrity: sha512-zJ2mQYM18rEFOudeV4GShTGIQ7RbzA7ozbU9I/XBpm7kqgMywgmylMwXHxZJmkVoYkna9d2pVXVXPdYTP9ej8Q==}
     engines: {node: '>= 0.6'}
+
+  /from@0.1.7:
+    resolution: {integrity: sha512-twe20eF1OxVxp/ML/kq2p1uc6KvFK/+vs8WjEbeKmV2He22MKm7YF2ANIt+EOqhJ5L3K/SuuPhk0hWQDjOM23g==}
+    dev: false
 
   /fs-constants@1.0.0:
     resolution: {integrity: sha512-y6OAwoSIf7FyjMIv94u+b5rdheZEjzR63GTyZJm5qh4Bi+2YgwLCcI/fPFZkL5PSixOt6ZNKm+w+Hfp/Bciwow==}
@@ -8051,6 +8063,10 @@ packages:
     resolution: {integrity: sha512-hdN1wVrZbb29eBGiGjJbeP8JbKjq1urkHJ/LIP/NY48MZ1QVXUsQBV1G1zvYFHn1XE06cwjBsOI2K3Ulnj1YXQ==}
     engines: {node: '>=8'}
 
+  /map-stream@0.1.0:
+    resolution: {integrity: sha512-CkYQrPYZfWnu/DAmVCpTSX/xHpKZ80eKh2lAkyA6AJTef6bW+6JpbQZN5rofum7da+SyN1bi5ctTm+lTfcCW3g==}
+    dev: false
+
   /marky@1.2.5:
     resolution: {integrity: sha512-q9JtQJKjpsVxCRVgQ+WapguSbKC3SQ5HEzFGPAJMStgh3QjCawp00UKv3MTTAArTmGmmPUvllHZoNbZ3gs0I+Q==}
     dev: false
@@ -8708,8 +8724,8 @@ packages:
     optionalDependencies:
       fsevents: 2.3.3
 
-  /nuxt-link-checker@2.1.5(@nuxt/devtools@0.8.2)(nuxt@3.7.1)(postcss@8.4.29)(vite@4.4.9)(vue@3.3.4)(webpack@5.88.2):
-    resolution: {integrity: sha512-qy/2jyvicc7/ns3ymOnmCwouJDG/3eqlNi2roywP+67cLd7aw8teU8+SBxemcXNmRNxCOeei2WevPBwgU/GxUA==}
+  /nuxt-link-checker@2.1.8(@nuxt/devtools@0.8.2)(nuxt@3.7.1)(postcss@8.4.29)(vite@4.4.9)(vue@3.3.4)(webpack@5.88.2):
+    resolution: {integrity: sha512-3LYgUOE5W0RvXLtSIoSv/0yaVDzmpomO3eZZi43HgY+T0vXhlrLbJcoMTU+u2Wg7vAnPYnQLi44AGtnoXZQaCw==}
     dependencies:
       '@nuxt/devtools-kit': 0.8.2(nuxt@3.7.1)(vite@4.4.9)
       '@nuxt/devtools-ui-kit': 0.8.2(@nuxt/devtools@0.8.2)(fuse.js@6.6.2)(nuxt@3.7.1)(postcss@8.4.29)(vite@4.4.9)(vue@3.3.4)(webpack@5.88.2)
@@ -8751,14 +8767,14 @@ packages:
       - webpack
     dev: false
 
-  /nuxt-og-image@2.0.24:
-    resolution: {integrity: sha512-ac0IUd5v7AYAn5Jis+upxu5ROHmzz1lmtfRQWyMARvTFI55PVTtRT5q+WccwGYlnrMi3n25K37IwsbdzxM/JSg==}
+  /nuxt-og-image@2.0.25:
+    resolution: {integrity: sha512-M8kgBeE3WXYwqTKnmTuMhQvmK4p2rx3pGAlEhrEGf6Jwe+399OfSI48f4ByzhA/aJGxWbPpeuP1ZQrREgHU3dg==}
     dependencies:
       '@nuxt/kit': 3.7.1
       '@resvg/resvg-js': 2.4.1
       '@resvg/resvg-wasm': 2.4.1
       '@types/fs-extra': 11.0.1
-      birpc: 0.2.13
+      birpc: 0.2.14
       chalk: 5.3.0
       chrome-launcher: 1.0.0
       defu: 6.1.2
@@ -8770,8 +8786,8 @@ packages:
       image-size: 1.0.2
       inline-css: 4.0.2
       launch-editor: 2.6.0
-      nuxt-site-config: 1.0.11
-      nuxt-site-config-kit: 1.0.11
+      nuxt-site-config: 1.0.12
+      nuxt-site-config-kit: 1.0.12
       nypm: 0.3.2
       ofetch: 1.3.3
       ohash: 1.1.3
@@ -8783,6 +8799,7 @@ packages:
       sirv: 2.0.3
       std-env: 3.4.3
       svg2png-wasm: 1.4.0
+      terminate: 2.6.1
       tinyws: 0.1.0(ws@8.13.0)
       twemoji: 14.0.2
       ufo: 1.3.0
@@ -8800,8 +8817,8 @@ packages:
     dependencies:
       '@nuxt/kit': 3.7.1
       '@unhead/schema-org': 1.5.2(@unhead/shared@1.5.2)(unhead@1.5.2)
-      nuxt-site-config: 1.0.11
-      nuxt-site-config-kit: 1.0.11
+      nuxt-site-config: 1.0.12
+      nuxt-site-config-kit: 1.0.12
       pathe: 1.1.1
     transitivePeerDependencies:
       - '@unhead/shared'
@@ -8820,8 +8837,8 @@ packages:
       escape-string-regexp: 5.0.0
       fast-glob: 3.3.1
       image-size: 1.0.2
-      nuxt-site-config: 1.0.11
-      nuxt-site-config-kit: 1.0.11
+      nuxt-site-config: 1.0.12
+      nuxt-site-config-kit: 1.0.12
       pathe: 1.1.1
       ufo: 1.3.0
       unhead: 1.5.2
@@ -8830,12 +8847,12 @@ packages:
       - supports-color
     dev: false
 
-  /nuxt-seo-ui@0.3.1:
-    resolution: {integrity: sha512-s6akoB/p9QTnIlpVjOLXum3pcu7c0YwiqwIBF3JZ/xgKNsswIVDpYqsptxxZUBPRzpu7jKCXJEUrJcqTMhlqkA==}
+  /nuxt-seo-ui@0.3.4:
+    resolution: {integrity: sha512-KbAxId8mgpi0Mib4iM+WpgveHgbJWOk7ttbwk3Fil/Y4mq1OKmnIVXevAneC/LCEE10nkfSyKCZQ5M/mNdBArA==}
     dependencies:
       '@nuxt/kit': 3.7.1
-      nuxt-site-config: 1.0.11
-      nuxt-site-config-kit: 1.0.11
+      nuxt-site-config: 1.0.12
+      nuxt-site-config-kit: 1.0.12
       pathe: 1.1.1
       radix3: 1.1.0
       ufo: 1.3.0
@@ -8849,8 +8866,8 @@ packages:
     dependencies:
       '@nuxt/kit': 3.7.1
       defu: 6.1.2
-      nuxt-site-config: 1.0.11
-      nuxt-site-config-kit: 1.0.11
+      nuxt-site-config: 1.0.12
+      nuxt-site-config-kit: 1.0.12
       pathe: 1.1.1
       ufo: 1.3.0
     transitivePeerDependencies:
@@ -8868,8 +8885,8 @@ packages:
       escape-string-regexp: 5.0.0
       fast-glob: 3.3.1
       knitwork: 1.0.0
-      nuxt-site-config: 1.0.11
-      nuxt-site-config-kit: 1.0.11
+      nuxt-site-config: 1.0.12
+      nuxt-site-config-kit: 1.0.12
       pathe: 1.1.1
       radix3: 1.1.0
       semver: 7.5.4
@@ -8895,6 +8912,19 @@ packages:
       - supports-color
     dev: false
 
+  /nuxt-site-config-kit@1.0.12:
+    resolution: {integrity: sha512-5H6qIe4Asuls25hDygvOLS/b++/pehK8vxkvnz0r92Dhwh84h2nmn2RVDbtJ+ghy9lNr9ZkI6qJ7pfpUSLIsww==}
+    dependencies:
+      '@nuxt/kit': 3.7.1
+      '@nuxt/schema': 3.7.1
+      pkg-types: 1.0.3
+      site-config-stack: 1.0.12
+      ufo: 1.3.0
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+    dev: false
+
   /nuxt-site-config@1.0.11:
     resolution: {integrity: sha512-L+R8785j3An3QIWo6LdrtX2L123iNkp91gLbw1FRnj686WbYMD0FTCqO5hEcVsLdIeBAVPszRMLcxISN4B7NIQ==}
     dependencies:
@@ -8903,6 +8933,20 @@ packages:
       nuxt-site-config-kit: 1.0.11
       pathe: 1.1.1
       site-config-stack: 1.0.11
+      ufo: 1.3.0
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+    dev: false
+
+  /nuxt-site-config@1.0.12:
+    resolution: {integrity: sha512-Dba93Dk4Te9rQPhJWjfDpXqGr2sufLoMQDqJJ6Wl0Ifh9YX7bmQGrYteGbwADR2YM+IiJHli0vJvwdKWn8Z2PQ==}
+    dependencies:
+      '@nuxt/kit': 3.7.1
+      '@nuxt/schema': 3.7.1
+      nuxt-site-config-kit: 1.0.12
+      pathe: 1.1.1
+      site-config-stack: 1.0.12
       ufo: 1.3.0
     transitivePeerDependencies:
       - rollup
@@ -9364,6 +9408,12 @@ packages:
 
   /pathe@1.1.1:
     resolution: {integrity: sha512-d+RQGp0MAYTIaDBIMmOfMwz3E+LOZnxx1HZd5R18mmCZY0QBlK0LDZfPc8FW8Ed2DlvsuE6PRjroDY+wg4+j/Q==}
+
+  /pause-stream@0.0.11:
+    resolution: {integrity: sha512-e3FBlXLmN/D1S+zHzanP4E/4Z60oFAa3O051qt1pxa7DEJWKAyil6upYVXCWadEnuoqa4Pkc9oUx9zsxYeRv8A==}
+    dependencies:
+      through: 2.3.8
+    dev: false
 
   /pend@1.2.0:
     resolution: {integrity: sha512-F3asv42UuXchdzt+xXqfW1OGlVBe+mxa2mqI0pg5yAHZPvFmY3Y6drSf/GQ1A86WgWEN9Kzh/WrgKa6iGcHXLg==}
@@ -10080,6 +10130,14 @@ packages:
   /prr@1.0.1:
     resolution: {integrity: sha512-yPw4Sng1gWghHQWj0B3ZggWUm4qVbPwPFcRG8KyxiU7J2OHFSoEHKS+EZ3fv5l1t9CyCiop6l/ZYeWbrgoQejw==}
 
+  /ps-tree@1.2.0:
+    resolution: {integrity: sha512-0VnamPPYHl4uaU/nSFeZZpR21QAWRz+sRv4iW9+v/GS/J5U5iZB5BNN6J0RMoOvdx2gWM2+ZFMIm58q24e4UYA==}
+    engines: {node: '>= 0.10'}
+    hasBin: true
+    dependencies:
+      event-stream: 3.3.4
+    dev: false
+
   /pump@3.0.0:
     resolution: {integrity: sha512-LwZy+p3SFs1Pytd/jYct4wpv49HiYCqd9Rlc5ZVdk0V+8Yzv6jR5Blk3TRmPL1ft69TxP0IMZGJ+WPFU2BFhww==}
     requiresBuild: true
@@ -10714,6 +10772,12 @@ packages:
       ufo: 1.3.0
     dev: false
 
+  /site-config-stack@1.0.12:
+    resolution: {integrity: sha512-+HWuR7UUPoWPAR6b5ZiE9Vbk5bmvmLOka+zvloXHqR/UrCuBt6zRzURIT56hDIO45sjAqy9u4I+s1sSzhzJ+sw==}
+    dependencies:
+      ufo: 1.3.0
+    dev: false
+
   /slash@3.0.0:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
     engines: {node: '>=8'}
@@ -10844,6 +10908,12 @@ packages:
       readable-stream: 3.6.2
     dev: true
 
+  /split@0.3.3:
+    resolution: {integrity: sha512-wD2AeVmxXRBoX44wAycgjVpMhvbwdI2aZjCkvfNcH1YqHQvJVa1duWc73OyVGJUc05fhFaTZeQ/PYsrmyH0JVA==}
+    dependencies:
+      through: 2.3.8
+    dev: false
+
   /ssri@10.0.5:
     resolution: {integrity: sha512-bSf16tAFkGeRlUNDjXu8FzaMQt6g2HZJrun7mtMbIPOddxt3GLMSz5VWUWcqTJUPfLEaDIepGxv+bYQW49596A==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
@@ -10865,6 +10935,12 @@ packages:
 
   /std-env@3.4.3:
     resolution: {integrity: sha512-f9aPhy8fYBuMN+sNfakZV18U39PbalgjXG3lLB9WkaYTxijru61wb57V9wxxNthXM5Sd88ETBWi29qLAsHO52Q==}
+
+  /stream-combiner@0.0.4:
+    resolution: {integrity: sha512-rT00SPnTVyRsaSz5zgSPma/aHSOic5U1prhYdRy5HS2kTZviFpmDgzilbtsJsxiroqACmayynDN/9VzIbX5DOw==}
+    dependencies:
+      duplexer: 0.1.2
+    dev: false
 
   /stream-shift@1.0.1:
     resolution: {integrity: sha512-AiisoFqQ0vbGcZgQPY1cdP2I76glaVA/RauYR4G4thNFgkTqr90yXTo4LYX60Jl+sIlPNHHdGSwo01AvbKUSVQ==}
@@ -11384,6 +11460,13 @@ packages:
       minizlib: 2.1.2
       mkdirp: 1.0.4
       yallist: 4.0.0
+
+  /terminate@2.6.1:
+    resolution: {integrity: sha512-0kdr49oam98yvjkVY+gfUaT3SMaJI6Sc+yijJjU+qhat+0NQKQn60OsIZZeKyVgTO0/33nRa3HowRbpw3A7u9A==}
+    engines: {node: '>=12'}
+    dependencies:
+      ps-tree: 1.2.0
+    dev: false
 
   /terser-webpack-plugin@5.3.9(webpack@5.88.2):
     resolution: {integrity: sha512-ZuXsqE07EcggTWQjXUj+Aot/OMcD0bMKGgF63f7UxYcu5/AJF53aIpK1YoP5xR9l6s/Hy2b+t1AM0bLNPRuhwA==}
