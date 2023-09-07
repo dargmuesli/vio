@@ -1,4 +1,4 @@
-import { POLYFILLS } from '~/utils/constants'
+import { POLYFILLS } from '../utils/constants'
 
 export const usePolyfills = () => {
   const polyfills = `https://polyfill.io/v3/polyfill.min.js?features=${POLYFILLS.join(
