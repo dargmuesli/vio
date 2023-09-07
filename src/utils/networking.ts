@@ -1,5 +1,3 @@
-import { IncomingMessage } from 'node:http'
-
 import { CombinedError } from '@urql/core'
 import { H3Event, getCookie } from 'h3'
 
@@ -79,10 +77,12 @@ export const getDomainTldPort = (host: string) => {
   return `${hostParts[hostParts.length - 2]}.${hostParts[hostParts.length - 1]}`
 }
 
-export const getHost = (req: IncomingMessage) => {
-  if (!req.headers.host) throw new Error('Host header is not given!')
+export const getHost = (event: H3Event) => {
+  const host = event.node.req.headers.host
 
-  return req.headers.host
+  if (!host) throw new Error('Host header is not given!')
+
+  return host
 }
 
 export const getServiceHref = ({
