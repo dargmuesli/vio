@@ -1,3 +1,11 @@
+## [3.5.1](https://github.com/dargmuesli/vio/compare/3.5.0...3.5.1) (2023-09-07)
+
+
+### Bug Fixes
+
+* **head:** drop server composables ([99b2c6e](https://github.com/dargmuesli/vio/commit/99b2c6e94102ff6d9e1c8593c370ff60abfa94dc))
+* **nuxt:** correct sitemap excludes ([42da0a4](https://github.com/dargmuesli/vio/commit/42da0a41f5a016665d80e04e3ad68827f41c7548))
+
 ## [3.5.0](https://github.com/dargmuesli/vio/compare/3.4.0...3.5.0) (2023-09-07)
 
 
