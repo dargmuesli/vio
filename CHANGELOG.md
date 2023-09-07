@@ -1,3 +1,15 @@
+## [3.5.0](https://github.com/dargmuesli/vio/compare/3.4.0...3.5.0) (2023-09-07)
+
+
+### Features
+
+* **ssr:** use context instead of request event ([2ad2b39](https://github.com/dargmuesli/vio/commit/2ad2b398e58d9b3076b68adcf954c880932fa462))
+
+
+### Bug Fixes
+
+* **polyfill:** correct import ([779bfc0](https://github.com/dargmuesli/vio/commit/779bfc0729bdc18e644de6f656a375be2e2ab0ec))
+
 ## [3.4.0](https://github.com/dargmuesli/vio/compare/3.3.1...3.4.0) (2023-09-06)
 
 
