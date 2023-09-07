@@ -69,9 +69,8 @@ export const jwtStore = async ({
 }
 
 export const useJwtStore = () => {
-  const { $urqlReset } = useNuxtApp()
+  const { $urqlReset, ssrContext } = useNuxtApp()
   const store = useVioAuthStore()
-  const event = useRequestEvent()
 
   if (typeof $urqlReset !== 'function')
     throw new Error('`$urqlReset` is not a function!')
@@ -81,7 +80,7 @@ export const useJwtStore = () => {
       await jwtStore({
         $urqlReset,
         store,
-        res: process.server ? event.node.res : undefined,
+        res: ssrContext ? ssrContext.event.node.res : undefined,
         jwt,
       })
     },
@@ -99,9 +98,8 @@ export const signOut = async ({
 }) => await jwtStore({ $urqlReset, store, res })
 
 export const useSignOut = () => {
-  const { $urqlReset } = useNuxtApp()
+  const { $urqlReset, ssrContext } = useNuxtApp()
   const store = useVioAuthStore()
-  const event = useRequestEvent()
 
   if (typeof $urqlReset !== 'function')
     throw new Error('`$urqlReset` is not a function!')
@@ -111,7 +109,7 @@ export const useSignOut = () => {
       await signOut({
         $urqlReset,
         store,
-        res: process.server ? event.node.res : undefined,
+        res: ssrContext ? ssrContext.event.node.res : undefined,
       })
     },
   }
