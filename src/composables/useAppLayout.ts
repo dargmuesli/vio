@@ -4,7 +4,7 @@ export const useAppLayout = () => {
 
   // TODO: replace with `useServerHeadSafe`
   useHeadSafe({
-    ...useLocaleHead({ addSeoAttributes: true }).value,
+    ...useLocaleHead({ addDirAttribute: true, addSeoAttributes: true }).value,
     bodyAttrs: {
       class:
         'bg-background-bright dark:bg-background-dark font-sans text-text-dark dark:text-text-bright',
