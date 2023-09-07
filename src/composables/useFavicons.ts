@@ -1,7 +1,8 @@
 export const useFavicons = () => {
   const appConfig = useAppConfig()
 
-  useServerHeadSafe({
+  // TODO: replace with `useServerHeadSafe`
+  useHeadSafe({
     link: [
       {
         href: `/assets/static/favicon/site.webmanifest?v=${CACHE_VERSION}`,
