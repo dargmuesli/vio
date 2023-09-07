@@ -1,3 +1,10 @@
+## [3.6.0](https://github.com/dargmuesli/vio/compare/3.5.1...3.6.0) (2023-09-07)
+
+
+### Features
+
+* **html:** add direction attribute ([1e60a10](https://github.com/dargmuesli/vio/commit/1e60a101668d0452bc36aa03537171e68bc4b59b))
+
 ## [3.5.1](https://github.com/dargmuesli/vio/compare/3.5.0...3.5.1) (2023-09-07)
 
 
