@@ -6,6 +6,7 @@ import { defu } from 'defu'
 import {
   BASE_URL,
   I18N_COOKIE_NAME,
+  I18N_MODULE_CONFIG,
   SITE_NAME,
   TIMEZONE_COOKIE_NAME,
   VIO_NUXT_BASE_CONFIG,
@@ -160,7 +161,10 @@ export default defineNuxtConfig(
         titleSeparator: '·',
       },
       sitemap: {
-        exclude: ['/api/pages/**'],
+        exclude: I18N_MODULE_CONFIG.locales.map(
+          (locale) =>
+            `/${locale.code !== 'en' ? `${locale.code}/` : ''}api/pages/**`,
+        ),
       },
       tailwindcss: {
         cssPath: join(currentDir, './assets/css/tailwind.css'),
