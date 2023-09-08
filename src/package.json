@@ -90,7 +90,7 @@
     "@intlify/eslint-plugin-vue-i18n": "3.0.0-next.3",
     "@nuxtjs/eslint-config-typescript": "12.1.0",
     "cross-env": "7.0.3",
-    "eslint": "8.48.0",
+    "eslint": "8.49.0",
     "eslint-config-prettier": "9.0.0",
     "eslint-plugin-compat": "4.2.0",
     "eslint-plugin-nuxt": "4.0.0",
