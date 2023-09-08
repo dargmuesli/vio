@@ -445,17 +445,16 @@ test.describe('page', () => {
           { key: 'content', value: '#202020' },
         ],
       },
-      // // TODO: enable (https://github.com/harlan-zw/nuxt-seo-kit/issues/99)
-      // {
-      //   tag: 'meta',
-      //   attributes: [
-      //     {
-      //       key: 'name',
-      //       value: 'twitter:card',
-      //     },
-      //     { key: 'content', value: 'summary_large_image' },
-      //   ],
-      // },
+      {
+        tag: 'meta',
+        attributes: [
+          {
+            key: 'name',
+            value: 'twitter:card',
+          },
+          { key: 'content', value: 'summary_large_image' },
+        ],
+      },
       {
         tag: 'meta',
         attributes: [
