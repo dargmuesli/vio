@@ -578,7 +578,9 @@ test.describe('page', () => {
     }
 
     expect(await page.locator('#schema-org-graph').innerText()).toMatchSnapshot(
-      'schema-org-graph',
+      `schema-org-graph-${
+        process.env.NODE_ENV === 'production' ? 'production' : 'development'
+      }.json`,
     )
   })
 })
