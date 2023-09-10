@@ -51,8 +51,8 @@ importers:
         specifier: 6.8.0
         version: 6.8.0(ts-node@10.9.1)(webpack@5.88.2)
       '@nuxtseo/module':
-        specifier: 2.0.0-beta.26
-        version: 2.0.0-beta.26(@nuxt/devtools@0.8.3)(@unhead/shared@1.5.4)(nuxt@3.7.1)(postcss@8.4.29)(unhead@1.5.4)(vite@4.4.9)(vue@3.3.4)(webpack@5.88.2)
+        specifier: 2.0.0-beta.27
+        version: 2.0.0-beta.27(@nuxt/devtools@0.8.3)(@unhead/shared@1.5.4)(nuxt@3.7.1)(postcss@8.4.29)(unhead@1.5.4)(vite@4.4.9)(vue@3.3.4)(webpack@5.88.2)
       '@pinia/nuxt':
         specifier: 0.4.11
         version: 0.4.11(typescript@5.2.2)(vue@3.3.4)
@@ -2084,8 +2084,8 @@ packages:
       - webpack
     dev: false
 
-  /@nuxtseo/module@2.0.0-beta.26(@nuxt/devtools@0.8.3)(@unhead/shared@1.5.4)(nuxt@3.7.1)(postcss@8.4.29)(unhead@1.5.4)(vite@4.4.9)(vue@3.3.4)(webpack@5.88.2):
-    resolution: {integrity: sha512-J4CBYiaIbyqSvtLJ7ZMzKZM6JG8y6E0EV+vKJB6TKEgzZgIqkLjmilP1pelOsyger9V2AkLoVTUPCuQuu6ZAHQ==}
+  /@nuxtseo/module@2.0.0-beta.27(@nuxt/devtools@0.8.3)(@unhead/shared@1.5.4)(nuxt@3.7.1)(postcss@8.4.29)(unhead@1.5.4)(vite@4.4.9)(vue@3.3.4)(webpack@5.88.2):
+    resolution: {integrity: sha512-hUx2p7o9lZCc56uBXJKyHJRZaVcuDWzEYqe4TaDsB/uRje5ZHMUUVKLj3BycURmrLToTtIhD/uwayFdY0LAXjg==}
     dependencies:
       '@nuxt/kit': 3.7.1
       chalk: 5.3.0
