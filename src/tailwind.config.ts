@@ -1,6 +1,6 @@
+import type { ModuleOptions } from '@nuxtjs/tailwindcss'
 import formsPlugin from '@tailwindcss/forms'
 import typographyPlugin from '@tailwindcss/typography'
-import type { Config } from 'tailwindcss'
 import colors from 'tailwindcss/colors'
 import type { PluginAPI } from 'tailwindcss/types/config'
 
@@ -41,15 +41,6 @@ const prose = (theme: PluginAPI['theme']) => ({
 })
 
 export default {
-  content: [
-    './components/**/*.{js,vue,ts}',
-    './composables/**/*.{js,vue,ts}',
-    './layouts/**/*.vue',
-    './pages/**/*.vue',
-    './plugins/**/*.{js,ts}',
-    // './nuxt.config.{js,ts}', // Does not work with i18n as of 2022-12-01
-    './app.vue',
-  ],
   darkMode: 'class',
   plugins: [
     formsPlugin,
@@ -257,4 +248,4 @@ export default {
       }),
     },
   },
-} as Config
+} as ModuleOptions['config']
