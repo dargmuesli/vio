@@ -1,3 +1,11 @@
+## [3.7.0](https://github.com/dargmuesli/vio/compare/3.6.0...3.7.0) (2023-09-10)
+
+
+### Features
+
+* **environment:** rework variables ([2e7aafb](https://github.com/dargmuesli/vio/commit/2e7aafbf47071e92298963922df60201defd0ae6))
+* **site:** set default locale ([33a1bc3](https://github.com/dargmuesli/vio/commit/33a1bc3cc885b910a3f390e1ad716fc220d8f816))
+
 ## [3.6.0](https://github.com/dargmuesli/vio/compare/3.5.1...3.6.0) (2023-09-07)
 
 
