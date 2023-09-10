@@ -46,9 +46,7 @@ test.describe('page', () => {
 
     const host =
       process.env.NODE_ENV === 'production'
-        ? process.env.CI === 'true'
-          ? 'https://example.com'
-          : 'http://localhost:3001'
+        ? 'http://localhost:3001'
         : 'http://localhost:3000'
     const meta = [
       {

@@ -37,7 +37,7 @@ export default defineNuxtConfig(
       devtools: {
         enabled:
           process.env.NODE_ENV !== 'production' &&
-          !process.env.NUXT_PUBLIC_IS_TESTING,
+          !process.env.NUXT_PUBLIC_VIO_IS_TESTING,
         timeline: {
           enabled: true,
         },
@@ -58,7 +58,7 @@ export default defineNuxtConfig(
       runtimeConfig: {
         public: {
           vio: {
-            googleAnalyticsId: '', // set via environment variable `NUXT_PUBLIC_GOOGLE_ANALYTICS_ID` only
+            googleAnalyticsId: '',
             isInProduction: process.env.NODE_ENV === 'production',
             isTesting: false,
           },

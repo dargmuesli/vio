@@ -3,9 +3,9 @@ import { helpers } from '@vuelidate/validators'
 export const SITE_NAME = 'Vio'
 
 export const BASE_URL =
-  (process.env.NUXT_PUBLIC_STACK_DOMAIN ? 'https' : 'http') +
+  (process.env.NUXT_PUBLIC_HOST ? 'https' : 'http') +
   '://' +
-  (process.env.NUXT_PUBLIC_STACK_DOMAIN ||
+  (process.env.NUXT_PUBLIC_HOST ||
     `${process.env.HOST || 'localhost'}:${
       !process.env.NODE_ENV || process.env.NODE_ENV === 'development'
         ? '3000'
@@ -72,7 +72,7 @@ export const VIO_NUXT_BASE_CONFIG = ({
             ? {
                 stagingHost:
                   process.env.NODE_ENV !== 'production' &&
-                  !process.env.NUXT_PUBLIC_STACK_DOMAIN
+                  !process.env.NUXT_PUBLIC_HOST
                     ? stagingHost
                     : undefined,
               }
