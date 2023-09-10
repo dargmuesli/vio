@@ -143,7 +143,6 @@ export default defineNuxtConfig(
         logLevel: 'warning',
       },
       i18n: {
-        defaultLocale: 'en', // Must be set for the default prefix_except_default prefix strategy.
         detectBrowserLanguage: {
           cookieKey: I18N_COOKIE_NAME,
           cookieSecure: true,
@@ -172,6 +171,7 @@ export default defineNuxtConfig(
     },
     VIO_NUXT_BASE_CONFIG({
       baseUrl: BASE_URL,
+      defaultLocale: 'en',
       siteName: SITE_NAME,
       stagingHost: 'localhost:3000',
     }),

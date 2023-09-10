@@ -33,7 +33,7 @@ export const I18N_MODULE_CONFIG = {
       iso: 'de',
     },
   ],
-} // `langDir`, `lazy` and `locales` must be configured to extend a layer having lazy-loaded translations (https://v8.i18n.nuxtjs.org/guide/layers#locales)
+}
 export const I18N_VUE_CONFIG = {
   fallbackWarn: false, // covered by linting
   missingWarn: false, // covered by linting
@@ -49,10 +49,12 @@ export const VALIDATION_SUGGESTION_TITLE_LENGTH_MAXIMUM = 300
 export const VERIFICATION_FORMAT_UUID = helpers.regex(REGEX_UUID)
 export const VIO_NUXT_BASE_CONFIG = ({
   baseUrl,
+  defaultLocale,
   siteName,
   stagingHost,
 }: {
   baseUrl?: string
+  defaultLocale?: string
   siteName: string
   stagingHost?: string
 }) =>
@@ -82,9 +84,13 @@ export const VIO_NUXT_BASE_CONFIG = ({
     },
 
     // modules
-    i18n: I18N_MODULE_CONFIG, // `langDir`, `lazy` and `locales` must be configured to extend a layer having lazy-loaded translations (https://v8.i18n.nuxtjs.org/guide/layers#locales)
+    i18n: {
+      defaultLocale, // Must be set for the default prefix_except_default prefix strategy.
+      ...I18N_MODULE_CONFIG, // `langDir`, `lazy` and `locales` must be configured to extend a layer having lazy-loaded translations (https://v8.i18n.nuxtjs.org/guide/layers#locales)
+    },
     site: {
-      name: siteName,
       ...(baseUrl ? { url: baseUrl } : {}),
+      ...(defaultLocale ? { defaultLocale } : {}),
+      name: siteName,
     },
   }) as Parameters<typeof defineNuxtConfig>[0]
