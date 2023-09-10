@@ -577,9 +577,9 @@ test.describe('page', () => {
       ).toBeAttached()
     }
 
-    // expect(await page.locator('#schema-org-graph').innerText()).toMatchSnapshot(
-    //   'schema-org-graph',
-    // )
+    expect(await page.locator('#schema-org-graph').innerText()).toMatchSnapshot(
+      'schema-org-graph',
+    )
   })
 })
 
