@@ -11,6 +11,7 @@ export const useHeadDefault = ({
   const attrs = useAttrs()
 
   const defaults: Parameters<typeof useServerSeoMeta>[0] = {
+    description: attrs['site-description'] as string, // TODO: remove (https://github.com/harlan-zw/nuxt-site-config/pull/7)
     msapplicationConfig: `/assets/static/favicon/browserconfig.xml?v=${CACHE_VERSION}`,
     title,
     twitterDescription: attrs['site-description'] as string,
