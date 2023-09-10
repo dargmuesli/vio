@@ -46,9 +46,7 @@ test.describe('page', () => {
 
     const host =
       process.env.NODE_ENV === 'production'
-        ? process.env.CI === 'true'
-          ? 'https://example.com'
-          : 'http://localhost:3001'
+        ? 'http://localhost:3001'
         : 'http://localhost:3000'
     const meta = [
       {
@@ -577,9 +575,11 @@ test.describe('page', () => {
       ).toBeAttached()
     }
 
-    // expect(await page.locator('#schema-org-graph').innerText()).toMatchSnapshot(
-    //   'schema-org-graph',
-    // )
+    expect(await page.locator('#schema-org-graph').innerText()).toMatchSnapshot(
+      `schema-org-graph-${
+        process.env.NODE_ENV === 'production' ? 'production' : 'development'
+      }.json`,
+    )
   })
 })
 
