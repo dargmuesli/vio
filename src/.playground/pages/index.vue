@@ -12,7 +12,7 @@
         https://jonas-thelemann.de
       </VioLink>
     </p>
-    <SBreadcrumb />
+    <!-- <SBreadcrumb /> -->
   </div>
 </template>
 
