@@ -246,7 +246,7 @@ test.describe('page', () => {
         attributes: [
           {
             key: 'href',
-            value: '/assets/static/favicon/site.webmanifest?v=bOXMwoKlJr',
+            value: '/site.webmanifest?v=bOXMwoKlJr',
           },
           {
             key: 'rel',

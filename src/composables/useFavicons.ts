@@ -4,7 +4,7 @@ export const useFavicons = () => {
   useServerHeadSafe({
     link: [
       {
-        href: `/assets/static/favicon/site.webmanifest?v=${CACHE_VERSION}`,
+        href: `/site.webmanifest?v=${CACHE_VERSION}`,
         rel: 'manifest',
       },
       {
