@@ -1,3 +1,11 @@
+## [3.8.0](https://github.com/dargmuesli/vio/compare/3.7.1...3.8.0) (2023-09-11)
+
+
+### Features
+
+* **package:** expose playwright configuration ([48f92b5](https://github.com/dargmuesli/vio/commit/48f92b59224d267287cff4481fe8fd00f0a0b4bd))
+* tweak environment variables ([77b0f8f](https://github.com/dargmuesli/vio/commit/77b0f8f7037040959412d3e7c9691801d0162fef))
+
 ## [3.7.1](https://github.com/dargmuesli/vio/compare/3.7.0...3.7.1) (2023-09-11)
 
 
