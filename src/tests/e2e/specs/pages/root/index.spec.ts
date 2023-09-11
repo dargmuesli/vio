@@ -399,17 +399,16 @@ test.describe('page', () => {
           { key: 'content', value: 'Vio Playground' },
         ],
       },
-      // // TODO: enable (https://github.com/harlan-zw/nuxt-seo-kit/issues/97)
-      // {
-      //   tag: 'meta',
-      //   attributes: [
-      //     {
-      //       key: 'property',
-      //       value: 'og:title',
-      //     },
-      //     { key: 'content', value: 'Vio · Vio Playground' },
-      //   ],
-      // },
+      {
+        tag: 'meta',
+        attributes: [
+          {
+            key: 'property',
+            value: 'og:title',
+          },
+          { key: 'content', value: 'Vio · Vio Playground' },
+        ],
+      },
       {
         tag: 'meta',
         attributes: [
