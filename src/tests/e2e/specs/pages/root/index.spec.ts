@@ -605,7 +605,6 @@ test.describe('visual regression', () => {
       'visual-regression-consistent-appearance-system.png',
       {
         fullPage: true,
-        mask: [page.locator('.nuxt-devtools-panel')],
       },
     )
 
@@ -614,7 +613,6 @@ test.describe('visual regression', () => {
       'visual-regression-consistent-appearance-light.png',
       {
         fullPage: true,
-        mask: [page.locator('.nuxt-devtools-panel')],
       },
     )
 
@@ -623,7 +621,6 @@ test.describe('visual regression', () => {
       'visual-regression-consistent-appearance-dark.png',
       {
         fullPage: true,
-        mask: [page.locator('.nuxt-devtools-panel')],
       },
     )
   })
@@ -641,7 +638,6 @@ test.describe('visual regression', () => {
       'visual-regression-consistent-appearance-with-cookie-banner.png',
       {
         fullPage: true,
-        mask: [page.locator('.nuxt-devtools-panel')],
       },
     )
   })

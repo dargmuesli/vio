@@ -26,7 +26,6 @@ test.describe('visual regression', () => {
     await PAGE_READY({ page })
     await expect(page).toHaveScreenshot({
       fullPage: true,
-      mask: [page.locator('.nuxt-devtools-panel')],
     })
   })
 })
