@@ -24,12 +24,6 @@
           "target": [
             "http://localhost:3000"
           ]
-        },
-        {
-          "@type": "ReadAction",
-          "target": [
-            "http://localhost:3000"
-          ]
         }
       ]
     }
