@@ -12,9 +12,10 @@ export const useAppLayout = () => {
 
   useServerSeoMeta({
     titleTemplate: (title) =>
-      title && title !== siteConfig.name
-        ? `${title} ${siteConfig.titleSeparator} ${siteConfig.name}`
-        : siteConfig.name,
+      TITLE_TEMPLATE({
+        siteName: siteConfig.name,
+        title,
+      }),
   })
 
   if (appConfig.vio.themeColor) {
