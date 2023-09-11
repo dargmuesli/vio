@@ -1,0 +1,31 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "http://localhost:3000/#website",
+      "@type": "WebSite",
+      "description": "Vio is @dargmuesli's Nuxt layer.",
+      "inLanguage": "en",
+      "name": "Vio Playground",
+      "url": "http://localhost:3000"
+    },
+    {
+      "@id": "http://localhost:3000/legal-notice/#webpage",
+      "@type": "WebPage",
+      "description": "Vio is @dargmuesli's Nuxt layer.",
+      "name": "Legal Notice",
+      "url": "http://localhost:3000/legal-notice",
+      "isPartOf": {
+        "@id": "http://localhost:3000/#website"
+      },
+      "potentialAction": [
+        {
+          "@type": "ReadAction",
+          "target": [
+            "http://localhost:3000/legal-notice"
+          ]
+        }
+      ]
+    }
+  ]
+}
