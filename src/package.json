@@ -25,6 +25,7 @@
     "error.vue",
     "i18n.config.ts",
     "nuxt.config.ts",
+    "playwright.config.ts",
     "tailwind.config.ts"
   ],
   "main": "nuxt.config.ts",
