@@ -57,7 +57,7 @@ COPY --from=prepare /srv/app/ ./
 
 ENV NODE_ENV=production
 RUN corepack enable && \
-    pnpm --dir src run build
+    pnpm --dir src run build:node
 
 
 ########################
@@ -74,7 +74,7 @@ COPY --from=prepare /srv/app/ ./
 
 ENV NODE_ENV=production
 RUN corepack enable && \
-    pnpm --dir src run generate
+    pnpm --dir src run build:static
 
 
 ########################
