@@ -1,3 +1,11 @@
+## [3.7.1](https://github.com/dargmuesli/vio/compare/3.7.0...3.7.1) (2023-09-11)
+
+
+### Bug Fixes
+
+* **head:** remove unnecessary properties ([288c6db](https://github.com/dargmuesli/vio/commit/288c6dbbfba9914be4f1d1075d7bac75e598a35e))
+* **head:** workaround description ([8d04993](https://github.com/dargmuesli/vio/commit/8d04993f646c02370c08aecd41ca637daa32b1c1))
+
 ## [3.7.0](https://github.com/dargmuesli/vio/compare/3.6.0...3.7.0) (2023-09-10)
 
 
