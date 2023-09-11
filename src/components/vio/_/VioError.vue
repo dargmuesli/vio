@@ -1,12 +1,14 @@
 <template>
-  <h1>{{ `${statusCode} - ${statusReason}` }}</h1>
   <div>
-    {{ description }}
+    <h1>{{ `${statusCode} - ${statusReason}` }}</h1>
+    <div>
+      {{ description }}
+    </div>
+    <pre
+      v-if="stack && !runtimeConfig.public.vio.isInProduction"
+      v-html="stack"
+    />
   </div>
-  <pre
-    v-if="stack && !runtimeConfig.public.vio.isInProduction"
-    v-html="stack"
-  />
 </template>
 
 <script setup lang="ts">
