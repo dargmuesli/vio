@@ -4,7 +4,7 @@
     <p>
       {{ t('globalStatusLoading') }}
       <br />
-      {{  t('globalValidationFailed') }}
+      {{ t('globalValidationFailed') }}
       <br />
       <VioLink to="/">/</VioLink>
       <br />
@@ -26,7 +26,7 @@ useHeadDefault({
 
 <i18n lang="yaml">
 de:
-  title: Titel
+  title: Vio Playground
 en:
-  title: Title
+  title: Vio Playground
 </i18n>
