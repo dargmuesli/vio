@@ -5,8 +5,7 @@ export const usePolyfills = () => {
     '%2C',
   )}&flags=gated`
 
-  // TODO: replace with `useServerHead`
-  useHead({
+  useServerHead({
     link: [
       {
         rel: 'preload',
