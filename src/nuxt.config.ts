@@ -29,6 +29,9 @@ export default defineNuxtConfig(
             lang: 'en', // fallback data to prevent invalid html at generation
           },
           titleTemplate: '%s', // fully set in `composables/useAppLayout.ts`
+          templateParams: {
+            separator: '·',
+          },
         },
         pageTransition: {
           name: 'layout',
@@ -157,7 +160,6 @@ export default defineNuxtConfig(
       },
       site: {
         debug: process.env.NODE_ENV === 'development',
-        titleSeparator: '·',
       },
       sitemap: {
         exclude: I18N_MODULE_CONFIG.locales.map(
