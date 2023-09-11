@@ -82,8 +82,7 @@ export default defineConfig({
 
   /* Run your local dev server before starting the tests */
   webServer: {
-    command:
-      process.env.NODE_ENV === 'production' ? 'pnpm run start' : 'pnpm run dev',
+    command: `pnpm run ${process.env.VIO_SERVER_START_SCRIPT}`,
     env: {
       NUXT_PUBLIC_VIO_IS_TESTING: 'true',
     },

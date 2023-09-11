@@ -44,9 +44,9 @@ RUN pnpm install --offline
 
 
 ########################
-# Build Nuxt.
+# Build for Node deployment.
 
-FROM node:20.6.0-alpine@sha256:c843f4a4060246a25f62c80b3d4cf4a6b4c4639cdce421e4f2ee3102257225b4 AS build
+FROM node:20.6.0-alpine@sha256:c843f4a4060246a25f62c80b3d4cf4a6b4c4639cdce421e4f2ee3102257225b4 AS build-node
 
 # The `CI` environment variable must be set for pnpm to run in headless mode
 ENV CI=true
@@ -58,6 +58,23 @@ COPY --from=prepare /srv/app/ ./
 ENV NODE_ENV=production
 RUN corepack enable && \
     pnpm --dir src run build
+
+
+########################
+# Build for static deployment.
+
+FROM node:20.6.0-alpine@sha256:c843f4a4060246a25f62c80b3d4cf4a6b4c4639cdce421e4f2ee3102257225b4 AS build-static
+
+# The `CI` environment variable must be set for pnpm to run in headless mode
+ENV CI=true
+
+WORKDIR /srv/app/
+
+COPY --from=prepare /srv/app/ ./
+
+ENV NODE_ENV=production
+RUN corepack enable && \
+    pnpm --dir src run generate
 
 
 ########################
@@ -140,13 +157,13 @@ RUN pnpm rebuild -r
 
 # COPY --from=test-e2e-prepare /srv/app/ ./
 
-# RUN pnpm --dir src run test:e2e:dev
+# RUN pnpm --dir src run test:e2e:server:dev
 
 
 ########################
-# Nuxt: test (e2e, production)
+# Nuxt: test (e2e, node)
 
-FROM mcr.microsoft.com/playwright:v1.37.1@sha256:58a3daf48cde7d593e4fbc267a4435deb0016aef4c4179ae7fb8b2a68f968f36 AS test-e2e-prod
+FROM mcr.microsoft.com/playwright:v1.37.1@sha256:58a3daf48cde7d593e4fbc267a4435deb0016aef4c4179ae7fb8b2a68f968f36 AS test-e2e-node
 
 # The `CI` environment variable must be set for pnpm to run in headless mode
 ENV CI=true
@@ -156,9 +173,27 @@ WORKDIR /srv/app/
 RUN corepack enable
 
 COPY --from=test-e2e-prepare /srv/app/ ./
-COPY --from=build /srv/app/src/.playground/.output /srv/app/src/.playground/.output
+COPY --from=build-node /srv/app/src/.playground/.output /srv/app/src/.playground/.output
 
-RUN pnpm --dir src run test:e2e:prod
+RUN pnpm --dir src run test:e2e:server:node
+
+
+########################
+# Nuxt: test (e2e, static)
+
+FROM mcr.microsoft.com/playwright:v1.37.1@sha256:58a3daf48cde7d593e4fbc267a4435deb0016aef4c4179ae7fb8b2a68f968f36 AS test-e2e-static
+
+# The `CI` environment variable must be set for pnpm to run in headless mode
+ENV CI=true
+
+WORKDIR /srv/app/
+
+RUN corepack enable
+
+COPY --from=test-e2e-prepare /srv/app/ ./
+COPY --from=build-static /srv/app/src/.playground/.output/public /srv/app/src/.playground/.output/public
+
+RUN pnpm --dir src run test:e2e:server:static
 
 
 #######################
@@ -171,10 +206,13 @@ ENV CI=true
 
 WORKDIR /srv/app/
 
-COPY --from=build /srv/app/src/.playground/.output ./.output
+# COPY --from=build-node /srv/app/src/.playground/.output ./.output
+COPY --from=build-node /srv/app/package.json /tmp/package.json
+COPY --from=build-static /srv/app/package.json /tmp/package.json
 COPY --from=lint /srv/app/package.json /tmp/package.json
 # COPY --from=test-e2e-dev /srv/app/package.json /tmp/package.json
-COPY --from=test-e2e-prod /srv/app/package.json /tmp/package.json
+COPY --from=test-e2e-node /srv/app/package.json /tmp/package.json
+COPY --from=test-e2e-static /srv/app/package.json /tmp/package.json
 
 
 # #######################
