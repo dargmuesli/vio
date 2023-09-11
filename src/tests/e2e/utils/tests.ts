@@ -1,5 +1,5 @@
 import { expect, type Page } from '@playwright/test'
-import { joinURL, normalizeURL } from 'ufo'
+import { joinURL, withoutTrailingSlash } from 'ufo'
 
 export const testMetadata = async ({
   page,
@@ -168,7 +168,7 @@ export const testMetadata = async ({
       attributes: [
         {
           key: 'href',
-          value: normalizeURL(joinURL(host, path)),
+          value: `${host}${path}`,
         },
         {
           key: 'hreflang',
@@ -185,7 +185,7 @@ export const testMetadata = async ({
       attributes: [
         {
           key: 'href',
-          value: joinURL(host, 'de', path),
+          value: withoutTrailingSlash(`${host}/de${path}`),
         },
         {
           key: 'hreflang',
@@ -202,7 +202,7 @@ export const testMetadata = async ({
       attributes: [
         {
           key: 'href',
-          value: joinURL(host, path),
+          value: `${host}${path}`,
         },
         {
           key: 'hreflang',
@@ -401,7 +401,7 @@ export const testMetadata = async ({
         },
         {
           key: 'content',
-          value: joinURL(host, path),
+          value: `${host}${path}`,
         },
       ],
     },
