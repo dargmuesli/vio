@@ -406,7 +406,7 @@ test.describe('page', () => {
             key: 'property',
             value: 'og:title',
           },
-          { key: 'content', value: 'Vio · Vio Playground' },
+          { key: 'content', value: 'Title · Vio Playground' },
         ],
       },
       {
