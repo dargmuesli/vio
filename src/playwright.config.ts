@@ -1,15 +1,11 @@
 import { defineConfig, devices } from '@playwright/test'
+import { BASE_URL } from './utils/constants'
 
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
  */
 // require('dotenv').config();
-
-export const BASE_URL =
-  !process.env.NODE_ENV || process.env.NODE_ENV === 'development'
-    ? 'http://localhost:3000'
-    : 'http://localhost:3001'
 
 /**
  * See https://playwright.dev/docs/test-configuration.
@@ -87,16 +83,11 @@ export default defineConfig({
   /* Run your local dev server before starting the tests */
   webServer: {
     command:
-      !process.env.NODE_ENV || process.env.NODE_ENV === 'development'
-        ? 'pnpm run dev'
-        : 'pnpm run start',
+      process.env.NODE_ENV === 'production' ? 'pnpm run start' : 'pnpm run dev',
     env: {
       NUXT_PUBLIC_VIO_IS_TESTING: 'true',
     },
-    timeout:
-      !process.env.NODE_ENV || process.env.NODE_ENV === 'development'
-        ? 100000
-        : 10000,
+    timeout: process.env.NODE_ENV === 'production' ? 10000 : 100000,
     url: BASE_URL,
     reuseExistingServer: !process.env.CI,
   },
