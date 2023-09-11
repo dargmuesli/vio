@@ -17,10 +17,6 @@ export const useAppLayout = () => {
         : siteConfig.name,
   })
 
-  if (appConfig.vio.seoMeta) {
-    useServerSeoMeta(appConfig.vio.seoMeta)
-  }
-
   if (appConfig.vio.themeColor) {
     useServerSeoMeta({
       msapplicationTileColor: appConfig.vio.themeColor,

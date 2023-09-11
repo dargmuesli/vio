@@ -1,9 +1,6 @@
-import { useServerSeoMeta } from '@unhead/vue'
-
 export default defineAppConfig({
   vio: {
     pages: undefined,
-    seoMeta: undefined,
     server: {
       middleware: {
         headers: {
@@ -83,7 +80,6 @@ declare module 'nuxt/schema' {
           }
         }
       }
-      seoMeta?: Parameters<typeof useServerSeoMeta>[0]
       server?: {
         middleware: {
           headers: {
