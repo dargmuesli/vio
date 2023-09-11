@@ -51,7 +51,10 @@ test.describe('page', () => {
     const meta = [
       {
         tag: 'html',
-        attributes: [{ key: 'lang', value: 'en' }],
+        attributes: [
+          { key: 'dir', value: 'ltr' },
+          { key: 'lang', value: 'en' },
+        ],
       },
       {
         tag: 'link',
