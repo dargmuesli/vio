@@ -23,7 +23,6 @@ const siteDescriptionProp = toRef(() => props.siteDescription)
 const { $dayjs } = useNuxtApp()
 const { locale } = useI18n()
 const cookieControl = useCookieControl()
-const siteConfig = useSiteConfig()
 
 const { loadingIds, indicateLoadingDone } = useLoadingDoneIndicator('app')
 
@@ -68,7 +67,6 @@ updateSiteConfig({
 defineOgImage({
   alt: ogImageAltProp.value,
   component: ogImageComponentProp.value,
-  description: siteDescriptionProp.value,
 })
 useAppLayout()
 useFavicons()
@@ -76,10 +74,7 @@ usePolyfills()
 useSchemaOrg([
   defineWebSite({
     description: siteDescriptionProp,
-    inLanguage: locale,
-    name: siteConfig.name,
   }),
-  defineWebPage(),
 ])
 init()
 </script>
