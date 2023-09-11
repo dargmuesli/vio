@@ -7,9 +7,9 @@ export const BASE_URL =
   '://' +
   (process.env.NUXT_PUBLIC_HOST ||
     `${process.env.HOST || 'localhost'}:${
-      !process.env.NODE_ENV || process.env.NODE_ENV === 'development'
-        ? '3000'
-        : '3001'
+      process.env.PORT || process.env.NODE_ENV === 'production'
+        ? '3001'
+        : '3000'
     }`)
 export const CACHE_VERSION = 'bOXMwoKlJr'
 export const COOKIE_PREFIX = SITE_NAME.toLocaleLowerCase()
