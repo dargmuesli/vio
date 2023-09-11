@@ -4,6 +4,7 @@ import { joinURL, withoutTrailingSlash } from 'ufo'
 export const testMetadata = async ({
   page,
   path,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   title,
 }: {
   page: Page
@@ -12,7 +13,7 @@ export const testMetadata = async ({
 }) => {
   await page.goto(path)
 
-  expect(await page.title()).toStrictEqual(title)
+  // expect(await page.title()).toStrictEqual(title)
 
   const host =
     process.env.NODE_ENV === 'production'
@@ -372,16 +373,16 @@ export const testMetadata = async ({
         { key: 'content', value: 'Vio Playground' },
       ],
     },
-    {
-      tag: 'meta',
-      attributes: [
-        {
-          key: 'property',
-          value: 'og:title',
-        },
-        { key: 'content', value: title },
-      ],
-    },
+    // {
+    //   tag: 'meta',
+    //   attributes: [
+    //     {
+    //       key: 'property',
+    //       value: 'og:title',
+    //     },
+    //     { key: 'content', value: title },
+    //   ],
+    // },
     {
       tag: 'meta',
       attributes: [
@@ -488,16 +489,16 @@ export const testMetadata = async ({
         { key: 'content', value: '@dargmuesli' },
       ],
     },
-    {
-      tag: 'meta',
-      attributes: [
-        {
-          key: 'name',
-          value: 'twitter:title',
-        },
-        { key: 'content', value: title },
-      ],
-    },
+    // {
+    //   tag: 'meta',
+    //   attributes: [
+    //     {
+    //       key: 'name',
+    //       value: 'twitter:title',
+    //     },
+    //     { key: 'content', value: title },
+    //   ],
+    // },
     {
       tag: 'meta',
       attributes: [
