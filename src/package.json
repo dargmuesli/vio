@@ -1,6 +1,6 @@
 {
   "name": "@dargmuesli/nuxt-vio",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "type": "module",
   "publishConfig": {
     "access": "public"

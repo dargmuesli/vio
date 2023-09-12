@@ -1,3 +1,10 @@
+## [4.0.2](https://github.com/dargmuesli/vio/compare/4.0.1...4.0.2) (2023-09-12)
+
+
+### Bug Fixes
+
+* **deps:** update ([f325c59](https://github.com/dargmuesli/vio/commit/f325c591f82cc28f059bb06ee6123438ca66a689))
+
 ## [4.0.1](https://github.com/dargmuesli/vio/compare/4.0.0...4.0.1) (2023-09-12)
 
 
