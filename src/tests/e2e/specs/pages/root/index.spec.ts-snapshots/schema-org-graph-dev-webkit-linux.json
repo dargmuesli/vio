@@ -13,7 +13,6 @@
       "@id": "http://localhost:3000/#webpage",
       "@type": "WebPage",
       "description": "Vio is @dargmuesli's Nuxt layer.",
-      "name": "Title",
       "url": "http://localhost:3000",
       "isPartOf": {
         "@id": "http://localhost:3000/#website"

@@ -48,6 +48,10 @@ RUN pnpm install --offline
 
 FROM node:20.6.1-alpine@sha256:d75175d449921d06250afd87d51f39a74fc174789fa3c50eba0d3b18369cc749 AS build-node
 
+ARG SITE_URL=http://example.com
+ENV NUXT_PUBLIC_SITE_URL=${SITE_URL}
+ENV NUXT_PUBLIC_I18N_BASE_URL=${SITE_URL}
+
 # The `CI` environment variable must be set for pnpm to run in headless mode
 ENV CI=true
 
@@ -64,6 +68,10 @@ RUN corepack enable && \
 # Build for static deployment.
 
 FROM node:20.6.0-alpine@sha256:d75175d449921d06250afd87d51f39a74fc174789fa3c50eba0d3b18369cc749 AS build-static
+
+ARG SITE_URL=http://example.com
+ENV NUXT_PUBLIC_SITE_URL=${SITE_URL}
+ENV NUXT_PUBLIC_I18N_BASE_URL=${SITE_URL}
 
 # The `CI` environment variable must be set for pnpm to run in headless mode
 ENV CI=true

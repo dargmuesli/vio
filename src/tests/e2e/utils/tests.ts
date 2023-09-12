@@ -1,6 +1,8 @@
 import { expect, type Page } from '@playwright/test'
 import { joinURL, withoutTrailingSlash } from 'ufo'
 
+import { SITE_URL } from '../../../utils/constants'
+
 export const testMetadata = async ({
   page,
   path,
@@ -15,10 +17,6 @@ export const testMetadata = async ({
 
   // expect(await page.title()).toStrictEqual(title)
 
-  const host =
-    process.env.NODE_ENV === 'production'
-      ? 'http://localhost:3001'
-      : 'http://localhost:3000'
   const meta = [
     {
       tag: 'html',
@@ -59,7 +57,7 @@ export const testMetadata = async ({
         },
         {
           key: 'href',
-          value: `${host}${path}`,
+          value: `${SITE_URL}${path}`,
         },
       ],
     },
@@ -169,7 +167,7 @@ export const testMetadata = async ({
       attributes: [
         {
           key: 'href',
-          value: `${host}${path}`,
+          value: `${SITE_URL}${path}`,
         },
         {
           key: 'hreflang',
@@ -186,7 +184,7 @@ export const testMetadata = async ({
       attributes: [
         {
           key: 'href',
-          value: withoutTrailingSlash(`${host}/de${path}`),
+          value: withoutTrailingSlash(`${SITE_URL}/de${path}`),
         },
         {
           key: 'hreflang',
@@ -203,7 +201,7 @@ export const testMetadata = async ({
       attributes: [
         {
           key: 'href',
-          value: `${host}${path}`,
+          value: `${SITE_URL}${path}`,
         },
         {
           key: 'hreflang',
@@ -339,7 +337,7 @@ export const testMetadata = async ({
         },
         {
           key: 'content',
-          value: joinURL(host, path, '/__og_image__/og.png'),
+          value: joinURL(SITE_URL, path, '/__og_image__/og.png'),
         },
       ],
     },
@@ -402,7 +400,7 @@ export const testMetadata = async ({
         },
         {
           key: 'content',
-          value: `${host}${path}`,
+          value: `${SITE_URL}${path}`,
         },
       ],
     },
@@ -475,7 +473,7 @@ export const testMetadata = async ({
         },
         {
           key: 'content',
-          value: joinURL(host, path, '/__og_image__/og.png'),
+          value: joinURL(SITE_URL, path, '/__og_image__/og.png'),
         },
       ],
     },
@@ -549,8 +547,6 @@ export const testMetadata = async ({
   }
 
   expect(await page.locator('#schema-org-graph').innerText()).toMatchSnapshot(
-    `schema-org-graph-${
-      process.env.NODE_ENV === 'production' ? 'production' : 'development'
-    }.json`,
+    `schema-org-graph-${process.env.VIO_SERVER}.json`,
   )
 }

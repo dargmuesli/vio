@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url'
 import { defu } from 'defu'
 
 import {
-  BASE_URL,
+  SITE_URL,
   I18N_COOKIE_NAME,
   I18N_MODULE_CONFIG,
   SITE_NAME,
@@ -39,7 +39,7 @@ export default defineNuxtConfig(
       },
       devtools: {
         enabled:
-          process.env.NODE_ENV !== 'production' &&
+          process.env.NODE_ENV === 'development' &&
           !process.env.NUXT_PUBLIC_VIO_IS_TESTING,
         timeline: {
           enabled: true,
@@ -152,7 +152,6 @@ export default defineNuxtConfig(
         },
       },
       linkChecker: {
-        debug: process.env.NODE_ENV === 'development',
         failOnError: true,
       },
       seo: {
@@ -172,7 +171,7 @@ export default defineNuxtConfig(
       },
     },
     VIO_NUXT_BASE_CONFIG({
-      baseUrl: BASE_URL,
+      baseUrl: SITE_URL,
       defaultLocale: 'en',
       siteName: SITE_NAME,
       stagingHost: 'localhost:3000',

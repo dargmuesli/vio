@@ -2,15 +2,12 @@ import { helpers } from '@vuelidate/validators'
 
 export const SITE_NAME = 'Vio'
 
-export const BASE_URL =
-  (process.env.NUXT_PUBLIC_HOST ? 'https' : 'http') +
-  '://' +
-  (process.env.NUXT_PUBLIC_HOST ||
-    `${process.env.HOST || 'localhost'}:${
-      process.env.PORT || process.env.NODE_ENV === 'production'
-        ? '3001'
-        : '3000'
-    }`)
+export const SITE_URL =
+  process.env.NUXT_PUBLIC_SITE_URL ||
+  (process.env.HOST ? 'https' : 'http') +
+    '://' +
+    (process.env.HOST ||
+      `${process.env.HOST || 'localhost'}:${process.env.PORT || '3000'}`)
 export const CACHE_VERSION = 'bOXMwoKlJr'
 export const COOKIE_PREFIX = SITE_NAME.toLocaleLowerCase()
 export const COOKIE_SEPARATOR = '_'
@@ -81,7 +78,7 @@ export const VIO_NUXT_BASE_CONFIG = ({
             ? {
                 stagingHost:
                   process.env.NODE_ENV !== 'production' &&
-                  !process.env.NUXT_PUBLIC_HOST
+                  !process.env.NUXT_PUBLIC_SITE_URL
                     ? stagingHost
                     : undefined,
               }
