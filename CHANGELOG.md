@@ -1,3 +1,10 @@
+## [4.0.1](https://github.com/dargmuesli/vio/compare/4.0.0...4.0.1) (2023-09-12)
+
+
+### Bug Fixes
+
+* **test:** enable disable title checks ([da75916](https://github.com/dargmuesli/vio/commit/da75916856f014c8be2c5fd6d99693e579e40994))
+
 ## [4.0.0](https://github.com/dargmuesli/vio/compare/3.8.0...4.0.0) (2023-09-12)
 
 
