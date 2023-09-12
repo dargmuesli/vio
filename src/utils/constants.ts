@@ -53,12 +53,12 @@ export const TITLE_TEMPLATE = ({
 export const VALIDATION_SUGGESTION_TITLE_LENGTH_MAXIMUM = 300
 export const VERIFICATION_FORMAT_UUID = helpers.regex(REGEX_UUID)
 export const VIO_NUXT_BASE_CONFIG = ({
-  baseUrl,
+  siteUrl,
   defaultLocale,
   siteName,
   stagingHost,
 }: {
-  baseUrl?: string
+  siteUrl?: string
   defaultLocale?: string
   siteName: string
   stagingHost?: string
@@ -72,7 +72,7 @@ export const VIO_NUXT_BASE_CONFIG = ({
     runtimeConfig: {
       public: {
         i18n: {
-          ...(baseUrl ? { baseUrl } : {}),
+          ...(siteUrl ? { baseUrl: siteUrl } : {}),
         },
         vio: {
           ...(stagingHost
@@ -94,7 +94,7 @@ export const VIO_NUXT_BASE_CONFIG = ({
       ...I18N_MODULE_CONFIG, // `langDir`, `lazy` and `locales` must be configured to extend a layer having lazy-loaded translations (https://v8.i18n.nuxtjs.org/guide/layers#locales)
     },
     site: {
-      ...(baseUrl ? { url: baseUrl } : {}),
+      ...(siteUrl ? { url: siteUrl } : {}),
       ...(defaultLocale ? { defaultLocale } : {}),
       name: siteName,
     },

@@ -171,7 +171,7 @@ export default defineNuxtConfig(
       },
     },
     VIO_NUXT_BASE_CONFIG({
-      baseUrl: SITE_URL,
+      siteUrl: SITE_URL,
       defaultLocale: 'en',
       siteName: SITE_NAME,
       stagingHost: 'localhost:3000',
