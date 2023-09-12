@@ -1,3 +1,32 @@
+## [4.0.0](https://github.com/dargmuesli/vio/compare/3.8.0...4.0.0) (2023-09-12)
+
+
+### ⚠ BREAKING CHANGES
+
+* **constants:** rename site url variable
+* **app:** remove seo meta configuration
+* **head:** move webmanifest
+
+### Features
+
+* **app:** remove seo meta configuration ([05580cc](https://github.com/dargmuesli/vio/commit/05580ccbc6185af870620a253951fcaa627cca64))
+* **constants:** rename site url variable ([c046bb4](https://github.com/dargmuesli/vio/commit/c046bb443b7e6697ba6ef0194a53475d16ce1cce))
+* **head:** move webmanifest ([23b0bcd](https://github.com/dargmuesli/vio/commit/23b0bcda17294c6efaa2f89228d079cfe680074e))
+* rework environment variables ([8caf0bc](https://github.com/dargmuesli/vio/commit/8caf0bc98eb48e315bc3ac1441563418c78e6d15))
+
+
+### Bug Fixes
+
+* correct environment variables ([86bab9a](https://github.com/dargmuesli/vio/commit/86bab9a4f658639d6aff81497ddc562dab863f92))
+* **error:** wrap children ([898b54d](https://github.com/dargmuesli/vio/commit/898b54d8e03c1360cd497b15d604517a100d50e3))
+* **head:** migrate template parameter ([b06c75d](https://github.com/dargmuesli/vio/commit/b06c75d75a6fa3ed3a7a7c3acf1938332e168e07))
+* **site-url:** prefer plain environment variable ([1ce0e65](https://github.com/dargmuesli/vio/commit/1ce0e65de0b9b41475ffc8ac69430afd1bbf1ad6))
+
+
+### Performance Improvements
+
+* **head:** use server composables ([9f984d5](https://github.com/dargmuesli/vio/commit/9f984d540fa7550c1979b2e395a4257a7ed6e1b8))
+
 ## [3.8.0](https://github.com/dargmuesli/vio/compare/3.7.1...3.8.0) (2023-09-11)
 
 
