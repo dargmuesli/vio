@@ -3,6 +3,7 @@ import { helpers } from '@vuelidate/validators'
 export const SITE_NAME = 'Vio'
 
 export const SITE_URL =
+  process.env.SITE_URL ||
   process.env.NUXT_PUBLIC_SITE_URL ||
   (process.env.HOST ? 'https' : 'http') +
     '://' +
