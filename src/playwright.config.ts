@@ -91,6 +91,5 @@ export default defineConfig({
     reuseExistingServer: !process.env.CI,
   },
 
-  /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 1 : undefined,
+  workers: undefined,
 })
