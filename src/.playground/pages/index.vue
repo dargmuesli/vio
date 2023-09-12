@@ -4,7 +4,7 @@
     <p>
       {{ t('globalStatusLoading') }}
       <br />
-      {{  t('globalValidationFailed') }}
+      {{ t('globalValidationFailed') }}
       <br />
       <VioLink to="/">/</VioLink>
       <br />
@@ -12,7 +12,7 @@
         https://jonas-thelemann.de
       </VioLink>
     </p>
-    <SBreadcrumb />
+    <!-- <SBreadcrumb /> -->
   </div>
 </template>
 
@@ -26,7 +26,7 @@ useHeadDefault({
 
 <i18n lang="yaml">
 de:
-  title: Titel
+  title: Vio Playground
 en:
-  title: Title
+  title: Vio Playground
 </i18n>

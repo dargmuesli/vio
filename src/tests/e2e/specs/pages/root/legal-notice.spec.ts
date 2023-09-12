@@ -1,6 +1,9 @@
 import { test, expect } from '@playwright/test'
 
 import { COOKIE_CONTROL_DEFAULT, PAGE_READY } from '../../../utils/constants'
+import { testMetadata } from '../../../utils/tests'
+
+const PAGE_PATH = '/legal-notice'
 
 test.beforeEach(async ({ context }) => {
   await context.addCookies([
@@ -15,18 +18,33 @@ test.beforeEach(async ({ context }) => {
 
 test.describe('page', () => {
   test('status code', async ({ request }) => {
-    const resp = await request.get('/privacy-policy')
+    const resp = await request.get(PAGE_PATH)
     expect(resp.status()).toBe(200)
+  })
+
+  test('metadata', async ({ page }) => {
+    await testMetadata({
+      page,
+      path: PAGE_PATH,
+      title: 'Legal notice · Vio Playground',
+    })
   })
 })
 
 test.describe('visual regression', () => {
   test('consistent appearance', async ({ page }) => {
-    await page.goto('/privacy-policy')
+    await page.goto(PAGE_PATH)
     await PAGE_READY({ page })
     await expect(page).toHaveScreenshot({
       fullPage: true,
-      mask: [page.locator('.nuxt-devtools-panel')],
     })
+  })
+
+  test('generates the open graph image', async ({ page }) => {
+    await page.goto('/legal-notice/__og_image__/og.png')
+    await expect(page).toHaveScreenshot({ fullPage: true })
+
+    await page.goto('/de/legal-notice/__og_image__/og.png')
+    await expect(page).toHaveScreenshot({ fullPage: true })
   })
 })

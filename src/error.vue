@@ -21,8 +21,7 @@ const errorProp = toRef(() => props.error)
 // initialization
 useAppLayout()
 
-// TODO: replace with `useServerHeadSafe`
-useHeadSafe({
+useServerHeadSafe({
   title: `${errorProp.value.statusCode} - ${errorProp.value.message}`,
 })
 </script>

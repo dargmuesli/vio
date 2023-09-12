@@ -10,11 +10,11 @@
       "url": "http://localhost:3000"
     },
     {
-      "@id": "http://localhost:3000/#webpage",
+      "@id": "http://localhost:3000/legal-notice/#webpage",
       "@type": "WebPage",
       "description": "Vio is @dargmuesli's Nuxt layer.",
-      "name": "Title",
-      "url": "http://localhost:3000",
+      "name": "Legal Notice",
+      "url": "http://localhost:3000/legal-notice",
       "isPartOf": {
         "@id": "http://localhost:3000/#website"
       },
@@ -22,7 +22,7 @@
         {
           "@type": "ReadAction",
           "target": [
-            "http://localhost:3000"
+            "http://localhost:3000/legal-notice"
           ]
         }
       ]
