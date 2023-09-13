@@ -29,9 +29,6 @@ export default defineNuxtConfig(
             lang: 'en', // fallback data to prevent invalid html at generation
           },
           titleTemplate: '%s', // fully set in `composables/useAppLayout.ts`
-          templateParams: {
-            separator: '·',
-          },
         },
         pageTransition: {
           name: 'layout',
@@ -146,6 +143,7 @@ export default defineNuxtConfig(
         logLevel: 'warning',
       },
       i18n: {
+        baseUrl: SITE_URL,
         detectBrowserLanguage: {
           cookieKey: I18N_COOKIE_NAME,
           cookieSecure: true,
@@ -159,6 +157,7 @@ export default defineNuxtConfig(
       },
       site: {
         debug: process.env.NODE_ENV === 'development',
+        url: SITE_URL,
       },
       sitemap: {
         exclude: I18N_MODULE_CONFIG.locales.map(
@@ -171,7 +170,6 @@ export default defineNuxtConfig(
       },
     },
     VIO_NUXT_BASE_CONFIG({
-      siteUrl: SITE_URL,
       defaultLocale: 'en',
       siteName: SITE_NAME,
       stagingHost: 'localhost:3000',
