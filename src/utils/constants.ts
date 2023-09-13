@@ -64,7 +64,7 @@ export const VIO_NUXT_BASE_CONFIG = ({
   ({
     app: {
       head: {
-        title: SITE_NAME, // fallback data to prevent invalid html at generation
+        title: siteName, // fallback data to prevent invalid html at generation
       },
     },
     runtimeConfig: {
