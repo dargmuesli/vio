@@ -1,3 +1,10 @@
+## [5.0.1](https://github.com/dargmuesli/vio/compare/5.0.0...5.0.1) (2023-09-13)
+
+
+### Bug Fixes
+
+* **package:** add repository link ([1eb2cd9](https://github.com/dargmuesli/vio/commit/1eb2cd91fa44d9cb6261c355ad2c04f0952af8a2))
+
 ## [5.0.0](https://github.com/dargmuesli/vio/compare/4.0.3...5.0.0) (2023-09-13)
 
 
