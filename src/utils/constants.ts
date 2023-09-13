@@ -13,7 +13,6 @@ export const CACHE_VERSION = 'bOXMwoKlJr'
 export const COOKIE_PREFIX = SITE_NAME.toLocaleLowerCase()
 export const COOKIE_SEPARATOR = '_'
 export const FETCH_RETRY_AMOUNT = 3
-export const I18N_COOKIE_NAME = 'i18n_r'
 export const I18N_MODULE_CONFIG = {
   langDir: 'locales',
   lazy: true,

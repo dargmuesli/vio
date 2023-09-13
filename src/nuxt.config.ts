@@ -5,7 +5,6 @@ import { defu } from 'defu'
 
 import {
   SITE_URL,
-  I18N_COOKIE_NAME,
   I18N_MODULE_CONFIG,
   SITE_NAME,
   TIMEZONE_COOKIE_NAME,
@@ -97,18 +96,6 @@ export default defineNuxtConfig(
             },
             {
               description: {
-                de: 'Dieser Cookie von uns speichert die Sprache, in der diese Webseite angezeigt wird.',
-                en: "This cookie of ours stores the language that's used to display this website.",
-              },
-              id: 'l',
-              name: {
-                de: 'Sprache',
-                en: 'Language',
-              },
-              targetCookieIds: [I18N_COOKIE_NAME],
-            },
-            {
-              description: {
                 de: 'Dieser Cookie von uns speichert die Zeitzone, in der sich das Gerät zu befinden scheint.',
                 en: 'This cookie of ours saves the timezone in which the device appears to be located.',
               },
@@ -144,10 +131,7 @@ export default defineNuxtConfig(
       },
       i18n: {
         baseUrl: SITE_URL,
-        detectBrowserLanguage: {
-          cookieKey: I18N_COOKIE_NAME,
-          cookieSecure: true,
-        },
+        detectBrowserLanguage: false,
       },
       linkChecker: {
         failOnError: true,
