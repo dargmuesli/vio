@@ -1,6 +1,10 @@
 {
   "name": "@dargmuesli/nuxt-vio",
   "version": "5.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dargmuesli/vio.git"
+  },
   "type": "module",
   "publishConfig": {
     "access": "public"
