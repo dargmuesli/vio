@@ -29,9 +29,6 @@ export default defineNuxtConfig(
             lang: 'en', // fallback data to prevent invalid html at generation
           },
           titleTemplate: '%s', // fully set in `composables/useAppLayout.ts`
-          templateParams: {
-            separator: '·',
-          },
         },
         pageTransition: {
           name: 'layout',
