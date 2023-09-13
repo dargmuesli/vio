@@ -1,3 +1,10 @@
+## [5.0.2](https://github.com/dargmuesli/vio/compare/5.0.1...5.0.2) (2023-09-13)
+
+
+### Performance Improvements
+
+* **seo:** disable i18n redirect ([c3a1b06](https://github.com/dargmuesli/vio/commit/c3a1b0658cee7af9b5fbd543e0cf88eadd2f3311))
+
 ## [5.0.1](https://github.com/dargmuesli/vio/compare/5.0.0...5.0.1) (2023-09-13)
 
 
