@@ -1,3 +1,19 @@
+## [5.0.0](https://github.com/dargmuesli/vio/compare/4.0.3...5.0.0) (2023-09-13)
+
+
+### ⚠ BREAKING CHANGES
+
+* **constants:** remove site url
+
+### Features
+
+* **constants:** remove site url ([9acf89a](https://github.com/dargmuesli/vio/commit/9acf89ac1cc10d85af4f37e7cf81c4bef3c5f061))
+
+
+### Bug Fixes
+
+* **constants:** correct site name ([57f5e58](https://github.com/dargmuesli/vio/commit/57f5e58f9208f24a7e62414f730b84f968a9e068))
+
 ## [4.0.3](https://github.com/dargmuesli/vio/compare/4.0.2...4.0.3) (2023-09-12)
 
 
