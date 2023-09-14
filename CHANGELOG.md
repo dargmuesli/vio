@@ -1,3 +1,11 @@
+## [8.1.0](https://github.com/dargmuesli/vio/compare/8.0.0...8.1.0) (2023-09-14)
+
+
+### Features
+
+* **layout:** add screen height ([80fd608](https://github.com/dargmuesli/vio/commit/80fd6085c4f09c7b7fe945ac9bad1be02614cc2a))
+* **layout:** correct padding ([068a03c](https://github.com/dargmuesli/vio/commit/068a03c84de5bf47b343815ce1b41eb89c9203a9))
+
 ## [8.0.0](https://github.com/dargmuesli/vio/compare/7.0.0...8.0.0) (2023-09-14)
 
 
