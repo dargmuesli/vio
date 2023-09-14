@@ -1,10 +1,7 @@
-export default defineNuxtPlugin({
-  enforce: 'pre',
-  setup(_nuxtApp) {
-    const { t } = _nuxtApp.vueApp.$nuxt.$i18n
+export default defineNuxtPlugin((nuxtApp) => {
+  const { t } = nuxtApp.vueApp.$nuxt.$i18n
 
-    updateSiteConfig({
-      description: t('globalSeoSiteDescription'),
-    })
-  },
+  updateSiteConfig({
+    description: t('globalSeoSiteDescription'),
+  })
 })
