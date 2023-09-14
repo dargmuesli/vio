@@ -1,6 +1,5 @@
 <template>
   <VioApp
-    :site-description="t('siteDescription')"
     :og-image-alt="t('ogImageAlt')"
   />
 </template>
@@ -11,9 +10,7 @@ const { t } = useI18n()
 
 <i18n lang="yaml">
 de:
-  siteDescription: "Vio ist {'@'}dargmueslis Nuxt layer."
   ogImageAlt: Social Preview Image für eine Vio Webseite.
 en:
-  siteDescription: "Vio is {'@'}dargmuesli's Nuxt layer."
   ogImageAlt: Social Preview Image for a Vio webpage.
 </i18n>
