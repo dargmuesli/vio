@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>{{ `${statusCode} - ${statusReason}` }}</h1>
+    <h1>{{ `${statusCode ? `${statusCode} - ` : ''}${statusReason}` }}</h1>
     <div>
       {{ description }}
     </div>
@@ -15,12 +15,13 @@
 import { status } from '@http-util/status-i18n'
 
 export interface Props {
-  statusCode: number
+  statusCode?: number
   statusMessage?: string
   description: string
   stack?: string
 }
 const props = withDefaults(defineProps<Props>(), {
+  statusCode: undefined,
   statusMessage: undefined,
   stack: undefined,
 })

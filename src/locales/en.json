@@ -1,5 +1,6 @@
 {
   "globalPlaceholderUrl": "https://websi.te",
+  "globalSeoSiteDescription": "Vio is {'@'}dargmuesli's Nuxt layer.",
   "globalStatusError": "Error",
   "globalStatusLoading": "Loading...",
   "globalValidationFailed": "Please check your input 🙈",

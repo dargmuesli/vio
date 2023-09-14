@@ -2,7 +2,7 @@
   <div :data-is-loading="isLoading" data-testid="is-loading">
     <NuxtLayout>
       <!-- `NuxtLayout` can't have mulitple child nodes (https://github.com/nuxt/nuxt/issues/21759) -->
-      <NuxtPage :site-description="siteDescriptionProp" />
+      <NuxtPage />
     </NuxtLayout>
   </div>
 </template>
@@ -11,18 +11,17 @@
 export interface Props {
   ogImageAlt: string
   ogImageComponent?: string
-  siteDescription: string
 }
 const props = withDefaults(defineProps<Props>(), {
   ogImageComponent: undefined,
 })
 const ogImageAltProp = toRef(() => props.ogImageAlt)
 const ogImageComponentProp = toRef(() => props.ogImageComponent)
-const siteDescriptionProp = toRef(() => props.siteDescription)
 
 const { $dayjs } = useNuxtApp()
 const { locale } = useI18n()
 const cookieControl = useCookieControl()
+const siteConfig = useSiteConfig()
 
 const { loadingIds, indicateLoadingDone } = useLoadingDoneIndicator('app')
 
@@ -61,9 +60,6 @@ watch(
 )
 
 // initialization
-updateSiteConfig({
-  description: siteDescriptionProp.value,
-})
 defineOgImage({
   alt: ogImageAltProp.value,
   component: ogImageComponentProp.value,
@@ -73,7 +69,7 @@ useFavicons()
 usePolyfills()
 useSchemaOrg([
   defineWebSite({
-    description: siteDescriptionProp,
+    description: siteConfig.description,
   }),
 ])
 init()

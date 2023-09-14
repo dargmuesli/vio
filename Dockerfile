@@ -148,7 +148,7 @@ RUN pnpm rebuild -r
 # ########################
 # # Nuxt: test (e2e, development)
 
-# FROM mcr.microsoft.com/playwright:v1.37.1@sha256:58a3daf48cde7d593e4fbc267a4435deb0016aef4c4179ae7fb8b2a68f968f36 AS test-e2e-dev
+# FROM mcr.microsoft.com/playwright:v1.38.0@sha256:9f1ebfec94143da0084f4b8113980fafa07be4fe89181f618671b12f193334f3 AS test-e2e-dev
 
 # # The `CI` environment variable must be set for pnpm to run in headless mode
 # ENV CI=true

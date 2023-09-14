@@ -8,14 +8,13 @@ export const useHeadDefault = ({
   extension?: UseSeoMetaInput
   title: string | ComputedRef<string>
 }) => {
-  const attrs = useAttrs()
   const siteConfig = useSiteConfig()
 
   const defaults: UseSeoMetaInput = {
-    description: attrs['site-description'] as string, // TODO: remove (https://github.com/harlan-zw/nuxt-site-config/pull/7)
+    description: siteConfig.description,
     msapplicationConfig: `/assets/static/favicon/browserconfig.xml?v=${CACHE_VERSION}`,
     title,
-    twitterDescription: attrs['site-description'] as string,
+    twitterDescription: siteConfig.description,
     twitterTitle: ref(
       TITLE_TEMPLATE({
         siteName: siteConfig.name,
