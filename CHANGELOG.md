@@ -1,3 +1,17 @@
+## [8.0.0](https://github.com/dargmuesli/vio/compare/7.0.0...8.0.0) (2023-09-14)
+
+
+### ⚠ BREAKING CHANGES
+
+* **html-validator:** enable
+
+### Features
+
+* **html-validator:** enable ([94a1e97](https://github.com/dargmuesli/vio/commit/94a1e97b354f6d5fae7a7ba1fc9c0e871ffb2c8e))
+* **icon-container:** make title optional ([4946aee](https://github.com/dargmuesli/vio/commit/4946aee061352af6752d45b192e50eab652d06ac))
+* **icons:** add "arrow left" icon ([58e56c9](https://github.com/dargmuesli/vio/commit/58e56c9bbe5e1163e00fc00f47f00d33219a85f6))
+* **layout:** add header and footer slots ([d9e0d00](https://github.com/dargmuesli/vio/commit/d9e0d005f8599c58b4887b1d1faaf95a60e217a3))
+
 ## [7.0.0](https://github.com/dargmuesli/vio/compare/6.0.0...7.0.0) (2023-09-14)
 
 
