@@ -1,3 +1,10 @@
+## [8.1.1](https://github.com/dargmuesli/vio/compare/8.1.0...8.1.1) (2023-09-14)
+
+
+### Bug Fixes
+
+* **form-input-email-address:** add `required` attribute ([ccfb18e](https://github.com/dargmuesli/vio/commit/ccfb18ee61648b8bf40bb9ad6aadcaa4b16991d4))
+
 ## [8.1.0](https://github.com/dargmuesli/vio/compare/8.0.0...8.1.0) (2023-09-14)
 
 
