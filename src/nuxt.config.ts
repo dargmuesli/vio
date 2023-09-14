@@ -141,6 +141,7 @@ export default defineNuxtConfig(
       },
       site: {
         debug: process.env.NODE_ENV === 'development',
+        id: 'vio',
         url: SITE_URL,
       },
       sitemap: {

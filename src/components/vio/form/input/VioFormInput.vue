@@ -158,12 +158,13 @@ const emit = defineEmits<{
 
 const { t } = useI18n()
 const runtimeConfig = useRuntimeConfig()
+const siteConfig = useSiteConfig()
 
 // data
 const idLabelFull = props.idLabel
-  ? `maevsi-${runtimeConfig.public.vio.isInProduction ? 'prod' : 'dev'}-${
-      props.idLabel
-    }`
+  ? `${siteConfig.id}-${
+      runtimeConfig.public.vio.isInProduction ? 'prod' : 'dev'
+    }-${props.idLabel}`
   : undefined
 
 // initialization

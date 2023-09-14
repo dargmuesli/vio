@@ -10,6 +10,7 @@ export default defineNuxtConfig(
 
       // modules
       site: {
+        id: 'vio-playground',
         twitter: '@dargmuesli',
       },
     },
