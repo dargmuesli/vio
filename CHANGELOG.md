@@ -1,3 +1,20 @@
+## [6.0.0](https://github.com/dargmuesli/vio/compare/5.0.2...6.0.0) (2023-09-14)
+
+
+### ⚠ BREAKING CHANGES
+
+* **site:** set description using plugin
+
+### Features
+
+* **error:** make status code optional ([1674458](https://github.com/dargmuesli/vio/commit/16744582dd3dcc615d8c905bcdb25aab58d3e922))
+* **site:** set description using plugin ([6c53ed6](https://github.com/dargmuesli/vio/commit/6c53ed6a97b3d39d780e91720eaff3d5d9ac09d4))
+
+
+### Bug Fixes
+
+* **site-config:** use default plugin enforcement ([2626bb6](https://github.com/dargmuesli/vio/commit/2626bb609e7bc4599fab119a447d0ee8d8af7ea0))
+
 ## [5.0.2](https://github.com/dargmuesli/vio/compare/5.0.1...5.0.2) (2023-09-13)
 
 
