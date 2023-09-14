@@ -1,3 +1,15 @@
+## [7.0.0](https://github.com/dargmuesli/vio/compare/6.0.0...7.0.0) (2023-09-14)
+
+
+### ⚠ BREAKING CHANGES
+
+* **form:** upgrade validator function
+
+### Features
+
+* **form:** adapt more inputs ([16d7faf](https://github.com/dargmuesli/vio/commit/16d7fafcfe7bff877cd2ee216e5f6a280cac1ba9))
+* **form:** upgrade validator function ([b994692](https://github.com/dargmuesli/vio/commit/b994692cd6907959b7cb8de0825c6b96a9593e62))
+
 ## [6.0.0](https://github.com/dargmuesli/vio/compare/5.0.2...6.0.0) (2023-09-14)
 
 
