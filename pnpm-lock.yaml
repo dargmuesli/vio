@@ -57,8 +57,8 @@ importers:
         specifier: 6.8.0
         version: 6.8.0(ts-node@10.9.1)(webpack@5.88.2)
       '@nuxtseo/module':
-        specifier: 2.0.0-beta.29
-        version: 2.0.0-beta.29(@nuxt/devtools@0.8.3)(@unhead/shared@1.7.0)(nuxt@3.7.2)(postcss@8.4.29)(unhead@1.7.0)(vite@4.4.9)(vue@3.3.4)(webpack@5.88.2)
+        specifier: 2.0.0-beta.30
+        version: 2.0.0-beta.30(@nuxt/devtools@0.8.3)(@unhead/shared@1.7.0)(nuxt@3.7.2)(postcss@8.4.29)(unhead@1.7.0)(vite@4.4.9)(vue@3.3.4)(webpack@5.88.2)
       '@pinia/nuxt':
         specifier: 0.4.11
         version: 0.4.11(typescript@5.2.2)(vue@3.3.4)
@@ -1478,7 +1478,7 @@ packages:
         optional: true
     dependencies:
       '@intlify/bundle-utils': 7.3.0(vue-i18n@9.3.0-beta.27)
-      '@intlify/shared': 9.3.0-beta.27
+      '@intlify/shared': 9.4.0
       '@rollup/pluginutils': 5.0.4(rollup@3.29.1)
       '@vue/compiler-sfc': 3.3.4
       debug: 4.3.4
@@ -2278,8 +2278,8 @@ packages:
       - webpack
     dev: false
 
-  /@nuxtseo/module@2.0.0-beta.29(@nuxt/devtools@0.8.3)(@unhead/shared@1.7.0)(nuxt@3.7.2)(postcss@8.4.29)(unhead@1.7.0)(vite@4.4.9)(vue@3.3.4)(webpack@5.88.2):
-    resolution: {integrity: sha512-nuZH0hlkZ6iMhllPJuf8ZN0G04bBjOX6GaBoEu6uSmEDxf7EYduFU5rMMH89gzIe8HNj7ZbkqC45AedIZLxu4Q==}
+  /@nuxtseo/module@2.0.0-beta.30(@nuxt/devtools@0.8.3)(@unhead/shared@1.7.0)(nuxt@3.7.2)(postcss@8.4.29)(unhead@1.7.0)(vite@4.4.9)(vue@3.3.4)(webpack@5.88.2):
+    resolution: {integrity: sha512-saX6HedQKD/8RAD5TKx3wZw7uPe86QzNGOL2brtMRkSoVJtcYov8eqxCeSgGuTzKBhe7B6ypI+P14WPUojVuFg==}
     dependencies:
       '@nuxt/kit': 3.7.2
       chalk: 5.3.0
@@ -2288,9 +2288,9 @@ packages:
       nuxt-og-image: 2.0.26
       nuxt-schema-org: 3.0.0-beta.1(@unhead/shared@1.7.0)(unhead@1.7.0)
       nuxt-seo-experiments: 3.1.4
-      nuxt-seo-ui: 0.3.4
+      nuxt-seo-ui: 0.3.5
       nuxt-simple-robots: 3.1.2
-      nuxt-simple-sitemap: 3.2.8(nuxt@3.7.2)(vite@4.4.9)
+      nuxt-simple-sitemap: 3.3.1(nuxt@3.7.2)(vite@4.4.9)
       nuxt-site-config: 1.2.1
       nuxt-site-config-kit: 1.2.1
       ufo: 1.3.0
@@ -4475,7 +4475,7 @@ packages:
     dependencies:
       ansi-align: 3.0.1
       camelcase: 7.0.1
-      chalk: 5.0.1
+      chalk: 5.3.0
       cli-boxes: 3.0.0
       string-width: 5.1.2
       type-fest: 2.19.0
@@ -8908,6 +8908,7 @@ packages:
 
   /napi-wasm@1.1.0:
     resolution: {integrity: sha512-lHwIAJbmLSjF9VDRm9GoVOy9AGp3aIvkjv+Kvz9h16QR3uSVYH78PNQUnT2U4X53mhlnV2M7wrhibQ3GHicDmg==}
+    requiresBuild: true
     dev: false
 
   /natural-compare@1.4.0:
@@ -9385,8 +9386,8 @@ packages:
       - supports-color
     dev: false
 
-  /nuxt-seo-ui@0.3.4:
-    resolution: {integrity: sha512-KbAxId8mgpi0Mib4iM+WpgveHgbJWOk7ttbwk3Fil/Y4mq1OKmnIVXevAneC/LCEE10nkfSyKCZQ5M/mNdBArA==}
+  /nuxt-seo-ui@0.3.5:
+    resolution: {integrity: sha512-6XHK5+fq2odyqlb2tPv7q+IenIMoWbpkTi0OZ+TF+EroXlvfkhHCwolfbhun5aJgzQfN73RPsTz5XOrlQadNTA==}
     dependencies:
       '@nuxt/kit': 3.7.2
       nuxt-site-config: 1.2.1
@@ -9413,8 +9414,8 @@ packages:
       - supports-color
     dev: false
 
-  /nuxt-simple-sitemap@3.2.8(nuxt@3.7.2)(vite@4.4.9):
-    resolution: {integrity: sha512-qWPrMuPvarbnHWTnxs2MNkrrrw1vW5rObRqKRPoCODVF/npqObGfmNeE7cOMnVOV8NAe0DFF/K1lCdAQord18w==}
+  /nuxt-simple-sitemap@3.3.1(nuxt@3.7.2)(vite@4.4.9):
+    resolution: {integrity: sha512-6eIW0NXlEC1pbZ8fMUKPVnO5aqAd9ZfAs6+Nn+bE1z9Cs9gO+buS41gs7had6hmFm+SZQTlXs3Fm5zfXpg82Ig==}
     dependencies:
       '@nuxt/devtools-kit': 0.8.3(nuxt@3.7.2)(vite@4.4.9)
       '@nuxt/kit': 3.7.2
