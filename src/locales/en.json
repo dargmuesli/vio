@@ -1,9 +1,11 @@
 {
+  "globalPlaceholderEmailAddress": "email{'@'}addre.ss",
   "globalPlaceholderUrl": "https://websi.te",
   "globalSeoSiteDescription": "Vio is {'@'}dargmuesli's Nuxt layer.",
   "globalStatusError": "Error",
   "globalStatusLoading": "Loading...",
   "globalValidationFailed": "Please check your input 🙈",
+  "globalValidationFormat": "Incorrect format",
   "globalValidationFormatIncorrect": "Incorrect format",
   "globalValidationFormatUrlHttps": "Must start with \"https://\"",
   "globalValidationLength": "Too long",

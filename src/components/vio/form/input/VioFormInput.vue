@@ -16,7 +16,7 @@
             'form-input-warning': warning,
             'form-input-error': value?.$error,
           }"
-          :for="idLabel"
+          :for="idLabelFull"
         >
           <span>{{ title }}</span>
           <span
@@ -36,7 +36,7 @@
           <slot v-if="$slots.default" />
           <input
             v-else
-            :id="idLabel"
+            :id="idLabelFull"
             class="form-input"
             :class="{
               'rounded-r-none': $slots.icon,
@@ -58,14 +58,14 @@
             </VioFormInputIconWrapper>
             <VioFormInputIconWrapper
               v-else-if="
-                validationProperty.$model && !validationProperty.$invalid
+                !!validationProperty.$model && !validationProperty.$invalid
               "
             >
               <VioIconCheckCircle class="text-green-600" :title="t('valid')" />
             </VioFormInputIconWrapper>
             <VioFormInputIconWrapper
               v-else-if="
-                validationProperty.$model && validationProperty.$invalid
+                !!validationProperty.$model && validationProperty.$invalid
               "
             >
               <VioIconExclamationCircle
@@ -82,6 +82,10 @@
         >
           <slot name="icon" />
         </span>
+      </div>
+      <div class="md:w-1/3" />
+      <div class="md:w-2/3">
+        <slot name="inputSuffix" />
       </div>
       <div class="md:w-1/3" />
       <div class="md:w-2/3">
@@ -102,6 +106,10 @@
       <div class="md:w-2/3">
         <slot name="stateError" />
       </div>
+      <div class="md:w-1/3" />
+      <div class="md:w-2/3">
+        <slot name="assistance" />
+      </div>
     </div>
   </div>
 </template>
@@ -119,7 +127,7 @@ export interface Props {
   idLabel?: string
   placeholder?: string
   success?: boolean
-  title?: string
+  title: string
   type?: string
   validationProperty?: BaseValidation
   value?: BaseValidation
@@ -135,14 +143,12 @@ const props = withDefaults(defineProps<Props>(), {
   idLabel: undefined,
   placeholder: undefined,
   success: false,
-  title: undefined,
   type: undefined,
   validationProperty: undefined,
   value: undefined,
   valueFormatter: (x?: string) => x,
   warning: false,
 })
-const typeProp = toRef(() => props.type)
 
 const emit = defineEmits<{
   icon: []
@@ -151,11 +157,19 @@ const emit = defineEmits<{
 }>()
 
 const { t } = useI18n()
+const runtimeConfig = useRuntimeConfig()
+
+// data
+const idLabelFull = props.idLabel
+  ? `maevsi-${runtimeConfig.public.vio.isInProduction ? 'prod' : 'dev'}-${
+      props.idLabel
+    }`
+  : undefined
 
 // initialization
 if (
   !props.placeholder &&
-  typeProp.value &&
+  props.type &&
   ![
     'checkbox',
     'datetime-local',
@@ -164,15 +178,15 @@ if (
     'textarea',
     'tiptap',
     'radio',
-  ].includes(typeProp.value)
+  ].includes(props.type)
 ) {
   consola.warn(`placeholder is missing for ${props.idLabel}!`)
 }
 
 if (
   !props.value &&
-  typeProp.value &&
-  !['checkbox', 'select'].includes(typeProp.value)
+  props.type &&
+  !['checkbox', 'select'].includes(props.type)
 ) {
   consola.warn(`value is missing for ${props.idLabel}!`)
 }

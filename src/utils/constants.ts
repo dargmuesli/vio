@@ -49,7 +49,6 @@ export const TITLE_TEMPLATE = ({
   siteName: string
   title?: string
 }) => (title && title !== siteName ? `${title} · ${siteName}` : siteName)
-export const VALIDATION_SUGGESTION_TITLE_LENGTH_MAXIMUM = 300
 export const VERIFICATION_FORMAT_UUID = helpers.regex(REGEX_UUID)
 export const VIO_NUXT_BASE_CONFIG = ({
   defaultLocale,
