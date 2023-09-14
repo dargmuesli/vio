@@ -1,19 +1,20 @@
-import type { ApiData } from '../types/api'
+import { consola } from 'consola'
 
-export const formPreSubmit = async (
-  api: ApiData,
-  v$: any,
-  isFormSent: Ref<boolean>,
-): Promise<boolean> => {
-  api.value.errors = []
+export const isFormValid = async ({
+  v$,
+  isFormSent,
+}: {
+  v$: any
+  isFormSent: Ref<boolean>
+}): Promise<boolean> => {
   v$.value.$touch()
 
-  const isFormValid = await v$.value.$validate()
-  isFormSent.value = isFormValid
+  const isValid = await v$.value.$validate()
+  isFormSent.value = isValid
 
-  if (!isFormValid) {
-    throw new Error('Form is invalid!')
+  if (!isValid) {
+    consola.error('Form in invalid!')
   }
 
-  return isFormValid
+  return isValid
 }
