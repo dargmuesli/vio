@@ -32,6 +32,9 @@ importers:
       '@dargmuesli/nuxt-cookie-control':
         specifier: 6.4.2
         version: 6.4.2(webpack@5.88.2)
+      '@heroicons/vue':
+        specifier: 2.0.18
+        version: 2.0.18(vue@3.3.4)
       '@http-util/status-i18n':
         specifier: 0.8.1
         version: 0.8.1
@@ -1293,6 +1296,14 @@ packages:
     resolution: {integrity: sha512-foQZKJig7Ob0BMAYBfcJk8d77QtOe7Wo4ox7ff1lQYoNNAb6jwcY1ncdoy2e9wQZzvNy7ODZCYJkK8kzmcAnAg==}
     dependencies:
       '@hapi/hoek': 9.3.0
+    dev: false
+
+  /@heroicons/vue@2.0.18(vue@3.3.4):
+    resolution: {integrity: sha512-BcTC9nq2TkwNSfQuqo96J7ehx4etezypc2YeTq7KsXWxrcrerhkgjLrxGRBnStN0wrXo0Gv4BInybqz5uBG6Cw==}
+    peerDependencies:
+      vue: '>= 3'
+    dependencies:
+      vue: 3.3.4
     dev: false
 
   /@html-validate/stylish@4.2.0:

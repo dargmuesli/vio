@@ -7,9 +7,10 @@
 <script setup lang="ts">
 export interface Props {
   classes?: string
-  title: string
+  title?: string
 }
 withDefaults(defineProps<Props>(), {
   classes: 'h-5 md:h-6 w-5 md:w-6 shrink-0',
+  title: undefined,
 })
 </script>
