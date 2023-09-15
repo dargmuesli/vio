@@ -43,6 +43,7 @@
             }"
             :disabled="isDisabled"
             :placeholder="placeholder"
+            :name="name || idLabelFull"
             :readonly="isReadonly"
             :type="type"
             :value="valueFormatter(value?.$model as string)"
@@ -119,12 +120,13 @@ import type { BaseValidation } from '@vuelidate/core'
 import { consola } from 'consola'
 
 export interface Props {
+  idLabel?: string
   isDisabled?: boolean
   isOptional?: boolean
   isReadonly?: boolean
   isRequired?: boolean
   isValidatable?: boolean
-  idLabel?: string
+  name?: string
   placeholder?: string
   success?: boolean
   title: string
@@ -135,12 +137,13 @@ export interface Props {
   warning?: boolean
 }
 const props = withDefaults(defineProps<Props>(), {
+  idLabel: undefined,
   isDisabled: false,
   isOptional: false,
   isReadonly: false,
   isRequired: false,
   isValidatable: false,
-  idLabel: undefined,
+  name: undefined,
   placeholder: undefined,
   success: false,
   type: undefined,
