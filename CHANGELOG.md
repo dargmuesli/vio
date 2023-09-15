@@ -1,3 +1,16 @@
+## [8.2.0](https://github.com/dargmuesli/vio/compare/8.1.2...8.2.0) (2023-09-15)
+
+
+### Features
+
+* **components:** add contact form ([48e9d90](https://github.com/dargmuesli/vio/commit/48e9d900e21209e00407230ad84b0970f7a99ab5))
+* **form-input:** add name property ([375119e](https://github.com/dargmuesli/vio/commit/375119e03fda1ee9a92009de2b1aa08faba16fa8))
+
+
+### Bug Fixes
+
+* **form-input-email-address:** always show form error ([d3ca3d2](https://github.com/dargmuesli/vio/commit/d3ca3d2258822a941bc486140e243d212f20b778))
+
 ## [8.1.2](https://github.com/dargmuesli/vio/compare/8.1.1...8.1.2) (2023-09-14)
 
 
