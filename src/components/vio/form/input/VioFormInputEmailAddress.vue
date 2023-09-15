@@ -24,7 +24,6 @@
         {{ t('globalValidationLength') }}
       </VioFormInputStateError>
       <VioFormInputStateError
-        v-if="isRequired"
         :form-input="formInput"
         validation-property="required"
       >
