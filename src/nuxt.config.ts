@@ -43,6 +43,7 @@ export default defineNuxtConfig(
       },
       modules: [
         '@dargmuesli/nuxt-cookie-control',
+        '@nuxt/devtools',
         '@nuxt/image',
         '@nuxtjs/color-mode',
         '@nuxtjs/html-validator',
@@ -154,14 +155,30 @@ export default defineNuxtConfig(
               'script-src-elem': ['https://*.googletagmanager.com'],
             },
             {
-              // Vio
+              // vio
               'manifest-src': ['http://localhost:3000/site.webmanifest'],
               'script-src-elem': [
                 'https://polyfill.io/v3/polyfill.min.js', // ESLint plugin compat
               ],
             },
             {
-              // Nuxt
+              // @nuxt/devtools
+              'frame-src': [
+                ...(process.env.NODE_ENV === 'development'
+                  ? ['http://localhost:3000/__nuxt_devtools__/client/']
+                  : []),
+              ],
+            },
+            {
+              // nuxt-link-checker
+              'connect-src': [
+                ...(process.env.NODE_ENV === 'development'
+                  ? ['http://localhost:3000/api/__link_checker__/inspect']
+                  : []),
+              ],
+            },
+            {
+              // nuxt
               'connect-src': [
                 ...(process.env.NODE_ENV === 'development'
                   ? [
@@ -183,7 +200,7 @@ export default defineNuxtConfig(
               ],
             },
             {
-              // Base
+              // base
               'base-uri': ["'none'"], // does not fallback to `default-src`
               'child-src': [],
               'connect-src': [],
