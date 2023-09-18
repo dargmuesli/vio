@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>{{ `${statusCode ? `${statusCode} - ` : ''}${statusReason}` }}</h1>
+    <h1>{{ title }}</h1>
     <div>
       {{ description }}
     </div>
@@ -29,9 +29,14 @@ const props = withDefaults(defineProps<Props>(), {
 const runtimeConfig = useRuntimeConfig()
 const { locale, t } = useI18n()
 
-// computations
-const statusReason = computed(() => {
-  return status(props.statusCode, locale.value) || t('error')
+// data
+const title = `${props.statusCode ? `${props.statusCode} - ` : ''}${
+  status(props.statusCode, locale.value) || t('error')
+}`
+
+// initialization
+useHeadDefault({
+  title,
 })
 </script>
 
