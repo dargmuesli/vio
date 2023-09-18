@@ -1,7 +1,7 @@
 import { IncomingMessage, ServerResponse } from 'node:http'
 
 import { consola } from 'consola'
-import { parse, serialize } from 'cookie'
+import { parse, serialize } from 'cookie-es'
 import { decodeJwt } from 'jose'
 import { Store } from 'pinia'
 

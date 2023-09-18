@@ -74,9 +74,6 @@ importers:
       '@tailwindcss/typography':
         specifier: 0.5.10
         version: 0.5.10(tailwindcss@3.3.3)
-      '@types/cookie':
-        specifier: 0.5.2
-        version: 0.5.2
       '@types/lodash-es':
         specifier: 4.17.9
         version: 4.17.9
@@ -101,9 +98,9 @@ importers:
       clipboard:
         specifier: 2.0.11
         version: 2.0.11
-      cookie:
-        specifier: 0.5.0
-        version: 0.5.0
+      cookie-es:
+        specifier: 1.0.0
+        version: 1.0.0
       cross-env:
         specifier: 7.0.3
         version: 7.0.3
@@ -2929,10 +2926,6 @@ packages:
       minimatch: 9.0.3
     dev: false
 
-  /@types/cookie@0.5.2:
-    resolution: {integrity: sha512-DBpRoJGKJZn7RY92dPrgoMew8xCWc2P71beqsjyhEI/Ds9mOyVmBwtekyfhpwFIVt1WrxTonFifiOZ62V8CnNA==}
-    dev: false
-
   /@types/eslint-scope@3.7.4:
     resolution: {integrity: sha512-9K4zoImiZc3HlIp6AVUDE4CWYx22a+lhSZMYNpbjW04+YF0KWj4pJXnEMjdnFTiQibFFmElcsasJXDbdI/EPhA==}
     dependencies:
@@ -5096,11 +5089,6 @@ packages:
 
   /cookie-es@1.0.0:
     resolution: {integrity: sha512-mWYvfOLrfEc996hlKcdABeIiPHUPC6DM2QYZdGGOvhOTbA3tjm2eBwqlJpoFdjC89NI4Qt6h0Pu06Mp+1Pj5OQ==}
-    dev: false
-
-  /cookie@0.5.0:
-    resolution: {integrity: sha512-YZ3GUyn/o8gfKJlnlX7g7xq4gyO6OSuhGPKaaGssGB2qgDUS0gPgtTvoyZLTt9Ab6dC4hfc9dV5arkvc/OCmrw==}
-    engines: {node: '>= 0.6'}
     dev: false
 
   /cookies@0.8.0:
