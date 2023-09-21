@@ -194,7 +194,8 @@ export default defineNuxtConfig(
                 'data:', // external link icon
               ],
               'script-src-elem': ["'nonce-{{nonce}}'"],
-              'style-src-elem': [
+              'style-src': [
+                // TODO: replace with `style-src-elem` once Webkit supports it
                 "'self'", // TODO: replace with `"'nonce-{{nonce}}'",` (https://github.com/vitejs/vite/pull/11864)
                 "'unsafe-inline'", // TODO: replace with `"'nonce-{{nonce}}'",` (https://github.com/vitejs/vite/pull/11864)
               ],
@@ -223,7 +224,8 @@ export default defineNuxtConfig(
               'style-src': [],
               'style-src-attr': [],
               'style-src-elem': [],
-              'upgrade-insecure-requests': true,
+              'upgrade-insecure-requests':
+                process.env.NODE_ENV === 'production',
               'worker-src': [],
             },
           ),
