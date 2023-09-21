@@ -249,6 +249,7 @@ export default defineNuxtConfig(
         url: SITE_URL,
       },
       sitemap: {
+        credits: false,
         exclude: I18N_MODULE_CONFIG.locales.map(
           (locale) =>
             `/${locale.code !== 'en' ? `${locale.code}/` : ''}api/pages/**`,
