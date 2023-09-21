@@ -546,6 +546,6 @@ export const testMetadata = async ({
   }
 
   expect(await page.locator('#schema-org-graph').innerText()).toMatchSnapshot(
-    `schema-org-graph-${process.env.VIO_SERVER}.json`,
+    `schema-org-graph-${process.env.VIO_SERVER || 'dev'}.json`,
   )
 }
