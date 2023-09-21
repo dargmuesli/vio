@@ -7,19 +7,8 @@ import { getTimezone } from '../../utils/networking'
 
 export default defineEventHandler(async (event) => {
   setRequestHeader(event, TIMEZONE_HEADER_KEY, await getTimezone(event))
-  // setContentSecurityPolicy(event);
   setResponseHeaders(event)
 })
-
-// const setContentSecurityPolicy = (event: H3Event) => {
-//   const config = useAppConfig();
-
-//   appendHeader(
-//     event,
-//     "Content-Security-Policy",
-//     getCspAsString(config.public.vio.server.middleware.headers.csp)
-//   );
-// };
 
 const setRequestHeader = (event: H3Event, name: string, value?: string) => {
   event.node.req.headers[name] = value
