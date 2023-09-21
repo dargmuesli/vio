@@ -15,22 +15,22 @@ test.beforeEach(async ({ context }) => {
   ])
 })
 
-test.describe('a11y', () => {
+test.describe('accessibility', () => {
   test('violations', async ({ page }) => {
     await page.goto('/')
     await PAGE_READY({ page })
     const accessibilityScanResults = await new AxeBuilder({ page }).analyze()
-    // expect(
-    //   accessibilityScanResults.violations
-    //     .map(
-    //       (x) =>
-    //         `${x.id}\n${x.nodes.map(
-    //           (y) => `${y.failureSummary}\n(${y.html})`,
-    //         )}`,
-    //     )
-    //     .join('\n'),
-    // ).toEqual('')
-    expect(accessibilityScanResults.violations.length).toEqual(0)
+    expect(
+      accessibilityScanResults.violations
+        .map(
+          (x) =>
+            `${x.id}\n${x.nodes.map(
+              (y) => `${y.failureSummary}\n(${y.html}\n(${y.target})`,
+            )}`,
+        )
+        .join('\n'),
+    ).toEqual('')
+    // expect(accessibilityScanResults.violations.length).toEqual(0)
   })
 })
 
