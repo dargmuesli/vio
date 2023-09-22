@@ -138,6 +138,9 @@ export default defineNuxtConfig(
       linkChecker: {
         failOnError: true,
       },
+      robots: {
+        credits: false,
+      },
       security: {
         headers: {
           contentSecurityPolicy: defu(

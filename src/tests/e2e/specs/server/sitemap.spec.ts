@@ -1,35 +1,37 @@
 import { test, expect } from '@playwright/test'
+import { SITE_URL } from '../../../../utils/constants'
+
+const path = '/sitemap_index.xml'
 
 test.describe('page load', () => {
   test('loads the page successfully', async ({ request }) => {
-    const resp = await request.get('/sitemap.xml')
+    const resp = await request.get(path)
     expect(resp.status()).toBe(200)
   })
 })
 
 test.describe('sitemap', () => {
+  const languages = ['en', 'de']
+
   test('index', async ({ request }) => {
-    const resp = await request.get('/sitemap_index.xml')
+    const resp = await request.get(path)
     const text = await resp.text()
 
-    for (const lang of ['en', 'de']) {
-      expect(text).toContain(
-        `http://localhost:${
-          process.env.NODE_ENV === 'production' ? '3001' : '3000'
-        }/${lang}-sitemap.xml`,
-      )
+    for (const language of languages) {
+      expect(text).toContain(`${SITE_URL}/${language}-sitemap.xml`)
     }
   })
 
   test('content', async ({ request }) => {
-    for (const lang of ['en', 'de']) {
-      const resp = await request.get(`/${lang}-sitemap.xml`)
+    for (const language of languages) {
+      const resp = await request.get(`/${language}-sitemap.xml`)
       const text = await resp.text()
-      expect(text.replace(/\n.+<\/lastmod>/g, '')).toMatchSnapshot(
-        `sitemap-content-${lang}-${
-          process.env.NODE_ENV === 'production' ? 'production' : 'development'
-        }.txt`,
-      )
+
+      expect(
+        text
+          .replace(/\n.+<\/lastmod>/g, '')
+          .replace(new RegExp(SITE_URL, 'g'), 'https://example.com'),
+      ).toMatchSnapshot(`sitemap-content-${language}.txt`)
     }
   })
 })

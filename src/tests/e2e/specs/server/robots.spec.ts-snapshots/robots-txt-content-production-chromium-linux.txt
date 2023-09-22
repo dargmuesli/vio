@@ -1,6 +1,4 @@
-# START nuxt-simple-robots (indexable)
 User-agent: *
 Disallow: 
 
-Sitemap: http://localhost:3001/sitemap_index.xml
-# END nuxt-simple-robots
+Sitemap: https://example.com/sitemap_index.xml

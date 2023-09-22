@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test'
 
 test.describe('headers middleware', () => {
-  test('sets the correct CSP header', async ({ request }) => {
+  test('sets the correct security headers', async ({ request }) => {
     const headers = (await request.get('/')).headers()
 
     // expect(JSON.stringify(headers)).toMatchSnapshot()
