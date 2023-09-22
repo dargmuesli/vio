@@ -16,7 +16,8 @@
   },
   "pnpm": {
     "overrides": {
-      "nuxt-og-image": "2.1.0-beta.0"
+      "nuxt-og-image": "2.1.0-beta.0",
+      "nuxt-site-config": "1.2.2"
     }
   }
 }
