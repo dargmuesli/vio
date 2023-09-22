@@ -159,7 +159,7 @@ export default defineNuxtConfig(
             },
             {
               // vio
-              'manifest-src': ['http://localhost:3000/site.webmanifest'],
+              'manifest-src': [`${SITE_URL}/site.webmanifest`],
               'script-src-elem': [
                 'https://polyfill.io/v3/polyfill.min.js', // ESLint plugin compat
               ],
@@ -195,6 +195,7 @@ export default defineNuxtConfig(
                       'wss://localhost:24678/_nuxt/', // Nuxt development
                     ]
                   : []),
+                // : ["'self'"]), // for `/*_payload.json`
               ],
               'img-src': [
                 "'self'", // TODO: replace with `"'nonce-{{nonce}}'",`
