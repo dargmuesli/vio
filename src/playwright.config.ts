@@ -87,7 +87,7 @@ export default defineConfig({
       NUXT_PUBLIC_VIO_IS_TESTING: 'true',
     },
     timeout: process.env.NODE_ENV === 'production' ? 10000 : 100000,
-    url: process.env.SITE_URL || SITE_URL,
+    url: SITE_URL,
     reuseExistingServer: !process.env.CI,
   },
 
