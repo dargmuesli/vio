@@ -18,10 +18,10 @@ test.describe('headers middleware', () => {
             "; frame-ancestors 'none'" +
             "; img-src https://*.google-analytics.com https://*.googletagmanager.com 'self' data:" +
             "; style-src 'self' 'unsafe-inline'" +
-            '; upgrade-insecure-requests' +
+            // '; upgrade-insecure-requests' + // TODO: enable when tests run on https
             '; connect-src https://*.analytics.google.com https://*.google-analytics.com https://*.googletagmanager.com' +
             "; default-src 'none'" +
-            "; script-src-elem https://*.googletagmanager.com https://polyfill.io/v3/polyfill.min.js 'nonce'" +
+            "; script-src-elem https://*.googletagmanager.com https://polyfill.io/v3/polyfill.min.js http://localhost:3000/__sitemap__/style.xsl 'nonce'" +
             '; manifest-src http://localhost:3000/site.webmanifest'
         : "base-uri 'none'" +
             "; form-action 'none'" +
@@ -31,7 +31,7 @@ test.describe('headers middleware', () => {
             '; connect-src https://*.analytics.google.com https://*.google-analytics.com https://*.googletagmanager.com http://localhost:3000/api/__link_checker__/inspect http://localhost:24678/_nuxt/ https://localhost:24678/_nuxt/ ws://localhost:24678/_nuxt/ wss://localhost:24678/_nuxt/' +
             "; default-src 'none'" +
             '; frame-src http://localhost:3000/__nuxt_devtools__/client/' +
-            "; script-src-elem https://*.googletagmanager.com https://polyfill.io/v3/polyfill.min.js 'nonce'" +
+            "; script-src-elem https://*.googletagmanager.com https://polyfill.io/v3/polyfill.min.js http://localhost:3000/__sitemap__/style.xsl 'nonce'" +
             '; manifest-src http://localhost:3000/site.webmanifest',
     )
     expect('cross-origin-embedder-policy' in headers).toBeFalsy() // https://stackoverflow.com/questions/71904052/getting-notsameoriginafterdefaultedtosameoriginbycoep-error-with-helmet

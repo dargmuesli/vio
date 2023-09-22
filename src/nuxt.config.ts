@@ -178,6 +178,10 @@ export default defineNuxtConfig(
               ],
             },
             {
+              // nuxt-simple-sitemap
+              'script-src-elem': [`${SITE_URL}/__sitemap__/style.xsl`],
+            },
+            {
               // nuxt
               'connect-src': [
                 ...(process.env.NODE_ENV === 'development'
@@ -224,8 +228,7 @@ export default defineNuxtConfig(
               'style-src': [],
               'style-src-attr': [],
               'style-src-elem': [],
-              'upgrade-insecure-requests':
-                process.env.NODE_ENV === 'production',
+              'upgrade-insecure-requests': false, // TODO: set to `process.env.NODE_ENV === 'production'` or `true` when tests run on https
               'worker-src': [],
             },
           ),
