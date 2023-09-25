@@ -13,5 +13,10 @@
   },
   "scripts": {
     "prepare": "husky install"
+  },
+  "pnpm": {
+    "overrides": {
+      "nuxt-site-config": "1.2.2"
+    }
   }
 }
