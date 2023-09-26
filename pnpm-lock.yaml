@@ -177,8 +177,8 @@ importers:
         specifier: 7.0.0
         version: 7.0.0(stylelint@15.10.3)
       sweetalert2:
-        specifier: 11.7.29
-        version: 11.7.29
+        specifier: 11.7.31
+        version: 11.7.31
       tailwindcss:
         specifier: 3.3.3
         version: 3.3.3(ts-node@10.9.1)
@@ -1471,7 +1471,7 @@ packages:
         optional: true
     dependencies:
       '@intlify/bundle-utils': 7.3.0(vue-i18n@9.3.0-beta.27)
-      '@intlify/shared': 9.3.0-beta.27
+      '@intlify/shared': 9.4.1
       '@rollup/pluginutils': 5.0.4(rollup@3.29.3)
       '@vue/compiler-sfc': 3.3.4
       debug: 4.3.4
@@ -11595,8 +11595,8 @@ packages:
       picocolors: 1.0.0
     dev: false
 
-  /sweetalert2@11.7.29:
-    resolution: {integrity: sha512-oXl//RcQGDWUZqU3fB6zq4qjHQYelIQ9FaJWucsH2tNkN9YGfk0XCAa836rfnV9mNOsaI18gWgIn0NFp0iXAcw==}
+  /sweetalert2@11.7.31:
+    resolution: {integrity: sha512-AVNODg41LqhC241UHTanW2ZQdh0ziiw+Gc3Dmy1EuCFP+g09P3mBEhvauU88J3JLEX6UpTfhp7iok9t8uhEdQQ==}
     dev: false
 
   /synckit@0.8.5:
