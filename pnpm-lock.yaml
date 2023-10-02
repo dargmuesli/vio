@@ -138,8 +138,8 @@ importers:
         specifier: 1.20.0
         version: 1.20.0
       jose:
-        specifier: 4.14.6
-        version: 4.14.6
+        specifier: 4.15.1
+        version: 4.15.1
       lint-staged:
         specifier: 14.0.1
         version: 14.0.1
@@ -7703,8 +7703,8 @@ packages:
       '@sideway/pinpoint': 2.0.0
     dev: false
 
-  /jose@4.14.6:
-    resolution: {integrity: sha512-EqJPEUlZD0/CSUMubKtMaYUOtWe91tZXTWMJZoKSbLk+KtdhNdcvppH8lA9XwVu2V4Ailvsj0GBZJ2ZwDjfesQ==}
+  /jose@4.15.1:
+    resolution: {integrity: sha512-CinpaEMmwb/59YG0N6SC3DY1imdTU5iNl08HPWR7NdyxACPeFuQbqjaocEjCDGq04KbnxSqQu702vL3ZTvKe5w==}
     dev: false
 
   /js-cookie@3.0.5:
