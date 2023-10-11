@@ -13,7 +13,7 @@
 </template>
 
 <script setup lang="ts">
-export interface Props {
+interface Props {
   url: string
 }
 withDefaults(defineProps<Props>(), {})

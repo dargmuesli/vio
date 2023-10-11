@@ -19,7 +19,7 @@
 <script setup lang="ts">
 import { debounce } from 'lodash-es'
 
-export interface Props {
+interface Props {
   alt: string
   aspect: string
   classes?: string

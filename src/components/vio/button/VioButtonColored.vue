@@ -30,7 +30,7 @@
 </template>
 
 <script setup lang="ts">
-export interface Props {
+interface Props {
   ariaLabel: string
   disabled?: boolean
   isPrimary?: boolean

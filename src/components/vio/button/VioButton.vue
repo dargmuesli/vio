@@ -28,7 +28,7 @@
 </template>
 
 <script setup lang="ts">
-export interface Props {
+interface Props {
   ariaLabel: string
   classes?: string
   disabled?: boolean
