@@ -18,7 +18,7 @@ import { UnwrapRef } from 'vue'
 
 import { ApiData } from '@dargmuesli/nuxt-vio/types/api'
 
-export interface Props {
+interface Props {
   api: UnwrapRef<ApiData>
   errorPgIds?: Record<string, string>
   classes?: string

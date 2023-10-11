@@ -27,7 +27,7 @@
 <script setup lang="ts">
 import { NuxtLinkProps } from '#app'
 
-export interface Props {
+interface Props {
   ariaLabel?: string
   isColored?: boolean
   isToRelative?: boolean

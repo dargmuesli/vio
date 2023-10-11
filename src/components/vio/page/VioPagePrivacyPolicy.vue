@@ -433,7 +433,7 @@
 </template>
 
 <script setup lang="ts">
-export interface Props {
+interface Props {
   isEnabled?: {
     summary?: {
       generalNotes?: boolean

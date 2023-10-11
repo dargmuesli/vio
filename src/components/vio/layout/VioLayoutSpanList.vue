@@ -13,7 +13,7 @@
 </template>
 
 <script setup lang="ts">
-export interface Props {
+interface Props {
   span: Array<string | Array<string>>
 }
 withDefaults(defineProps<Props>(), {})

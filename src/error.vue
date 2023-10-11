@@ -12,7 +12,7 @@
 <script setup lang="ts">
 import { NuxtError } from 'nuxt/app'
 
-export interface Props {
+interface Props {
   error: NuxtError
 }
 const props = withDefaults(defineProps<Props>(), {})

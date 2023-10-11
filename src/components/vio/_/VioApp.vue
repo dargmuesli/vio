@@ -8,7 +8,7 @@
 </template>
 
 <script setup lang="ts">
-export interface Props {
+interface Props {
   ogImageAlt: string
   ogImageComponent?: string
 }
