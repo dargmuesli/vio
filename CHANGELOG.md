@@ -1,3 +1,10 @@
+## [8.2.4](https://github.com/dargmuesli/vio/compare/8.2.3...8.2.4) (2023-10-16)
+
+
+### Bug Fixes
+
+* **deps:** update ([2d43e1b](https://github.com/dargmuesli/vio/commit/2d43e1b331318a068bec29b5aff7a18546c8d694))
+
 ## [8.2.3](https://github.com/dargmuesli/vio/compare/8.2.2...8.2.3) (2023-10-11)
 
 
