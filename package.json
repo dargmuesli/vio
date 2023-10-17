@@ -8,7 +8,6 @@
     "@commitlint/cli": "17.8.0",
     "@commitlint/config-conventional": "17.8.0",
     "@dargmuesli/nuxt-vio": "link:src",
-    "conventional-changelog-conventionalcommits": "7.0.2",
     "husky": "8.0.3"
   },
   "scripts": {
