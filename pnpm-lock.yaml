@@ -78,8 +78,8 @@ importers:
         specifier: 0.5.3
         version: 0.5.3
       '@types/lodash-es':
-        specifier: 4.17.9
-        version: 4.17.9
+        specifier: 4.17.10
+        version: 4.17.10
       '@urql/core':
         specifier: 4.1.3
         version: 4.1.3(graphql@16.8.1)
@@ -2938,8 +2938,8 @@ packages:
       '@types/node': 20.8.6
     dev: false
 
-  /@types/lodash-es@4.17.9:
-    resolution: {integrity: sha512-ZTcmhiI3NNU7dEvWLZJkzG6ao49zOIjEgIE0RgV7wbPxU0f2xT3VSAHw2gmst8swH6V0YkLRGp4qPlX/6I90MQ==}
+  /@types/lodash-es@4.17.10:
+    resolution: {integrity: sha512-YJP+w/2khSBwbUSFdGsSqmDvmnN3cCKoPOL7Zjle6s30ZtemkkqhjVfFqGwPN7ASil5VyjE2GtyU/yqYY6mC0A==}
     dependencies:
       '@types/lodash': 4.14.199
     dev: false
