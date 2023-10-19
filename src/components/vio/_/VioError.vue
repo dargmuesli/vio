@@ -14,7 +14,7 @@
 <script setup lang="ts">
 import { status } from '@http-util/status-i18n'
 
-export interface Props {
+interface Props {
   statusCode?: number
   statusMessage?: string
   description: string

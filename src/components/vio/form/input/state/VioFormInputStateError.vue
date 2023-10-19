@@ -19,7 +19,7 @@
 <script setup lang="ts">
 import type { BaseValidation } from '@vuelidate/core'
 
-export interface Props {
+interface Props {
   formInput?: BaseValidation
   isValidationLive?: boolean
   validationProperty?: string

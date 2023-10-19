@@ -29,7 +29,7 @@
 <script setup lang="ts">
 import type { BaseValidation } from '@vuelidate/core'
 
-export interface Props {
+interface Props {
   formInput: BaseValidation
   id?: string
   isOptional?: boolean

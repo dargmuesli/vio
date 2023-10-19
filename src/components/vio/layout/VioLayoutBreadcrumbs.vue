@@ -60,7 +60,7 @@ export interface Breadcrumb {
   to: string
 }
 
-export interface Props {
+interface Props {
   prefixes?: Array<Breadcrumb>
   suffixes?: Array<Breadcrumb>
 }

@@ -15,7 +15,7 @@
 </template>
 
 <script setup lang="ts">
-export interface Props {
+interface Props {
   title?: string // eslint-disable-line vue/require-default-prop
 }
 withDefaults(defineProps<Props>(), {})

@@ -1,3 +1,31 @@
+## [8.2.4](https://github.com/dargmuesli/vio/compare/8.2.3...8.2.4) (2023-10-16)
+
+
+### Bug Fixes
+
+* **deps:** update ([2d43e1b](https://github.com/dargmuesli/vio/commit/2d43e1b331318a068bec29b5aff7a18546c8d694))
+
+## [8.2.3](https://github.com/dargmuesli/vio/compare/8.2.2...8.2.3) (2023-10-11)
+
+
+### Bug Fixes
+
+* schedule release ([63c27a2](https://github.com/dargmuesli/vio/commit/63c27a260f1c939a3d6e9139fa95dcd39ea944b1))
+
+## [8.2.2](https://github.com/dargmuesli/vio/compare/8.2.1...8.2.2) (2023-10-07)
+
+
+### Bug Fixes
+
+* schedule release ([4d3fa34](https://github.com/dargmuesli/vio/commit/4d3fa34eabd7ea18ddc59485f34f88271da5f0d4))
+
+## [8.2.1](https://github.com/dargmuesli/vio/compare/8.2.0...8.2.1) (2023-09-23)
+
+
+### Bug Fixes
+
+* schedule release ([5078ce8](https://github.com/dargmuesli/vio/commit/5078ce85da9fa40ef66211089404b5931882909d))
+
 ## [8.2.0](https://github.com/dargmuesli/vio/compare/8.1.2...8.2.0) (2023-09-15)
 
 

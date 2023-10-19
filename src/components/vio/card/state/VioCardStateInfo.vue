@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-export interface Props {
+interface Props {
   isEdgy?: boolean
 }
 withDefaults(defineProps<Props>(), {

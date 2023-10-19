@@ -119,7 +119,7 @@
 import type { BaseValidation } from '@vuelidate/core'
 import { consola } from 'consola'
 
-export interface Props {
+interface Props {
   idLabel?: string
   isDisabled?: boolean
   isOptional?: boolean

@@ -3,12 +3,11 @@
   "engines": {
     "node": "20"
   },
-  "packageManager": "pnpm@8.7.6",
+  "packageManager": "pnpm@8.9.2",
   "devDependencies": {
-    "@commitlint/cli": "17.7.1",
-    "@commitlint/config-conventional": "17.7.0",
+    "@commitlint/cli": "17.8.0",
+    "@commitlint/config-conventional": "17.8.0",
     "@dargmuesli/nuxt-vio": "link:src",
-    "conventional-changelog-conventionalcommits": "7.0.2",
     "husky": "8.0.3"
   },
   "scripts": {
