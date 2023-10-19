@@ -1,4 +1,4 @@
-import { decodeJwt, JWTPayload } from 'jose'
+import { decodeJwt, type JWTPayload } from 'jose'
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
 
