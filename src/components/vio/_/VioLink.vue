@@ -25,7 +25,7 @@
 </template>
 
 <script setup lang="ts">
-import { NuxtLinkProps } from '#app'
+import type { NuxtLinkProps } from '#app'
 
 interface Props {
   ariaLabel?: string

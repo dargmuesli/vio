@@ -3,7 +3,7 @@ import { IncomingMessage, ServerResponse } from 'node:http'
 import { consola } from 'consola'
 import { parse, serialize } from 'cookie'
 import { decodeJwt } from 'jose'
-import { Store } from 'pinia'
+import type { Store } from 'pinia'
 
 import { useVioAuthStore } from '../store/auth'
 import { xhrPromise } from '../utils/networking'

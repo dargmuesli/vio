@@ -1,6 +1,6 @@
 import { consola } from 'consola'
 import Swal from 'sweetalert2'
-import { Ref } from 'vue'
+import type { Ref } from 'vue'
 
 export const useFireError = () => {
   const { t } = useI18n()

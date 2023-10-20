@@ -14,9 +14,9 @@
 </template>
 
 <script setup lang="ts">
-import { UnwrapRef } from 'vue'
+import type { UnwrapRef } from 'vue'
 
-import { ApiData } from '@dargmuesli/nuxt-vio/types/api'
+import type { ApiData } from '@dargmuesli/nuxt-vio/types/api'
 
 interface Props {
   api: UnwrapRef<ApiData>
