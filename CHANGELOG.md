@@ -1,3 +1,10 @@
+## [8.2.5](https://github.com/dargmuesli/vio/compare/8.2.4...8.2.5) (2023-10-20)
+
+
+### Bug Fixes
+
+* **nuxt:** workaround `extends` types ([068bd75](https://github.com/dargmuesli/vio/commit/068bd755a003a4b08709c843a16382f518b5da99))
+
 ## [8.2.4](https://github.com/dargmuesli/vio/compare/8.2.3...8.2.4) (2023-10-16)
 
 

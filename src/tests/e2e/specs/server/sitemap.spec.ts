@@ -1,4 +1,6 @@
 import { test, expect } from '@playwright/test'
+import { escapeRegExp } from 'lodash-es'
+
 import { SITE_URL } from '../../../../utils/constants'
 
 const path = '/sitemap_index.xml'
@@ -30,7 +32,10 @@ test.describe('sitemap', () => {
       expect(
         text
           .replace(/\n.+<\/lastmod>/g, '')
-          .replace(new RegExp(SITE_URL, 'g'), 'https://example.com'),
+          .replace(
+            new RegExp(escapeRegExp(SITE_URL), 'g'),
+            'https://example.com',
+          ),
       ).toMatchSnapshot(`sitemap-content-${language}.txt`)
     }
   })

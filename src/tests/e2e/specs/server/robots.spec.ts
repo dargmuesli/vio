@@ -1,4 +1,6 @@
 import { test, expect } from '@playwright/test'
+import { escapeRegExp } from 'lodash-es'
+
 import { SITE_URL } from '../../../../utils/constants'
 
 const path = '/robots.txt'
@@ -15,7 +17,7 @@ test.describe('robots.txt', () => {
     const resp = await request.get(path)
     expect(
       (await resp.text()).replace(
-        new RegExp(SITE_URL, 'g'),
+        new RegExp(escapeRegExp(SITE_URL), 'g'),
         'https://example.com',
       ),
     ).toMatchSnapshot(

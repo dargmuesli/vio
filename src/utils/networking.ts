@@ -2,7 +2,7 @@ import { CombinedError } from '@urql/core'
 import { H3Event, getCookie } from 'h3'
 
 import { ofetch } from 'ofetch'
-import { Ref } from 'vue'
+import { type Ref } from 'vue'
 
 import type { ApiData, BackendError } from '../types/api'
 import { TIMEZONE_COOKIE_NAME } from './constants'
