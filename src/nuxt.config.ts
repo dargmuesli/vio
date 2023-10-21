@@ -189,10 +189,10 @@ export default defineNuxtConfig(
               'connect-src': [
                 ...(process.env.NODE_ENV === 'development'
                   ? [
-                      'http://localhost:24678/_nuxt/', // Nuxt development
-                      'https://localhost:24678/_nuxt/', // Nuxt development
-                      'ws://localhost:24678/_nuxt/', // Nuxt development
-                      'wss://localhost:24678/_nuxt/', // Nuxt development
+                      'http://localhost:3000/_nuxt/', // Nuxt development
+                      'https://localhost:3000/_nuxt/', // Nuxt development
+                      'ws://localhost:3000/_nuxt/', // Nuxt development
+                      'wss://localhost:3000/_nuxt/', // Nuxt development
                     ]
                   : []),
                 // : ["'self'"]), // for `/*_payload.json`
