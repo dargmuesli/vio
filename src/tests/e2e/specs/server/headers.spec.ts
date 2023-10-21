@@ -23,8 +23,8 @@ test.describe('headers middleware', () => {
             // '; upgrade-insecure-requests' + // TODO: enable when tests run on https
             "; connect-src https://*.analytics.google.com https://*.google-analytics.com https://*.googletagmanager.com 'self'" +
             "; default-src 'none'" +
-            "; script-src-elem https://*.googletagmanager.com https://polyfill.io/v3/polyfill.min.js http://localhost:3001/__sitemap__/style.xsl 'nonce'" +
-            '; manifest-src http://localhost:3001/site.webmanifest'
+            "; script-src-elem https://*.googletagmanager.com https://polyfill.io/v3/polyfill.min.js http://localhost:3000/__sitemap__/style.xsl 'nonce'" +
+            '; manifest-src http://localhost:3000/site.webmanifest'
         : "base-uri 'none'" +
             "; form-action 'none'" +
             "; frame-ancestors 'none'" +
