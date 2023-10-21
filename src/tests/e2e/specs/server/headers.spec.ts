@@ -2,6 +2,8 @@ import { test, expect } from '@playwright/test'
 
 test.describe('headers middleware', () => {
   test('sets the correct security headers', async ({ request }) => {
+    if (process.env.VIO_SERVER === 'static') return
+
     const headers = (await request.get('/')).headers()
 
     // expect(JSON.stringify(headers)).toMatchSnapshot()
@@ -19,7 +21,7 @@ test.describe('headers middleware', () => {
             "; img-src https://*.google-analytics.com https://*.googletagmanager.com 'self' data:" +
             "; style-src 'self' 'unsafe-inline'" +
             // '; upgrade-insecure-requests' + // TODO: enable when tests run on https
-            '; connect-src https://*.analytics.google.com https://*.google-analytics.com https://*.googletagmanager.com http://localhost:3001/_nuxt/builds/meta/' +
+            "; connect-src https://*.analytics.google.com https://*.google-analytics.com https://*.googletagmanager.com 'self'" +
             "; default-src 'none'" +
             "; script-src-elem https://*.googletagmanager.com https://polyfill.io/v3/polyfill.min.js http://localhost:3001/__sitemap__/style.xsl 'nonce'" +
             '; manifest-src http://localhost:3001/site.webmanifest'
