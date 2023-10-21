@@ -1,3 +1,23 @@
+## [8.3.0](https://github.com/dargmuesli/vio/compare/8.2.5...8.3.0) (2023-10-21)
+
+
+### Features
+
+* **api:** only respond to get requests ([de3b57a](https://github.com/dargmuesli/vio/commit/de3b57a0d5828fca2984092d026fe0334d3b9b05))
+* **error:** use title in head ([8733f06](https://github.com/dargmuesli/vio/commit/8733f062c682872f770d6d31aac085a474d18836))
+* **nuxt:** add security module ([14b4c2a](https://github.com/dargmuesli/vio/commit/14b4c2aeb7996c160b38b574e4938085ceef3ad9))
+* **webmanifest:** add start url ([7d5fa19](https://github.com/dargmuesli/vio/commit/7d5fa19f657b0e353d4e970a08a19392f8a8ada8))
+
+
+### Bug Fixes
+
+* **csp:** allow build metadata ([8dcdab9](https://github.com/dargmuesli/vio/commit/8dcdab9c039216ef27251999601f242a43da379f))
+* **csp:** allow connection source 'self' ([41d7839](https://github.com/dargmuesli/vio/commit/41d783930fd78fa81847d10016ec7c8da7c63ef7))
+* **csp:** update websocket port ([6271510](https://github.com/dargmuesli/vio/commit/6271510c2752783b028e7825b79b6e80186e891f))
+* **nuxt-security:** extend content security policy configuration ([ef96907](https://github.com/dargmuesli/vio/commit/ef9690765e1752d0a2efb76dfe041b0df4b0e0c2))
+* **nuxt-security:** update configuration ([5204b65](https://github.com/dargmuesli/vio/commit/5204b65ad4cd165ba37a03f103057129d8fdc23b))
+* **security:** improve content security policy ([2371a29](https://github.com/dargmuesli/vio/commit/2371a2981be592313e8a908ba94fa8a691ed0172))
+
 ## [8.2.5](https://github.com/dargmuesli/vio/compare/8.2.4...8.2.5) (2023-10-20)
 
 
