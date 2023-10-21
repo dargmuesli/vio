@@ -194,7 +194,7 @@ export default defineNuxtConfig(
                       'ws://localhost:3000/_nuxt/', // Nuxt development
                       'wss://localhost:3000/_nuxt/', // Nuxt development
                     ]
-                  : [`${SITE_URL}/_nuxt/builds/meta/`]),
+                  : ["'self'"]), // Nuxt build metadata and payloads
               ],
               'img-src': [
                 "'self'", // TODO: replace with `"'nonce-{{nonce}}'",`
