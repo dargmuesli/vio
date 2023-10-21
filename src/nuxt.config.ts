@@ -43,6 +43,7 @@ export default defineNuxtConfig(
       },
       modules: [
         '@dargmuesli/nuxt-cookie-control',
+        '@nuxt/devtools',
         '@nuxt/image',
         '@nuxtjs/color-mode',
         '@nuxtjs/html-validator',
@@ -50,6 +51,7 @@ export default defineNuxtConfig(
         '@nuxtjs/tailwindcss',
         '@nuxtseo/module',
         '@pinia/nuxt',
+        'nuxt-security',
       ],
       nitro: {
         compressPublicAssets: true,
@@ -136,6 +138,118 @@ export default defineNuxtConfig(
       linkChecker: {
         failOnError: true,
       },
+      robots: {
+        credits: false,
+      },
+      security: {
+        headers: {
+          contentSecurityPolicy: defu(
+            {
+              // Google Analytics 4 (https://developers.google.com/tag-platform/tag-manager/web/csp)
+              'connect-src': [
+                'https://*.analytics.google.com',
+                'https://*.google-analytics.com',
+                'https://*.googletagmanager.com',
+              ],
+              'img-src': [
+                'https://*.google-analytics.com',
+                'https://*.googletagmanager.com',
+              ],
+              'script-src-elem': ['https://*.googletagmanager.com'],
+            },
+            {
+              // vio
+              'manifest-src': [`${SITE_URL}/site.webmanifest`],
+              'script-src-elem': [
+                'https://polyfill.io/v3/polyfill.min.js', // ESLint plugin compat
+              ],
+            },
+            {
+              // @nuxt/devtools
+              'frame-src': [
+                ...(process.env.NODE_ENV === 'development'
+                  ? ['http://localhost:3000/__nuxt_devtools__/client/']
+                  : []),
+              ],
+            },
+            {
+              // nuxt-link-checker
+              'connect-src': [
+                ...(process.env.NODE_ENV === 'development'
+                  ? ['http://localhost:3000/api/__link_checker__/inspect']
+                  : []),
+              ],
+            },
+            {
+              // nuxt-simple-sitemap
+              'script-src-elem': [`${SITE_URL}/__sitemap__/style.xsl`],
+            },
+            {
+              // nuxt
+              'connect-src': [
+                ...(process.env.NODE_ENV === 'development'
+                  ? [
+                      'http://localhost:3000/_nuxt/', // Nuxt development
+                      'https://localhost:3000/_nuxt/', // Nuxt development
+                      'ws://localhost:3000/_nuxt/', // Nuxt development
+                      'wss://localhost:3000/_nuxt/', // Nuxt development
+                    ]
+                  : ["'self'"]), // Nuxt build metadata and payloads
+              ],
+              'img-src': [
+                "'self'", // TODO: replace with `"'nonce-{{nonce}}'",`
+                'data:', // external link icon
+              ],
+              'script-src-elem': ["'nonce-{{nonce}}'"],
+              'style-src': [
+                // TODO: replace with `style-src-elem` once Webkit supports it
+                "'self'", // TODO: replace with `"'nonce-{{nonce}}'",` (https://github.com/vitejs/vite/pull/11864)
+                "'unsafe-inline'", // TODO: replace with `"'nonce-{{nonce}}'",` (https://github.com/vitejs/vite/pull/11864)
+              ],
+            },
+            {
+              // base
+              'base-uri': ["'none'"], // does not fallback to `default-src`
+              'child-src': [],
+              'connect-src': [],
+              'default-src': ["'none'"],
+              'font-src': [],
+              'form-action': ["'none'"], // does not fallback to `default-src`
+              'frame-ancestors': ["'none'"], // does not fallback to `default-src`
+              'frame-src': [],
+              'img-src': [],
+              'media-src': [],
+              'navigate-to': [],
+              'object-src': [],
+              'prefetch-src': [],
+              'report-to': [],
+              'report-uri': [],
+              sandbox: [],
+              'script-src': [],
+              'script-src-attr': [],
+              'script-src-elem': [],
+              'style-src': [],
+              'style-src-attr': [],
+              'style-src-elem': [],
+              'upgrade-insecure-requests': false, // TODO: set to `process.env.NODE_ENV === 'production'` or `true` when tests run on https
+              'worker-src': [],
+            },
+          ),
+          crossOriginEmbedderPolicy: false, // https://stackoverflow.com/questions/71904052/getting-notsameoriginafterdefaultedtosameoriginbycoep-error-with-helmet
+          strictTransportSecurity:
+            process.env.NODE_ENV === 'production'
+              ? {
+                  maxAge: 31536000,
+                  includeSubdomains: true,
+                  preload: true,
+                }
+              : false,
+          xXSSProtection: '1; mode=block', // TODO: set back to `0` once CSP does not use `unsafe-*` anymore (https://github.com/maevsi/maevsi/issues/1047)
+        },
+        nonce: {
+          enabled: true,
+        },
+      },
       seo: {
         splash: false,
       },
@@ -145,6 +259,7 @@ export default defineNuxtConfig(
         url: SITE_URL,
       },
       sitemap: {
+        credits: false,
         exclude: I18N_MODULE_CONFIG.locales.map(
           (locale) =>
             `/${locale.code !== 'en' ? `${locale.code}/` : ''}api/pages/**`,
