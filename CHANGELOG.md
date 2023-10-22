@@ -1,3 +1,14 @@
+## [8.3.4](https://github.com/dargmuesli/vio/compare/8.3.3...8.3.4) (2023-10-22)
+
+
+### Bug Fixes
+
+* **csp:** add `nuxt-og-image` ([1bb3aa4](https://github.com/dargmuesli/vio/commit/1bb3aa4ffd376d4287225f84f8b9db8ba6324c3c))
+* **modules:** correct order ([21c2fb7](https://github.com/dargmuesli/vio/commit/21c2fb73d7d5df0cfd7d7586a6efcd514d83520b))
+* **modules:** correct order ([8f671ee](https://github.com/dargmuesli/vio/commit/8f671ee11158ff30fd8cc2deecff076aa057a10a))
+* **modules:** tweak nuxt-security configuration ([efa37e2](https://github.com/dargmuesli/vio/commit/efa37e2aaca2736c13c9ef5c95466e0995f24e20))
+* **nuxt-security:** add cloudflare csp ([d7aa969](https://github.com/dargmuesli/vio/commit/d7aa96968bb5bee71b0499529995acda0f805f4c))
+
 ## [8.3.3](https://github.com/dargmuesli/vio/compare/8.3.2...8.3.3) (2023-10-22)
 
 
