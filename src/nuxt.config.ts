@@ -192,6 +192,21 @@ export default defineNuxtConfig(
               ],
             },
             {
+              // nuxt-og-image
+              ...(process.env.NODE_ENV === 'development'
+                ? {
+                    'font-src': ['https://fonts.gstatic.com/s/inter/'],
+                    'frame-ancestors': ["'self'"],
+                    'frame-src': ["'self'"],
+                    'script-src-elem': ['https://cdn.tailwindcss.com/'],
+                    'style-src': [
+                      // TODO: replace with `style-src-elem` once Webkit supports it
+                      'https://cdn.jsdelivr.net/npm/gardevoir https://fonts.googleapis.com/css2',
+                    ],
+                  }
+                : {}),
+            },
+            {
               // nuxt-simple-sitemap
               'script-src-elem': [`${SITE_URL}/__sitemap__/style.xsl`],
             },
@@ -235,6 +250,8 @@ export default defineNuxtConfig(
               'prefetch-src': [],
               'report-to': [],
               'report-uri': [],
+              // TODO: evaluate header (https://github.com/maevsi/maevsi/issues/830) // https://stackoverflow.com/questions/62081028/this-document-requires-trustedscripturl-assignment
+              // 'require-trusted-types-for': ["'script'"], // csp-evaluator
               sandbox: [],
               'script-src': [],
               'script-src-attr': [],
