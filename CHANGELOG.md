@@ -1,3 +1,14 @@
+## [9.0.0-beta.1](https://github.com/dargmuesli/vio/compare/8.3.4...9.0.0-beta.1) (2023-10-22)
+
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** use as development dependencies
+
+### Miscellaneous Chores
+
+* **deps:** use as development dependencies ([33b2adf](https://github.com/dargmuesli/vio/commit/33b2adf7ed6b3cbd0a6dc2320c9691912fcc70af))
+
 ## [8.3.4](https://github.com/dargmuesli/vio/compare/8.3.3...8.3.4) (2023-10-22)
 
 
