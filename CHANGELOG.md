@@ -1,3 +1,10 @@
+## [9.0.0-beta.2](https://github.com/dargmuesli/vio/compare/9.0.0-beta.1...9.0.0-beta.2) (2023-10-22)
+
+
+### Reverts
+
+* Revert "chore(deps)!: use as development dependencies" ([b3742cf](https://github.com/dargmuesli/vio/commit/b3742cf26835d0c7b91f7ef6cf051440e2c72108))
+
 ## [9.0.0-beta.1](https://github.com/dargmuesli/vio/compare/8.3.4...9.0.0-beta.1) (2023-10-22)
 
 
