@@ -30,8 +30,8 @@ importers:
         specifier: 4.8.1
         version: 4.8.1(playwright-core@1.39.0)
       '@dargmuesli/nuxt-cookie-control':
-        specifier: 7.0.0-beta.2
-        version: 7.0.0-beta.2(webpack@5.89.0)
+        specifier: 7.0.1
+        version: 7.0.1(webpack@5.89.0)
       '@heroicons/vue':
         specifier: 2.0.18
         version: 2.0.18(vue@3.3.6)
@@ -57,8 +57,8 @@ importers:
         specifier: 1.5.2
         version: 1.5.2
       '@nuxtjs/i18n':
-        specifier: 8.0.0-rc.5
-        version: 8.0.0-rc.5(vue@3.3.6)
+        specifier: npm:@nuxtjs/i18n-edge@8.0.0-rc.5-28296269.d5d5540
+        version: /@nuxtjs/i18n-edge@8.0.0-rc.5-28296269.d5d5540(vue-router@4.2.5)(vue@3.3.6)
       '@nuxtjs/tailwindcss':
         specifier: 6.8.0
         version: 6.8.0(ts-node@10.9.1)(webpack@5.89.0)
@@ -80,6 +80,9 @@ importers:
       '@types/lodash-es':
         specifier: 4.17.10
         version: 4.17.10
+      '@unhead/vue':
+        specifier: 1.7.4
+        version: 1.7.4(vue@3.3.6)
       '@urql/core':
         specifier: 4.1.4
         version: 4.1.4(graphql@16.8.1)
@@ -101,6 +104,9 @@ importers:
       clipboard:
         specifier: 2.0.11
         version: 2.0.11
+      consola:
+        specifier: 3.2.3
+        version: 3.2.3
       cookie-es:
         specifier: 1.0.0
         version: 1.0.0
@@ -110,6 +116,9 @@ importers:
       dayjs:
         specifier: 2.0.0-alpha.4
         version: 2.0.0-alpha.4
+      defu:
+        specifier: 6.1.2
+        version: 6.1.2
       eslint:
         specifier: 8.52.0
         version: 8.52.0
@@ -128,6 +137,9 @@ importers:
       eslint-plugin-yml:
         specifier: 1.10.0
         version: 1.10.0(eslint@8.52.0)
+      h3:
+        specifier: 1.8.2
+        version: 1.8.2
       is-https:
         specifier: 4.0.0
         version: 4.0.0
@@ -149,6 +161,9 @@ importers:
       nuxt-security:
         specifier: 1.0.0-rc.2
         version: 1.0.0-rc.2(vite@4.5.0)(webpack@5.89.0)
+      ofetch:
+        specifier: 1.3.3
+        version: 1.3.3
       pinia:
         specifier: 2.1.7
         version: 2.1.7(typescript@5.2.2)(vue@3.3.6)
@@ -182,12 +197,21 @@ importers:
       tailwindcss:
         specifier: 3.3.3
         version: 3.3.3(ts-node@10.9.1)
+      ufo:
+        specifier: 1.3.1
+        version: 1.3.1
+      unhead:
+        specifier: 1.7.4
+        version: 1.7.4
       vue:
         specifier: 3.3.6
         version: 3.3.6(typescript@5.2.2)
       vue-gtag:
         specifier: 2.0.1
         version: 2.0.1(vue@3.3.6)
+      vue-router:
+        specifier: 4.2.5
+        version: 4.2.5(vue@3.3.6)
       vue-tsc:
         specifier: 1.8.19
         version: 1.8.19(typescript@5.2.2)
@@ -816,8 +840,8 @@ packages:
       postcss-selector-parser: 6.0.13
     dev: false
 
-  /@dargmuesli/nuxt-cookie-control@7.0.0-beta.2(webpack@5.89.0):
-    resolution: {integrity: sha512-DFuRDvCgQeIUk1z1XH5adAZvtopsJEsNZnZrqHOq1fNM2He9riyfCNwT9NqtOy3aQ89Blmsbh6n7nIUzeAx+QQ==}
+  /@dargmuesli/nuxt-cookie-control@7.0.1(webpack@5.89.0):
+    resolution: {integrity: sha512-/JTOcpVjZZL0og0TcHvxjIpEaiCnhBKUtGN5pOh9nXvVczKLF687r1XZwZZM+oTUPxJSZpaq7zn1Y4Ug4mazsw==}
     engines: {node: '>=16'}
     dependencies:
       '@nuxt/kit': 3.8.0
@@ -1529,7 +1553,7 @@ packages:
       vue-i18n: 9.5.0(vue@3.3.6)
     dev: false
 
-  /@intlify/vue-router-bridge@1.0.1(vue@3.3.6):
+  /@intlify/vue-router-bridge@1.0.1(vue-router@4.2.5)(vue@3.3.6):
     resolution: {integrity: sha512-P8XjgUZ7dYXhDpGGXmAA/l9VEG4LHIt0mESd0377tRBupDLIEhmZ1IahG8Al1VzG+5yHmwb568pGIJoFEJZEMA==}
     engines: {node: '>= 12'}
     hasBin: true
@@ -1544,6 +1568,7 @@ packages:
         optional: true
     dependencies:
       vue-demi: 0.13.11(vue@3.3.6)
+      vue-router: 4.2.5(vue@3.3.6)
     transitivePeerDependencies:
       - vue
     dev: false
@@ -2196,8 +2221,8 @@ packages:
       - supports-color
     dev: false
 
-  /@nuxtjs/i18n@8.0.0-rc.5(vue@3.3.6):
-    resolution: {integrity: sha512-iNOh9erVx8/sKtQcz/YZIPTGT/xcf/fmAHbGLb20qecRGOWFMsRb62n9T9taS4WtJwUn1AFc0S7395xqpRkJHw==}
+  /@nuxtjs/i18n-edge@8.0.0-rc.5-28296269.d5d5540(vue-router@4.2.5)(vue@3.3.6):
+    resolution: {integrity: sha512-H9sDeKvhxp1yCxleXvs+kY0xgHp/8z72lAg7WIyYxt4GgRYNPRTkpv043wSRAwK2gc72W66v3PZJO8gO4dM+/g==}
     engines: {node: ^14.16.0 || >=16.11.0}
     dependencies:
       '@intlify/shared': 9.5.0
@@ -2205,22 +2230,19 @@ packages:
       '@mizchi/sucrase': 4.1.0
       '@nuxt/kit': 3.8.0
       '@vue/compiler-sfc': 3.3.6
-      cookie-es: 1.0.0
       debug: 4.3.4
       defu: 6.1.2
       estree-walker: 3.0.3
       is-https: 4.0.0
-      js-cookie: 3.0.5
       knitwork: 1.0.0
       magic-string: 0.30.5
       mlly: 1.4.2
       pathe: 1.1.1
-      pkg-types: 1.0.3
       ufo: 1.3.1
       unplugin: 1.5.0
       unstorage: 1.9.0
       vue-i18n: 9.5.0(vue@3.3.6)
-      vue-i18n-routing: 1.1.1(vue-i18n@9.5.0)(vue@3.3.6)
+      vue-i18n-routing: 1.1.1(vue-i18n@9.5.0)(vue-router@4.2.5)(vue@3.3.6)
     transitivePeerDependencies:
       - '@azure/app-configuration'
       - '@azure/cosmos'
@@ -7699,11 +7721,6 @@ packages:
     resolution: {integrity: sha512-W+oqK4H+r5sITxfxpSU+MMdr/YSWGvgZMQDIsNoBDGGy4i7GBPTtvFKibQzW06n3U3TqHjhvBJsirShsEJ6eeQ==}
     dev: false
 
-  /js-cookie@3.0.5:
-    resolution: {integrity: sha512-cEiJEAEoIbWfCZYKWhVwFuvPX1gETRYPw6LlaTKoxD3s2AkXzkCjnp6h0V77ozyqj0jakteJ4YqDJT830+lVGw==}
-    engines: {node: '>=14'}
-    dev: false
-
   /js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
 
@@ -12781,7 +12798,7 @@ packages:
       vue: 3.3.6(typescript@5.2.2)
     dev: false
 
-  /vue-i18n-routing@1.1.1(vue-i18n@9.5.0)(vue@3.3.6):
+  /vue-i18n-routing@1.1.1(vue-i18n@9.5.0)(vue-router@4.2.5)(vue@3.3.6):
     resolution: {integrity: sha512-VhND1ErGylDy4fjuGXiHXqvIhvyLwZH2RRqbgHiLaUudjjkcgSGc8hfVNgMzF+v6X3bcx4ZkPsYyKvdIzJw77A==}
     engines: {node: '>= 14.6'}
     peerDependencies:
@@ -12804,11 +12821,12 @@ packages:
     dependencies:
       '@intlify/shared': 9.5.0
       '@intlify/vue-i18n-bridge': 1.0.1(vue-i18n@9.5.0)
-      '@intlify/vue-router-bridge': 1.0.1(vue@3.3.6)
+      '@intlify/vue-router-bridge': 1.0.1(vue-router@4.2.5)(vue@3.3.6)
       ufo: 1.3.1
       vue: 3.3.6(typescript@5.2.2)
       vue-demi: 0.14.6(vue@3.3.6)
       vue-i18n: 9.5.0(vue@3.3.6)
+      vue-router: 4.2.5(vue@3.3.6)
     dev: false
 
   /vue-i18n@9.5.0(vue@3.3.6):
