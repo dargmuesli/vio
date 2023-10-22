@@ -49,6 +49,7 @@ export default defineNuxtConfig(
         '@nuxtjs/html-validator',
         '@nuxtjs/i18n',
         '@nuxtjs/tailwindcss',
+        '@nuxtseo/module',
         '@pinia/nuxt',
         // nuxt-security: remove invalid `'none'`s
         (_options, nuxt) => {
@@ -74,13 +75,12 @@ export default defineNuxtConfig(
                     string,
                     any
                   >
-                )[key] = valueFiltered
+                )[key] = [...new Set(valueFiltered)]
               }
             }
           }
         },
         'nuxt-security',
-        '@nuxtseo/module',
       ],
       nitro: {
         compressPublicAssets: true,
@@ -177,7 +177,7 @@ export default defineNuxtConfig(
               // Cloudflare
               ...(process.env.NODE_ENV === 'production'
                 ? {
-                    'connect-src': [`${SITE_URL}/cdn-cgi/rum`],
+                    'connect-src': ["'self'"], // `${SITE_URL}/cdn-cgi/rum`
                     'script-src-elem': [
                       'https://static.cloudflareinsights.com',
                     ],
@@ -199,6 +199,7 @@ export default defineNuxtConfig(
             },
             {
               // vio
+              'connect-src': ["'self'"], // `${SITE_URL}/api/healthcheck`
               'manifest-src': [`${SITE_URL}/site.webmanifest`],
               'script-src-elem': [
                 'https://polyfill.io/v3/polyfill.min.js', // ESLint plugin compat
@@ -206,7 +207,6 @@ export default defineNuxtConfig(
             },
             {
               // @nuxt/devtools
-
               ...(process.env.NODE_ENV === 'development'
                 ? {
                     'frame-src': [
@@ -219,9 +219,7 @@ export default defineNuxtConfig(
               // nuxt-link-checker
               ...(process.env.NODE_ENV === 'development'
                 ? {
-                    'connect-src': [
-                      'http://localhost:3000/api/__link_checker__/inspect',
-                    ],
+                    'connect-src': ["'self'"], // 'http://localhost:3000/api/__link_checker__/inspect'
                   }
                 : {}),
             },
@@ -249,12 +247,12 @@ export default defineNuxtConfig(
               'connect-src': [
                 ...(process.env.NODE_ENV === 'development'
                   ? [
-                      'http://localhost:3000/_nuxt/', // Nuxt development
-                      'https://localhost:3000/_nuxt/', // Nuxt development
-                      'ws://localhost:3000/_nuxt/', // Nuxt development
-                      'wss://localhost:3000/_nuxt/', // Nuxt development
+                      'http://localhost:3000/_nuxt/', // hot reload
+                      'https://localhost:3000/_nuxt/', // hot reload
+                      'ws://localhost:3000/_nuxt/', // hot reload
+                      'wss://localhost:3000/_nuxt/', // hot reload
                     ]
-                  : ["'self'"]), // Nuxt build metadata and payloads
+                  : ["'self'"]), // build metadata and payloads
               ],
               'img-src': [
                 "'self'", // TODO: replace with `"'nonce-{{nonce}}'",`
