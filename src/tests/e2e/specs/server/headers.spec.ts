@@ -21,19 +21,20 @@ test.describe('headers middleware', () => {
             "; img-src https://*.google-analytics.com https://*.googletagmanager.com 'self' data:" +
             "; style-src 'self' 'unsafe-inline'" +
             // '; upgrade-insecure-requests' + // TODO: enable when tests run on https
-            "; connect-src https://*.analytics.google.com https://*.google-analytics.com https://*.googletagmanager.com 'self'" +
+            "; connect-src http://localhost:3000/cdn-cgi/rum https://*.analytics.google.com https://*.google-analytics.com https://*.googletagmanager.com 'self'" +
             "; default-src 'none'" +
-            "; script-src-elem https://*.googletagmanager.com https://polyfill.io/v3/polyfill.min.js http://localhost:3000/__sitemap__/style.xsl 'nonce'" +
+            "; script-src-elem https://static.cloudflareinsights.com https://*.googletagmanager.com https://polyfill.io/v3/polyfill.min.js http://localhost:3000/__sitemap__/style.xsl 'nonce'" +
             '; manifest-src http://localhost:3000/site.webmanifest'
         : "base-uri 'none'" +
+            '; font-src https://fonts.gstatic.com/s/inter/' +
             "; form-action 'none'" +
-            "; frame-ancestors 'none'" +
+            "; frame-ancestors 'self'" +
             "; img-src https://*.google-analytics.com https://*.googletagmanager.com 'self' data:" +
-            "; style-src 'self' 'unsafe-inline'" +
+            "; style-src https://cdn.jsdelivr.net/npm/gardevoir https://fonts.googleapis.com/css2 'self' 'unsafe-inline'" +
             '; connect-src https://*.analytics.google.com https://*.google-analytics.com https://*.googletagmanager.com http://localhost:3000/api/__link_checker__/inspect http://localhost:3000/_nuxt/ https://localhost:3000/_nuxt/ ws://localhost:3000/_nuxt/ wss://localhost:3000/_nuxt/' +
             "; default-src 'none'" +
-            '; frame-src http://localhost:3000/__nuxt_devtools__/client/' +
-            "; script-src-elem https://*.googletagmanager.com https://polyfill.io/v3/polyfill.min.js http://localhost:3000/__sitemap__/style.xsl 'nonce'" +
+            "; frame-src http://localhost:3000/__nuxt_devtools__/client/ 'self'" +
+            "; script-src-elem https://*.googletagmanager.com https://polyfill.io/v3/polyfill.min.js https://cdn.tailwindcss.com/ http://localhost:3000/__sitemap__/style.xsl 'nonce'" +
             '; manifest-src http://localhost:3000/site.webmanifest',
     )
     expect('cross-origin-embedder-policy' in headers).toBeFalsy() // https://stackoverflow.com/questions/71904052/getting-notsameoriginafterdefaultedtosameoriginbycoep-error-with-helmet

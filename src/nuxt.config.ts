@@ -49,9 +49,38 @@ export default defineNuxtConfig(
         '@nuxtjs/html-validator',
         '@nuxtjs/i18n',
         '@nuxtjs/tailwindcss',
-        '@nuxtseo/module',
         '@pinia/nuxt',
+        // nuxt-security: remove invalid `'none'`s
+        (_options, nuxt) => {
+          const nuxtConfigSecurity = nuxt.options.security
+
+          if (
+            typeof nuxtConfigSecurity.headers !== 'boolean' &&
+            nuxtConfigSecurity.headers.contentSecurityPolicy &&
+            typeof nuxtConfigSecurity.headers.contentSecurityPolicy !==
+              'boolean' &&
+            typeof nuxtConfigSecurity.headers.contentSecurityPolicy !== 'string'
+          ) {
+            for (const [key, value] of Object.entries(
+              nuxtConfigSecurity.headers.contentSecurityPolicy,
+            )) {
+              if (!Array.isArray(value)) continue
+
+              const valueFiltered = value.filter((x) => x !== "'none'")
+
+              if (valueFiltered.length) {
+                ;(
+                  nuxtConfigSecurity.headers.contentSecurityPolicy as Record<
+                    string,
+                    any
+                  >
+                )[key] = valueFiltered
+              }
+            }
+          }
+        },
         'nuxt-security',
+        '@nuxtseo/module',
       ],
       nitro: {
         compressPublicAssets: true,
@@ -145,6 +174,17 @@ export default defineNuxtConfig(
         headers: {
           contentSecurityPolicy: defu(
             {
+              // Cloudflare
+              ...(process.env.NODE_ENV === 'production'
+                ? {
+                    'connect-src': [`${SITE_URL}/cdn-cgi/rum`],
+                    'script-src-elem': [
+                      'https://static.cloudflareinsights.com',
+                    ],
+                  }
+                : {}),
+            },
+            {
               // Google Analytics 4 (https://developers.google.com/tag-platform/tag-manager/web/csp)
               'connect-src': [
                 'https://*.analytics.google.com',
@@ -179,6 +219,21 @@ export default defineNuxtConfig(
                   ? ['http://localhost:3000/api/__link_checker__/inspect']
                   : []),
               ],
+            },
+            {
+              // nuxt-og-image
+              ...(process.env.NODE_ENV === 'development'
+                ? {
+                    'font-src': ['https://fonts.gstatic.com/s/inter/'],
+                    'frame-ancestors': ["'self'"],
+                    'frame-src': ["'self'"],
+                    'script-src-elem': ['https://cdn.tailwindcss.com/'],
+                    'style-src': [
+                      // TODO: replace with `style-src-elem` once Webkit supports it
+                      'https://cdn.jsdelivr.net/npm/gardevoir https://fonts.googleapis.com/css2',
+                    ],
+                  }
+                : {}),
             },
             {
               // nuxt-simple-sitemap
@@ -224,6 +279,8 @@ export default defineNuxtConfig(
               'prefetch-src': [],
               'report-to': [],
               'report-uri': [],
+              // TODO: evaluate header (https://github.com/maevsi/maevsi/issues/830) // https://stackoverflow.com/questions/62081028/this-document-requires-trustedscripturl-assignment
+              // 'require-trusted-types-for': ["'script'"], // csp-evaluator
               sandbox: [],
               'script-src': [],
               'script-src-attr': [],
