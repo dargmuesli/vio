@@ -1,3 +1,15 @@
+## [8.4.0](https://github.com/dargmuesli/vio/compare/8.3.4...8.4.0) (2023-10-22)
+
+
+### Features
+
+* **nitro:** enable open api ([4e2fcf8](https://github.com/dargmuesli/vio/commit/4e2fcf8abcd1fa020e3b5384f98e542021f857f3))
+
+
+### Bug Fixes
+
+* **csp:** rework headers ([bb5a849](https://github.com/dargmuesli/vio/commit/bb5a8499ec962c0c5d24526be3db73590e73276f))
+
 ## [8.3.4](https://github.com/dargmuesli/vio/compare/8.3.3...8.3.4) (2023-10-22)
 
 
