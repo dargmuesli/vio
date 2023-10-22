@@ -1,3 +1,10 @@
+## [8.3.3](https://github.com/dargmuesli/vio/compare/8.3.2...8.3.3) (2023-10-22)
+
+
+### Bug Fixes
+
+* **deps:** update dargmuesli/github-actions action to v1.1.7 ([1544880](https://github.com/dargmuesli/vio/commit/15448809a47f157b873068ad9b73efd5e8defe11))
+
 ## [8.3.2](https://github.com/dargmuesli/vio/compare/8.3.1...8.3.2) (2023-10-22)
 
 
