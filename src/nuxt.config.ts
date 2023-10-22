@@ -42,6 +42,14 @@ export default defineNuxtConfig(
         },
       },
       modules: [
+        '@dargmuesli/nuxt-cookie-control',
+        '@nuxt/devtools',
+        '@nuxt/image',
+        '@nuxtjs/color-mode',
+        '@nuxtjs/html-validator',
+        '@nuxtjs/i18n',
+        '@nuxtjs/tailwindcss',
+        '@pinia/nuxt',
         // nuxt-security: remove invalid `'none'`s
         (_options, nuxt) => {
           const nuxtConfigSecurity = nuxt.options.security
@@ -72,16 +80,7 @@ export default defineNuxtConfig(
           }
         },
         'nuxt-security',
-
-        '@dargmuesli/nuxt-cookie-control',
-        '@nuxt/devtools',
-        '@nuxt/image',
-        '@nuxtjs/color-mode',
-        '@nuxtjs/html-validator',
-        '@nuxtjs/i18n',
-        '@nuxtjs/tailwindcss',
         '@nuxtseo/module',
-        '@pinia/nuxt',
       ],
       nitro: {
         compressPublicAssets: true,
