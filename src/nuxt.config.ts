@@ -42,6 +42,35 @@ export default defineNuxtConfig(
         },
       },
       modules: [
+        // nuxt-security: remove invalid `'none'`s
+        (_options, nuxt) => {
+          const nuxtConfigSecurity = nuxt.options.security
+
+          if (
+            typeof nuxtConfigSecurity.headers !== 'boolean' &&
+            nuxtConfigSecurity.headers.contentSecurityPolicy &&
+            typeof nuxtConfigSecurity.headers.contentSecurityPolicy !==
+              'boolean' &&
+            typeof nuxtConfigSecurity.headers.contentSecurityPolicy !== 'string'
+          ) {
+            for (const [key, value] of Object.entries(
+              nuxtConfigSecurity.headers.contentSecurityPolicy,
+            )) {
+              if (!Array.isArray(value)) continue
+
+              const valueFiltered = value.filter((x) => x !== "'none'")
+
+              if (valueFiltered.length) {
+                ;(
+                  nuxtConfigSecurity.headers.contentSecurityPolicy as Record<
+                    string,
+                    any
+                  >
+                )[key] = valueFiltered
+              }
+            }
+          }
+        },
         'nuxt-security',
 
         '@dargmuesli/nuxt-cookie-control',
