@@ -84,6 +84,9 @@ export default defineNuxtConfig(
       ],
       nitro: {
         compressPublicAssets: true,
+        experimental: {
+          openAPI: process.env.NODE_ENV === 'development',
+        },
       },
       runtimeConfig: {
         public: {
@@ -263,6 +266,18 @@ export default defineNuxtConfig(
                 // TODO: replace with `style-src-elem` once Webkit supports it
                 "'self'", // TODO: replace with `"'nonce-{{nonce}}'",` (https://github.com/vitejs/vite/pull/11864)
                 "'unsafe-inline'", // TODO: replace with `"'nonce-{{nonce}}'",` (https://github.com/vitejs/vite/pull/11864)
+              ],
+            },
+            {
+              // nitro
+              'connect-src': ["'self'"] /* swagger
+              'http://localhost:3000/_nitro/openapi.json',
+              'http://localhost:3000/_nitro/swagger', */,
+              'script-src-elem': [
+                'https://cdn.jsdelivr.net/npm/', // swagger // TODO: increase precision (https://github.com/unjs/nitro/issues/1757)
+              ],
+              'style-src': [
+                'https://cdn.jsdelivr.net/npm/', // swagger // TODO: increase precision (https://github.com/unjs/nitro/issues/1757)
               ],
             },
             {
