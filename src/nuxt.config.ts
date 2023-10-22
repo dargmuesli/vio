@@ -42,6 +42,8 @@ export default defineNuxtConfig(
         },
       },
       modules: [
+        'nuxt-security',
+
         '@dargmuesli/nuxt-cookie-control',
         '@nuxt/devtools',
         '@nuxt/image',
@@ -51,7 +53,6 @@ export default defineNuxtConfig(
         '@nuxtjs/tailwindcss',
         '@nuxtseo/module',
         '@pinia/nuxt',
-        'nuxt-security',
       ],
       nitro: {
         compressPublicAssets: true,
