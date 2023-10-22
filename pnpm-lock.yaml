@@ -30,8 +30,8 @@ importers:
         specifier: 4.8.1
         version: 4.8.1(playwright-core@1.39.0)
       '@dargmuesli/nuxt-cookie-control':
-        specifier: 7.0.0-beta.2
-        version: 7.0.0-beta.2(webpack@5.89.0)
+        specifier: 7.0.1
+        version: 7.0.1(webpack@5.89.0)
       '@heroicons/vue':
         specifier: 2.0.18
         version: 2.0.18(vue@3.3.6)
@@ -816,8 +816,8 @@ packages:
       postcss-selector-parser: 6.0.13
     dev: false
 
-  /@dargmuesli/nuxt-cookie-control@7.0.0-beta.2(webpack@5.89.0):
-    resolution: {integrity: sha512-DFuRDvCgQeIUk1z1XH5adAZvtopsJEsNZnZrqHOq1fNM2He9riyfCNwT9NqtOy3aQ89Blmsbh6n7nIUzeAx+QQ==}
+  /@dargmuesli/nuxt-cookie-control@7.0.1(webpack@5.89.0):
+    resolution: {integrity: sha512-/JTOcpVjZZL0og0TcHvxjIpEaiCnhBKUtGN5pOh9nXvVczKLF687r1XZwZZM+oTUPxJSZpaq7zn1Y4Ug4mazsw==}
     engines: {node: '>=16'}
     dependencies:
       '@nuxt/kit': 3.8.0
@@ -8633,6 +8633,7 @@ packages:
 
   /napi-wasm@1.1.0:
     resolution: {integrity: sha512-lHwIAJbmLSjF9VDRm9GoVOy9AGp3aIvkjv+Kvz9h16QR3uSVYH78PNQUnT2U4X53mhlnV2M7wrhibQ3GHicDmg==}
+    requiresBuild: true
     dev: false
 
   /natural-compare@1.4.0:
