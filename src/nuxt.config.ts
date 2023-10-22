@@ -145,6 +145,17 @@ export default defineNuxtConfig(
         headers: {
           contentSecurityPolicy: defu(
             {
+              // Cloudflare
+              ...(process.env.NODE_ENV === 'production'
+                ? {
+                    'connect-src': [`${SITE_URL}/cdn-cgi/rum`],
+                    'script-src-elem': [
+                      'https://static.cloudflareinsights.com',
+                    ],
+                  }
+                : {}),
+            },
+            {
               // Google Analytics 4 (https://developers.google.com/tag-platform/tag-manager/web/csp)
               'connect-src': [
                 'https://*.analytics.google.com',
