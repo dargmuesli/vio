@@ -1,9 +1,5 @@
-import { appendHeader, defineEventHandler } from 'h3'
 import type { H3Event } from 'h3'
 import type { AppConfig } from 'nuxt/schema'
-
-import { TIMEZONE_HEADER_KEY } from '../../utils/constants'
-import { getTimezone } from '../../utils/networking'
 
 export default defineEventHandler(async (event) => {
   setRequestHeader(event, TIMEZONE_HEADER_KEY, await getTimezone(event))
