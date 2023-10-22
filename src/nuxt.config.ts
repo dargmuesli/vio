@@ -206,19 +206,24 @@ export default defineNuxtConfig(
             },
             {
               // @nuxt/devtools
-              'frame-src': [
-                ...(process.env.NODE_ENV === 'development'
-                  ? ['http://localhost:3000/__nuxt_devtools__/client/']
-                  : []),
-              ],
+
+              ...(process.env.NODE_ENV === 'development'
+                ? {
+                    'frame-src': [
+                      'http://localhost:3000/__nuxt_devtools__/client/',
+                    ],
+                  }
+                : {}),
             },
             {
               // nuxt-link-checker
-              'connect-src': [
-                ...(process.env.NODE_ENV === 'development'
-                  ? ['http://localhost:3000/api/__link_checker__/inspect']
-                  : []),
-              ],
+              ...(process.env.NODE_ENV === 'development'
+                ? {
+                    'connect-src': [
+                      'http://localhost:3000/api/__link_checker__/inspect',
+                    ],
+                  }
+                : {}),
             },
             {
               // nuxt-og-image
