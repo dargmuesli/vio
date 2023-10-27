@@ -343,6 +343,14 @@ export default defineNuxtConfig(
       tailwindcss: {
         cssPath: join(currentDir, './assets/css/tailwind.css'),
       },
+
+      // environments
+      $development: {
+        // modules
+        security: {
+          rateLimiter: false, // TODO: enable when nuxt-link-checker bundles requests (https://github.com/harlan-zw/nuxt-link-checker/issues/21)
+        },
+      },
     },
     VIO_NUXT_BASE_CONFIG({
       defaultLocale: 'en',
