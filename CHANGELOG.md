@@ -1,3 +1,25 @@
+## [9.0.0-beta.3](https://github.com/dargmuesli/vio/compare/9.0.0-beta.2...9.0.0-beta.3) (2023-10-27)
+
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** use as development dependencies
+
+### Features
+
+* **nitro:** enable open api ([4e2fcf8](https://github.com/dargmuesli/vio/commit/4e2fcf8abcd1fa020e3b5384f98e542021f857f3))
+
+
+### Bug Fixes
+
+* **csp:** rework headers ([bb5a849](https://github.com/dargmuesli/vio/commit/bb5a8499ec962c0c5d24526be3db73590e73276f))
+* **deps:** update ([8525083](https://github.com/dargmuesli/vio/commit/8525083b7f71af1d6faaeca64aac16ea88bb0077))
+
+
+### Miscellaneous Chores
+
+* **deps:** use as development dependencies ([efe3459](https://github.com/dargmuesli/vio/commit/efe345974b9359a7d8986986f8b47b37ad9da952))
+
 ## [9.0.0-beta.2](https://github.com/dargmuesli/vio/compare/9.0.0-beta.1...9.0.0-beta.2) (2023-10-22)
 
 
