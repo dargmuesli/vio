@@ -49,6 +49,7 @@ export default defineNuxtConfig(
         '@nuxtjs/html-validator',
         '@nuxtjs/i18n',
         '@nuxtjs/tailwindcss',
+        '@nuxtseo/module',
         '@pinia/nuxt',
         // nuxt-security: remove invalid `'none'`s
         (_options, nuxt) => {
@@ -74,16 +75,18 @@ export default defineNuxtConfig(
                     string,
                     any
                   >
-                )[key] = valueFiltered
+                )[key] = [...new Set(valueFiltered)]
               }
             }
           }
         },
         'nuxt-security',
-        '@nuxtseo/module',
       ],
       nitro: {
         compressPublicAssets: true,
+        experimental: {
+          openAPI: process.env.NODE_ENV === 'development',
+        },
       },
       runtimeConfig: {
         public: {
@@ -177,7 +180,7 @@ export default defineNuxtConfig(
               // Cloudflare
               ...(process.env.NODE_ENV === 'production'
                 ? {
-                    'connect-src': [`${SITE_URL}/cdn-cgi/rum`],
+                    'connect-src': ["'self'"], // `${SITE_URL}/cdn-cgi/rum`
                     'script-src-elem': [
                       'https://static.cloudflareinsights.com',
                     ],
@@ -199,6 +202,7 @@ export default defineNuxtConfig(
             },
             {
               // vio
+              'connect-src': ["'self'"], // `${SITE_URL}/api/healthcheck`
               'manifest-src': [`${SITE_URL}/site.webmanifest`],
               'script-src-elem': [
                 'https://polyfill.io/v3/polyfill.min.js', // ESLint plugin compat
@@ -206,19 +210,21 @@ export default defineNuxtConfig(
             },
             {
               // @nuxt/devtools
-              'frame-src': [
-                ...(process.env.NODE_ENV === 'development'
-                  ? ['http://localhost:3000/__nuxt_devtools__/client/']
-                  : []),
-              ],
+              ...(process.env.NODE_ENV === 'development'
+                ? {
+                    'frame-src': [
+                      'http://localhost:3000/__nuxt_devtools__/client/',
+                    ],
+                  }
+                : {}),
             },
             {
               // nuxt-link-checker
-              'connect-src': [
-                ...(process.env.NODE_ENV === 'development'
-                  ? ['http://localhost:3000/api/__link_checker__/inspect']
-                  : []),
-              ],
+              ...(process.env.NODE_ENV === 'development'
+                ? {
+                    'connect-src': ["'self'"], // 'http://localhost:3000/api/__link_checker__/inspect'
+                  }
+                : {}),
             },
             {
               // nuxt-og-image
@@ -244,12 +250,12 @@ export default defineNuxtConfig(
               'connect-src': [
                 ...(process.env.NODE_ENV === 'development'
                   ? [
-                      'http://localhost:3000/_nuxt/', // Nuxt development
-                      'https://localhost:3000/_nuxt/', // Nuxt development
-                      'ws://localhost:3000/_nuxt/', // Nuxt development
-                      'wss://localhost:3000/_nuxt/', // Nuxt development
+                      'http://localhost:3000/_nuxt/', // hot reload
+                      'https://localhost:3000/_nuxt/', // hot reload
+                      'ws://localhost:3000/_nuxt/', // hot reload
+                      'wss://localhost:3000/_nuxt/', // hot reload
                     ]
-                  : ["'self'"]), // Nuxt build metadata and payloads
+                  : ["'self'"]), // build metadata and payloads
               ],
               'img-src': [
                 "'self'", // TODO: replace with `"'nonce-{{nonce}}'",`
@@ -260,6 +266,18 @@ export default defineNuxtConfig(
                 // TODO: replace with `style-src-elem` once Webkit supports it
                 "'self'", // TODO: replace with `"'nonce-{{nonce}}'",` (https://github.com/vitejs/vite/pull/11864)
                 "'unsafe-inline'", // TODO: replace with `"'nonce-{{nonce}}'",` (https://github.com/vitejs/vite/pull/11864)
+              ],
+            },
+            {
+              // nitro
+              'connect-src': ["'self'"] /* swagger
+              'http://localhost:3000/_nitro/openapi.json',
+              'http://localhost:3000/_nitro/swagger', */,
+              'script-src-elem': [
+                'https://cdn.jsdelivr.net/npm/', // swagger // TODO: increase precision (https://github.com/unjs/nitro/issues/1757)
+              ],
+              'style-src': [
+                'https://cdn.jsdelivr.net/npm/', // swagger // TODO: increase precision (https://github.com/unjs/nitro/issues/1757)
               ],
             },
             {
@@ -324,6 +342,14 @@ export default defineNuxtConfig(
       },
       tailwindcss: {
         cssPath: join(currentDir, './assets/css/tailwind.css'),
+      },
+
+      // environments
+      $development: {
+        // modules
+        security: {
+          rateLimiter: false, // TODO: enable when nuxt-link-checker bundles requests (https://github.com/harlan-zw/nuxt-link-checker/issues/21)
+        },
       },
     },
     VIO_NUXT_BASE_CONFIG({

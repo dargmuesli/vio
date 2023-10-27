@@ -16,6 +16,25 @@
 
 * **deps:** use as development dependencies ([33b2adf](https://github.com/dargmuesli/vio/commit/33b2adf7ed6b3cbd0a6dc2320c9691912fcc70af))
 
+## [8.4.1](https://github.com/dargmuesli/vio/compare/8.4.0...8.4.1) (2023-10-26)
+
+
+### Bug Fixes
+
+* **deps:** update ([8525083](https://github.com/dargmuesli/vio/commit/8525083b7f71af1d6faaeca64aac16ea88bb0077))
+
+## [8.4.0](https://github.com/dargmuesli/vio/compare/8.3.4...8.4.0) (2023-10-22)
+
+
+### Features
+
+* **nitro:** enable open api ([4e2fcf8](https://github.com/dargmuesli/vio/commit/4e2fcf8abcd1fa020e3b5384f98e542021f857f3))
+
+
+### Bug Fixes
+
+* **csp:** rework headers ([bb5a849](https://github.com/dargmuesli/vio/commit/bb5a8499ec962c0c5d24526be3db73590e73276f))
+
 ## [8.3.4](https://github.com/dargmuesli/vio/compare/8.3.3...8.3.4) (2023-10-22)
 
 
