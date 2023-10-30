@@ -105,7 +105,7 @@
     "eslint-plugin-prettier": "5.0.1",
     "eslint-plugin-yml": "1.10.0",
     "h3": "1.8.2",
-    "jiti": "1.20.0",
+    "jiti": "1.21.0",
     "jose": "5.0.1",
     "lint-staged": "15.0.2",
     "lodash-es": "4.17.21",
