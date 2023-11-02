@@ -180,9 +180,7 @@ export default defineNuxtConfig(
               ...(process.env.NODE_ENV === 'production'
                 ? {
                     'connect-src': ["'self'"], // `${SITE_URL}/cdn-cgi/rum`
-                    'script-src-elem': [
-                      'https://static.cloudflareinsights.com',
-                    ],
+                    'script-src': ['https://static.cloudflareinsights.com'], // TODO: replace with `script-src-elem` once Webkit supports it (https://caniuse.com/mdn-http_headers_content-security-policy_script-src-elem)
                   }
                 : {}),
             },
@@ -197,15 +195,15 @@ export default defineNuxtConfig(
                 'https://*.google-analytics.com',
                 'https://*.googletagmanager.com',
               ],
-              'script-src-elem': ['https://*.googletagmanager.com'],
+              'script-src': ['https://*.googletagmanager.com'], // TODO: replace with `script-src-elem` once Webkit supports it (https://caniuse.com/mdn-http_headers_content-security-policy_script-src-elem)
             },
             {
               // vio
               'connect-src': ["'self'"], // `${SITE_URL}/api/healthcheck`
               'manifest-src': [`${SITE_URL}/site.webmanifest`],
-              'script-src-elem': [
+              'script-src': [
                 'https://polyfill.io/v3/polyfill.min.js', // ESLint plugin compat
-              ],
+              ], // TODO: replace with `script-src-elem` once Webkit supports it (https://caniuse.com/mdn-http_headers_content-security-policy_script-src-elem)
             },
             {
               // @nuxt/devtools
@@ -232,7 +230,7 @@ export default defineNuxtConfig(
                     'font-src': ['https://fonts.gstatic.com/s/inter/'],
                     'frame-ancestors': ["'self'"],
                     'frame-src': ["'self'"],
-                    'script-src-elem': ['https://cdn.tailwindcss.com/'],
+                    'script-src': ['https://cdn.tailwindcss.com/'], // TODO: replace with `script-src-elem` once Webkit supports it (https://caniuse.com/mdn-http_headers_content-security-policy_script-src-elem)
                     'style-src': [
                       // TODO: replace with `style-src-elem` once Webkit supports it
                       'https://cdn.jsdelivr.net/npm/gardevoir https://fonts.googleapis.com/css2',
@@ -242,7 +240,7 @@ export default defineNuxtConfig(
             },
             {
               // nuxt-simple-sitemap
-              'script-src-elem': [`${SITE_URL}/__sitemap__/style.xsl`],
+              'script-src': [`${SITE_URL}/__sitemap__/style.xsl`], // TODO: replace with `script-src-elem` once Webkit supports it (https://caniuse.com/mdn-http_headers_content-security-policy_script-src-elem)
             },
             {
               // nuxt
@@ -260,7 +258,7 @@ export default defineNuxtConfig(
                 "'self'", // TODO: replace with `"'nonce-{{nonce}}'",`
                 'data:', // external link icon
               ],
-              'script-src-elem': ["'nonce-{{nonce}}'"],
+              'script-src': ["'nonce-{{nonce}}'"], // TODO: replace with `script-src-elem` once Webkit supports it (https://caniuse.com/mdn-http_headers_content-security-policy_script-src-elem)
               'style-src': [
                 // TODO: replace with `style-src-elem` once Webkit supports it
                 "'self'", // TODO: replace with `"'nonce-{{nonce}}'",` (https://github.com/vitejs/vite/pull/11864)
@@ -272,9 +270,9 @@ export default defineNuxtConfig(
               'connect-src': ["'self'"] /* swagger
               'http://localhost:3000/_nitro/openapi.json',
               'http://localhost:3000/_nitro/swagger', */,
-              'script-src-elem': [
+              'script-src': [
                 'https://cdn.jsdelivr.net/npm/', // swagger // TODO: increase precision (https://github.com/unjs/nitro/issues/1757)
-              ],
+              ], // TODO: replace with `script-src-elem` once Webkit supports it (https://caniuse.com/mdn-http_headers_content-security-policy_script-src-elem)
               'style-src': [
                 'https://cdn.jsdelivr.net/npm/', // swagger // TODO: increase precision (https://github.com/unjs/nitro/issues/1757)
               ],
