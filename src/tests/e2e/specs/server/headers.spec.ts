@@ -9,10 +9,7 @@ test.describe('headers middleware', () => {
     // expect(JSON.stringify(headers)).toMatchSnapshot()
     expect(headers['access-control-allow-origin']).toStrictEqual('*')
     expect(
-      headers['content-security-policy'].replace(
-        /nonce-[A-Za-z0-9]+/g,
-        'nonce',
-      ),
+      headers['content-security-policy'].replace(/nonce-[^']+/g, 'nonce'),
     ).toStrictEqual(
       process.env.NODE_ENV === 'production'
         ? "base-uri 'none'" +
