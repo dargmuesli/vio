@@ -298,11 +298,11 @@ export default defineNuxtConfig(
               // 'require-trusted-types-for': ["'script'"], // csp-evaluator
               sandbox: [],
               'script-src': [],
-              'script-src-attr': [],
-              'script-src-elem': [],
+              // 'script-src-attr': [], // TODO: enable once Webkit supports it (https://caniuse.com/mdn-http_headers_content-security-policy_script-src-attr)
+              // 'script-src-elem': [], // TODO: enable once Webkit supports it (https://caniuse.com/mdn-http_headers_content-security-policy_script-src-elem)
               'style-src': [],
-              'style-src-attr': [],
-              'style-src-elem': [],
+              // 'style-src-attr': [], // TODO: enable once Webkit supports it (https://caniuse.com/mdn-http_headers_content-security-policy_style-src-attr)
+              // 'style-src-elem': [], // TODO: enable once Webkit supports it (https://caniuse.com/mdn-http_headers_content-security-policy_style-src-elem)
               'upgrade-insecure-requests': false, // TODO: set to `process.env.NODE_ENV === 'production'` or `true` when tests run on https
               'worker-src': [],
             },
