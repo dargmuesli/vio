@@ -1,3 +1,10 @@
+## [8.4.2](https://github.com/dargmuesli/vio/compare/8.4.1...8.4.2) (2023-11-04)
+
+
+### Bug Fixes
+
+* schedule release ([a4b798a](https://github.com/dargmuesli/vio/commit/a4b798a90d86f39fb8634dac71d37cf36b3633da))
+
 ## [8.4.1](https://github.com/dargmuesli/vio/compare/8.4.0...8.4.1) (2023-10-26)
 
 
