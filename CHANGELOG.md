@@ -1,3 +1,10 @@
+## [8.4.3](https://github.com/dargmuesli/vio/compare/8.4.2...8.4.3) (2023-11-05)
+
+
+### Bug Fixes
+
+* **deps:** declare nuxt as peer dependency ([c580735](https://github.com/dargmuesli/vio/commit/c58073531ff61d54c9476480bbca289898869384))
+
 ## [8.4.2](https://github.com/dargmuesli/vio/compare/8.4.1...8.4.2) (2023-11-04)
 
 
