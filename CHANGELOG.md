@@ -38,6 +38,20 @@
 
 * **deps:** use as development dependencies ([33b2adf](https://github.com/dargmuesli/vio/commit/33b2adf7ed6b3cbd0a6dc2320c9691912fcc70af))
 
+## [8.4.3](https://github.com/dargmuesli/vio/compare/8.4.2...8.4.3) (2023-11-05)
+
+
+### Bug Fixes
+
+* **deps:** declare nuxt as peer dependency ([c580735](https://github.com/dargmuesli/vio/commit/c58073531ff61d54c9476480bbca289898869384))
+
+## [8.4.2](https://github.com/dargmuesli/vio/compare/8.4.1...8.4.2) (2023-11-04)
+
+
+### Bug Fixes
+
+* schedule release ([a4b798a](https://github.com/dargmuesli/vio/commit/a4b798a90d86f39fb8634dac71d37cf36b3633da))
+
 ## [8.4.1](https://github.com/dargmuesli/vio/compare/8.4.0...8.4.1) (2023-10-26)
 
 

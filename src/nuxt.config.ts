@@ -51,7 +51,7 @@ export default defineNuxtConfig(
         '@nuxtjs/tailwindcss',
         '@nuxtseo/module',
         '@pinia/nuxt',
-        // nuxt-security: remove invalid `'none'`s
+        // nuxt-security: remove invalid `'none'`s and duplicates
         (_options, nuxt) => {
           const nuxtConfigSecurity = nuxt.options.security
 
