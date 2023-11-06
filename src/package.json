@@ -117,6 +117,7 @@
     "lint:style": "stylelint --cache \"**/*.{vue,css}\" --ignore-path .gitignore",
     "lint:ts": "nuxt typecheck",
     "lint": "pnpm run lint:js && pnpm run lint:ts && pnpm run lint:style",
+    "prepare": "nuxt prepare .playground",
     "preview": "nuxt preview .playground",
     "start:dev": "nuxt dev .playground",
     "start:node": "node .playground/.output/server/index.mjs",
