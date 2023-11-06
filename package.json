@@ -15,7 +15,8 @@
   },
   "pnpm": {
     "overrides": {
-      "nuxt-site-config": "1.2.2"
+      "nuxt-site-config": "1.2.2",
+      "unhead": "1.8.0-beta.2"
     }
   }
 }
