@@ -25,7 +25,7 @@ const copy = async (string: string) => {
   if (typeof window === 'undefined') return
 
   try {
-    await navigator.clipboard.writeText(string)
+    await copyText(string)
     showToast({ title: t('donationUrlCopySuccess') })
   } catch (error: any) {
     alert(t('donationUrlCopyError'))
