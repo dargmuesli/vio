@@ -18,7 +18,6 @@ export default defineNuxtConfig(
   defu(
     {
       alias: {
-        clipboard: 'clipboard',
         dayjs: 'dayjs',
         sweetalert2: 'sweetalert2',
       }, // TODO: remove (https://github.com/nuxt/nuxt/issues/19426)

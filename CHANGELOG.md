@@ -1,3 +1,81 @@
+## [9.0.0-beta.7](https://github.com/dargmuesli/vio/compare/9.0.0-beta.6...9.0.0-beta.7) (2023-11-07)
+
+
+### Bug Fixes
+
+* **vio-error:** properly display stacktrace ([908bb60](https://github.com/dargmuesli/vio/commit/908bb60ce177be360ae82134f6ebeb045d5bc49f))
+
+## [9.0.0-beta.6](https://github.com/dargmuesli/vio/compare/9.0.0-beta.5...9.0.0-beta.6) (2023-11-07)
+
+
+### Bug Fixes
+
+* **fetch:** drop dependency ([f739911](https://github.com/dargmuesli/vio/commit/f739911cd79dfd6bf66620b2ae6ed10eb7e6aef2))
+
+## [9.0.0-beta.5](https://github.com/dargmuesli/vio/compare/9.0.0-beta.4...9.0.0-beta.5) (2023-11-07)
+
+
+### Bug Fixes
+
+* **deps:** mark @urql/core as non-dev dependency ([33b124b](https://github.com/dargmuesli/vio/commit/33b124b19baee7d08e5de412805f695904902243))
+
+## [9.0.0-beta.4](https://github.com/dargmuesli/vio/compare/9.0.0-beta.3...9.0.0-beta.4) (2023-11-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* **package:** use devDependencies
+
+### Features
+
+* **package:** use devDependencies ([434c07b](https://github.com/dargmuesli/vio/commit/434c07b03a50b7f573d95a83b633d6eec217a0b7))
+
+
+### Bug Fixes
+
+* **deps:** declare nuxt as peer dependency ([c580735](https://github.com/dargmuesli/vio/commit/c58073531ff61d54c9476480bbca289898869384))
+* schedule release ([a4b798a](https://github.com/dargmuesli/vio/commit/a4b798a90d86f39fb8634dac71d37cf36b3633da))
+
+## [9.0.0-beta.3](https://github.com/dargmuesli/vio/compare/9.0.0-beta.2...9.0.0-beta.3) (2023-10-27)
+
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** use as development dependencies
+
+### Features
+
+* **nitro:** enable open api ([4e2fcf8](https://github.com/dargmuesli/vio/commit/4e2fcf8abcd1fa020e3b5384f98e542021f857f3))
+
+
+### Bug Fixes
+
+* **csp:** rework headers ([bb5a849](https://github.com/dargmuesli/vio/commit/bb5a8499ec962c0c5d24526be3db73590e73276f))
+* **deps:** update ([8525083](https://github.com/dargmuesli/vio/commit/8525083b7f71af1d6faaeca64aac16ea88bb0077))
+
+
+### Miscellaneous Chores
+
+* **deps:** use as development dependencies ([efe3459](https://github.com/dargmuesli/vio/commit/efe345974b9359a7d8986986f8b47b37ad9da952))
+
+## [9.0.0-beta.2](https://github.com/dargmuesli/vio/compare/9.0.0-beta.1...9.0.0-beta.2) (2023-10-22)
+
+
+### Reverts
+
+* Revert "chore(deps)!: use as development dependencies" ([b3742cf](https://github.com/dargmuesli/vio/commit/b3742cf26835d0c7b91f7ef6cf051440e2c72108))
+
+## [9.0.0-beta.1](https://github.com/dargmuesli/vio/compare/8.3.4...9.0.0-beta.1) (2023-10-22)
+
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** use as development dependencies
+
+### Miscellaneous Chores
+
+* **deps:** use as development dependencies ([33b2adf](https://github.com/dargmuesli/vio/commit/33b2adf7ed6b3cbd0a6dc2320c9691912fcc70af))
+
 ## [8.4.3](https://github.com/dargmuesli/vio/compare/8.4.2...8.4.3) (2023-11-05)
 
 

@@ -86,27 +86,6 @@ export const testMetadata = async ({
         },
         {
           key: 'href',
-          value: '/apple-touch-icon.png',
-        },
-        {
-          key: 'type',
-          value: 'image/png',
-        },
-        {
-          key: 'sizes',
-          value: '180x180',
-        },
-      ],
-    },
-    {
-      tag: 'link',
-      attributes: [
-        {
-          key: 'rel',
-          value: 'icon',
-        },
-        {
-          key: 'href',
           value: '/favicon-16x16.png',
         },
         {
