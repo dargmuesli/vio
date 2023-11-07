@@ -1,3 +1,10 @@
+## [9.0.0-beta.7](https://github.com/dargmuesli/vio/compare/9.0.0-beta.6...9.0.0-beta.7) (2023-11-07)
+
+
+### Bug Fixes
+
+* **vio-error:** properly display stacktrace ([908bb60](https://github.com/dargmuesli/vio/commit/908bb60ce177be360ae82134f6ebeb045d5bc49f))
+
 ## [9.0.0-beta.6](https://github.com/dargmuesli/vio/compare/9.0.0-beta.5...9.0.0-beta.6) (2023-11-07)
 
 
