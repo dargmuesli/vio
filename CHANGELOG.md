@@ -1,3 +1,20 @@
+## [9.0.0-beta.4](https://github.com/dargmuesli/vio/compare/9.0.0-beta.3...9.0.0-beta.4) (2023-11-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* **package:** use devDependencies
+
+### Features
+
+* **package:** use devDependencies ([434c07b](https://github.com/dargmuesli/vio/commit/434c07b03a50b7f573d95a83b633d6eec217a0b7))
+
+
+### Bug Fixes
+
+* **deps:** declare nuxt as peer dependency ([c580735](https://github.com/dargmuesli/vio/commit/c58073531ff61d54c9476480bbca289898869384))
+* schedule release ([a4b798a](https://github.com/dargmuesli/vio/commit/a4b798a90d86f39fb8634dac71d37cf36b3633da))
+
 ## [9.0.0-beta.3](https://github.com/dargmuesli/vio/compare/9.0.0-beta.2...9.0.0-beta.3) (2023-10-27)
 
 
