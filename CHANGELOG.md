@@ -1,3 +1,10 @@
+## [9.0.0-beta.5](https://github.com/dargmuesli/vio/compare/9.0.0-beta.4...9.0.0-beta.5) (2023-11-07)
+
+
+### Bug Fixes
+
+* **deps:** mark @urql/core as non-dev dependency ([33b124b](https://github.com/dargmuesli/vio/commit/33b124b19baee7d08e5de412805f695904902243))
+
 ## [9.0.0-beta.4](https://github.com/dargmuesli/vio/compare/9.0.0-beta.3...9.0.0-beta.4) (2023-11-07)
 
 
