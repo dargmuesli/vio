@@ -1,3 +1,10 @@
+## [9.0.0-beta.6](https://github.com/dargmuesli/vio/compare/9.0.0-beta.5...9.0.0-beta.6) (2023-11-07)
+
+
+### Bug Fixes
+
+* **fetch:** drop dependency ([f739911](https://github.com/dargmuesli/vio/commit/f739911cd79dfd6bf66620b2ae6ed10eb7e6aef2))
+
 ## [9.0.0-beta.5](https://github.com/dargmuesli/vio/compare/9.0.0-beta.4...9.0.0-beta.5) (2023-11-07)
 
 
