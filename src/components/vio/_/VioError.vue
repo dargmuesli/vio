@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div class="overflow-auto">
     <h1>{{ title }}</h1>
     <div>
       {{ description }}
     </div>
-    <pre
+    <div
       v-if="stack && !runtimeConfig.public.vio.isInProduction"
       v-html="stack"
     />
