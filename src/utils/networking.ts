@@ -1,7 +1,6 @@
 import { CombinedError } from '@urql/core'
 import { H3Event, getCookie } from 'h3'
 
-import { ofetch } from 'ofetch'
 import { type Ref } from 'vue'
 
 import type { ApiData, BackendError } from '../types/api'
@@ -119,7 +118,7 @@ export const getTimezone = async (event: H3Event) => {
   }
 
   if (event.node.req.headers['x-real-ip']) {
-    const ipApiResult = await ofetch<{ timezone: string }>(
+    const ipApiResult = await $fetch<{ timezone: string }>(
       `http://ip-api.com/json/${event.node.req.headers['x-real-ip']}`,
     ).catch(() => {})
 
