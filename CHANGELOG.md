@@ -1,3 +1,10 @@
+## [9.0.1](https://github.com/dargmuesli/vio/compare/9.0.0...9.0.1) (2023-11-07)
+
+
+### Performance Improvements
+
+* **ci:** speed up dockerfile ([2a6cfbb](https://github.com/dargmuesli/vio/commit/2a6cfbb95ca6454b82d7711410183f4ccd8dc19a))
+
 ## [9.0.0](https://github.com/dargmuesli/vio/compare/8.4.3...9.0.0) (2023-11-07)
 
 
