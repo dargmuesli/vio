@@ -39,7 +39,7 @@
     "@http-util/status-i18n": "0.8.1",
     "@nuxt/devtools": "1.0.2",
     "@nuxt/image": "1.0.0",
-    "@nuxtjs/color-mode": "3.3.0",
+    "@nuxtjs/color-mode": "3.3.2",
     "@nuxtjs/html-validator": "1.5.2",
     "@nuxtjs/i18n": "npm:@nuxtjs/i18n-edge@8.0.0-rc.5-28323328.694810b",
     "@nuxtjs/tailwindcss": "6.9.4",
