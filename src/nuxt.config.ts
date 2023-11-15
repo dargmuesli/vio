@@ -298,11 +298,11 @@ export default defineNuxtConfig(
               // 'require-trusted-types-for': ["'script'"], // csp-evaluator
               sandbox: [],
               'script-src': [],
-              // 'script-src-attr': [], // TODO: enable once Webkit supports it (https://caniuse.com/mdn-http_headers_content-security-policy_script-src-attr)
-              // 'script-src-elem': [], // TODO: enable once Webkit supports it (https://caniuse.com/mdn-http_headers_content-security-policy_script-src-elem)
+              'script-src-attr': false as const, // TODO: enable once Webkit supports it (https://caniuse.com/mdn-http_headers_content-security-policy_script-src-attr)
+              'script-src-elem': false as const, // TODO: enable once Webkit supports it (https://caniuse.com/mdn-http_headers_content-security-policy_script-src-elem)
               'style-src': [],
-              // 'style-src-attr': [], // TODO: enable once Webkit supports it (https://caniuse.com/mdn-http_headers_content-security-policy_style-src-attr)
-              // 'style-src-elem': [], // TODO: enable once Webkit supports it (https://caniuse.com/mdn-http_headers_content-security-policy_style-src-elem)
+              'style-src-attr': false as const, // TODO: enable once Webkit supports it (https://caniuse.com/mdn-http_headers_content-security-policy_style-src-attr)
+              'style-src-elem': false as const, // TODO: enable once Webkit supports it (https://caniuse.com/mdn-http_headers_content-security-policy_style-src-elem)
               'upgrade-insecure-requests': false, // TODO: set to `process.env.NODE_ENV === 'production'` or `true` when tests run on https
               'worker-src': [],
             },
@@ -319,6 +319,11 @@ export default defineNuxtConfig(
           xXSSProtection: '1; mode=block', // TODO: set back to `0` once CSP does not use `unsafe-*` anymore (https://github.com/maevsi/maevsi/issues/1047)
         },
         nonce: true,
+        ssg: {
+          hashScripts: true,
+          hashStyles: false,
+        },
+        sri: true,
       },
       seo: {
         splash: false,
