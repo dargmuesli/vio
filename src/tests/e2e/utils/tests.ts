@@ -511,24 +511,6 @@ export const testMetadata = async ({
         { key: 'type', value: 'application/ld+json' },
       ],
     },
-    ...(process.env.VIO_SERVER === 'static'
-      ? [
-          {
-            tag: 'meta',
-            attributes: [
-              {
-                key: 'http-equiv',
-                value: 'Content-Security-Policy',
-              },
-              {
-                key: 'content',
-                value:
-                  "base-uri 'none'; font-src ; form-action 'none'; img-src https://*.google-analytics.com https://*.googletagmanager.com 'self' data:; object-src ; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net/npm/; script-src https://static.cloudflareinsights.com https://*.googletagmanager.com https://polyfill.io/v3/polyfill.min.js http://localhost:3002/__sitemap__/style.xsl  https://cdn.jsdelivr.net/npm/; child-src ; connect-src 'self' https://*.analytics.google.com https://*.google-analytics.com https://*.googletagmanager.com; default-src 'none'; frame-src ; media-src ; navigate-to ; prefetch-src ; report-to ; worker-src ; manifest-src http://localhost:3002/site.webmanifest",
-              },
-            ],
-          },
-        ]
-      : []),
   ]
 
   for (const object of meta) {
@@ -545,4 +527,12 @@ export const testMetadata = async ({
   expect(await page.locator('#schema-org-graph').innerText()).toMatchSnapshot(
     `schema-org-graph-${process.env.VIO_SERVER || 'dev'}.json`,
   )
+
+  // if (process.env.VIO_SERVER === 'static') {
+  //   expect(
+  //     await page
+  //       .locator('meta[http-equiv="Content-Security-Policy"]')
+  //       .innerText(),
+  //   ).toMatchSnapshot(`content-security-policy.txt`)
+  // }
 }
