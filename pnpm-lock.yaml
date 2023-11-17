@@ -87,8 +87,8 @@ importers:
         specifier: 1.0.0-rc.2
         version: 1.0.0-rc.2
       playwright-core:
-        specifier: 1.39.0
-        version: 1.39.0
+        specifier: 1.40.0
+        version: 1.40.0
       sweetalert2:
         specifier: 11.10.0
         version: 11.10.0
@@ -98,7 +98,7 @@ importers:
     devDependencies:
       '@axe-core/playwright':
         specifier: 4.8.1
-        version: 4.8.1(playwright-core@1.39.0)
+        version: 4.8.1(playwright-core@1.40.0)
       '@intlify/eslint-plugin-vue-i18n':
         specifier: 3.0.0-next.4
         version: 3.0.0-next.4(eslint@8.53.0)
@@ -245,13 +245,13 @@ packages:
   /@antfu/utils@0.7.6:
     resolution: {integrity: sha512-pvFiLP2BeOKA/ZOS6jxx4XhKzdVLHDhGlFEaZ2flWWYf2xOqVniqpk38I04DFRyz+L0ASggl7SkItTc+ZLju4w==}
 
-  /@axe-core/playwright@4.8.1(playwright-core@1.39.0):
+  /@axe-core/playwright@4.8.1(playwright-core@1.40.0):
     resolution: {integrity: sha512-KC1X++UdRAwMLRvB+BIKFheyLHUnbJTL0t0Wbv6TJMozn2V2QyEtAcN6jyUiudtGiLUGhHCtj/eWorBnVZ4dAA==}
     peerDependencies:
       playwright-core: '>= 1.0.0'
     dependencies:
       axe-core: 4.8.2
-      playwright-core: 1.39.0
+      playwright-core: 1.40.0
     dev: true
 
   /@babel/code-frame@7.22.13:
@@ -4210,7 +4210,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001562
-      electron-to-chromium: 1.4.586
+      electron-to-chromium: 1.4.587
       node-releases: 2.0.13
       update-browserslist-db: 1.0.13(browserslist@4.22.1)
 
@@ -5241,8 +5241,8 @@ packages:
   /ee-first@1.1.1:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
 
-  /electron-to-chromium@1.4.586:
-    resolution: {integrity: sha512-qMa+E6yf1fNQbg3G66pHLXeJUP5CCCzNat1VPczOZOqgI2w4u+8y9sQnswMdGs5m4C1rOePq37EVBr/nsPQY7w==}
+  /electron-to-chromium@1.4.587:
+    resolution: {integrity: sha512-RyJX0q/zOkAoefZhB9XHghGeATVP0Q3mwA253XD/zj2OeXc+JZB9pCaEv6R578JUYaWM9PRhye0kXvd/V1cQ3Q==}
 
   /emoji-regex@10.3.0:
     resolution: {integrity: sha512-QpLs9D9v9kArv4lfDEgg1X/gN5XLnf/A6l9cs8SPZLRZR3ZkY9+kwIQTxm+fsSej5UMYGE8fdoaZVIBlqG0XTw==}
@@ -8363,7 +8363,7 @@ packages:
       ofetch: 1.3.3
       ohash: 1.1.3
       pathe: 1.1.1
-      playwright-core: 1.39.0
+      playwright-core: 1.40.0
       radix3: 1.1.0
       satori: 0.10.9
       satori-html: 0.3.2
@@ -9179,16 +9179,10 @@ packages:
       mlly: 1.4.2
       pathe: 1.1.1
 
-  /playwright-core@1.39.0:
-    resolution: {integrity: sha512-+k4pdZgs1qiM+OUkSjx96YiKsXsmb59evFoqv8SKO067qBA+Z2s/dCzJij/ZhdQcs2zlTAgRKfeiiLm8PQ2qvw==}
-    engines: {node: '>=16'}
-    hasBin: true
-
   /playwright-core@1.40.0:
     resolution: {integrity: sha512-fvKewVJpGeca8t0ipM56jkVSU6Eo0RmFvQ/MaCQNDYm+sdvKkMBBWTE1FdeMqIdumRaXXjZChWHvIzCGM/tA/Q==}
     engines: {node: '>=16'}
     hasBin: true
-    dev: true
 
   /playwright@1.40.0:
     resolution: {integrity: sha512-gyHAgQjiDf1m34Xpwzaqb76KgfzYrhK7iih+2IzcOCoZWr/8ZqmdBw+t0RU85ZmfJMgtgAiNtBQ/KS2325INXw==}
