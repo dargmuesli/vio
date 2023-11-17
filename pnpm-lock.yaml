@@ -9,11 +9,11 @@ importers:
   .:
     devDependencies:
       '@commitlint/cli':
-        specifier: 18.4.1
-        version: 18.4.1(typescript@5.2.2)
+        specifier: 18.4.2
+        version: 18.4.2(typescript@5.2.2)
       '@commitlint/config-conventional':
-        specifier: 18.4.0
-        version: 18.4.0
+        specifier: 18.4.2
+        version: 18.4.2
       '@dargmuesli/nuxt-vio':
         specifier: link:src
         version: link:src
@@ -45,11 +45,11 @@ importers:
         specifier: 1.5.2
         version: 1.5.2
       '@nuxtjs/i18n':
-        specifier: npm:@nuxtjs/i18n-edge@8.0.0-rc.5-28331496.3c75cf9
-        version: /@nuxtjs/i18n-edge@8.0.0-rc.5-28331496.3c75cf9(vue-router@4.2.5)(vue@3.3.8)
+        specifier: npm:@nuxtjs/i18n-edge@8.0.0-rc.5-28335414.dd86b7b
+        version: /@nuxtjs/i18n-edge@8.0.0-rc.5-28335414.dd86b7b(vue-router@4.2.5)(vue@3.3.8)
       '@nuxtjs/tailwindcss':
-        specifier: 6.9.4
-        version: 6.9.4(webpack@5.89.0)
+        specifier: 6.9.5
+        version: 6.9.5(webpack@5.89.0)
       '@nuxtseo/module':
         specifier: 2.0.0-beta.43
         version: 2.0.0-beta.43(@nuxt/devtools@1.0.2)(@unhead/shared@1.8.4)(@vue/compiler-core@3.3.8)(nuxt@3.8.1)(postcss@8.4.31)(unhead@1.8.4)(vite@4.5.0)(vue@3.3.8)(webpack@5.89.0)
@@ -565,14 +565,14 @@ packages:
     dependencies:
       mime: 3.0.0
 
-  /@commitlint/cli@18.4.1(typescript@5.2.2):
-    resolution: {integrity: sha512-4+jljfd29Udw9RDDyigavLO9LvdbmB8O9xjDzVZ0R3lJuG7nCeyHgnKWIVpFaN590isZMV/cMeQK0gH7hRF40A==}
+  /@commitlint/cli@18.4.2(typescript@5.2.2):
+    resolution: {integrity: sha512-dDfb2+wzeQe6ogdHNHOy0J0nraok+La0BoxamNMhBOng9/5GoESPDmKUJ1Lt1oivh5MfIgZh0Vm6f0rxkB8CoA==}
     engines: {node: '>=v18'}
     hasBin: true
     dependencies:
       '@commitlint/format': 18.4.0
-      '@commitlint/lint': 18.4.0
-      '@commitlint/load': 18.4.1(typescript@5.2.2)
+      '@commitlint/lint': 18.4.2
+      '@commitlint/load': 18.4.2(typescript@5.2.2)
       '@commitlint/read': 18.4.0
       '@commitlint/types': 18.4.0
       execa: 5.1.1
@@ -584,8 +584,8 @@ packages:
       - typescript
     dev: true
 
-  /@commitlint/config-conventional@18.4.0:
-    resolution: {integrity: sha512-vArwCZopsZs0FnGsh9AR7uUTPZ5oVGk8+qnEZWq2KTsMjrE0k80b+oZ32GSQmXQT2iMKVrDC8pKX5uKNkCe9Sw==}
+  /@commitlint/config-conventional@18.4.2:
+    resolution: {integrity: sha512-qFjIqgKGV89lzUGHxanq2WJDXk5wZIxoZmZvf0I4i4CirL06Xj8qRh1shPsXNyI15d8Rj2HExww6cGJSFU9DdA==}
     engines: {node: '>=v18'}
     dependencies:
       conventional-changelog-conventionalcommits: 7.0.2
@@ -624,26 +624,26 @@ packages:
       chalk: 4.1.2
     dev: true
 
-  /@commitlint/is-ignored@18.4.0:
-    resolution: {integrity: sha512-vyBKBj3Q4N3Xe4ZQcJXW9ef6gVrDL9Fl2HXnnC3F0Qt/F6E4runhJkEuUh5DB3WCXTJUHIJkByKPqrnz4RNrZw==}
+  /@commitlint/is-ignored@18.4.2:
+    resolution: {integrity: sha512-uujjyJlrXsMsQrv0r8HDGigAwJELPAMtA1Vxi2WUB54HbyAWa0Ue6ujMRZNKov2YeA96r6o72gLDnugb6yu8IA==}
     engines: {node: '>=v18'}
     dependencies:
       '@commitlint/types': 18.4.0
       semver: 7.5.4
     dev: true
 
-  /@commitlint/lint@18.4.0:
-    resolution: {integrity: sha512-Wkkf1DPVeLdHYGqtzMBfWoMbUtCojvlzDR89OKVic1rid41iZbb0FzTcwgMYs/1TNWNxoIq9PVVwY7ovLX1aJQ==}
+  /@commitlint/lint@18.4.2:
+    resolution: {integrity: sha512-ljGOIH7w9SnjvZFoKjf30iWFxDnezfRtOc50+rNLdDP0TpLspaYYLPhDO/TeVdmii1/AJiDgBIuBboQlaIy7Bw==}
     engines: {node: '>=v18'}
     dependencies:
-      '@commitlint/is-ignored': 18.4.0
+      '@commitlint/is-ignored': 18.4.2
       '@commitlint/parse': 18.4.0
       '@commitlint/rules': 18.4.0
       '@commitlint/types': 18.4.0
     dev: true
 
-  /@commitlint/load@18.4.1(typescript@5.2.2):
-    resolution: {integrity: sha512-o/plBiPJQgbSq/4ipDpsq4HCmURjBAEjr1EO/p2falr3VhwV0WGXTvb8NlihgI8xtSyO6lHvtycrE535GMLQbA==}
+  /@commitlint/load@18.4.2(typescript@5.2.2):
+    resolution: {integrity: sha512-CKmzXdF9XwZJoVijAqpUlV9qzZOkyiYni4KuSCtTZVAAVudi9H84cJ4FqZxSwEP9G21vmoJiNrW8G042AsduVg==}
     engines: {node: '>=v18'}
     dependencies:
       '@commitlint/config-validator': 18.4.0
@@ -1286,7 +1286,7 @@ packages:
         optional: true
     dependencies:
       '@intlify/message-compiler': 9.6.5
-      '@intlify/shared': 9.5.0
+      '@intlify/shared': 9.7.0
       acorn: 8.11.2
       escodegen: 2.1.0
       estree-walker: 2.0.2
@@ -1371,13 +1371,13 @@ packages:
     engines: {node: '>= 16'}
     dev: true
 
-  /@intlify/shared@9.5.0:
-    resolution: {integrity: sha512-tAxV14LMXZDZbu32XzLMTsowNlgJNmLwWHYzvMUl6L8gvQeoYiZONjY7AUsqZW8TOZDX9lfvF6adPkk9FSRdDA==}
+  /@intlify/shared@9.6.5:
+    resolution: {integrity: sha512-gD7Ey47Xi4h/t6P+S04ymMSoA3wVRxGqjxuIMglwRO8POki9h164Epu2N8wk/GHXM/hR6ZGcsx2HArCCENjqSQ==}
     engines: {node: '>= 16'}
     dev: false
 
-  /@intlify/shared@9.6.5:
-    resolution: {integrity: sha512-gD7Ey47Xi4h/t6P+S04ymMSoA3wVRxGqjxuIMglwRO8POki9h164Epu2N8wk/GHXM/hR6ZGcsx2HArCCENjqSQ==}
+  /@intlify/shared@9.7.0:
+    resolution: {integrity: sha512-PUkEuk//YKu4CHS5ah3mNa3XL/+TZj6rAY/6yYN+GCNFd2u+uWUkeuwE4Q6t8dydRWlErOePHHS0KyNoof/oBw==}
     engines: {node: '>= 16'}
     dev: false
 
@@ -1397,7 +1397,7 @@ packages:
         optional: true
     dependencies:
       '@intlify/bundle-utils': 7.4.0(vue-i18n@9.6.5)
-      '@intlify/shared': 9.5.0
+      '@intlify/shared': 9.7.0
       '@rollup/pluginutils': 5.0.5(rollup@3.29.4)
       '@vue/compiler-sfc': 3.3.8
       debug: 4.3.4
@@ -2055,11 +2055,11 @@ packages:
       - supports-color
     dev: false
 
-  /@nuxtjs/i18n-edge@8.0.0-rc.5-28331496.3c75cf9(vue-router@4.2.5)(vue@3.3.8):
-    resolution: {integrity: sha512-5SIyUkXJOrkG1bilgoHzeJymn5dA/8TP8eI2NuItb9KoI+2Suz7vROv2bNq7yGT0GDaAf1/P6KIVy0FoyF6FjA==}
+  /@nuxtjs/i18n-edge@8.0.0-rc.5-28335414.dd86b7b(vue-router@4.2.5)(vue@3.3.8):
+    resolution: {integrity: sha512-QXeLxzrFpg0HPyHlOPw57f7AOQw7yFoP5b6QDu1a2pCGnNh3aqJDkH1IhX4XxzUX9xWzVSpLvxO3+4yfgThhEg==}
     engines: {node: ^14.16.0 || >=16.11.0}
     dependencies:
-      '@intlify/shared': 9.5.0
+      '@intlify/shared': 9.7.0
       '@intlify/unplugin-vue-i18n': 1.5.0(vue-i18n@9.6.5)
       '@mizchi/sucrase': 4.1.0
       '@nuxt/kit': 3.8.1
@@ -2099,8 +2099,8 @@ packages:
       - vue-router
     dev: false
 
-  /@nuxtjs/tailwindcss@6.9.4(webpack@5.89.0):
-    resolution: {integrity: sha512-T3B3P7RgJ/WTW3plHziLWqWbMzCWctUHpjqhW1WCXB/U3FOQxGH5dG4uEOmQkA6Gj4cbTNStIU/cRxpZhbBMhg==}
+  /@nuxtjs/tailwindcss@6.9.5(webpack@5.89.0):
+    resolution: {integrity: sha512-Q1jMY06KdK7f6IAL25HFWK0ZhTNaxyl/J0fhX3k0kjKojeflU6AbJTTKeVn9Dhqqt71y1thZqemuZNeJha+RBA==}
     dependencies:
       '@nuxt/kit': 3.8.1
       '@nuxt/postcss8': 1.1.3(webpack@5.89.0)
@@ -10539,6 +10539,7 @@ packages:
 
   /string_decoder@1.3.0:
     resolution: {integrity: sha512-hkRX8U1WjJFd8LsDJ2yQ/wWWxaopEsABU1XfkM8A+j0+85JAGppt16cr1Whg6KIbb4okU6Mql6BOj+uup/wKeA==}
+    requiresBuild: true
     dependencies:
       safe-buffer: 5.2.1
 
@@ -11806,7 +11807,7 @@ packages:
       vue-router:
         optional: true
     dependencies:
-      '@intlify/shared': 9.5.0
+      '@intlify/shared': 9.7.0
       '@intlify/vue-i18n-bridge': 1.0.1(vue-i18n@9.6.5)
       '@intlify/vue-router-bridge': 1.0.1(vue-router@4.2.5)(vue@3.3.8)
       ufo: 1.3.2
