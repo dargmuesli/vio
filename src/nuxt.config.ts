@@ -320,12 +320,6 @@ export default defineNuxtConfig(
               : false,
           xXSSProtection: '1; mode=block', // TODO: set back to `0` once CSP does not use `unsafe-*` anymore (https://github.com/maevsi/maevsi/issues/1047)
         },
-        nonce: true,
-        ssg: {
-          hashScripts: true,
-          hashStyles: false,
-        },
-        sri: true,
       },
       seo: {
         splash: false,
