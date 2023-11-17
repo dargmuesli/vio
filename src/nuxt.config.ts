@@ -89,6 +89,9 @@ export default defineNuxtConfig(
       },
       runtimeConfig: {
         public: {
+          i18n: {
+            baseUrl: SITE_URL,
+          },
           vio: {
             googleAnalyticsId: '',
             isInProduction: process.env.NODE_ENV === 'production',
@@ -163,7 +166,6 @@ export default defineNuxtConfig(
         logLevel: 'warning',
       },
       i18n: {
-        baseUrl: SITE_URL,
         detectBrowserLanguage: false,
       },
       linkChecker: {
