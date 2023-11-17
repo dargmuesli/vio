@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /
 
-# DEVELOPMENT HINTS: Indexing is blocked by site config set by system.
+# DEVELOPMENT HINTS: Indexing is blocked because of the environment. You can mock a production environment with ?indexable query.
