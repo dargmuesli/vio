@@ -162,7 +162,7 @@ export default defineNuxtConfig(
         locales: ['en', 'de'],
       },
       htmlValidator: {
-        failOnError: true,
+        // failOnError: true, // TODO: enable once headers match requirements (https://github.com/unjs/unhead/issues/199#issuecomment-1815728703)
         logLevel: 'warning',
       },
       i18n: {
