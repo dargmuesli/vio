@@ -1,3 +1,10 @@
+## [9.0.2](https://github.com/dargmuesli/vio/compare/9.0.1...9.0.2) (2023-11-17)
+
+
+### Bug Fixes
+
+* **nuxt-i18n:** correct base url setter placement ([ce96b7b](https://github.com/dargmuesli/vio/commit/ce96b7be5a0aee259899f827c2b54dcc489946de))
+
 ## [9.0.1](https://github.com/dargmuesli/vio/compare/9.0.0...9.0.1) (2023-11-07)
 
 
