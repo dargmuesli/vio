@@ -18,7 +18,7 @@ test.describe('headers middleware', () => {
             "; img-src https://*.google-analytics.com https://*.googletagmanager.com 'self' data:" +
             "; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net/npm/" +
             // '; upgrade-insecure-requests' + // TODO: enable when tests run on https
-            "; script-src https://static.cloudflareinsights.com https://*.googletagmanager.com https://polyfill.io/v3/polyfill.min.js http://localhost:3000/__sitemap__/style.xsl 'nonce' https://cdn.jsdelivr.net/npm/" +
+            "; script-src https://static.cloudflareinsights.com https://*.googletagmanager.com https://polyfill.io/v3/polyfill.min.js 'self' http://localhost:3000/__sitemap__/style.xsl 'nonce' https://cdn.jsdelivr.net/npm/" +
             "; connect-src 'self' https://*.analytics.google.com https://*.google-analytics.com https://*.googletagmanager.com" +
             "; default-src 'none'" +
             '; manifest-src http://localhost:3000/site.webmanifest'

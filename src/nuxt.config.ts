@@ -218,6 +218,14 @@ export default defineNuxtConfig(
                 : {}),
             },
             {
+              // nuxt-i18n
+              ...(process.env.NODE_ENV === 'development'
+                ? {}
+                : {
+                    'script-src': ["'self'"], // 'http://localhost:3000/_nuxt/i18n.config.*.js' // TOD: add with subresource integrity?
+                  }),
+            },
+            {
               // nuxt-link-checker
               ...(process.env.NODE_ENV === 'development'
                 ? {
