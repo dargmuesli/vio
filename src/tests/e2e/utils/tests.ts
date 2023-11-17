@@ -527,4 +527,12 @@ export const testMetadata = async ({
   expect(await page.locator('#schema-org-graph').innerText()).toMatchSnapshot(
     `schema-org-graph-${process.env.VIO_SERVER || 'dev'}.json`,
   )
+
+  // if (process.env.VIO_SERVER === 'static') {
+  //   expect(
+  //     await page
+  //       .locator('meta[http-equiv="Content-Security-Policy"]')
+  //       .innerText(),
+  //   ).toMatchSnapshot(`content-security-policy.txt`)
+  // }
 }

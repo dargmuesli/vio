@@ -162,7 +162,7 @@ export default defineNuxtConfig(
         locales: ['en', 'de'],
       },
       htmlValidator: {
-        failOnError: true,
+        // failOnError: true, // TODO: enable once headers match requirements (https://github.com/unjs/unhead/issues/199#issuecomment-1815728703)
         logLevel: 'warning',
       },
       i18n: {
@@ -182,9 +182,7 @@ export default defineNuxtConfig(
               ...(process.env.NODE_ENV === 'production'
                 ? {
                     'connect-src': ["'self'"], // `${SITE_URL}/cdn-cgi/rum`
-                    'script-src-elem': [
-                      'https://static.cloudflareinsights.com',
-                    ],
+                    'script-src': ['https://static.cloudflareinsights.com'], // TODO: replace with `script-src-elem` once Webkit supports it (https://caniuse.com/mdn-http_headers_content-security-policy_script-src-elem)
                   }
                 : {}),
             },
@@ -199,15 +197,15 @@ export default defineNuxtConfig(
                 'https://*.google-analytics.com',
                 'https://*.googletagmanager.com',
               ],
-              'script-src-elem': ['https://*.googletagmanager.com'],
+              'script-src': ['https://*.googletagmanager.com'], // TODO: replace with `script-src-elem` once Webkit supports it (https://caniuse.com/mdn-http_headers_content-security-policy_script-src-elem)
             },
             {
               // vio
               'connect-src': ["'self'"], // `${SITE_URL}/api/healthcheck`
               'manifest-src': [`${SITE_URL}/site.webmanifest`],
-              'script-src-elem': [
+              'script-src': [
                 'https://polyfill.io/v3/polyfill.min.js', // ESLint plugin compat
-              ],
+              ], // TODO: replace with `script-src-elem` once Webkit supports it (https://caniuse.com/mdn-http_headers_content-security-policy_script-src-elem)
             },
             {
               // @nuxt/devtools
@@ -218,6 +216,14 @@ export default defineNuxtConfig(
                     ],
                   }
                 : {}),
+            },
+            {
+              // nuxt-i18n
+              ...(process.env.NODE_ENV === 'development'
+                ? {}
+                : {
+                    'script-src': ["'self'"], // 'http://localhost:3000/_nuxt/i18n.config.*.js' // TOD: add with subresource integrity?
+                  }),
             },
             {
               // nuxt-link-checker
@@ -234,7 +240,7 @@ export default defineNuxtConfig(
                     'font-src': ['https://fonts.gstatic.com/s/inter/'],
                     'frame-ancestors': ["'self'"],
                     'frame-src': ["'self'"],
-                    'script-src-elem': ['https://cdn.tailwindcss.com/'],
+                    'script-src': ['https://cdn.tailwindcss.com/'], // TODO: replace with `script-src-elem` once Webkit supports it (https://caniuse.com/mdn-http_headers_content-security-policy_script-src-elem)
                     'style-src': [
                       // TODO: replace with `style-src-elem` once Webkit supports it
                       'https://cdn.jsdelivr.net/npm/gardevoir https://fonts.googleapis.com/css2',
@@ -244,7 +250,7 @@ export default defineNuxtConfig(
             },
             {
               // nuxt-simple-sitemap
-              'script-src-elem': [`${SITE_URL}/__sitemap__/style.xsl`],
+              'script-src': [`${SITE_URL}/__sitemap__/style.xsl`], // TODO: replace with `script-src-elem` once Webkit supports it (https://caniuse.com/mdn-http_headers_content-security-policy_script-src-elem)
             },
             {
               // nuxt
@@ -262,7 +268,7 @@ export default defineNuxtConfig(
                 "'self'", // TODO: replace with `"'nonce-{{nonce}}'",`
                 'data:', // external link icon
               ],
-              'script-src-elem': ["'nonce-{{nonce}}'"],
+              'script-src': ["'nonce-{{nonce}}'"], // TODO: replace with `script-src-elem` once Webkit supports it (https://caniuse.com/mdn-http_headers_content-security-policy_script-src-elem)
               'style-src': [
                 // TODO: replace with `style-src-elem` once Webkit supports it
                 "'self'", // TODO: replace with `"'nonce-{{nonce}}'",` (https://github.com/vitejs/vite/pull/11864)
@@ -274,9 +280,9 @@ export default defineNuxtConfig(
               'connect-src': ["'self'"] /* swagger
               'http://localhost:3000/_nitro/openapi.json',
               'http://localhost:3000/_nitro/swagger', */,
-              'script-src-elem': [
+              'script-src': [
                 'https://cdn.jsdelivr.net/npm/', // swagger // TODO: increase precision (https://github.com/unjs/nitro/issues/1757)
-              ],
+              ], // TODO: replace with `script-src-elem` once Webkit supports it (https://caniuse.com/mdn-http_headers_content-security-policy_script-src-elem)
               'style-src': [
                 'https://cdn.jsdelivr.net/npm/', // swagger // TODO: increase precision (https://github.com/unjs/nitro/issues/1757)
               ],
@@ -302,11 +308,11 @@ export default defineNuxtConfig(
               // 'require-trusted-types-for': ["'script'"], // csp-evaluator
               sandbox: [],
               'script-src': [],
-              'script-src-attr': [],
-              'script-src-elem': [],
+              'script-src-attr': false as const, // TODO: enable once Webkit supports it (https://caniuse.com/mdn-http_headers_content-security-policy_script-src-attr)
+              'script-src-elem': false as const, // TODO: enable once Webkit supports it (https://caniuse.com/mdn-http_headers_content-security-policy_script-src-elem)
               'style-src': [],
-              'style-src-attr': [],
-              'style-src-elem': [],
+              'style-src-attr': false as const, // TODO: enable once Webkit supports it (https://caniuse.com/mdn-http_headers_content-security-policy_style-src-attr)
+              'style-src-elem': false as const, // TODO: enable once Webkit supports it (https://caniuse.com/mdn-http_headers_content-security-policy_style-src-elem)
               'upgrade-insecure-requests': false, // TODO: set to `process.env.NODE_ENV === 'production'` or `true` when tests run on https
               'worker-src': [],
             },
@@ -321,9 +327,6 @@ export default defineNuxtConfig(
                 }
               : false,
           xXSSProtection: '1; mode=block', // TODO: set back to `0` once CSP does not use `unsafe-*` anymore (https://github.com/maevsi/maevsi/issues/1047)
-        },
-        nonce: {
-          enabled: true,
         },
       },
       seo: {
