@@ -1,3 +1,13 @@
+## [9.0.3](https://github.com/dargmuesli/vio/compare/9.0.2...9.0.3) (2023-11-17)
+
+
+### Bug Fixes
+
+* **csp:** allow self scripts ([049a6d4](https://github.com/dargmuesli/vio/commit/049a6d40d16317c05786e058f876d2cdf5a712a6))
+* **csp:** disable level 3 features ([c575a80](https://github.com/dargmuesli/vio/commit/c575a805874a12ac55ead9575d3933f06f429d7a))
+* **csp:** use `script-src` ([26fa246](https://github.com/dargmuesli/vio/commit/26fa24657677f84dbd50b1ec2f83ef8b533b366b))
+* **html-validator:** disable temporarily ([bacc8c6](https://github.com/dargmuesli/vio/commit/bacc8c6f71de16b4e3c55e332e6b8de1535bccfa))
+
 ## [9.0.2](https://github.com/dargmuesli/vio/compare/9.0.1...9.0.2) (2023-11-17)
 
 
