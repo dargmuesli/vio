@@ -47,7 +47,7 @@
     "@pinia/nuxt": "0.5.1",
     "@tailwindcss/forms": "0.5.7",
     "@tailwindcss/typography": "0.5.10",
-    "@types/lodash-es": "4.17.11",
+    "@types/lodash-es": "4.17.12",
     "@urql/core": "4.2.0",
     "@vuelidate/core": "2.0.3",
     "@vuelidate/validators": "2.0.4",
