@@ -24,8 +24,8 @@ importers:
   src:
     dependencies:
       '@dargmuesli/nuxt-cookie-control':
-        specifier: 7.1.3
-        version: 7.1.3(webpack@5.89.0)
+        specifier: 7.1.4
+        version: 7.1.4(webpack@5.89.0)
       '@heroicons/vue':
         specifier: 2.0.18
         version: 2.0.18(vue@3.3.9)
@@ -796,8 +796,8 @@ packages:
     dependencies:
       postcss-selector-parser: 6.0.13
 
-  /@dargmuesli/nuxt-cookie-control@7.1.3(webpack@5.89.0):
-    resolution: {integrity: sha512-aGblAEVJX5rtSdfyOTJ8BRlHvUcqi/8ijfRy6Ga2LLtMR8qrbJevJjrzTdkgLEDR2IsOSRHZWhtxDCOlN4bDDA==}
+  /@dargmuesli/nuxt-cookie-control@7.1.4(webpack@5.89.0):
+    resolution: {integrity: sha512-HdU4ZplS9CPd1lCCToxHw/PSQXT3n+TImZ388YZHegLAwoc4PVwVLUDijTFwaoFlowIoiwquHnUNAwYevAfn1g==}
     engines: {node: '>=16'}
     dependencies:
       '@nuxt/kit': 3.8.2
