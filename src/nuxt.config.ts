@@ -302,7 +302,7 @@ export default defineNuxtConfig(
               'navigate-to': [],
               'object-src': [],
               'prefetch-src': [],
-              'report-to': [],
+              'report-to': undefined,
               'report-uri': [],
               // TODO: evaluate header (https://github.com/maevsi/maevsi/issues/830) // https://stackoverflow.com/questions/62081028/this-document-requires-trustedscripturl-assignment
               // 'require-trusted-types-for': ["'script'"], // csp-evaluator
