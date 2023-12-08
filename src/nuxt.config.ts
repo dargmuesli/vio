@@ -290,31 +290,31 @@ export default defineNuxtConfig(
             {
               // base
               'base-uri': ["'none'"], // does not fallback to `default-src`
-              'child-src': [],
-              'connect-src': [],
+              'child-src': false as const,
+              'connect-src': false as const,
               'default-src': ["'none'"],
-              'font-src': [],
+              'font-src': false as const,
               'form-action': ["'none'"], // does not fallback to `default-src`
               'frame-ancestors': ["'none'"], // does not fallback to `default-src`
-              'frame-src': [],
-              'img-src': [],
-              'media-src': [],
-              'navigate-to': [],
-              'object-src': [],
-              'prefetch-src': [],
+              'frame-src': false as const,
+              'img-src': false as const,
+              'media-src': false as const,
+              'navigate-to': false as const,
+              'object-src': false as const,
+              'prefetch-src': false as const,
               'report-to': undefined,
-              'report-uri': [],
+              'report-uri': false as const,
               // TODO: evaluate header (https://github.com/maevsi/maevsi/issues/830) // https://stackoverflow.com/questions/62081028/this-document-requires-trustedscripturl-assignment
               // 'require-trusted-types-for': ["'script'"], // csp-evaluator
-              sandbox: [],
-              'script-src': [],
+              sandbox: false as const,
+              'script-src': false as const,
               'script-src-attr': false as const, // TODO: enable once Webkit supports it (https://caniuse.com/mdn-http_headers_content-security-policy_script-src-attr)
               'script-src-elem': false as const, // TODO: enable once Webkit supports it (https://caniuse.com/mdn-http_headers_content-security-policy_script-src-elem)
-              'style-src': [],
+              'style-src': false as const,
               'style-src-attr': false as const, // TODO: enable once Webkit supports it (https://caniuse.com/mdn-http_headers_content-security-policy_style-src-attr)
               'style-src-elem': false as const, // TODO: enable once Webkit supports it (https://caniuse.com/mdn-http_headers_content-security-policy_style-src-elem)
               'upgrade-insecure-requests': false, // TODO: set to `process.env.NODE_ENV === 'production'` or `true` when tests run on https
-              'worker-src': [],
+              'worker-src': false as const,
             },
           ),
           crossOriginEmbedderPolicy: false, // https://stackoverflow.com/questions/71904052/getting-notsameoriginafterdefaultedtosameoriginbycoep-error-with-helmet
