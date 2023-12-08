@@ -34,7 +34,7 @@
   ],
   "main": "nuxt.config.ts",
   "dependencies": {
-    "@dargmuesli/nuxt-cookie-control": "7.1.5",
+    "@dargmuesli/nuxt-cookie-control": "7.2.0",
     "@heroicons/vue": "2.0.18",
     "@http-util/status-i18n": "0.8.1",
     "@nuxt/devtools": "1.0.5",
