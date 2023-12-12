@@ -1,3 +1,14 @@
+## [10.0.0](https://github.com/dargmuesli/vio/compare/9.0.5...10.0.0) (2023-12-12)
+
+
+### ⚠ BREAKING CHANGES
+
+* **og-image:** update to v3
+
+### Features
+
+* **og-image:** update to v3 ([da7f869](https://github.com/dargmuesli/vio/commit/da7f869bb8840160e166e0f9dcfc24609dfc9990))
+
 ## [9.0.5](https://github.com/dargmuesli/vio/compare/9.0.4...9.0.5) (2023-12-09)
 
 
