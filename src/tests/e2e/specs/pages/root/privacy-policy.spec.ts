@@ -30,10 +30,10 @@ test.describe('visual regression', () => {
   })
 
   test('generates the open graph image', async ({ page }) => {
-    await page.goto('/__og-image__/image/privacy-policy/og.jpg')
+    await page.goto('/__og-image__/image/privacy-policy/og.png')
     await expect(page).toHaveScreenshot({ fullPage: true })
 
-    await page.goto('/__og-image__/image/de/privacy-policy/og.jpg')
+    await page.goto('/__og-image__/image/de/privacy-policy/og.png')
     await expect(page).toHaveScreenshot({ fullPage: true })
   })
 })

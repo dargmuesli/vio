@@ -315,7 +315,7 @@ export const testMetadata = async ({
         },
         {
           key: 'content',
-          value: joinURL(SITE_URL, '/__og-image__/image', path, '/og.jpg'),
+          value: joinURL(SITE_URL, '/__og-image__/image', path, '/og.png'),
         },
       ],
     },
@@ -451,7 +451,7 @@ export const testMetadata = async ({
         },
         {
           key: 'content',
-          value: joinURL(SITE_URL, '/__og-image__/image', path, '/og.jpg'),
+          value: joinURL(SITE_URL, '/__og-image__/image', path, '/og.png'),
         },
       ],
     },
