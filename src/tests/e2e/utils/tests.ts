@@ -293,7 +293,7 @@ export const testMetadata = async ({
           key: 'property',
           value: 'og:image:height',
         },
-        { key: 'content', value: '630' },
+        { key: 'content', value: '600' },
       ],
     },
     {
@@ -315,7 +315,7 @@ export const testMetadata = async ({
         },
         {
           key: 'content',
-          value: joinURL(SITE_URL, path, '/__og_image__/og.png'),
+          value: joinURL(SITE_URL, '/__og-image__/image', path, '/og.png'),
         },
       ],
     },
@@ -429,7 +429,7 @@ export const testMetadata = async ({
           key: 'name',
           value: 'twitter:image:height',
         },
-        { key: 'content', value: '630' },
+        { key: 'content', value: '600' },
       ],
     },
     {
@@ -451,7 +451,7 @@ export const testMetadata = async ({
         },
         {
           key: 'content',
-          value: joinURL(SITE_URL, path, '/__og_image__/og.png'),
+          value: joinURL(SITE_URL, '/__og-image__/image', path, '/og.png'),
         },
       ],
     },

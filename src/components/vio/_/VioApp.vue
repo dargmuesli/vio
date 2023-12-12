@@ -60,10 +60,15 @@ watch(
 )
 
 // initialization
-defineOgImage({
-  alt: ogImageAltProp.value,
-  component: ogImageComponentProp.value,
-})
+defineOgImageComponent(
+  ogImageComponentProp.value || 'NuxtSeo',
+  {
+    description: siteConfig.description,
+  },
+  {
+    alt: ogImageAltProp.value,
+  },
+)
 useAppLayout()
 useFavicons()
 usePolyfills()
