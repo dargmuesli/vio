@@ -171,6 +171,11 @@ export default defineNuxtConfig(
       linkChecker: {
         failOnError: true,
       },
+      ogImage: {
+        defaults: {
+          extension: 'png', // TODO: remove once og-image requires jpg opt-in
+        },
+      },
       robots: {
         credits: false,
       },
