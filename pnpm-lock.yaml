@@ -30,8 +30,8 @@ importers:
         specifier: 7.2.0
         version: 7.2.0(rollup@3.29.4)(webpack@5.89.0)
       '@heroicons/vue':
-        specifier: 2.0.18
-        version: 2.0.18(vue@3.3.12)
+        specifier: 2.1.1
+        version: 2.1.1(vue@3.3.12)
       '@http-util/status-i18n':
         specifier: 0.8.1
         version: 0.8.1
@@ -1226,8 +1226,8 @@ packages:
     resolution: {integrity: sha512-OfX7E2oUDYxtBvsuS4e/jSn4Q9Qb6DzgeYtsAdkPZ47znpoNsMgZw0+tVijiv3uGNR6dgNlty6r9rzIzHjtd/A==}
     dev: false
 
-  /@heroicons/vue@2.0.18(vue@3.3.12):
-    resolution: {integrity: sha512-BcTC9nq2TkwNSfQuqo96J7ehx4etezypc2YeTq7KsXWxrcrerhkgjLrxGRBnStN0wrXo0Gv4BInybqz5uBG6Cw==}
+  /@heroicons/vue@2.1.1(vue@3.3.12):
+    resolution: {integrity: sha512-Yi5nh/89L193ALgHyJUQUdNLsKXPrrE3yj5yiR8WAlo7nZyXGxGauQcEAmBsa2XJGMhBMuEdoOiuZ8wEwTBxVQ==}
     peerDependencies:
       vue: '>= 3'
     dependencies:
