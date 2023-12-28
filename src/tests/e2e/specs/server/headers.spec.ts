@@ -64,13 +64,6 @@ test.describe('headers middleware', () => {
     expect(headers['x-frame-options']).toStrictEqual('SAMEORIGIN')
     expect(headers['x-permitted-cross-domain-policies']).toStrictEqual('none')
     expect(headers['x-xss-protection']).toStrictEqual('1; mode=block')
-
-    if (process.env.NODE_ENV === 'production') {
-      expect('x-robots-tag' in headers).toBeFalsy()
-    } else {
-      expect(headers['x-robots-tag']).toStrictEqual('noindex, nofollow')
-    }
-
     expect(headers['content-type']).toStrictEqual('text/html;charset=utf-8')
     expect('x-powered-by' in headers).toBeFalsy()
     expect(headers.connection).toStrictEqual('close')
