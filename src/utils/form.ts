@@ -1,12 +1,13 @@
+import type { Validation } from '@vuelidate/core'
 import { consola } from 'consola'
 
 export const isFormValid = async ({
   v$,
   isFormSent,
 }: {
-  v$: any
+  v$: Ref<Validation>
   isFormSent: Ref<boolean>
-}): Promise<boolean> => {
+}) => {
   v$.value.$touch()
 
   const isValid = await v$.value.$validate()
