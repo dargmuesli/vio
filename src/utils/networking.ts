@@ -129,25 +129,3 @@ export const getTimezone = async (event: H3Event) => {
 
   return undefined
 }
-
-// TODO: use fetch
-export const xhrPromise = (method: string, url: string, jwt: string) =>
-  new Promise((resolve, reject) => {
-    const xhr = new XMLHttpRequest()
-    xhr.open(method, url)
-
-    if (jwt) {
-      xhr.setRequestHeader('Authorization', 'Bearer ' + jwt)
-    }
-
-    xhr.onload = () => {
-      if (xhr.status >= 200 && xhr.status < 300) {
-        resolve(xhr.response)
-      } else {
-        reject(new Error(`${xhr.status}\n${xhr.statusText}`))
-      }
-    }
-    xhr.onerror = () => reject(new Error(`${xhr.status}\n${xhr.statusText}`))
-
-    xhr.send()
-  })

@@ -19,7 +19,7 @@ test.describe('headers middleware', () => {
             " style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net/npm/;" +
             // 'upgrade-insecure-requests' + // TODO: enable when tests run on https
             " script-src https://static.cloudflareinsights.com https://*.googletagmanager.com https://polyfill.io/v3/polyfill.min.js 'self' http://localhost:3000/__sitemap__/style.xsl 'nonce' https://cdn.jsdelivr.net/npm/;" +
-            " connect-src 'self' https://*.analytics.google.com https://*.google-analytics.com https://*.googletagmanager.com;" +
+            " connect-src https://cloudflareinsights.com https://*.analytics.google.com https://*.google-analytics.com https://*.googletagmanager.com 'self';" +
             " default-src 'none';" +
             ' manifest-src http://localhost:3000/site.webmanifest;'
         : "base-uri 'none';" +

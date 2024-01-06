@@ -6,7 +6,6 @@ import { decodeJwt } from 'jose'
 import type { Store } from 'pinia'
 
 import { useVioAuthStore } from '../store/auth'
-import { xhrPromise } from '../utils/networking'
 import { JWT_NAME } from './constants'
 
 export const getJwtFromCookie = ({ req }: { req: IncomingMessage }) => {
@@ -61,7 +60,10 @@ export const jwtStore = async ({
     )
   } else {
     try {
-      await xhrPromise('POST', '/api/auth', jwt || '')
+      await $fetch('/api/auth', {
+        method: 'POST',
+        ...(jwt ? { headers: { Authorization: `Bearer ${jwt}` } } : {}),
+      })
     } catch (error: any) {
       return Promise.reject(Error('Authentication api call failed.'))
     }

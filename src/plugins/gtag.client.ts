@@ -1,9 +1,9 @@
-import VueGtag from 'vue-gtag'
-
-export default defineNuxtPlugin((nuxtApp) => {
+export default defineNuxtPlugin(async (nuxtApp) => {
   const config = useRuntimeConfig()
   const router = useRouter()
   const cookieControl = useCookieControl()
+
+  const VueGtag = (await import('vue-gtag')).default
 
   nuxtApp.vueApp.use(
     VueGtag,
