@@ -186,7 +186,7 @@ export default defineNuxtConfig(
               // Cloudflare
               ...(process.env.NODE_ENV === 'production'
                 ? {
-                    'connect-src': ["'self'"], // `${SITE_URL}/cdn-cgi/rum`
+                    'connect-src': ['https://cloudflareinsights.com'],
                     'script-src': ['https://static.cloudflareinsights.com'], // TODO: replace with `script-src-elem` once Webkit supports it (https://caniuse.com/mdn-http_headers_content-security-policy_script-src-elem)
                   }
                 : {}),
