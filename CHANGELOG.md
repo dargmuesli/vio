@@ -1,3 +1,10 @@
+## [10.2.0](https://github.com/dargmuesli/vio/compare/10.1.0...10.2.0) (2024-01-06)
+
+
+### Features
+
+* **tailwind:** allow to disable external link icon ([3c65b35](https://github.com/dargmuesli/vio/commit/3c65b35a97a72e99c2f1681ea440d00998c678b7))
+
 ## [10.1.0](https://github.com/dargmuesli/vio/compare/10.0.2...10.1.0) (2024-01-06)
 
 
