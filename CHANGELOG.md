@@ -1,3 +1,17 @@
+## [10.0.2](https://github.com/dargmuesli/vio/compare/10.0.1...10.0.2) (2024-01-06)
+
+
+### Bug Fixes
+
+* **csp:** correct cloudflare connect source ([9b5fbed](https://github.com/dargmuesli/vio/commit/9b5fbed6109aafb288fa6bd5a7791df18a81c336))
+* schedule release ([5414060](https://github.com/dargmuesli/vio/commit/5414060d6ec000cd7d35c5c1bbc5751a44c6f1c2))
+
+
+### Performance Improvements
+
+* **client:** decrease bundle size ([16abd51](https://github.com/dargmuesli/vio/commit/16abd51a175b262faaea485064db28321a0d4405))
+* **polyfills:** remove for promise ([bb33ec7](https://github.com/dargmuesli/vio/commit/bb33ec7dfb065c2a0e8e059bfab92314ebdfe923))
+
 ## [10.0.1](https://github.com/dargmuesli/vio/compare/10.0.0...10.0.1) (2023-12-23)
 
 
