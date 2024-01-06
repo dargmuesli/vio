@@ -1,3 +1,10 @@
+## [10.1.0](https://github.com/dargmuesli/vio/compare/10.0.2...10.1.0) (2024-01-06)
+
+
+### Features
+
+* **sitemap:** remove api pages exclusion ([4c5a1e9](https://github.com/dargmuesli/vio/commit/4c5a1e97ea2663bf9f1bf8791280549ec64e85ad))
+
 ## [10.0.2](https://github.com/dargmuesli/vio/compare/10.0.1...10.0.2) (2024-01-06)
 
 
