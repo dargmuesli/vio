@@ -1,16 +1,16 @@
-import dayjs from 'dayjs'
+export default defineNuxtPlugin(async (_nuxtApp) => {
+  const dayjs = (await import('dayjs')).default
 
-// workaround for [1]
-import de from 'dayjs/locale/de'
-// import 'dayjs/locale/de' does not make locale available
+  // workaround for [1]
+  const de = (await import('dayjs/locale/de')).default
+  // import 'dayjs/locale/de' does not make locale available
 
-import isSameOrBefore from 'dayjs/plugin/isSameOrBefore'
-import localizedFormat from 'dayjs/plugin/localizedFormat'
-import relativeTime from 'dayjs/plugin/relativeTime'
-import timezone from 'dayjs/plugin/timezone'
-import utc from 'dayjs/plugin/utc'
+  const isSameOrBefore = (await import('dayjs/plugin/isSameOrBefore')).default
+  const localizedFormat = (await import('dayjs/plugin/localizedFormat')).default
+  const relativeTime = (await import('dayjs/plugin/relativeTime')).default
+  const timezone = (await import('dayjs/plugin/timezone')).default
+  const utc = (await import('dayjs/plugin/utc')).default
 
-export default defineNuxtPlugin((_nuxtApp) => {
   dayjs.extend(isSameOrBefore)
   dayjs.extend(localizedFormat)
   dayjs.extend(relativeTime)

@@ -12,7 +12,7 @@
 </template>
 
 <script setup lang="ts">
-import { status } from '@http-util/status-i18n'
+const httpUtilStatusI18n = await import('@http-util/status-i18n')
 
 interface Props {
   statusCode?: number
@@ -31,7 +31,7 @@ const { locale, t } = useI18n()
 
 // data
 const title = `${props.statusCode ? `${props.statusCode} - ` : ''}${
-  status(props.statusCode, locale.value) || t('error')
+  httpUtilStatusI18n.status(props.statusCode, locale.value) || t('error')
 }`
 
 // initialization
