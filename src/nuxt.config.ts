@@ -46,8 +46,8 @@ export default defineNuxtConfig(
         '@nuxtjs/color-mode',
         '@nuxtjs/html-validator',
         '@nuxtjs/i18n',
+        '@nuxtjs/seo',
         '@nuxtjs/tailwindcss',
-        '@nuxtseo/module',
         '@pinia/nuxt',
         // nuxt-security: remove invalid `'none'`s and duplicates
         (_options, nuxt) => {
