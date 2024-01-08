@@ -1,3 +1,2 @@
-import clipboard from 'clipboardy'
-
-export const copyText = async (text: string) => await clipboard.write(text)
+export const copyText = async (text: string) =>
+  (await import('clipboardy')).default.write(text)
