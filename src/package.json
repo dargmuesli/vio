@@ -121,7 +121,7 @@
     "start:dev": "nuxt dev .playground",
     "start:node": "node .playground/.output/server/index.mjs",
     "start:static": "serve .playground/.output/public",
-    "start:static:test": "cross-env NODE_ENV=production PORT=3002 SITE_URL=http://localhost:3002 pnpm run start:static",
+    "start:static:test": "cross-env PORT=3002 pnpm run start:static",
     "test:e2e:docker:br": "pnpm run test:e2e:docker:build && pnpm run test:e2e:docker:run",
     "test:e2e:docker:build": "docker build -t test-e2e_development --build-arg UID=$(id -u) --build-arg GID=$(id -g) --target test-e2e_development ..",
     "test:e2e:docker:run": "docker run --rm -v \"$PWD/..:/srv/app\" -v \"$(pnpm store path):/srv/.pnpm-store\" test-e2e_development",
