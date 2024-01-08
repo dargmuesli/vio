@@ -89,7 +89,9 @@ export default defineNuxtConfig(
       runtimeConfig: {
         public: {
           i18n: {
-            baseUrl: SITE_URL,
+            ...(process.env.NODE_ENV === 'development'
+              ? {}
+              : { baseUrl: SITE_URL }),
           },
           vio: {
             googleAnalyticsId: '',
