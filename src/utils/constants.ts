@@ -89,7 +89,6 @@ export const VIO_NUXT_BASE_CONFIG = ({
       ...I18N_MODULE_CONFIG, // `langDir`, `lazy` and `locales` must be configured to extend a layer having lazy-loaded translations (https://v8.i18n.nuxtjs.org/guide/layers#locales)
     },
     site: {
-      ...(defaultLocale ? { defaultLocale } : {}),
       name: siteName,
     },
   }) as Parameters<typeof defineNuxtConfig>[0]

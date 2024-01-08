@@ -166,6 +166,9 @@ export default defineNuxtConfig(
       },
       i18n: {
         detectBrowserLanguage: false,
+        experimental: {
+          localeDetector: './server/localeDetector.ts',
+        },
       },
       linkChecker: {
         failOnError: true,
