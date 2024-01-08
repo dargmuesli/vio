@@ -53,11 +53,9 @@ export const TITLE_TEMPLATE = ({
 }) => (title && title !== siteName ? `${title} · ${siteName}` : siteName)
 export const VERIFICATION_FORMAT_UUID = helpers.regex(REGEX_UUID)
 export const VIO_NUXT_BASE_CONFIG = ({
-  defaultLocale,
   siteName,
   stagingHost,
 }: {
-  defaultLocale?: string
   siteName: string
   stagingHost?: string
 }) =>
@@ -85,11 +83,9 @@ export const VIO_NUXT_BASE_CONFIG = ({
 
     // modules
     i18n: {
-      defaultLocale, // Must be set for the default prefix_except_default prefix strategy.
       ...I18N_MODULE_CONFIG, // `langDir`, `lazy` and `locales` must be configured to extend a layer having lazy-loaded translations (https://v8.i18n.nuxtjs.org/guide/layers#locales)
     },
     site: {
-      ...(defaultLocale ? { defaultLocale } : {}),
       name: siteName,
     },
   }) as Parameters<typeof defineNuxtConfig>[0]
