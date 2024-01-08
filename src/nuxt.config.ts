@@ -165,6 +165,7 @@ export default defineNuxtConfig(
         logLevel: 'warning',
       },
       i18n: {
+        defaultLocale: 'en', // Must be set for the default prefix_except_default prefix strategy.
         detectBrowserLanguage: false,
       },
       linkChecker: {
@@ -352,7 +353,6 @@ export default defineNuxtConfig(
       },
     },
     VIO_NUXT_BASE_CONFIG({
-      defaultLocale: 'en',
       siteName: SITE_NAME,
       stagingHost: 'localhost:3000',
     }),
