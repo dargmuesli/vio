@@ -1,3 +1,10 @@
+## [10.2.1](https://github.com/dargmuesli/vio/compare/10.2.0...10.2.1) (2024-01-08)
+
+
+### Bug Fixes
+
+* **deps:** inline clipboardy import ([5f69e3b](https://github.com/dargmuesli/vio/commit/5f69e3be1b3c0ff9865d2cc0375712fc79767dc7))
+
 ## [10.2.0](https://github.com/dargmuesli/vio/compare/10.1.0...10.2.0) (2024-01-06)
 
 
