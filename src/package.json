@@ -83,7 +83,7 @@
     "lodash-es": "4.17.21",
     "nuxt": "3.9.1",
     "pinia": "2.1.7",
-    "prettier": "3.2.1",
+    "prettier": "3.2.2",
     "prettier-plugin-tailwindcss": "0.5.11",
     "serve": "14.2.1",
     "stylelint": "16.1.0",
