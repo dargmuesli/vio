@@ -1,3 +1,10 @@
+## [10.2.3](https://github.com/dargmuesli/vio/compare/10.2.2...10.2.3) (2024-01-23)
+
+
+### Performance Improvements
+
+* revert most dynamic imports ([31b7207](https://github.com/dargmuesli/vio/commit/31b7207c4249df09267044ca528840ba7d3e7120))
+
 ## [10.2.2](https://github.com/dargmuesli/vio/compare/10.2.1...10.2.2) (2024-01-17)
 
 
