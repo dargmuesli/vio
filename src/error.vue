@@ -1,12 +1,15 @@
 <template>
-  <NuxtLayout>
-    <VioError
-      :status-code="error.statusCode"
-      :status-message="error.statusMessage"
-      :description="error.message"
-      :stack="error.stack"
-    />
-  </NuxtLayout>
+  <div>
+    <!-- `NuxtLayout` can't be the root element (https://github.com/nuxt/nuxt/issues/25214) -->
+    <NuxtLayout>
+      <VioError
+        :status-code="error.statusCode"
+        :status-message="error.statusMessage"
+        :description="error.message"
+        :stack="error.stack"
+      />
+    </NuxtLayout>
+  </div>
 </template>
 
 <script setup lang="ts">
