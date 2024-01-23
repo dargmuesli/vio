@@ -1,3 +1,10 @@
+## [10.2.4](https://github.com/dargmuesli/vio/compare/10.2.3...10.2.4) (2024-01-23)
+
+
+### Bug Fixes
+
+* **error:** wrap nuxt layout root ([f5481a5](https://github.com/dargmuesli/vio/commit/f5481a596140ba7aa330579a5e61db972e148876))
+
 ## [10.2.3](https://github.com/dargmuesli/vio/compare/10.2.2...10.2.3) (2024-01-23)
 
 
