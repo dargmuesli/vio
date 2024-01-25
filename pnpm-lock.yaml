@@ -97,8 +97,8 @@ importers:
         version: 2.0.1(vue@3.4.15)
     devDependencies:
       '@axe-core/playwright':
-        specifier: 4.8.3
-        version: 4.8.3(playwright-core@1.41.1)
+        specifier: 4.8.4
+        version: 4.8.4(playwright-core@1.41.1)
       '@intlify/eslint-plugin-vue-i18n':
         specifier: 3.0.0-next.5
         version: 3.0.0-next.5(eslint@8.56.0)
@@ -245,8 +245,8 @@ packages:
   /@antfu/utils@0.7.7:
     resolution: {integrity: sha512-gFPqTG7otEJ8uP6wrhDv6mqwGWYZKNvAcCq6u9hOj0c+IKCEsY4L1oC9trPq2SaWIzAfHvqfBDxF591JkMf+kg==}
 
-  /@axe-core/playwright@4.8.3(playwright-core@1.41.1):
-    resolution: {integrity: sha512-YtbkAWeOp5oQeI8vS6KYqJDa5yTl5O1wJP8KOZAAVjhxeiK/Y1ssxnZuGRobARyVh3eS6O3jdxTv/iCK1RfgaA==}
+  /@axe-core/playwright@4.8.4(playwright-core@1.41.1):
+    resolution: {integrity: sha512-xpwd+T0BODt19hnXW0eX9xf+H/Ns1rdWwZNmuCV9UoTqjZ9mGm1F80pvh/A1r317ooltq8nwqcoVO9jbHWKSdA==}
     peerDependencies:
       playwright-core: '>= 1.0.0'
     dependencies:
