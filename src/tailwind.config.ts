@@ -168,15 +168,6 @@ export default {
           cursor: theme('cursor.not-allowed'),
           opacity: theme('opacity.50'),
         },
-        '.max-w-xxs': {
-          maxWidth: '15rem',
-        },
-        '.min-w-xxs': {
-          minWidth: '15rem',
-        },
-        '.mb-20vh': {
-          marginBottom: '20vh',
-        },
       })
     },
   ],
