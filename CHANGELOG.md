@@ -1,3 +1,14 @@
+## [11.0.0-beta.1](https://github.com/dargmuesli/vio/compare/10.2.4...11.0.0-beta.1) (2024-01-25)
+
+
+### ⚠ BREAKING CHANGES
+
+* **tailwind:** remove custom utilities
+
+### Features
+
+* **tailwind:** remove custom utilities ([25f08a2](https://github.com/dargmuesli/vio/commit/25f08a281ddeea2ba949fff8228d72d8b2fea8f3))
+
 ## [10.2.4](https://github.com/dargmuesli/vio/compare/10.2.3...10.2.4) (2024-01-23)
 
 
