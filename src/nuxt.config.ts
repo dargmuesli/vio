@@ -39,6 +39,9 @@ export default defineNuxtConfig(
           enabled: true,
         },
       },
+      future: {
+        typescriptBundlerResolution: false, // TODO: remove (https://github.com/nuxt/nuxt/issues/19426)
+      },
       modules: [
         '@dargmuesli/nuxt-cookie-control',
         '@nuxt/devtools',
