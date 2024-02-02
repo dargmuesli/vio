@@ -1,3 +1,10 @@
+## [10.2.6](https://github.com/dargmuesli/vio/compare/10.2.5...10.2.6) (2024-02-02)
+
+
+### Bug Fixes
+
+* **app:** drop server only meta rendering ([fec8779](https://github.com/dargmuesli/vio/commit/fec87790820c0fb6173c48f5405bdd98f7ed2f8f))
+
 ## [10.2.5](https://github.com/dargmuesli/vio/compare/10.2.4...10.2.5) (2024-01-31)
 
 
