@@ -62,7 +62,7 @@
     "@axe-core/playwright": "4.8.4",
     "@intlify/eslint-plugin-vue-i18n": "3.0.0-next.5",
     "@nuxtjs/eslint-config-typescript": "12.1.0",
-    "@playwright/test": "1.41.1",
+    "@playwright/test": "1.41.2",
     "@unhead/vue": "1.8.10",
     "@urql/devtools": "2.0.3",
     "@urql/exchange-graphcache": "6.4.0",
@@ -99,7 +99,7 @@
   },
   "peerDependencies": {
     "nuxt": "3.10.0",
-    "playwright-core": "1.41.1",
+    "playwright-core": "1.41.2",
     "vue": "3.4.15",
     "vue-router": "4.2.5"
   },
