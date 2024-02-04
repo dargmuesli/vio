@@ -146,7 +146,7 @@ importers:
         version: 4.0.0(eslint@8.56.0)
       eslint-plugin-prettier:
         specifier: 5.1.3
-        version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.56.0)(prettier@3.2.4)
+        version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.56.0)(prettier@3.2.5)
       eslint-plugin-yml:
         specifier: 1.12.2
         version: 1.12.2(eslint@8.56.0)
@@ -169,11 +169,11 @@ importers:
         specifier: 2.1.7
         version: 2.1.7(typescript@5.3.3)(vue@3.4.15)
       prettier:
-        specifier: 3.2.4
-        version: 3.2.4
+        specifier: 3.2.5
+        version: 3.2.5
       prettier-plugin-tailwindcss:
         specifier: 0.5.11
-        version: 0.5.11(prettier@3.2.4)
+        version: 0.5.11(prettier@3.2.5)
       serve:
         specifier: 14.2.1
         version: 14.2.1
@@ -2491,7 +2491,7 @@ packages:
       chalk: 5.3.0
       html-validate: 8.7.4
       pathe: 1.1.2
-      prettier: 3.2.4
+      prettier: 3.2.5
       std-env: 3.7.0
     transitivePeerDependencies:
       - jest
@@ -2728,6 +2728,7 @@ packages:
   /@parcel/watcher-wasm@2.4.0:
     resolution: {integrity: sha512-MNgQ4WCbBybqQ97KwR/hqJGYTg3+s8qHpgIyFWB2qJOBvoJWbXuJGmm4ZkPLq2bMaANqCZqrXwmKYagZTkMKZA==}
     engines: {node: '>= 10.0.0'}
+    requiresBuild: true
     dependencies:
       is-glob: 4.0.3
       micromatch: 4.0.5
@@ -2761,6 +2762,7 @@ packages:
   /@parcel/watcher@2.4.0:
     resolution: {integrity: sha512-XJLGVL0DEclX5pcWa2N9SX1jCGTDd8l972biNooLFtjneuGqodupPQh6XseXIBBeVIMaaJ7bTcs3qGvXwsp4vg==}
     engines: {node: '>= 10.0.0'}
+    requiresBuild: true
     dependencies:
       detect-libc: 1.0.3
       is-glob: 4.0.3
@@ -5377,6 +5379,7 @@ packages:
 
   /crossws@0.1.1:
     resolution: {integrity: sha512-c9c/o7bS3OjsdpSkvexpka0JNlesBF2JU9B2V1yNsYGwRbAafxhJQ7VI9b48D5bpONz/oxbPGMzBojy9sXoQIQ==}
+    requiresBuild: true
 
   /css-background-parser@0.1.0:
     resolution: {integrity: sha512-2EZLisiZQ+7m4wwur/qiYJRniHX4K5Tc9w93MT3AS0WS1u5kaZ4FKXlOTBhOjc+CgEgPiGY+fX1yWD8UwpEqUA==}
@@ -6226,7 +6229,7 @@ packages:
       - supports-color
     dev: true
 
-  /eslint-plugin-prettier@5.1.3(eslint-config-prettier@9.1.0)(eslint@8.56.0)(prettier@3.2.4):
+  /eslint-plugin-prettier@5.1.3(eslint-config-prettier@9.1.0)(eslint@8.56.0)(prettier@3.2.5):
     resolution: {integrity: sha512-C9GCVAs4Eq7ZC/XFQHITLiHJxQngdtraXaM+LoUFoFp/lHNl2Zn8f3WQbe9HvTBBQ9YnKFB0/2Ajdqwo5D1EAw==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
@@ -6242,7 +6245,7 @@ packages:
     dependencies:
       eslint: 8.56.0
       eslint-config-prettier: 9.1.0(eslint@8.56.0)
-      prettier: 3.2.4
+      prettier: 3.2.5
       prettier-linter-helpers: 1.0.0
       synckit: 0.8.8
     dev: true
@@ -7212,6 +7215,7 @@ packages:
   /http-shutdown@1.2.2:
     resolution: {integrity: sha512-S9wWkJ/VSY9/k4qcjG318bqJNruzE4HySUhFYknwmu6LBP97KLLfwNf+n4V1BHurvFNkSKLFnK/RsuUnRTf9Vw==}
     engines: {iojs: '>= 1.0.0', node: '>= 0.12.0'}
+    requiresBuild: true
 
   /https-proxy-agent@5.0.1:
     resolution: {integrity: sha512-dFcAjpTQFgoLMzC2VwU+C/CbS7uRL0lWmxDITmqm7C+7F0Odmj6s9l6alZc6AELXhrnggM2CeWSXHGOdX2YtwA==}
@@ -8640,6 +8644,7 @@ packages:
   /node-forge@1.3.1:
     resolution: {integrity: sha512-dPEtOeMvF9VMcYV/1Wb8CPoVAXtp6MKMlcbAt4ddqmGqUJ6fQZFXkNZNkNlfevtNkGtaSoXf/vNNNSvgrdXwtA==}
     engines: {node: '>= 6.13.0'}
+    requiresBuild: true
 
   /node-gyp-build@4.8.0:
     resolution: {integrity: sha512-u6fs2AEUljNho3EYTJNBfImO5QTo/J/1Etd+NVdCj7qWKUSN/bSLkZwhDv7I+w/MSC6qJ4cknepkAYykDdK8og==}
@@ -10108,7 +10113,7 @@ packages:
       fast-diff: 1.3.0
     dev: true
 
-  /prettier-plugin-tailwindcss@0.5.11(prettier@3.2.4):
+  /prettier-plugin-tailwindcss@0.5.11(prettier@3.2.5):
     resolution: {integrity: sha512-AvI/DNyMctyyxGOjyePgi/gqj5hJYClZ1avtQvLlqMT3uDZkRbi4HhGUpok3DRzv9z7Lti85Kdj3s3/1CeNI0w==}
     engines: {node: '>=14.21.3'}
     peerDependencies:
@@ -10157,11 +10162,11 @@ packages:
       prettier-plugin-twig-melody:
         optional: true
     dependencies:
-      prettier: 3.2.4
+      prettier: 3.2.5
     dev: true
 
-  /prettier@3.2.4:
-    resolution: {integrity: sha512-FWu1oLHKCrtpO1ypU6J0SbK2d9Ckwysq6bHj/uaCP26DxrPpppCLQRGVuqAxSTvhF00AcvDRyYrLNW7ocBhFFQ==}
+  /prettier@3.2.5:
+    resolution: {integrity: sha512-3/GWa9aOC0YeD7LUfvOG2NiDyhOWRvt1k+rcKhOuYnMY24iiCphgneUfJDyFXd6rZCAnuLBv6UeAULtrhT/F4A==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -12011,6 +12016,7 @@ packages:
   /untun@0.1.3:
     resolution: {integrity: sha512-4luGP9LMYszMRZwsvyUd9MrxgEGZdZuZgpVQHEEX0lCYFESasVRvZd0EYpCkOIbJKHMuv0LskpXc/8Un+MJzEQ==}
     hasBin: true
+    requiresBuild: true
     dependencies:
       citty: 0.1.5
       consola: 3.2.3
@@ -12049,6 +12055,7 @@ packages:
 
   /uqr@0.1.2:
     resolution: {integrity: sha512-MJu7ypHq6QasgF5YRTjqscSzQp/W11zoUk6kvmlH+fmWEs63Y0Eib13hYFwAzagRJcVY8WVnlV+eBDUGMJ5IbA==}
+    requiresBuild: true
 
   /uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
