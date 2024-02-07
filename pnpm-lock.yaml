@@ -84,8 +84,8 @@ importers:
         specifier: 5.2.1
         version: 5.2.1
       nuxt-security:
-        specifier: 1.1.0
-        version: 1.1.0(rollup@4.9.6)
+        specifier: 1.1.1
+        version: 1.1.1(rollup@4.9.6)
       playwright-core:
         specifier: 1.41.2
         version: 1.41.2
@@ -8867,7 +8867,7 @@ packages:
   /nuxt-csurf@1.4.0(rollup@4.9.6):
     resolution: {integrity: sha512-BED0eJpCt3VjAe1+/4Q/weGzPgWax0iHrRuBcIU9O1R4+fjfQTjpyiVtZ81mwcLu19NaH/xT0i7QXSlnPayR+w==}
     dependencies:
-      '@nuxt/kit': 3.10.0(rollup@4.9.6)
+      '@nuxt/kit': 3.10.1(rollup@4.9.6)
       defu: 6.1.4
       uncsrf: 1.1.1
     transitivePeerDependencies:
@@ -9041,10 +9041,10 @@ packages:
       - webpack
     dev: false
 
-  /nuxt-security@1.1.0(rollup@4.9.6):
-    resolution: {integrity: sha512-nsvdUQbHjpGPNRUYi+ZDB5yUGL7rjTIhTxpuZwqxJuOPwAbw19S2DlgE+HTxn9CmzTCv8231lEhpD5G/Y4uG7g==}
+  /nuxt-security@1.1.1(rollup@4.9.6):
+    resolution: {integrity: sha512-mwCF5P3ukHvh6Gq0mI/0Ioh57Ws55xNsKv2By9EfADHc3L9etxHnhoicanA4hcy5VxUNqxvVK0vZ/+MpE98rvw==}
     dependencies:
-      '@nuxt/kit': 3.10.0(rollup@4.9.6)
+      '@nuxt/kit': 3.10.1(rollup@4.9.6)
       basic-auth: 2.0.1
       cheerio: 1.0.0-rc.12
       defu: 6.1.4
