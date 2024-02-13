@@ -45,8 +45,8 @@ importers:
         specifier: 1.6.0
         version: 1.6.0(rollup@4.10.0)
       '@nuxtjs/i18n':
-        specifier: 8.1.0
-        version: 8.1.0(rollup@4.10.0)(vue@3.4.19)
+        specifier: 8.1.1
+        version: 8.1.1(rollup@4.10.0)(vue@3.4.19)
       '@nuxtjs/seo':
         specifier: 2.0.0-rc.8
         version: 2.0.0-rc.8(@lezer/common@1.2.1)(@nuxt/devtools@1.0.8)(@unhead/shared@1.8.10)(@vue/compiler-core@3.4.19)(h3@1.10.1)(nuxt@3.10.1)(postcss@8.4.35)(rollup@4.10.0)(unhead@1.8.10)(vite@5.1.1)(vue@3.4.19)(webpack@5.90.1)
@@ -2502,8 +2502,8 @@ packages:
       - vitest
     dev: false
 
-  /@nuxtjs/i18n@8.1.0(rollup@4.10.0)(vue@3.4.19):
-    resolution: {integrity: sha512-4J3rvqb8TAAwMWgQxU4qzu+61bJBm/4531ISN1dDG498zT4ozpwHC72noAd9h2iV6BpRA4wFASiqFMSMnFBBZQ==}
+  /@nuxtjs/i18n@8.1.1(rollup@4.10.0)(vue@3.4.19):
+    resolution: {integrity: sha512-woq2gdXv+soVRc2yeE2pwWODiLnF7fx1eAEXi5Zx+StQDxHegAHTbKX/ZqcsW8VZ3mqlcpzfqN399KCZ9qXJ8g==}
     engines: {node: ^14.16.0 || >=16.11.0}
     dependencies:
       '@intlify/h3': 0.5.0
