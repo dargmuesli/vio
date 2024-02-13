@@ -16,10 +16,6 @@ const currentDir = dirname(fileURLToPath(import.meta.url))
 export default defineNuxtConfig(
   defu(
     {
-      alias: {
-        dayjs: 'dayjs',
-        sweetalert2: 'sweetalert2',
-      }, // TODO: remove (https://github.com/nuxt/nuxt/issues/19426)
       app: {
         head: {
           htmlAttrs: {
@@ -38,9 +34,6 @@ export default defineNuxtConfig(
         timeline: {
           enabled: true,
         },
-      },
-      future: {
-        typescriptBundlerResolution: false, // TODO: remove (https://github.com/nuxt/nuxt/issues/19426)
       },
       modules: [
         '@dargmuesli/nuxt-cookie-control',
@@ -112,6 +105,14 @@ export default defineNuxtConfig(
             // moduleResolution: 'bundler',
             // noErrorTruncation: true,
           },
+        },
+      },
+      vite: {
+        optimizeDeps: {
+          include: [
+            'dayjs', // remove when automated (https://github.com/nuxt/nuxt/pull/25752#discussion_r1486889443)
+            'sweetalert2', // remove when automated (https://github.com/nuxt/nuxt/pull/25752#discussion_r1486889443)
+          ],
         },
       },
 
