@@ -16,11 +16,5 @@
 </template>
 
 <script setup lang="ts">
-import type { Locale } from '@dargmuesli/nuxt-cookie-control/runtime/types'
-import type { WritableComputedRef } from 'vue'
-
-const i18n = useI18n()
-
-// data
-const locale = i18n.locale as WritableComputedRef<Locale>
+const { locale } = useI18n()
 </script>
