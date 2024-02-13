@@ -102,7 +102,6 @@ export default defineNuxtConfig(
         tsConfig: {
           compilerOptions: {
             esModuleInterop: true,
-            // moduleResolution: 'bundler',
             // noErrorTruncation: true,
           },
         },
