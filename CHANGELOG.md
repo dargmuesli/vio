@@ -1,3 +1,10 @@
+## [10.2.8](https://github.com/dargmuesli/vio/compare/10.2.7...10.2.8) (2024-02-13)
+
+
+### Bug Fixes
+
+* **nuxt:** configure vite instead of aliases ([82e9f5e](https://github.com/dargmuesli/vio/commit/82e9f5e13b843e11ff6c4249f02b34b2a949c106))
+
 ## [10.2.7](https://github.com/dargmuesli/vio/compare/10.2.6...10.2.7) (2024-02-05)
 
 
