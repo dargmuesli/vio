@@ -3,7 +3,7 @@
     "@commitlint/cli": "18.6.1",
     "@commitlint/config-conventional": "18.6.1",
     "@dargmuesli/nuxt-vio": "link:src",
-    "husky": "9.0.10"
+    "husky": "9.0.11"
   },
   "engines": {
     "node": "20"
