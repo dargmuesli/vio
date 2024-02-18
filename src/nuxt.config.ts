@@ -106,14 +106,6 @@ export default defineNuxtConfig(
           },
         },
       },
-      vite: {
-        optimizeDeps: {
-          include: [
-            'dayjs', // remove when automated (https://github.com/nuxt/nuxt/pull/25752#discussion_r1486889443)
-            'sweetalert2', // remove when automated (https://github.com/nuxt/nuxt/pull/25752#discussion_r1486889443)
-          ],
-        },
-      },
 
       // modules
       colorMode: {
