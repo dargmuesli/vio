@@ -1,3 +1,10 @@
+## [10.2.10](https://github.com/dargmuesli/vio/compare/10.2.9...10.2.10) (2024-02-18)
+
+
+### Bug Fixes
+
+* schedule release ([831de26](https://github.com/dargmuesli/vio/commit/831de2617eabec81f607adee3c1dd4f98d859da9))
+
 ## [10.2.9](https://github.com/dargmuesli/vio/compare/10.2.8...10.2.9) (2024-02-18)
 
 
