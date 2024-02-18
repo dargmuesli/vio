@@ -99,12 +99,11 @@ export default defineNuxtConfig(
       typescript: {
         shim: false,
         strict: true,
-        tsConfig: {
-          compilerOptions: {
-            esModuleInterop: true,
-            // noErrorTruncation: true,
-          },
-        },
+        // tsConfig: {
+        //   compilerOptions: {
+        //     noErrorTruncation: true,
+        //   },
+        // },
       },
 
       // modules
