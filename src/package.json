@@ -94,14 +94,14 @@
     "ufo": "1.4.0",
     "unhead": "1.8.10",
     "vue": "3.4.19",
-    "vue-router": "4.2.5",
+    "vue-router": "4.3.0",
     "vue-tsc": "1.8.27"
   },
   "peerDependencies": {
     "nuxt": "3.10.2",
     "playwright-core": "1.41.2",
     "vue": "3.4.19",
-    "vue-router": "4.2.5"
+    "vue-router": "4.3.0"
   },
   "scripts": {
     "build": "pnpm run build:node",
