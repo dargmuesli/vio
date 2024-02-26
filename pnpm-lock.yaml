@@ -84,8 +84,8 @@ importers:
         specifier: 5.2.2
         version: 5.2.2
       nuxt-security:
-        specifier: 1.2.0
-        version: 1.2.0(rollup@4.12.0)
+        specifier: 1.2.1
+        version: 1.2.1(rollup@4.12.0)
       playwright-core:
         specifier: 1.41.2
         version: 1.41.2
@@ -9075,8 +9075,8 @@ packages:
       - webpack
     dev: false
 
-  /nuxt-security@1.2.0(rollup@4.12.0):
-    resolution: {integrity: sha512-pAXW1vqMeMC6PnwzgE/Gf75BMOSQpSLbrgnZh9qmNf1Ytj7YI+Z180KZbkSXu944cFt6TGO0BDwlzc5Ij8uxPw==}
+  /nuxt-security@1.2.1(rollup@4.12.0):
+    resolution: {integrity: sha512-x6FfMWU/yATA4KmanhnNfqZuGQtbYDZn5dHpje808kBMwhO9qjqhWUlk1Nxkw5Txwj8jLDaXZCJryEC8X5Mp4w==}
     dependencies:
       '@nuxt/kit': 3.10.3(rollup@4.12.0)
       basic-auth: 2.0.1
