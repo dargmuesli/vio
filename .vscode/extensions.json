@@ -7,8 +7,5 @@
     "stylelint.vscode-stylelint",
     "timonwong.shellcheck",
     "vue.volar"
-  ],
-  "unwantedRecommendations": [
-    "vscode.typescript-language-features"
   ]
 }
