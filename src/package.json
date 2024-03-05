@@ -55,7 +55,7 @@
     "dayjs": "2.0.0-alpha.4",
     "jose": "5.2.2",
     "nuxt-security": "1.2.1",
-    "sweetalert2": "11.10.5",
+    "sweetalert2": "11.10.6",
     "vue-gtag": "2.0.1"
   },
   "devDependencies": {

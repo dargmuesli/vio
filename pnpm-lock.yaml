@@ -90,8 +90,8 @@ importers:
         specifier: 1.42.1
         version: 1.42.1
       sweetalert2:
-        specifier: 11.10.5
-        version: 11.10.5
+        specifier: 11.10.6
+        version: 11.10.6
       vue-gtag:
         specifier: 2.0.1
         version: 2.0.1(vue@3.4.21)
@@ -11386,8 +11386,8 @@ packages:
       csso: 5.0.5
       picocolors: 1.0.0
 
-  /sweetalert2@11.10.5:
-    resolution: {integrity: sha512-q9eE3EKhMcpIDU/Xcz7z5lk8axCGkgxwK47gXGrrfncnBJWxHPPHnBVAjfsVXcTt8Yi8U6HNEcBRSu+qGeyFdA==}
+  /sweetalert2@11.10.6:
+    resolution: {integrity: sha512-CINZPLZXZRSZqSOE7H7j1F7X8e8O1kLOiXPmtJn1DYxvXsKBr3d16d90+IcwTTs7dJww20h8r8QIxIwsLGX+6A==}
     dev: false
 
   /synckit@0.8.8:
