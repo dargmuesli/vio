@@ -81,8 +81,8 @@ importers:
         specifier: 2.0.0-alpha.4
         version: 2.0.0-alpha.4
       jose:
-        specifier: 5.2.2
-        version: 5.2.2
+        specifier: 5.2.3
+        version: 5.2.3
       nuxt-security:
         specifier: 1.2.1
         version: 1.2.1(rollup@4.12.0)
@@ -7670,8 +7670,8 @@ packages:
     engines: {node: '>= 0.6.0'}
     dev: false
 
-  /jose@5.2.2:
-    resolution: {integrity: sha512-/WByRr4jDcsKlvMd1dRJnPfS1GVO3WuKyaurJ/vvXcOaUQO8rnNObCQMlv/5uCceVQIq5Q4WLF44ohsdiTohdg==}
+  /jose@5.2.3:
+    resolution: {integrity: sha512-KUXdbctm1uHVL8BYhnyHkgp3zDX5KW8ZhAKVFEfUbU2P8Alpzjb+48hHvjOdQIyPshoblhzsuqOwEEAbtHVirA==}
     dev: false
 
   /js-tokens@4.0.0:
