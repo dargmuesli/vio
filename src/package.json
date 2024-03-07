@@ -54,7 +54,7 @@
     "clipboardy": "4.0.0",
     "dayjs": "2.0.0-alpha.4",
     "jose": "5.2.3",
-    "nuxt-security": "1.2.1",
+    "nuxt-security": "1.2.2",
     "sweetalert2": "11.10.6",
     "vue-gtag": "2.0.1"
   },
