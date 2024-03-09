@@ -1,3 +1,16 @@
+## [11.0.0-beta.2](https://github.com/dargmuesli/vio/compare/11.0.0-beta.1...11.0.0-beta.2) (2024-03-09)
+
+
+### Bug Fixes
+
+* **app:** drop server only meta rendering ([fec8779](https://github.com/dargmuesli/vio/commit/fec87790820c0fb6173c48f5405bdd98f7ed2f8f))
+* **nuxt:** configure vite instead of aliases ([82e9f5e](https://github.com/dargmuesli/vio/commit/82e9f5e13b843e11ff6c4249f02b34b2a949c106))
+* schedule release ([673f7e4](https://github.com/dargmuesli/vio/commit/673f7e48ad95cf7670d6049d2772f16736cbd929))
+* schedule release ([831de26](https://github.com/dargmuesli/vio/commit/831de2617eabec81f607adee3c1dd4f98d859da9))
+* schedule release ([fabed76](https://github.com/dargmuesli/vio/commit/fabed76c3bb35d6f1127453223f91ca6d9820664))
+* schedule release ([b8a9fbe](https://github.com/dargmuesli/vio/commit/b8a9fbe2cf2d65e5857b0868f85c605d0a026db4))
+* schedule release ([7bc6b0f](https://github.com/dargmuesli/vio/commit/7bc6b0ff5320156a3df900600a35e4e05a5cb876))
+
 ## [11.0.0-beta.1](https://github.com/dargmuesli/vio/compare/10.2.4...11.0.0-beta.1) (2024-01-25)
 
 
