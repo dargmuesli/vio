@@ -1,3 +1,20 @@
+## [11.0.0-beta.3](https://github.com/dargmuesli/vio/compare/11.0.0-beta.2...11.0.0-beta.3) (2024-03-09)
+
+
+### ⚠ BREAKING CHANGES
+
+* **head:** remove duplicate
+
+### Features
+
+* **head:** remove duplicate ([d1f4505](https://github.com/dargmuesli/vio/commit/d1f450509d6afa895f3a4681e7a2056c26b463b4))
+* **site-config:** remove url ([102a962](https://github.com/dargmuesli/vio/commit/102a962785a263b3c7836c4b2d623e3bc84ef4c5))
+
+
+### Bug Fixes
+
+* revert "feat(site-config): remove url" ([22a0f92](https://github.com/dargmuesli/vio/commit/22a0f92253261758cf6a383f8fc7f1fcbeb67f29))
+
 ## [11.0.0-beta.2](https://github.com/dargmuesli/vio/compare/11.0.0-beta.1...11.0.0-beta.2) (2024-03-09)
 
 
