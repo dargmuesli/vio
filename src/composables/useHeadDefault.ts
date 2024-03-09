@@ -6,7 +6,7 @@ export const useHeadDefault = ({
   title,
 }: {
   extension?: UseSeoMetaInput
-  title: string | ComputedRef<string>
+  title: string
 }) => {
   const siteConfig = useSiteConfig()
 
@@ -15,12 +15,10 @@ export const useHeadDefault = ({
     msapplicationConfig: `/assets/static/favicon/browserconfig.xml?v=${CACHE_VERSION}`,
     title,
     twitterDescription: siteConfig.description,
-    twitterTitle: ref(
-      TITLE_TEMPLATE({
-        siteName: siteConfig.name,
-        title: toValue(title),
-      }),
-    ), // TODO: remove `ref`
+    twitterTitle: TITLE_TEMPLATE({
+      siteName: siteConfig.name,
+      title,
+    }),
   }
 
   useServerSeoMeta(defu(extension, defaults))
