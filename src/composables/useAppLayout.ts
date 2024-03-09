@@ -6,11 +6,12 @@ export const useAppLayout = () => {
     ...useLocaleHead({ addDirAttribute: true, addSeoAttributes: true }).value,
     bodyAttrs: {
       class:
-        'bg-background-bright dark:bg-background-dark font-sans text-text-dark dark:text-text-bright',
+        'bg-background-bright dark:bg-background-dark text-text-dark dark:text-text-bright',
     },
   })
 
-  useServerSeoMeta({
+  // TODO: convert to `useServerHeadSafe` (https://github.com/harlan-zw/nuxt-seo-kit/issues/98)
+  useSeoMeta({
     titleTemplate: (title) =>
       TITLE_TEMPLATE({
         siteName: siteConfig.name,

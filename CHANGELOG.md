@@ -9,6 +9,55 @@
 
 * **tailwind:** remove custom utilities ([25f08a2](https://github.com/dargmuesli/vio/commit/25f08a281ddeea2ba949fff8228d72d8b2fea8f3))
 
+## [10.2.11](https://github.com/dargmuesli/vio/compare/10.2.10...10.2.11) (2024-03-02)
+
+
+### Bug Fixes
+
+* schedule release ([673f7e4](https://github.com/dargmuesli/vio/commit/673f7e48ad95cf7670d6049d2772f16736cbd929))
+
+## [10.2.10](https://github.com/dargmuesli/vio/compare/10.2.9...10.2.10) (2024-02-18)
+
+
+### Bug Fixes
+
+* schedule release ([831de26](https://github.com/dargmuesli/vio/commit/831de2617eabec81f607adee3c1dd4f98d859da9))
+
+## [10.2.9](https://github.com/dargmuesli/vio/compare/10.2.8...10.2.9) (2024-02-18)
+
+
+### Bug Fixes
+
+* schedule release ([fabed76](https://github.com/dargmuesli/vio/commit/fabed76c3bb35d6f1127453223f91ca6d9820664))
+
+## [10.2.8](https://github.com/dargmuesli/vio/compare/10.2.7...10.2.8) (2024-02-13)
+
+
+### Bug Fixes
+
+* **nuxt:** configure vite instead of aliases ([82e9f5e](https://github.com/dargmuesli/vio/commit/82e9f5e13b843e11ff6c4249f02b34b2a949c106))
+
+## [10.2.7](https://github.com/dargmuesli/vio/compare/10.2.6...10.2.7) (2024-02-05)
+
+
+### Bug Fixes
+
+* schedule release ([b8a9fbe](https://github.com/dargmuesli/vio/commit/b8a9fbe2cf2d65e5857b0868f85c605d0a026db4))
+
+## [10.2.6](https://github.com/dargmuesli/vio/compare/10.2.5...10.2.6) (2024-02-02)
+
+
+### Bug Fixes
+
+* **app:** drop server only meta rendering ([fec8779](https://github.com/dargmuesli/vio/commit/fec87790820c0fb6173c48f5405bdd98f7ed2f8f))
+
+## [10.2.5](https://github.com/dargmuesli/vio/compare/10.2.4...10.2.5) (2024-01-31)
+
+
+### Bug Fixes
+
+* schedule release ([7bc6b0f](https://github.com/dargmuesli/vio/commit/7bc6b0ff5320156a3df900600a35e4e05a5cb876))
+
 ## [10.2.4](https://github.com/dargmuesli/vio/compare/10.2.3...10.2.4) (2024-01-23)
 
 

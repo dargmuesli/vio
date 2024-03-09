@@ -16,10 +16,6 @@ const currentDir = dirname(fileURLToPath(import.meta.url))
 export default defineNuxtConfig(
   defu(
     {
-      alias: {
-        dayjs: 'dayjs',
-        sweetalert2: 'sweetalert2',
-      }, // TODO: remove (https://github.com/nuxt/nuxt/issues/19426)
       app: {
         head: {
           htmlAttrs: {
@@ -103,13 +99,11 @@ export default defineNuxtConfig(
       typescript: {
         shim: false,
         strict: true,
-        tsConfig: {
-          compilerOptions: {
-            esModuleInterop: true,
-            // moduleResolution: 'bundler',
-            // noErrorTruncation: true,
-          },
-        },
+        // tsConfig: {
+        //   compilerOptions: {
+        //     noErrorTruncation: true,
+        //   },
+        // },
       },
 
       // modules
