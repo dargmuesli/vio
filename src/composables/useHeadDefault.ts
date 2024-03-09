@@ -1,25 +1,19 @@
-import { defu } from 'defu'
 import type { UseSeoMetaInput } from '@unhead/vue'
 
-export const useHeadDefault = ({
-  extension,
-  title,
-}: {
-  extension?: UseSeoMetaInput
-  title: string
-}) => {
+export const useHeadDefault = (input: UseSeoMetaInput) => {
   const siteConfig = useSiteConfig()
 
-  const defaults: UseSeoMetaInput = {
-    description: siteConfig.description,
-    msapplicationConfig: `/assets/static/favicon/browserconfig.xml?v=${CACHE_VERSION}`,
-    title,
-    twitterDescription: siteConfig.description,
-    twitterTitle: TITLE_TEMPLATE({
-      siteName: siteConfig.name,
-      title,
-    }),
-  }
+  const description = input.description || siteConfig.description // TODO: remove site configuration fallback (https://github.com/harlan-zw/nuxt-site-config/issues/26)
 
-  useServerSeoMeta(defu(extension, defaults))
+  useServerSeoMeta({
+    ...(description ? { description, ogDescription: description } : {}),
+    msapplicationConfig: `/assets/static/favicon/browserconfig.xml?v=${CACHE_VERSION}`,
+    ...input,
+    // // pure duplicates disabled
+    // twitterDescription: siteConfig.description,
+    // twitterTitle: TITLE_TEMPLATE({
+    //   siteName: siteConfig.name,
+    //   title,
+    // }),
+  })
 }

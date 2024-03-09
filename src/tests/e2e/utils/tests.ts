@@ -402,16 +402,17 @@ export const testMetadata = async ({
         { key: 'content', value: 'summary_large_image' },
       ],
     },
-    {
-      tag: 'meta',
-      attributes: [
-        {
-          key: 'name',
-          value: 'twitter:description',
-        },
-        { key: 'content', value: "Vio is @dargmuesli's Nuxt layer." },
-      ],
-    },
+    // // pure duplicate disabled
+    // {
+    //   tag: 'meta',
+    //   attributes: [
+    //     {
+    //       key: 'name',
+    //       value: 'twitter:description',
+    //     },
+    //     { key: 'content', value: "Vio is @dargmuesli's Nuxt layer." },
+    //   ],
+    // },
     {
       tag: 'meta',
       attributes: [
@@ -465,16 +466,17 @@ export const testMetadata = async ({
         { key: 'content', value: '@dargmuesli' },
       ],
     },
-    {
-      tag: 'meta',
-      attributes: [
-        {
-          key: 'name',
-          value: 'twitter:title',
-        },
-        { key: 'content', value: title },
-      ],
-    },
+    // // pure duplicate disabled
+    // {
+    //   tag: 'meta',
+    //   attributes: [
+    //     {
+    //       key: 'name',
+    //       value: 'twitter:title',
+    //     },
+    //     { key: 'content', value: title },
+    //   ],
+    // },
     {
       tag: 'meta',
       attributes: [
