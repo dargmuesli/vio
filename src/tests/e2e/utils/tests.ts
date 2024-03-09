@@ -48,16 +48,144 @@ export const testMetadata = async ({
     //   ],
     // },
     {
-      tag: 'link',
+      tag: 'meta',
       attributes: [
         {
-          key: 'rel',
-          value: 'canonical',
+          key: 'charset',
+          value: 'utf-8',
+        },
+      ],
+    },
+    {
+      tag: 'meta',
+      attributes: [
+        {
+          key: 'name',
+          value: 'viewport',
+        },
+        { key: 'content', value: 'width=device-width, initial-scale=1' },
+      ],
+    },
+    {
+      tag: 'meta',
+      attributes: [
+        {
+          key: 'property',
+          value: 'og:image',
         },
         {
-          key: 'href',
-          value: `${SITE_URL}${path}`,
+          key: 'content',
+          value: joinURL(SITE_URL, '/__og-image__/image', path, '/og.png'),
         },
+      ],
+    },
+    {
+      tag: 'meta',
+      attributes: [
+        {
+          key: 'property',
+          value: 'og:image:type',
+        },
+        {
+          key: 'content',
+          value: 'image/png',
+        },
+      ],
+    },
+    {
+      tag: 'meta',
+      attributes: [
+        {
+          key: 'name',
+          value: 'twitter:card',
+        },
+        { key: 'content', value: 'summary_large_image' },
+      ],
+    },
+    {
+      tag: 'meta',
+      attributes: [
+        {
+          key: 'name',
+          value: 'twitter:image',
+        },
+        {
+          key: 'content',
+          value: joinURL(SITE_URL, '/__og-image__/image', path, '/og.png'),
+        },
+      ],
+    },
+    {
+      tag: 'meta',
+      attributes: [
+        {
+          key: 'name',
+          value: 'twitter:image:src',
+        },
+        {
+          key: 'content',
+          value: joinURL(SITE_URL, '/__og-image__/image', path, '/og.png'),
+        },
+      ],
+    },
+    {
+      tag: 'meta',
+      attributes: [
+        {
+          key: 'property',
+          value: 'og:image:width',
+        },
+        { key: 'content', value: '1200' },
+      ],
+    },
+    {
+      tag: 'meta',
+      attributes: [
+        {
+          key: 'name',
+          value: 'twitter:image:width',
+        },
+        { key: 'content', value: '1200' },
+      ],
+    },
+    {
+      tag: 'meta',
+      attributes: [
+        {
+          key: 'property',
+          value: 'og:image:height',
+        },
+        { key: 'content', value: '600' },
+      ],
+    },
+    {
+      tag: 'meta',
+      attributes: [
+        {
+          key: 'name',
+          value: 'twitter:image:height',
+        },
+        { key: 'content', value: '600' },
+      ],
+    },
+    {
+      tag: 'meta',
+      attributes: [
+        {
+          key: 'property',
+          value: 'og:image:alt',
+        },
+        { key: 'content', value: 'Social Preview Image for a Vio webpage.' },
+      ],
+    },
+    {
+      tag: 'meta',
+      attributes: [
+        {
+          key: 'name',
+          value: 'twitter:image:alt',
+        },
+        { key: 'content', value: 'Social Preview Image for a Vio webpage.' },
       ],
     },
     {
@@ -141,6 +269,45 @@ export const testMetadata = async ({
       ],
     },
     {
+      tag: 'meta',
+      attributes: [
+        {
+          key: 'property',
+          value: 'og:type',
+        },
+        { key: 'content', value: 'website' },
+      ],
+    },
+    {
+      tag: 'link',
+      attributes: [
+        {
+          key: 'rel',
+          value: 'canonical',
+        },
+        {
+          key: 'href',
+          value: `${SITE_URL}${path}`,
+        },
+      ],
+    },
+    {
+      tag: 'meta',
+      attributes: [
+        {
+          key: 'name',
+          value: 'robots',
+        },
+        {
+          key: 'content',
+          value:
+            process.env.NODE_ENV === 'production'
+              ? 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+              : 'noindex, nofollow',
+        },
+      ],
+    },
+    {
       tag: 'link',
       attributes: [
         {
@@ -192,6 +359,59 @@ export const testMetadata = async ({
       ],
     },
     {
+      tag: 'meta',
+      attributes: [
+        {
+          key: 'property',
+          value: 'og:url',
+        },
+        {
+          key: 'content',
+          value: `${SITE_URL}${path}`,
+        },
+      ],
+    },
+    {
+      tag: 'meta',
+      attributes: [
+        {
+          key: 'property',
+          value: 'og:locale',
+        },
+        { key: 'content', value: 'en' },
+      ],
+    },
+    {
+      tag: 'meta',
+      attributes: [
+        {
+          key: 'property',
+          value: 'og:locale:alternate',
+        },
+        { key: 'content', value: 'de' },
+      ],
+    },
+    {
+      tag: 'meta',
+      attributes: [
+        {
+          key: 'name',
+          value: 'msapplication-TileColor',
+        },
+        { key: 'content', value: '#202020' },
+      ],
+    },
+    {
+      tag: 'meta',
+      attributes: [
+        {
+          key: 'name',
+          value: 'theme-color',
+        },
+        { key: 'content', value: '#202020' },
+      ],
+    },
+    {
       tag: 'link',
       attributes: [
         {
@@ -238,9 +458,20 @@ export const testMetadata = async ({
       tag: 'meta',
       attributes: [
         {
-          key: 'charset',
-          value: 'utf-8',
+          key: 'name',
+          value: 'description',
         },
+        { key: 'content', value: "Vio is @dargmuesli's Nuxt layer." },
+      ],
+    },
+    {
+      tag: 'meta',
+      attributes: [
+        {
+          key: 'property',
+          value: 'og:description',
+        },
+        { key: 'content', value: "Vio is @dargmuesli's Nuxt layer." },
       ],
     },
     {
@@ -248,7 +479,7 @@ export const testMetadata = async ({
       attributes: [
         {
           key: 'name',
-          value: 'description',
+          value: 'twitter:description',
         },
         { key: 'content', value: "Vio is @dargmuesli's Nuxt layer." },
       ],
@@ -270,73 +501,20 @@ export const testMetadata = async ({
       tag: 'meta',
       attributes: [
         {
+          key: 'property',
+          value: 'og:title',
+        },
+        { key: 'content', value: title },
+      ],
+    },
+    {
+      tag: 'meta',
+      attributes: [
+        {
           key: 'name',
-          value: 'msapplication-TileColor',
+          value: 'twitter:title',
         },
-        { key: 'content', value: '#202020' },
-      ],
-    },
-    {
-      tag: 'meta',
-      attributes: [
-        {
-          key: 'property',
-          value: 'og:image:alt',
-        },
-        { key: 'content', value: 'Social Preview Image for a Vio webpage.' },
-      ],
-    },
-    {
-      tag: 'meta',
-      attributes: [
-        {
-          key: 'property',
-          value: 'og:image:height',
-        },
-        { key: 'content', value: '600' },
-      ],
-    },
-    {
-      tag: 'meta',
-      attributes: [
-        {
-          key: 'property',
-          value: 'og:image:width',
-        },
-        { key: 'content', value: '1200' },
-      ],
-    },
-    {
-      tag: 'meta',
-      attributes: [
-        {
-          key: 'property',
-          value: 'og:image',
-        },
-        {
-          key: 'content',
-          value: joinURL(SITE_URL, '/__og-image__/image', path, '/og.png'),
-        },
-      ],
-    },
-    {
-      tag: 'meta',
-      attributes: [
-        {
-          key: 'property',
-          value: 'og:locale',
-        },
-        { key: 'content', value: 'en' },
-      ],
-    },
-    {
-      tag: 'meta',
-      attributes: [
-        {
-          key: 'property',
-          value: 'og:locale:alternate',
-        },
-        { key: 'content', value: 'de' },
+        { key: 'content', value: title },
       ],
     },
     {
@@ -353,154 +531,10 @@ export const testMetadata = async ({
       tag: 'meta',
       attributes: [
         {
-          key: 'property',
-          value: 'og:title',
-        },
-        { key: 'content', value: title },
-      ],
-    },
-    {
-      tag: 'meta',
-      attributes: [
-        {
-          key: 'property',
-          value: 'og:type',
-        },
-        { key: 'content', value: 'website' },
-      ],
-    },
-    {
-      tag: 'meta',
-      attributes: [
-        {
-          key: 'property',
-          value: 'og:url',
-        },
-        {
-          key: 'content',
-          value: `${SITE_URL}${path}`,
-        },
-      ],
-    },
-    {
-      tag: 'meta',
-      attributes: [
-        {
-          key: 'name',
-          value: 'theme-color',
-        },
-        { key: 'content', value: '#202020' },
-      ],
-    },
-    {
-      tag: 'meta',
-      attributes: [
-        {
-          key: 'name',
-          value: 'twitter:card',
-        },
-        { key: 'content', value: 'summary_large_image' },
-      ],
-    },
-    // // pure duplicate disabled
-    // {
-    //   tag: 'meta',
-    //   attributes: [
-    //     {
-    //       key: 'name',
-    //       value: 'twitter:description',
-    //     },
-    //     { key: 'content', value: "Vio is @dargmuesli's Nuxt layer." },
-    //   ],
-    // },
-    {
-      tag: 'meta',
-      attributes: [
-        {
-          key: 'name',
-          value: 'twitter:image:alt',
-        },
-        { key: 'content', value: 'Social Preview Image for a Vio webpage.' },
-      ],
-    },
-    {
-      tag: 'meta',
-      attributes: [
-        {
-          key: 'name',
-          value: 'twitter:image:height',
-        },
-        { key: 'content', value: '600' },
-      ],
-    },
-    {
-      tag: 'meta',
-      attributes: [
-        {
-          key: 'name',
-          value: 'twitter:image:width',
-        },
-        { key: 'content', value: '1200' },
-      ],
-    },
-    {
-      tag: 'meta',
-      attributes: [
-        {
-          key: 'name',
-          value: 'twitter:image:src',
-        },
-        {
-          key: 'content',
-          value: joinURL(SITE_URL, '/__og-image__/image', path, '/og.png'),
-        },
-      ],
-    },
-    {
-      tag: 'meta',
-      attributes: [
-        {
           key: 'name',
           value: 'twitter:site',
         },
         { key: 'content', value: '@dargmuesli' },
-      ],
-    },
-    // // pure duplicate disabled
-    // {
-    //   tag: 'meta',
-    //   attributes: [
-    //     {
-    //       key: 'name',
-    //       value: 'twitter:title',
-    //     },
-    //     { key: 'content', value: title },
-    //   ],
-    // },
-    {
-      tag: 'meta',
-      attributes: [
-        {
-          key: 'name',
-          value: 'robots',
-        },
-        {
-          key: 'content',
-          value:
-            process.env.NODE_ENV === 'production'
-              ? 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
-              : 'noindex, nofollow',
-        },
-      ],
-    },
-    {
-      tag: 'meta',
-      attributes: [
-        {
-          key: 'name',
-          value: 'viewport',
-        },
-        { key: 'content', value: 'width=device-width, initial-scale=1' },
       ],
     },
     {
