@@ -3,7 +3,7 @@ import type { UseSeoMetaInput } from '@unhead/vue'
 export const useHeadDefault = (input: UseSeoMetaInput) => {
   const siteConfig = useSiteConfig()
 
-  const description = input.description || siteConfig.description // TODO: remove site configuration fallback (https://github.com/harlan-zw/nuxt-site-config/issues/26)
+  const description = input.description || siteConfig.description
   const title = input.title
     ? TITLE_TEMPLATE({
         siteName: siteConfig.name,
@@ -16,7 +16,7 @@ export const useHeadDefault = (input: UseSeoMetaInput) => {
       ? {
           description,
           ogDescription: description,
-          twitterDescription: siteConfig.description,
+          twitterDescription: description,
         }
       : {}),
     msapplicationConfig: `/assets/static/favicon/browserconfig.xml?v=${CACHE_VERSION}`,
