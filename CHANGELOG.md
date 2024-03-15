@@ -1,3 +1,10 @@
+## [11.0.0-beta.4](https://github.com/dargmuesli/vio/compare/11.0.0-beta.3...11.0.0-beta.4) (2024-03-15)
+
+
+### Bug Fixes
+
+* **head:** simplify seo description ([70687fb](https://github.com/dargmuesli/vio/commit/70687fbbf7892edba4abecc124916c26b8365eb9))
+
 ## [11.0.0-beta.3](https://github.com/dargmuesli/vio/compare/11.0.0-beta.2...11.0.0-beta.3) (2024-03-09)
 
 
