@@ -1,3 +1,23 @@
+## [11.0.0](https://github.com/dargmuesli/vio/compare/10.3.0...11.0.0) (2024-03-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* **head:** remove duplicate
+* **tailwind:** remove custom utilities
+
+### Features
+
+* **head:** remove duplicate ([d1f4505](https://github.com/dargmuesli/vio/commit/d1f450509d6afa895f3a4681e7a2056c26b463b4))
+* **site-config:** remove url ([102a962](https://github.com/dargmuesli/vio/commit/102a962785a263b3c7836c4b2d623e3bc84ef4c5))
+* **tailwind:** remove custom utilities ([25f08a2](https://github.com/dargmuesli/vio/commit/25f08a281ddeea2ba949fff8228d72d8b2fea8f3))
+
+
+### Bug Fixes
+
+* **head:** simplify seo description ([70687fb](https://github.com/dargmuesli/vio/commit/70687fbbf7892edba4abecc124916c26b8365eb9))
+* revert "feat(site-config): remove url" ([22a0f92](https://github.com/dargmuesli/vio/commit/22a0f92253261758cf6a383f8fc7f1fcbeb67f29))
+
 ## [11.0.0-beta.5](https://github.com/dargmuesli/vio/compare/11.0.0-beta.4...11.0.0-beta.5) (2024-03-20)
 
 
