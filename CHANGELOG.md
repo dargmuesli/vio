@@ -1,3 +1,15 @@
+## [11.0.0-beta.5](https://github.com/dargmuesli/vio/compare/11.0.0-beta.4...11.0.0-beta.5) (2024-03-20)
+
+
+### Features
+
+* **cookies:** migrate to `nuxt-gtag` and google analytics consent mode ([0a9cfe7](https://github.com/dargmuesli/vio/commit/0a9cfe7186a5f2b722f1af5e388bbfff57c9e740))
+
+
+### Bug Fixes
+
+* **gtag:** conditionally set secure ([ce53575](https://github.com/dargmuesli/vio/commit/ce535757cd9a1e2122e8673922e981c2a003917d))
+
 ## [11.0.0-beta.4](https://github.com/dargmuesli/vio/compare/11.0.0-beta.3...11.0.0-beta.4) (2024-03-15)
 
 
