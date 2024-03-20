@@ -7,6 +7,7 @@ import {
   SITE_URL,
   SITE_NAME,
   TIMEZONE_COOKIE_NAME,
+  GOOGLE_ANALYTICS_COOKIE_NAME,
   VIO_NUXT_BASE_CONFIG,
 } from './utils/constants'
 
@@ -45,6 +46,7 @@ export default defineNuxtConfig(
         '@nuxtjs/seo',
         '@nuxtjs/tailwindcss',
         '@pinia/nuxt',
+        'nuxt-gtag',
         // nuxt-security: remove invalid `'none'`s and duplicates
         (_options, nuxt) => {
           const nuxtConfigSecurity = nuxt.options.security
@@ -90,7 +92,6 @@ export default defineNuxtConfig(
               : { baseUrl: SITE_URL }),
           },
           vio: {
-            googleAnalyticsId: '',
             isInProduction: process.env.NODE_ENV === 'production',
             isTesting: false,
           },
@@ -144,7 +145,7 @@ export default defineNuxtConfig(
                 de: 'Die Cookies vom Drittanbieter Google ermöglichen die Analyse von Nutzerverhalten. Diese Analyse hilft uns unsere Dienste zu verbessern, indem wir verstehen, wie diese Webseite genutzt wird.',
                 en: 'The third-party cookies by Google enable the analysis of user behavior. This analysis helps us to improve our services by understanding how this website is used.',
               },
-              id: 'ga',
+              id: GOOGLE_ANALYTICS_COOKIE_NAME,
               links: {
                 'https://policies.google.com/privacy': 'Google Privacy Policy',
                 'https://policies.google.com/terms': 'Google Terms of Service',
@@ -155,6 +156,25 @@ export default defineNuxtConfig(
           ],
         },
         locales: ['en', 'de'],
+      },
+      gtag: {
+        config: {
+          cookie_flags: 'secure;samesite=strict',
+        },
+        enabled: false,
+        initCommands: [
+          [
+            'consent',
+            'default',
+            {
+              ad_user_data: 'denied',
+              ad_personalization: 'denied',
+              ad_storage: 'denied',
+              analytics_storage: 'denied',
+              wait_for_update: 500,
+            },
+          ],
+        ],
       },
       htmlValidator: {
         // failOnError: true, // TODO: enable once headers match requirements (https://github.com/unjs/unhead/issues/199#issuecomment-1815728703)

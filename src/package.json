@@ -34,7 +34,7 @@
   ],
   "main": "nuxt.config.ts",
   "dependencies": {
-    "@dargmuesli/nuxt-cookie-control": "8.0.0-beta.1",
+    "@dargmuesli/nuxt-cookie-control": "8.0.0-beta.3",
     "@heroicons/vue": "2.1.1",
     "@http-util/status-i18n": "0.8.1",
     "@nuxt/devtools": "1.0.8",
@@ -54,9 +54,9 @@
     "clipboardy": "4.0.0",
     "dayjs": "2.0.0-alpha.4",
     "jose": "5.2.3",
+    "nuxt-gtag": "2.0.5",
     "nuxt-security": "1.2.2",
-    "sweetalert2": "11.10.6",
-    "vue-gtag": "2.0.1"
+    "sweetalert2": "11.10.6"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.8.5",
