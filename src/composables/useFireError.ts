@@ -5,7 +5,7 @@ import type { Ref } from 'vue'
 export const useFireError = () => {
   const { t } = useI18n()
 
-  return ({ error }: { error: Error }, api?: Ref<any>) => {
+  return ({ error }: { error: Error }, api?: Ref<{ errors: Error[] }>) => {
     Swal.fire({
       icon: 'error',
       title: t('globalStatusError'),

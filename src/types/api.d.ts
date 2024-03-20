@@ -1,7 +1,7 @@
 import type { CombinedError } from '@urql/core'
 
 export type ApiData = ComputedRef<{
-  data?: Object
+  data?: object
   errors: BackendError[]
   isFetching: boolean
 }>
