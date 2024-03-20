@@ -21,6 +21,13 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "css.validate": false,
+  "eslint.experimental.useFlatConfig": true,
+  "eslint.validate": [
+    "github-actions-workflow",
+    "javascript",
+    "javascriptreact",
+    "yaml"
+  ],
   "eslint.workingDirectories": [
     {
       "directory": "src" // needed to correctly lint global locale strings like `t('globalStatusLoading')`

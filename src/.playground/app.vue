@@ -1,7 +1,5 @@
 <template>
-  <VioApp
-    :og-image-alt="t('ogImageAlt')"
-  />
+  <VioApp :og-image-alt="t('ogImageAlt')" />
 </template>
 
 <script setup lang="ts">

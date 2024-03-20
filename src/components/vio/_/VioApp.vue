@@ -29,7 +29,7 @@ const { loadingIds, indicateLoadingDone } = useLoadingDoneIndicator('app')
 const init = () => {
   $dayjs.locale(locale.value)
 
-  if (process.client) {
+  if (import.meta.client) {
     const cookieTimezone = useCookie(TIMEZONE_COOKIE_NAME, {
       // default: () => undefined, // setting `default` on the client side only does not write the cookie
       httpOnly: false,

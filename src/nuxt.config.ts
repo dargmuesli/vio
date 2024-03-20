@@ -38,6 +38,7 @@ export default defineNuxtConfig(
       modules: [
         '@dargmuesli/nuxt-cookie-control',
         '@nuxt/devtools',
+        '@nuxt/eslint',
         '@nuxt/image',
         '@nuxtjs/color-mode',
         '@nuxtjs/html-validator',
@@ -67,7 +68,7 @@ export default defineNuxtConfig(
                 ;(
                   nuxtConfigSecurity.headers.contentSecurityPolicy as Record<
                     string,
-                    any
+                    unknown
                   >
                 )[key] = [...new Set(valueFiltered)]
               }
