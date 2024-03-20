@@ -123,7 +123,7 @@ FROM test-e2e-base-image AS test-e2e-prepare
 
 COPY --from=prepare /srv/app/ ./
 
-RUN pnpm rebuild -r
+RUN pnpm -r rebuild
 
 
 # ########################

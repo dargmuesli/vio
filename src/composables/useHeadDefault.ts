@@ -1,27 +1,26 @@
-import { defu } from 'defu'
 import type { UseSeoMetaInput } from '@unhead/vue'
 
-export const useHeadDefault = ({
-  extension,
-  title,
-}: {
-  extension?: UseSeoMetaInput
-  title: string | ComputedRef<string>
-}) => {
+export const useHeadDefault = (input: UseSeoMetaInput) => {
   const siteConfig = useSiteConfig()
 
-  const defaults: UseSeoMetaInput = {
-    description: siteConfig.description,
-    msapplicationConfig: `/assets/static/favicon/browserconfig.xml?v=${CACHE_VERSION}`,
-    title,
-    twitterDescription: siteConfig.description,
-    twitterTitle: ref(
-      TITLE_TEMPLATE({
+  const description = input.description || siteConfig.description
+  const title = input.title
+    ? TITLE_TEMPLATE({
         siteName: siteConfig.name,
-        title: toValue(title),
-      }),
-    ), // TODO: remove `ref`
-  }
+        title: input.title.toString(),
+      })
+    : siteConfig.name
 
-  useServerSeoMeta(defu(extension, defaults))
+  useServerSeoMeta({
+    ...(description
+      ? {
+          description,
+          ogDescription: description,
+          twitterDescription: description,
+        }
+      : {}),
+    msapplicationConfig: `/assets/static/favicon/browserconfig.xml?v=${CACHE_VERSION}`,
+    ...(title ? { title, ogTitle: title, twitterTitle: title } : {}),
+    ...input,
+  })
 }

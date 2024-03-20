@@ -50,7 +50,7 @@ export const TITLE_TEMPLATE = ({
   title,
 }: {
   siteName: string
-  title?: string
+  title?: string | null
 }) => (title && title !== siteName ? `${title} · ${siteName}` : siteName)
 export const VERIFICATION_FORMAT_UUID = helpers.regex(REGEX_UUID)
 export const VIO_NUXT_BASE_CONFIG = ({

@@ -1,3 +1,63 @@
+## [11.0.0-beta.5](https://github.com/dargmuesli/vio/compare/11.0.0-beta.4...11.0.0-beta.5) (2024-03-20)
+
+
+### Features
+
+* **cookies:** migrate to `nuxt-gtag` and google analytics consent mode ([0a9cfe7](https://github.com/dargmuesli/vio/commit/0a9cfe7186a5f2b722f1af5e388bbfff57c9e740))
+
+
+### Bug Fixes
+
+* **gtag:** conditionally set secure ([ce53575](https://github.com/dargmuesli/vio/commit/ce535757cd9a1e2122e8673922e981c2a003917d))
+
+## [11.0.0-beta.4](https://github.com/dargmuesli/vio/compare/11.0.0-beta.3...11.0.0-beta.4) (2024-03-15)
+
+
+### Bug Fixes
+
+* **head:** simplify seo description ([70687fb](https://github.com/dargmuesli/vio/commit/70687fbbf7892edba4abecc124916c26b8365eb9))
+
+## [11.0.0-beta.3](https://github.com/dargmuesli/vio/compare/11.0.0-beta.2...11.0.0-beta.3) (2024-03-09)
+
+
+### ⚠ BREAKING CHANGES
+
+* **head:** remove duplicate
+
+### Features
+
+* **head:** remove duplicate ([d1f4505](https://github.com/dargmuesli/vio/commit/d1f450509d6afa895f3a4681e7a2056c26b463b4))
+* **site-config:** remove url ([102a962](https://github.com/dargmuesli/vio/commit/102a962785a263b3c7836c4b2d623e3bc84ef4c5))
+
+
+### Bug Fixes
+
+* revert "feat(site-config): remove url" ([22a0f92](https://github.com/dargmuesli/vio/commit/22a0f92253261758cf6a383f8fc7f1fcbeb67f29))
+
+## [11.0.0-beta.2](https://github.com/dargmuesli/vio/compare/11.0.0-beta.1...11.0.0-beta.2) (2024-03-09)
+
+
+### Bug Fixes
+
+* **app:** drop server only meta rendering ([fec8779](https://github.com/dargmuesli/vio/commit/fec87790820c0fb6173c48f5405bdd98f7ed2f8f))
+* **nuxt:** configure vite instead of aliases ([82e9f5e](https://github.com/dargmuesli/vio/commit/82e9f5e13b843e11ff6c4249f02b34b2a949c106))
+* schedule release ([673f7e4](https://github.com/dargmuesli/vio/commit/673f7e48ad95cf7670d6049d2772f16736cbd929))
+* schedule release ([831de26](https://github.com/dargmuesli/vio/commit/831de2617eabec81f607adee3c1dd4f98d859da9))
+* schedule release ([fabed76](https://github.com/dargmuesli/vio/commit/fabed76c3bb35d6f1127453223f91ca6d9820664))
+* schedule release ([b8a9fbe](https://github.com/dargmuesli/vio/commit/b8a9fbe2cf2d65e5857b0868f85c605d0a026db4))
+* schedule release ([7bc6b0f](https://github.com/dargmuesli/vio/commit/7bc6b0ff5320156a3df900600a35e4e05a5cb876))
+
+## [11.0.0-beta.1](https://github.com/dargmuesli/vio/compare/10.2.4...11.0.0-beta.1) (2024-01-25)
+
+
+### ⚠ BREAKING CHANGES
+
+* **tailwind:** remove custom utilities
+
+### Features
+
+* **tailwind:** remove custom utilities ([25f08a2](https://github.com/dargmuesli/vio/commit/25f08a281ddeea2ba949fff8228d72d8b2fea8f3))
+
 ## [10.3.0](https://github.com/dargmuesli/vio/compare/10.2.11...10.3.0) (2024-03-20)
 
 
