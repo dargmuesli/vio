@@ -20,7 +20,6 @@ const ogImageComponentProp = toRef(() => props.ogImageComponent)
 
 const { $dayjs } = useNuxtApp()
 const { locale } = useI18n()
-const cookieControl = useCookieControl()
 const siteConfig = useSiteConfig()
 
 const { loadingIds, indicateLoadingDone } = useLoadingDoneIndicator('app')
@@ -46,18 +45,6 @@ const isLoading = computed(() => !!loadingIds.value.length)
 
 // lifecycle
 onMounted(() => indicateLoadingDone())
-watch(
-  () => cookieControl.cookiesEnabledIds.value,
-  (current, previous) => {
-    if (
-      (!previous?.includes('ga') && current?.includes('ga')) ||
-      (previous?.includes('ga') && !current?.includes('ga'))
-    ) {
-      window.location.reload()
-    }
-  },
-  { deep: true },
-)
 
 // initialization
 defineOgImageComponent(
@@ -77,5 +64,6 @@ useSchemaOrg([
     description: siteConfig.description,
   }),
 ])
+useVioGtag()
 init()
 </script>
