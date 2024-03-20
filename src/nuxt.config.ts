@@ -159,7 +159,9 @@ export default defineNuxtConfig(
       },
       gtag: {
         config: {
-          cookie_flags: 'secure;samesite=strict',
+          cookie_flags: `samesite=strict${
+            process.env.NODE_ENV === 'production' ? ';secure' : ''
+          }`,
         },
         enabled: false,
         initCommands: [
