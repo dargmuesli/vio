@@ -24,8 +24,8 @@ importers:
   src:
     dependencies:
       '@dargmuesli/nuxt-cookie-control':
-        specifier: 8.0.0-beta.1
-        version: 8.0.0-beta.1(rollup@4.13.0)(webpack@5.90.3)
+        specifier: 8.0.0-beta.3
+        version: 8.0.0-beta.3(rollup@4.13.0)(webpack@5.90.3)
       '@heroicons/vue':
         specifier: 2.1.1
         version: 2.1.1(vue@3.4.21)
@@ -83,6 +83,9 @@ importers:
       jose:
         specifier: 5.2.3
         version: 5.2.3
+      nuxt-gtag:
+        specifier: 2.0.5
+        version: 2.0.5(rollup@4.13.0)
       nuxt-security:
         specifier: 1.2.2
         version: 1.2.2(rollup@4.13.0)
@@ -92,9 +95,6 @@ importers:
       sweetalert2:
         specifier: 11.10.6
         version: 11.10.6
-      vue-gtag:
-        specifier: 2.0.1
-        version: 2.0.1(vue@3.4.21)
     devDependencies:
       '@axe-core/playwright':
         specifier: 4.8.5
@@ -991,11 +991,11 @@ packages:
       postcss: 8.4.36
     dev: false
 
-  /@dargmuesli/nuxt-cookie-control@8.0.0-beta.1(rollup@4.13.0)(webpack@5.90.3):
-    resolution: {integrity: sha512-Sza/Yzi3aVU3snSCIOa6JvVLNXYfAIt4NwuJzyamXLOKj0QQOG7OO8cQCvY+90yxsN29/JV0Nnvhax4bmluzVw==}
+  /@dargmuesli/nuxt-cookie-control@8.0.0-beta.3(rollup@4.13.0)(webpack@5.90.3):
+    resolution: {integrity: sha512-nSPg0uphlxiZlbNnYI5reEREOnjaXw/SE7vBtNBmp7OYLOkSv/0jfa1C6qAF/o0kcxbDLtQ3ojPUyyZEnbyuxw==}
     engines: {node: '>=16'}
     dependencies:
-      '@nuxt/kit': 3.11.0(rollup@4.13.0)
+      '@nuxt/kit': 3.11.1(rollup@4.13.0)
       css-vars-ponyfill: 2.4.9
       string-replace-loader: 3.1.0(webpack@5.90.3)
     transitivePeerDependencies:
@@ -8928,6 +8928,18 @@ packages:
       - supports-color
     dev: false
 
+  /nuxt-gtag@2.0.5(rollup@4.13.0):
+    resolution: {integrity: sha512-RX/52eXufjly/Y7PJKRLGLBQhI73SnmzcLoI4pjEJIVsEVpIXJLkAwHtKY3HvU8KiV0ai4UE3Cn1xB6ncoiFaA==}
+    dependencies:
+      '@nuxt/kit': 3.11.1(rollup@4.13.0)
+      defu: 6.1.4
+      pathe: 1.1.2
+      ufo: 1.5.2
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+    dev: false
+
   /nuxt-icon@0.6.9(nuxt@3.11.1)(rollup@4.13.0)(vite@5.1.6)(vue@3.4.21):
     resolution: {integrity: sha512-l80F5sIVdwlQPfw/9RFuhVE1Pi3NM3wbgePxDZkgYZe5XOpg4ZznhgObLRyAFFjCeU7XVbFMBe09uJBRM4tuvg==}
     dependencies:
@@ -12602,14 +12614,6 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
-
-  /vue-gtag@2.0.1(vue@3.4.21):
-    resolution: {integrity: sha512-aM4A58FVL0wV2ptYi+xzAjeg+pQVRyUcfBc5UkXAwQrR4t3WBhor50Izp2I+3Oo7+l+vWJ7u78DGcNzReb8S/A==}
-    peerDependencies:
-      vue: ^3.0.0
-    dependencies:
-      vue: 3.4.21(typescript@5.4.2)
-    dev: false
 
   /vue-i18n@9.10.2(vue@3.4.21):
     resolution: {integrity: sha512-ECJ8RIFd+3c1d3m1pctQ6ywG5Yj8Efy1oYoAKQ9neRdkLbuKLVeW4gaY5HPkD/9ssf1pOnUrmIFjx2/gkGxmEw==}
