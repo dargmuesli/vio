@@ -65,7 +65,7 @@
     "@playwright/test": "1.42.1",
     "@unhead/vue": "1.9.1",
     "@urql/devtools": "2.0.3",
-    "@urql/exchange-graphcache": "6.5.0",
+    "@urql/exchange-graphcache": "6.5.1",
     "@urql/vue": "1.1.2",
     "consola": "3.2.3",
     "cookie-es": "1.0.0",

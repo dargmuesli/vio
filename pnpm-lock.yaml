@@ -115,8 +115,8 @@ importers:
         specifier: 2.0.3
         version: 2.0.3(@urql/core@4.3.0)(graphql@16.8.1)
       '@urql/exchange-graphcache':
-        specifier: 6.5.0
-        version: 6.5.0(graphql@16.8.1)
+        specifier: 6.5.1
+        version: 6.5.1(graphql@16.8.1)
       '@urql/vue':
         specifier: 1.1.2
         version: 1.1.2(graphql@16.8.1)(vue@3.4.21)
@@ -3519,8 +3519,8 @@ packages:
       wonka: 6.3.4
     dev: true
 
-  /@urql/exchange-graphcache@6.5.0(graphql@16.8.1):
-    resolution: {integrity: sha512-+eR9ErKwmmrBjPXgV6TJqAAxmIcuc87s8dbMv962xsRzmyDI6lTDZ5FfGwJs3Jl6LEPEWx40en8/Qm8awK03LA==}
+  /@urql/exchange-graphcache@6.5.1(graphql@16.8.1):
+    resolution: {integrity: sha512-Ky77kuaTuo1H+VKZatXyNDqTMw+z03KV3Ep/6TQjktlc+0RDhEZq3rI4F/ViwqLaDUtGqPCYjmnHdoupXqdK0g==}
     dependencies:
       '@0no-co/graphql.web': 1.0.4(graphql@16.8.1)
       '@urql/core': 4.3.0(graphql@16.8.1)
