@@ -36,8 +36,8 @@ importers:
         specifier: 1.1.5
         version: 1.1.5(@unocss/reset@0.58.8)(floating-vue@5.2.2)(nuxt@3.11.1)(rollup@4.13.2)(unocss@0.58.8)(vite@5.2.7)(vue@3.4.21)
       '@nuxt/image':
-        specifier: 1.4.0
-        version: 1.4.0(rollup@4.13.2)
+        specifier: 1.5.0
+        version: 1.5.0(rollup@4.13.2)
       '@nuxtjs/color-mode':
         specifier: 3.3.3
         version: 3.3.3(rollup@4.13.2)
@@ -1951,8 +1951,8 @@ packages:
       - utf-8-validate
       - vue
 
-  /@nuxt/image@1.4.0(rollup@4.13.2):
-    resolution: {integrity: sha512-ZEGHjX8UZY/Wt/jWm+66QuUQA14E0dTwdi7n9BoZ1cJdinL8QdRMm3FcbwJvCj2quvD85c9LT2wvNA8l6hOMOA==}
+  /@nuxt/image@1.5.0(rollup@4.13.2):
+    resolution: {integrity: sha512-k1QvuGb3GCkpy35t8lpYjOjCDMajIIZ+vKw2XgRg89WlLDlpMNRPNBpSCn/9ixuly1LyjB4k5vggRJ2RxWVvsw==}
     engines: {node: ^14.16.0 || >=16.11.0}
     dependencies:
       '@nuxt/kit': 3.11.1(rollup@4.13.2)
