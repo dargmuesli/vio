@@ -48,7 +48,7 @@
     "@tailwindcss/forms": "0.5.7",
     "@tailwindcss/typography": "0.5.12",
     "@types/lodash-es": "4.17.12",
-    "@urql/core": "4.3.0",
+    "@urql/core": "5.0.0",
     "@vuelidate/core": "2.0.3",
     "@vuelidate/validators": "2.0.4",
     "clipboardy": "4.0.0",

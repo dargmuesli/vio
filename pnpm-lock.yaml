@@ -66,8 +66,8 @@ importers:
         specifier: 4.17.12
         version: 4.17.12
       '@urql/core':
-        specifier: 4.3.0
-        version: 4.3.0(graphql@16.8.1)
+        specifier: 5.0.0
+        version: 5.0.0(graphql@16.8.1)
       '@vuelidate/core':
         specifier: 2.0.3
         version: 2.0.3(vue@3.4.21)
@@ -113,7 +113,7 @@ importers:
         version: 1.9.4(vue@3.4.21)
       '@urql/devtools':
         specifier: 2.0.3
-        version: 2.0.3(@urql/core@4.3.0)(graphql@16.8.1)
+        version: 2.0.3(@urql/core@5.0.0)(graphql@16.8.1)
       '@urql/exchange-graphcache':
         specifier: 6.5.1
         version: 6.5.1(graphql@16.8.1)
@@ -219,6 +219,7 @@ packages:
         optional: true
     dependencies:
       graphql: 16.8.1
+    dev: true
 
   /@0no-co/graphql.web@1.0.5(graphql@16.8.1):
     resolution: {integrity: sha512-/ODdeNNFksS9hUvpjWFldMEpq0OqCFEIV3NVM0eU8HLUYU0Szf+2iKvr63kkbGchQwk2/1IxPF1PfoCabVkgLw==}
@@ -229,7 +230,6 @@ packages:
         optional: true
     dependencies:
       graphql: 16.8.1
-    dev: true
 
   /@aashutoshrathi/word-wrap@1.2.6:
     resolution: {integrity: sha512-1Yjs2SvM8TflER/OD3cOjhWWOZb58A2t7wpE2S9XfBYTiIl+XFhQG2bjy4Pu1I+EAlCNUzRDYDdFwFYUKvXcIA==}
@@ -3516,14 +3516,6 @@ packages:
     transitivePeerDependencies:
       - rollup
 
-  /@urql/core@4.3.0(graphql@16.8.1):
-    resolution: {integrity: sha512-wT+FeL8DG4x5o6RfHEnONNFVDM3616ouzATMYUClB6CB+iIu2mwfBKd7xSUxYOZmwtxna5/hDRQdMl3nbQZlnw==}
-    dependencies:
-      '@0no-co/graphql.web': 1.0.4(graphql@16.8.1)
-      wonka: 6.3.4
-    transitivePeerDependencies:
-      - graphql
-
   /@urql/core@5.0.0(graphql@16.8.1):
     resolution: {integrity: sha512-kFkZxusq/VBQKEUcQFtf7AilMotLO+oGpE4WFhCiminZm8ZU2aulXSDWla50TaD0pj704FnWlXts6lRm0uHdDg==}
     dependencies:
@@ -3531,15 +3523,14 @@ packages:
       wonka: 6.3.4
     transitivePeerDependencies:
       - graphql
-    dev: true
 
-  /@urql/devtools@2.0.3(@urql/core@4.3.0)(graphql@16.8.1):
+  /@urql/devtools@2.0.3(@urql/core@5.0.0)(graphql@16.8.1):
     resolution: {integrity: sha512-TktPLiBS9LcBPHD6qcnb8wqOVcg3Bx0iCtvQ80uPpfofwwBGJmqnQTjUdEFU6kwaLOFZULQ9+Uo4831G823mQw==}
     peerDependencies:
       '@urql/core': '>= 1.14.0'
       graphql: '>= 0.11.0'
     dependencies:
-      '@urql/core': 4.3.0(graphql@16.8.1)
+      '@urql/core': 5.0.0(graphql@16.8.1)
       graphql: 16.8.1
       wonka: 6.3.4
     dev: true
@@ -3548,7 +3539,7 @@ packages:
     resolution: {integrity: sha512-Ky77kuaTuo1H+VKZatXyNDqTMw+z03KV3Ep/6TQjktlc+0RDhEZq3rI4F/ViwqLaDUtGqPCYjmnHdoupXqdK0g==}
     dependencies:
       '@0no-co/graphql.web': 1.0.4(graphql@16.8.1)
-      '@urql/core': 4.3.0(graphql@16.8.1)
+      '@urql/core': 5.0.0(graphql@16.8.1)
       wonka: 6.3.4
     transitivePeerDependencies:
       - graphql
