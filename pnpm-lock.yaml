@@ -39,8 +39,8 @@ importers:
         specifier: 1.5.0
         version: 1.5.0(rollup@4.14.1)
       '@nuxtjs/color-mode':
-        specifier: 3.3.3
-        version: 3.3.3(rollup@4.14.1)
+        specifier: 3.4.0
+        version: 3.4.0(rollup@4.14.1)
       '@nuxtjs/html-validator':
         specifier: 1.7.1
         version: 1.7.1(rollup@4.14.1)
@@ -1820,7 +1820,7 @@ packages:
       '@nuxt/devtools': 1.1.5(@unocss/reset@0.59.0)(floating-vue@5.2.2)(nuxt@3.11.2)(rollup@4.14.1)(unocss@0.59.0)(vite@5.2.8)(vue@3.4.21)
       '@nuxt/devtools-kit': 1.1.5(nuxt@3.11.2)(rollup@4.14.1)(vite@5.2.8)
       '@nuxt/kit': 3.11.2(rollup@4.14.1)
-      '@nuxtjs/color-mode': 3.3.3(rollup@4.14.1)
+      '@nuxtjs/color-mode': 3.4.0(rollup@4.14.1)
       '@unocss/core': 0.58.9
       '@unocss/nuxt': 0.58.9(postcss@8.4.38)(rollup@4.14.1)(vite@5.2.8)(webpack@5.91.0)
       '@unocss/preset-attributify': 0.58.9
@@ -2113,11 +2113,13 @@ packages:
       - vti
       - vue-tsc
 
-  /@nuxtjs/color-mode@3.3.3(rollup@4.14.1):
-    resolution: {integrity: sha512-t6QM/tj1d/53xQ9JznNVIaqIfQWhjHRzNt5VqTxNeAJWG0HCdiHVezkUTMahPUgUbEJnBrtCoquUYwpyFhNF+Q==}
+  /@nuxtjs/color-mode@3.4.0(rollup@4.14.1):
+    resolution: {integrity: sha512-rS51nG3zW8ksOwNubIP3BPQ+vBL0r2M6td1kkB/VaR1e1uVtNfWlBPfZjb604bgNCE2AeRNqaI0CrxkfnQ6h6Q==}
     dependencies:
       '@nuxt/kit': 3.11.2(rollup@4.14.1)
       pathe: 1.1.2
+      pkg-types: 1.0.3
+      semver: 7.6.0
     transitivePeerDependencies:
       - rollup
       - supports-color
@@ -5651,6 +5653,7 @@ packages:
   /deep-extend@0.6.0:
     resolution: {integrity: sha512-LOHxIOaPYdHlJRtCQfDIVZtfw/ufM8+rVj649RIHzcm/vGwQRXFt6OPqIFWsm2XEMrNIEtWR64sY1LEKD2vAOA==}
     engines: {node: '>=4.0.0'}
+    requiresBuild: true
 
   /deep-is@0.1.4:
     resolution: {integrity: sha512-oIPzksmTg4/MriiaYGO+okXDT7ztn/w3Eptv/+gSIdMdKsJo0u4CfYNFJPy+4SKMuCqGw2wxnA+URMg3t8a/bQ==}
@@ -11355,6 +11358,7 @@ packages:
   /strip-json-comments@2.0.1:
     resolution: {integrity: sha512-4gB8na07fecVVkOI6Rs4e7T6NOTki5EmL7TUduTs6bu3EdnSycntVJ4re8kgZA+wx9IueI2Y11bfbgwtzuE0KQ==}
     engines: {node: '>=0.10.0'}
+    requiresBuild: true
 
   /strip-json-comments@3.1.1:
     resolution: {integrity: sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==}
