@@ -1,3 +1,10 @@
+## [11.1.0](https://github.com/dargmuesli/vio/compare/11.0.2...11.1.0) (2024-04-15)
+
+
+### Features
+
+* **lint:** export eslint configuration ([9be03df](https://github.com/dargmuesli/vio/commit/9be03dfbe031e2ce90be950f783752181f0cd318))
+
 ## [11.0.2](https://github.com/dargmuesli/vio/compare/11.0.1...11.0.2) (2024-04-13)
 
 
