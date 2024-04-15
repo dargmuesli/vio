@@ -1,3 +1,15 @@
+## [11.2.0](https://github.com/dargmuesli/vio/compare/11.1.1...11.2.0) (2024-04-15)
+
+
+### Features
+
+* **deps:** provide for eslint ([ce2739f](https://github.com/dargmuesli/vio/commit/ce2739ffad785c8c8a23bd6974f44afd41c09630))
+
+
+### Bug Fixes
+
+* **types:** correct backend error ([634beb8](https://github.com/dargmuesli/vio/commit/634beb87ec6254a680769a9a78ec4053169d8951))
+
 ## [11.1.1](https://github.com/dargmuesli/vio/compare/11.1.0...11.1.1) (2024-04-15)
 
 
