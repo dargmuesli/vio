@@ -5,7 +5,6 @@
   "globalStatusLoading": "Lade...",
   "globalValidationFailed": "Bitte überprüfe deine Eingaben 🙈",
   "globalValidationFormat": "Falsches Format",
-  "globalValidationFormatIncorrect": "Falsches Format",
   "globalValidationFormatUrlHttps": "Muss mit \"https://\" beginnen",
   "globalValidationLength": "Zu lang",
   "globalValidationRequired": "Pflichtfeld",

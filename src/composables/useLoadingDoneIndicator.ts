@@ -7,7 +7,7 @@ export const useLoadingDoneIndicator = (id?: string) => {
   if (!loadingId)
     throw createError({ statusCode: 500, statusMessage: 'Loading id missing!' })
 
-  const loadingIdToAdd = `${process.server ? 'ssr' : 'csr'}_${loadingId}`
+  const loadingIdToAdd = `${import.meta.server ? 'ssr' : 'csr'}_${loadingId}`
 
   if (loadingIds.value.includes(loadingIdToAdd)) {
     throw createError({
@@ -18,7 +18,7 @@ export const useLoadingDoneIndicator = (id?: string) => {
 
   const loadingIdSsr = `ssr_${loadingId}`
 
-  if (process.client && loadingIds.value.includes(loadingIdSsr)) {
+  if (import.meta.client && loadingIds.value.includes(loadingIdSsr)) {
     loadingIds.value.splice(loadingIds.value.indexOf(loadingIdSsr), 1)
   }
 

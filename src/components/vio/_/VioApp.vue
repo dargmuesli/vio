@@ -28,14 +28,14 @@ const { loadingIds, indicateLoadingDone } = useLoadingDoneIndicator('app')
 const init = () => {
   $dayjs.locale(locale.value)
 
-  if (process.client) {
+  if (import.meta.client) {
     const cookieTimezone = useCookie(TIMEZONE_COOKIE_NAME, {
       // default: () => undefined, // setting `default` on the client side only does not write the cookie
       httpOnly: false,
       sameSite: 'strict',
       secure: true,
     })
-    // @ts-ignore `tz` should be part of `$dayjs` (https://github.com/iamkun/dayjs/issues/2106)
+    // @ts-expect-error `tz` should be part of `$dayjs` (https://github.com/iamkun/dayjs/issues/2106)
     cookieTimezone.value = $dayjs.tz.guess()
   }
 }
