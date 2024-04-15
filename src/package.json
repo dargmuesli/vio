@@ -27,6 +27,7 @@
     "utils",
     "app.config.ts",
     "error.vue",
+    "eslint.config.js",
     "i18n.config.ts",
     "nuxt.config.ts",
     "playwright.config.ts",

@@ -15,7 +15,7 @@ const moduleFileUrl = new URL(import.meta.url)
 const JITI = jiti(moduleFileUrl.pathname)
 const POLYFILLS = JITI('./utils/constants.ts').POLYFILLS
 
-export default withNuxt(
+export const VIO_ESLINT_CONFIG = [
   ...vueI18n.configs['flat/recommended'],
   // ...compat.extends('plugin:compat/recommended'),
   ...eslintPluginYml.configs['flat/recommended'],
@@ -77,5 +77,7 @@ export default withNuxt(
     rules: {
       '@intlify/vue-i18n/no-unused-keys': 'off',
     },
-  }, // TODO: remove once `@intlify/eslint-plugin-vue-i18n` accounts for translation usage in composables
-)
+  }, // TODO: remove once `@intlify/eslint-plugin-vue-i18n` accounts for translation usage in composables]
+]
+
+export default withNuxt(VIO_ESLINT_CONFIG)
