@@ -1,3 +1,10 @@
+## [11.1.1](https://github.com/dargmuesli/vio/compare/11.1.0...11.1.1) (2024-04-15)
+
+
+### Bug Fixes
+
+* **package:** correct linting configuration export ([2466483](https://github.com/dargmuesli/vio/commit/24664831d7d667244298e62cf757c9629b47533b))
+
 ## [11.1.0](https://github.com/dargmuesli/vio/compare/11.0.2...11.1.0) (2024-04-15)
 
 
