@@ -1,4 +1,4 @@
-import { IncomingMessage, ServerResponse } from 'node:http'
+import type { IncomingMessage, ServerResponse } from 'node:http'
 
 import { consola } from 'consola'
 import { parse, serialize } from 'cookie-es'
@@ -37,7 +37,7 @@ export const jwtStore = async ({
   res,
   jwt,
 }: {
-  $urqlReset: Function
+  $urqlReset: () => void
   store: Store
   res?: ServerResponse
   jwt?: string
@@ -47,7 +47,7 @@ export const jwtStore = async ({
   consola.trace('Storing the following JWT: ' + jwt)
   ;(store as unknown as { jwtSet: (jwtNew?: string) => void }).jwtSet(jwt)
 
-  if (process.server) {
+  if (import.meta.server) {
     res?.setHeader(
       'Set-Cookie',
       serialize(JWT_NAME(), jwt || '', {
@@ -64,7 +64,7 @@ export const jwtStore = async ({
         method: 'POST',
         ...(jwt ? { headers: { Authorization: `Bearer ${jwt}` } } : {}),
       })
-    } catch (error: any) {
+    } catch (error: unknown) {
       return Promise.reject(Error('Authentication api call failed.'))
     }
   }
@@ -74,13 +74,10 @@ export const useJwtStore = () => {
   const { $urqlReset, ssrContext } = useNuxtApp()
   const store = useVioAuthStore()
 
-  if (typeof $urqlReset !== 'function')
-    throw new Error('`$urqlReset` is not a function!')
-
   return {
     async jwtStore(jwt?: string) {
       await jwtStore({
-        $urqlReset,
+        $urqlReset: $urqlReset as () => void,
         store,
         res: ssrContext ? ssrContext.event.node.res : undefined,
         jwt,
@@ -94,7 +91,7 @@ export const signOut = async ({
   store,
   res,
 }: {
-  $urqlReset: Function
+  $urqlReset: () => void
   store: Store
   res?: ServerResponse
 }) => await jwtStore({ $urqlReset, store, res })
@@ -109,7 +106,7 @@ export const useSignOut = () => {
   return {
     async signOut() {
       await signOut({
-        $urqlReset,
+        $urqlReset: $urqlReset as () => void,
         store,
         res: ssrContext ? ssrContext.event.node.res : undefined,
       })

@@ -1,5 +1,5 @@
-import { CombinedError } from '@urql/core'
-import { H3Event, getCookie } from 'h3'
+import type { CombinedError } from '@urql/core'
+import { type H3Event, getCookie } from 'h3'
 
 import { type Ref } from 'vue'
 
@@ -103,7 +103,7 @@ export const getServiceHref = ({
 
   if (stagingHost) {
     return `https://${nameSubdomainString}${stagingHost}`
-  } else if (isSsr && process.server) {
+  } else if (isSsr && import.meta.server) {
     return `http://${name}${portString}`
   } else {
     return `https://${nameSubdomainString}${getDomainTldPort(host)}`

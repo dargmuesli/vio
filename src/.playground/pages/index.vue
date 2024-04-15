@@ -6,10 +6,10 @@
       <br />
       {{ t('globalValidationFailed') }}
       <br />
-      <VioLink to="/">/</VioLink>
+      <VioLink to="/">{{ t('linkRoot') }}</VioLink>
       <br />
       <VioLink to="https://jonas-thelemann.de">
-        https://jonas-thelemann.de
+        {{ t('linkExternal') }}
       </VioLink>
     </p>
     <!-- <SBreadcrumb /> -->
@@ -26,7 +26,11 @@ useHeadDefault({
 
 <i18n lang="yaml">
 de:
+  linkExternal: https://jonas-thelemann.de
+  linkRoot: /
   title: Vio Playground
 en:
+  linkExternal: https://jonas-thelemann.de
+  linkRoot: /
   title: Vio Playground
 </i18n>
