@@ -1,4 +1,4 @@
-import { GOOGLE_ANALYTICS_COOKIE_NAME } from '../utils/constants'
+import { GTAG_COOKIE_ID } from '../utils/constants'
 
 export const useVioGtag = () => {
   const {
@@ -9,32 +9,28 @@ export const useVioGtag = () => {
   } = useGtag()
   const cookieControl = useCookieControl()
 
-  if (
-    cookieControl.cookiesEnabledIds.value?.includes(
-      GOOGLE_ANALYTICS_COOKIE_NAME,
-    )
-  ) {
+  if (cookieControl.cookiesEnabledIds.value?.includes(GTAG_COOKIE_ID)) {
     initializeGtag()
   }
 
   watch(cookieControl.cookiesEnabledIds, (current, previous) => {
     if (
-      !previous?.includes(GOOGLE_ANALYTICS_COOKIE_NAME) &&
-      current?.includes(GOOGLE_ANALYTICS_COOKIE_NAME)
+      !previous?.includes(GTAG_COOKIE_ID) &&
+      current?.includes(GTAG_COOKIE_ID)
     ) {
-      initializeGtag()
-      enableAnalytics()
       gtag('consent', 'update', {
-        ad_user_data: 'granted',
-        ad_personalization: 'granted',
-        ad_storage: 'granted',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        ad_storage: 'denied',
         analytics_storage: 'granted',
       })
+      initializeGtag()
+      enableAnalytics()
     }
 
     if (
-      previous?.includes(GOOGLE_ANALYTICS_COOKIE_NAME) &&
-      !current?.includes(GOOGLE_ANALYTICS_COOKIE_NAME)
+      previous?.includes(GTAG_COOKIE_ID) &&
+      !current?.includes(GTAG_COOKIE_ID)
     ) {
       disableAnalytics()
     }

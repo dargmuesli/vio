@@ -7,7 +7,7 @@ import {
   SITE_URL,
   SITE_NAME,
   TIMEZONE_COOKIE_NAME,
-  GOOGLE_ANALYTICS_COOKIE_NAME,
+  GTAG_COOKIE_ID,
   VIO_NUXT_BASE_CONFIG,
 } from './utils/constants'
 
@@ -146,7 +146,7 @@ export default defineNuxtConfig(
                 de: 'Die Cookies vom Drittanbieter Google ermöglichen die Analyse von Nutzerverhalten. Diese Analyse hilft uns unsere Dienste zu verbessern, indem wir verstehen, wie diese Webseite genutzt wird.',
                 en: 'The third-party cookies by Google enable the analysis of user behavior. This analysis helps us to improve our services by understanding how this website is used.',
               },
-              id: GOOGLE_ANALYTICS_COOKIE_NAME,
+              id: GTAG_COOKIE_ID,
               links: {
                 'https://policies.google.com/privacy': 'Google Privacy Policy',
                 'https://policies.google.com/terms': 'Google Terms of Service',
