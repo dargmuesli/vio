@@ -1,7 +1,7 @@
 // // TODO: add compat plugin when it supports flat config (https://github.com/amilajack/eslint-plugin-compat/issues/603)
 // import { FlatCompat } from '@eslint/eslintrc'
 import vueI18n from '@intlify/eslint-plugin-vue-i18n'
-import prettier from 'eslint-plugin-prettier/recommended'
+import prettierRecommended from 'eslint-plugin-prettier/recommended'
 import eslintPluginYml from 'eslint-plugin-yml'
 import globals from 'globals'
 import jiti from 'jiti'
@@ -17,7 +17,7 @@ export const VIO_ESLINT_CONFIG = [
   ...vueI18n.configs['flat/recommended'],
   // ...compat.extends('plugin:compat/recommended'),
   ...eslintPluginYml.configs['flat/recommended'],
-  prettier, // must be last
+  prettierRecommended, // must be last
 
   // {
   //   files: ['server/**/*'],
