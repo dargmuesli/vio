@@ -312,7 +312,7 @@ export const testMetadata = async ({
       attributes: [
         {
           key: 'href',
-          value: `${SITE_URL}${path}`,
+          value: withoutTrailingSlash(`${SITE_URL}${path}`),
         },
         {
           key: 'hreflang',
@@ -346,7 +346,7 @@ export const testMetadata = async ({
       attributes: [
         {
           key: 'href',
-          value: `${SITE_URL}${path}`,
+          value: withoutTrailingSlash(`${SITE_URL}${path}`),
         },
         {
           key: 'hreflang',
