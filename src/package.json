@@ -43,7 +43,7 @@
     "@nuxt/eslint": "0.3.10",
     "@nuxt/image": "1.6.0",
     "@nuxtjs/color-mode": "3.4.1",
-    "@nuxtjs/html-validator": "1.7.2",
+    "@nuxtjs/html-validator": "1.8.0",
     "@nuxtjs/i18n": "8.3.1",
     "@nuxtjs/seo": "2.0.0-rc.10",
     "@nuxtjs/tailwindcss": "6.12.0",
@@ -64,7 +64,7 @@
     "globals": "15.1.0",
     "jose": "5.2.4",
     "nuxt-gtag": "2.0.5",
-    "nuxt-security": "1.4.2",
+    "nuxt-security": "1.4.3",
     "sweetalert2": "11.10.8"
   },
   "devDependencies": {
@@ -94,14 +94,14 @@
     "tailwindcss": "3.4.3",
     "ufo": "1.5.3",
     "unhead": "1.9.7",
-    "vue": "3.4.25",
+    "vue": "3.4.26",
     "vue-router": "4.3.2",
     "vue-tsc": "2.0.14"
   },
   "peerDependencies": {
     "nuxt": "3.11.2",
     "playwright-core": "1.43.1",
-    "vue": "3.4.25",
+    "vue": "3.4.26",
     "vue-router": "4.3.2"
   },
   "scripts": {
