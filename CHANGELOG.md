@@ -1,3 +1,10 @@
+## [11.2.2](https://github.com/dargmuesli/vio/compare/11.2.1...11.2.2) (2024-05-02)
+
+
+### Bug Fixes
+
+* **vite:** do not optimize dependencies ([46a56b5](https://github.com/dargmuesli/vio/commit/46a56b504035d2ba1d6c26281ada1b6bdb4311e9))
+
 ## [11.2.1](https://github.com/dargmuesli/vio/compare/11.2.0...11.2.1) (2024-04-27)
 
 
