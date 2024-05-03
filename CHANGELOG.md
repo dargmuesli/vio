@@ -1,3 +1,11 @@
+## [11.2.3](https://github.com/dargmuesli/vio/compare/11.2.2...11.2.3) (2024-05-03)
+
+
+### Bug Fixes
+
+* **deps:** correct versions ([5a818e1](https://github.com/dargmuesli/vio/commit/5a818e1d73dd9c8fa9d289d142e50d882fa00777))
+* revert "test(meta): update url paths" ([a3c729b](https://github.com/dargmuesli/vio/commit/a3c729b17b44c45ee71c5d50d48f20f923fd913f))
+
 ## [11.2.2](https://github.com/dargmuesli/vio/compare/11.2.1...11.2.2) (2024-05-02)
 
 
