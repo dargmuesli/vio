@@ -1,3 +1,10 @@
+## [11.2.5](https://github.com/dargmuesli/vio/compare/11.2.4...11.2.5) (2024-05-12)
+
+
+### Bug Fixes
+
+* schedule release ([dd47f6b](https://github.com/dargmuesli/vio/commit/dd47f6b923583343d4531c921852796998ab21b5))
+
 ## [11.2.4](https://github.com/dargmuesli/vio/compare/11.2.3...11.2.4) (2024-05-11)
 
 
