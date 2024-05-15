@@ -45,31 +45,30 @@ export default defineNuxtConfig(
         '@nuxtjs/tailwindcss',
         '@pinia/nuxt',
         'nuxt-gtag',
+        (_options, nuxt) => {
+          if (nuxt.options._generate) {
+            nuxt.options.features.inlineStyles = false
+          }
+        },
         // nuxt-security: remove invalid `'none'`s and duplicates
         (_options, nuxt) => {
-          const nuxtConfigSecurity = nuxt.options.security
+          const nuxtConfigSecurityHeaders = nuxt.options.security.headers
 
           if (
-            typeof nuxtConfigSecurity.headers !== 'boolean' &&
-            nuxtConfigSecurity.headers.contentSecurityPolicy &&
-            typeof nuxtConfigSecurity.headers.contentSecurityPolicy !==
-              'boolean' &&
-            typeof nuxtConfigSecurity.headers.contentSecurityPolicy !== 'string'
+            typeof nuxtConfigSecurityHeaders !== 'boolean' &&
+            nuxtConfigSecurityHeaders.contentSecurityPolicy
           ) {
-            for (const [key, value] of Object.entries(
-              nuxtConfigSecurity.headers.contentSecurityPolicy,
-            )) {
+            const csp = nuxtConfigSecurityHeaders.contentSecurityPolicy
+
+            for (const [key, value] of Object.entries(csp)) {
               if (!Array.isArray(value)) continue
 
               const valueFiltered = value.filter((x) => x !== "'none'")
 
               if (valueFiltered.length) {
-                ;(
-                  nuxtConfigSecurity.headers.contentSecurityPolicy as Record<
-                    string,
-                    unknown
-                  >
-                )[key] = [...new Set(valueFiltered)]
+                ;(csp as Record<string, unknown>)[key] = [
+                  ...new Set(valueFiltered),
+                ]
               }
             }
           }
@@ -81,9 +80,6 @@ export default defineNuxtConfig(
       },
       runtimeConfig: {
         public: {
-          site: {
-            url: SITE_URL,
-          },
           vio: {
             isTesting: false,
           },
@@ -96,11 +92,6 @@ export default defineNuxtConfig(
       //     },
       //   },
       // },
-      vite: {
-        html: {
-          cspNonce: 'lala123',
-        },
-      },
 
       // modules
       colorMode: {
@@ -187,34 +178,146 @@ export default defineNuxtConfig(
       },
       security: {
         headers: {
-          contentSecurityPolicy: {
-            'base-uri': ["'none'"], // does not fallback to `default-src`
-            'child-src': false as const,
-            'connect-src': false as const,
-            'default-src': ["'none'"],
-            'font-src': false as const,
-            'form-action': ["'none'"], // does not fallback to `default-src`
-            'frame-ancestors': ["'none'"], // does not fallback to `default-src`
-            'frame-src': false as const,
-            'img-src': false as const,
-            'media-src': false as const,
-            'navigate-to': false as const,
-            'object-src': false as const,
-            'prefetch-src': false as const,
-            'report-to': undefined,
-            'report-uri': false as const,
-            // 'require-trusted-types-for': ["'script'"], // csp-evaluator // TODO: wait for trusted type support in vue (https://github.com/vuejs/core/pull/10844)
-            sandbox: false as const,
-            'script-src': false as const,
-            'script-src-attr': false as const,
-            'script-src-elem': false as const,
-            'style-src': false as const,
-            'style-src-attr': false as const,
-            'style-src-elem': false as const,
-            'upgrade-insecure-requests': false, // TODO: set to `!import.meta.dev` or `true` when tests run on https
-            'worker-src': false as const,
-          },
+          contentSecurityPolicy: defu(
+            {
+              // Cloudflare
+              ...(process.env.NODE_ENV === 'production'
+                ? {
+                    'connect-src': ['https://cloudflareinsights.com'],
+                    'script-src-elem': [
+                      'https://static.cloudflareinsights.com',
+                    ],
+                  }
+                : {}),
+            },
+            {
+              // Google Analytics 4 (https://developers.google.com/tag-platform/tag-manager/web/csp)
+              'connect-src': [
+                'https://*.analytics.google.com',
+                'https://*.google-analytics.com',
+                'https://*.googletagmanager.com',
+              ],
+              'img-src': [
+                'https://*.google-analytics.com',
+                'https://*.googletagmanager.com',
+              ],
+              'script-src-elem': ['https://*.googletagmanager.com'],
+            },
+            {
+              // vio
+              'manifest-src': [`${SITE_URL}/site.webmanifest`],
+              // 'script-src-elem': [
+              //   'https://polyfill.io/v3/polyfill.min.js', // ESLint plugin compat
+              // ],
+            },
+            {
+              // nuxt-link-checker
+              ...(process.env.NODE_ENV === 'development'
+                ? {
+                    'connect-src': [`${SITE_URL}/api/__link_checker__/inspect`],
+                  }
+                : {}),
+            },
+            {
+              // nuxt-og-image
+              ...(process.env.NODE_ENV === 'development'
+                ? {
+                    'connect-src': [`${SITE_URL}/__og-image__/`],
+                  }
+                : {}),
+            },
+            {
+              // nuxt-schema-org
+              ...(process.env.NODE_ENV === 'development'
+                ? {
+                    'connect-src': [`${SITE_URL}/__schema-org__/debug.json`],
+                  }
+                : {}),
+            },
+            {
+              // nuxt-simple-robots
+              ...(process.env.NODE_ENV === 'development'
+                ? {
+                    'connect-src': [
+                      `${SITE_URL}/__robots__/debug.json`,
+                      `${SITE_URL}/__robots__/debug-path.json`,
+                    ],
+                  }
+                : {}),
+            },
+            {
+              // nuxt-simple-sitemap
+              ...(process.env.NODE_ENV === 'development'
+                ? {
+                    'connect-src': [`${SITE_URL}/__sitemap__/debug.json`],
+                  }
+                : {}),
+            },
+            {
+              // nuxt-site-config
+              ...(process.env.NODE_ENV === 'development'
+                ? {
+                    'connect-src': [`${SITE_URL}/__site-config__/debug.json`],
+                  }
+                : {}),
+            },
+            {
+              // nuxt
+              'connect-src': [
+                `${SITE_URL}/_nuxt/builds/meta/`,
+                `${SITE_URL}/_payload.json`,
+                ...(process.env.NODE_ENV === 'development'
+                  ? [
+                      'http://localhost:3000/_nuxt/', // hot reload
+                      'https://localhost:3000/_nuxt/', // hot reload
+                      'ws://localhost:3000/_nuxt/', // hot reload
+                      'wss://localhost:3000/_nuxt/', // hot reload
+                    ] // TODO: generalize for different ports
+                  : []),
+              ],
+              'img-src': [
+                "'self'", // e.g. favicon
+                'data:', // external link icon
+              ],
+              'script-src-elem': [
+                "'nonce-{{nonce}}'",
+                `${SITE_URL}/_nuxt/`, // bundle
+                "'unsafe-inline'", // nuxt-color-mode (https://github.com/nuxt-modules/color-mode/issues/266), runtimeConfig (static)
+              ],
+              'style-src-elem': ["'nonce-{{nonce}}'", "'self'"],
+            },
+            {
+              'base-uri': ["'none'"], // does not fallback to `default-src`
+              'child-src': false as const,
+              'connect-src': false as const,
+              'default-src': ["'none'"],
+              'font-src': false as const,
+              'form-action': ["'none'"], // does not fallback to `default-src`
+              'frame-ancestors': ["'none'"], // does not fallback to `default-src`
+              'frame-src': false as const,
+              'img-src': false as const,
+              'media-src': false as const,
+              'navigate-to': false as const,
+              'object-src': false as const,
+              'prefetch-src': false as const,
+              'report-to': undefined,
+              'report-uri': false as const,
+              // 'require-trusted-types-for': ["'script'"], // csp-evaluator // TODO: wait for trusted type support in vue (https://github.com/vuejs/core/pull/10844)
+              sandbox: false as const,
+              'script-src': false as const,
+              'script-src-attr': false as const,
+              'script-src-elem': false as const,
+              'style-src': false as const,
+              'style-src-attr': false as const,
+              'style-src-elem': false as const,
+              'upgrade-insecure-requests': false, // TODO: set to `process.env.NODE_ENV === 'production'` or `true` when tests run on https
+              'worker-src': false as const,
+            },
+          ),
           xXSSProtection: '1; mode=block', // TODO: set back to `0` once CSP does not use `unsafe-*` anymore (https://github.com/maevsi/maevsi/issues/1047)
+        },
+        ssg: {
+          hashStyles: true,
         },
       },
       seo: {
@@ -222,6 +325,7 @@ export default defineNuxtConfig(
       },
       site: {
         id: 'vio',
+        url: SITE_URL,
       },
       sitemap: {
         credits: false,
@@ -264,9 +368,6 @@ export default defineNuxtConfig(
           public: {
             i18n: {
               baseUrl: SITE_URL,
-            },
-            site: {
-              url: SITE_URL,
             },
             vio: {
               isInProduction: true,
