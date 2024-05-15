@@ -58,6 +58,17 @@ export default defineNuxtConfig(
             typeof nuxtConfigSecurityHeaders !== 'boolean' &&
             nuxtConfigSecurityHeaders.contentSecurityPolicy
           ) {
+            if (nuxt.options._generate) {
+              nuxtConfigSecurityHeaders.contentSecurityPolicy = defu(
+                {
+                  'script-src-elem': [
+                    "'unsafe-inline'", // nuxt-color-mode (https://github.com/nuxt-modules/color-mode/issues/266), runtimeConfig (static)
+                  ],
+                },
+                nuxtConfigSecurityHeaders.contentSecurityPolicy,
+              )
+            }
+
             const csp = nuxtConfigSecurityHeaders.contentSecurityPolicy
 
             for (const [key, value] of Object.entries(csp)) {
@@ -282,9 +293,11 @@ export default defineNuxtConfig(
               'script-src-elem': [
                 "'nonce-{{nonce}}'",
                 `${SITE_URL}/_nuxt/`, // bundle
-                "'unsafe-inline'", // nuxt-color-mode (https://github.com/nuxt-modules/color-mode/issues/266), runtimeConfig (static)
               ],
-              'style-src-elem': ["'nonce-{{nonce}}'", "'self'"],
+              'style-src-elem': [
+                "'nonce-{{nonce}}'",
+                `${SITE_URL}/_nuxt/`, // bundle
+              ],
             },
             {
               'base-uri': ["'none'"], // does not fallback to `default-src`
