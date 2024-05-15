@@ -29,9 +29,6 @@ export default defineNuxtConfig(
         },
       },
       devtools: {
-        enabled:
-          process.env.NODE_ENV === 'development' &&
-          !process.env.NUXT_PUBLIC_VIO_IS_TESTING,
         timeline: {
           enabled: true,
         },
@@ -81,31 +78,28 @@ export default defineNuxtConfig(
       ],
       nitro: {
         compressPublicAssets: true,
-        experimental: {
-          openAPI: process.env.NODE_ENV === 'development',
-        },
       },
       runtimeConfig: {
         public: {
-          i18n: {
-            ...(process.env.NODE_ENV === 'development'
-              ? {}
-              : { baseUrl: SITE_URL }),
+          site: {
+            url: SITE_URL,
           },
           vio: {
-            isInProduction: process.env.NODE_ENV === 'production',
             isTesting: false,
           },
         },
       },
-      typescript: {
-        shim: false,
-        strict: true,
-        // tsConfig: {
-        //   compilerOptions: {
-        //     noErrorTruncation: true,
-        //   },
-        // },
+      // typescript: {
+      //   tsConfig: {
+      //     compilerOptions: {
+      //       noErrorTruncation: true,
+      //     },
+      //   },
+      // },
+      vite: {
+        html: {
+          cspNonce: 'lala123',
+        },
       },
 
       // modules
@@ -160,9 +154,7 @@ export default defineNuxtConfig(
       },
       gtag: {
         config: {
-          cookie_flags: `samesite=strict${
-            process.env.NODE_ENV === 'production' ? ';secure' : ''
-          }`,
+          cookie_flags: 'samesite=strict',
         },
         enabled: false,
         initCommands: [
@@ -195,156 +187,33 @@ export default defineNuxtConfig(
       },
       security: {
         headers: {
-          contentSecurityPolicy: defu(
-            {
-              // Cloudflare
-              ...(process.env.NODE_ENV === 'production'
-                ? {
-                    'connect-src': ['https://cloudflareinsights.com'],
-                    'script-src': ['https://static.cloudflareinsights.com'], // TODO: replace with `script-src-elem` once Webkit supports it (https://caniuse.com/mdn-http_headers_content-security-policy_script-src-elem)
-                  }
-                : {}),
-            },
-            {
-              // Google Analytics 4 (https://developers.google.com/tag-platform/tag-manager/web/csp)
-              'connect-src': [
-                'https://*.analytics.google.com',
-                'https://*.google-analytics.com',
-                'https://*.googletagmanager.com',
-              ],
-              'img-src': [
-                'https://*.google-analytics.com',
-                'https://*.googletagmanager.com',
-              ],
-              'script-src': ['https://*.googletagmanager.com'], // TODO: replace with `script-src-elem` once Webkit supports it (https://caniuse.com/mdn-http_headers_content-security-policy_script-src-elem)
-            },
-            {
-              // vio
-              'connect-src': ["'self'"], // `${SITE_URL}/api/healthcheck`
-              'manifest-src': [`${SITE_URL}/site.webmanifest`],
-              'script-src': [
-                'https://polyfill.io/v3/polyfill.min.js', // ESLint plugin compat
-              ], // TODO: replace with `script-src-elem` once Webkit supports it (https://caniuse.com/mdn-http_headers_content-security-policy_script-src-elem)
-            },
-            {
-              // @nuxt/devtools
-              ...(process.env.NODE_ENV === 'development'
-                ? {
-                    'frame-src': [
-                      'http://localhost:3000/__nuxt_devtools__/client/',
-                    ],
-                  }
-                : {}),
-            },
-            {
-              // nuxt-i18n
-              ...(process.env.NODE_ENV === 'development'
-                ? {}
-                : {
-                    'script-src': ["'self'"], // 'http://localhost:3000/_nuxt/i18n.config.*.js' // TOD: add with subresource integrity?
-                  }),
-            },
-            {
-              // nuxt-link-checker
-              ...(process.env.NODE_ENV === 'development'
-                ? {
-                    'connect-src': ["'self'"], // 'http://localhost:3000/api/__link_checker__/inspect'
-                  }
-                : {}),
-            },
-            {
-              // nuxt-og-image
-              ...(process.env.NODE_ENV === 'development'
-                ? {
-                    'font-src': ['https://fonts.gstatic.com/s/inter/'],
-                    'frame-ancestors': ["'self'"],
-                    'frame-src': ["'self'"],
-                    'script-src': ['https://cdn.tailwindcss.com/'], // TODO: replace with `script-src-elem` once Webkit supports it (https://caniuse.com/mdn-http_headers_content-security-policy_script-src-elem)
-                    'style-src': [
-                      // TODO: replace with `style-src-elem` once Webkit supports it
-                      'https://cdn.jsdelivr.net/npm/gardevoir https://fonts.googleapis.com/css2',
-                    ],
-                  }
-                : {}),
-            },
-            {
-              // nuxt-simple-sitemap
-              'script-src': [`${SITE_URL}/__sitemap__/style.xsl`], // TODO: replace with `script-src-elem` once Webkit supports it (https://caniuse.com/mdn-http_headers_content-security-policy_script-src-elem)
-            },
-            {
-              // nuxt
-              'connect-src': [
-                ...(process.env.NODE_ENV === 'development'
-                  ? [
-                      'http://localhost:3000/_nuxt/', // hot reload
-                      'https://localhost:3000/_nuxt/', // hot reload
-                      'ws://localhost:3000/_nuxt/', // hot reload
-                      'wss://localhost:3000/_nuxt/', // hot reload
-                    ]
-                  : ["'self'"]), // build metadata and payloads
-              ],
-              'img-src': [
-                "'self'", // TODO: replace with `"'nonce-{{nonce}}'",`
-                'data:', // external link icon
-              ],
-              'script-src': ["'nonce-{{nonce}}'"], // TODO: replace with `script-src-elem` once Webkit supports it (https://caniuse.com/mdn-http_headers_content-security-policy_script-src-elem)
-              'style-src': [
-                // TODO: replace with `style-src-elem` once Webkit supports it
-                "'self'", // TODO: replace with `"'nonce-{{nonce}}'",` (https://github.com/vitejs/vite/pull/11864)
-                "'unsafe-inline'", // TODO: replace with `"'nonce-{{nonce}}'",` (https://github.com/vitejs/vite/pull/11864)
-              ],
-            },
-            {
-              // nitro
-              'connect-src': ["'self'"] /* swagger
-              'http://localhost:3000/_nitro/openapi.json',
-              'http://localhost:3000/_nitro/swagger', */,
-              'script-src': [
-                'https://cdn.jsdelivr.net/npm/', // swagger // TODO: increase precision (https://github.com/unjs/nitro/issues/1757)
-              ], // TODO: replace with `script-src-elem` once Webkit supports it (https://caniuse.com/mdn-http_headers_content-security-policy_script-src-elem)
-              'style-src': [
-                'https://cdn.jsdelivr.net/npm/', // swagger // TODO: increase precision (https://github.com/unjs/nitro/issues/1757)
-              ],
-            },
-            {
-              // base
-              'base-uri': ["'none'"], // does not fallback to `default-src`
-              'child-src': false as const,
-              'connect-src': false as const,
-              'default-src': ["'none'"],
-              'font-src': false as const,
-              'form-action': ["'none'"], // does not fallback to `default-src`
-              'frame-ancestors': ["'none'"], // does not fallback to `default-src`
-              'frame-src': false as const,
-              'img-src': false as const,
-              'media-src': false as const,
-              'navigate-to': false as const,
-              'object-src': false as const,
-              'prefetch-src': false as const,
-              'report-to': undefined,
-              'report-uri': false as const,
-              // TODO: evaluate header (https://github.com/maevsi/maevsi/issues/830) // https://stackoverflow.com/questions/62081028/this-document-requires-trustedscripturl-assignment
-              // 'require-trusted-types-for': ["'script'"], // csp-evaluator
-              sandbox: false as const,
-              'script-src': false as const,
-              'script-src-attr': false as const, // TODO: enable once Webkit supports it (https://caniuse.com/mdn-http_headers_content-security-policy_script-src-attr)
-              'script-src-elem': false as const, // TODO: enable once Webkit supports it (https://caniuse.com/mdn-http_headers_content-security-policy_script-src-elem)
-              'style-src': false as const,
-              'style-src-attr': false as const, // TODO: enable once Webkit supports it (https://caniuse.com/mdn-http_headers_content-security-policy_style-src-attr)
-              'style-src-elem': false as const, // TODO: enable once Webkit supports it (https://caniuse.com/mdn-http_headers_content-security-policy_style-src-elem)
-              'upgrade-insecure-requests': false, // TODO: set to `process.env.NODE_ENV === 'production'` or `true` when tests run on https
-              'worker-src': false as const,
-            },
-          ),
-          crossOriginEmbedderPolicy: false, // https://stackoverflow.com/questions/71904052/getting-notsameoriginafterdefaultedtosameoriginbycoep-error-with-helmet
-          strictTransportSecurity:
-            process.env.NODE_ENV === 'production'
-              ? {
-                  maxAge: 31536000,
-                  includeSubdomains: true,
-                  preload: true,
-                }
-              : false,
+          contentSecurityPolicy: {
+            'base-uri': ["'none'"], // does not fallback to `default-src`
+            'child-src': false as const,
+            'connect-src': false as const,
+            'default-src': ["'none'"],
+            'font-src': false as const,
+            'form-action': ["'none'"], // does not fallback to `default-src`
+            'frame-ancestors': ["'none'"], // does not fallback to `default-src`
+            'frame-src': false as const,
+            'img-src': false as const,
+            'media-src': false as const,
+            'navigate-to': false as const,
+            'object-src': false as const,
+            'prefetch-src': false as const,
+            'report-to': undefined,
+            'report-uri': false as const,
+            // 'require-trusted-types-for': ["'script'"], // csp-evaluator // TODO: wait for trusted type support in vue (https://github.com/vuejs/core/pull/10844)
+            sandbox: false as const,
+            'script-src': false as const,
+            'script-src-attr': false as const,
+            'script-src-elem': false as const,
+            'style-src': false as const,
+            'style-src-attr': false as const,
+            'style-src-elem': false as const,
+            'upgrade-insecure-requests': false, // TODO: set to `!import.meta.dev` or `true` when tests run on https
+            'worker-src': false as const,
+          },
           xXSSProtection: '1; mode=block', // TODO: set back to `0` once CSP does not use `unsafe-*` anymore (https://github.com/maevsi/maevsi/issues/1047)
         },
       },
@@ -352,9 +221,7 @@ export default defineNuxtConfig(
         splash: false,
       },
       site: {
-        debug: process.env.NODE_ENV === 'development',
         id: 'vio',
-        url: SITE_URL,
       },
       sitemap: {
         credits: false,
@@ -365,9 +232,61 @@ export default defineNuxtConfig(
 
       // environments
       $development: {
+        devtools: {
+          enabled: !process.env.NUXT_PUBLIC_VIO_IS_TESTING,
+        },
+        nitro: {
+          experimental: {
+            openAPI: true,
+          },
+        },
+        runtimeConfig: {
+          public: {
+            vio: {
+              isInProduction: false,
+            },
+          },
+        },
+
         // modules
         security: {
-          rateLimiter: false, // TODO: enable when nuxt-link-checker bundles requests (https://github.com/harlan-zw/nuxt-link-checker/issues/21)
+          headers: {
+            crossOriginEmbedderPolicy: 'unsafe-none',
+            strictTransportSecurity: false, // prevent endless reload in Chrome
+          },
+        },
+        site: {
+          debug: true,
+        },
+      },
+      $production: {
+        runtimeConfig: {
+          public: {
+            i18n: {
+              baseUrl: SITE_URL,
+            },
+            site: {
+              url: SITE_URL,
+            },
+            vio: {
+              isInProduction: true,
+            },
+          },
+        },
+
+        // modules
+        gtag: {
+          config: {
+            cookie_flags: 'samesite=strict;secure',
+          },
+        },
+        security: {
+          headers: {
+            strictTransportSecurity: {
+              maxAge: 31536000,
+              preload: true,
+            },
+          },
         },
       },
     },
