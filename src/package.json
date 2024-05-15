@@ -95,8 +95,7 @@
     "ufo": "1.5.3",
     "unhead": "1.9.10",
     "vue": "3.4.27",
-    "vue-router": "4.3.2",
-    "vue-tsc": "2.0.17"
+    "vue-router": "4.3.2"
   },
   "peerDependencies": {
     "nuxt": "3.11.2",
