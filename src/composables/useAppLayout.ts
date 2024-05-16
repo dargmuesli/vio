@@ -10,8 +10,8 @@ export const useAppLayout = () => {
     },
   })
 
-  // TODO: convert to `useServerHeadSafe` (https://github.com/harlan-zw/nuxt-seo-kit/issues/98)
-  useSeoMeta({
+  // TODO: convert to `useServerHeadSafe` (https://github.com/unjs/unhead/issues/221)
+  useServerSeoMeta({
     titleTemplate: (title) =>
       TITLE_TEMPLATE({
         siteName: siteConfig.name,

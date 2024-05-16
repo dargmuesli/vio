@@ -1,10 +1,9 @@
 import type { CombinedError } from '@urql/core'
-import { type H3Event, getCookie } from 'h3'
+import { type H3Event } from 'h3'
 
 import { type Ref } from 'vue'
 
 import type { ApiData, BackendError } from '../types/api'
-import { TIMEZONE_COOKIE_NAME } from './constants'
 
 export const getApiDataDefault = (): ApiData =>
   computed(() =>
@@ -108,24 +107,4 @@ export const getServiceHref = ({
   } else {
     return `https://${nameSubdomainString}${getDomainTldPort(host)}`
   }
-}
-
-export const getTimezone = async (event: H3Event) => {
-  const timezoneCookie = getCookie(event, TIMEZONE_COOKIE_NAME)
-
-  if (timezoneCookie) {
-    return timezoneCookie
-  }
-
-  if (event.node.req.headers['x-real-ip']) {
-    const ipApiResult = await $fetch<{ timezone: string }>(
-      `http://ip-api.com/json/${event.node.req.headers['x-real-ip']}`,
-    ).catch(() => {})
-
-    if (ipApiResult) {
-      return ipApiResult.timezone
-    }
-  }
-
-  return undefined
 }

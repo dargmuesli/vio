@@ -1,20 +1,6 @@
 export default defineAppConfig({
   vio: {
     pages: undefined,
-    server: {
-      middleware: {
-        headers: {
-          csp: {
-            default: {
-              NEL: '\'{"report_to":"default","max_age":31536000,"include_subdomains":true}\'',
-              'Report-To':
-                '\'{"group":"default":"max_age":31536000:"endpoints":[{"url":"https://dargmuesli.report-uri.com/a/d/g"}]:"include_subdomains":true}\'',
-            },
-            production: {} as Record<string, string>,
-          },
-        },
-      },
-    },
     themeColor: undefined,
   },
 })
@@ -66,12 +52,7 @@ declare module 'nuxt/schema' {
       }
       server?: {
         middleware: {
-          headers: {
-            csp: {
-              default: Record<string, string>
-              production: Record<string, string>
-            }
-          }
+          headers: Record<string, string>
         }
       }
       themeColor?: string
