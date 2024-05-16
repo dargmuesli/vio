@@ -1,3 +1,21 @@
+## [12.0.0](https://github.com/dargmuesli/vio/compare/11.2.6...12.0.0) (2024-05-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* **headers:** migrate to runtime configuration
+
+### Features
+
+* **headers:** migrate to runtime configuration ([638fd02](https://github.com/dargmuesli/vio/commit/638fd0249e3dd1264d36d0b500bebe8262d38cdb))
+* **headers:** split between build- and runtime ([184f45e](https://github.com/dargmuesli/vio/commit/184f45e698cbde5771a38cd03e200b036466b08f))
+* **timezone:** rewrite ([a50ff56](https://github.com/dargmuesli/vio/commit/a50ff56b346638faaf34227bfadee11c98134ed0))
+
+
+### Bug Fixes
+
+* **headers:** revert to build time configuration ([e0e7672](https://github.com/dargmuesli/vio/commit/e0e767261d9e65e0150254e490e289b34eead4d0))
+
 ## [11.2.6](https://github.com/dargmuesli/vio/compare/11.2.5...11.2.6) (2024-05-15)
 
 
