@@ -1,3 +1,10 @@
+## [12.0.1](https://github.com/dargmuesli/vio/compare/12.0.0...12.0.1) (2024-05-17)
+
+
+### Bug Fixes
+
+* **headers:** correct app configuration typing ([a749669](https://github.com/dargmuesli/vio/commit/a749669c5181cd40f664a1d2a0ae6561bab6099b))
+
 ## [12.0.0](https://github.com/dargmuesli/vio/compare/11.2.6...12.0.0) (2024-05-16)
 
 
