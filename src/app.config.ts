@@ -5,57 +5,59 @@ export default defineAppConfig({
   },
 })
 
-declare module 'nuxt/schema' {
-  interface AppConfigInput {
-    vio: {
-      pages?: {
-        legalNotice?: {
-          contact: {
-            email: string
+export type AppConfig = {
+  vio: {
+    pages?: {
+      legalNotice?: {
+        contact: {
+          email: string
+        }
+        responsibility: {
+          address: {
+            city: string
+            name: string
+            street: string
           }
-          responsibility: {
+        }
+        tmg: {
+          address: {
+            city: string
+            name: string
+            street: string
+          }
+        }
+      }
+      privacyPolicy?: {
+        hostingCdn?: {
+          external: {
             address: {
               city: string
               name: string
               street: string
             }
           }
-          tmg: {
+        }
+        mandatoryInfo?: {
+          responsible: {
             address: {
               city: string
+              email: string
               name: string
               street: string
             }
           }
         }
-        privacyPolicy?: {
-          hostingCdn?: {
-            external: {
-              address: {
-                city: string
-                name: string
-                street: string
-              }
-            }
-          }
-          mandatoryInfo?: {
-            responsible: {
-              address: {
-                city: string
-                email: string
-                name: string
-                street: string
-              }
-            }
-          }
-        }
       }
-      server?: {
-        middleware: {
-          headers: Record<string, string>
-        }
-      }
-      themeColor?: string
     }
+    server?: {
+      middleware: {
+        headers: Record<string, string>
+      }
+    }
+    themeColor?: string
   }
+}
+
+declare module 'nuxt/schema' {
+  interface AppConfigInput extends AppConfig {}
 }
