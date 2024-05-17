@@ -1,3 +1,10 @@
+## [12.0.2](https://github.com/dargmuesli/vio/compare/12.0.1...12.0.2) (2024-05-17)
+
+
+### Bug Fixes
+
+* **playwright:** ignore https errors ([d795207](https://github.com/dargmuesli/vio/commit/d795207861a551b4b168d901c5d748ee3c4bf6fa))
+
 ## [12.0.1](https://github.com/dargmuesli/vio/compare/12.0.0...12.0.1) (2024-05-17)
 
 
