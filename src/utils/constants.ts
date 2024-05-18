@@ -6,10 +6,7 @@ export const SITE_NAME = 'Vio'
 export const SITE_URL =
   process.env.SITE_URL ||
   process.env.NUXT_PUBLIC_SITE_URL ||
-  (process.env.HOST ? 'https' : 'http') +
-    '://' +
-    (process.env.HOST ||
-      `${process.env.HOST || 'localhost'}:${process.env.PORT || '3000'}`)
+  `https://${process.env.HOST || 'localhost'}:${process.env.PORT || '3000'}`
 export const CACHE_VERSION = 'bOXMwoKlJr'
 export const COOKIE_PREFIX = SITE_NAME.toLocaleLowerCase()
 export const COOKIE_SEPARATOR = '_'
