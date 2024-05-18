@@ -1,3 +1,10 @@
+## [12.0.3](https://github.com/dargmuesli/vio/compare/12.0.2...12.0.3) (2024-05-18)
+
+
+### Bug Fixes
+
+* **site:** correct url ([d8b5f10](https://github.com/dargmuesli/vio/commit/d8b5f107bb5532dba56b51fe713e459d1fdeab42))
+
 ## [12.0.2](https://github.com/dargmuesli/vio/compare/12.0.1...12.0.2) (2024-05-17)
 
 
