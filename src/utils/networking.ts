@@ -102,7 +102,9 @@ export const getServiceHref = ({
 
   if (stagingHost) {
     return `https://${nameSubdomainString}${stagingHost}`
-  } else if (isSsr && import.meta.server) {
+    // TODO: remove disable below (https://github.com/nuxt/nuxt/issues/25323)
+    // eslint-disable-next-line nuxt/prefer-import-meta
+  } else if (isSsr && process.server) {
     return `http://${name}${portString}`
   } else {
     return `https://${nameSubdomainString}${getDomainTldPort(host)}`
