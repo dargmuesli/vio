@@ -1,3 +1,10 @@
+## [12.0.4](https://github.com/dargmuesli/vio/compare/12.0.3...12.0.4) (2024-05-20)
+
+
+### Bug Fixes
+
+* **networking:** allow build-time access ([c47bedb](https://github.com/dargmuesli/vio/commit/c47bedbd444b9dcf6494c6e487375f44fde2a54c))
+
 ## [12.0.3](https://github.com/dargmuesli/vio/compare/12.0.2...12.0.3) (2024-05-18)
 
 
