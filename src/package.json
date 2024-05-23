@@ -69,7 +69,7 @@
   },
   "devDependencies": {
     "@axe-core/playwright": "4.9.1",
-    "@playwright/test": "1.44.0",
+    "@playwright/test": "1.44.1",
     "@unhead/vue": "1.9.11",
     "@urql/devtools": "2.0.3",
     "@urql/exchange-graphcache": "7.1.0",
@@ -100,7 +100,7 @@
   },
   "peerDependencies": {
     "nuxt": "3.11.2",
-    "playwright-core": "1.44.0",
+    "playwright-core": "1.44.1",
     "vue": "3.4.27",
     "vue-router": "4.3.2"
   },
