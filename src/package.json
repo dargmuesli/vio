@@ -73,7 +73,7 @@
     "@unhead/vue": "1.9.11",
     "@urql/devtools": "2.0.3",
     "@urql/exchange-graphcache": "7.1.0",
-    "@urql/vue": "1.2.0",
+    "@urql/vue": "1.2.1",
     "consola": "3.2.3",
     "cookie-es": "1.1.0",
     "cross-env": "7.0.3",
