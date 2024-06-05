@@ -12,7 +12,7 @@
   "engines": {
     "node": "20"
   },
-  "packageManager": "pnpm@9.1.4",
+  "packageManager": "pnpm@9.2.0",
   "files": [
     ".config",
     "assets",
@@ -65,7 +65,7 @@
     "jose": "5.4.0",
     "nuxt-gtag": "2.0.6",
     "nuxt-security": "1.4.3",
-    "sweetalert2": "11.11.0"
+    "sweetalert2": "11.11.1"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.9.1",
@@ -79,12 +79,12 @@
     "cross-env": "7.0.3",
     "defu": "6.1.4",
     "h3": "1.11.1",
-    "jiti": "1.21.1",
+    "jiti": "1.21.3",
     "lint-staged": "15.2.5",
     "lodash-es": "4.17.21",
     "nuxt": "3.11.2",
     "pinia": "2.1.7",
-    "prettier": "3.3.0",
+    "prettier": "3.3.1",
     "prettier-plugin-tailwindcss": "0.6.1",
     "serve": "14.2.3",
     "sharp": "0.33.4",
