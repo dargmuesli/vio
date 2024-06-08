@@ -33,8 +33,8 @@ importers:
         specifier: 0.8.1
         version: 0.8.1
       '@intlify/eslint-plugin-vue-i18n':
-        specifier: 3.0.0-next.13
-        version: 3.0.0-next.13(eslint@9.4.0)
+        specifier: 3.0.0
+        version: 3.0.0(eslint@9.4.0)
       '@nuxt/devtools':
         specifier: 1.3.3
         version: 1.3.3(@unocss/reset@0.60.4)(floating-vue@5.2.2(@nuxt/kit@3.11.2(rollup@4.18.0))(vue@3.4.27(typescript@5.4.5)))(fuse.js@7.0.0)(nuxt@3.11.2(@opentelemetry/api@1.8.0)(@parcel/watcher@2.4.1)(@types/node@20.14.0)(@unocss/reset@0.60.4)(encoding@0.1.13)(eslint@9.4.0)(floating-vue@5.2.2(@nuxt/kit@3.11.2(rollup@4.18.0))(vue@3.4.27(typescript@5.4.5)))(fuse.js@7.0.0)(ioredis@5.4.1)(optionator@0.9.4)(rollup@4.18.0)(sass@1.77.4)(stylelint@16.6.1(typescript@5.4.5))(terser@5.31.0)(typescript@5.4.5)(unocss@0.60.4(@unocss/webpack@0.60.4(rollup@4.18.0)(webpack@5.91.0(esbuild@0.21.4)))(postcss@8.4.38)(rollup@4.18.0)(vite@5.2.12(@types/node@20.14.0)(sass@1.77.4)(terser@5.31.0)))(vite@5.2.12(@types/node@20.14.0)(sass@1.77.4)(terser@5.31.0)))(rollup@4.18.0)(unocss@0.60.4(@unocss/webpack@0.60.4(rollup@4.18.0)(webpack@5.91.0(esbuild@0.21.4)))(postcss@8.4.38)(rollup@4.18.0)(vite@5.2.12(@types/node@20.14.0)(sass@1.77.4)(terser@5.31.0)))(vite@5.2.12(@types/node@20.14.0)(sass@1.77.4)(terser@5.31.0))(vue@3.4.27(typescript@5.4.5))
@@ -1155,8 +1155,8 @@ packages:
     resolution: {integrity: sha512-R+l9DRqzfK0yT9UgaCq3sl24NJAP4f/djAu4z9zLknAUBEal2q/tXFV+oGzcGpvi3uXWNvF9Gctj+IsuPwJjoA==}
     engines: {node: '>= 16'}
 
-  '@intlify/eslint-plugin-vue-i18n@3.0.0-next.13':
-    resolution: {integrity: sha512-Z0JNZ47LcskNNSRfjLaS4OuSwJ1YDLtQW5s6xIpiRUqE+ehGD25tLMv3or+9Ajh9uiN6/Zu8emC3+Q5ao4sFqA==}
+  '@intlify/eslint-plugin-vue-i18n@3.0.0':
+    resolution: {integrity: sha512-s4fe+VOiqMZGhDrXWnL1xLyHbcFWBcEBeD/KpVrkOtL+utH2LPTi7uZ8RvWSthMS0mUL/7L74hFJ//OUU7AYww==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       eslint: ^8.0.0 || ^9.0.0-0
@@ -7705,7 +7705,7 @@ snapshots:
       '@intlify/core-base': 9.13.1
       '@intlify/shared': 9.13.1
 
-  '@intlify/eslint-plugin-vue-i18n@3.0.0-next.13(eslint@9.4.0)':
+  '@intlify/eslint-plugin-vue-i18n@3.0.0(eslint@9.4.0)':
     dependencies:
       '@eslint/eslintrc': 3.1.0
       '@intlify/core-base': 9.13.1
