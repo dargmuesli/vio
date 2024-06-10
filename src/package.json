@@ -12,7 +12,7 @@
   "engines": {
     "node": "20"
   },
-  "packageManager": "pnpm@9.2.0",
+  "packageManager": "pnpm@9.3.0",
   "files": [
     ".config",
     "assets",
@@ -79,7 +79,7 @@
     "cross-env": "7.0.3",
     "defu": "6.1.4",
     "h3": "1.11.1",
-    "jiti": "1.21.3",
+    "jiti": "1.21.6",
     "lint-staged": "15.2.5",
     "lodash-es": "4.17.21",
     "nuxt": "3.11.2",
@@ -96,13 +96,13 @@
     "ufo": "1.5.3",
     "unhead": "1.9.12",
     "vue": "3.4.27",
-    "vue-router": "4.3.2"
+    "vue-router": "4.3.3"
   },
   "peerDependencies": {
     "nuxt": "3.11.2",
     "playwright-core": "1.44.1",
     "vue": "3.4.27",
-    "vue-router": "4.3.2"
+    "vue-router": "4.3.3"
   },
   "scripts": {
     "build": "pnpm run build:node",
