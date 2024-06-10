@@ -58,7 +58,7 @@
     "dayjs": "2.0.0-alpha.4",
     "eslint": "9.4.0",
     "eslint-config-prettier": "9.1.0",
-    "eslint-plugin-compat": "4.2.0",
+    "eslint-plugin-compat": "5.0.0",
     "eslint-plugin-prettier": "5.1.3",
     "eslint-plugin-yml": "1.14.0",
     "globals": "15.4.0",
