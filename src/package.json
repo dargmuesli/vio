@@ -69,6 +69,7 @@
   },
   "devDependencies": {
     "@axe-core/playwright": "4.9.1",
+    "@eslint/compat": "1.0.3",
     "@playwright/test": "1.44.1",
     "@unhead/vue": "1.9.12",
     "@urql/devtools": "2.0.3",

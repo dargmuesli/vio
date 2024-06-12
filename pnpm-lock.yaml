@@ -123,6 +123,9 @@ importers:
       '@axe-core/playwright':
         specifier: 4.9.1
         version: 4.9.1(playwright-core@1.44.1)
+      '@eslint/compat':
+        specifier: 1.0.3
+        version: 1.0.3
       '@playwright/test':
         specifier: 1.44.1
         version: 1.44.1
@@ -923,6 +926,10 @@ packages:
   '@eslint-community/regexpp@4.10.1':
     resolution: {integrity: sha512-Zm2NGpWELsQAD1xsJzGQpYfvICSsFkEpU0jxBjfdC6uNEWXcHnfs9hScFWtXVDVl+rBQJGrl4g1vcKIejpH9dA==}
     engines: {node: ^12.0.0 || ^14.0.0 || >=16.0.0}
+
+  '@eslint/compat@1.0.3':
+    resolution: {integrity: sha512-9RaroPQaU2+SDcWav1YfuipwqnHccoiXZdUsicRQsQ/vH2wkEmRVcj344GapG/FnCeZRtqj0n6PshI+s9xkkAQ==}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   '@eslint/config-array@0.15.1':
     resolution: {integrity: sha512-K4gzNq+yymn/EVsXYmf+SBcBro8MTf+aXJZUphM96CdzUEr+ClGDvAbpmaEK+cGVigVXIgs9gNmvHAlrzzY5JQ==}
@@ -7492,6 +7499,8 @@ snapshots:
       eslint-visitor-keys: 3.4.3
 
   '@eslint-community/regexpp@4.10.1': {}
+
+  '@eslint/compat@1.0.3': {}
 
   '@eslint/config-array@0.15.1':
     dependencies:
