@@ -95,6 +95,12 @@ export const GET_CSP = (siteUrl: string) =>
     },
     {
       // nuxt
+      ...(process.env.NODE_ENV === 'development'
+        ? {
+            'frame-src':
+              'http://localhost:3000/__nuxt_devtools__/client/modules/pinia',
+          }
+        : {}),
       'connect-src': [
         "'self'", // e.g. `/_nuxt/builds/meta/`, `/_payload.json`, `/privacy-policy/_payload.json`
         // ...(process.env.NODE_ENV === 'development'
