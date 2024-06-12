@@ -1,3 +1,10 @@
+## [12.0.6](https://github.com/dargmuesli/vio/compare/12.0.5...12.0.6) (2024-06-12)
+
+
+### Bug Fixes
+
+* **csp:** allow frame source for pinia in development ([c667785](https://github.com/dargmuesli/vio/commit/c667785d81127d04e1666d9d7e82374268899f47))
+
 ## [12.0.5](https://github.com/dargmuesli/vio/compare/12.0.4...12.0.5) (2024-06-01)
 
 
