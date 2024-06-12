@@ -1,30 +1,37 @@
-// // TODO: add compat plugin when it supports flat config (https://github.com/amilajack/eslint-plugin-compat/issues/603)
-// import { FlatCompat } from '@eslint/eslintrc'
+// @ts-check
+
+import { fixupConfigRules } from '@eslint/compat'
+// @ts-ignore
 import vueI18n from '@intlify/eslint-plugin-vue-i18n'
-import prettierRecommended from 'eslint-plugin-prettier/recommended'
+import eslintPluginCompat from 'eslint-plugin-compat'
+import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 import eslintPluginYml from 'eslint-plugin-yml'
 import globals from 'globals'
 import jiti from 'jiti'
 
 const moduleFileUrl = new URL(import.meta.url)
-// const compat = new FlatCompat({
-//   baseDirectory: moduleFileUrl.pathname,
-// })
 const JITI = jiti(moduleFileUrl.pathname)
 const POLYFILLS = JITI('../utils/constants.ts').POLYFILLS
 
-export const VIO_ESLINT_CONFIG = [
-  ...vueI18n.configs['flat/recommended'],
-  // ...compat.extends('plugin:compat/recommended'),
-  ...eslintPluginYml.configs['flat/recommended'],
-  prettierRecommended, // must be last
+const vueI18nConfiguration = vueI18n.configs['flat/recommended']
+const compatConfiguration = fixupConfigRules(
+  eslintPluginCompat.configs['flat/recommended'],
+)
+const ymlConfiguration = eslintPluginYml.configs['flat/recommended']
+const prettierConfiguration = eslintPluginPrettierRecommended
 
-  // {
-  //   files: ['server/**/*'],
-  //   rules: {
-  //     'compat/compat': 'off',
-  //   },
-  // },
+export const VIO_ESLINT_CONFIG = [
+  ...vueI18nConfiguration,
+  ...compatConfiguration,
+  ...ymlConfiguration,
+  prettierConfiguration, // must be last
+
+  {
+    files: ['.config/lint.js'],
+    rules: {
+      'compat/compat': 'off',
+    },
+  },
   {
     languageOptions: {
       globals: {
