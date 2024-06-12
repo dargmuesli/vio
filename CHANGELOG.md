@@ -1,3 +1,10 @@
+## [12.0.7](https://github.com/dargmuesli/vio/compare/12.0.6...12.0.7) (2024-06-12)
+
+
+### Bug Fixes
+
+* **deps:** use @eslint/compat as normal dependency ([b6d132d](https://github.com/dargmuesli/vio/commit/b6d132d657e08e4d17dd065998666e78e28859cf))
+
 ## [12.0.6](https://github.com/dargmuesli/vio/compare/12.0.5...12.0.6) (2024-06-12)
 
 
