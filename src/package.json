@@ -66,7 +66,8 @@
     "jose": "5.4.0",
     "nuxt-gtag": "2.0.6",
     "nuxt-security": "1.4.3",
-    "sweetalert2": "11.11.1"
+    "sweetalert2": "11.11.1",
+    "vue-tsc": "2.0.21"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.9.1",
@@ -97,8 +98,7 @@
     "ufo": "1.5.3",
     "unhead": "1.9.13",
     "vue": "3.4.29",
-    "vue-router": "4.3.3",
-    "vue-tsc": "2.0.21"
+    "vue-router": "4.3.3"
   },
   "peerDependencies": {
     "nuxt": "3.12.2",
