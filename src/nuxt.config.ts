@@ -8,9 +8,9 @@ import {
   SITE_NAME,
   TIMEZONE_COOKIE_NAME,
   GTAG_COOKIE_ID,
-  VIO_NUXT_BASE_CONFIG,
   GET_CSP,
 } from './utils/constants'
+import { VIO_NUXT_BASE_CONFIG } from './utils/nuxt'
 
 const currentDir = dirname(fileURLToPath(import.meta.url))
 

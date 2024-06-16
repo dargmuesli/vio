@@ -1,6 +1,7 @@
 import AxeBuilder from '@axe-core/playwright'
 import { test, expect } from '@playwright/test'
 
+import { SITE_URL } from '#src/utils/constants'
 import { COOKIE_CONTROL_DEFAULT, PAGE_READY } from '../../../utils/constants'
 import { testMetadata } from '../../../utils/tests'
 
@@ -9,8 +10,7 @@ test.beforeEach(async ({ context }) => {
     {
       name: 'ncc_c',
       value: COOKIE_CONTROL_DEFAULT,
-      domain: 'localhost',
-      path: '/',
+      url: SITE_URL,
     },
   ])
 })

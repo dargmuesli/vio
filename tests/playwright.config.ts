@@ -1,5 +1,6 @@
 import { defineConfig, devices } from '@playwright/test'
-import { SITE_URL } from './utils/constants'
+
+import { SITE_URL } from '#src/utils/constants'
 
 /**
  * Read environment variables from file.
@@ -23,7 +24,7 @@ export default defineConfig({
   /* Run tests in files in parallel */
   fullyParallel: true,
 
-  outputDir: 'tests/e2e/results',
+  outputDir: 'e2e/results',
 
   /* Configure projects for major browsers */
   projects: [
@@ -64,12 +65,12 @@ export default defineConfig({
   ],
 
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: [['html', { outputFolder: 'tests/e2e/report' }]],
+  reporter: [['html', { outputFolder: 'e2e/report' }]],
 
   /* Retry on CI only */
   retries: process.env.CI ? 1 : 0,
 
-  testDir: './tests/e2e/specs',
+  testDir: './e2e/specs',
 
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
@@ -85,13 +86,13 @@ export default defineConfig({
 
   /* Run your local dev server before starting the tests */
   webServer: {
-    command: `pnpm run start:${process.env.VIO_SERVER || 'dev'}`,
+    command: `pnpm --dir ../src run start:${process.env.VIO_SERVER || 'dev'}`,
     env: {
       NUXT_PUBLIC_VIO_IS_TESTING: 'true',
     },
     ignoreHTTPSErrors: true, // TODO: remove once tests run without it
     timeout: process.env.NODE_ENV === 'production' ? 10000 : 100000,
-    url: SITE_URL,
+    url: process.env.SITE_URL || SITE_URL,
     reuseExistingServer: !process.env.CI,
   },
 
