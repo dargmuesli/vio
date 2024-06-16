@@ -1,3 +1,10 @@
+## [12.1.0](https://github.com/dargmuesli/vio/compare/12.0.7...12.1.0) (2024-06-16)
+
+
+### Features
+
+* **a11y:** add route announcer ([c71bac2](https://github.com/dargmuesli/vio/commit/c71bac206efe62114882adf76d22aa5dae83f238))
+
 ## [12.0.7](https://github.com/dargmuesli/vio/compare/12.0.6...12.0.7) (2024-06-12)
 
 
