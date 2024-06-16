@@ -1,3 +1,10 @@
+## [12.1.1](https://github.com/dargmuesli/vio/compare/12.1.0...12.1.1) (2024-06-16)
+
+
+### Bug Fixes
+
+* **deps:** use vue-tsc as normal dependency ([18bb353](https://github.com/dargmuesli/vio/commit/18bb353532df4d74b908a063dd47e8fd2477cbb5))
+
 ## [12.1.0](https://github.com/dargmuesli/vio/compare/12.0.7...12.1.0) (2024-06-16)
 
 
