@@ -119,11 +119,11 @@
     "lint:style": "stylelint --cache \"**/*.{vue,css}\" --ignore-path .gitignore",
     "lint:ts": "nuxt typecheck",
     "lint": "pnpm run lint:js && pnpm run lint:ts && pnpm run lint:style",
-    "prepare": "nuxt prepare && nuxt prepare .playground",
+    "prepare": "nuxt prepare && nuxt prepare .playground && ./.config/certificates/mkcert.sh",
     "preview": "nuxt preview .playground",
     "start:dev": "nuxt dev .playground",
     "start:node": "node .playground/.output/server/index.mjs",
-    "start:static": "serve .playground/.output/public",
+    "start:static": "serve .playground/.output/public --ssl-cert ./.config/certificates/ssl.crt --ssl-key ./.config/certificates/ssl.key"
     "start:static:test": "cross-env PORT=3002 pnpm run start:static",
     "test:e2e:docker:br": "pnpm run test:e2e:docker:build && pnpm run test:e2e:docker:run",
     "test:e2e:docker:build": "docker build -t test-e2e_development --build-arg UID=$(id -u) --build-arg GID=$(id -g) --target test-e2e_development ..",

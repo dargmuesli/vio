@@ -29,6 +29,12 @@ export default defineNuxtConfig(
           name: 'layout',
         },
       },
+      devServer: {
+        https: {
+          key: './.config/certificates/ssl.key',
+          cert: './.config/certificates/ssl.crt',
+        },
+      },
       devtools: {
         timeline: {
           enabled: true,
