@@ -1,3 +1,13 @@
+## [13.0.0](https://github.com/dargmuesli/vio/compare/12.1.1...13.0.0) (2024-06-16)
+
+### ⚠ BREAKING CHANGES
+
+* **nuxt:** enable ssl
+
+### Features
+
+* **nuxt:** enable ssl ([c4dac17](https://github.com/dargmuesli/vio/commit/c4dac1746b20ec032f3ae38d15dc76beac9c0b97))
+
 ## [12.1.1](https://github.com/dargmuesli/vio/compare/12.1.0...12.1.1) (2024-06-16)
 
 
