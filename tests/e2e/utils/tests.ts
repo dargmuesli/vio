@@ -1,7 +1,7 @@
 import { expect, type Page } from '@playwright/test'
 import { joinURL, withoutTrailingSlash } from 'ufo'
 
-import { SITE_URL } from '../../../utils/constants'
+import { SITE_URL } from '#src/utils/constants'
 
 export const testMetadata = async ({
   page,
