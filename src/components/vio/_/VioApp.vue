@@ -1,5 +1,6 @@
 <template>
   <div :data-is-loading="isLoading" data-testid="is-loading">
+    <NuxtRouteAnnouncer />
     <NuxtLayout>
       <!-- `NuxtLayout` can't have mulitple child nodes (https://github.com/nuxt/nuxt/issues/21759) -->
       <NuxtPage />
