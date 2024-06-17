@@ -1,3 +1,9 @@
+## [13.1.3](https://github.com/dargmuesli/vio/compare/13.1.2...13.1.3) (2024-06-17)
+
+### Bug Fixes
+
+* **playwright:** use relative import for configuration ([c691233](https://github.com/dargmuesli/vio/commit/c6912338652572c6d8fde8d564d568dfe1482279))
+
 ## [13.1.2](https://github.com/dargmuesli/vio/compare/13.1.1...13.1.2) (2024-06-17)
 
 ### Bug Fixes
