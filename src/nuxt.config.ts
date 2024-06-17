@@ -107,13 +107,16 @@ export default defineNuxtConfig(
           },
         },
       },
-      // typescript: {
-      //   tsConfig: {
-      //     compilerOptions: {
-      //       noErrorTruncation: true,
-      //     },
-      //   },
-      // },
+      typescript: {
+        tsConfig: {
+          vueCompilerOptions: {
+            htmlAttributes: [], // https://github.com/johnsoncodehk/volar/issues/1970#issuecomment-1276994634
+          },
+          // compilerOptions: {
+          //   noErrorTruncation: true,
+          // },
+        },
+      },
 
       // modules
       colorMode: {
