@@ -38,6 +38,9 @@ importers:
       husky:
         specifier: 9.0.11
         version: 9.0.11
+      lint-staged:
+        specifier: 15.2.7
+        version: 15.2.7
       semantic-release:
         specifier: 24.0.0
         version: 24.0.0(typescript@5.4.5)
@@ -162,9 +165,6 @@ importers:
       cookie-es:
         specifier: 1.1.0
         version: 1.1.0
-      cross-env:
-        specifier: 7.0.3
-        version: 7.0.3
       defu:
         specifier: 6.1.4
         version: 6.1.4
@@ -174,9 +174,6 @@ importers:
       jiti:
         specifier: 1.21.6
         version: 1.21.6
-      lint-staged:
-        specifier: 15.2.7
-        version: 15.2.7
       lodash-es:
         specifier: 4.17.21
         version: 4.17.21
