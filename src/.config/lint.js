@@ -27,7 +27,7 @@ export const VIO_ESLINT_CONFIG = [
   prettierConfiguration, // must be last
 
   {
-    files: ['.config/lint.js'],
+    files: ['.config/**/*', 'server/**/*'],
     rules: {
       'compat/compat': 'off',
     },
