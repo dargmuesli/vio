@@ -1,39 +1,4 @@
 {
-  "name": "@dargmuesli/nuxt-vio",
-  "version": "13.0.0",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dargmuesli/vio.git"
-  },
-  "type": "module",
-  "publishConfig": {
-    "access": "public"
-  },
-  "engines": {
-    "node": "20"
-  },
-  "packageManager": "pnpm@9.3.0",
-  "files": [
-    ".config",
-    "assets",
-    "components",
-    "composables",
-    "layouts",
-    "locales",
-    "pages",
-    "plugins",
-    "server",
-    "store",
-    "types",
-    "utils",
-    "app.config.ts",
-    "error.vue",
-    "i18n.config.ts",
-    "nuxt.config.ts",
-    "playwright.config.ts",
-    "tailwind.config.ts"
-  ],
-  "main": "nuxt.config.ts",
   "dependencies": {
     "@dargmuesli/nuxt-cookie-control": "8.4.2",
     "@eslint/compat": "1.1.0",
@@ -97,10 +62,42 @@
     "vue": "3.4.29",
     "vue-router": "4.3.3"
   },
+  "engines": {
+    "node": "20"
+  },
+  "files": [
+    ".config",
+    "assets",
+    "components",
+    "composables",
+    "layouts",
+    "locales",
+    "pages",
+    "plugins",
+    "server",
+    "store",
+    "types",
+    "utils",
+    "app.config.ts",
+    "error.vue",
+    "i18n.config.ts",
+    "nuxt.config.ts",
+    "package.json",
+    "tailwind.config.ts"
+  ],
+  "main": "nuxt.config.ts",
+  "name": "@dargmuesli/nuxt-vio",
   "peerDependencies": {
     "nuxt": "3.12.2",
     "vue": "3.4.29",
     "vue-router": "4.3.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dargmuesli/vio.git"
   },
   "scripts": {
     "build": "pnpm run build:node",
@@ -119,5 +116,7 @@
     "start:dev": "nuxt dev .playground",
     "start:node": "node .playground/.output/server/index.mjs",
     "start:static": "serve .playground/.output/public --ssl-cert ./.config/certificates/ssl.crt --ssl-key ./.config/certificates/ssl.key"
-  }
+  },
+  "type": "module",
+  "version": "13.0.0"
 }
