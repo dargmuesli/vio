@@ -21,7 +21,8 @@
     "e2e/specs",
     "e2e/utils",
     "package.json",
-    "playwright.config.ts"
+    "playwright.config.ts",
+    "tsconfig.json"
   ],
   "name": "@dargmuesli/nuxt-vio-testing",
   "peerDependencies": {
