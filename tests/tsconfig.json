@@ -3,7 +3,7 @@
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "paths": {
-      "#src/*": ["../src/*"]
+      "#tests/*": ["./*"]
     },
   }
 }

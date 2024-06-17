@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test'
 import { escapeRegExp } from 'lodash-es'
 
-import { SITE_URL } from '#src/utils/constants'
+import { SITE_URL } from '#tests/e2e/utils/constants'
 
 const path = '/robots.txt'
 

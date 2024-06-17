@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test'
 
-import { SITE_URL } from '#src/utils/constants'
+import { SITE_URL } from '#tests/e2e/utils/constants'
 import { COOKIE_CONTROL_DEFAULT, PAGE_READY } from '../../../utils/constants'
 import { testMetadata } from '../../../utils/tests'
 
