@@ -1,3 +1,9 @@
+## [13.1.0](https://github.com/dargmuesli/vio/compare/13.0.0...13.1.0) (2024-06-17)
+
+### Features
+
+* **tests:** release separately ([e70edc8](https://github.com/dargmuesli/vio/commit/e70edc804862f180e293cd0636501d6e1c0cae3b))
+
 ## [13.0.0](https://github.com/dargmuesli/vio/compare/12.1.1...13.0.0) (2024-06-16)
 
 ### ⚠ BREAKING CHANGES
