@@ -1,3 +1,9 @@
+## [13.1.5](https://github.com/dargmuesli/vio/compare/13.1.4...13.1.5) (2024-06-17)
+
+### Bug Fixes
+
+* **lint:** don't check browser compatibility for server only content ([4a23e0d](https://github.com/dargmuesli/vio/commit/4a23e0d5f3ce45b8c10faecbf4142da7fbc031f7))
+
 ## [13.1.4](https://github.com/dargmuesli/vio/compare/13.1.3...13.1.4) (2024-06-17)
 
 ### Bug Fixes
