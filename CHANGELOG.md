@@ -1,3 +1,9 @@
+## [13.1.2](https://github.com/dargmuesli/vio/compare/13.1.1...13.1.2) (2024-06-17)
+
+### Bug Fixes
+
+* **test:** detach import path from source ([d13abf1](https://github.com/dargmuesli/vio/commit/d13abf1920a3e590d1b33ed94560f84adec2bbfc))
+
 ## [13.1.1](https://github.com/dargmuesli/vio/compare/13.1.0...13.1.1) (2024-06-17)
 
 ### Bug Fixes
