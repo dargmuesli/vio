@@ -1,3 +1,9 @@
+## [13.1.1](https://github.com/dargmuesli/vio/compare/13.1.0...13.1.1) (2024-06-17)
+
+### Bug Fixes
+
+* **package:** export typescript configuration for tests ([d53d3d5](https://github.com/dargmuesli/vio/commit/d53d3d56ec1eb409cf80d0c15f9c55ab3d57cdee))
+
 ## [13.1.0](https://github.com/dargmuesli/vio/compare/13.0.0...13.1.0) (2024-06-17)
 
 ### Features
