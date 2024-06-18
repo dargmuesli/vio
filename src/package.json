@@ -38,7 +38,7 @@
     "@unhead/vue": "1.9.13",
     "@urql/devtools": "2.0.3",
     "@urql/exchange-graphcache": "7.1.1",
-    "@urql/vue": "1.2.1",
+    "@urql/vue": "1.2.2",
     "consola": "3.2.3",
     "cookie-es": "1.1.0",
     "defu": "6.1.4",
