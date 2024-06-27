@@ -1,3 +1,9 @@
+## [13.1.7](https://github.com/dargmuesli/vio/compare/13.1.6...13.1.7) (2024-06-27)
+
+### Bug Fixes
+
+* **timezone:** log real ip header ([052d7e4](https://github.com/dargmuesli/vio/commit/052d7e46f7ce6f597eeca7458d8c20c95fa73f91))
+
 ## [13.1.6](https://github.com/dargmuesli/vio/compare/13.1.5...13.1.6) (2024-06-23)
 
 ### Bug Fixes
