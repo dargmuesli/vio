@@ -45,7 +45,7 @@ test.describe('headers middleware', () => {
     expect(headers['x-content-type-options']).toStrictEqual('nosniff')
     expect(headers['x-dns-prefetch-control']).toStrictEqual('off')
     expect(headers['x-download-options']).toStrictEqual('noopen')
-    expect(headers['x-frame-options']).toStrictEqual('SAMEORIGIN')
+    expect(headers['x-frame-options']).toStrictEqual('DENY')
     expect(headers['x-permitted-cross-domain-policies']).toStrictEqual('none')
     expect('x-powered-by' in headers).toBeFalsy()
     expect(headers['x-xss-protection']).toStrictEqual('1; mode=block')
