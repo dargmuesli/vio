@@ -1,3 +1,9 @@
+## [13.1.9](https://github.com/dargmuesli/vio/compare/13.1.8...13.1.9) (2024-06-28)
+
+### Bug Fixes
+
+* **polyfill:** remove ([fa8af11](https://github.com/dargmuesli/vio/commit/fa8af110efc38f5a373474f2f127dd58a4a1b589))
+
 ## [13.1.8](https://github.com/dargmuesli/vio/compare/13.1.7...13.1.8) (2024-06-28)
 
 ### Bug Fixes
