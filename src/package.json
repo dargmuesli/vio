@@ -57,7 +57,7 @@
     "stylelint-no-unsupported-browser-features": "8.0.1",
     "tailwindcss": "3.4.4",
     "unhead": "1.9.14",
-    "vue": "3.4.30",
+    "vue": "3.4.31",
     "vue-router": "4.4.0"
   },
   "engines": {
@@ -87,7 +87,7 @@
   "name": "@dargmuesli/nuxt-vio",
   "peerDependencies": {
     "nuxt": "3.12.2",
-    "vue": "3.4.30",
+    "vue": "3.4.31",
     "vue-router": "4.4.0"
   },
   "publishConfig": {
