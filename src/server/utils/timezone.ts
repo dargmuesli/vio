@@ -14,7 +14,7 @@ export const getTimezoneServer = async (event: H3Event) => {
 
   const ip = getRequestIP(event, { xForwardedFor: true })
 
-  if (ip && !Array.isArray(ip)) {
+  if (ip) {
     const timezoneByIpApi = await getTimezoneByIpApi(ip)
 
     if (timezoneByIpApi) return timezoneByIpApi
