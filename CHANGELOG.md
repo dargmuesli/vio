@@ -1,3 +1,9 @@
+## [13.1.8](https://github.com/dargmuesli/vio/compare/13.1.7...13.1.8) (2024-06-28)
+
+### Bug Fixes
+
+* **timezone:** use h3's request ip ([b8cc5eb](https://github.com/dargmuesli/vio/commit/b8cc5eb0d5983b8c241b2a9c56d1cb9958627aed))
+
 ## [13.1.7](https://github.com/dargmuesli/vio/compare/13.1.6...13.1.7) (2024-06-27)
 
 ### Bug Fixes
