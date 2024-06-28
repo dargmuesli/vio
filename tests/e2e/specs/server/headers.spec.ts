@@ -27,7 +27,7 @@ test.describe('headers middleware', () => {
     )
     expect(headers['origin-agent-cluster']).toStrictEqual('?1')
     expect(headers['permissions-policy']).toStrictEqual(
-      'camera=(), display-capture=(), fullscreen=(), geolocation=(), microphone=()',
+      'accelerometer=(), autoplay=(), camera=(), display-capture=(), encrypted-media=(), fullscreen=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), sync-xhr=(self), usb=(), web-share=(), xr-spatial-tracking=()',
     )
     expect(headers['referrer-policy']).toStrictEqual('no-referrer')
     expect(headers['report-to']).toStrictEqual(
@@ -45,7 +45,7 @@ test.describe('headers middleware', () => {
     expect(headers['x-content-type-options']).toStrictEqual('nosniff')
     expect(headers['x-dns-prefetch-control']).toStrictEqual('off')
     expect(headers['x-download-options']).toStrictEqual('noopen')
-    expect(headers['x-frame-options']).toStrictEqual('SAMEORIGIN')
+    expect(headers['x-frame-options']).toStrictEqual('DENY')
     expect(headers['x-permitted-cross-domain-policies']).toStrictEqual('none')
     expect('x-powered-by' in headers).toBeFalsy()
     expect(headers['x-xss-protection']).toStrictEqual('1; mode=block')
