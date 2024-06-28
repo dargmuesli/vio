@@ -22,6 +22,8 @@ export const getTimezoneServer = async (event: H3Event) => {
 }
 
 export const getTimezoneByIpApi = async (ip: string) => {
+  if (isTestingServer()) return // TODO: mock
+
   const ipApiResult = await $fetch<{ timezone: string }>(
     `http://ip-api.com/json/${ip}`,
   ).catch(() => {})

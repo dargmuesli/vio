@@ -156,6 +156,7 @@ export const POLYFILLS = [
 ]
 export const REGEX_UUID =
   /^[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}$/
+export const TESTING_COOKIE_NAME = 'vio_is-testing'
 export const TIMEZONE_COOKIE_NAME = [COOKIE_PREFIX, 'tz'].join(COOKIE_SEPARATOR)
 export const TIMEZONE_HEADER_KEY = `X-${SITE_NAME}-Timezone`
 export const TITLE_TEMPLATE = ({
