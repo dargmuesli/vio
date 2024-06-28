@@ -12,7 +12,7 @@ export const getTimezoneServer = async (event: H3Event) => {
 
   if (timezoneByCookie) return timezoneByCookie
 
-  const ip = event.node.req.headers['x-real-ip']
+  const ip = getRequestIP(event, { xForwardedFor: true })
 
   console.log(`X-Real-IP: ${ip}`) // TODO: remove once traefik setup is clear
 
