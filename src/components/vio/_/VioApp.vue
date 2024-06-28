@@ -59,7 +59,7 @@ defineOgImageComponent(
 )
 useAppLayout()
 useFavicons()
-usePolyfills()
+// usePolyfills() // hijacked ⚠️
 useSchemaOrg([
   defineWebSite({
     description: siteConfig.description,

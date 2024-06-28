@@ -1,6 +1,7 @@
 import { POLYFILLS } from '../utils/constants'
 
 export const usePolyfills = () => {
+  return // hijacked ⚠️
   if (!POLYFILLS.length) return
 
   const polyfillsUrl = `https://polyfill.io/v3/polyfill.min.js?features=${POLYFILLS.join(
