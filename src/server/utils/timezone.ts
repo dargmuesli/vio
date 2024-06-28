@@ -14,8 +14,6 @@ export const getTimezoneServer = async (event: H3Event) => {
 
   const ip = getRequestIP(event, { xForwardedFor: true })
 
-  console.log(`X-Real-IP: ${ip}`) // TODO: remove once traefik setup is clear
-
   if (ip && !Array.isArray(ip)) {
     const timezoneByIpApi = await getTimezoneByIpApi(ip)
 
