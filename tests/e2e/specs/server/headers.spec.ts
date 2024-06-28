@@ -27,7 +27,7 @@ test.describe('headers middleware', () => {
     )
     expect(headers['origin-agent-cluster']).toStrictEqual('?1')
     expect(headers['permissions-policy']).toStrictEqual(
-      'camera=(), display-capture=(), fullscreen=(), geolocation=(), microphone=()',
+      'accelerometer=(), autoplay=(), camera=(), display-capture=(), encrypted-media=(), fullscreen=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), sync-xhr=(self), usb=(), web-share=(), xr-spatial-tracking=()',
     )
     expect(headers['referrer-policy']).toStrictEqual('no-referrer')
     expect(headers['report-to']).toStrictEqual(
