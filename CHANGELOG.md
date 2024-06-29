@@ -1,3 +1,9 @@
+## [13.1.10](https://github.com/dargmuesli/vio/compare/13.1.9...13.1.10) (2024-06-29)
+
+### Bug Fixes
+
+* **ci:** correct action version ([8ebff0b](https://github.com/dargmuesli/vio/commit/8ebff0bc8f427cf567cba7b062c4d85fe9b9758a))
+
 ## [13.1.9](https://github.com/dargmuesli/vio/compare/13.1.8...13.1.9) (2024-06-28)
 
 ### Bug Fixes
