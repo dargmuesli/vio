@@ -235,6 +235,7 @@ export default defineNuxtConfig(
         ssg: {
           hashStyles: true,
         },
+        strict: true,
       },
       seo: {
         splash: false,
