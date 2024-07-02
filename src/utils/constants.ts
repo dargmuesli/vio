@@ -121,7 +121,7 @@ export const GET_CSP = (siteUrl: string) =>
         `${siteUrl}/_nuxt/`, // bundle
       ],
       'style-src': [
-        "'nonce-{{nonce}}'",
+        "'unsafe-inline'", // TODO: replace with "'nonce-{{nonce}}'" once Sweetalert supports it
         "'self'", // TODO: `${siteUrl}/_nuxt/`, // bundle
       ], // TODO: use `style-src-elem` once Playwright WebKit supports it
     },
