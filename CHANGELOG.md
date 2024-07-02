@@ -1,3 +1,9 @@
+## [13.1.11](https://github.com/dargmuesli/vio/compare/13.1.10...13.1.11) (2024-07-02)
+
+### Bug Fixes
+
+* **csp:** allow unsafe inline styles ([02d6f11](https://github.com/dargmuesli/vio/commit/02d6f113d9af5fcbf434ee9ef0a58fa7c7c0ac88))
+
 ## [13.1.10](https://github.com/dargmuesli/vio/compare/13.1.9...13.1.10) (2024-06-29)
 
 ### Bug Fixes
