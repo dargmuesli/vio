@@ -1,3 +1,9 @@
+## [13.1.12](https://github.com/dargmuesli/vio/compare/13.1.11...13.1.12) (2024-07-02)
+
+### Bug Fixes
+
+* **sentry:** correct csp url ([1aba1af](https://github.com/dargmuesli/vio/commit/1aba1af5029e023cf558d98c80b3eba7bb633c94))
+
 ## [13.1.11](https://github.com/dargmuesli/vio/compare/13.1.10...13.1.11) (2024-07-02)
 
 ### Bug Fixes
