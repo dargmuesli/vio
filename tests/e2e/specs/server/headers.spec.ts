@@ -31,7 +31,7 @@ test.describe('headers middleware', () => {
     )
     expect(headers['referrer-policy']).toStrictEqual('no-referrer')
     expect(headers['report-to']).toStrictEqual(
-      '{"group":"csp-endpoint","max_age":10886400,"endpoints":[{"url":"https://o4507259039973376.ingest.sentry.io/api/4507260561653840/security/?sentry_key=1e53178c1dba9b39147de4a21853a3e3"}],"include_subdomains":true}}',
+      '{"group":"csp-endpoint","max_age":10886400,"endpoints":[{"url":"https://o4507259039973376.ingest.de.sentry.io/api/4507260561653840/security/?sentry_key=1e53178c1dba9b39147de4a21853a3e3"}],"include_subdomains":true}}',
     )
 
     if (process.env.NODE_ENV === 'production') {
