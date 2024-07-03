@@ -3,7 +3,7 @@ import type { NuxtOptions } from 'nuxt/schema'
 import { GET_CSP } from '../../utils/constants'
 
 // remove invalid `'none'`s and duplicates
-const cleanupCsp = (
+export const cleanupCsp = (
   nuxtSecurityConfiguration: Partial<NuxtOptions['security']>,
 ) => {
   if (
