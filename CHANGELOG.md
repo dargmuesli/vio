@@ -1,3 +1,10 @@
+## [13.1.13](https://github.com/dargmuesli/vio/compare/13.1.12...13.1.13) (2024-07-03)
+
+### Bug Fixes
+
+* **nuxt:** use http in stack ([129de7b](https://github.com/dargmuesli/vio/commit/129de7b46c92f198a246d09891cad16cfc005057))
+* **types:** add `CollectionItem` ([bb181c1](https://github.com/dargmuesli/vio/commit/bb181c13635c38ad8f32b7428da502a5521bc9ae))
+
 ## [13.1.12](https://github.com/dargmuesli/vio/compare/13.1.11...13.1.12) (2024-07-02)
 
 ### Bug Fixes
