@@ -1,3 +1,9 @@
+## [13.1.14](https://github.com/dargmuesli/vio/compare/13.1.13...13.1.14) (2024-07-03)
+
+### Bug Fixes
+
+* **security:** export cleanup csp function ([852418f](https://github.com/dargmuesli/vio/commit/852418f1db4611179983841628b4229b2abc07ab))
+
 ## [13.1.13](https://github.com/dargmuesli/vio/compare/13.1.12...13.1.13) (2024-07-03)
 
 ### Bug Fixes
