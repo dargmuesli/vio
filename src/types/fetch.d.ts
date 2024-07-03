@@ -6,3 +6,8 @@ export interface StrapiResult<T> {
     }
   }
 }
+
+export interface CollectionItem<T> {
+  id: number
+  attributes: T
+}
