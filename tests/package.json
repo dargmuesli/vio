@@ -18,7 +18,6 @@
   },
   "files": [
     "e2e/fixtures",
-    "e2e/specs",
     "e2e/utils",
     "package.json",
     "playwright.config.ts",
