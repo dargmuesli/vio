@@ -17,10 +17,10 @@ export const GET_CSP = (siteUrl: string) =>
       // Cloudflare
       ...(process.env.NODE_ENV === 'production'
         ? {
-            'connect-src': ['https://cloudflareinsights.com'],
+            'connect-src': ['https://cloudflareinsights.com'], // analytics
             'script-src-elem': [
-              'https://static.cloudflareinsights.com',
-              `${siteUrl}/cdn-cgi/scripts/`,
+              'https://static.cloudflareinsights.com', // analytics
+              `${siteUrl}/cdn-cgi/scripts/`, // email obfuscation
             ],
           }
         : {}),
@@ -45,57 +45,57 @@ export const GET_CSP = (siteUrl: string) =>
       //   'https://polyfill.io/v3/polyfill.min.js', // ESLint plugin compat
       // ],
     },
-    {
-      // nuxt-link-checker
-      ...(process.env.NODE_ENV === 'development'
-        ? {
-            'connect-src': [`${siteUrl}/api/__link_checker__/inspect`],
-          }
-        : {}),
-    },
-    {
-      // nuxt-og-image
-      ...(process.env.NODE_ENV === 'development'
-        ? {
-            'connect-src': [`${siteUrl}/__og-image__/`],
-          }
-        : {}),
-    },
-    {
-      // nuxt-schema-org
-      ...(process.env.NODE_ENV === 'development'
-        ? {
-            'connect-src': [`${siteUrl}/__schema-org__/debug.json`],
-          }
-        : {}),
-    },
-    {
-      // nuxt-simple-robots
-      ...(process.env.NODE_ENV === 'development'
-        ? {
-            'connect-src': [
-              `${siteUrl}/__robots__/debug.json`,
-              `${siteUrl}/__robots__/debug-path.json`,
-            ],
-          }
-        : {}),
-    },
-    {
-      // nuxt-simple-sitemap
-      ...(process.env.NODE_ENV === 'development'
-        ? {
-            'connect-src': [`${siteUrl}/__sitemap__/debug.json`],
-          }
-        : {}),
-    },
-    {
-      // nuxt-site-config
-      ...(process.env.NODE_ENV === 'development'
-        ? {
-            'connect-src': [`${siteUrl}/__site-config__/debug.json`],
-          }
-        : {}),
-    },
+    // {
+    //   // nuxt-link-checker
+    //   ...(process.env.NODE_ENV === 'development'
+    //     ? {
+    //         'connect-src': [`${siteUrl}/api/__link_checker__/inspect`],
+    //       }
+    //     : {}),
+    // },
+    // {
+    //   // nuxt-og-image
+    //   ...(process.env.NODE_ENV === 'development'
+    //     ? {
+    //         'connect-src': [`${siteUrl}/__og-image__/`],
+    //       }
+    //     : {}),
+    // },
+    // {
+    //   // nuxt-schema-org
+    //   ...(process.env.NODE_ENV === 'development'
+    //     ? {
+    //         'connect-src': [`${siteUrl}/__schema-org__/debug.json`],
+    //       }
+    //     : {}),
+    // },
+    // {
+    //   // nuxt-simple-robots
+    //   ...(process.env.NODE_ENV === 'development'
+    //     ? {
+    //         'connect-src': [
+    //           `${siteUrl}/__robots__/debug.json`,
+    //           `${siteUrl}/__robots__/debug-path.json`,
+    //         ],
+    //       }
+    //     : {}),
+    // },
+    // {
+    //   // nuxt-simple-sitemap
+    //   ...(process.env.NODE_ENV === 'development'
+    //     ? {
+    //         'connect-src': [`${siteUrl}/__sitemap__/debug.json`],
+    //       }
+    //     : {}),
+    // },
+    // {
+    //   // nuxt-site-config
+    //   ...(process.env.NODE_ENV === 'development'
+    //     ? {
+    //         'connect-src': [`${siteUrl}/__site-config__/debug.json`],
+    //       }
+    //     : {}),
+    // },
     {
       // nuxt
       ...(process.env.NODE_ENV === 'development'
