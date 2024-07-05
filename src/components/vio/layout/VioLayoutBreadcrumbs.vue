@@ -26,7 +26,7 @@
       </li>
     </ul>
     <span>{{ t('separator') }}</span>
-    <VioLink :is-colored="false" to="?">
+    <VioLink :is-colored="false" :to="route.fullPath">
       <span
         class="whitespace-nowrap text-2xl font-bold"
         data-testid="breadcrumb"
@@ -71,6 +71,7 @@ withDefaults(defineProps<Props>(), {
 
 const localePath = useLocalePath()
 const { t } = useI18n()
+const route = useRoute()
 </script>
 
 <i18n lang="yaml">
