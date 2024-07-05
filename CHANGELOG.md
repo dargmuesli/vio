@@ -1,3 +1,10 @@
+## [13.1.19](https://github.com/dargmuesli/vio/compare/13.1.18...13.1.19) (2024-07-05)
+
+### Bug Fixes
+
+* **breadcrumbs:** link current page ([fe1c76b](https://github.com/dargmuesli/vio/commit/fe1c76bb121e4c5af6b0915727ead7629f9ee67f))
+* **csp:** correct protocol ([0bea54f](https://github.com/dargmuesli/vio/commit/0bea54fd71f08e2fe4b00fe0f8555cdad8b9a651))
+
 ## [13.1.18](https://github.com/dargmuesli/vio/compare/13.1.17...13.1.18) (2024-07-05)
 
 ### Performance Improvements
