@@ -18,7 +18,10 @@ export const GET_CSP = (siteUrl: string) =>
       ...(process.env.NODE_ENV === 'production'
         ? {
             'connect-src': ['https://cloudflareinsights.com'],
-            'script-src-elem': ['https://static.cloudflareinsights.com'],
+            'script-src-elem': [
+              'https://static.cloudflareinsights.com',
+              `${siteUrl}/cdn-cgi/scripts/`,
+            ],
           }
         : {}),
     },
