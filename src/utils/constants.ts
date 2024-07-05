@@ -101,7 +101,7 @@ export const GET_CSP = (siteUrl: string) =>
       ...(process.env.NODE_ENV === 'development'
         ? {
             'frame-src':
-              'http://localhost:3000/__nuxt_devtools__/client/modules/pinia',
+              'https://localhost:3000/__nuxt_devtools__/client/modules/pinia',
           }
         : {}),
       'connect-src': [
