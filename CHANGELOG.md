@@ -1,3 +1,9 @@
+## [13.1.18](https://github.com/dargmuesli/vio/compare/13.1.17...13.1.18) (2024-07-05)
+
+### Performance Improvements
+
+* **csp:** simplify `connect-src` ([916ef66](https://github.com/dargmuesli/vio/commit/916ef6657a058aad8702ba13de935313fc7f3735))
+
 ## [13.1.17](https://github.com/dargmuesli/vio/compare/13.1.16...13.1.17) (2024-07-05)
 
 ### Bug Fixes
