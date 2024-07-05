@@ -1,3 +1,9 @@
+## [13.1.16](https://github.com/dargmuesli/vio/compare/13.1.15...13.1.16) (2024-07-05)
+
+### Bug Fixes
+
+* **csp:** support cloudflare email abfuscation ([601dc75](https://github.com/dargmuesli/vio/commit/601dc75f28e08d5aa6c3eff7b562bd10b73c45f4))
+
 ## [13.1.15](https://github.com/dargmuesli/vio/compare/13.1.14...13.1.15) (2024-07-04)
 
 ### Bug Fixes
