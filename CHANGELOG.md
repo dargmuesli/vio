@@ -1,3 +1,9 @@
+## [13.1.20](https://github.com/dargmuesli/vio/compare/13.1.19...13.1.20) (2024-07-05)
+
+### Bug Fixes
+
+* **breadcrumb:** use path only for current item ([a321c07](https://github.com/dargmuesli/vio/commit/a321c070d5ac404db379fa111884192cea188240))
+
 ## [13.1.19](https://github.com/dargmuesli/vio/compare/13.1.18...13.1.19) (2024-07-05)
 
 ### Bug Fixes
