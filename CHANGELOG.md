@@ -1,3 +1,9 @@
+## [13.1.21](https://github.com/dargmuesli/vio/compare/13.1.20...13.1.21) (2024-07-05)
+
+### Bug Fixes
+
+* **csp:** correct devtools frame path ([7e62502](https://github.com/dargmuesli/vio/commit/7e62502c2f6c9715fa8d4bfed52191e2b33f8e92))
+
 ## [13.1.20](https://github.com/dargmuesli/vio/compare/13.1.19...13.1.20) (2024-07-05)
 
 ### Bug Fixes
