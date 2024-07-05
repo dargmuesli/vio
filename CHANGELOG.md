@@ -1,3 +1,9 @@
+## [13.1.17](https://github.com/dargmuesli/vio/compare/13.1.16...13.1.17) (2024-07-05)
+
+### Bug Fixes
+
+* **package:** don't export e2e specs ([48ea2a9](https://github.com/dargmuesli/vio/commit/48ea2a9bdba163e2ed332166482778efa8ee0843))
+
 ## [13.1.16](https://github.com/dargmuesli/vio/compare/13.1.15...13.1.16) (2024-07-05)
 
 ### Bug Fixes
