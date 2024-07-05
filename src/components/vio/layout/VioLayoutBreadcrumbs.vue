@@ -26,7 +26,7 @@
       </li>
     </ul>
     <span>{{ t('separator') }}</span>
-    <VioLink :is-colored="false" :to="route.fullPath">
+    <VioLink :is-colored="false" :to="route.path">
       <span
         class="whitespace-nowrap text-2xl font-bold"
         data-testid="breadcrumb"
