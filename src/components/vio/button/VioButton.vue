@@ -19,7 +19,7 @@
     :class="classesComputed"
     :disabled="disabled"
     :type="type"
-    @click="emit('click')"
+    @click="emit('click', $event)"
   >
     <slot name="prefix" />
     <slot />
@@ -49,7 +49,7 @@ const props = withDefaults(defineProps<Props>(), {
 })
 
 const emit = defineEmits<{
-  click: []
+  click: [event?: MouseEvent]
 }>()
 
 // computations
