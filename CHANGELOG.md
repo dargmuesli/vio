@@ -1,3 +1,13 @@
+## [13.2.0](https://github.com/dargmuesli/vio/compare/13.1.21...13.2.0) (2024-07-06)
+
+### Features
+
+* **button:** expose optional mouse event ([1f2ad91](https://github.com/dargmuesli/vio/commit/1f2ad91afa25dbf18fa26ae9bed1969472bea4e3))
+
+### Bug Fixes
+
+* **csp:** allow frame ancestor `self` in development ([2f4c4bc](https://github.com/dargmuesli/vio/commit/2f4c4bc2bbb5e9ef70a5d2727876e19fe697a008))
+
 ## [13.1.21](https://github.com/dargmuesli/vio/compare/13.1.20...13.1.21) (2024-07-05)
 
 ### Bug Fixes
