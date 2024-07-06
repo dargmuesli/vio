@@ -53,14 +53,15 @@ export const GET_CSP = (siteUrl: string) =>
     //       }
     //     : {}),
     // },
-    // {
-    //   // nuxt-og-image
-    //   ...(process.env.NODE_ENV === 'development'
-    //     ? {
-    //         'connect-src': [`${siteUrl}/__og-image__/`],
-    //       }
-    //     : {}),
-    // },
+    {
+      // nuxt-og-image
+      ...(process.env.NODE_ENV === 'development'
+        ? {
+            // 'connect-src': [`${siteUrl}/__og-image__/`],
+            'frame-ancestors': ["'self'"],
+          }
+        : {}),
+    },
     // {
     //   // nuxt-schema-org
     //   ...(process.env.NODE_ENV === 'development'
