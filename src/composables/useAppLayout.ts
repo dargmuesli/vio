@@ -11,7 +11,8 @@ export const useAppLayout = () => {
   })
 
   // TODO: convert to `useServerHeadSafe` (https://github.com/unjs/unhead/issues/221)
-  useServerSeoMeta({
+  // adding `Server` leads incorrect title template on hydration
+  useSeoMeta({
     titleTemplate: (title) =>
       TITLE_TEMPLATE({
         siteName: siteConfig.name,
