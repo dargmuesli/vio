@@ -29,6 +29,7 @@ export default defineNuxtConfig(
           name: 'layout',
         },
       },
+      compatibilityDate: '2024-04-03',
       ...(process.env.NUXT_PUBLIC_SITE_URL
         ? {}
         : {
