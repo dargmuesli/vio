@@ -1,3 +1,10 @@
+## [13.2.1](https://github.com/dargmuesli/vio/compare/13.2.0...13.2.1) (2024-07-07)
+
+### Bug Fixes
+
+* **seo:** correct title hydration ([c647b57](https://github.com/dargmuesli/vio/commit/c647b57567534dce84f2c8be580824332cdda4e6))
+* **seo:** let title change client side ([c3d5b49](https://github.com/dargmuesli/vio/commit/c3d5b491d12cc039d3b6f837dc0ca3d3fe83c190))
+
 ## [13.2.0](https://github.com/dargmuesli/vio/compare/13.1.21...13.2.0) (2024-07-06)
 
 ### Features
