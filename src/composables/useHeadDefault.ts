@@ -4,14 +4,13 @@ export const useHeadDefault = (input: UseSeoMetaInput) => {
   const siteConfig = useSiteConfig()
 
   const description = input.description || siteConfig.description
-  const title = input.title
-    ? TITLE_TEMPLATE({
-        siteName: siteConfig.name,
-        title: input.title.toString(),
-      })
-    : siteConfig.name
+  const title = TITLE_TEMPLATE({
+    siteName: siteConfig.name,
+    title: input.title?.toString(),
+  })
 
-  useServerSeoMeta({
+  // can't be server side or it won't update on the client
+  useSeoMeta({
     ...(description
       ? {
           description,
