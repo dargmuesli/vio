@@ -58,8 +58,8 @@ importers:
         specifier: 1.1.0
         version: 1.1.0
       '@heroicons/vue':
-        specifier: 2.1.4
-        version: 2.1.4(vue@3.4.31(typescript@5.4.5))
+        specifier: 2.1.5
+        version: 2.1.5(vue@3.4.31(typescript@5.4.5))
       '@http-util/status-i18n':
         specifier: 0.8.1
         version: 0.8.1
@@ -1042,8 +1042,8 @@ packages:
     resolution: {integrity: sha512-QWFZYXFE7O1Gr1dTIp+D6UcFUF0qElOnZptpi7PBUMylJh+vFmIedVe1Ir6RM1t2tEQLLSV1k7bR4o92M+uqlw==}
     engines: {node: '>=6'}
 
-  '@heroicons/vue@2.1.4':
-    resolution: {integrity: sha512-wykVSZ/fqEG49lIeHgFGT9TCvBw9THuRTtA/sPp7FVk3iBob/HcmitMcLDwtXOW82TXb38HeLRl1/pcElPeSdg==}
+  '@heroicons/vue@2.1.5':
+    resolution: {integrity: sha512-IpqR72sFqFs55kyKfFS7tN+Ww6odFNeH/7UxycIOrlVYfj4WUGAdzQtLBnJspucSeqWFQsKM0g0YrgU655BEfA==}
     peerDependencies:
       vue: '>= 3'
 
@@ -8008,7 +8008,7 @@ snapshots:
     dependencies:
       '@fortawesome/fontawesome-common-types': 6.5.2
 
-  '@heroicons/vue@2.1.4(vue@3.4.31(typescript@5.4.5))':
+  '@heroicons/vue@2.1.5(vue@3.4.31(typescript@5.4.5))':
     dependencies:
       vue: 3.4.31(typescript@5.4.5)
 
