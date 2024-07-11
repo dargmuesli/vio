@@ -1,6 +1,5 @@
 // @ts-check
 
-import { fixupConfigRules } from '@eslint/compat'
 // @ts-ignore
 import vueI18n from '@intlify/eslint-plugin-vue-i18n'
 import eslintPluginCompat from 'eslint-plugin-compat'
@@ -14,15 +13,13 @@ const JITI = jiti(moduleFileUrl.pathname)
 const POLYFILLS = JITI('../utils/constants.ts').POLYFILLS
 
 const vueI18nConfiguration = vueI18n.configs['flat/recommended']
-const compatConfiguration = fixupConfigRules(
-  eslintPluginCompat.configs['flat/recommended'],
-)
+const compatConfiguration = eslintPluginCompat.configs['flat/recommended']
 const ymlConfiguration = eslintPluginYml.configs['flat/recommended']
 const prettierConfiguration = eslintPluginPrettierRecommended
 
 export const VIO_ESLINT_CONFIG = [
   ...vueI18nConfiguration,
-  ...compatConfiguration,
+  compatConfiguration,
   ...ymlConfiguration,
   prettierConfiguration, // must be last
 
