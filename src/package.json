@@ -29,7 +29,7 @@
     "eslint-plugin-yml": "1.14.0",
     "globals": "15.8.0",
     "jose": "5.6.3",
-    "nuxt-gtag": "2.0.6",
+    "nuxt-gtag": "2.0.7",
     "nuxt-security": "2.0.0-rc.9",
     "sweetalert2": "11.12.2",
     "vue-tsc": "2.0.26"
@@ -47,7 +47,7 @@
     "lodash-es": "4.17.21",
     "nuxt": "3.12.2",
     "pinia": "2.1.7",
-    "prettier": "3.3.2",
+    "prettier": "3.3.3",
     "prettier-plugin-tailwindcss": "0.6.5",
     "serve": "14.2.3",
     "sharp": "0.33.4",
