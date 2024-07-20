@@ -197,32 +197,11 @@ export const testMetadata = async ({
         },
         {
           key: 'href',
-          value: '/favicon.ico',
-        },
-        {
-          key: 'sizes',
-          value: 'any',
-        },
-      ],
-    },
-    {
-      tag: 'link',
-      attributes: [
-        {
-          key: 'rel',
-          value: 'icon',
-        },
-        {
-          key: 'href',
           value: '/favicon-16x16.png',
         },
         {
           key: 'type',
           value: 'image/png',
-        },
-        {
-          key: 'sizes',
-          value: '16x16',
         },
       ],
     },
@@ -240,10 +219,6 @@ export const testMetadata = async ({
         {
           key: 'type',
           value: 'image/png',
-        },
-        {
-          key: 'sizes',
-          value: '32x32',
         },
       ],
     },
