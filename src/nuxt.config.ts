@@ -173,6 +173,11 @@ export default defineNuxtConfig(
         },
         locales: ['en', 'de'],
       },
+      eslint: {
+        config: {
+          typescript: true,
+        },
+      },
       gtag: {
         config: {
           cookie_flags: 'samesite=strict',
