@@ -112,7 +112,7 @@ RUN groupadd -g $GID -o $UNAME \
 
 USER $UNAME
 
-VOLUME /srv/.pnpm-store
+VOLUME /srv/.pnpm-store/v3
 VOLUME /srv/app
 
 ENTRYPOINT ["docker-entrypoint.sh"]
