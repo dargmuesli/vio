@@ -6,7 +6,7 @@ test.describe('headers middleware', () => {
 
     const headers = (await request.get('/')).headers()
 
-    expect(headers.connection).toStrictEqual('close')
+    expect(headers.connection).toStrictEqual('keep-alive')
     expect(headers['access-control-allow-origin']).toStrictEqual('*')
     expect(
       headers['content-security-policy'].replace(/nonce-[^']+/g, 'nonce'),
