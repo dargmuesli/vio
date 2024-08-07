@@ -84,7 +84,7 @@ RUN pnpm -r run lint
 ########################
 # Nuxt: test (e2e, base-image)
 
-FROM mcr.microsoft.com/playwright:v1.45.3 AS test-e2e-base-image
+FROM mcr.microsoft.com/playwright:v1.46.0 AS test-e2e-base-image
 
 # The `CI` environment variable must be set for pnpm to run in headless mode
 ENV CI=true
@@ -112,7 +112,7 @@ RUN groupadd -g $GID -o $UNAME \
 
 USER $UNAME
 
-VOLUME /srv/.pnpm-store
+VOLUME /srv/.pnpm-store/v3
 VOLUME /srv/app
 
 ENTRYPOINT ["docker-entrypoint.sh"]
