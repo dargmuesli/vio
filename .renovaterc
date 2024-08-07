@@ -9,6 +9,10 @@
       "allowedVersions": "8.3.0"
     },
     {
+      "matchPackageNames": ["@nuxtjs/sitemap"],
+      "allowedVersions": "5.3.5"
+    },
+    {
       "matchPackageNames": ["typescript"],
       "allowedVersions": "5.4.5"
     }
