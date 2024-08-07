@@ -59,5 +59,5 @@ export type AppConfig = {
 }
 
 declare module 'nuxt/schema' {
-  interface AppConfigInput extends AppConfig {}
+  interface AppConfigInput extends AppConfig {} // eslint-disable-line @typescript-eslint/no-empty-object-type
 }

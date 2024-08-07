@@ -65,6 +65,7 @@ export const jwtStore = async ({
         ...(jwt ? { headers: { Authorization: `Bearer ${jwt}` } } : {}),
       })
     } catch (error: unknown) {
+      console.error(error)
       return Promise.reject(Error('Authentication api call failed.'))
     }
   }

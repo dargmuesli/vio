@@ -28,6 +28,7 @@ const copy = async (string: string) => {
     await copyText(string)
     showToast({ title: t('donationUrlCopySuccess') })
   } catch (error: unknown) {
+    console.error(error)
     alert(t('donationUrlCopyError'))
   }
 }
