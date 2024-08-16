@@ -227,18 +227,18 @@ importers:
   tests:
     dependencies:
       playwright-core:
-        specifier: 1.46.0
-        version: 1.46.0
+        specifier: 1.46.1
+        version: 1.46.1
     devDependencies:
       '@axe-core/playwright':
         specifier: 4.9.1
-        version: 4.9.1(playwright-core@1.46.0)
+        version: 4.9.1(playwright-core@1.46.1)
       '@eslint/js':
         specifier: 9.9.0
         version: 9.9.0
       '@playwright/test':
-        specifier: 1.46.0
-        version: 1.46.0
+        specifier: 1.46.1
+        version: 1.46.1
       '@types/node':
         specifier: 20.15.0
         version: 20.15.0
@@ -1541,8 +1541,8 @@ packages:
     resolution: {integrity: sha512-cq8o4cWH0ibXh9VGi5P20Tu9XF/0fFXl9EUinr9QfTM7a7p0oTA4iJRCQWppXR1Pg8dSM0UCItCkPwsk9qWWYA==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
 
-  '@playwright/test@1.46.0':
-    resolution: {integrity: sha512-/QYft5VArOrGRP5pgkrfKksqsKA6CEFyGQ/gjNe6q0y4tZ1aaPfq4gIjudr1s3D+pXyrPRdsy4opKDrjBabE5w==}
+  '@playwright/test@1.46.1':
+    resolution: {integrity: sha512-Fq6SwLujA/DOIvNC2EL/SojJnkKf/rAwJ//APpJJHRyMi1PdKrY3Az+4XNQ51N4RTbItbIByQ0jgd1tayq1aeA==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -5310,8 +5310,13 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
-  playwright@1.46.0:
-    resolution: {integrity: sha512-XYJ5WvfefWONh1uPAUAi0H2xXV5S3vrtcnXe6uAOgdGi3aSpqOSXX08IAjXW34xitfuOJsvXU5anXZxPSEQiJw==}
+  playwright-core@1.46.1:
+    resolution: {integrity: sha512-h9LqIQaAv+CYvWzsZ+h3RsrqCStkBHlgo6/TJlFst3cOTlLghBQlJwPOZKQJTKNaD3QIB7aAVQ+gfWbN3NXB7A==}
+    engines: {node: '>=18'}
+    hasBin: true
+
+  playwright@1.46.1:
+    resolution: {integrity: sha512-oPcr1yqoXLCkgKtD5eNUPLiN40rYEM39odNpIb6VE6S7/15gJmA1NzVv6zJYusV0e7tzvkU/utBFNa/Kpxmwng==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -6988,10 +6993,10 @@ snapshots:
       '@types/json-schema': 7.0.15
       js-yaml: 4.1.0
 
-  '@axe-core/playwright@4.9.1(playwright-core@1.46.0)':
+  '@axe-core/playwright@4.9.1(playwright-core@1.46.1)':
     dependencies:
       axe-core: 4.9.1
-      playwright-core: 1.46.0
+      playwright-core: 1.46.1
 
   '@babel/code-frame@7.24.7':
     dependencies:
@@ -8510,9 +8515,9 @@ snapshots:
 
   '@pkgr/core@0.1.1': {}
 
-  '@playwright/test@1.46.0':
+  '@playwright/test@1.46.1':
     dependencies:
-      playwright: 1.46.0
+      playwright: 1.46.1
 
   '@pnpm/config.env-replace@1.1.0': {}
 
@@ -12829,9 +12834,11 @@ snapshots:
 
   playwright-core@1.46.0: {}
 
-  playwright@1.46.0:
+  playwright-core@1.46.1: {}
+
+  playwright@1.46.1:
     dependencies:
-      playwright-core: 1.46.0
+      playwright-core: 1.46.1
     optionalDependencies:
       fsevents: 2.3.2
 
