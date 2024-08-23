@@ -1,3 +1,9 @@
+## [13.2.6](https://github.com/dargmuesli/vio/compare/13.2.5...13.2.6) (2024-08-23)
+
+### Bug Fixes
+
+* **dayjs:** declare plugin type ([bbdea3e](https://github.com/dargmuesli/vio/commit/bbdea3eac2d641af559f9d748fda7cc3014496b1))
+
 ## [13.2.5](https://github.com/dargmuesli/vio/compare/13.2.4...13.2.5) (2024-08-17)
 
 ### Bug Fixes
