@@ -197,7 +197,7 @@ COPY --from=test-e2e-static /srv/app/package.json /tmp/package.json
 # HEALTHCHECK --interval=10s CMD wget -O /dev/null http://localhost:3000/api/healthcheck || exit 1
 # EXPOSE 3000
 # LABEL org.opencontainers.image.source="https://github.com/dargmuesli/jonas-thelemann"
-# LABEL org.opencontainers.image.description=" A Nuxt layer."
+# LABEL org.opencontainers.image.description="A Nuxt layer."
 
 
 # #######################
@@ -217,4 +217,4 @@ COPY --from=test-e2e-static /srv/app/package.json /tmp/package.json
 # HEALTHCHECK --interval=10s CMD wget -O /dev/null http://localhost:3000/api/healthcheck || exit 1
 # EXPOSE 3000
 # LABEL org.opencontainers.image.source="https://github.com/dargmuesli/jonas-thelemann"
-# LABEL org.opencontainers.image.description=" A Nuxt layer."
+# LABEL org.opencontainers.image.description="A Nuxt layer."
