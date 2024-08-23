@@ -11,17 +11,28 @@
       <VioLink to="https://jonas-thelemann.de">
         {{ t('linkExternal') }}
       </VioLink>
+      <br />
+      <button @click="test">{{ $dayjs(0).format('lll') }}</button>
     </p>
     <!-- <SBreadcrumb /> -->
   </div>
 </template>
 
 <script setup lang="ts">
-const { t } = useI18n()
+const { $dayjs } = useNuxtApp()
+const { t, locale } = useI18n()
+const router = useRouter()
+const switchLocalePath = useSwitchLocalePath()
 
 useHeadDefault({
   title: t('title'),
 })
+
+const test = async () => {
+  await router.push({
+    path: switchLocalePath(locale.value === 'de' ? 'en' : 'de'),
+  })
+}
 </script>
 
 <i18n lang="yaml">

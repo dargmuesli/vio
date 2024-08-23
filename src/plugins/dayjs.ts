@@ -1,8 +1,6 @@
-import dayjs from 'dayjs'
+import dayjs, { type DayjsFn } from 'dayjs'
 
-// workaround for [1]
-import de from 'dayjs/locale/de'
-// import 'dayjs/locale/de' does not make locale available
+import 'dayjs/locale/de'
 
 import isSameOrBefore from 'dayjs/plugin/isSameOrBefore'
 import localizedFormat from 'dayjs/plugin/localizedFormat'
@@ -17,10 +15,6 @@ export default defineNuxtPlugin((_nuxtApp) => {
   dayjs.extend(timezone)
   dayjs.extend(utc)
 
-  // workaround for [1]
-  dayjs.locale(de)
-  // dayjs.locale(en) makes `format` error
-
   return {
     provide: {
       dayjs,
@@ -28,9 +22,8 @@ export default defineNuxtPlugin((_nuxtApp) => {
   }
 })
 
-/*
-  [1]
-  https://github.com/nuxt/framework/issues/7534#issuecomment-1248596609
-  https://github.com/nuxt/framework/issues/7206
-  https://github.com/maevsi/maevsi/issues/956
-*/
+declare module '#app' {
+  interface NuxtApp {
+    $dayjs: DayjsFn
+  }
+}
