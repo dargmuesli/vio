@@ -139,8 +139,8 @@ importers:
         specifier: 5.7.0
         version: 5.7.0
       nuxt-gtag:
-        specifier: 2.1.0
-        version: 2.1.0(magicast@0.3.4)(rollup@4.21.0)
+        specifier: 3.0.0
+        version: 3.0.0(magicast@0.3.4)(rollup@4.21.0)
       nuxt-security:
         specifier: 2.0.0-rc.9
         version: 2.0.0-rc.9(magicast@0.3.4)(rollup@4.21.0)
@@ -4877,8 +4877,8 @@ packages:
   nuxt-csurf@1.6.2:
     resolution: {integrity: sha512-GksV+0DrnEYzQGAPb/BzLgulITqQNi3p5LUOW+zIf2GqdshW7MKoS/EBeVLDBfeT0P0a0OvewzaEGt1/OGVtAQ==}
 
-  nuxt-gtag@2.1.0:
-    resolution: {integrity: sha512-06ES+hgMs5l98bHmsLyltbJXfVr1LAkm/5gwcncdNkz96+D0fVA+RhecIp06iDQXF+YPBE2xAgB4G5PnUn8drA==}
+  nuxt-gtag@3.0.0:
+    resolution: {integrity: sha512-SARR40ZeXO5Q6vjekW3UAQuB4qzLxM/Df7/mE4HlmHirczgBc7CpsxJ99zmKypozt+SJIvn3OIKrwYOMOQQdtg==}
 
   nuxt-link-checker@3.1.0:
     resolution: {integrity: sha512-Au2ymyvdyK1vNFzE/LdgnjkhhTxjP7iaL9TL/Bsh7DwBbEjdo0+MrqYHULXs54MfCa1daafxMacvsLzOQqC1xQ==}
@@ -12077,7 +12077,7 @@ snapshots:
       - rollup
       - supports-color
 
-  nuxt-gtag@2.1.0(magicast@0.3.4)(rollup@4.21.0):
+  nuxt-gtag@3.0.0(magicast@0.3.4)(rollup@4.21.0):
     dependencies:
       '@nuxt/kit': 3.13.0(magicast@0.3.4)(rollup@4.21.0)
       defu: 6.1.4
