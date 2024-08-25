@@ -182,7 +182,6 @@ export default defineNuxtConfig(
         config: {
           cookie_flags: 'samesite=strict',
         },
-        enabled: false,
         initCommands: [
           [
             'consent',
@@ -196,6 +195,7 @@ export default defineNuxtConfig(
             },
           ],
         ],
+        initMode: 'manual',
       },
       htmlValidator: {
         // failOnError: true, // TODO: enable once headers match requirements (https://github.com/unjs/unhead/issues/199#issuecomment-1815728703)
