@@ -7,7 +7,7 @@
     "@intlify/eslint-plugin-vue-i18n": "3.0.0",
     "@nuxt/devtools": "1.4.1",
     "@nuxt/eslint": "0.5.3",
-    "@nuxt/image": "1.7.0",
+    "@nuxt/image": "1.7.1",
     "@nuxtjs/color-mode": "3.4.4",
     "@nuxtjs/html-validator": "1.8.2",
     "@nuxtjs/i18n": "8.3.0",
@@ -29,7 +29,7 @@
     "eslint-plugin-yml": "1.14.0",
     "globals": "15.9.0",
     "jose": "5.8.0",
-    "nuxt-gtag": "3.0.0",
+    "nuxt-gtag": "3.0.1",
     "nuxt-security": "2.0.0-rc.9",
     "sweetalert2": "11.12.4",
     "vue-tsc": "2.0.29"
