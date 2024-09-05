@@ -6,7 +6,7 @@
     "@http-util/status-i18n": "0.8.1",
     "@intlify/eslint-plugin-vue-i18n": "3.0.0",
     "@nuxt/devtools": "1.4.1",
-    "@nuxt/eslint": "0.5.5",
+    "@nuxt/eslint": "0.5.6",
     "@nuxt/image": "1.8.0",
     "@nuxtjs/color-mode": "3.4.4",
     "@nuxtjs/html-validator": "1.8.2",
@@ -14,7 +14,7 @@
     "@nuxtjs/seo": "2.0.0-rc.21",
     "@nuxtjs/tailwindcss": "6.12.1",
     "@pinia/nuxt": "0.5.4",
-    "@tailwindcss/forms": "0.5.8",
+    "@tailwindcss/forms": "0.5.9",
     "@tailwindcss/typography": "0.5.15",
     "@types/lodash-es": "4.17.12",
     "@urql/core": "5.0.6",
@@ -57,7 +57,7 @@
     "stylelint-no-unsupported-browser-features": "8.0.1",
     "tailwindcss": "3.4.10",
     "unhead": "1.10.4",
-    "vue": "3.5.1",
+    "vue": "3.5.2",
     "vue-router": "4.4.3"
   },
   "engines": {
@@ -87,7 +87,7 @@
   "name": "@dargmuesli/nuxt-vio",
   "peerDependencies": {
     "nuxt": "3.13.1",
-    "vue": "3.5.1",
+    "vue": "3.5.2",
     "vue-router": "4.4.3"
   },
   "publishConfig": {
