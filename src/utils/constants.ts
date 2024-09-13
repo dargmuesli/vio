@@ -41,9 +41,9 @@ export const GET_CSP = (siteUrl: string) =>
     {
       // vio
       'manifest-src': [`${siteUrl}/site.webmanifest`],
-      // 'script-src-elem': [
-      //   'https://polyfill.io/v3/polyfill.min.js', // ESLint plugin compat
-      // ],
+      'script-src-elem': [
+        'https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js', // ESLint plugin compat
+      ],
     },
     // {
     //   // nuxt-link-checker
@@ -155,7 +155,7 @@ export const I18N_VUE_CONFIG = {
 export const JWT_NAME = () =>
   `${process.env.NODE_ENV === 'production' ? '__Secure-' : ''}jwt`
 export const POLYFILLS = [
-  // 'Promise', // op_mini
+  'Promise', // op_mini
 ]
 export const REGEX_UUID =
   /^[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}$/
