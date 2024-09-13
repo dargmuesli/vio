@@ -1,3 +1,9 @@
+## [13.3.0](https://github.com/dargmuesli/vio/compare/13.2.8...13.3.0) (2024-09-13)
+
+### Features
+
+* **polyfills:** reenable ([d6f481f](https://github.com/dargmuesli/vio/commit/d6f481fe0cd740740ccde193202af403a8099eda))
+
 ## [13.2.8](https://github.com/dargmuesli/vio/compare/13.2.7...13.2.8) (2024-09-13)
 
 ### Bug Fixes
