@@ -37,7 +37,6 @@
   "pnpm": {
     "overrides": {
       "@nuxtjs/i18n": "8.3.0",
-      "@nuxtjs/sitemap": "5.3.5",
       "caniuse-lite": "1.0.30001653"
     }
   }
