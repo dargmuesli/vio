@@ -20,13 +20,13 @@ test.describe('sitemap', () => {
     const text = await resp.text()
 
     for (const language of languages) {
-      expect(text).toContain(`${SITE_URL}/${language}-sitemap.xml`)
+      expect(text).toContain(`${SITE_URL}/__sitemap__/${language}.xml`)
     }
   })
 
   test('content', async ({ request }) => {
     for (const language of languages) {
-      const resp = await request.get(`/${language}-sitemap.xml`)
+      const resp = await request.get(`/__sitemap__/${language}.xml`)
       const text = await resp.text()
 
       expect(

@@ -9,8 +9,8 @@
       "allowedVersions": "8.3.0"
     },
     {
-      "matchPackageNames": ["@nuxtjs/sitemap"],
-      "allowedVersions": "5.3.5"
+      "matchPackageNames": ["caniuse-lite"],
+      "allowedVersions": "1.0.30001653"
     }
   ]
 }
