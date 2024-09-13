@@ -12,7 +12,7 @@
         {{ t('linkExternal') }}
       </VioLink>
       <br />
-      <button @click="test">{{ $dayjs(0).format('lll') }}</button>
+      <button type="button" @click="test">{{ $dayjs(0).format('lll') }}</button>
     </p>
     <!-- <SBreadcrumb /> -->
   </div>
