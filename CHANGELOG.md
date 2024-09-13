@@ -1,3 +1,9 @@
+## [13.2.8](https://github.com/dargmuesli/vio/compare/13.2.7...13.2.8) (2024-09-13)
+
+### Bug Fixes
+
+* **playground:** add missing button type ([548dad3](https://github.com/dargmuesli/vio/commit/548dad34fa033f6e61f5cf756bb2339f577b48cb))
+
 ## [13.2.7](https://github.com/dargmuesli/vio/compare/13.2.6...13.2.7) (2024-08-31)
 
 ### Bug Fixes
