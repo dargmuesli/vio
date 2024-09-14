@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@dargmuesli/nuxt-cookie-control": "8.4.10",
+    "@dargmuesli/nuxt-cookie-control": "8.4.11",
     "@eslint/compat": "1.1.1",
     "@heroicons/vue": "2.1.5",
     "@http-util/status-i18n": "0.8.1",
