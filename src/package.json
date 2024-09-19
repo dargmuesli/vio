@@ -30,7 +30,7 @@
     "globals": "15.9.0",
     "jose": "5.9.2",
     "nuxt-gtag": "3.0.1",
-    "nuxt-security": "2.0.0-rc.9",
+    "nuxt-security": "2.0.0",
     "sweetalert2": "11.14.0",
     "vue-tsc": "2.1.6"
   },

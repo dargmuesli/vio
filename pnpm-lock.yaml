@@ -142,8 +142,8 @@ importers:
         specifier: 3.0.1
         version: 3.0.1(magicast@0.3.5)(rollup@4.21.3)(webpack-sources@3.2.3)
       nuxt-security:
-        specifier: 2.0.0-rc.9
-        version: 2.0.0-rc.9(magicast@0.3.5)(rollup@4.21.3)(webpack-sources@3.2.3)
+        specifier: 2.0.0
+        version: 2.0.0(magicast@0.3.5)(rollup@4.21.3)(webpack-sources@3.2.3)
       sweetalert2:
         specifier: 11.14.0
         version: 11.14.0
@@ -1264,6 +1264,7 @@ packages:
   '@koa/router@12.0.1':
     resolution: {integrity: sha512-ribfPYfHb+Uw3b27Eiw6NPqjhIhTpVFzEWLwyc/1Xp+DCdwRRyIlAUODX+9bPARF6aQtUu1+/PHzdNvRzcs/+Q==}
     engines: {node: '>= 12'}
+    deprecated: Use v12.0.2 or higher to fix the vulnerability issue
 
   '@kwsites/file-exists@1.1.1':
     resolution: {integrity: sha512-m9/5YGR18lIwxSFDwfE3oA7bWuq9kdau6ugN4H2rJeyhFQZcG9AgSHkQtSD15a8WvTgfz9aikZMrKPHvbpqFiw==}
@@ -4975,8 +4976,8 @@ packages:
   nuxt-schema-org@3.4.0:
     resolution: {integrity: sha512-VbLGmaMi6scKfQg0F9NrMNH9fpKrt1QTIPULsmR6Wwy7CUKXHUHR0n9qIBreodZ4+wHsUcjxHbxQowgoD/lofw==}
 
-  nuxt-security@2.0.0-rc.9:
-    resolution: {integrity: sha512-kymOhnPcwhKj8g20GXgrFC6h7Oub7+53yqD0byovCDb50a3hlSRdSLlSBoP2/ca4dtnbu8FWJd5/KuUHBGHWXw==}
+  nuxt-security@2.0.0:
+    resolution: {integrity: sha512-zlcB8uNDLipuJ0r1UHnns4rj8WwIfrni+DQeE8h9PIytCgRCBzuxsf/xNNTKJqXkoV4VGF2XGwrIzM9zdL4xFg==}
 
   nuxt-seo-experiments@4.0.1:
     resolution: {integrity: sha512-L60bkTFwfW+pQcxkCRhoW20c9+qiJiYgDKTWFDT58cS68M8vm76+H28UCMrmWRe3i3r2oDqQEAjR0QUiDVQgNg==}
@@ -12463,7 +12464,7 @@ snapshots:
       - vue
       - webpack-sources
 
-  nuxt-security@2.0.0-rc.9(magicast@0.3.5)(rollup@4.21.3)(webpack-sources@3.2.3):
+  nuxt-security@2.0.0(magicast@0.3.5)(rollup@4.21.3)(webpack-sources@3.2.3):
     dependencies:
       '@nuxt/kit': 3.13.2(magicast@0.3.5)(rollup@4.21.3)(webpack-sources@3.2.3)
       basic-auth: 2.0.1
