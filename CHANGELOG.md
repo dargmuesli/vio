@@ -1,3 +1,13 @@
+## [14.0.0](https://github.com/dargmuesli/vio/compare/13.3.0...14.0.0) (2024-09-19)
+
+### ⚠ BREAKING CHANGES
+
+* **strapi:** adapt new api structure
+
+### Features
+
+* **strapi:** adapt new api structure ([87f1b9c](https://github.com/dargmuesli/vio/commit/87f1b9c99932e30f30c2a13953c21fd28413ba46))
+
 ## [13.3.0](https://github.com/dargmuesli/vio/compare/13.2.8...13.3.0) (2024-09-13)
 
 ### Features
