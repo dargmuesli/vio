@@ -1,4 +1,4 @@
-export interface StrapiResult<T> {
+export type StrapiResult<T> = {
   data: CollectionItem<T>[]
   meta: {
     pagination: {
@@ -7,7 +7,7 @@ export interface StrapiResult<T> {
   }
 }
 
-export interface CollectionItem<T> {
+export type CollectionItem<T> = {
+  documentId: string
   id: number
-  attributes: T
-}
+} & T
