@@ -48,7 +48,7 @@
     "nuxt": "3.13.2",
     "pinia": "2.2.2",
     "prettier": "3.3.3",
-    "prettier-plugin-tailwindcss": "0.6.6",
+    "prettier-plugin-tailwindcss": "0.6.8",
     "serve": "14.2.3",
     "sharp": "0.33.5",
     "stylelint": "16.9.0",
