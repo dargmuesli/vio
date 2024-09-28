@@ -224,7 +224,6 @@ export default defineNuxtConfig(
             'frame-src': false as const,
             'img-src': false as const,
             'media-src': false as const,
-            'navigate-to': false as const,
             'object-src': false as const,
             'prefetch-src': false as const,
             'report-to': undefined,
