@@ -6,11 +6,12 @@ import eslintPluginCompat from 'eslint-plugin-compat'
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 import eslintPluginYml from 'eslint-plugin-yml'
 import globals from 'globals'
-import jiti from 'jiti'
+import { createJiti } from 'jiti'
 
-const moduleFileUrl = new URL(import.meta.url)
-const JITI = jiti(moduleFileUrl.pathname)
-const POLYFILLS = JITI('../utils/constants.ts').POLYFILLS
+const jiti = createJiti(import.meta.url)
+const constants = await jiti.import('../utils/constants.ts')
+// @ts-ignore
+const POLYFILLS = constants.POLYFILLS
 
 const vueI18nConfiguration = vueI18n.configs['flat/recommended']
 const compatConfiguration = eslintPluginCompat.configs['flat/recommended']
