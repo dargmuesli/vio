@@ -1,3 +1,9 @@
+## [14.0.2](https://github.com/dargmuesli/vio/compare/14.0.1...14.0.2) (2024-09-29)
+
+### Bug Fixes
+
+* **gtag:** correct initialization update ([2a5b6b1](https://github.com/dargmuesli/vio/commit/2a5b6b1b446230546693f8a3f2b4203eb8ee5137))
+
 ## [14.0.1](https://github.com/dargmuesli/vio/compare/14.0.0...14.0.1) (2024-09-28)
 
 ### Bug Fixes
