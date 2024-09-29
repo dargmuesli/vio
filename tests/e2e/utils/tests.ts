@@ -75,7 +75,12 @@ export const testMetadata = async ({
         },
         {
           key: 'content',
-          value: joinURL(SITE_URL, '/__og-image__/image', path, '/og.png'),
+          value: joinURL(
+            SITE_URL,
+            `/__og-image__/${process.env.VIO_SERVER === 'static' ? 'static' : 'image'}`,
+            path,
+            '/og.png',
+          ),
         },
       ],
     },
@@ -111,7 +116,12 @@ export const testMetadata = async ({
         },
         {
           key: 'content',
-          value: joinURL(SITE_URL, '/__og-image__/image', path, '/og.png'),
+          value: joinURL(
+            SITE_URL,
+            `/__og-image__/${process.env.VIO_SERVER === 'static' ? 'static' : 'image'}`,
+            path,
+            '/og.png',
+          ),
         },
       ],
     },
@@ -124,7 +134,12 @@ export const testMetadata = async ({
         },
         {
           key: 'content',
-          value: joinURL(SITE_URL, '/__og-image__/image', path, '/og.png'),
+          value: joinURL(
+            SITE_URL,
+            `/__og-image__/${process.env.VIO_SERVER === 'static' ? 'static' : 'image'}`,
+            path,
+            '/og.png',
+          ),
         },
       ],
     },
