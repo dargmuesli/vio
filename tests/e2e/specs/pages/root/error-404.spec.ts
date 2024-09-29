@@ -54,10 +54,10 @@ test.describe('visual regression', () => {
 
   // TODO: enable (https://github.com/harlan-zw/nuxt-og-image/issues/81)
   // test('generates the open graph image', async ({ page }) => {
-  //   await page.goto('/__og-image__/image/does-not-exist/og.png')
+  //   await page.goto(`/__og-image__/${process.env.VIO_SERVER === 'static' ? 'static' : 'image'}/does-not-exist/og.png`)
   //   await expect(page).toHaveScreenshot({ fullPage: true })
 
-  //   await page.goto('/__og-image__/image/de/does-not-exist/og.png')
+  //   await page.goto(`/__og-image__/${process.env.VIO_SERVER === 'static' ? 'static' : 'image'}/de/does-not-exist/og.png`)
   //   await expect(page).toHaveScreenshot({ fullPage: true })
   // })
 })
