@@ -1,3 +1,9 @@
+## [14.0.5](https://github.com/dargmuesli/vio/compare/14.0.4...14.0.5) (2024-09-29)
+
+### Bug Fixes
+
+* **deps:** use `@urql/vue` as normal dependency ([94fbf65](https://github.com/dargmuesli/vio/commit/94fbf650065fd7e7b142c0080efb8239138d8d7a))
+
 ## [14.0.4](https://github.com/dargmuesli/vio/compare/14.0.3...14.0.4) (2024-09-29)
 
 ### Bug Fixes
