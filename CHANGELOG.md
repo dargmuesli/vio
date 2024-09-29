@@ -1,3 +1,9 @@
+## [14.0.4](https://github.com/dargmuesli/vio/compare/14.0.3...14.0.4) (2024-09-29)
+
+### Bug Fixes
+
+* **deps:** use jiti as normal dependency ([78f24aa](https://github.com/dargmuesli/vio/commit/78f24aa2a49309fd690eb13ae8f2fffa9b0cf7d1))
+
 ## [14.0.3](https://github.com/dargmuesli/vio/compare/14.0.2...14.0.3) (2024-09-29)
 
 ### Bug Fixes
