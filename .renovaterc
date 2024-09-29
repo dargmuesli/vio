@@ -5,10 +5,6 @@
   ],
   "packageRules": [
     {
-      "matchPackageNames": ["@nuxtjs/i18n"],
-      "allowedVersions": "8.3.0"
-    },
-    {
       "matchPackageNames": ["caniuse-lite"],
       "allowedVersions": "1.0.30001653"
     }
