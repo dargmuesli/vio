@@ -14,6 +14,11 @@
     "semantic-release": "24.1.2"
   },
   "packageManager": "pnpm@9.11.0",
+  "pnpm": {
+    "overrides": {
+      "caniuse-lite": "1.0.30001653"
+    }
+  },
   "private": true,
   "scripts": {
     "build": "pnpm --dir src run build",
@@ -33,10 +38,5 @@
     "test:e2e:docker:server:static": "pnpm --dir tests run test:e2e:docker:server:static",
     "test:e2e:docker:server:static:update": "pnpm --dir tests run test:e2e:docker:server:static:update"
   },
-  "type": "module",
-  "pnpm": {
-    "overrides": {
-      "caniuse-lite": "1.0.30001653"
-    }
-  }
+  "type": "module"
 }
