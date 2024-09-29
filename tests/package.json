@@ -54,5 +54,5 @@
     "test:e2e:server:static": "cross-env NODE_ENV=production PORT=\"${PORT:-3002}\" SITE_URL=\"${SITE_URL:-https://localhost:3002}\" VIO_SERVER=static pnpm run test:e2e"
   },
   "type": "module",
-  "version": "14.0.2"
+  "version": "14.0.3"
 }
