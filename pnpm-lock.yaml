@@ -135,6 +135,9 @@ importers:
       globals:
         specifier: 15.9.0
         version: 15.9.0
+      jiti:
+        specifier: 2.0.0
+        version: 2.0.0
       jose:
         specifier: 5.9.3
         version: 5.9.3
@@ -175,9 +178,6 @@ importers:
       h3:
         specifier: 1.12.0
         version: 1.12.0
-      jiti:
-        specifier: 2.0.0
-        version: 2.0.0
       lodash-es:
         specifier: 4.17.21
         version: 4.17.21
