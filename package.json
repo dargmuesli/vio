@@ -16,7 +16,8 @@
   "packageManager": "pnpm@9.11.0",
   "pnpm": {
     "overrides": {
-      "caniuse-lite": "1.0.30001653"
+      "caniuse-lite": "1.0.30001653",
+      "doiuse": "6.0.2"
     }
   },
   "private": true,

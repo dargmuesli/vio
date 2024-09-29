@@ -6,6 +6,7 @@ settings:
 
 overrides:
   caniuse-lite: 1.0.30001653
+  doiuse: 6.0.2
 
 importers:
 
@@ -3153,8 +3154,8 @@ packages:
     resolution: {integrity: sha512-yS+Q5i3hBf7GBkd4KG8a7eBNNWNGLTaEwwYWUijIYM7zrlYDM0BFXHjjPWlWZ1Rg7UaddZeIDmi9jF3HmqiQ2w==}
     engines: {node: '>=6.0.0'}
 
-  doiuse@6.0.3:
-    resolution: {integrity: sha512-cgu7al1yxHpRS+Q+ru3LQYUDttoPBGYgY7JunTdr0VeFMjBAwXVHTyZxn48ZOuxpBB30W52kOK6mwbduuqNboQ==}
+  doiuse@6.0.2:
+    resolution: {integrity: sha512-eBTs23NOX+EAYPr4RbCR6J4DRW/TML3uMo37y0X1whlkersDYFCk9HmCl09KX98cis22VKsV1QaxfVNauJ3NBw==}
     engines: {node: '>=16'}
     hasBin: true
 
@@ -4332,6 +4333,9 @@ packages:
   lazystream@1.0.1:
     resolution: {integrity: sha512-b94GiNHQNy6JNTrt5w6zNyffMrNkXZb3KTkCZJb2V1xaEGCk093vkZ2jk3tpaeP33/OiXC+WvK9AxUebnf5nbw==}
     engines: {node: '>= 0.6.3'}
+
+  ldjson-stream@1.2.1:
+    resolution: {integrity: sha512-xw/nNEXafuPSLu8NjjG3+atVVw+8U1APZAQylmwQn19Hgw6rC7QjHvP6MupnHWCrzSm9m0xs5QWkCLuRvBPjgQ==}
 
   levn@0.4.1:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}
@@ -5621,6 +5625,9 @@ packages:
     resolution: {integrity: sha512-9viLL4/n1BJUCT1NXVTdS1jtm80yDEgR5T4yCelII49Mbj0v1rZdKqj7zCiYdbB0CuCgdrvHcNogAKTFPBocFA==}
     engines: {node: '>=18'}
 
+  readable-stream@1.0.34:
+    resolution: {integrity: sha512-ok1qVCJuRkNmvebYikljxJA/UEsKwLl2nI1OmaqAu4/UE+h0wKCHok4XkL/gvi39OacXvw59RJUOFUkDib2rHg==}
+
   readable-stream@1.1.14:
     resolution: {integrity: sha512-+MeVjFf4L44XUkhM1eYbD8fyEsxcV81pqMSR5gblfcLCHfZvbrqy4/qYHE+/R5HoBUT11WV5O08Cr1n3YXkWVQ==}
 
@@ -5960,6 +5967,9 @@ packages:
     resolution: {integrity: sha512-1POYv7uv2gXoyGFpBCmpDVSNV74IfsWlDW216UPjbWufNf+bSU6GdbDsxdcxtfwb4xlI3yxzOTKClUosxARYrQ==}
     engines: {node: '>=0.10.0'}
 
+  split2@0.2.1:
+    resolution: {integrity: sha512-D/oTExYAkC9nWleOCTOyNmAuzfAT/6rHGBA9LIK7FVnGo13CSvrKCUzKenwH6U1s2znY9MqH6v0UQTEDa3vJmg==}
+
   split2@1.0.0:
     resolution: {integrity: sha512-NKywug4u4pX/AZBB1FCPzZ6/7O+Xhz1qMVbzTvvKvikjO99oPN87SkK08mEY9P63/5lWjK+wgOOgApnTg5r6qg==}
 
@@ -6246,6 +6256,9 @@ packages:
 
   thenify@3.3.1:
     resolution: {integrity: sha512-RVZSIV5IG10Hk3enotrhvz0T9em6cyHBLkH/YAZuKqd8hRkKhSfCGIcP2KUY0EPxndzANBmNllzWPwak+bheSw==}
+
+  through2@0.6.5:
+    resolution: {integrity: sha512-RkK/CCESdTKQZHdmKICijdKKsCRVHs5KsLZ6pACAmF/1GPUQhonHSXWNERctxEp7RmvjdNbZTL5z9V7nSCXKcg==}
 
   through2@2.0.5:
     resolution: {integrity: sha512-/mrRod8xqpA+IHSLyGCQ2s8SPHiCDEeQJSep1jqLYeEUClOFG2Qsh+4FU6G9VeqpZnGW/Su8LQGc4YKni5rYSQ==}
@@ -10211,12 +10224,13 @@ snapshots:
     dependencies:
       esutils: 2.0.3
 
-  doiuse@6.0.3:
+  doiuse@6.0.2:
     dependencies:
       browserslist: 4.24.0
       caniuse-lite: 1.0.30001653
       css-tokenize: 1.0.1
       duplexify: 4.1.3
+      ldjson-stream: 1.2.1
       multimatch: 5.0.0
       postcss: 8.4.47
       source-map: 0.7.4
@@ -11585,6 +11599,11 @@ snapshots:
   lazystream@1.0.1:
     dependencies:
       readable-stream: 2.3.8
+
+  ldjson-stream@1.2.1:
+    dependencies:
+      split2: 0.2.1
+      through2: 0.6.5
 
   levn@0.4.1:
     dependencies:
@@ -13038,6 +13057,13 @@ snapshots:
       type-fest: 4.26.1
       unicorn-magic: 0.1.0
 
+  readable-stream@1.0.34:
+    dependencies:
+      core-util-is: 1.0.3
+      inherits: 2.0.4
+      isarray: 0.0.1
+      string_decoder: 0.10.31
+
   readable-stream@1.1.14:
     dependencies:
       core-util-is: 1.0.3
@@ -13500,6 +13526,10 @@ snapshots:
 
   speakingurl@14.0.1: {}
 
+  split2@0.2.1:
+    dependencies:
+      through2: 0.6.5
+
   split2@1.0.0:
     dependencies:
       through2: 2.0.5
@@ -13627,7 +13657,7 @@ snapshots:
 
   stylelint-no-unsupported-browser-features@8.0.1(stylelint@16.9.0(typescript@5.6.2)):
     dependencies:
-      doiuse: 6.0.3
+      doiuse: 6.0.2
       postcss: 8.4.47
       stylelint: 16.9.0(typescript@5.6.2)
 
@@ -13871,6 +13901,11 @@ snapshots:
   thenify@3.3.1:
     dependencies:
       any-promise: 1.3.0
+
+  through2@0.6.5:
+    dependencies:
+      readable-stream: 1.0.34
+      xtend: 4.0.2
 
   through2@2.0.5:
     dependencies:
