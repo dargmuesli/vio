@@ -104,6 +104,9 @@ export default defineNuxtConfig(
       },
       runtimeConfig: {
         public: {
+          i18n: {
+            baseUrl: SITE_URL,
+          },
           site: {
             url: SITE_URL,
           },
@@ -292,9 +295,6 @@ export default defineNuxtConfig(
       $production: {
         runtimeConfig: {
           public: {
-            i18n: {
-              baseUrl: SITE_URL,
-            },
             vio: {
               isInProduction: true,
             },
