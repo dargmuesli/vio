@@ -137,14 +137,14 @@ export const I18N_MODULE_CONFIG = {
     {
       code: 'en',
       file: 'en.json',
-      name: 'English',
-      iso: 'en', // Will be used as catchall locale by default.
+      language: 'en', // could be `en-US` is multiple `en` locales are differentiated
+      name: 'English', // Will be used as catchall locale by default.
     },
     {
       code: 'de',
       file: 'de.json',
+      language: 'de', // could be `de-DE` is multiple `de` locales are differentiated
       name: 'Deutsch',
-      iso: 'de',
     },
   ],
 }
