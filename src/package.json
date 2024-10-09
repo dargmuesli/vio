@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@dargmuesli/nuxt-cookie-control": "8.4.13",
+    "@dargmuesli/nuxt-cookie-control": "8.4.14",
     "@eslint/compat": "1.2.0",
     "@heroicons/vue": "2.1.5",
     "@http-util/status-i18n": "0.8.1",
@@ -28,7 +28,7 @@
     "eslint-plugin-compat": "6.0.1",
     "eslint-plugin-prettier": "5.2.1",
     "eslint-plugin-yml": "1.14.0",
-    "globals": "15.10.0",
+    "globals": "15.11.0",
     "jiti": "2.3.3",
     "jose": "5.9.3",
     "nuxt-gtag": "3.0.1",
