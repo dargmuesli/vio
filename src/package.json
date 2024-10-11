@@ -30,7 +30,7 @@
     "eslint-plugin-yml": "1.14.0",
     "globals": "15.11.0",
     "jiti": "2.3.3",
-    "jose": "5.9.3",
+    "jose": "5.9.4",
     "nuxt-gtag": "3.0.1",
     "nuxt-security": "2.0.0",
     "sweetalert2": "11.14.2",
@@ -51,13 +51,13 @@
     "prettier-plugin-tailwindcss": "0.6.8",
     "serve": "14.2.3",
     "sharp": "0.33.5",
-    "stylelint": "16.9.0",
+    "stylelint": "16.10.0",
     "stylelint-config-recommended-vue": "1.5.0",
     "stylelint-config-standard": "36.0.1",
     "stylelint-no-unsupported-browser-features": "8.0.1",
     "tailwindcss": "3.4.13",
     "unhead": "1.11.7",
-    "vue": "3.5.11",
+    "vue": "3.5.12",
     "vue-router": "4.4.5"
   },
   "engines": {
@@ -87,7 +87,7 @@
   "name": "@dargmuesli/nuxt-vio",
   "peerDependencies": {
     "nuxt": "3.13.2",
-    "vue": "3.5.11",
+    "vue": "3.5.12",
     "vue-router": "4.4.5"
   },
   "publishConfig": {
