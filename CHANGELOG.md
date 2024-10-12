@@ -1,3 +1,9 @@
+## [14.0.6](https://github.com/dargmuesli/vio/compare/14.0.5...14.0.6) (2024-10-12)
+
+### Bug Fixes
+
+* schedule release ([1168b8b](https://github.com/dargmuesli/vio/commit/1168b8b74ba6cf25c7c11caa030b967bc78ff5e8))
+
 ## [14.0.5](https://github.com/dargmuesli/vio/compare/14.0.4...14.0.5) (2024-09-29)
 
 ### Bug Fixes
