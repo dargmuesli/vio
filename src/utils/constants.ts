@@ -20,7 +20,7 @@ export const GET_CSP = (siteUrl: string) =>
             'connect-src': ['https://cloudflareinsights.com'], // analytics
             'script-src-elem': [
               'https://static.cloudflareinsights.com', // analytics
-              `${siteUrl}/cdn-cgi/scripts/`, // email obfuscation
+              `${siteUrl}/cdn-cgi/`, // https://developers.cloudflare.com/fundamentals/reference/cdn-cgi-endpoint/
             ],
           }
         : {}),
