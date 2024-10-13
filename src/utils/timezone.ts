@@ -5,6 +5,6 @@ export const getTimezone = () =>
     sameSite: 'strict',
     secure: !import.meta.dev,
   }).value ||
-  import.meta.client
+  (import.meta.client
     ? Intl.DateTimeFormat().resolvedOptions().timeZone
-    : undefined
+    : undefined)
