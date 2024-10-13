@@ -1,3 +1,10 @@
+## [14.0.7](https://github.com/dargmuesli/vio/compare/14.0.6...14.0.7) (2024-10-13)
+
+### Bug Fixes
+
+* **security:** correct content security policy for cloudflare ([0a9ed39](https://github.com/dargmuesli/vio/commit/0a9ed390ce138e20fc6b0fd0f811a373d7d57683))
+* **timezone:** correct getter ([6834015](https://github.com/dargmuesli/vio/commit/683401551f2bb3d5886730a0754b65eb78e711cc))
+
 ## [14.0.6](https://github.com/dargmuesli/vio/compare/14.0.5...14.0.6) (2024-10-12)
 
 ### Bug Fixes
