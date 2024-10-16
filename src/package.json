@@ -37,7 +37,7 @@
     "vue-tsc": "2.1.6"
   },
   "devDependencies": {
-    "@unhead/vue": "1.11.9",
+    "@unhead/vue": "1.11.10",
     "@urql/devtools": "2.0.3",
     "@urql/exchange-graphcache": "7.2.0",
     "consola": "3.2.3",
@@ -56,7 +56,7 @@
     "stylelint-config-standard": "36.0.1",
     "stylelint-no-unsupported-browser-features": "8.0.1",
     "tailwindcss": "3.4.14",
-    "unhead": "1.11.9",
+    "unhead": "1.11.10",
     "vue": "3.5.12",
     "vue-router": "4.4.5"
   },
