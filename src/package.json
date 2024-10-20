@@ -39,7 +39,7 @@
   "devDependencies": {
     "@unhead/vue": "1.11.10",
     "@urql/devtools": "2.0.3",
-    "@urql/exchange-graphcache": "7.2.0",
+    "@urql/exchange-graphcache": "7.2.1",
     "consola": "3.2.3",
     "cookie-es": "1.2.2",
     "defu": "6.1.4",
