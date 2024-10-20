@@ -30,10 +30,10 @@
     "eslint-plugin-yml": "1.14.0",
     "globals": "15.11.0",
     "jiti": "2.3.3",
-    "jose": "5.9.4",
+    "jose": "5.9.6",
     "nuxt-gtag": "3.0.1",
     "nuxt-security": "2.0.0",
-    "sweetalert2": "11.14.3",
+    "sweetalert2": "11.14.4",
     "vue-tsc": "2.1.6"
   },
   "devDependencies": {
