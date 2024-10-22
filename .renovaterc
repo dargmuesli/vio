@@ -2,15 +2,5 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "github>dargmuesli/renovate-config"
-  ],
-  "packageRules": [
-    {
-      "matchPackageNames": ["caniuse-lite"],
-      "allowedVersions": "1.0.30001653"
-    },
-    {
-      "matchPackageNames": ["doiuse"],
-      "allowedVersions": "6.0.2"
-    }
   ]
 }
