@@ -1,12 +1,12 @@
 {
   "dependencies": {
     "@dargmuesli/nuxt-cookie-control": "8.4.15",
-    "@eslint/compat": "1.2.1",
+    "@eslint/compat": "1.2.2",
     "@heroicons/vue": "2.1.5",
     "@http-util/status-i18n": "0.8.1",
     "@intlify/eslint-plugin-vue-i18n": "3.0.0",
     "@nuxt/devtools": "1.6.0",
-    "@nuxt/eslint": "0.6.0",
+    "@nuxt/eslint": "0.6.1",
     "@nuxt/image": "1.8.1",
     "@nuxtjs/color-mode": "3.5.2",
     "@nuxtjs/html-validator": "1.8.2",
