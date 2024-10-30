@@ -34,7 +34,7 @@
     "nuxt-gtag": "3.0.1",
     "nuxt-security": "2.0.0",
     "sweetalert2": "11.14.4",
-    "vue-tsc": "2.1.8"
+    "vue-tsc": "2.1.10"
   },
   "devDependencies": {
     "@unhead/vue": "1.11.10",
