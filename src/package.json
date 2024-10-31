@@ -27,7 +27,7 @@
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-compat": "6.0.1",
     "eslint-plugin-prettier": "5.2.1",
-    "eslint-plugin-yml": "1.14.0",
+    "eslint-plugin-yml": "1.15.0",
     "globals": "15.11.0",
     "jiti": "2.3.3",
     "jose": "5.9.6",
