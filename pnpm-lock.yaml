@@ -102,8 +102,8 @@ importers:
         specifier: 5.0.8
         version: 5.0.8(graphql@16.9.0)
       '@urql/vue':
-        specifier: 1.4.1
-        version: 1.4.1(@urql/core@5.0.8(graphql@16.9.0))(vue@3.5.12(typescript@5.6.3))
+        specifier: 1.4.2
+        version: 1.4.2(@urql/core@5.0.8(graphql@16.9.0))(vue@3.5.12(typescript@5.6.3))
       '@vuelidate/core':
         specifier: 2.0.3
         version: 2.0.3(vue@3.5.12(typescript@5.6.3))
@@ -2000,8 +2000,8 @@ packages:
     peerDependencies:
       '@urql/core': ^5.0.0
 
-  '@urql/vue@1.4.1':
-    resolution: {integrity: sha512-Y8hknHUVQ2s5e9Nt8Q8XAknYeNUP2VdOLxyTL9pPuVzE14BDF2pwlewFqxofKTfZA6w8Uc7mP/0nFkdrnG0diA==}
+  '@urql/vue@1.4.2':
+    resolution: {integrity: sha512-ELMlVhWsVPaKyIgocNA2eAxSZgwzBqaw5YB4q3wQTAExxGlx6UNVluiBnuDLhs5ctSDIrGBR6Dfkwl6+M3B0QQ==}
     peerDependencies:
       '@urql/core': ^5.0.0
       vue: ^2.7.0 || ^3.0.0
@@ -9057,7 +9057,7 @@ snapshots:
     transitivePeerDependencies:
       - graphql
 
-  '@urql/vue@1.4.1(@urql/core@5.0.8(graphql@16.9.0))(vue@3.5.12(typescript@5.6.3))':
+  '@urql/vue@1.4.2(@urql/core@5.0.8(graphql@16.9.0))(vue@3.5.12(typescript@5.6.3))':
     dependencies:
       '@urql/core': 5.0.8(graphql@16.9.0)
       vue: 3.5.12(typescript@5.6.3)
