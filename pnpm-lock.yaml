@@ -144,8 +144,8 @@ importers:
         specifier: 3.0.1
         version: 3.0.1(magicast@0.3.5)(rollup@4.25.0)(webpack-sources@3.2.3)
       nuxt-security:
-        specifier: 2.0.0
-        version: 2.0.0(magicast@0.3.5)(rollup@4.25.0)(webpack-sources@3.2.3)
+        specifier: 2.1.0
+        version: 2.1.0(magicast@0.3.5)(rollup@4.25.0)(webpack-sources@3.2.3)
       sweetalert2:
         specifier: 11.14.5
         version: 11.14.5
@@ -4831,8 +4831,9 @@ packages:
   nuxt-schema-org@3.4.1:
     resolution: {integrity: sha512-RBtmWXUYihI2USRM77mwx/wPnRVPhYeK25dOFTk2BMeAvdvdCJRSP5LvMTe3C/YB5rnaeB69l6BVgw8j03C6ww==}
 
-  nuxt-security@2.0.0:
-    resolution: {integrity: sha512-zlcB8uNDLipuJ0r1UHnns4rj8WwIfrni+DQeE8h9PIytCgRCBzuxsf/xNNTKJqXkoV4VGF2XGwrIzM9zdL4xFg==}
+  nuxt-security@2.1.0:
+    resolution: {integrity: sha512-kPmbye412HmhBlDoaA6TgPs4HIHu8s2c6mQJUhuKVuLrGMkv4HwywodLWC34NlvdTVrUfzAhKNaZLnzBfPIUvQ==}
+    engines: {node: '>=20.0.0'}
 
   nuxt-seo-experiments@4.0.1:
     resolution: {integrity: sha512-L60bkTFwfW+pQcxkCRhoW20c9+qiJiYgDKTWFDT58cS68M8vm76+H28UCMrmWRe3i3r2oDqQEAjR0QUiDVQgNg==}
@@ -12162,7 +12163,7 @@ snapshots:
       - vue
       - webpack-sources
 
-  nuxt-security@2.0.0(magicast@0.3.5)(rollup@4.25.0)(webpack-sources@3.2.3):
+  nuxt-security@2.1.0(magicast@0.3.5)(rollup@4.25.0)(webpack-sources@3.2.3):
     dependencies:
       '@nuxt/kit': 3.14.159(magicast@0.3.5)(rollup@4.25.0)(webpack-sources@3.2.3)
       basic-auth: 2.0.1
