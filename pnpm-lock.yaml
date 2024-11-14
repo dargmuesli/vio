@@ -51,8 +51,8 @@ importers:
         specifier: 8.4.16
         version: 8.4.16(magicast@0.3.5)(rollup@4.25.0)(webpack-sources@3.2.3)(webpack@5.96.1(esbuild@0.24.0))
       '@eslint/compat':
-        specifier: 1.2.2
-        version: 1.2.2(eslint@9.14.0(jiti@2.4.0))
+        specifier: 1.2.3
+        version: 1.2.3(eslint@9.14.0(jiti@2.4.0))
       '@heroicons/vue':
         specifier: 2.1.5
         version: 2.1.5(vue@3.5.12(typescript@5.6.3))
@@ -91,10 +91,10 @@ importers:
         version: 0.7.0(magicast@0.3.5)(rollup@4.25.0)(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)
       '@tailwindcss/forms':
         specifier: 0.5.9
-        version: 0.5.9(tailwindcss@3.4.14)
+        version: 0.5.9(tailwindcss@3.4.15)
       '@tailwindcss/typography':
         specifier: 0.5.15
-        version: 0.5.15(tailwindcss@3.4.14)
+        version: 0.5.15(tailwindcss@3.4.15)
       '@types/lodash-es':
         specifier: 4.17.12
         version: 4.17.12
@@ -144,8 +144,8 @@ importers:
         specifier: 3.0.1
         version: 3.0.1(magicast@0.3.5)(rollup@4.25.0)(webpack-sources@3.2.3)
       nuxt-security:
-        specifier: 2.1.0
-        version: 2.1.0(magicast@0.3.5)(rollup@4.25.0)(webpack-sources@3.2.3)
+        specifier: 2.1.1
+        version: 2.1.1(magicast@0.3.5)(rollup@4.25.0)(webpack-sources@3.2.3)
       sweetalert2:
         specifier: 11.14.5
         version: 11.14.5
@@ -208,8 +208,8 @@ importers:
         specifier: 8.0.2
         version: 8.0.2(stylelint@16.10.0(typescript@5.6.3))
       tailwindcss:
-        specifier: 3.4.14
-        version: 3.4.14
+        specifier: 3.4.15
+        version: 3.4.15
       unhead:
         specifier: 1.11.11
         version: 1.11.11
@@ -855,8 +855,8 @@ packages:
     resolution: {integrity: sha512-CCZCDJuduB9OUkFkY2IgppNZMi2lBQgD2qzwXkEia16cge2pijY/aXi96CJMquDMn3nJdlPV1A5KrJEXwfLNzQ==}
     engines: {node: ^12.0.0 || ^14.0.0 || >=16.0.0}
 
-  '@eslint/compat@1.2.2':
-    resolution: {integrity: sha512-jhgiIrsw+tRfcBQ4BFl2C3vCrIUw2trCY0cnDvGZpwTtKCEDmZhAtMfrEUP/KpnwM6PrO0T+Ltm+ccW74olG3Q==}
+  '@eslint/compat@1.2.3':
+    resolution: {integrity: sha512-wlZhwlDFxkxIZ571aH0FoK4h4Vwx7P3HJx62Gp8hTc10bfpwT2x0nULuAHmQSJBOWPgPeVf+9YtnD4j50zVHmA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: ^9.10.0
@@ -4831,9 +4831,9 @@ packages:
   nuxt-schema-org@3.4.1:
     resolution: {integrity: sha512-RBtmWXUYihI2USRM77mwx/wPnRVPhYeK25dOFTk2BMeAvdvdCJRSP5LvMTe3C/YB5rnaeB69l6BVgw8j03C6ww==}
 
-  nuxt-security@2.1.0:
-    resolution: {integrity: sha512-kPmbye412HmhBlDoaA6TgPs4HIHu8s2c6mQJUhuKVuLrGMkv4HwywodLWC34NlvdTVrUfzAhKNaZLnzBfPIUvQ==}
-    engines: {node: '>=20.0.0'}
+  nuxt-security@2.1.1:
+    resolution: {integrity: sha512-OtZTS9WrSneWiO+n2F6hP4Nb6oGzWyUmcZgTG91rNLBj3I+psHHTrI4qj97FvBpo7xTRCSyD5x7MHMjvinZAXg==}
+    engines: {node: '>=18.0.0'}
 
   nuxt-seo-experiments@4.0.1:
     resolution: {integrity: sha512-L60bkTFwfW+pQcxkCRhoW20c9+qiJiYgDKTWFDT58cS68M8vm76+H28UCMrmWRe3i3r2oDqQEAjR0QUiDVQgNg==}
@@ -6136,8 +6136,8 @@ packages:
     peerDependencies:
       tailwindcss: 1 || 2 || 2.0.1-compat || 3
 
-  tailwindcss@3.4.14:
-    resolution: {integrity: sha512-IcSvOcTRcUtQQ7ILQL5quRDg7Xs93PdJEk1ZLbhhvJc7uj/OAhYOnruEiwnGgBvUtaUAJ8/mhSw1o8L2jCiENA==}
+  tailwindcss@3.4.15:
+    resolution: {integrity: sha512-r4MeXnfBmSOuKUWmXe6h2CcyfzJCEk4F0pptO5jlnYSIViUkVmsawj80N5h2lO3gwcmSb4n3PuN+e+GC1Guylw==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -7386,7 +7386,7 @@ snapshots:
 
   '@eslint-community/regexpp@4.12.1': {}
 
-  '@eslint/compat@1.2.2(eslint@9.14.0(jiti@2.4.0))':
+  '@eslint/compat@1.2.3(eslint@9.14.0(jiti@2.4.0))':
     optionalDependencies:
       eslint: 9.14.0(jiti@2.4.0)
 
@@ -8190,8 +8190,8 @@ snapshots:
       pathe: 1.1.2
       postcss: 8.4.48
       postcss-nesting: 13.0.1(postcss@8.4.48)
-      tailwind-config-viewer: 2.0.4(tailwindcss@3.4.14)
-      tailwindcss: 3.4.14
+      tailwind-config-viewer: 2.0.4(tailwindcss@3.4.15)
+      tailwindcss: 3.4.15
       ufo: 1.5.4
       unctx: 2.3.1(webpack-sources@3.2.3)
     transitivePeerDependencies:
@@ -8695,18 +8695,18 @@ snapshots:
       - supports-color
       - typescript
 
-  '@tailwindcss/forms@0.5.9(tailwindcss@3.4.14)':
+  '@tailwindcss/forms@0.5.9(tailwindcss@3.4.15)':
     dependencies:
       mini-svg-data-uri: 1.4.4
-      tailwindcss: 3.4.14
+      tailwindcss: 3.4.15
 
-  '@tailwindcss/typography@0.5.15(tailwindcss@3.4.14)':
+  '@tailwindcss/typography@0.5.15(tailwindcss@3.4.15)':
     dependencies:
       lodash.castarray: 4.4.0
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       postcss-selector-parser: 6.0.10
-      tailwindcss: 3.4.14
+      tailwindcss: 3.4.15
 
   '@trysound/sax@0.2.0': {}
 
@@ -10396,7 +10396,7 @@ snapshots:
 
   eslint-config-flat-gitignore@0.3.0(eslint@9.14.0(jiti@2.4.0)):
     dependencies:
-      '@eslint/compat': 1.2.2(eslint@9.14.0(jiti@2.4.0))
+      '@eslint/compat': 1.2.3(eslint@9.14.0(jiti@2.4.0))
       eslint: 9.14.0(jiti@2.4.0)
       find-up-simple: 1.0.0
 
@@ -12163,7 +12163,7 @@ snapshots:
       - vue
       - webpack-sources
 
-  nuxt-security@2.1.0(magicast@0.3.5)(rollup@4.25.0)(webpack-sources@3.2.3):
+  nuxt-security@2.1.1(magicast@0.3.5)(rollup@4.25.0)(webpack-sources@3.2.3):
     dependencies:
       '@nuxt/kit': 3.14.159(magicast@0.3.5)(rollup@4.25.0)(webpack-sources@3.2.3)
       basic-auth: 2.0.1
@@ -13728,7 +13728,7 @@ snapshots:
       string-width: 4.2.3
       strip-ansi: 6.0.1
 
-  tailwind-config-viewer@2.0.4(tailwindcss@3.4.14):
+  tailwind-config-viewer@2.0.4(tailwindcss@3.4.15):
     dependencies:
       '@koa/router': 12.0.2
       commander: 6.2.1
@@ -13738,11 +13738,11 @@ snapshots:
       open: 7.4.2
       portfinder: 1.0.32
       replace-in-file: 6.3.5
-      tailwindcss: 3.4.14
+      tailwindcss: 3.4.15
     transitivePeerDependencies:
       - supports-color
 
-  tailwindcss@3.4.14:
+  tailwindcss@3.4.15:
     dependencies:
       '@alloc/quick-lru': 5.2.0
       arg: 5.0.2
