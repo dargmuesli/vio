@@ -131,7 +131,6 @@ export const GET_CSP = (siteUrl: string) =>
   )
 export const GTAG_COOKIE_ID = 'ga'
 export const I18N_MODULE_CONFIG = {
-  langDir: 'locales',
   lazy: true,
   locales: [
     {
