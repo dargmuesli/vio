@@ -26,6 +26,7 @@
 
 <script setup lang="ts">
 import type { NuxtLinkProps } from '#app'
+import type { I18N_LOCALE_CODE } from '../../../types/i18n'
 import { append } from '../../../utils/utils' // TODO: wait for autoimport to be fixed and remove this import
 
 interface Props {
@@ -33,7 +34,7 @@ interface Props {
   isColored?: boolean
   isToRelative?: boolean
   isUnderlined?: boolean
-  locale?: string
+  locale?: I18N_LOCALE_CODE
   nofollow?: boolean
   to: NuxtLinkProps['to']
 }
