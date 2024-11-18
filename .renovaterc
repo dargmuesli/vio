@@ -2,5 +2,14 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "github>dargmuesli/renovate-config"
+  ],
+  "packageRules": [
+    {
+      "matchPackageNames": [
+        "@eslint/js",
+        "eslint"
+      ],
+      "allowedVersions": "0.14.0"
+    }
   ]
 }
