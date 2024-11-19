@@ -270,7 +270,7 @@ export default defineNuxtConfig(
         },
         nitro: {
           experimental: {
-            openAPI: true,
+            openAPI: false, // TODO: set to true (https://github.com/nuxt/content/issues/2839)
           },
         },
         runtimeConfig: {
