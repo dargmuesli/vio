@@ -1,3 +1,13 @@
+## [14.1.0](https://github.com/dargmuesli/vio/compare/14.0.11...14.1.0) (2024-11-19)
+
+### Features
+
+* **security:** require trusted types for script ([8789984](https://github.com/dargmuesli/vio/commit/8789984eda1b129c609a92b53d55f9dfe4c160e2))
+
+### Bug Fixes
+
+* **nuxt:** disable open api ([6b4adab](https://github.com/dargmuesli/vio/commit/6b4adabadc21a525bc318b38f8bc474153ae4370))
+
 ## [14.0.11](https://github.com/dargmuesli/vio/compare/14.0.10...14.0.11) (2024-11-19)
 
 ### Bug Fixes
