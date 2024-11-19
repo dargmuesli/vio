@@ -9,7 +9,13 @@
         "@eslint/js",
         "eslint"
       ],
-      "allowedVersions": "0.14.0"
+      "allowedVersions": "9.14.0"
+    },
+    {
+      "matchPackageNames": [
+        "@pinia/nuxt"
+      ],
+      "allowedVersions": "0.5.5"
     }
   ]
 }
