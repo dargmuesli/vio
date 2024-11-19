@@ -6,10 +6,9 @@
   "packageRules": [
     {
       "matchPackageNames": [
-        "@eslint/js",
-        "eslint"
+        "@pinia/nuxt"
       ],
-      "allowedVersions": "0.14.0"
+      "allowedVersions": "0.5.5"
     }
   ]
 }
