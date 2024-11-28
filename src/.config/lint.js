@@ -54,14 +54,6 @@ export const VIO_ESLINT_CONFIG = [
       '@intlify/vue-i18n/prefer-linked-key-with-paren': 'error',
       // '@intlify/vue-i18n/sfc-locale-attr': 'error',
 
-      '@typescript-eslint/no-unused-vars': [
-        'error',
-        {
-          argsIgnorePattern: '^_',
-          varsIgnorePattern: '^_',
-        },
-      ],
-      'vue/multi-word-component-names': 'off', // TODO: remove (https://github.com/nuxt/eslint/issues/261)
       'yml/quotes': ['error', { prefer: 'single' }],
     },
     settings: {
