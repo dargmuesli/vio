@@ -35,6 +35,12 @@ const test = async () => {
 }
 </script>
 
+<script lang="ts">
+export default {
+  name: 'VioIndex',
+}
+</script>
+
 <i18n lang="yaml">
 de:
   linkExternal: https://jonas-thelemann.de
