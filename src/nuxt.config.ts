@@ -249,9 +249,6 @@ export default defineNuxtConfig(
         },
         strict: true,
       },
-      seo: {
-        splash: false,
-      },
       site: {
         id: 'vio',
         url: SITE_URL,
