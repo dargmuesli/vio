@@ -57,7 +57,3 @@ export type AppConfig = {
     themeColor?: string
   }
 }
-
-declare module 'nuxt/schema' {
-  interface AppConfigInput extends AppConfig {} // eslint-disable-line @typescript-eslint/no-empty-object-type
-}
