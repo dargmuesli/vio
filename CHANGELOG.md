@@ -1,3 +1,9 @@
+## [14.1.2](https://github.com/dargmuesli/vio/compare/14.1.1...14.1.2) (2024-11-28)
+
+### Bug Fixes
+
+* **lint:** remove two rule customizations ([eac1e21](https://github.com/dargmuesli/vio/commit/eac1e211de79aeac01f87ea6e180f88bf2489e03))
+
 ## [14.1.2-beta.1](https://github.com/dargmuesli/vio/compare/14.1.1...14.1.2-beta.1) (2024-11-28)
 
 ### Bug Fixes
