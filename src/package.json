@@ -29,7 +29,7 @@
     "eslint-plugin-prettier": "5.2.1",
     "eslint-plugin-yml": "1.15.0",
     "globals": "15.12.0",
-    "jiti": "2.4.0",
+    "jiti": "2.4.1",
     "jose": "5.9.6",
     "nuxt-gtag": "3.0.2",
     "nuxt-security": "2.1.4",
