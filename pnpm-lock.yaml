@@ -133,8 +133,8 @@ importers:
         specifier: 5.2.1
         version: 5.2.1(@types/eslint@9.6.1)(eslint-config-prettier@9.1.0(eslint@9.16.0(jiti@2.4.1)))(eslint@9.16.0(jiti@2.4.1))(prettier@3.4.1)
       eslint-plugin-yml:
-        specifier: 1.15.0
-        version: 1.15.0(eslint@9.16.0(jiti@2.4.1))
+        specifier: 1.16.0
+        version: 1.16.0(eslint@9.16.0(jiti@2.4.1))
       globals:
         specifier: 15.12.0
         version: 15.12.0
@@ -148,8 +148,8 @@ importers:
         specifier: 3.0.2
         version: 3.0.2(magicast@0.3.5)(rollup@4.27.4)
       nuxt-security:
-        specifier: 2.1.4
-        version: 2.1.4(magicast@0.3.5)(rollup@4.27.4)
+        specifier: 2.1.5
+        version: 2.1.5(magicast@0.3.5)(rollup@4.27.4)
       sweetalert2:
         specifier: 11.14.5
         version: 11.14.5
@@ -3219,12 +3219,6 @@ packages:
     engines: {node: '>=6.0'}
     hasBin: true
 
-  eslint-compat-utils@0.5.1:
-    resolution: {integrity: sha512-3z3vFexKIEnjHE3zCMRo6fn/e44U7T1khUjg+Hp0ZQMCigh28rALD0nPFBcGZuiLC5rLZa2ubQHDRln09JfU2Q==}
-    engines: {node: '>=12'}
-    peerDependencies:
-      eslint: '>=6.0.0'
-
   eslint-compat-utils@0.6.3:
     resolution: {integrity: sha512-9IDdksh5pUYP2ZLi7mOdROxVjLY8gY2qKxprmrJ/5Dyqud7M/IFKxF3o0VLlRhITm1pK6Fk7NiBxE39M/VlUcw==}
     engines: {node: '>=12'}
@@ -3301,8 +3295,8 @@ packages:
     peerDependencies:
       eslint: ^6.2.0 || ^7.0.0 || ^8.0.0 || ^9.0.0
 
-  eslint-plugin-yml@1.15.0:
-    resolution: {integrity: sha512-leC8APYVOsKyWUlvRwVhewytK5wS70BfMqIaUplFstRfzCoVp0YoEroV4cUEvQrBj93tQ3M9LcjO/ewr6D4kjA==}
+  eslint-plugin-yml@1.16.0:
+    resolution: {integrity: sha512-t4MNCetPjTn18/fUDlQ/wKkcYjnuLYKChBrZ0qUaNqRigVqChHWzTP8SrfFi5s4keX3vdlkWRSu8zHJMdKwxWQ==}
     engines: {node: ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: '>=6.0.0'
@@ -4811,8 +4805,8 @@ packages:
   nuxt-schema-org@4.0.2:
     resolution: {integrity: sha512-54eQvpuUUh8FKld8neQtMcLDyHytXofJTEn2Ehxfy7ncw5lA781H6hDsuCIWD8Yx31CUgm48q/U/fWF/dr+1ug==}
 
-  nuxt-security@2.1.4:
-    resolution: {integrity: sha512-OWIC9JiguvXb3jC5QD+8mMBOKSoGBdNzOafrh14GxxirW1Psi+jYSFtR1/sTNAGEmHtNCxLaCqC6OwWY7vvg2Q==}
+  nuxt-security@2.1.5:
+    resolution: {integrity: sha512-2nrkEsj1tS7RqqFq+sdmYatsAtISHt/o91w8xfMPeUz95CYxZ+HPbodKf+oAGdOmmCJcgYs6e+5XNba45M6BIw==}
     engines: {node: '>=18.0.0'}
 
   nuxt-seo-utils@6.0.3:
@@ -10273,11 +10267,6 @@ snapshots:
     optionalDependencies:
       source-map: 0.6.1
 
-  eslint-compat-utils@0.5.1(eslint@9.16.0(jiti@2.4.1)):
-    dependencies:
-      eslint: 9.16.0(jiti@2.4.1)
-      semver: 7.6.3
-
   eslint-compat-utils@0.6.3(eslint@9.16.0(jiti@2.4.1)):
     dependencies:
       eslint: 9.16.0(jiti@2.4.1)
@@ -10411,11 +10400,11 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-yml@1.15.0(eslint@9.16.0(jiti@2.4.1)):
+  eslint-plugin-yml@1.16.0(eslint@9.16.0(jiti@2.4.1)):
     dependencies:
       debug: 4.3.7(supports-color@9.4.0)
       eslint: 9.16.0(jiti@2.4.1)
-      eslint-compat-utils: 0.5.1(eslint@9.16.0(jiti@2.4.1))
+      eslint-compat-utils: 0.6.3(eslint@9.16.0(jiti@2.4.1))
       lodash: 4.17.21
       natural-compare: 1.4.0
       yaml-eslint-parser: 1.2.3
@@ -12053,7 +12042,7 @@ snapshots:
       - vite
       - vue
 
-  nuxt-security@2.1.4(magicast@0.3.5)(rollup@4.27.4):
+  nuxt-security@2.1.5(magicast@0.3.5)(rollup@4.27.4):
     dependencies:
       '@nuxt/kit': 3.14.1592(magicast@0.3.5)(rollup@4.27.4)
       basic-auth: 2.0.1
