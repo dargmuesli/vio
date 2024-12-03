@@ -5,7 +5,7 @@
     "@heroicons/vue": "2.2.0",
     "@http-util/status-i18n": "0.8.1",
     "@intlify/eslint-plugin-vue-i18n": "3.1.0",
-    "@nuxt/devtools": "1.6.2",
+    "@nuxt/devtools": "1.6.3",
     "@nuxt/eslint": "0.7.2",
     "@nuxt/image": "1.8.1",
     "@nuxtjs/color-mode": "3.5.2",
@@ -55,7 +55,7 @@
     "stylelint-config-recommended-vue": "1.5.0",
     "stylelint-config-standard": "36.0.1",
     "stylelint-no-unsupported-browser-features": "8.0.2",
-    "tailwindcss": "3.4.15",
+    "tailwindcss": "3.4.16",
     "unhead": "1.11.13",
     "vue": "3.5.13",
     "vue-router": "4.5.0"
