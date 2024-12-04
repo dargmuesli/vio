@@ -46,7 +46,7 @@
     "h3": "1.13.0",
     "lodash-es": "4.17.21",
     "nuxt": "3.14.1592",
-    "pinia": "2.2.8",
+    "pinia": "2.3.0",
     "prettier": "3.4.2",
     "prettier-plugin-tailwindcss": "0.6.9",
     "serve": "14.2.4",
