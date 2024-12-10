@@ -1,3 +1,49 @@
+## [14.1.3](https://github.com/dargmuesli/vio/compare/14.1.2...14.1.3) (2024-12-07)
+
+### Bug Fixes
+
+* schedule release ([78fc5b9](https://github.com/dargmuesli/vio/commit/78fc5b9c33ccc68108321ad76a50690dbfe21fab))
+
+## [14.1.2](https://github.com/dargmuesli/vio/compare/14.1.1...14.1.2) (2024-11-28)
+
+### Bug Fixes
+
+* **lint:** remove two rule customizations ([eac1e21](https://github.com/dargmuesli/vio/commit/eac1e211de79aeac01f87ea6e180f88bf2489e03))
+
+## [14.1.2-beta.1](https://github.com/dargmuesli/vio/compare/14.1.1...14.1.2-beta.1) (2024-11-28)
+
+### Bug Fixes
+
+* **lint:** remove two rule customizations ([eac1e21](https://github.com/dargmuesli/vio/commit/eac1e211de79aeac01f87ea6e180f88bf2489e03))
+
+## [14.1.1](https://github.com/dargmuesli/vio/compare/14.1.0...14.1.1) (2024-11-28)
+
+### Bug Fixes
+
+* schedule release ([cfac51f](https://github.com/dargmuesli/vio/commit/cfac51fdda1b63cc3a29c157bbbb0558aa322f79))
+
+## [14.1.0](https://github.com/dargmuesli/vio/compare/14.0.11...14.1.0) (2024-11-19)
+
+### Features
+
+* **security:** require trusted types for script ([8789984](https://github.com/dargmuesli/vio/commit/8789984eda1b129c609a92b53d55f9dfe4c160e2))
+
+### Bug Fixes
+
+* **nuxt:** disable open api ([6b4adab](https://github.com/dargmuesli/vio/commit/6b4adabadc21a525bc318b38f8bc474153ae4370))
+
+## [14.0.11](https://github.com/dargmuesli/vio/compare/14.0.10...14.0.11) (2024-11-19)
+
+### Bug Fixes
+
+* schedule release ([84eebcb](https://github.com/dargmuesli/vio/commit/84eebcbb513780910fcb960baa1f012625fc0d6b))
+
+## [14.0.10](https://github.com/dargmuesli/vio/compare/14.0.9...14.0.10) (2024-11-18)
+
+### Bug Fixes
+
+* schedule release ([ea81f95](https://github.com/dargmuesli/vio/commit/ea81f9525cece42986f6a37f72dfbff0dc295a14))
+
 ## [14.0.9](https://github.com/dargmuesli/vio/compare/14.0.8...14.0.9) (2024-11-09)
 
 ### Bug Fixes

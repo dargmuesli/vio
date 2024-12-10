@@ -1,7 +1,7 @@
 #############
 # Create base image.
 
-FROM node:22.11.0-alpine AS base-image
+FROM node:22.12.0-alpine AS base-image
 
 # The `CI` environment variable must be set for pnpm to run in headless mode
 ENV CI=true
@@ -84,7 +84,7 @@ RUN pnpm -r run lint
 ########################
 # Nuxt: test (e2e, base-image)
 
-FROM mcr.microsoft.com/playwright:v1.48.2 AS test-e2e-base-image
+FROM mcr.microsoft.com/playwright:v1.49.0 AS test-e2e-base-image
 
 # The `CI` environment variable must be set for pnpm to run in headless mode
 ENV CI=true

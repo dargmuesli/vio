@@ -531,8 +531,8 @@ export const testMetadata = async ({
       tag: 'script',
       attributes: [
         {
-          key: 'id',
-          value: 'schema-org-graph',
+          key: 'data-hid',
+          value: '3437552',
         },
         { key: 'type', value: 'application/ld+json' },
       ],
@@ -550,9 +550,9 @@ export const testMetadata = async ({
     ).toBeAttached()
   }
 
-  expect(await page.locator('#schema-org-graph').innerText()).toMatchSnapshot(
-    `schema-org-graph-${process.env.VIO_SERVER || 'dev'}.json`,
-  )
+  expect(
+    await page.locator('script[data-hid="3437552"]').innerText(),
+  ).toMatchSnapshot(`schema-org-graph-${process.env.VIO_SERVER || 'dev'}.json`)
 
   // if (process.env.VIO_SERVER === 'static') {
   //   expect(

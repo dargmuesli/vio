@@ -231,7 +231,7 @@ export default defineNuxtConfig(
             'prefetch-src': false as const,
             'report-to': undefined,
             'report-uri': false as const,
-            // 'require-trusted-types-for': ["'script'"], // csp-evaluator // TODO: wait for trusted type support in vue (https://github.com/vuejs/core/pull/10844)
+            'require-trusted-types-for': 'script', // csp-evaluator
             sandbox: false as const,
             'script-src': false as const,
             'script-src-attr': false as const,
@@ -248,9 +248,6 @@ export default defineNuxtConfig(
           hashStyles: true,
         },
         strict: true,
-      },
-      seo: {
-        splash: false,
       },
       site: {
         id: 'vio',
@@ -270,7 +267,7 @@ export default defineNuxtConfig(
         },
         nitro: {
           experimental: {
-            openAPI: true,
+            openAPI: false, // TODO: set to true (https://github.com/nuxt/content/issues/2839)
           },
         },
         runtimeConfig: {
