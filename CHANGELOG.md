@@ -1,3 +1,13 @@
+## [15.0.0](https://github.com/dargmuesli/vio/compare/14.1.3...15.0.0) (2024-12-10)
+
+### ⚠ BREAKING CHANGES
+
+* **i18n:** migrate to v9
+
+### Code Refactoring
+
+* **i18n:** migrate to v9 ([df40f67](https://github.com/dargmuesli/vio/commit/df40f67a2819974cc28a3143a4bf9c278ae1b1ab))
+
 ## [14.1.3](https://github.com/dargmuesli/vio/compare/14.1.2...14.1.3) (2024-12-07)
 
 ### Bug Fixes
