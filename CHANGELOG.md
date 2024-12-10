@@ -1,3 +1,9 @@
+## [15.0.1](https://github.com/dargmuesli/vio/compare/15.0.0...15.0.1) (2024-12-10)
+
+### Bug Fixes
+
+* **i18n:** correct package export ([87b5c30](https://github.com/dargmuesli/vio/commit/87b5c30ed5a4803e2f78b2733a589dbe13bd8d42))
+
 ## [15.0.0](https://github.com/dargmuesli/vio/compare/14.1.3...15.0.0) (2024-12-10)
 
 ### ⚠ BREAKING CHANGES
