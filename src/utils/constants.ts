@@ -131,17 +131,16 @@ export const GET_CSP = (siteUrl: string) =>
   )
 export const GTAG_COOKIE_ID = 'ga'
 export const I18N_MODULE_CONFIG = {
-  langDir: 'locales',
   lazy: true,
   locales: [
     {
-      code: 'en',
+      code: 'en' as const,
       file: 'en.json',
       language: 'en', // could be `en-US` is multiple `en` locales are differentiated
       name: 'English', // Will be used as catchall locale by default.
     },
     {
-      code: 'de',
+      code: 'de' as const,
       file: 'de.json',
       language: 'de', // could be `de-DE` is multiple `de` locales are differentiated
       name: 'Deutsch',

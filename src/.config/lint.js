@@ -59,7 +59,7 @@ export const VIO_ESLINT_CONFIG = [
     settings: {
       polyfills: POLYFILLS,
       'vue-i18n': {
-        localeDir: './locales/*.json',
+        localeDir: './i18n/locales/*.json',
         messageSyntaxVersion: '^9.0.0',
       },
     },
@@ -68,7 +68,7 @@ export const VIO_ESLINT_CONFIG = [
     ignores: ['tests'],
   },
   {
-    files: ['locales/**/*'],
+    files: ['i18n/locales/**/*'],
     rules: {
       '@intlify/vue-i18n/no-unused-keys': 'off',
     },
