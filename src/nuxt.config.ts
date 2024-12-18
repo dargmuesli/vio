@@ -231,7 +231,7 @@ export default defineNuxtConfig(
             'prefetch-src': false as const,
             'report-to': undefined,
             'report-uri': false as const,
-            'require-trusted-types-for': "'script'", // csp-evaluator
+            // 'require-trusted-types-for': "'script'", // csp-evaluator // TODO: evaluate (https://github.com/maevsi/maevsi/issues/830)
             sandbox: false as const,
             'script-src': false as const,
             'script-src-attr': false as const,
