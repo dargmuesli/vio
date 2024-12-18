@@ -1,3 +1,9 @@
+## [15.0.2](https://github.com/dargmuesli/vio/compare/15.0.1...15.0.2) (2024-12-18)
+
+### Bug Fixes
+
+* **security:** correct trusted type requirement ([2552e89](https://github.com/dargmuesli/vio/commit/2552e893401077d5c4a53541c47e1827d1bdf9e6))
+
 ## [15.0.1](https://github.com/dargmuesli/vio/compare/15.0.0...15.0.1) (2024-12-10)
 
 ### Bug Fixes
