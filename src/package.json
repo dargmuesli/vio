@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@dargmuesli/nuxt-cookie-control": "8.4.18",
+    "@dargmuesli/nuxt-cookie-control": "8.4.19",
     "@eslint/compat": "1.2.4",
     "@heroicons/vue": "2.2.0",
     "@http-util/status-i18n": "0.8.1",
@@ -29,11 +29,11 @@
     "eslint-plugin-prettier": "5.2.1",
     "eslint-plugin-yml": "1.16.0",
     "globals": "15.13.0",
-    "jiti": "2.4.1",
+    "jiti": "2.4.2",
     "jose": "5.9.6",
     "nuxt-gtag": "3.0.2",
     "nuxt-security": "2.1.5",
-    "sweetalert2": "11.15.1",
+    "sweetalert2": "11.15.2",
     "vue-tsc": "2.1.10"
   },
   "devDependencies": {
@@ -55,7 +55,7 @@
     "stylelint-config-recommended-vue": "1.5.0",
     "stylelint-config-standard": "36.0.1",
     "stylelint-no-unsupported-browser-features": "8.0.2",
-    "tailwindcss": "3.4.16",
+    "tailwindcss": "3.4.17",
     "unhead": "1.11.14",
     "vue": "3.5.13",
     "vue-router": "4.5.0"
