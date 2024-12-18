@@ -1,3 +1,9 @@
+## [15.0.4](https://github.com/dargmuesli/vio/compare/15.0.3...15.0.4) (2024-12-18)
+
+### Bug Fixes
+
+* **security:** make frame source more flexible for development ([#258](https://github.com/dargmuesli/vio/issues/258)) ([b1860c2](https://github.com/dargmuesli/vio/commit/b1860c27149827be065b657d1d38b5f30eec4656))
+
 ## [15.0.3](https://github.com/dargmuesli/vio/compare/15.0.2...15.0.3) (2024-12-18)
 
 ### Bug Fixes
