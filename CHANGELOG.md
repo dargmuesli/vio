@@ -1,3 +1,9 @@
+## [15.1.0](https://github.com/dargmuesli/vio/compare/15.0.4...15.1.0) (2024-12-28)
+
+### Features
+
+* **constants:** add cookie control consent cookie name ([#259](https://github.com/dargmuesli/vio/issues/259)) ([7b9d503](https://github.com/dargmuesli/vio/commit/7b9d50354d6ed81df145b98189b05ea74078e1cf))
+
 ## [15.0.4](https://github.com/dargmuesli/vio/compare/15.0.3...15.0.4) (2024-12-18)
 
 ### Bug Fixes
