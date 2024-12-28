@@ -1,3 +1,4 @@
+import { DEFAULTS } from '@dargmuesli/nuxt-cookie-control/runtime/types'
 import { helpers } from '@vuelidate/validators'
 import { defu } from 'defu'
 
@@ -8,6 +9,8 @@ export const SITE_URL =
   process.env.NUXT_PUBLIC_SITE_URL ||
   `https://${process.env.HOST || 'localhost'}:${process.env.PORT || '3000'}`
 export const CACHE_VERSION = 'bOXMwoKlJr'
+export const COOKIE_CONTROL_CONSENT_COOKIE_NAME =
+  DEFAULTS.cookieNameIsConsentGiven
 export const COOKIE_PREFIX = SITE_NAME.toLocaleLowerCase()
 export const COOKIE_SEPARATOR = '_'
 export const FETCH_RETRY_AMOUNT = 3
