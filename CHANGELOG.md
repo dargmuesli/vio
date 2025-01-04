@@ -1,3 +1,9 @@
+## [15.1.1](https://github.com/dargmuesli/vio/compare/15.1.0...15.1.1) (2025-01-04)
+
+### Bug Fixes
+
+* schedule release ([b0177ac](https://github.com/dargmuesli/vio/commit/b0177ac5de2b88ec0fc2afc26851eabff84679e4))
+
 ## [15.1.0](https://github.com/dargmuesli/vio/compare/15.0.4...15.1.0) (2024-12-28)
 
 ### Features
