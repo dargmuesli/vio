@@ -9,7 +9,8 @@ src/.playground/node_modules/
 src/.playground/.env/
 src/dist/
 src/node_modules/
-src/tests/e2e/report/
-src/tests/e2e/results/
 src/.env
 src/.eslintcache
+src/.stylelintcache
+tests/e2e/report/
+tests/e2e/results/
