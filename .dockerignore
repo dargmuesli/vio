@@ -14,3 +14,4 @@ src/.eslintcache
 src/.stylelintcache
 tests/e2e/report/
 tests/e2e/results/
+Dockerfile
