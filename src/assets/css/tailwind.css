@@ -7,52 +7,19 @@
 /* doiuse-disable css-cascade-layers */
 @layer base {
   /* doiuse-enable css-cascade-layers */
-  a:focus {
-    /* doiuse-disable css-nesting */
-    @apply outline-none ring; /* doiuse-enable css-nesting */
-  }
 
-  button:focus {
-    /* doiuse-disable css-nesting */
-    @apply outline-none ring; /* doiuse-enable css-nesting */
-  }
-
-  thead {
-    /* doiuse-disable css-nesting */
-    @apply vio-bg-darken sticky top-0 z-10; /* doiuse-enable css-nesting */
-  }
-
-  tbody {
-    /* doiuse-disable css-nesting */
-    @apply vio-divide-darken divide-y; /* doiuse-enable css-nesting */
-  }
-}
-
-/* doiuse-disable css-cascade-layers */
-@layer utilities {
-  /* doiuse-enable css-cascade-layers */
-  .vio-prose {
-    /* doiuse-disable css-nesting */
-    @apply prose prose-sm dark:prose-invert sm:prose-base lg:prose-lg xl:prose-xl; /* 2xl:prose-2xl */ /* doiuse-enable css-nesting */
-  }
-
-  .vio-prose-fullwidth {
-    /* doiuse-disable css-nesting */
-    @apply vio-prose max-w-full sm:max-w-full md:max-w-full xl:max-w-full 2xl:max-w-full; /* doiuse-enable css-nesting */
-  }
-
-  .vio-divide-darken {
-    /* doiuse-disable css-nesting */
-    @apply divide-background-brighten dark:divide-background-darken; /* doiuse-enable css-nesting */
-  }
-
-  .vio-bg-darken {
-    /* doiuse-disable css-nesting */
-    @apply bg-background-brighten dark:bg-background-darken; /* doiuse-enable css-nesting */
-  }
-
-  .vio-border-darken {
-    /* doiuse-disable css-nesting */
-    @apply border-background-brighten dark:border-background-darken; /* doiuse-enable css-nesting */
+  :root {
+    /* stylelint-disable plugin/no-unsupported-browser-features */
+    --color-background-bright: 255 255 255;
+    --color-background-brighten: 229 231 235;
+    --color-background-dark: 31 41 55;
+    --color-background-darken: 55 65 81;
+    --color-link-bright: 96 165 250;
+    --color-link-dark: 37 99 235;
+    --color-text-bright: 249 250 251;
+    --color-text-dark: 17 24 39;
+    --color-vio-primary-bg: 243 244 246;
+    --color-vio-primary-text: 17 24 39;
+    /* stylelint-enable plugin/no-unsupported-browser-features */
   }
 }

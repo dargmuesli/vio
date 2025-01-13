@@ -1,5 +1,5 @@
 <template>
-  <div class="vio-prose m-auto">
+  <VioLayoutProse class="m-auto">
     <h1>{{ title }}</h1>
     <h2>{{ t('tmg') }}</h2>
     <address>
@@ -64,7 +64,7 @@
     <p>
       <VioLink to="https://www.e-recht24.de">{{ t('source') }}</VioLink>
     </p>
-  </div>
+  </VioLayoutProse>
 </template>
 
 <script setup lang="ts">

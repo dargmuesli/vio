@@ -1,5 +1,5 @@
 <template>
-  <div class="vio-prose m-auto">
+  <VioLayoutProse class="m-auto">
     <h1>{{ title }}</h1>
     <ol v-if="isEnabled">
       <li v-if="isEnabled.summary">
@@ -429,7 +429,7 @@
         {{ t('source') }}
       </VioLink>
     </p>
-  </div>
+  </VioLayoutProse>
 </template>
 
 <script setup lang="ts">
