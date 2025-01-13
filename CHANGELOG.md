@@ -1,3 +1,17 @@
+## [16.0.0](https://github.com/dargmuesli/vio/compare/15.1.1...16.0.0) (2025-01-13)
+
+### ⚠ BREAKING CHANGES
+
+* beta (#265)
+
+### Features
+
+* beta ([#265](https://github.com/dargmuesli/vio/issues/265)) ([a589b24](https://github.com/dargmuesli/vio/commit/a589b24b22038a1d1a3a2d84e3fe85903360c3fd))
+
+### Bug Fixes
+
+* schedule release ([b41ec35](https://github.com/dargmuesli/vio/commit/b41ec35e2343e8936f9b5dd53619ceb37b1a4e63))
+
 ## [16.0.0-beta.1](https://github.com/dargmuesli/vio/compare/15.1.1...16.0.0-beta.1) (2025-01-13)
 
 ### ⚠ BREAKING CHANGES
