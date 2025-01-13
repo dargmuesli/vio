@@ -35,6 +35,7 @@
   },
   "pnpm": {
     "overrides": {
+      "@nuxtjs/tailwindcss": "6.12.2",
       "nuxt-og-image": "4.0.1"
     }
   },
