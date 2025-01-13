@@ -1,5 +1,5 @@
 <template>
-  <div class="vio-prose m-auto">
+  <VioLayoutProse class="m-auto">
     <h1>{{ t('title') }}</h1>
     <p>
       {{ t('globalStatusLoading') }}
@@ -15,7 +15,7 @@
       <button type="button" @click="test">{{ $dayjs(0).format('lll') }}</button>
     </p>
     <!-- <SBreadcrumb /> -->
-  </div>
+  </VioLayoutProse>
 </template>
 
 <script setup lang="ts">
