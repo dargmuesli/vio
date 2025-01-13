@@ -1,7 +1,6 @@
 import type { ModuleOptions } from '@nuxtjs/tailwindcss'
 import formsPlugin from '@tailwindcss/forms'
 import typographyPlugin from '@tailwindcss/typography'
-import colors from 'tailwindcss/colors'
 import type { PluginAPI } from 'tailwindcss/types/config'
 
 const heading = (theme: PluginAPI['theme']): Record<string, string> => ({
@@ -10,8 +9,6 @@ const heading = (theme: PluginAPI['theme']): Record<string, string> => ({
   // marginTop: theme('margin.4'),
   // set overflow truncate/ellipsis in the surrounding container, or larger fonts will be cut off due to their line-heights
 })
-
-const gray = colors.gray // or slate, zinc, neutral, stone
 
 const prose = (theme: PluginAPI['theme']) => ({
   css: {
@@ -61,8 +58,22 @@ export default {
           marginLeft: '5px',
           width: theme('fontSize.xs'),
         },
+        'a:focus': {
+          // @apply outline-none ring
+          outline: '2px solid transparent',
+          outlineOffset: '2px',
+          boxShadow:
+            'var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color)',
+        },
         address: {
           margin: theme('margin.4'),
+        },
+        'button:focus': {
+          // @apply outline-none ring
+          outline: '2px solid transparent',
+          outlineOffset: '2px',
+          boxShadow:
+            'var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color)',
         },
         h1: {
           ...heading(theme),
@@ -178,23 +189,23 @@ export default {
       },
       colors: {
         background: {
-          bright: colors.white,
-          brighten: gray['200'],
-          dark: gray['800'],
-          darken: gray['700'],
+          bright: 'rgb(var(--color-background-bright))',
+          brighten: 'rgb(var(--color-background-brighten))',
+          dark: 'rgb(var(--color-background-dark))',
+          darken: 'rgb(var(--color-background-darken))',
         },
         link: {
-          bright: colors.blue['400'],
-          dark: colors.blue['600'],
+          bright: 'rgb(var(--color-link-bright))',
+          dark: 'rgb(var(--color-link-dark))',
         },
         text: {
-          bright: gray['50'],
-          dark: gray['900'],
+          bright: 'rgb(var(--color-text-bright))',
+          dark: 'rgb(var(--color-text-dark))',
         },
         vio: {
           primary: {
-            bg: gray['100'],
-            text: gray['900'],
+            bg: 'rgb(var(--color-vio-primary-bg))',
+            text: 'rgb(var(--color-vio-primary-text))',
           },
         },
       },

@@ -1,3 +1,13 @@
+## [16.0.0-beta.1](https://github.com/dargmuesli/vio/compare/15.1.1...16.0.0-beta.1) (2025-01-13)
+
+### ⚠ BREAKING CHANGES
+
+* **style:** extract components
+
+### Features
+
+* **style:** extract components ([fe91e44](https://github.com/dargmuesli/vio/commit/fe91e447ee343e744a8fe61c121bb8e29a4e0312))
+
 ## [15.1.1](https://github.com/dargmuesli/vio/compare/15.1.0...15.1.1) (2025-01-04)
 
 ### Bug Fixes
