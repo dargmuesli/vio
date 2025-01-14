@@ -42,6 +42,10 @@ export const GET_CSP = (siteUrl: string) =>
       'script-src-elem': ['https://*.googletagmanager.com'],
     },
     {
+      // Google Service Worker (https://developers.google.com/tag-platform/tag-manager/web/csp)
+      'frame-src': ['https://www.googletagmanager.com'],
+    },
+    {
       // vio
       'manifest-src': [`${siteUrl}/site.webmanifest`],
       'script-src-elem': [
