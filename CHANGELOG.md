@@ -1,3 +1,9 @@
+## [16.0.1](https://github.com/dargmuesli/vio/compare/16.0.0...16.0.1) (2025-01-14)
+
+### Bug Fixes
+
+* **deps:** pin @nuxtjs/tailwindcss to v6.12.2 ([#266](https://github.com/dargmuesli/vio/issues/266)) ([ec741a3](https://github.com/dargmuesli/vio/commit/ec741a30f1878d6b633cbb207d27fb86570deeb0)), closes [#261](https://github.com/dargmuesli/vio/issues/261)
+
 ## [16.0.0](https://github.com/dargmuesli/vio/compare/15.1.1...16.0.0) (2025-01-13)
 
 ### ⚠ BREAKING CHANGES
