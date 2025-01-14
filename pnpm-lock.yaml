@@ -38,6 +38,9 @@ importers:
       '@semantic-release/release-notes-generator':
         specifier: 14.0.3
         version: 14.0.3(semantic-release@24.2.1(typescript@5.7.3))
+      cross-env:
+        specifier: 7.0.3
+        version: 7.0.3
       husky:
         specifier: 9.1.7
         version: 9.1.7
@@ -241,9 +244,6 @@ importers:
       '@types/node':
         specifier: 22.10.6
         version: 22.10.6
-      cross-env:
-        specifier: 7.0.3
-        version: 7.0.3
       eslint:
         specifier: 9.18.0
         version: 9.18.0(jiti@2.4.2)
