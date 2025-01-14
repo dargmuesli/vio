@@ -1,3 +1,9 @@
+## [16.0.2](https://github.com/dargmuesli/vio/compare/16.0.1...16.0.2) (2025-01-14)
+
+### Bug Fixes
+
+* **security:** add frame source for google service worker ([#268](https://github.com/dargmuesli/vio/issues/268)) ([1ac4381](https://github.com/dargmuesli/vio/commit/1ac438142d14e1af3a78eb7b4d63cc95ad62ad96))
+
 ## [16.0.1](https://github.com/dargmuesli/vio/compare/16.0.0...16.0.1) (2025-01-14)
 
 ### Bug Fixes
