@@ -121,5 +121,5 @@
     "start:test": "pnpm run start:static:test"
   },
   "type": "module",
-  "version": "16.0.2"
+  "version": "16.1.0-beta.1"
 }

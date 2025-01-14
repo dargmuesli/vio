@@ -1,3 +1,9 @@
+## [16.1.0-beta.1](https://github.com/dargmuesli/vio/compare/16.0.2...16.1.0-beta.1) (2025-01-14)
+
+### Features
+
+* **test:** add start script with port ([53eb589](https://github.com/dargmuesli/vio/commit/53eb5894ac58cf78e552b591baa5b16f42a81268))
+
 ## [16.0.2](https://github.com/dargmuesli/vio/compare/16.0.1...16.0.2) (2025-01-14)
 
 ### Bug Fixes
