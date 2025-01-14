@@ -5,10 +5,6 @@
     {
       "matchPackageNames": ["@nuxtjs/tailwindcss"],
       "allowedVersions": "6.12.2"
-    },
-    {
-      "matchPackageNames": ["nuxt-og-image"],
-      "allowedVersions": "4.0.1"
     }
   ]
 }
