@@ -58,6 +58,9 @@ RUN pnpm --dir src run build:node
 
 FROM prepare AS build-static
 
+ARG SITE_URL=https://localhost:3002
+ENV SITE_URL=${SITE_URL}
+
 ENV NODE_ENV=production
 RUN pnpm --dir src run build:static
 
@@ -149,6 +152,11 @@ RUN pnpm --dir tests run test:e2e:server:node
 # Nuxt: test (e2e, static)
 
 FROM test-e2e-prepare AS test-e2e-static
+
+ARG SITE_URL=https://localhost:3002
+ENV SITE_URL=${SITE_URL}
+ARG PORT=3002
+ENV PORT=${PORT}
 
 COPY --from=build-static /srv/app/src/.playground/.output/public ./src/.playground/.output/public
 

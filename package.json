@@ -19,6 +19,7 @@
     "build": "pnpm --dir src run build",
     "build:node": "pnpm --dir src run build:node",
     "build:static": "pnpm --dir src run build:static",
+    "build:static:test": "pnpm --dir src run build:static:test",
     "dev": "pnpm --dir src run dev",
     "generate": "pnpm --dir src run generate",
     "lint": "pnpm -r run lint",
@@ -35,6 +36,7 @@
   },
   "pnpm": {
     "overrides": {
+      "@nuxtjs/tailwindcss": "6.12.2",
       "nuxt-og-image": "4.0.1"
     }
   },

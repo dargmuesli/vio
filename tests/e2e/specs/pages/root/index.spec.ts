@@ -2,14 +2,17 @@ import AxeBuilder from '@axe-core/playwright'
 import { test, expect } from '@playwright/test'
 
 import { SITE_URL } from '#tests/e2e/utils/constants'
-import { COOKIE_CONTROL_DEFAULT, PAGE_READY } from '../../../utils/constants'
+import {
+  COOKIE_CONTROL_CONSENT_COOKIE_DEFAULT,
+  PAGE_READY,
+} from '../../../utils/constants'
 import { testMetadata } from '../../../utils/tests'
 
 test.beforeEach(async ({ context }) => {
   await context.addCookies([
     {
       name: 'ncc_c',
-      value: COOKIE_CONTROL_DEFAULT,
+      value: COOKIE_CONTROL_CONSENT_COOKIE_DEFAULT,
       url: SITE_URL,
     },
   ])
