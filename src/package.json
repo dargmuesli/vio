@@ -112,6 +112,7 @@
     "lint": "pnpm run lint:js && pnpm run lint:ts && pnpm run lint:style",
     "prepare": "nuxt prepare && nuxt prepare .playground && ./.config/certificates/mkcert.sh",
     "preview": "nuxt preview .playground",
+    "start": "pnpm run start:node",
     "start:dev": "nuxt dev .playground",
     "start:node": "node .playground/.output/server/index.mjs",
     "start:static": "serve .playground/.output/public --ssl-cert ./.config/certificates/ssl.crt --ssl-key ./.config/certificates/ssl.key"
