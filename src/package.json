@@ -33,7 +33,7 @@
     "jose": "5.9.6",
     "nuxt-gtag": "3.0.2",
     "nuxt-security": "2.1.5",
-    "sweetalert2": "11.15.10",
+    "sweetalert2": "11.16.0",
     "vue-tsc": "2.2.0"
   },
   "devDependencies": {
