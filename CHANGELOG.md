@@ -1,3 +1,9 @@
+## [17.0.0-beta.3](https://github.com/dargmuesli/vio/compare/17.0.0-beta.2...17.0.0-beta.3) (2025-02-18)
+
+### Bug Fixes
+
+* **style:** add custom dark variant ([daa371c](https://github.com/dargmuesli/vio/commit/daa371c2686254a9772b1267660b40cebf10a72e))
+
 ## [17.0.0-beta.2](https://github.com/dargmuesli/vio/compare/17.0.0-beta.1...17.0.0-beta.2) (2025-02-18)
 
 ### Bug Fixes
