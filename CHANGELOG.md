@@ -1,3 +1,13 @@
+## [17.0.0](https://github.com/dargmuesli/vio/compare/16.0.5...17.0.0) (2025-02-18)
+
+### ⚠ BREAKING CHANGES
+
+* **release:** beta (#287)
+
+### Miscellaneous Chores
+
+* **release:** beta ([#287](https://github.com/dargmuesli/vio/issues/287)) ([b20300d](https://github.com/dargmuesli/vio/commit/b20300d7493bd3917e5372c0c8fcbfbdd053ecc9)), closes [#274](https://github.com/dargmuesli/vio/issues/274)
+
 ## [17.0.0-beta.5](https://github.com/dargmuesli/vio/compare/17.0.0-beta.4...17.0.0-beta.5) (2025-02-18)
 
 ### Bug Fixes
