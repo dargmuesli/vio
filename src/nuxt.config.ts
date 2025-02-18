@@ -25,7 +25,7 @@ export default defineNuxtConfig(
         },
       },
       compatibilityDate: '2024-04-03',
-      css: ['./assets/css/tailwind.css'],
+      css: ['./assets/css/vio.css'],
       ...(process.env.NUXT_PUBLIC_SITE_URL
         ? {}
         : {
