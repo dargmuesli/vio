@@ -16,7 +16,8 @@
   "packageManager": "pnpm@10.4.1",
   "pnpm": {
     "overrides": {
-      "@nuxtjs/i18n": "9.1.1"
+      "@nuxtjs/i18n": "9.1.1",
+      "vue-tsc": "2.2.0"
     }
   },
   "private": true,
