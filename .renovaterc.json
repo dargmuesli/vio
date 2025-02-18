@@ -5,6 +5,10 @@
     {
       "matchPackageNames": ["@nuxtjs/i18n"],
       "allowedVersions": "9.1.1"
+    },
+    {
+      "matchPackageNames": ["vue-tsc"],
+      "allowedVersions": "2.2.0"
     }
   ]
 }
