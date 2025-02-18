@@ -5,7 +5,7 @@
     "@heroicons/vue": "2.2.0",
     "@http-util/status-i18n": "0.8.1",
     "@intlify/eslint-plugin-vue-i18n": "4.0.0-next.1",
-    "@nuxt/devtools": "2.0.0",
+    "@nuxt/devtools": "2.1.0",
     "@nuxt/eslint": "1.0.1",
     "@nuxt/image": "1.9.0",
     "@nuxtjs/color-mode": "3.5.2",
@@ -30,10 +30,10 @@
     "eslint-plugin-yml": "1.16.0",
     "globals": "15.15.0",
     "jiti": "2.4.2",
-    "jose": "5.9.6",
+    "jose": "5.10.0",
     "nuxt-gtag": "3.0.2",
     "nuxt-security": "2.1.5",
-    "sweetalert2": "11.16.1",
+    "sweetalert2": "11.17.2",
     "vue-tsc": "2.2.0"
   },
   "devDependencies": {
