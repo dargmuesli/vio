@@ -1,3 +1,9 @@
+## [17.0.0-beta.5](https://github.com/dargmuesli/vio/compare/17.0.0-beta.4...17.0.0-beta.5) (2025-02-18)
+
+### Bug Fixes
+
+* **nuxt:** load style relative to layer ([f4092cf](https://github.com/dargmuesli/vio/commit/f4092cfe5ea7ac7b35400d26dd8844e471adf02f))
+
 ## [17.0.0-beta.4](https://github.com/dargmuesli/vio/compare/17.0.0-beta.3...17.0.0-beta.4) (2025-02-18)
 
 ### Features
