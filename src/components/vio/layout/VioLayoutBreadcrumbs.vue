@@ -16,7 +16,7 @@
       >
         <span>{{ t('separator') }}</span>
         <VioLink
-          class="whitespace-nowrap text-2xl"
+          class="text-2xl whitespace-nowrap"
           :data-testid="`breadcrumb-prefix-${prefix.to}`"
           :is-colored="false"
           :to="prefix.to"
@@ -28,7 +28,7 @@
     <span>{{ t('separator') }}</span>
     <VioLink :is-colored="false" :to="route.path">
       <span
-        class="whitespace-nowrap text-2xl font-bold"
+        class="text-2xl font-bold whitespace-nowrap"
         data-testid="breadcrumb"
       >
         <slot />
@@ -42,7 +42,7 @@
       >
         <span>{{ t('separator') }}</span>
         <VioLink
-          class="whitespace-nowrap text-2xl"
+          class="text-2xl whitespace-nowrap"
           :data-testid="`breadcrumb-suffix-${suffix.to}`"
           :is-colored="false"
           :to="suffix.to"

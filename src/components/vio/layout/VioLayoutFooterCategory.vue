@@ -2,7 +2,7 @@
   <div
     class="flex flex-1 basis-1/2 flex-col items-start gap-2 p-4 md:flex-none md:basis-auto"
   >
-    <span class="whitespace-nowrap text-lg font-medium leading-7">
+    <span class="text-lg leading-7 font-medium whitespace-nowrap">
       {{ heading }}
     </span>
     <slot />
