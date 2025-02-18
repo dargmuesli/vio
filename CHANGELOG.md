@@ -1,3 +1,9 @@
+## [17.0.0-beta.4](https://github.com/dargmuesli/vio/compare/17.0.0-beta.3...17.0.0-beta.4) (2025-02-18)
+
+### Features
+
+* **style:** rename stylesheet to `vio.css` ([494faa5](https://github.com/dargmuesli/vio/commit/494faa505da4116e9d3e9ce4b2cb39860917b802))
+
 ## [17.0.0-beta.3](https://github.com/dargmuesli/vio/compare/17.0.0-beta.2...17.0.0-beta.3) (2025-02-18)
 
 ### Bug Fixes
