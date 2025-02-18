@@ -1,3 +1,13 @@
+## [17.0.0-beta.1](https://github.com/dargmuesli/vio/compare/16.0.5...17.0.0-beta.1) (2025-02-18)
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** update dependency tailwindcss to v4 (#274)
+
+### Miscellaneous Chores
+
+* **deps:** update dependency tailwindcss to v4 ([#274](https://github.com/dargmuesli/vio/issues/274)) ([53db15e](https://github.com/dargmuesli/vio/commit/53db15e9adc1ff4a83ebc8944c54d73cbffa000c))
+
 ## [16.0.5](https://github.com/dargmuesli/vio/compare/16.0.4...16.0.5) (2025-02-15)
 
 ### Bug Fixes
