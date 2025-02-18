@@ -1,6 +1,7 @@
-import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { dirname, join } from 'node:path'
 
+import tailwindcss from '@tailwindcss/vite'
 import { defu } from 'defu'
 
 import {
@@ -14,7 +15,6 @@ import { VIO_NUXT_BASE_CONFIG } from './utils/nuxt'
 
 const currentDir = dirname(fileURLToPath(import.meta.url))
 
-// https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig(
   defu(
     {
@@ -30,6 +30,7 @@ export default defineNuxtConfig(
         },
       },
       compatibilityDate: '2024-04-03',
+      css: [join(currentDir, './assets/css/vio.css')],
       ...(process.env.NUXT_PUBLIC_SITE_URL
         ? {}
         : {
@@ -54,7 +55,6 @@ export default defineNuxtConfig(
         '@nuxtjs/html-validator',
         '@nuxtjs/i18n',
         '@nuxtjs/seo',
-        '@nuxtjs/tailwindcss',
         '@pinia/nuxt',
         'nuxt-gtag',
         (_options, nuxt) => {
@@ -124,6 +124,9 @@ export default defineNuxtConfig(
           //   noErrorTruncation: true,
           // },
         },
+      },
+      vite: {
+        plugins: [tailwindcss()],
       },
 
       // modules
@@ -255,9 +258,6 @@ export default defineNuxtConfig(
       },
       sitemap: {
         credits: false,
-      },
-      tailwindcss: {
-        cssPath: join(currentDir, './assets/css/tailwind.css'),
       },
 
       // environments

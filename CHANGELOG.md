@@ -1,3 +1,37 @@
+## [17.0.0-beta.5](https://github.com/dargmuesli/vio/compare/17.0.0-beta.4...17.0.0-beta.5) (2025-02-18)
+
+### Bug Fixes
+
+* **nuxt:** load style relative to layer ([f4092cf](https://github.com/dargmuesli/vio/commit/f4092cfe5ea7ac7b35400d26dd8844e471adf02f))
+
+## [17.0.0-beta.4](https://github.com/dargmuesli/vio/compare/17.0.0-beta.3...17.0.0-beta.4) (2025-02-18)
+
+### Features
+
+* **style:** rename stylesheet to `vio.css` ([494faa5](https://github.com/dargmuesli/vio/commit/494faa505da4116e9d3e9ce4b2cb39860917b802))
+
+## [17.0.0-beta.3](https://github.com/dargmuesli/vio/compare/17.0.0-beta.2...17.0.0-beta.3) (2025-02-18)
+
+### Bug Fixes
+
+* **style:** add custom dark variant ([daa371c](https://github.com/dargmuesli/vio/commit/daa371c2686254a9772b1267660b40cebf10a72e))
+
+## [17.0.0-beta.2](https://github.com/dargmuesli/vio/compare/17.0.0-beta.1...17.0.0-beta.2) (2025-02-18)
+
+### Bug Fixes
+
+* **package:** use `@tailwindcss/vite` as normal dependency ([d86d729](https://github.com/dargmuesli/vio/commit/d86d729db23a009e120004235efb9387eea67287))
+
+## [17.0.0-beta.1](https://github.com/dargmuesli/vio/compare/16.0.5...17.0.0-beta.1) (2025-02-18)
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** update dependency tailwindcss to v4 (#274)
+
+### Miscellaneous Chores
+
+* **deps:** update dependency tailwindcss to v4 ([#274](https://github.com/dargmuesli/vio/issues/274)) ([53db15e](https://github.com/dargmuesli/vio/commit/53db15e9adc1ff4a83ebc8944c54d73cbffa000c))
+
 ## [16.0.5](https://github.com/dargmuesli/vio/compare/16.0.4...16.0.5) (2025-02-15)
 
 ### Bug Fixes

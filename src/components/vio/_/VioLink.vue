@@ -56,7 +56,7 @@ const route = useRoute()
 // computations
 const classes = computed(() => {
   return [
-    'rounded',
+    'rounded-sm',
     ...(props.isColored ? ['text-link-dark dark:text-link-bright'] : []),
     ...(props.isUnderlined ? ['underline'] : []),
   ].join(' ')
