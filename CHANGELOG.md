@@ -1,3 +1,9 @@
+## [17.0.0-beta.2](https://github.com/dargmuesli/vio/compare/17.0.0-beta.1...17.0.0-beta.2) (2025-02-18)
+
+### Bug Fixes
+
+* **package:** use `@tailwindcss/vite` as normal dependency ([d86d729](https://github.com/dargmuesli/vio/commit/d86d729db23a009e120004235efb9387eea67287))
+
 ## [17.0.0-beta.1](https://github.com/dargmuesli/vio/compare/16.0.5...17.0.0-beta.1) (2025-02-18)
 
 ### ⚠ BREAKING CHANGES
