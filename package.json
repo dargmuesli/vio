@@ -22,7 +22,6 @@
       "vue-demi"
     ],
     "overrides": {
-      "@nuxtjs/i18n": "9.1.1",
       "vue-tsc": "2.2.0"
     }
   },
