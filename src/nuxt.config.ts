@@ -1,6 +1,3 @@
-import { fileURLToPath } from 'node:url'
-import { dirname, join } from 'node:path'
-
 import tailwindcss from '@tailwindcss/vite'
 import { defu } from 'defu'
 
@@ -12,8 +9,6 @@ import {
   GET_CSP,
 } from './utils/constants'
 import { VIO_NUXT_BASE_CONFIG } from './utils/nuxt'
-
-const currentDir = dirname(fileURLToPath(import.meta.url))
 
 export default defineNuxtConfig(
   defu(
@@ -30,7 +25,6 @@ export default defineNuxtConfig(
         },
       },
       compatibilityDate: '2024-04-03',
-      css: [join(currentDir, './assets/css/vio.css')],
       ...(process.env.NUXT_PUBLIC_SITE_URL
         ? {}
         : {
