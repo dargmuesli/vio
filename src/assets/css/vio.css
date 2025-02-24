@@ -4,7 +4,7 @@
 /* stylelint-disable import-notation */
 /* stylelint-disable plugin/no-unsupported-browser-features */
 
-@import 'tailwindcss';
+@import 'tailwindcss' source("../../");
 @import './forms.css';
 
 @plugin "@tailwindcss/forms" {
