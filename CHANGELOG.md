@@ -1,3 +1,9 @@
+## [17.0.2-beta.1](https://github.com/dargmuesli/vio/compare/17.0.1...17.0.2-beta.1) (2025-02-24)
+
+### Bug Fixes
+
+* **style:** reference root in child layer ([f33aaa7](https://github.com/dargmuesli/vio/commit/f33aaa7e298e5d283634e9b84db7bccad0068fdd))
+
 ## [17.0.1](https://github.com/dargmuesli/vio/compare/17.0.0...17.0.1) (2025-02-24)
 
 ### Bug Fixes
