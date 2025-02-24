@@ -1,3 +1,9 @@
+## [17.0.1](https://github.com/dargmuesli/vio/compare/17.0.0...17.0.1) (2025-02-24)
+
+### Bug Fixes
+
+* **style:** specify source ([c667459](https://github.com/dargmuesli/vio/commit/c667459013a53ca4260938f695395b81fc00e7d2))
+
 ## [17.0.0](https://github.com/dargmuesli/vio/compare/16.0.5...17.0.0) (2025-02-18)
 
 ### ⚠ BREAKING CHANGES
