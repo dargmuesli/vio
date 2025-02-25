@@ -4,8 +4,10 @@
 /* stylelint-disable import-notation */
 /* stylelint-disable plugin/no-unsupported-browser-features */
 
-@import 'tailwindcss' source("../../");
+@import 'tailwindcss';
 @import './forms.css';
+
+@source "../../";
 
 @plugin "@tailwindcss/forms" {
   strategy: 'base';

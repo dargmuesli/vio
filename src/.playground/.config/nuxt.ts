@@ -6,6 +6,7 @@ const SITE_NAME = 'Vio Playground'
 export default defineNuxtConfig(
   defu(
     {
+      css: ['~/assets/css/playground.css'],
       extends: ['@dargmuesli/nuxt-vio'],
 
       // modules
