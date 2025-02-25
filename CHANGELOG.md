@@ -1,3 +1,9 @@
+## [17.0.2-beta.2](https://github.com/dargmuesli/vio/compare/17.0.2-beta.1...17.0.2-beta.2) (2025-02-25)
+
+### Bug Fixes
+
+* **style:** correct source ([7f79ad4](https://github.com/dargmuesli/vio/commit/7f79ad42455cd8cde153d7b1d85a3c9c6ba7c63f))
+
 ## [17.0.2-beta.1](https://github.com/dargmuesli/vio/compare/17.0.1...17.0.2-beta.1) (2025-02-24)
 
 ### Bug Fixes
