@@ -75,8 +75,8 @@ importers:
         specifier: 3.5.2
         version: 3.5.2(magicast@0.3.5)
       '@nuxtjs/html-validator':
-        specifier: 2.0.0
-        version: 2.0.0(magicast@0.3.5)
+        specifier: 2.1.0
+        version: 2.1.0(magicast@0.3.5)
       '@nuxtjs/i18n':
         specifier: 9.2.1
         version: 9.2.1(@vue/compiler-dom@3.5.13)(eslint@9.21.0(jiti@2.4.2))(magicast@0.3.5)(rollup@4.34.8)(typescript@5.7.3)(vue@3.5.13(typescript@5.7.3))
@@ -1176,8 +1176,8 @@ packages:
   '@nuxtjs/color-mode@3.5.2':
     resolution: {integrity: sha512-cC6RfgZh3guHBMLLjrBB2Uti5eUoGM9KyauOaYS9ETmxNWBMTvpgjvSiSJp1OFljIXPIqVTJ3xtJpSNZiO3ZaA==}
 
-  '@nuxtjs/html-validator@2.0.0':
-    resolution: {integrity: sha512-WBM2L0I+py0u66GVj4m/7eI0+o+vYI9h4P8h2mXouvHHep/DWKUh+//kzTftV2D4qlWItbVtB4lUkSfEGEWyeg==}
+  '@nuxtjs/html-validator@2.1.0':
+    resolution: {integrity: sha512-ldo8ioSsH3OEumtgwDMokTxlhjgO9FxjJWViAxisq5l/wjvaVX8SYTQ02wjtQcQQPSvS6BwgypAp400RlyFHng==}
 
   '@nuxtjs/i18n@9.2.1':
     resolution: {integrity: sha512-rSIZ0p97A/II5P1Rf5f7oboWvViQKU23rP4iOD0KrNpIDnmO796C1g+4ifTpMo38SskwVxdGVWqvcuxOJ/XmyA==}
@@ -3782,8 +3782,8 @@ packages:
     resolution: {integrity: sha512-ztqyC3kLto0e9WbNp0aeP+M3kTt+nbaIveGmUxAtZa+8iFgKLUOD4YKM5j+f3QD89bra7UeumolZHKuOXnTmeQ==}
     engines: {node: '>=8'}
 
-  html-validate@9.3.0:
-    resolution: {integrity: sha512-y+OCndJ5MTIje+753oACmVPjQF/W9NwSvP7Fvq173MuXGHATJoYkWsP04uCIB37lhIFUW0SyvlH3qZBfxW5zFA==}
+  html-validate@9.4.0:
+    resolution: {integrity: sha512-Io8vjeAf2JJJTHJDGvozVB6Vv/IZRkNRruSENg9lmLzE1gUcr77sIdtE2rzwLkBsCESDv5+nAAtk2TCer78jxA==}
     engines: {node: ^18.19.0 || >= 20.6.0}
     hasBin: true
     peerDependencies:
@@ -7983,11 +7983,11 @@ snapshots:
       - magicast
       - supports-color
 
-  '@nuxtjs/html-validator@2.0.0(magicast@0.3.5)':
+  '@nuxtjs/html-validator@2.1.0(magicast@0.3.5)':
     dependencies:
       '@nuxt/kit': 3.15.4(magicast@0.3.5)
       consola: 3.4.0
-      html-validate: 9.3.0
+      html-validate: 9.4.0
       knitwork: 1.2.0
       pathe: 2.0.3
       prettier: 3.5.2
@@ -10976,7 +10976,7 @@ snapshots:
 
   html-tags@3.3.1: {}
 
-  html-validate@9.3.0:
+  html-validate@9.4.0:
     dependencies:
       '@html-validate/stylish': 4.2.0
       '@sidvind/better-ajv-errors': 3.0.1(ajv@8.17.1)
