@@ -36,9 +36,7 @@ const title = `${props.statusCode ? `${props.statusCode} - ` : ''}${
 }`
 
 // initialization
-useHeadDefault({
-  title,
-})
+useHeadDefault({ title })
 </script>
 
 <i18n lang="yaml">
