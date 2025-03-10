@@ -24,9 +24,7 @@ const { t, locale } = useI18n()
 const router = useRouter()
 const switchLocalePath = useSwitchLocalePath()
 
-useHeadDefault({
-  title: t('title'),
-})
+useHeadDefault({ title: t('title') })
 
 const test = async () => {
   await router.push({
