@@ -18,7 +18,6 @@ export default defineNuxtConfig(
           htmlAttrs: {
             lang: 'en', // fallback data to prevent invalid html at generation
           },
-          titleTemplate: '%s', // fully set in `composables/useAppLayout.ts`
         },
         pageTransition: {
           name: 'layout',
@@ -198,7 +197,7 @@ export default defineNuxtConfig(
         initMode: 'manual',
       },
       htmlValidator: {
-        // failOnError: true, // TODO: enable once headers match requirements (https://github.com/unjs/unhead/issues/199#issuecomment-1815728703)
+        failOnError: true,
         logLevel: 'warning',
       },
       i18n: {

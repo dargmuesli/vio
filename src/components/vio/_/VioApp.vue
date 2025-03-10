@@ -58,7 +58,6 @@ defineOgImageComponent(
   },
 )
 useAppLayout()
-useFavicons()
 usePolyfills()
 useSchemaOrg([
   defineWebSite({
