@@ -1,3 +1,9 @@
+## [17.0.4](https://github.com/dargmuesli/vio/compare/17.0.3...17.0.4) (2025-03-15)
+
+### Bug Fixes
+
+* schedule release ([14f7b0d](https://github.com/dargmuesli/vio/commit/14f7b0de9ad0756e6ba5a9a5302a911d578ba5c6))
+
 ## [17.0.3](https://github.com/dargmuesli/vio/compare/17.0.2...17.0.3) (2025-03-08)
 
 ### Bug Fixes
