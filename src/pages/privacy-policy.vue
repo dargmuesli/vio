@@ -35,23 +35,23 @@
         log: true,
         contactForm: true,
         contactExternal: true,
-        comments: {
-          ip: true,
-          subscribe: true,
-          storageDuration: true,
-          legalBasis: true,
-        },
+        // comments: {
+        //   ip: true,
+        //   subscribe: true,
+        //   storageDuration: true,
+        //   legalBasis: true,
+        // },
       },
-      newsletter: {
-        data: true,
-      },
-      pluginsTools: {
-        youTube: true,
-        googleWebFonts: true,
-        fontAwesome: true,
-        googleMaps: true,
-        googleReCaptcha: true,
-      },
+      // newsletter: {
+      //   data: true,
+      // },
+      // pluginsTools: {
+      //   youTube: true,
+      //   googleWebFonts: true,
+      //   fontAwesome: true,
+      //   googleMaps: true,
+      //   googleReCaptcha: true,
+      // },
     }"
   />
 </template>
