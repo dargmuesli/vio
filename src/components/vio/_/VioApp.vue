@@ -16,17 +16,14 @@ interface Props {
 const props = withDefaults(defineProps<Props>(), {
   ogImageComponent: undefined,
 })
-const ogImageAltProp = toRef(() => props.ogImageAlt)
-const ogImageComponentProp = toRef(() => props.ogImageComponent)
 
 const { $dayjs } = useNuxtApp()
 const { locale } = useI18n()
-const siteConfig = useSiteConfig()
 
 const { loadingIds, indicateLoadingDone } = useLoadingDoneIndicator('app')
 
 // methods
-const init = () => {
+const initialize = () => {
   $dayjs.locale(locale.value)
 
   if (import.meta.client) {
@@ -49,21 +46,15 @@ onMounted(() => indicateLoadingDone())
 
 // initialization
 defineOgImageComponent(
-  ogImageComponentProp.value || 'NuxtSeo',
+  props.ogImageComponent || 'NuxtSeo',
+  {},
   {
-    description: siteConfig.description,
-  },
-  {
-    alt: ogImageAltProp.value,
+    alt: props.ogImageAlt,
   },
 )
 useAppLayout()
 usePolyfills()
-useSchemaOrg([
-  defineWebSite({
-    description: siteConfig.description,
-  }),
-])
+useSchemaOrg([defineWebSite()])
 useVioGtag()
-init()
+initialize()
 </script>
