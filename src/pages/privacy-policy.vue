@@ -55,3 +55,20 @@
     }"
   />
 </template>
+
+<script setup lang="ts">
+const { t } = useI18n()
+
+// data
+const title = t('title')
+
+// initialization
+useHeadDefault({ title })
+</script>
+
+<i18n lang="yaml">
+de:
+  title: Datenschutzerklärung
+en:
+  title: Privacy Policy
+</i18n>

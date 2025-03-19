@@ -507,9 +507,6 @@ const { t } = useI18n()
 
 // data
 const title = t('title')
-
-// initialization
-useHeadDefault({ title })
 </script>
 
 <i18n lang="yaml">
