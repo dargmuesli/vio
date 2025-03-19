@@ -108,7 +108,7 @@ export const GET_CSP = (siteUrl: string) =>
       // nuxt
       ...(process.env.NODE_ENV === 'development'
         ? {
-            'frame-src': `${siteUrl}/__nuxt_devtools__/client/`, // devtools
+            'frame-src': [`${siteUrl}/__nuxt_devtools__/client/`], // devtools
           }
         : {}),
       'connect-src': [
