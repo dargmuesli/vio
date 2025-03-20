@@ -73,7 +73,7 @@ export default defineNuxtConfig(
                     "'unsafe-inline'", // nuxt-color-mode (https://github.com/nuxt-modules/color-mode/issues/266), runtimeConfig (static)
                   ],
                 },
-                VIO_GET_CSP(SITE_URL),
+                VIO_GET_CSP({ siteUrl: new URL(SITE_URL) }),
                 nuxtConfigSecurityHeaders.contentSecurityPolicy,
               )
             }

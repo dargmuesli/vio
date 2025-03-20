@@ -14,7 +14,7 @@ export const COOKIE_CONTROL_CONSENT_COOKIE_NAME =
 export const COOKIE_PREFIX = VIO_SITE_NAME.toLocaleLowerCase()
 export const COOKIE_SEPARATOR = '_'
 export const FETCH_RETRY_AMOUNT = 3
-export const VIO_GET_CSP = (siteUrl: string) =>
+export const VIO_GET_CSP = ({ siteUrl }: { siteUrl: URL }) =>
   defu(
     {
       // Cloudflare
@@ -23,7 +23,7 @@ export const VIO_GET_CSP = (siteUrl: string) =>
             'connect-src': ['https://cloudflareinsights.com'], // analytics
             'script-src-elem': [
               'https://static.cloudflareinsights.com', // analytics
-              `${siteUrl}/cdn-cgi/`, // https://developers.cloudflare.com/fundamentals/reference/cdn-cgi-endpoint/
+              `${siteUrl}cdn-cgi/`, // https://developers.cloudflare.com/fundamentals/reference/cdn-cgi-endpoint/
             ],
           }
         : {}),
@@ -47,7 +47,7 @@ export const VIO_GET_CSP = (siteUrl: string) =>
     },
     {
       // vio
-      'manifest-src': [`${siteUrl}/site.webmanifest`],
+      'manifest-src': [`${siteUrl}site.webmanifest`],
       'script-src-elem': [
         'https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js', // ESLint plugin compat
       ],
@@ -56,7 +56,7 @@ export const VIO_GET_CSP = (siteUrl: string) =>
     //   // nuxt-link-checker
     //   ...(process.env.NODE_ENV === 'development'
     //     ? {
-    //         'connect-src': [`${siteUrl}/api/__link_checker__/inspect`],
+    //         'connect-src': [`${siteUrl}api/__link_checker__/inspect`],
     //       }
     //     : {}),
     // },
@@ -64,7 +64,7 @@ export const VIO_GET_CSP = (siteUrl: string) =>
       // nuxt-og-image
       ...(process.env.NODE_ENV === 'development'
         ? {
-            // 'connect-src': [`${siteUrl}/__og-image__/`],
+            // 'connect-src': [`${siteUrl}__og-image__/`],
             'frame-ancestors': ["'self'"],
           }
         : {}),
@@ -73,7 +73,7 @@ export const VIO_GET_CSP = (siteUrl: string) =>
     //   // nuxt-schema-org
     //   ...(process.env.NODE_ENV === 'development'
     //     ? {
-    //         'connect-src': [`${siteUrl}/__schema-org__/debug.json`],
+    //         'connect-src': [`${siteUrl}__schema-org__/debug.json`],
     //       }
     //     : {}),
     // },
@@ -82,8 +82,8 @@ export const VIO_GET_CSP = (siteUrl: string) =>
     //   ...(process.env.NODE_ENV === 'development'
     //     ? {
     //         'connect-src': [
-    //           `${siteUrl}/__robots__/debug.json`,
-    //           `${siteUrl}/__robots__/debug-path.json`,
+    //           `${siteUrl}__robots__/debug.json`,
+    //           `${siteUrl}__robots__/debug-path.json`,
     //         ],
     //       }
     //     : {}),
@@ -92,7 +92,7 @@ export const VIO_GET_CSP = (siteUrl: string) =>
     //   // nuxt-simple-sitemap
     //   ...(process.env.NODE_ENV === 'development'
     //     ? {
-    //         'connect-src': [`${siteUrl}/__sitemap__/debug.json`],
+    //         'connect-src': [`${siteUrl}__sitemap__/debug.json`],
     //       }
     //     : {}),
     // },
@@ -100,7 +100,7 @@ export const VIO_GET_CSP = (siteUrl: string) =>
     //   // nuxt-site-config
     //   ...(process.env.NODE_ENV === 'development'
     //     ? {
-    //         'connect-src': [`${siteUrl}/__site-config__/debug.json`],
+    //         'connect-src': [`${siteUrl}__site-config__/debug.json`],
     //       }
     //     : {}),
     // },
@@ -108,7 +108,7 @@ export const VIO_GET_CSP = (siteUrl: string) =>
       // nuxt
       ...(process.env.NODE_ENV === 'development'
         ? {
-            'frame-src': [`${siteUrl}/__nuxt_devtools__/client/`], // devtools
+            'frame-src': [`${siteUrl}__nuxt_devtools__/client/`], // devtools
           }
         : {}),
       'connect-src': [
@@ -128,11 +128,11 @@ export const VIO_GET_CSP = (siteUrl: string) =>
       ],
       'script-src-elem': [
         "'nonce-{{nonce}}'",
-        `${siteUrl}/_nuxt/`, // bundle
+        `${siteUrl}_nuxt/`, // bundle
       ],
       'style-src': [
         "'unsafe-inline'", // TODO: replace with "'nonce-{{nonce}}'" once Sweetalert supports it
-        "'self'", // TODO: `${siteUrl}/_nuxt/`, // bundle
+        "'self'", // TODO: `${siteUrl}_nuxt/`, // bundle
       ], // TODO: use `style-src-elem` once Playwright WebKit supports it
     },
   )
