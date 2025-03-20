@@ -1,8 +1,6 @@
 import { defu } from 'defu'
 import type { NuxtOptions } from 'nuxt/schema'
 
-import { VIO_GET_CSP } from '../../shared/utils/constants'
-
 // remove invalid `'none'`s and duplicates
 export const cleanupCsp = (
   nuxtSecurityConfiguration: Partial<NuxtOptions['security']>,

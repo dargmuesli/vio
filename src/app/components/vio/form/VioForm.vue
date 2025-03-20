@@ -43,8 +43,6 @@
 <script setup lang="ts">
 import type { BaseValidation } from '@vuelidate/core'
 
-import type { BackendError } from '../../../../shared/types/api'
-
 interface Props {
   errors?: BackendError[]
   errorsPgIds?: Record<string, string>

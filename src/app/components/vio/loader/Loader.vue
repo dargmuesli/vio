@@ -16,8 +16,6 @@
 <script setup lang="ts">
 import type { UnwrapRef } from 'vue'
 
-import type { ApiData } from '@dargmuesli/nuxt-vio/shared/types/api'
-
 interface Props {
   api: UnwrapRef<ApiData>
   errorPgIds?: Record<string, string>

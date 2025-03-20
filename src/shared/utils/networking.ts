@@ -2,8 +2,6 @@ import type { CombinedError } from '@urql/core'
 import type { H3Event } from 'h3'
 import type { Ref } from 'vue'
 
-import type { ApiData, BackendError } from '../types/api'
-
 export const getApiDataDefault = (): ApiData =>
   computed(() =>
     reactive({
