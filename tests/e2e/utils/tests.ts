@@ -77,7 +77,9 @@ export const testMetadata = async ({
           key: 'content',
           value: joinURL(
             SITE_URL,
-            `/__og-image__/${process.env.VIO_SERVER === 'static' ? 'static' : 'image'}`,
+            `/__og-image__/${
+              process.env.VIO_SERVER === 'static' ? 'static' : 'image'
+            }`,
             path,
             '/og.png',
           ),
@@ -118,7 +120,9 @@ export const testMetadata = async ({
           key: 'content',
           value: joinURL(
             SITE_URL,
-            `/__og-image__/${process.env.VIO_SERVER === 'static' ? 'static' : 'image'}`,
+            `/__og-image__/${
+              process.env.VIO_SERVER === 'static' ? 'static' : 'image'
+            }`,
             path,
             '/og.png',
           ),
@@ -136,7 +140,9 @@ export const testMetadata = async ({
           key: 'content',
           value: joinURL(
             SITE_URL,
-            `/__og-image__/${process.env.VIO_SERVER === 'static' ? 'static' : 'image'}`,
+            `/__og-image__/${
+              process.env.VIO_SERVER === 'static' ? 'static' : 'image'
+            }`,
             path,
             '/og.png',
           ),
@@ -212,11 +218,11 @@ export const testMetadata = async ({
         },
         {
           key: 'href',
-          value: '/favicon-16x16.png',
+          value: '/favicon.ico?v=zeMtipb6C9',
         },
         {
-          key: 'type',
-          value: 'image/png',
+          key: 'sizes',
+          value: '48x48',
         },
       ],
     },
@@ -229,11 +235,15 @@ export const testMetadata = async ({
         },
         {
           key: 'href',
-          value: '/favicon-32x32.png',
+          value: '/assets/static/favicon/favicon.svg?v=zeMtipb6C9',
+        },
+        {
+          key: 'sizes',
+          value: 'any',
         },
         {
           key: 'type',
-          value: 'image/png',
+          value: 'image/svg+xml',
         },
       ],
     },
@@ -246,15 +256,8 @@ export const testMetadata = async ({
         },
         {
           key: 'href',
-          value: '/apple-touch-icon.png',
-        },
-        {
-          key: 'type',
-          value: 'image/png',
-        },
-        {
-          key: 'sizes',
-          value: '180x180',
+          value:
+            '/assets/static/favicon/apple-touch-icon-180x180.png?v=zeMtipb6C9',
         },
       ],
     },
@@ -386,16 +389,6 @@ export const testMetadata = async ({
       attributes: [
         {
           key: 'name',
-          value: 'msapplication-TileColor',
-        },
-        { key: 'content', value: '#202020' },
-      ],
-    },
-    {
-      tag: 'meta',
-      attributes: [
-        {
-          key: 'name',
           value: 'theme-color',
         },
         { key: 'content', value: '#202020' },
@@ -406,41 +399,11 @@ export const testMetadata = async ({
       attributes: [
         {
           key: 'href',
-          value: '/site.webmanifest?v=bOXMwoKlJr',
+          value: '/site.webmanifest?v=zeMtipb6C9',
         },
         {
           key: 'rel',
           value: 'manifest',
-        },
-      ],
-    },
-    {
-      tag: 'link',
-      attributes: [
-        {
-          key: 'color',
-          value: '#202020',
-        },
-        {
-          key: 'href',
-          value: '/assets/static/favicon/safari-pinned-tab.svg?v=bOXMwoKlJr',
-        },
-        {
-          key: 'rel',
-          value: 'mask-icon',
-        },
-      ],
-    },
-    {
-      tag: 'link',
-      attributes: [
-        {
-          key: 'href',
-          value: '/favicon.ico?v=bOXMwoKlJr',
-        },
-        {
-          key: 'rel',
-          value: 'shortcut icon',
         },
       ],
     },
@@ -472,19 +435,6 @@ export const testMetadata = async ({
           value: 'twitter:description',
         },
         { key: 'content', value: "Vio is @dargmuesli's Nuxt layer." },
-      ],
-    },
-    {
-      tag: 'meta',
-      attributes: [
-        {
-          key: 'name',
-          value: 'msapplication-Config',
-        },
-        {
-          key: 'content',
-          value: '/assets/static/favicon/browserconfig.xml?v=bOXMwoKlJr',
-        },
       ],
     },
     {
@@ -532,7 +482,7 @@ export const testMetadata = async ({
       attributes: [
         {
           key: 'data-hid',
-          value: '3437552',
+          value: 'schema-org-graph',
         },
         { key: 'type', value: 'application/ld+json' },
       ],
@@ -551,7 +501,7 @@ export const testMetadata = async ({
   }
 
   expect(
-    await page.locator('script[data-hid="3437552"]').innerText(),
+    await page.locator('script[data-hid="schema-org-graph"]').innerText(),
   ).toMatchSnapshot(`schema-org-graph-${process.env.VIO_SERVER || 'dev'}.json`)
 
   // if (process.env.VIO_SERVER === 'static') {

@@ -3,12 +3,12 @@ import { defu } from 'defu'
 
 import {
   SITE_URL,
-  SITE_NAME,
+  VIO_SITE_NAME,
   TIMEZONE_COOKIE_NAME,
   GTAG_COOKIE_ID,
-  GET_CSP,
-} from './utils/constants'
-import { VIO_NUXT_BASE_CONFIG } from './utils/nuxt'
+  VIO_GET_CSP,
+} from './shared/utils/constants'
+import { VIO_NUXT_BASE_CONFIG } from './shared/utils/nuxt'
 
 export default defineNuxtConfig(
   defu(
@@ -18,7 +18,6 @@ export default defineNuxtConfig(
           htmlAttrs: {
             lang: 'en', // fallback data to prevent invalid html at generation
           },
-          titleTemplate: '%s', // fully set in `composables/useAppLayout.ts`
         },
         pageTransition: {
           name: 'layout',
@@ -39,6 +38,9 @@ export default defineNuxtConfig(
         timeline: {
           enabled: true,
         },
+      },
+      future: {
+        compatibilityVersion: 4,
       },
       modules: [
         '@dargmuesli/nuxt-cookie-control',
@@ -71,7 +73,7 @@ export default defineNuxtConfig(
                     "'unsafe-inline'", // nuxt-color-mode (https://github.com/nuxt-modules/color-mode/issues/266), runtimeConfig (static)
                   ],
                 },
-                GET_CSP(SITE_URL),
+                VIO_GET_CSP(SITE_URL),
                 nuxtConfigSecurityHeaders.contentSecurityPolicy,
               )
             }
@@ -120,6 +122,12 @@ export default defineNuxtConfig(
         },
       },
       vite: {
+        optimizeDeps: {
+          include: [
+            '@dargmuesli/nuxt-cookie-control/runtime/types',
+            '@vuelidate/validators',
+          ],
+        },
         plugins: [tailwindcss()],
       },
 
@@ -198,7 +206,7 @@ export default defineNuxtConfig(
         initMode: 'manual',
       },
       htmlValidator: {
-        // failOnError: true, // TODO: enable once headers match requirements (https://github.com/unjs/unhead/issues/199#issuecomment-1815728703)
+        failOnError: true,
         logLevel: 'warning',
       },
       i18n: {
@@ -247,7 +255,6 @@ export default defineNuxtConfig(
         strict: true,
       },
       site: {
-        id: 'vio',
         url: SITE_URL,
       },
       sitemap: {
@@ -309,7 +316,7 @@ export default defineNuxtConfig(
       },
     },
     VIO_NUXT_BASE_CONFIG({
-      siteName: SITE_NAME,
+      siteName: VIO_SITE_NAME,
       stagingHost: 'localhost:3000',
     }),
   ),

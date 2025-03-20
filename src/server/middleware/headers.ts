@@ -1,5 +1,3 @@
-import type { AppConfig } from '../../app.config'
-
 export default defineEventHandler(async (event) => {
   const config = useAppConfig() as AppConfig
 

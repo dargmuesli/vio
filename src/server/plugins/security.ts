@@ -1,6 +1,5 @@
 import { defu } from 'defu'
 import type { NuxtOptions } from 'nuxt/schema'
-import { GET_CSP } from '../../utils/constants'
 
 // remove invalid `'none'`s and duplicates
 export const cleanupCsp = (
@@ -36,7 +35,7 @@ export default defineNitroPlugin((nitroApp) => {
       defu(
         {
           headers: {
-            contentSecurityPolicy: GET_CSP(siteUrl),
+            contentSecurityPolicy: VIO_GET_CSP(siteUrl),
           },
         },
         routeRules['/**'],
