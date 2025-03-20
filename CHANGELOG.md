@@ -1,3 +1,9 @@
+## [18.2.0](https://github.com/dargmuesli/vio/compare/18.1.0...18.2.0) (2025-03-20)
+
+### Features
+
+* **site:** add url utility ([3c6fe0e](https://github.com/dargmuesli/vio/commit/3c6fe0e7faf4d85e1e9758e5e6ab128a5e88fff9))
+
 ## [18.1.0](https://github.com/dargmuesli/vio/compare/18.0.1...18.1.0) (2025-03-20)
 
 ### Features
