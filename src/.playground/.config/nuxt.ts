@@ -1,4 +1,4 @@
-import { VIO_NUXT_BASE_CONFIG } from '@dargmuesli/nuxt-vio/utils/nuxt'
+import { VIO_NUXT_BASE_CONFIG } from '@dargmuesli/nuxt-vio/shared/utils/nuxt'
 import { defu } from 'defu'
 
 const SITE_NAME = 'Vio Playground'
@@ -8,6 +8,9 @@ export default defineNuxtConfig(
     {
       css: ['~/assets/css/playground.css'],
       extends: ['@dargmuesli/nuxt-vio'],
+      future: {
+        compatibilityVersion: 4,
+      },
 
       // modules
       security: {
@@ -20,7 +23,6 @@ export default defineNuxtConfig(
         },
       },
       site: {
-        id: 'vio-playground',
         twitter: '@dargmuesli',
       },
     },
