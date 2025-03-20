@@ -1,3 +1,9 @@
+## [18.1.0](https://github.com/dargmuesli/vio/compare/18.0.1...18.1.0) (2025-03-20)
+
+### Features
+
+* **node:** add environment variables ([4a995d0](https://github.com/dargmuesli/vio/commit/4a995d04fa3825e9090d5226b7056d914f819493))
+
 ## [18.0.1](https://github.com/dargmuesli/vio/compare/18.0.0...18.0.1) (2025-03-20)
 
 ### Bug Fixes
