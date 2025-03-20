@@ -1,3 +1,25 @@
+## [18.0.0](https://github.com/dargmuesli/vio/compare/17.0.4...18.0.0) (2025-03-20)
+
+### ⚠ BREAKING CHANGES
+
+* **nuxt:** refactor to compatibility version 4
+* **privacy-policy:** change content defaults
+* **nuxt:** upgrade to v3.16.0
+
+### Features
+
+* **nuxt:** refactor to compatibility version 4 ([c2476ad](https://github.com/dargmuesli/vio/commit/c2476ad4359659a95047ada50dab47fdb4d7a6db))
+* **privacy-policy:** change content defaults ([84c99d6](https://github.com/dargmuesli/vio/commit/84c99d6bf8fb9e6456a56bbc6ba773a55c3e2c3e))
+
+### Bug Fixes
+
+* **page:** don't set head title in components ([10d4153](https://github.com/dargmuesli/vio/commit/10d4153bcbd83cb12a6cc248ae64672397d2b47e))
+* **security:** correct csp array for frame source ([a37e795](https://github.com/dargmuesli/vio/commit/a37e79565ac16c91b413150562b622c1e67d7209))
+
+### Code Refactoring
+
+* **nuxt:** upgrade to v3.16.0 ([f24ef42](https://github.com/dargmuesli/vio/commit/f24ef42d0c02944b9490bce9e70a9a8888cbcc42))
+
 ## [17.0.4](https://github.com/dargmuesli/vio/compare/17.0.3...17.0.4) (2025-03-15)
 
 ### Bug Fixes
