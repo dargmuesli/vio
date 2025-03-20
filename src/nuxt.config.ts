@@ -14,6 +14,11 @@ export default defineNuxtConfig(
   defu(
     {
       app: {
+        head: {
+          htmlAttrs: {
+            lang: 'en', // fallback data to prevent invalid html at generation
+          },
+        },
         pageTransition: {
           name: 'layout',
         },
