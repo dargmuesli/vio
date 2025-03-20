@@ -13,7 +13,7 @@ export const useAppLayout = () => {
     })
 
     // favicon (https://vite-pwa-org.netlify.app/assets-generator/)
-    useServerHeadSafe({
+    useHeadSafe({
       link: [
         {
           href: `/site.webmanifest?v=${CACHE_VERSION}`,
