@@ -61,8 +61,8 @@ export interface Breadcrumb {
 }
 
 interface Props {
-  prefixes?: Array<Breadcrumb>
-  suffixes?: Array<Breadcrumb>
+  prefixes?: Breadcrumb[]
+  suffixes?: Breadcrumb[]
 }
 withDefaults(defineProps<Props>(), {
   prefixes: undefined,

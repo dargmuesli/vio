@@ -14,7 +14,7 @@
 
 <script setup lang="ts">
 interface Props {
-  span: Array<string | Array<string>>
+  span: (string | string[])[]
 }
 withDefaults(defineProps<Props>(), {})
 </script>
