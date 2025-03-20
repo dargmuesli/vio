@@ -1,3 +1,9 @@
+## [18.0.1](https://github.com/dargmuesli/vio/compare/18.0.0...18.0.1) (2025-03-20)
+
+### Bug Fixes
+
+* **head:** drop deprecated composable ([9a58d66](https://github.com/dargmuesli/vio/commit/9a58d66db486e61e7b1bfbdc21cbc29e990884ac))
+
 ## [18.0.0](https://github.com/dargmuesli/vio/compare/17.0.4...18.0.0) (2025-03-20)
 
 ### ⚠ BREAKING CHANGES
