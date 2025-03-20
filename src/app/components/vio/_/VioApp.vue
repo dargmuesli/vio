@@ -10,7 +10,6 @@
 
 <script setup lang="ts">
 interface Props {
-  ogImageAlt: string
   ogImageComponent?: string
 }
 const props = withDefaults(defineProps<Props>(), {
@@ -18,7 +17,7 @@ const props = withDefaults(defineProps<Props>(), {
 })
 
 const { $dayjs } = useNuxtApp()
-const { locale } = useI18n()
+const { locale, t } = useI18n()
 
 const { loadingIds, indicateLoadingDone } = useLoadingDoneIndicator('app')
 
@@ -49,7 +48,7 @@ defineOgImageComponent(
   props.ogImageComponent || 'NuxtSeo',
   {},
   {
-    alt: props.ogImageAlt,
+    alt: t('globalSeoOgImageAlt'),
   },
 )
 useAppLayout()

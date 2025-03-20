@@ -1,4 +1,4 @@
-import type { AppConfig } from '../../app.config'
+import type { AppConfig } from '../../app/app.config'
 
 export default defineEventHandler(async (event) => {
   const config = useAppConfig() as AppConfig

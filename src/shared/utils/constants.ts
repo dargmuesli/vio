@@ -2,7 +2,7 @@ import { DEFAULTS } from '@dargmuesli/nuxt-cookie-control/runtime/types'
 import { helpers } from '@vuelidate/validators'
 import { defu } from 'defu'
 
-export const SITE_NAME = 'Vio'
+export const VIO_SITE_NAME = 'Vio'
 
 export const SITE_URL =
   process.env.SITE_URL ||
@@ -11,10 +11,10 @@ export const SITE_URL =
 export const CACHE_VERSION = 'bOXMwoKlJr'
 export const COOKIE_CONTROL_CONSENT_COOKIE_NAME =
   DEFAULTS.cookieNameIsConsentGiven
-export const COOKIE_PREFIX = SITE_NAME.toLocaleLowerCase()
+export const COOKIE_PREFIX = VIO_SITE_NAME.toLocaleLowerCase()
 export const COOKIE_SEPARATOR = '_'
 export const FETCH_RETRY_AMOUNT = 3
-export const GET_CSP = (siteUrl: string) =>
+export const VIO_GET_CSP = (siteUrl: string) =>
   defu(
     {
       // Cloudflare
@@ -167,7 +167,7 @@ export const REGEX_UUID =
   /^[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}$/
 export const TESTING_COOKIE_NAME = 'vio_is-testing'
 export const TIMEZONE_COOKIE_NAME = [COOKIE_PREFIX, 'tz'].join(COOKIE_SEPARATOR)
-export const TIMEZONE_HEADER_KEY = `X-${SITE_NAME}-Timezone`
+export const TIMEZONE_HEADER_KEY = `X-${VIO_SITE_NAME}-Timezone`
 export const TITLE_TEMPLATE = ({
   siteName,
   title,

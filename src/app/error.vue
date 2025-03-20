@@ -24,7 +24,8 @@ const errorProp = toRef(() => props.error)
 // initialization
 useAppLayout()
 
-useServerHeadSafe({
+useHeadDefault({
   title: `${errorProp.value.statusCode} - ${errorProp.value.message}`,
 })
+defineOgImageComponent('NuxtSeo', {}, {})
 </script>

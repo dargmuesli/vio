@@ -3,7 +3,7 @@ import { consola } from 'consola'
 import { type H3Event, setCookie } from 'h3'
 import { decodeJwt } from 'jose'
 
-import { useVioAuthStore } from '../store/auth'
+import { useVioAuthStore } from '../../app/store/auth'
 import { JWT_NAME } from './constants'
 
 export const getJwtFromCookie = () => {

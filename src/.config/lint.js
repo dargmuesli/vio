@@ -1,6 +1,5 @@
 // @ts-check
 
-// @ts-ignore
 import vueI18n from '@intlify/eslint-plugin-vue-i18n'
 import eslintPluginCompat from 'eslint-plugin-compat'
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
@@ -9,7 +8,7 @@ import globals from 'globals'
 import { createJiti } from 'jiti'
 
 const jiti = createJiti(import.meta.url)
-const constants = await jiti.import('../utils/constants.ts')
+const constants = await jiti.import('../shared/utils/constants.ts')
 // @ts-ignore
 const POLYFILLS = constants.POLYFILLS
 

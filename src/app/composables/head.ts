@@ -25,13 +25,13 @@ export const useAppLayout = () => {
           sizes: '48x48',
         },
         {
-          href: `/favicon.svg?v=${CACHE_VERSION}`,
+          href: `/assets/static/favicon/favicon.svg?v=${CACHE_VERSION}`,
           rel: 'icon',
           sizes: 'any',
           type: 'image/svg+xml',
         },
         {
-          href: `/apple-touch-icon-180x180.png?v=${CACHE_VERSION}`,
+          href: `/assets/static/favicon/apple-touch-icon-180x180.png?v=${CACHE_VERSION}`,
           rel: 'apple-touch-icon',
         },
       ],
