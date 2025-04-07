@@ -10,8 +10,8 @@
     "eslint-plugin-prettier": "5.2.6",
     "lodash-es": "4.17.21",
     "typescript": "5.8.3",
-    "typescript-eslint": "8.29.0",
-    "ufo": "1.5.4"
+    "typescript-eslint": "8.29.1",
+    "ufo": "1.6.0"
   },
   "engines": {
     "node": "22"
