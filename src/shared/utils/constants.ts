@@ -1,4 +1,4 @@
-import { DEFAULTS } from '@dargmuesli/nuxt-cookie-control/runtime/types'
+import { DEFAULTS } from '@dargmuesli/nuxt-cookie-control/runtime/types.js'
 import { helpers } from '@vuelidate/validators'
 import { defu } from 'defu'
 
