@@ -48,8 +48,8 @@ importers:
   src:
     dependencies:
       '@dargmuesli/nuxt-cookie-control':
-        specifier: 8.6.1
-        version: 8.6.1(magicast@0.3.5)(webpack@5.98.0(esbuild@0.25.2))
+        specifier: 9.0.0
+        version: 9.0.0(magicast@0.3.5)(webpack@5.98.0(esbuild@0.25.2))
       '@eslint/compat':
         specifier: 1.2.8
         version: 1.2.8(eslint@9.24.0(jiti@2.4.2))
@@ -506,8 +506,8 @@ packages:
     peerDependencies:
       postcss-selector-parser: ^7.0.0
 
-  '@dargmuesli/nuxt-cookie-control@8.6.1':
-    resolution: {integrity: sha512-OE+1v/pByVsjSms3c+9ruaK+1cFasHy/i/1zwivVM2JEpZ6Ou8oC91uCTvUTWJ2KDGQQl0vCFKESx/9LYhbtYw==}
+  '@dargmuesli/nuxt-cookie-control@9.0.0':
+    resolution: {integrity: sha512-HPFZ2QSVjiU7T+mhjhpdHtC0AFVmNZYVgEXa8caPHHKOsuvyDD6/sunyWM6749G5xeqQ6qO7VpcoYLF8WLyMkA==}
     engines: {node: '>=16'}
 
   '@dual-bundle/import-meta-resolve@4.1.0':
@@ -6968,7 +6968,7 @@ snapshots:
     dependencies:
       postcss-selector-parser: 7.1.0
 
-  '@dargmuesli/nuxt-cookie-control@8.6.1(magicast@0.3.5)(webpack@5.98.0(esbuild@0.25.2))':
+  '@dargmuesli/nuxt-cookie-control@9.0.0(magicast@0.3.5)(webpack@5.98.0(esbuild@0.25.2))':
     dependencies:
       '@nuxt/kit': 3.16.2(magicast@0.3.5)
       css-vars-ponyfill: 2.4.9
