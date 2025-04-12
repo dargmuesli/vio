@@ -1,3 +1,9 @@
+## [18.2.2](https://github.com/dargmuesli/vio/compare/18.2.1...18.2.2) (2025-04-12)
+
+### Bug Fixes
+
+* schedule release ([d7d4fd0](https://github.com/dargmuesli/vio/commit/d7d4fd0ab8190d3598d7db962c894da6389a1081))
+
 ## [18.2.1](https://github.com/dargmuesli/vio/compare/18.2.0...18.2.1) (2025-03-29)
 
 ### Bug Fixes
