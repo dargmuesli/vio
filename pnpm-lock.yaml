@@ -48,8 +48,8 @@ importers:
   src:
     dependencies:
       '@dargmuesli/nuxt-cookie-control':
-        specifier: 9.0.1
-        version: 9.0.1(magicast@0.3.5)(webpack@5.99.6(esbuild@0.25.2))
+        specifier: 9.0.2
+        version: 9.0.2(magicast@0.3.5)(webpack@5.99.6(esbuild@0.25.2))
       '@eslint/compat':
         specifier: 1.2.8
         version: 1.2.8(eslint@9.25.1(jiti@2.4.2))
@@ -129,8 +129,8 @@ importers:
         specifier: 5.2.6
         version: 5.2.6(@types/eslint@9.6.1)(eslint-config-prettier@10.1.2(eslint@9.25.1(jiti@2.4.2)))(eslint@9.25.1(jiti@2.4.2))(prettier@3.5.3)
       eslint-plugin-yml:
-        specifier: 1.17.0
-        version: 1.17.0(eslint@9.25.1(jiti@2.4.2))
+        specifier: 1.18.0
+        version: 1.18.0(eslint@9.25.1(jiti@2.4.2))
       globals:
         specifier: 16.0.0
         version: 16.0.0
@@ -517,8 +517,8 @@ packages:
   '@dabh/diagnostics@2.0.3':
     resolution: {integrity: sha512-hrlQOIi7hAfzsMqlGSFyVucrx38O+j6wiGOf//H2ecvIEqYN4ADBSS2iLMh5UFyDunCNniUIPk/q3riFv45xRA==}
 
-  '@dargmuesli/nuxt-cookie-control@9.0.1':
-    resolution: {integrity: sha512-fA4nuhm8rIMys0AtSU7e4jzjdPga4AJ+WSWljFavWVBadfPCrn7UR7pkdU0cUXDPSaoQriV/gU+kYV6O/wDxSA==}
+  '@dargmuesli/nuxt-cookie-control@9.0.2':
+    resolution: {integrity: sha512-0wrBecOQx9Wi32zqxdOibVQGqgngFITwRw+S0gvdubnbRZz+i4rva2FUDhc6TURdQgqjI1zcRiQOOxO2jlJpAw==}
     engines: {node: '>=16'}
 
   '@dependents/detective-less@4.1.0':
@@ -3817,8 +3817,8 @@ packages:
       eslint: ^8.57.0 || ^9.0.0
       vue-eslint-parser: ^10.0.0
 
-  eslint-plugin-yml@1.17.0:
-    resolution: {integrity: sha512-Q3LXFRnNpGYAK/PM0BY1Xs0IY1xTLfM0kC986nNQkx1l8tOGz+YS50N6wXkAJkrBpeUN9OxEMB7QJ+9MTDAqIQ==}
+  eslint-plugin-yml@1.18.0:
+    resolution: {integrity: sha512-9NtbhHRN2NJa/s3uHchO3qVVZw0vyOIvWlXWGaKCr/6l3Go62wsvJK5byiI6ZoYztDsow4GnS69BZD3GnqH3hA==}
     engines: {node: ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: '>=6.0.0'
@@ -7813,7 +7813,7 @@ snapshots:
       enabled: 2.0.0
       kuler: 2.0.0
 
-  '@dargmuesli/nuxt-cookie-control@9.0.1(magicast@0.3.5)(webpack@5.99.6(esbuild@0.25.2))':
+  '@dargmuesli/nuxt-cookie-control@9.0.2(magicast@0.3.5)(webpack@5.99.6(esbuild@0.25.2))':
     dependencies:
       '@nuxt/kit': 3.16.2(magicast@0.3.5)
       css-vars-ponyfill: 2.4.9
@@ -11482,7 +11482,7 @@ snapshots:
       vue-eslint-parser: 10.1.3(eslint@9.25.1(jiti@2.4.2))
       xml-name-validator: 4.0.0
 
-  eslint-plugin-yml@1.17.0(eslint@9.25.1(jiti@2.4.2)):
+  eslint-plugin-yml@1.18.0(eslint@9.25.1(jiti@2.4.2)):
     dependencies:
       debug: 4.4.0
       escape-string-regexp: 4.0.0
