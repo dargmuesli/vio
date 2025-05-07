@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@dargmuesli/nuxt-cookie-control": "9.0.2",
+    "@dargmuesli/nuxt-cookie-control": "9.0.3",
     "@eslint/compat": "1.2.9",
     "@heroicons/vue": "2.2.0",
     "@http-util/status-i18n": "0.9.0",
@@ -26,25 +26,25 @@
     "eslint": "9.26.0",
     "eslint-config-prettier": "10.1.2",
     "eslint-plugin-compat": "6.0.2",
-    "eslint-plugin-prettier": "5.3.1",
+    "eslint-plugin-prettier": "5.4.0",
     "eslint-plugin-yml": "1.18.0",
     "globals": "16.0.0",
     "jiti": "2.4.2",
-    "jose": "6.0.10",
+    "jose": "6.0.11",
     "nuxt-gtag": "3.0.2",
     "nuxt-security": "2.2.0",
     "sweetalert2": "11.21.0",
     "vue-tsc": "2.2.10"
   },
   "devDependencies": {
-    "@types/node": "22.15.3",
+    "@types/node": "22.15.14",
     "@urql/devtools": "2.0.3",
     "@urql/exchange-graphcache": "7.2.3",
     "consola": "3.4.2",
     "defu": "6.1.4",
     "h3": "1.15.3",
     "lodash-es": "4.17.21",
-    "nuxt": "3.17.1",
+    "nuxt": "3.17.2",
     "pinia": "3.0.2",
     "prettier": "3.5.3",
     "prettier-plugin-tailwindcss": "0.6.11",
@@ -74,7 +74,7 @@
   "main": "nuxt.config.ts",
   "name": "@dargmuesli/nuxt-vio",
   "peerDependencies": {
-    "nuxt": "3.17.1",
+    "nuxt": "3.17.2",
     "vue": "3.5.13",
     "vue-router": "4.5.1"
   },
