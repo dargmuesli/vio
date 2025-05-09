@@ -24,7 +24,7 @@
     "clipboardy": "4.0.0",
     "dayjs": "2.0.0-alpha.4",
     "eslint": "9.26.0",
-    "eslint-config-prettier": "10.1.3",
+    "eslint-config-prettier": "10.1.5",
     "eslint-plugin-compat": "6.0.2",
     "eslint-plugin-prettier": "5.4.0",
     "eslint-plugin-yml": "1.18.0",
