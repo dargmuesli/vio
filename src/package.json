@@ -15,7 +15,7 @@
     "@pinia/nuxt": "0.11.0",
     "@tailwindcss/forms": "0.5.10",
     "@tailwindcss/typography": "0.5.16",
-    "@tailwindcss/vite": "4.1.5",
+    "@tailwindcss/vite": "4.1.6",
     "@types/lodash-es": "4.17.12",
     "@urql/core": "5.1.1",
     "@urql/vue": "1.4.3",
@@ -54,7 +54,7 @@
     "stylelint-config-recommended-vue": "1.6.0",
     "stylelint-config-standard": "38.0.0",
     "stylelint-no-unsupported-browser-features": "8.0.4",
-    "tailwindcss": "4.1.5",
+    "tailwindcss": "4.1.6",
     "vue": "3.5.13",
     "vue-router": "4.5.1"
   },
