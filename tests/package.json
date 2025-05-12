@@ -10,7 +10,7 @@
     "eslint-plugin-prettier": "5.4.0",
     "lodash-es": "4.17.21",
     "typescript": "5.8.3",
-    "typescript-eslint": "8.32.0",
+    "typescript-eslint": "8.32.1",
     "ufo": "1.6.1"
   },
   "engines": {
