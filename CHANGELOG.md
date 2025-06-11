@@ -1,3 +1,9 @@
+## [18.2.7](https://github.com/dargmuesli/vio/compare/18.2.6...18.2.7) (2025-06-11)
+
+### Bug Fixes
+
+* prefer `nitro.static` over `_generate` ([f8bcdaa](https://github.com/dargmuesli/vio/commit/f8bcdaa0ddbd41cc8c56b9d3909a334833a4719e))
+
 ## [18.2.6](https://github.com/dargmuesli/vio/compare/18.2.5...18.2.6) (2025-06-07)
 
 ### Bug Fixes
