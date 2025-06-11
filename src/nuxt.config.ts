@@ -54,7 +54,7 @@ export default defineNuxtConfig(
         '@pinia/nuxt',
         'nuxt-gtag',
         (_options, nuxt) => {
-          if (nuxt.options._generate) {
+          if (nuxt.options.nitro.static) {
             nuxt.options.features.inlineStyles = false
           }
         },
@@ -66,7 +66,7 @@ export default defineNuxtConfig(
             typeof nuxtConfigSecurityHeaders !== 'boolean' &&
             nuxtConfigSecurityHeaders.contentSecurityPolicy
           ) {
-            if (nuxt.options._generate) {
+            if (nuxt.options.nitro.static) {
               nuxtConfigSecurityHeaders.contentSecurityPolicy = defu(
                 {
                   'script-src-elem': [
