@@ -1,3 +1,9 @@
+## [18.3.0](https://github.com/dargmuesli/vio/compare/18.2.8...18.3.0) (2025-06-23)
+
+### Features
+
+* **composables:** use id instead of route for loading indicator ([38ab102](https://github.com/dargmuesli/vio/commit/38ab102e6301b7e5c41885e244114ea5a883a7a4))
+
 ## [18.2.8](https://github.com/dargmuesli/vio/compare/18.2.7...18.2.8) (2025-06-21)
 
 ### Bug Fixes
