@@ -1,8 +1,6 @@
 export const useLoadingDoneIndicator = (id?: string) => {
-  const route = useRoute()
   const loadingIds = useState<string[]>('loadingIds', () => [])
-
-  const loadingId = id || route.name?.toString()
+  const loadingId = id || useId()
 
   if (!loadingId)
     throw createError({ statusCode: 500, statusMessage: 'Loading id missing!' })
