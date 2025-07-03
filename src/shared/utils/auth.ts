@@ -1,6 +1,7 @@
 import type { Client } from '@urql/vue'
 import { consola } from 'consola'
-import { type H3Event, setCookie } from 'h3'
+import { setCookie } from 'h3'
+import type { H3Event } from 'h3'
 import { decodeJwt } from 'jose'
 
 import { useVioAuthStore } from '../../app/stores/auth'
