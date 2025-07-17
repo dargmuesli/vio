@@ -3,7 +3,7 @@ import Swal from 'sweetalert2'
 import type { Ref } from 'vue'
 
 export const useFireError = () => {
-  const { t } = useI18n()
+  const { t } = useI18n({ useScope: 'global' })
 
   return ({ error }: { error: Error }, api?: Ref<{ errors: Error[] }>) => {
     Swal.fire({
