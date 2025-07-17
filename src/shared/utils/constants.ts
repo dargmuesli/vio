@@ -138,7 +138,6 @@ export const VIO_GET_CSP = ({ siteUrl }: { siteUrl: URL }) =>
   )
 export const GTAG_COOKIE_ID = 'ga'
 export const I18N_MODULE_CONFIG = {
-  lazy: true,
   locales: [
     {
       code: 'en' as const,
