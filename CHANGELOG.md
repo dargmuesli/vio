@@ -1,3 +1,9 @@
+## [18.3.5](https://github.com/dargmuesli/vio/compare/18.3.4...18.3.5) (2025-07-17)
+
+### Bug Fixes
+
+* **composables:** correct i18n scope ([0967bc9](https://github.com/dargmuesli/vio/commit/0967bc998e01e91dca125406eeac4e1b6397ffa8))
+
 ## [18.3.4](https://github.com/dargmuesli/vio/compare/18.3.3...18.3.4) (2025-07-17)
 
 ### Bug Fixes
