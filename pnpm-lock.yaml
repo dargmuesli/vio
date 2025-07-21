@@ -78,8 +78,8 @@ importers:
         specifier: 2.1.0
         version: 2.1.0(magicast@0.3.5)
       '@nuxtjs/i18n':
-        specifier: 10.0.0
-        version: 10.0.0(@vue/compiler-dom@3.5.17)(db0@0.3.2)(eslint@9.31.0(jiti@2.4.2))(ioredis@5.6.1)(magicast@0.3.5)(rollup@4.45.0)(vue@3.5.17(typescript@5.8.3))
+        specifier: 10.0.1
+        version: 10.0.1(@vue/compiler-dom@3.5.17)(db0@0.3.2)(eslint@9.31.0(jiti@2.4.2))(ioredis@5.6.1)(magicast@0.3.5)(rollup@4.45.0)(vue@3.5.17(typescript@5.8.3))
       '@nuxtjs/seo':
         specifier: 3.1.0
         version: 3.1.0(@unhead/vue@2.0.12(vue@3.5.17(typescript@5.8.3)))(db0@0.3.2)(h3@1.15.3)(ioredis@5.6.1)(magicast@0.3.5)(rollup@4.45.0)(unstorage@1.16.1(db0@0.3.2)(ioredis@5.6.1))(vite@7.0.4(@types/node@22.16.5)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.43.1)(yaml@2.8.0))(vue@3.5.17(typescript@5.8.3))
@@ -1378,8 +1378,8 @@ packages:
   '@nuxtjs/html-validator@2.1.0':
     resolution: {integrity: sha512-ldo8ioSsH3OEumtgwDMokTxlhjgO9FxjJWViAxisq5l/wjvaVX8SYTQ02wjtQcQQPSvS6BwgypAp400RlyFHng==}
 
-  '@nuxtjs/i18n@10.0.0':
-    resolution: {integrity: sha512-QPpbFn55LpXEynOSxBxQoIaxUE8Y/W8rFazfsY/A2eVXJCgKIwz8lsEf54+GEj59kO1jZc4InACeFr7Q2suOYA==}
+  '@nuxtjs/i18n@10.0.1':
+    resolution: {integrity: sha512-tYsPNtQAGc9aZtynoOe0vhe4b8geogCv4KBHJow8A8oCGn5P4CSqXJr35y/bEsxqSQ7pdFshvFo2Iz/9fLPA6A==}
     engines: {node: '>=20.11.1'}
 
   '@nuxtjs/robots@5.4.0':
@@ -9139,7 +9139,7 @@ snapshots:
       - magicast
       - vitest
 
-  '@nuxtjs/i18n@10.0.0(@vue/compiler-dom@3.5.17)(db0@0.3.2)(eslint@9.31.0(jiti@2.4.2))(ioredis@5.6.1)(magicast@0.3.5)(rollup@4.45.0)(vue@3.5.17(typescript@5.8.3))':
+  '@nuxtjs/i18n@10.0.1(@vue/compiler-dom@3.5.17)(db0@0.3.2)(eslint@9.31.0(jiti@2.4.2))(ioredis@5.6.1)(magicast@0.3.5)(rollup@4.45.0)(vue@3.5.17(typescript@5.8.3))':
     dependencies:
       '@intlify/core': 11.1.10
       '@intlify/h3': 0.6.1
@@ -9756,7 +9756,7 @@ snapshots:
     dependencies:
       '@types/estree': 1.0.8
       estree-walker: 2.0.2
-      picomatch: 4.0.2
+      picomatch: 4.0.3
     optionalDependencies:
       rollup: 4.45.0
 
@@ -10370,7 +10370,7 @@ snapshots:
       local-pkg: 1.1.1
       magic-string-ast: 0.7.1
       pathe: 2.0.3
-      picomatch: 4.0.2
+      picomatch: 4.0.3
     optionalDependencies:
       vue: 3.5.17(typescript@5.8.3)
 
@@ -13447,7 +13447,7 @@ snapshots:
       std-env: 3.9.0
       ufo: 1.6.1
       ultrahtml: 1.6.0
-      unstorage: 1.16.0(db0@0.3.2)(ioredis@5.6.1)
+      unstorage: 1.16.1(db0@0.3.2)(ioredis@5.6.1)
     transitivePeerDependencies:
       - '@azure/app-configuration'
       - '@azure/cosmos'
@@ -15467,6 +15467,7 @@ snapshots:
     optionalDependencies:
       db0: 0.3.2
       ioredis: 5.6.1
+    optional: true
 
   unstorage@1.16.1(db0@0.3.2)(ioredis@5.6.1):
     dependencies:
