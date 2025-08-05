@@ -8,8 +8,21 @@ export default defineNuxtConfig(
     {
       css: ['~/assets/css/playground.css'],
       extends: ['@dargmuesli/nuxt-vio'],
-      future: {
-        compatibilityVersion: 4,
+      vite: {
+        optimizeDeps: {
+          include: [
+            '@dargmuesli/nuxt-cookie-control/runtime/types.js',
+            '@http-util/status-i18n',
+            '@vuelidate/validators',
+            'dayjs',
+            'dayjs/locale/de',
+            'dayjs/plugin/isSameOrBefore',
+            'dayjs/plugin/localizedFormat',
+            'dayjs/plugin/relativeTime',
+            'dayjs/plugin/timezone',
+            'dayjs/plugin/utc',
+          ],
+        },
       },
 
       // modules
