@@ -39,9 +39,6 @@ export default defineNuxtConfig(
           enabled: true,
         },
       },
-      future: {
-        compatibilityVersion: 4,
-      },
       modules: [
         '@dargmuesli/nuxt-cookie-control',
         '@nuxt/devtools',

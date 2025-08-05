@@ -8,9 +8,6 @@ export default defineNuxtConfig(
     {
       css: ['~/assets/css/playground.css'],
       extends: ['@dargmuesli/nuxt-vio'],
-      future: {
-        compatibilityVersion: 4,
-      },
       vite: {
         optimizeDeps: {
           include: [
