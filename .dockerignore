@@ -2,11 +2,11 @@
 node_modules/
 src/.nuxt/
 src/.output/
-src/.playground/.nuxt/
-src/.playground/.output/
-src/.playground/dist/
-src/.playground/node_modules/
-src/.playground/.env/
+src/playground/.nuxt/
+src/playground/.output/
+src/playground/dist/
+src/playground/node_modules/
+src/playground/.env/
 src/dist/
 src/node_modules/
 src/.env

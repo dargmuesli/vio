@@ -143,7 +143,7 @@ RUN pnpm -r rebuild
 
 FROM test-e2e-prepare AS test-e2e-node
 
-COPY --from=build-node /srv/app/src/.playground/.output ./src/.playground/.output
+COPY --from=build-node /srv/app/src/playground/.output ./src/playground/.output
 
 RUN pnpm --dir tests run test:e2e:server:node
 
@@ -158,7 +158,7 @@ ENV SITE_URL=${SITE_URL}
 ARG PORT=3002
 ENV PORT=${PORT}
 
-COPY --from=build-static /srv/app/src/.playground/.output/public ./src/.playground/.output/public
+COPY --from=build-static /srv/app/src/playground/.output/public ./src/playground/.output/public
 
 RUN pnpm --dir tests run test:e2e:server:static
 
@@ -169,7 +169,7 @@ RUN pnpm --dir tests run test:e2e:server:static
 FROM base-image AS collect
 
 # COPY --from=build-node /srv/app/src/.output ./.output
-# COPY --from=build-node /srv/app/src/.playground/.output ./.output
+# COPY --from=build-node /srv/app/src/playground/.output ./.output
 COPY --from=build-node /srv/app/src/package.json /tmp/package.json
 COPY --from=build-static /srv/app/src/package.json /tmp/package.json
 COPY --from=lint /srv/app/package.json /tmp/package.json
