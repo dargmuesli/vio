@@ -122,21 +122,6 @@ export default defineNuxtConfig(
         },
       },
       vite: {
-        optimizeDeps: {
-          include: [
-            '@dargmuesli/nuxt-cookie-control/runtime/types',
-            '@vuelidate/validators',
-            'dayjs',
-            'dayjs/locale/de',
-            'dayjs/plugin/isSameOrBefore',
-            'dayjs/plugin/localizedFormat',
-            'dayjs/plugin/relativeTime',
-            'dayjs/plugin/timezone',
-            'dayjs/plugin/utc',
-            '@http-util/status-i18n',
-            '@dargmuesli/nuxt-cookie-control/runtime/types.js',
-          ],
-        },
         plugins: [tailwindcss()],
       },
 
