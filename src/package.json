@@ -39,7 +39,7 @@
   "devDependencies": {
     "@types/node": "22.17.1",
     "@urql/devtools": "2.0.3",
-    "@urql/exchange-graphcache": "7.2.4",
+    "@urql/exchange-graphcache": "8.1.0",
     "consola": "3.4.2",
     "defu": "6.1.4",
     "h3": "1.15.4",
