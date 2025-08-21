@@ -36,7 +36,7 @@ test.describe('headers middleware', () => {
 
     if (process.env.NODE_ENV === 'production') {
       expect(headers['strict-transport-security']).toStrictEqual(
-        'max-age=31536000; includeSubDomains; preload;',
+        'max-age=31536000; includeSubDomains; preload',
       )
     } else {
       expect('strict-transport-security' in headers).toBeFalsy()

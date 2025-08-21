@@ -32,7 +32,7 @@
     "jiti": "2.5.1",
     "jose": "6.0.12",
     "nuxt-gtag": "4.0.0",
-    "nuxt-security": "2.3.0",
+    "nuxt-security": "2.4.0",
     "sweetalert2": "11.22.4",
     "vue-tsc": "3.0.6"
   },
@@ -55,7 +55,7 @@
     "stylelint-config-standard": "39.0.0",
     "stylelint-no-unsupported-browser-features": "8.0.4",
     "tailwindcss": "4.1.12",
-    "vue": "3.5.18",
+    "vue": "3.5.19",
     "vue-router": "4.5.1"
   },
   "engines": {
@@ -75,7 +75,7 @@
   "name": "@dargmuesli/nuxt-vio",
   "peerDependencies": {
     "nuxt": "4.0.3",
-    "vue": "3.5.18",
+    "vue": "3.5.19",
     "vue-router": "4.5.1"
   },
   "publishConfig": {
