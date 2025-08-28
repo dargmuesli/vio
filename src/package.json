@@ -30,7 +30,7 @@
     "eslint-plugin-yml": "1.18.0",
     "globals": "16.3.0",
     "jiti": "2.5.1",
-    "jose": "6.0.13",
+    "jose": "6.1.0",
     "nuxt-gtag": "4.0.0",
     "nuxt-security": "2.4.0",
     "sweetalert2": "11.22.5",
