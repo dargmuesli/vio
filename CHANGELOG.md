@@ -1,3 +1,9 @@
+## [18.3.10](https://github.com/dargmuesli/vio/compare/18.3.9...18.3.10) (2025-09-05)
+
+### Bug Fixes
+
+* **deps:** broaden peer dependency ranges ([08b2c6c](https://github.com/dargmuesli/vio/commit/08b2c6c6d311c12d8a705fc7056759f6daacce55))
+
 ## [18.3.9](https://github.com/dargmuesli/vio/compare/18.3.8...18.3.9) (2025-08-23)
 
 ### Bug Fixes
