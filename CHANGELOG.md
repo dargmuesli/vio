@@ -1,3 +1,9 @@
+## [18.3.12](https://github.com/dargmuesli/vio/compare/18.3.11...18.3.12) (2025-09-09)
+
+### Bug Fixes
+
+* **deps:** update dependency @nuxtjs/i18n to v10.1.0 ([fd3d682](https://github.com/dargmuesli/vio/commit/fd3d682a738725f8f478880b5907613be079aa1c))
+
 ## [18.3.11](https://github.com/dargmuesli/vio/compare/18.3.10...18.3.11) (2025-09-09)
 
 ### Bug Fixes

@@ -107,5 +107,5 @@
     "start:static": "serve playground/.output/public --ssl-cert ./.config/certificates/ssl.crt --ssl-key ./.config/certificates/ssl.key"
   },
   "type": "module",
-  "version": "18.3.11"
+  "version": "18.3.12"
 }
