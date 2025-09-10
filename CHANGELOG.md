@@ -1,3 +1,9 @@
+## [18.3.13](https://github.com/dargmuesli/vio/compare/18.3.12...18.3.13) (2025-09-10)
+
+### Bug Fixes
+
+* revert "fix(deps): make @nuxtjs/i18n a peer dependency" ([0c331b7](https://github.com/dargmuesli/vio/commit/0c331b7df08fd5c3745564a49bcbd0904e18d650))
+
 ## [18.3.12](https://github.com/dargmuesli/vio/compare/18.3.11...18.3.12) (2025-09-09)
 
 ### Bug Fixes
