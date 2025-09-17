@@ -49,7 +49,7 @@
     "prettier": "3.6.2",
     "prettier-plugin-tailwindcss": "0.6.14",
     "serve": "14.2.5",
-    "sharp": "0.34.3",
+    "sharp": "0.34.4",
     "stylelint": "16.24.0",
     "stylelint-config-recommended-vue": "1.6.1",
     "stylelint-config-standard": "39.0.0",
