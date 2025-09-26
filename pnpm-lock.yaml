@@ -111,8 +111,8 @@ importers:
         specifier: 2.0.4
         version: 2.0.4(vue@3.5.22(typescript@5.9.2))
       clipboardy:
-        specifier: 4.0.0
-        version: 4.0.0
+        specifier: 5.0.0
+        version: 5.0.0
       dayjs:
         specifier: 2.0.0-alpha.4
         version: 2.0.0-alpha.4
@@ -3264,6 +3264,10 @@ packages:
     resolution: {integrity: sha512-5mOlNS0mhX0707P2I0aZ2V/cmHUEO/fL7VFLqszkhUsxt7RwnmrInf/eEQKlf5GzvYeHIjT+Ov1HRfNmymlG0w==}
     engines: {node: '>=18'}
 
+  clipboardy@5.0.0:
+    resolution: {integrity: sha512-MQfKHaD09eP80Pev4qBxZLbxJK/ONnqfSYAPlCmPh+7BDboYtO/3BmB6HGzxDIT0SlTRc2tzS8lQqfcdLtZ0Kg==}
+    engines: {node: '>=20'}
+
   cliui@7.0.4:
     resolution: {integrity: sha512-OcRE68cOsVMXp1Yvonl/fzkQOyjLSu/8bhPDfQt0e0/Eb283TKP20Fs2MqoPsr9SwA595rRCA+QMzYc9nBP+JQ==}
 
@@ -4591,6 +4595,10 @@ packages:
   is-unicode-supported@2.1.0:
     resolution: {integrity: sha512-mE00Gnza5EEB3Ds0HfMyllZzbBrmLOX3vfWoj9A9PEnTfratQ/BcaJOuMhnkhjXvb2+FkY3VuHqtAGpTPmglFQ==}
     engines: {node: '>=18'}
+
+  is-wayland@0.1.0:
+    resolution: {integrity: sha512-QkbMsWkIfkrzOPxenwye0h56iAXirZYHG9eHVPb22fO9y+wPbaX/CHacOWBa/I++4ohTcByimhM1/nyCsH8KNA==}
+    engines: {node: '>=20'}
 
   is-what@4.1.16:
     resolution: {integrity: sha512-ZhMwEosbFJkA0YhFnNDgTM4ZxDRsS6HqTo7qsZM08fehyRYIYa0yHu5R6mgo1n/8MgaPBXiPimPD77baVFYg+A==}
@@ -10581,6 +10589,13 @@ snapshots:
       is-wsl: 3.1.0
       is64bit: 2.0.0
 
+  clipboardy@5.0.0:
+    dependencies:
+      execa: 9.6.0
+      is-wayland: 0.1.0
+      is-wsl: 3.1.0
+      is64bit: 2.0.0
+
   cliui@7.0.4:
     dependencies:
       string-width: 4.2.3
@@ -11954,6 +11969,8 @@ snapshots:
       text-extensions: 2.4.0
 
   is-unicode-supported@2.1.0: {}
+
+  is-wayland@0.1.0: {}
 
   is-what@4.1.16: {}
 
