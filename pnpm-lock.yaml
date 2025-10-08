@@ -147,8 +147,8 @@ importers:
         specifier: 2.4.0
         version: 2.4.0(magicast@0.3.5)(rollup@4.52.4)
       sweetalert2:
-        specifier: 11.24.1
-        version: 11.24.1
+        specifier: 11.25.0
+        version: 11.25.0
       vue-tsc:
         specifier: 3.1.1
         version: 3.1.1(typescript@5.9.3)
@@ -6530,8 +6530,8 @@ packages:
     engines: {node: '>=16'}
     hasBin: true
 
-  sweetalert2@11.24.1:
-    resolution: {integrity: sha512-V1PM/vXjAydKsEFrHgrfkWs+IKn8YPzmqc7eU2UaukO3K758MaLN8NC5kXnXPoKpTqNc430vYajoNKUOP9NtSA==}
+  sweetalert2@11.25.0:
+    resolution: {integrity: sha512-9eDRscWO7SpuTsaFJ1Q0hd3e7MYhYjAE6RmK/cVj3utPekr5ZKLNkV3OWiTmkWJpfaK8LMbx1aYuCoUPPxDVNQ==}
 
   synckit@0.10.4:
     resolution: {integrity: sha512-2SG1TnJGjMkD4+gblONMGYSrwAzYi+ymOitD+Jb/iMYm57nH20PlkVeMQRah3yDMKEa0QQYUF/QPWpdW7C6zNg==}
@@ -14246,7 +14246,7 @@ snapshots:
       picocolors: 1.1.1
       sax: 1.4.1
 
-  sweetalert2@11.24.1: {}
+  sweetalert2@11.25.0: {}
 
   synckit@0.10.4:
     dependencies:
