@@ -37,7 +37,7 @@
     "vue-tsc": "3.1.2"
   },
   "devDependencies": {
-    "@types/node": "22.18.13",
+    "@types/node": "24.9.2",
     "@urql/devtools": "2.0.3",
     "@urql/exchange-graphcache": "8.1.0",
     "consola": "3.4.2",
@@ -59,7 +59,7 @@
     "vue-router": "4.6.3"
   },
   "engines": {
-    "node": "22"
+    "node": "24"
   },
   "files": [
     ".config",
