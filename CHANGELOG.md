@@ -1,3 +1,13 @@
+## [19.0.0](https://github.com/dargmuesli/vio/compare/18.3.17...19.0.0) (2025-11-06)
+
+### ⚠ BREAKING CHANGES
+
+* major release
+
+### Continuous Integration
+
+* major release ([e3f52be](https://github.com/dargmuesli/vio/commit/e3f52be7b3112d0a886e87f458fd5ba9f25c2a60))
+
 ## [18.3.17](https://github.com/dargmuesli/vio/compare/18.3.16...18.3.17) (2025-11-01)
 
 ### Bug Fixes
