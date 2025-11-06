@@ -1,3 +1,9 @@
+## [19.0.1](https://github.com/dargmuesli/vio/compare/19.0.0...19.0.1) (2025-11-06)
+
+### Bug Fixes
+
+* **ci:** permit id token write ([81ba2f4](https://github.com/dargmuesli/vio/commit/81ba2f4fa9006ecc7c048be696e0086ee0fda8e8))
+
 ## [19.0.0](https://github.com/dargmuesli/vio/compare/18.3.17...19.0.0) (2025-11-06)
 
 ### ⚠ BREAKING CHANGES
