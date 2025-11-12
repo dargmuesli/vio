@@ -123,9 +123,6 @@ export default defineNuxtConfig(
       },
 
       // modules
-      colorMode: {
-        classSuffix: '',
-      },
       cookieControl: {
         cookies: {
           necessary: [
