@@ -3,6 +3,7 @@ import type { NuxtOptions } from 'nuxt/schema'
 
 // remove invalid `'none'`s and duplicates
 export const cleanupCsp = (
+  // @ts-expect-error https://github.com/Baroshem/nuxt-security/pull/661
   nuxtSecurityConfiguration: Partial<NuxtOptions['security']>,
 ) => {
   if (
@@ -27,6 +28,7 @@ export const cleanupCsp = (
 }
 
 export default defineNitroPlugin((nitroApp) => {
+  // @ts-expect-error https://github.com/Baroshem/nuxt-security/pull/661
   nitroApp.hooks.hook('nuxt-security:routeRules', async (routeRules) => {
     const { siteUrlTyped: siteUrl } = useSiteUrl()
 

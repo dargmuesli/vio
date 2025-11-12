@@ -1,3 +1,5 @@
+import type { defineNuxtConfig } from 'nuxt/config'
+
 import { I18N_MODULE_CONFIG } from './constants'
 
 export const VIO_NUXT_BASE_CONFIG = ({

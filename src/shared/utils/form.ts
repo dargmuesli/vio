@@ -1,5 +1,6 @@
 import type { Validation } from '@vuelidate/core'
 import { consola } from 'consola'
+import type { Ref } from 'vue'
 
 export const isFormValid = async ({
   v$,

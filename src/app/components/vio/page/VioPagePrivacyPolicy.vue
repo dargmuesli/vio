@@ -44,7 +44,11 @@
           </section>
         </section>
       </li>
-      <li v-if="isEnabled.hostingCdn">
+      <li
+        v-if="
+          isEnabled.hostingCdn && appConfig.vio.pages?.privacyPolicy?.hostingCdn
+        "
+      >
         <section>
           <h2>{{ t('hostingCdn') }}</h2>
 
@@ -102,7 +106,12 @@
             <p>{{ t('mandatoryInfoPrivacyDescription3') }}</p>
           </section>
 
-          <section v-if="isEnabled.mandatoryInfo.responsible">
+          <section
+            v-if="
+              isEnabled.mandatoryInfo.responsible &&
+              appConfig.vio.pages?.privacyPolicy?.mandatoryInfo
+            "
+          >
             <h3>{{ t('mandatoryInfoResponsibleTitle') }}</h3>
             <p>{{ t('mandatoryInfoResponsibleDescription1') }}</p>
             <address>

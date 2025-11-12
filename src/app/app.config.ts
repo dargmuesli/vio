@@ -5,31 +5,22 @@ export default defineAppConfig({
   },
 })
 
-export type AppConfig = {
-  vio: {
-    pages?: {
-      legalNotice?: {
-        contact: {
-          email: string
-        }
-        responsibility: {
-          address: {
-            city: string
-            name: string
-            street: string
+declare module 'nuxt/schema' {
+  interface AppConfig {
+    vio: {
+      pages?: {
+        legalNotice?: {
+          contact: {
+            email: string
           }
-        }
-        tmg: {
-          address: {
-            city: string
-            name: string
-            street: string
+          responsibility: {
+            address: {
+              city: string
+              name: string
+              street: string
+            }
           }
-        }
-      }
-      privacyPolicy?: {
-        hostingCdn?: {
-          external: {
+          tmg: {
             address: {
               city: string
               name: string
@@ -37,23 +28,34 @@ export type AppConfig = {
             }
           }
         }
-        mandatoryInfo?: {
-          responsible: {
-            address: {
-              city: string
-              email: string
-              name: string
-              street: string
+        privacyPolicy?: {
+          hostingCdn?: {
+            external: {
+              address: {
+                city: string
+                name: string
+                street: string
+              }
+            }
+          }
+          mandatoryInfo?: {
+            responsible: {
+              address: {
+                city: string
+                email: string
+                name: string
+                street: string
+              }
             }
           }
         }
       }
-    }
-    server?: {
-      middleware: {
-        headers: Record<string, string>
+      server?: {
+        middleware: {
+          headers: Record<string, string>
+        }
       }
+      themeColor?: string
     }
-    themeColor?: string
   }
 }
