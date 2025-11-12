@@ -1,3 +1,13 @@
+## [20.0.0-beta.1](https://github.com/dargmuesli/vio/compare/19.0.2...20.0.0-beta.1) (2025-11-12)
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** replace `dayjs` with `Intl`
+
+### Performance Improvements
+
+* **deps:** replace `dayjs` with `Intl` ([98077dc](https://github.com/dargmuesli/vio/commit/98077dc72cf55755dafe72ec767d39d3e139e61a))
+
 ## [19.0.2](https://github.com/dargmuesli/vio/compare/19.0.1...19.0.2) (2025-11-12)
 
 ### Bug Fixes
