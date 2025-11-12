@@ -1,5 +1,7 @@
+import type { AppConfig } from 'nuxt/schema'
+
 export default defineEventHandler(async (event) => {
-  const config = useAppConfig() as AppConfig
+  const config = useAppConfig(event) as AppConfig
 
   if (!config.vio.server) return
 

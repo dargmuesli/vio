@@ -4,6 +4,6 @@ export const useSiteUrl = () => {
 
   return {
     siteUrl,
-    siteUrlTyped: new URL(siteUrl), // eslint-disable-line compat/compat
+    siteUrlTyped: new URL(siteUrl),
   }
 }

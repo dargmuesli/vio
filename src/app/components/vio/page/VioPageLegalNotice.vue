@@ -1,53 +1,72 @@
 <template>
   <VioLayoutProse class="m-auto">
     <h1>{{ title }}</h1>
-    <h2>{{ t('tmg') }}</h2>
-    <address>
-      <slot v-if="$slots.tmgAddress" name="tmgAddress" />
-      <i18n-t v-else keypath="tmgAddress">
-        <template #br>
-          <br />
-        </template>
-        <template #city>
-          {{ appConfig.vio.pages.legalNotice.tmg.address.city }}
-        </template>
-        <template #name>
-          {{ appConfig.vio.pages.legalNotice.tmg.address.name }}
-        </template>
-        <template #street>
-          {{ appConfig.vio.pages.legalNotice.tmg.address.street }}
-        </template>
-      </i18n-t>
-    </address>
 
-    <h2>{{ t('contact') }}</h2>
-    <p>
-      <slot v-if="$slots.contactEmail" name="contactEmail" />
-      <span v-else>
-        {{
-          t('email', { email: appConfig.vio.pages.legalNotice.contact.email })
-        }}
-      </span>
-    </p>
+    <section
+      v-if="appConfig.vio.pages?.legalNotice"
+      :aria-labelledby="templateIdTmg"
+    >
+      <h2 :id="templateIdTmg">{{ t('tmg') }}</h2>
+      <address>
+        <slot v-if="$slots.tmgAddress" name="tmgAddress" />
+        <i18n-t v-else keypath="tmgAddress">
+          <template #br>
+            <br />
+          </template>
+          <template #city>
+            {{ appConfig.vio.pages.legalNotice.tmg.address.city }}
+          </template>
+          <template #name>
+            {{ appConfig.vio.pages.legalNotice.tmg.address.name }}
+          </template>
+          <template #street>
+            {{ appConfig.vio.pages.legalNotice.tmg.address.street }}
+          </template>
+        </i18n-t>
+      </address>
+    </section>
 
-    <h2>{{ t('responsibility') }}</h2>
-    <address>
-      <slot v-if="$slots.responsibilityAddress" name="responsibilityAddress" />
-      <i18n-t v-else keypath="responsibilityAddress">
-        <template #br>
-          <br />
-        </template>
-        <template #city>
-          {{ appConfig.vio.pages.legalNotice.responsibility.address.city }}
-        </template>
-        <template #name>
-          {{ appConfig.vio.pages.legalNotice.responsibility.address.name }}
-        </template>
-        <template #street>
-          {{ appConfig.vio.pages.legalNotice.responsibility.address.street }}
-        </template>
-      </i18n-t>
-    </address>
+    <section
+      v-if="appConfig.vio.pages?.legalNotice"
+      :aria-labelledby="templateIdContact"
+    >
+      <h2 :id="templateIdContact">{{ t('contact') }}</h2>
+      <p>
+        <slot v-if="$slots.contactEmail" name="contactEmail" />
+        <span v-else>
+          {{
+            t('email', { email: appConfig.vio.pages.legalNotice.contact.email })
+          }}
+        </span>
+      </p>
+    </section>
+
+    <section
+      v-if="appConfig.vio.pages?.legalNotice"
+      :aria-labelledby="templateIdResponsibility"
+    >
+      <h2 :id="templateIdResponsibility">{{ t('responsibility') }}</h2>
+      <address>
+        <slot
+          v-if="$slots.responsibilityAddress"
+          name="responsibilityAddress"
+        />
+        <i18n-t v-else keypath="responsibilityAddress">
+          <template #br>
+            <br />
+          </template>
+          <template #city>
+            {{ appConfig.vio.pages.legalNotice.responsibility.address.city }}
+          </template>
+          <template #name>
+            {{ appConfig.vio.pages.legalNotice.responsibility.address.name }}
+          </template>
+          <template #street>
+            {{ appConfig.vio.pages.legalNotice.responsibility.address.street }}
+          </template>
+        </i18n-t>
+      </address>
+    </section>
 
     <h3>{{ t('liabilityContentTitle') }}</h3>
     <p>{{ t('liabilityContentDescription1') }}</p>
@@ -73,6 +92,11 @@ const { t } = useI18n()
 
 // data
 const title = t('title')
+
+// template
+const templateIdContact = useId()
+const templateIdResponsibility = useId()
+const templateIdTmg = useId()
 </script>
 
 <i18n lang="yaml">
