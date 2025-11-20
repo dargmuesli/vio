@@ -1,10 +1,9 @@
 import { defu } from 'defu'
-import type { NuxtOptions } from 'nuxt/schema'
+import type { ModuleOptions } from 'nuxt-security'
 
 // remove invalid `'none'`s and duplicates
 export const cleanupCsp = (
-  // @ts-expect-error https://github.com/Baroshem/nuxt-security/pull/661
-  nuxtSecurityConfiguration: Partial<NuxtOptions['security']>,
+  nuxtSecurityConfiguration: Partial<ModuleOptions>,
 ) => {
   if (
     nuxtSecurityConfiguration.headers &&
@@ -28,7 +27,6 @@ export const cleanupCsp = (
 }
 
 export default defineNitroPlugin((nitroApp) => {
-  // @ts-expect-error https://github.com/Baroshem/nuxt-security/pull/661
   nitroApp.hooks.hook('nuxt-security:routeRules', async (routeRules) => {
     const { siteUrlTyped: siteUrl } = useSiteUrl()
 
