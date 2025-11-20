@@ -65,11 +65,6 @@ export default defineNuxtConfig(
           ) {
             if (nuxt.options.nitro.static) {
               nuxtConfigSecurityHeaders.contentSecurityPolicy = defu(
-                {
-                  'script-src-elem': [
-                    "'unsafe-inline'", // TODO: remove (https://github.com/Baroshem/nuxt-security/pull/659)
-                  ],
-                },
                 VIO_GET_CSP({ siteUrl: new URL(SITE_URL) }),
                 nuxtConfigSecurityHeaders.contentSecurityPolicy,
               )
