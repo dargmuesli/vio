@@ -1,7 +1,7 @@
 #############
 # Create base image.
 
-FROM node:24.11.0-alpine AS base-image
+FROM node:24.11.1-alpine AS base-image
 
 # The `CI` environment variable must be set for pnpm to run in headless mode
 ENV CI=true
@@ -11,19 +11,19 @@ WORKDIR /srv/app/
 RUN corepack enable \
   && apk add --no-cache mkcert --repository=https://dl-cdn.alpinelinux.org/alpine/edge/testing
 
+COPY ./docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+
 
 #############
 # Serve Nuxt in development mode.
 
 FROM base-image AS development
 
-COPY ./docker/entrypoint.sh /usr/local/bin/docker-entrypoint.sh
-
 VOLUME /srv/.pnpm-store
 VOLUME /srv/app
 
 ENTRYPOINT ["docker-entrypoint.sh"]
-CMD ["pnpm", "run", "--dir", "src", "dev", "--host"]
+CMD ["pnpm", "run", "--dir", "src", "dev", "--host", "0.0.0.0"]
 EXPOSE 3000
 
 # TODO: support healthcheck while starting (https://github.com/nuxt/framework/issues/6915)
@@ -95,6 +95,8 @@ WORKDIR /srv/app/
 RUN corepack enable \
   && apt update && apt install mkcert
 
+COPY ./docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+
 
 ########################
 # Nuxt: test (e2e)
@@ -104,8 +106,6 @@ FROM test-e2e-base-image AS test-e2e_development
 ARG UNAME=e2e
 ARG UID=1000
 ARG GID=1000
-
-COPY ./docker/entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
 RUN groupadd -g $GID -o $UNAME \
     && useradd -m -l -u $UID -g $GID -o -s /bin/bash $UNAME
