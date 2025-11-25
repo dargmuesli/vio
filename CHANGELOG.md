@@ -1,3 +1,9 @@
+## [20.0.0-beta.5](https://github.com/dargmuesli/vio/compare/20.0.0-beta.4...20.0.0-beta.5) (2025-11-25)
+
+### Features
+
+* **components:** separate time default ([9788594](https://github.com/dargmuesli/vio/commit/9788594ff58d88ecd335dc753ca4f63c6b5c1a1b))
+
 ## [20.0.0-beta.4](https://github.com/dargmuesli/vio/compare/20.0.0-beta.3...20.0.0-beta.4) (2025-11-25)
 
 ### Bug Fixes
