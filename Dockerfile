@@ -11,13 +11,13 @@ WORKDIR /srv/app/
 RUN corepack enable \
   && apk add --no-cache mkcert --repository=https://dl-cdn.alpinelinux.org/alpine/edge/testing
 
+COPY ./docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+
 
 #############
 # Serve Nuxt in development mode.
 
 FROM base-image AS development
-
-COPY ./docker/entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
 VOLUME /srv/.pnpm-store
 VOLUME /srv/app
@@ -95,6 +95,8 @@ WORKDIR /srv/app/
 RUN corepack enable \
   && apt update && apt install mkcert
 
+COPY ./docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+
 
 ########################
 # Nuxt: test (e2e)
@@ -104,8 +106,6 @@ FROM test-e2e-base-image AS test-e2e_development
 ARG UNAME=e2e
 ARG UID=1000
 ARG GID=1000
-
-COPY ./docker/entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
 RUN groupadd -g $GID -o $UNAME \
     && useradd -m -l -u $UID -g $GID -o -s /bin/bash $UNAME
