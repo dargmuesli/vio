@@ -1,3 +1,9 @@
+## [20.0.0-beta.4](https://github.com/dargmuesli/vio/compare/20.0.0-beta.3...20.0.0-beta.4) (2025-11-25)
+
+### Bug Fixes
+
+* correct layer imports ([da10e44](https://github.com/dargmuesli/vio/commit/da10e44bc48b323e4c97746f53174a3b0d47658d))
+
 ## [20.0.0-beta.3](https://github.com/dargmuesli/vio/compare/20.0.0-beta.2...20.0.0-beta.3) (2025-11-25)
 
 ### Bug Fixes
