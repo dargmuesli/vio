@@ -1,7 +1,6 @@
 import type { H3Event } from 'h3'
 
-// TODO: rename to `getTimezone` (https://github.com/nuxt/cli/issues/266)
-export const getTimezoneServer = async (event: H3Event) => {
+export const getTimezone = async (event: H3Event) => {
   const timezoneBySsr = event.context.$timezone
 
   if (timezoneBySsr) return timezoneBySsr
