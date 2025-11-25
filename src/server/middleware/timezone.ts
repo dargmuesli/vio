@@ -1,5 +1,5 @@
 export default defineEventHandler(async (event) => {
-  event.context.$timezone = await getTimezoneServer(event)
+  event.context.$timezone = await getTimezone(event)
 })
 
 declare module 'h3' {

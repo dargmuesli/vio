@@ -16,6 +16,7 @@ export default defineNuxtConfig(
             '@vuelidate/validators',
             '@vueuse/core',
             'reka-ui',
+            'vue-sonner',
           ],
         },
       },

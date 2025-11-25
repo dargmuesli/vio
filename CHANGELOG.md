@@ -8,6 +8,19 @@
 
 * **deps:** replace `dayjs` with `Intl` ([98077dc](https://github.com/dargmuesli/vio/commit/98077dc72cf55755dafe72ec767d39d3e139e61a))
 
+## [19.1.0](https://github.com/dargmuesli/vio/compare/19.0.3...19.1.0) (2025-11-25)
+
+### Features
+
+* **nitro:** enable experimental async context ([9b13ee0](https://github.com/dargmuesli/vio/commit/9b13ee049d8b16c864596e19c591e025f77291d9))
+* **nitro:** reenable open api ([54b0e6e](https://github.com/dargmuesli/vio/commit/54b0e6ecf4e21f2b13e4057cffa16f1b286f8628))
+
+## [19.0.3](https://github.com/dargmuesli/vio/compare/19.0.2...19.0.3) (2025-11-22)
+
+### Bug Fixes
+
+* schedule release ([c7b7e4e](https://github.com/dargmuesli/vio/commit/c7b7e4e1b635401fdce8308134499cf89a202ff5))
+
 ## [19.0.2](https://github.com/dargmuesli/vio/compare/19.0.1...19.0.2) (2025-11-12)
 
 ### Bug Fixes

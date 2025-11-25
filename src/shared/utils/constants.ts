@@ -113,14 +113,6 @@ export const VIO_GET_CSP = ({ siteUrl }: { siteUrl: URL }) =>
         : {}),
       'connect-src': [
         "'self'", // e.g. `/_nuxt/builds/meta/`, `/_payload.json`, `/privacy-policy/_payload.json`
-        // ...(process.env.NODE_ENV === 'development'
-        //   ? [
-        //       'http://localhost:3000/_nuxt/', // hot reload
-        //       'https://localhost:3000/_nuxt/', // hot reload
-        //       'ws://localhost:3000/_nuxt/', // hot reload
-        //       'wss://localhost:3000/_nuxt/', // hot reload
-        //     ] // TODO: generalize for different ports
-        //   : []),
       ],
       'img-src': [
         "'self'", // e.g. favicon
@@ -131,7 +123,7 @@ export const VIO_GET_CSP = ({ siteUrl }: { siteUrl: URL }) =>
         `${siteUrl}_nuxt/`, // bundle
       ],
       'style-src': [
-        "'unsafe-inline'", // TODO: replace with "'nonce-{{nonce}}'" once Sweetalert supports it
+        "'nonce-{{nonce}}'",
         "'self'", // TODO: `${siteUrl}_nuxt/`, // bundle
       ], // TODO: use `style-src-elem` once Playwright WebKit supports it
     },
