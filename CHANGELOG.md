@@ -1,3 +1,10 @@
+## [19.1.0](https://github.com/dargmuesli/vio/compare/19.0.3...19.1.0) (2025-11-25)
+
+### Features
+
+* **nitro:** enable experimental async context ([9b13ee0](https://github.com/dargmuesli/vio/commit/9b13ee049d8b16c864596e19c591e025f77291d9))
+* **nitro:** reenable open api ([54b0e6e](https://github.com/dargmuesli/vio/commit/54b0e6ecf4e21f2b13e4057cffa16f1b286f8628))
+
 ## [19.0.3](https://github.com/dargmuesli/vio/compare/19.0.2...19.0.3) (2025-11-22)
 
 ### Bug Fixes
