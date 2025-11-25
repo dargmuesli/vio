@@ -4,7 +4,7 @@
 </template>
 
 <script setup lang="ts">
-import type { ColorMode } from '~/types/color-mode'
+import type { ColorMode } from '../../../types/color-mode'
 
 const colorMode = useColorMode()
 
