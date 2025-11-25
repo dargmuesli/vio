@@ -10,24 +10,12 @@
 import { reactiveOmit } from '@vueuse/core'
 import { useForwardProps } from 'reka-ui'
 
-import type { NuxtTimeProps } from '#app'
+import type { NuxtTimeProps } from 'nuxt/app'
 
 const { locale: defaultLocale } = useI18n()
 const defaultTimeZone = useTimeZone()
 
-const props = withDefaults(defineProps<NuxtTimeProps>(), {
-  // ...dateTimeFormatOptions, TODO: use shared options
-  day: 'numeric',
-  hour: 'numeric',
-  locale: undefined,
-  minute: 'numeric',
-  month: 'short',
-  relative: undefined,
-  timeZone: undefined,
-  timeZoneName: undefined,
-  weekday: undefined,
-  year: 'numeric',
-})
+const props = defineProps<NuxtTimeProps>()
 
 const delegatedProps = reactiveOmit(props, 'locale', 'timeZone')
 const forwardedProps = useForwardProps(delegatedProps)
