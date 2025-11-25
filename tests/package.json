@@ -2,7 +2,7 @@
   "devDependencies": {
     "@axe-core/playwright": "4.11.0",
     "@eslint/js": "9.39.1",
-    "@playwright/test": "1.56.1",
+    "@playwright/test": "1.57.0",
     "@types/node": "24.10.1",
     "cross-env": "10.1.0",
     "eslint": "9.39.1",
@@ -25,7 +25,7 @@
   ],
   "name": "@dargmuesli/nuxt-vio-testing",
   "peerDependencies": {
-    "playwright-core": "1.56.1"
+    "playwright-core": "1.57.0"
   },
   "publishConfig": {
     "access": "public"
