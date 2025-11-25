@@ -1,3 +1,9 @@
+## [20.0.0-beta.3](https://github.com/dargmuesli/vio/compare/20.0.0-beta.2...20.0.0-beta.3) (2025-11-25)
+
+### Bug Fixes
+
+* **security:** revert removal of unsafe inline style source ([b647ff3](https://github.com/dargmuesli/vio/commit/b647ff35ba37076fe6ec841ccf5d51a553e8c7d5))
+
 ## [20.0.0-beta.2](https://github.com/dargmuesli/vio/compare/20.0.0-beta.1...20.0.0-beta.2) (2025-11-25)
 
 ### ⚠ BREAKING CHANGES
