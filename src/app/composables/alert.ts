@@ -1,17 +1,26 @@
 import { consola } from 'consola'
-import Swal from 'sweetalert2'
-import type { Ref } from 'vue'
 
-export const useFireError = () => {
+export const useAlertError = () => {
   const { t } = useI18n({ useScope: 'global' })
 
-  return ({ error }: { error: Error }, api?: Ref<{ errors: Error[] }>) => {
-    Swal.fire({
-      icon: 'error',
-      title: t('globalStatusError'),
-      text: error.message,
+  return (
+    options:
+      | string
+      | {
+          error?: Error
+          messageI18n: string
+          toastOptions?: Parameters<typeof toast>[1]
+        },
+  ) => {
+    const error =
+      typeof options === 'string' ? new Error(options) : options.error
+    const errorMessage =
+      typeof options === 'string' ? options : options.messageI18n
+
+    consola.error({ errorMessage, ...(error ? { error } : {}) })
+    toast.error(t('globalError'), {
+      ...(typeof options !== 'string' ? options.toastOptions || {} : {}),
+      description: errorMessage,
     })
-    api?.value.errors.push(error)
-    consola.error(error)
   }
 }

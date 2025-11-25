@@ -123,7 +123,7 @@ export const VIO_GET_CSP = ({ siteUrl }: { siteUrl: URL }) =>
         `${siteUrl}_nuxt/`, // bundle
       ],
       'style-src': [
-        "'unsafe-inline'", // TODO: replace with "'nonce-{{nonce}}'" once Sweetalert supports it
+        "'nonce-{{nonce}}'",
         "'self'", // TODO: `${siteUrl}_nuxt/`, // bundle
       ], // TODO: use `style-src-elem` once Playwright WebKit supports it
     },

@@ -1,3 +1,6 @@
+import { fileURLToPath } from 'node:url'
+import { dirname, join } from 'node:path'
+
 import tailwindcss from '@tailwindcss/vite'
 import { defu } from 'defu'
 
@@ -9,6 +12,8 @@ import {
   VIO_GET_CSP,
 } from './shared/utils/constants'
 import { VIO_NUXT_BASE_CONFIG } from './shared/utils/nuxt'
+
+const currentDir = dirname(fileURLToPath(import.meta.url))
 
 export default defineNuxtConfig(
   defu(
@@ -50,6 +55,7 @@ export default defineNuxtConfig(
         '@nuxtjs/seo',
         '@pinia/nuxt',
         'nuxt-gtag',
+        'shadcn-nuxt',
         (_options, nuxt) => {
           if (nuxt.options.nitro.static) {
             nuxt.options.features.inlineStyles = false
@@ -237,6 +243,10 @@ export default defineNuxtConfig(
         },
         strict: true,
       },
+      shadcn: {
+        prefix: '',
+        componentDir: join(currentDir, './app/components/scn'),
+      },
       site: {
         url: SITE_URL,
       },
@@ -266,7 +276,6 @@ export default defineNuxtConfig(
         // modules
         security: {
           headers: {
-            crossOriginEmbedderPolicy: 'unsafe-none',
             strictTransportSecurity: false, // prevent endless reload in Chrome
           },
         },
@@ -291,6 +300,7 @@ export default defineNuxtConfig(
         },
         security: {
           headers: {
+            crossOriginEmbedderPolicy: 'require-corp', // breaks nuxt devtools
             strictTransportSecurity: {
               maxAge: 31536000,
               preload: true,
