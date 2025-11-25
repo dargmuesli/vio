@@ -251,7 +251,8 @@ export default defineNuxtConfig(
         },
         nitro: {
           experimental: {
-            openAPI: false, // TODO: set to true (https://github.com/nuxt/content/issues/2839)
+            asyncContext: true,
+            openAPI: true,
           },
         },
         runtimeConfig: {
