@@ -5,15 +5,17 @@
 /* stylelint-disable plugin/no-unsupported-browser-features */
 
 @import 'tailwindcss';
+@import 'tw-animate-css';
 @import './forms.css';
+@import './shadcn.css';
 
-@source "../../";
+@source '../../';
 
-@plugin "@tailwindcss/forms" {
+@plugin '@tailwindcss/forms' {
   strategy: 'base';
 }
 
-@plugin "@tailwindcss/typography";
+@plugin '@tailwindcss/typography';
 
 @custom-variant dark (&:where(.dark, .dark *));
 

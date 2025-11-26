@@ -12,14 +12,15 @@
         {{ t('linkExternal') }}
       </VioLink>
       <br />
-      <button type="button" @click="test">{{ $dayjs(0).format('lll') }}</button>
+      <button type="button" @click="test">
+        <VioTime :datetime="Date.now()" />
+      </button>
     </p>
     <!-- <SBreadcrumb /> -->
   </VioLayoutProse>
 </template>
 
 <script setup lang="ts">
-const { $dayjs } = useNuxtApp()
 const { t, locale } = useI18n()
 const router = useRouter()
 const switchLocalePath = useSwitchLocalePath()
