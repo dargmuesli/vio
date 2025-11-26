@@ -1,3 +1,32 @@
+## [20.0.0](https://github.com/dargmuesli/vio/compare/19.1.0...20.0.0) (2025-11-26)
+
+### ⚠ BREAKING CHANGES
+
+* **components:** merge time default
+* **deps:** drop `sweetalert2`
+* **deps:** replace `dayjs` with `Intl`
+
+### Features
+
+* **components:** separate time default ([9788594](https://github.com/dargmuesli/vio/commit/9788594ff58d88ecd335dc753ca4f63c6b5c1a1b))
+* **composables:** add `useFromNow` ([26bf674](https://github.com/dargmuesli/vio/commit/26bf6744e49ed71ac0aea908b001621dbbbb6089))
+* **deps:** drop `sweetalert2` ([326fb26](https://github.com/dargmuesli/vio/commit/326fb2618d72c8213269dc9e682523723293c12f))
+
+### Bug Fixes
+
+* **components:** use computed property forwarding for time ([f2906e8](https://github.com/dargmuesli/vio/commit/f2906e810aedfb7bbf4ce07037adb70f8b6c3539))
+* correct layer imports ([da10e44](https://github.com/dargmuesli/vio/commit/da10e44bc48b323e4c97746f53174a3b0d47658d))
+* revert "chore(lint): drop redundant `vue-i18n` configuration" ([43b5cec](https://github.com/dargmuesli/vio/commit/43b5cec8169830229d0dadc6663bda2afd63f1b8))
+* **security:** revert removal of unsafe inline style source ([b647ff3](https://github.com/dargmuesli/vio/commit/b647ff35ba37076fe6ec841ccf5d51a553e8c7d5))
+
+### Performance Improvements
+
+* **deps:** replace `dayjs` with `Intl` ([98077dc](https://github.com/dargmuesli/vio/commit/98077dc72cf55755dafe72ec767d39d3e139e61a))
+
+### Code Refactoring
+
+* **components:** merge time default ([337638f](https://github.com/dargmuesli/vio/commit/337638f79c5c390e78b160e4bd7bde1505b544a9))
+
 ## [20.0.0-beta.8](https://github.com/dargmuesli/vio/compare/20.0.0-beta.7...20.0.0-beta.8) (2025-11-26)
 
 ### Features
