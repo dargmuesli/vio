@@ -1,3 +1,9 @@
+## [20.0.0-beta.7](https://github.com/dargmuesli/vio/compare/20.0.0-beta.6...20.0.0-beta.7) (2025-11-26)
+
+### Bug Fixes
+
+* **components:** use computed property forwarding for time ([f2906e8](https://github.com/dargmuesli/vio/commit/f2906e810aedfb7bbf4ce07037adb70f8b6c3539))
+
 ## [20.0.0-beta.6](https://github.com/dargmuesli/vio/compare/20.0.0-beta.5...20.0.0-beta.6) (2025-11-26)
 
 ### ⚠ BREAKING CHANGES
