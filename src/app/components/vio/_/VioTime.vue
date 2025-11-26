@@ -1,14 +1,12 @@
 <template>
   <NuxtTime
-    v-bind="{ datetime: props.datetime, ...delegatedProps }"
+    v-bind="forwardedProps"
     :locale="props.options.locale || defaultLocale"
     :time-zone="props.options.timeZone || defaultTimeZone"
   />
 </template>
 
 <script setup lang="ts">
-import { reactiveOmit } from '@vueuse/core'
-
 import type { NuxtTimeProps } from 'nuxt/app'
 
 const { locale: defaultLocale } = useI18n()
@@ -27,5 +25,9 @@ const props = withDefaults(
   },
 )
 
-const delegatedProps = reactiveOmit(props.options, 'locale', 'timeZone')
+const forwardedProps = computed(() => {
+  const { locale, timeZone, ...delegated } = props.options
+
+  return { datetime: props.datetime, ...delegated }
+})
 </script>
