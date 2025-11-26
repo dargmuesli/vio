@@ -116,3 +116,28 @@ export const getEmailDateTimeFormatter = (
     ...dateTimeFormatOptions,
     timeZone: 'UTC',
   })
+
+export const getFromTo = (
+  from: Date,
+  to: Date,
+  formatter: Intl.RelativeTimeFormat,
+) => {
+  const difference = (to.getTime() - from.getTime()) / 1000
+  const units = [
+    { unit: 'year' as const, seconds: 365 * 24 * 3600 },
+    { unit: 'month' as const, seconds: 30 * 24 * 3600 },
+    { unit: 'week' as const, seconds: 7 * 24 * 3600 },
+    { unit: 'day' as const, seconds: 24 * 3600 },
+    { unit: 'hour' as const, seconds: 3600 },
+    { unit: 'minute' as const, seconds: 60 },
+    { unit: 'second' as const, seconds: 1 },
+  ]
+
+  for (const { unit, seconds } of units) {
+    const delta = difference / seconds
+
+    if (Math.abs(delta) >= 1 || unit === 'second') {
+      return formatter.format(Math.round(delta), unit)
+    }
+  }
+}
