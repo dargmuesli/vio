@@ -1,3 +1,9 @@
+## [20.0.0-beta.8](https://github.com/dargmuesli/vio/compare/20.0.0-beta.7...20.0.0-beta.8) (2025-11-26)
+
+### Features
+
+* **composables:** add `useFromNow` ([26bf674](https://github.com/dargmuesli/vio/commit/26bf6744e49ed71ac0aea908b001621dbbbb6089))
+
 ## [20.0.0-beta.7](https://github.com/dargmuesli/vio/compare/20.0.0-beta.6...20.0.0-beta.7) (2025-11-26)
 
 ### Bug Fixes
