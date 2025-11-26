@@ -1,3 +1,13 @@
+## [20.0.0-beta.6](https://github.com/dargmuesli/vio/compare/20.0.0-beta.5...20.0.0-beta.6) (2025-11-26)
+
+### ⚠ BREAKING CHANGES
+
+* **components:** merge time default
+
+### Code Refactoring
+
+* **components:** merge time default ([337638f](https://github.com/dargmuesli/vio/commit/337638f79c5c390e78b160e4bd7bde1505b544a9))
+
 ## [20.0.0-beta.5](https://github.com/dargmuesli/vio/compare/20.0.0-beta.4...20.0.0-beta.5) (2025-11-25)
 
 ### Features
