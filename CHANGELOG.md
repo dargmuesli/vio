@@ -1,3 +1,16 @@
+## [21.0.0-beta.1](https://github.com/dargmuesli/vio/compare/20.0.0...21.0.0-beta.1) (2025-11-28)
+
+### ⚠ BREAKING CHANGES
+
+* **composables:** allow for reactive time
+* **util:** drop `copyText`
+
+### Features
+
+* **composables:** add `useCopy` ([1d916ff](https://github.com/dargmuesli/vio/commit/1d916ffc6cb0494af22a27998aab1f4679673f1d))
+* **composables:** allow for reactive time ([8e9cf57](https://github.com/dargmuesli/vio/commit/8e9cf579c685df573f2801302e8da65d0fa16522))
+* **util:** drop `copyText` ([da0e36f](https://github.com/dargmuesli/vio/commit/da0e36fccca59cec94e4cb19f7ce6b2a1fa92f5d))
+
 ## [20.0.0](https://github.com/dargmuesli/vio/compare/19.1.0...20.0.0) (2025-11-26)
 
 ### ⚠ BREAKING CHANGES
