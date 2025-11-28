@@ -1,7 +1,7 @@
 <template>
   <span v-if="url" class="flex items-center gap-2">
     <slot />
-    <VioButtonColored :aria-label="t('share')" @click="copy(url)">
+    <VioButtonColored :aria-label="t('share')" @click="copy2(url)">
       <template #prefix>
         <VioIconShare />
       </template>
@@ -19,17 +19,21 @@ interface Props {
 withDefaults(defineProps<Props>(), {})
 
 const { t } = useI18n()
+const { copy } = useCopy()
+const alertError = useAlertError()
 
 // methods
-const copy = async (string: string) => {
+const copy2 = async (string: string) => {
   if (typeof window === 'undefined') return
 
   try {
-    await copyText(string)
+    await copy(string)
     toast.success(t('donationUrlCopySuccess'))
   } catch (error: unknown) {
-    console.error(error)
-    alert(t('donationUrlCopyError'))
+    alertError({
+      ...(error instanceof Error ? { error } : {}),
+      messageI18n: t('donationUrlCopyError'),
+    })
   }
 }
 </script>

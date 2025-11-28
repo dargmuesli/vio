@@ -116,9 +116,6 @@ importers:
       class-variance-authority:
         specifier: 0.7.1
         version: 0.7.1
-      clipboardy:
-        specifier: 5.0.1
-        version: 5.0.1
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -3560,10 +3557,6 @@ packages:
     resolution: {integrity: sha512-5mOlNS0mhX0707P2I0aZ2V/cmHUEO/fL7VFLqszkhUsxt7RwnmrInf/eEQKlf5GzvYeHIjT+Ov1HRfNmymlG0w==}
     engines: {node: '>=18'}
 
-  clipboardy@5.0.1:
-    resolution: {integrity: sha512-pJ5ZDWjOT593Nli4TqlRLy33KomlAPxIFntMFxXrCqJON1cGcGPT5nNFxRxJ9m4HbfrccsYve7XwXjywW6nXVw==}
-    engines: {node: '>=20'}
-
   cliui@7.0.4:
     resolution: {integrity: sha512-OcRE68cOsVMXp1Yvonl/fzkQOyjLSu/8bhPDfQt0e0/Eb283TKP20Fs2MqoPsr9SwA595rRCA+QMzYc9nBP+JQ==}
 
@@ -4886,10 +4879,6 @@ packages:
   is-unicode-supported@2.1.0:
     resolution: {integrity: sha512-mE00Gnza5EEB3Ds0HfMyllZzbBrmLOX3vfWoj9A9PEnTfratQ/BcaJOuMhnkhjXvb2+FkY3VuHqtAGpTPmglFQ==}
     engines: {node: '>=18'}
-
-  is-wayland@0.1.0:
-    resolution: {integrity: sha512-QkbMsWkIfkrzOPxenwye0h56iAXirZYHG9eHVPb22fO9y+wPbaX/CHacOWBa/I++4ohTcByimhM1/nyCsH8KNA==}
-    engines: {node: '>=20'}
 
   is-what@5.5.0:
     resolution: {integrity: sha512-oG7cgbmg5kLYae2N5IVd3jm2s+vldjxJzK1pcu9LfpGuQ93MQSzo0okvRna+7y5ifrD+20FE8FvjusyGaz14fw==}
@@ -11101,13 +11090,6 @@ snapshots:
       is-wsl: 3.1.0
       is64bit: 2.0.0
 
-  clipboardy@5.0.1:
-    dependencies:
-      execa: 9.6.0
-      is-wayland: 0.1.0
-      is-wsl: 3.1.0
-      is64bit: 2.0.0
-
   cliui@7.0.4:
     dependencies:
       string-width: 4.2.3
@@ -12502,8 +12484,6 @@ snapshots:
       text-extensions: 2.4.0
 
   is-unicode-supported@2.1.0: {}
-
-  is-wayland@0.1.0: {}
 
   is-what@5.5.0: {}
 
