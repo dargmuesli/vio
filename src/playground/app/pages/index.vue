@@ -6,6 +6,10 @@
       <br />
       {{ t('globalValidationFailed') }}
       <br />
+      {{ now }}
+      <br />
+      {{ timeAgoIntl }}
+      <br />
       <VioLink to="/">{{ t('linkRoot') }}</VioLink>
       <br />
       <VioLink to="https://jonas-thelemann.de">
@@ -24,6 +28,8 @@
 const { t, locale } = useI18n()
 const router = useRouter()
 const switchLocalePath = useSwitchLocalePath()
+const now = useNow()
+const timeAgoIntl = useTimeAgoIntl({ to: ref(new Date(Date.now() - 30000)) })
 
 useHeadDefault({ title: t('title') })
 
