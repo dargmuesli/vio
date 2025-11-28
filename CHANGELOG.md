@@ -1,3 +1,9 @@
+## [20.1.0](https://github.com/dargmuesli/vio/compare/20.0.0...20.1.0) (2025-11-28)
+
+### Features
+
+* **composables:** add `useCopy` ([1d916ff](https://github.com/dargmuesli/vio/commit/1d916ffc6cb0494af22a27998aab1f4679673f1d))
+
 ## [20.0.0](https://github.com/dargmuesli/vio/compare/19.1.0...20.0.0) (2025-11-26)
 
 ### ⚠ BREAKING CHANGES
