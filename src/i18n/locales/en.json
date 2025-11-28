@@ -1,5 +1,6 @@
 {
   "globalError": "Error",
+  "globalErrorClipboard": "Your browser does not support modern copying to the clipboard.",
   "globalSeoOgImageAlt": "Social Preview Image for a Vio webpage.",
   "globalPlaceholderEmailAddress": "email{'@'}addre.ss",
   "globalPlaceholderUrl": "https://websi.te",

@@ -1,5 +1,6 @@
 {
   "globalError": "Fehler",
+  "globalErrorClipboard": "Dein Browser unterstützt das moderne Kopieren in die Zwischenablage nicht.",
   "globalSeoOgImageAlt": "Social Preview Image für eine Vio Webseite.",
   "globalPlaceholderEmailAddress": "e-mail{'@'}adres.se",
   "globalPlaceholderUrl": "https://websei.te",
