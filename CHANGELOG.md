@@ -1,3 +1,9 @@
+## [20.1.1](https://github.com/dargmuesli/vio/compare/20.1.0...20.1.1) (2025-12-06)
+
+### Bug Fixes
+
+* schedule release ([503f8c6](https://github.com/dargmuesli/vio/commit/503f8c61cb2b93f216d0bcaee68a3df4a3aa5ec9))
+
 ## [20.1.0](https://github.com/dargmuesli/vio/compare/20.0.0...20.1.0) (2025-11-28)
 
 ### Features
