@@ -22,7 +22,10 @@
       "sharp",
       "unrs-resolver",
       "vue-demi"
-    ]
+    ],
+    "overrides": {
+      "@nuxtjs/sitemap": "7.4.7"
+    }
   },
   "private": true,
   "scripts": {
