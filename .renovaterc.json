@@ -3,7 +3,7 @@
   "extends": ["github>dargmuesli/renovate-config"],
   "packageRules": [
     {
-      "allowedVersions": "7.4.7",
+      "allowedVersions": "7.4.8",
       "matchPackageNames": ["@nuxtjs/sitemap"]
     }
   ]
