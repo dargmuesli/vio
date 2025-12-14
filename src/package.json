@@ -44,7 +44,7 @@
     "vue-tsc": "3.1.8"
   },
   "devDependencies": {
-    "@types/node": "24.10.3",
+    "@types/node": "24.10.4",
     "@urql/devtools": "2.0.3",
     "@urql/exchange-graphcache": "8.1.0",
     "@vueuse/core": "14.1.0",
