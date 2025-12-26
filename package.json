@@ -24,8 +24,7 @@
       "vue-demi"
     ],
     "overrides": {
-      "@nuxtjs/sitemap": "7.4.7",
-      "nuxt-og-image": "5.1.12"
+      "@nuxtjs/sitemap": "7.4.7"
     }
   },
   "private": true,
