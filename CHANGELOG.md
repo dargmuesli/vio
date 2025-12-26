@@ -1,3 +1,9 @@
+## [20.1.3](https://github.com/dargmuesli/vio/compare/20.1.2...20.1.3) (2025-12-26)
+
+### Bug Fixes
+
+* **deps:** pin nuxt-og-image to v5.1.12 ([cb34c21](https://github.com/dargmuesli/vio/commit/cb34c21ad6edf78120bd65259c71557bb0479343))
+
 ## [20.1.2](https://github.com/dargmuesli/vio/compare/20.1.1...20.1.2) (2025-12-20)
 
 ### Bug Fixes
