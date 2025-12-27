@@ -36,7 +36,9 @@ test.describe('sitemap', () => {
             new RegExp(escapeRegExp(SITE_URL), 'g'),
             'https://example.com',
           ),
-      ).toMatchSnapshot(`sitemap-content-${language}.txt`)
+      ).toMatchSnapshot(
+        `sitemap-content-${process.env.VIO_SERVER}-${language}.txt`,
+      )
     }
   })
 })
