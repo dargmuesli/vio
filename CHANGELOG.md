@@ -1,3 +1,9 @@
+## [20.1.4](https://github.com/dargmuesli/vio/compare/20.1.3...20.1.4) (2026-01-02)
+
+### Bug Fixes
+
+* **nitro:** correct experimental async context availability ([66c81aa](https://github.com/dargmuesli/vio/commit/66c81aa76315a71380ede9f4b4e5efdc3007b659))
+
 ## [20.1.3](https://github.com/dargmuesli/vio/compare/20.1.2...20.1.3) (2025-12-26)
 
 ### Bug Fixes
