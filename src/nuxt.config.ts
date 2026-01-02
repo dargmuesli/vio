@@ -95,6 +95,9 @@ export default defineNuxtConfig(
       ],
       nitro: {
         compressPublicAssets: true,
+        experimental: {
+          asyncContext: true,
+        },
       },
       runtimeConfig: {
         public: {
@@ -261,7 +264,6 @@ export default defineNuxtConfig(
         },
         nitro: {
           experimental: {
-            asyncContext: true,
             openAPI: true,
           },
         },
