@@ -8,9 +8,9 @@
     </url>
     <url>
         <loc>https://example.com/legal-notice</loc>
+        <xhtml:link rel="alternate" href="https://example.com/de/legal-notice" hreflang="de" />
         <xhtml:link rel="alternate" href="https://example.com/legal-notice" hreflang="x-default" />
         <xhtml:link rel="alternate" href="https://example.com/legal-notice" hreflang="en" />
-        <xhtml:link rel="alternate" href="https://example.com/de/legal-notice" hreflang="de" />
     </url>
     <url>
         <loc>https://example.com/privacy-policy</loc>

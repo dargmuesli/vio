@@ -280,6 +280,7 @@ export default defineNuxtConfig(
       },
       sitemap: {
         credits: false,
+        zeroRuntime: true,
       },
 
       // environments
