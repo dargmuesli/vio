@@ -1,7 +1,5 @@
-import { fileURLToPath } from 'node:url'
-import { dirname, join } from 'node:path'
-
 import tailwindcss from '@tailwindcss/vite'
+import { createResolver } from 'nuxt/kit'
 import { defu } from 'defu'
 
 import {
@@ -13,7 +11,7 @@ import {
 } from './shared/utils/constants'
 import { VIO_NUXT_BASE_CONFIG } from './shared/utils/nuxt'
 
-const currentDir = dirname(fileURLToPath(import.meta.url))
+const { resolve } = createResolver(import.meta.url)
 
 export default defineNuxtConfig(
   defu(
@@ -114,6 +112,13 @@ export default defineNuxtConfig(
       },
       typescript: {
         tsConfig: {
+          nodeTsConfig: {
+            include: [
+              resolve('../.config'),
+              resolve('../node'),
+              // resolve('../sentry.server.config.ts'),
+            ],
+          },
           vueCompilerOptions: {
             htmlAttributes: [], // https://github.com/johnsoncodehk/volar/issues/1970#issuecomment-1276994634
           },
@@ -273,13 +278,14 @@ export default defineNuxtConfig(
       },
       shadcn: {
         prefix: '',
-        componentDir: join(currentDir, './app/components/scn'),
+        componentDir: resolve('./app/components/scn'),
       },
       site: {
         url: SITE_URL,
       },
       sitemap: {
         credits: false,
+        zeroRuntime: true,
       },
 
       // environments

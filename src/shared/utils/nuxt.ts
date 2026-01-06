@@ -1,5 +1,6 @@
 import type { defineNuxtConfig } from 'nuxt/config'
 
+import { IS_IN_FRONTEND_DEVELOPMENT } from '../../node'
 import { I18N_MODULE_CONFIG } from './constants'
 
 export const VIO_NUXT_BASE_CONFIG = ({
@@ -20,11 +21,9 @@ export const VIO_NUXT_BASE_CONFIG = ({
         vio: {
           ...(stagingHost
             ? {
-                stagingHost:
-                  process.env.NODE_ENV !== 'production' &&
-                  !process.env.NUXT_PUBLIC_SITE_URL
-                    ? stagingHost
-                    : undefined,
+                stagingHost: IS_IN_FRONTEND_DEVELOPMENT
+                  ? stagingHost
+                  : undefined,
               }
             : {}),
         },
