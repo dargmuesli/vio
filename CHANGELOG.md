@@ -1,3 +1,9 @@
+## [20.1.5](https://github.com/dargmuesli/vio/compare/20.1.4...20.1.5) (2026-01-06)
+
+### Bug Fixes
+
+* **deps:** unpin @nuxtjs/sitemap ([0fa0900](https://github.com/dargmuesli/vio/commit/0fa0900ef274e93a2c9e9cfd3ec2a2798fa4b955))
+
 ## [20.1.4](https://github.com/dargmuesli/vio/compare/20.1.3...20.1.4) (2026-01-02)
 
 ### Bug Fixes
