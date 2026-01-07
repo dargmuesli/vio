@@ -5,7 +5,7 @@ import { defu } from 'defu'
 export const VIO_SITE_NAME = 'Vio'
 
 export const SITE_URL =
-  process.env.NUXT_PUBLIC_SITE_URL ||
+  process.env.NUXT_PUBLIC_I18N_BASE_URL ||
   `https://${process.env.HOST || 'localhost'}:${process.env.PORT || '3000'}`
 export const CACHE_VERSION = 'zeMtipb6C9'
 export const COOKIE_CONTROL_CONSENT_COOKIE_NAME =

@@ -94,8 +94,8 @@
   },
   "scripts": {
     "build": "pnpm run build:node",
-    "build:node": "NUXT_PUBLIC_SITE_URL=https://localhost:3001 nuxt build playground",
-    "build:static": "NUXT_PUBLIC_SITE_URL=https://localhost:3002 nuxt generate playground",
+    "build:node": "NUXT_PUBLIC_I18N_BASE_URL=https://localhost:3001 nuxt build playground",
+    "build:static": "NUXT_PUBLIC_I18N_BASE_URL=https://localhost:3002 nuxt generate playground",
     "dev": "pnpm run start:dev",
     "generate": "pnpm run build:static",
     "lint": "pnpm run lint:js && pnpm run lint:ts && pnpm run lint:style",

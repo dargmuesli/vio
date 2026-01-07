@@ -27,7 +27,7 @@ export default defineNuxtConfig(
         },
       },
       compatibilityDate: '2024-04-03',
-      ...(process.env.NUXT_PUBLIC_SITE_URL
+      ...(process.env.NUXT_PUBLIC_I18N_BASE_URL
         ? {}
         : {
             devServer: {
