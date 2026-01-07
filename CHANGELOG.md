@@ -1,3 +1,23 @@
+## [21.0.0-beta.2](https://github.com/dargmuesli/vio/compare/21.0.0-beta.1...21.0.0-beta.2) (2026-01-07)
+
+### ⚠ BREAKING CHANGES
+
+* **site:** use i18n base url
+* **site:** unify url
+
+### Bug Fixes
+
+* **deps:** pin nuxt-og-image to v5.1.12 ([cb34c21](https://github.com/dargmuesli/vio/commit/cb34c21ad6edf78120bd65259c71557bb0479343))
+* **deps:** unpin @nuxtjs/sitemap ([0fa0900](https://github.com/dargmuesli/vio/commit/0fa0900ef274e93a2c9e9cfd3ec2a2798fa4b955))
+* **nitro:** correct experimental async context availability ([66c81aa](https://github.com/dargmuesli/vio/commit/66c81aa76315a71380ede9f4b4e5efdc3007b659))
+* schedule release ([b8b730e](https://github.com/dargmuesli/vio/commit/b8b730e83100b597462486e978f65fe120e419a3))
+* schedule release ([503f8c6](https://github.com/dargmuesli/vio/commit/503f8c61cb2b93f216d0bcaee68a3df4a3aa5ec9))
+
+### Code Refactoring
+
+* **site:** unify url ([0b792d9](https://github.com/dargmuesli/vio/commit/0b792d96f8a75e05693f45c2f086479344a6a113))
+* **site:** use i18n base url ([88f9246](https://github.com/dargmuesli/vio/commit/88f92461ed857769323a5a47c770b79cb56ff086))
+
 ## [21.0.0-beta.1](https://github.com/dargmuesli/vio/compare/20.0.0...21.0.0-beta.1) (2025-11-28)
 
 ### ⚠ BREAKING CHANGES
