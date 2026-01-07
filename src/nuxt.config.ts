@@ -95,6 +95,9 @@ export default defineNuxtConfig(
       ],
       nitro: {
         compressPublicAssets: true,
+        experimental: {
+          asyncContext: true,
+        },
       },
       runtimeConfig: {
         public: {
@@ -120,7 +123,32 @@ export default defineNuxtConfig(
         },
       },
       vite: {
-        plugins: [tailwindcss()],
+        plugins: [
+          tailwindcss(),
+          {
+            // This plugin suppresses false-positive sourcemap warnings from Tailwind's Vite plugin
+            // TODO: remove once tailwind generates sourcemaps for their transforms (https://github.com/tailwindlabs/tailwindcss/discussions/16119)
+            apply: 'build',
+            name: 'vite-plugin-ignore-sourcemap-warnings',
+            configResolved(config) {
+              const originalOnWarn = config.build.rollupOptions.onwarn
+              config.build.rollupOptions.onwarn = (warning, warn) => {
+                if (
+                  warning.code === 'SOURCEMAP_BROKEN' &&
+                  warning.plugin === '@tailwindcss/vite:generate:build'
+                ) {
+                  return
+                }
+
+                if (originalOnWarn) {
+                  originalOnWarn(warning, warn)
+                } else {
+                  warn(warning)
+                }
+              }
+            },
+          },
+        ],
       },
 
       // modules
@@ -261,7 +289,6 @@ export default defineNuxtConfig(
         },
         nitro: {
           experimental: {
-            asyncContext: true,
             openAPI: true,
           },
         },

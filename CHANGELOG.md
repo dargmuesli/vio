@@ -11,6 +11,42 @@
 * **composables:** allow for reactive time ([8e9cf57](https://github.com/dargmuesli/vio/commit/8e9cf579c685df573f2801302e8da65d0fa16522))
 * **util:** drop `copyText` ([da0e36f](https://github.com/dargmuesli/vio/commit/da0e36fccca59cec94e4cb19f7ce6b2a1fa92f5d))
 
+## [20.1.5](https://github.com/dargmuesli/vio/compare/20.1.4...20.1.5) (2026-01-06)
+
+### Bug Fixes
+
+* **deps:** unpin @nuxtjs/sitemap ([0fa0900](https://github.com/dargmuesli/vio/commit/0fa0900ef274e93a2c9e9cfd3ec2a2798fa4b955))
+
+## [20.1.4](https://github.com/dargmuesli/vio/compare/20.1.3...20.1.4) (2026-01-02)
+
+### Bug Fixes
+
+* **nitro:** correct experimental async context availability ([66c81aa](https://github.com/dargmuesli/vio/commit/66c81aa76315a71380ede9f4b4e5efdc3007b659))
+
+## [20.1.3](https://github.com/dargmuesli/vio/compare/20.1.2...20.1.3) (2025-12-26)
+
+### Bug Fixes
+
+* **deps:** pin nuxt-og-image to v5.1.12 ([cb34c21](https://github.com/dargmuesli/vio/commit/cb34c21ad6edf78120bd65259c71557bb0479343))
+
+## [20.1.2](https://github.com/dargmuesli/vio/compare/20.1.1...20.1.2) (2025-12-20)
+
+### Bug Fixes
+
+* schedule release ([b8b730e](https://github.com/dargmuesli/vio/commit/b8b730e83100b597462486e978f65fe120e419a3))
+
+## [20.1.1](https://github.com/dargmuesli/vio/compare/20.1.0...20.1.1) (2025-12-06)
+
+### Bug Fixes
+
+* schedule release ([503f8c6](https://github.com/dargmuesli/vio/commit/503f8c61cb2b93f216d0bcaee68a3df4a3aa5ec9))
+
+## [20.1.0](https://github.com/dargmuesli/vio/compare/20.0.0...20.1.0) (2025-11-28)
+
+### Features
+
+* **composables:** add `useCopy` ([1d916ff](https://github.com/dargmuesli/vio/commit/1d916ffc6cb0494af22a27998aab1f4679673f1d))
+
 ## [20.0.0](https://github.com/dargmuesli/vio/compare/19.1.0...20.0.0) (2025-11-26)
 
 ### ⚠ BREAKING CHANGES
