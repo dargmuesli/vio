@@ -4,6 +4,7 @@ import { dirname, join } from 'node:path'
 import tailwindcss from '@tailwindcss/vite'
 import { defu } from 'defu'
 
+import { IS_IN_STACK } from './node'
 import {
   SITE_URL,
   VIO_SITE_NAME,
@@ -29,7 +30,7 @@ export default defineNuxtConfig(
         },
       },
       compatibilityDate: '2024-04-03',
-      ...(process.env.NUXT_PUBLIC_SITE_URL
+      ...(IS_IN_STACK
         ? {}
         : {
             devServer: {
