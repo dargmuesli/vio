@@ -58,8 +58,8 @@ RUN pnpm --dir src run build:node
 
 FROM prepare AS build-static
 
-ARG SITE_URL=https://localhost:3002
-ENV SITE_URL=${SITE_URL}
+ARG NUXT_PUBLIC_I18N_BASE_URL=https://localhost:3002
+ENV NUXT_PUBLIC_I18N_BASE_URL=${NUXT_PUBLIC_I18N_BASE_URL}
 
 ENV NODE_ENV=production
 RUN pnpm --dir src run build:static
@@ -156,8 +156,8 @@ RUN pnpm --dir tests run test:e2e:server:node
 
 FROM test-e2e-prepare AS test-e2e-static
 
-ARG SITE_URL=https://localhost:3002
-ENV SITE_URL=${SITE_URL}
+ARG NUXT_PUBLIC_I18N_BASE_URL=https://localhost:3002
+ENV NUXT_PUBLIC_I18N_BASE_URL=${NUXT_PUBLIC_I18N_BASE_URL}
 ARG PORT=3002
 ENV PORT=${PORT}
 

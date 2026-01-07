@@ -92,7 +92,7 @@ export default defineConfig({
     },
     ignoreHTTPSErrors: true, // TODO: remove once tests run without it
     timeout: process.env.NODE_ENV === 'production' ? 10000 : 100000,
-    url: process.env.SITE_URL || SITE_URL,
+    url: SITE_URL,
     reuseExistingServer: !process.env.CI,
   },
 
