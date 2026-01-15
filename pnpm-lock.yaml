@@ -64,8 +64,8 @@ importers:
         specifier: 0.9.0
         version: 0.9.0
       '@intlify/eslint-plugin-vue-i18n':
-        specifier: 4.1.0
-        version: 4.1.0(eslint@9.39.2(jiti@2.6.1))(jsonc-eslint-parser@2.4.2)(vue-eslint-parser@10.2.0(eslint@9.39.2(jiti@2.6.1)))(yaml-eslint-parser@1.3.2)
+        specifier: 4.1.1
+        version: 4.1.1(eslint@9.39.2(jiti@2.6.1))(jsonc-eslint-parser@2.4.2)(vue-eslint-parser@10.2.0(eslint@9.39.2(jiti@2.6.1)))(yaml-eslint-parser@1.3.2)
       '@nuxt/devtools':
         specifier: 3.1.1
         version: 3.1.1(vite@7.3.1(@types/node@24.10.8)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.1)(yaml@2.8.2))(vue@3.5.26(typescript@5.9.3))
@@ -137,7 +137,7 @@ importers:
         version: 6.0.2(eslint@9.39.2(jiti@2.6.1))
       eslint-plugin-prettier:
         specifier: 5.5.5
-        version: 5.5.5(@types/eslint@9.6.1)(eslint-config-prettier@10.1.8(eslint@9.39.2(jiti@2.6.1)))(eslint@9.39.2(jiti@2.6.1))(prettier@3.7.4)
+        version: 5.5.5(@types/eslint@9.6.1)(eslint-config-prettier@10.1.8(eslint@9.39.2(jiti@2.6.1)))(eslint@9.39.2(jiti@2.6.1))(prettier@3.8.0)
       eslint-plugin-yml:
         specifier: 1.19.1
         version: 1.19.1(eslint@9.39.2(jiti@2.6.1))
@@ -206,11 +206,11 @@ importers:
         specifier: 3.0.4
         version: 3.0.4(typescript@5.9.3)(vue@3.5.26(typescript@5.9.3))
       prettier:
-        specifier: 3.7.4
-        version: 3.7.4
+        specifier: 3.8.0
+        version: 3.8.0
       prettier-plugin-tailwindcss:
         specifier: 0.7.2
-        version: 0.7.2(prettier@3.7.4)
+        version: 0.7.2(prettier@3.8.0)
       serve:
         specifier: 14.2.5
         version: 14.2.5
@@ -268,7 +268,7 @@ importers:
         version: 10.1.8(eslint@9.39.2(jiti@2.6.1))
       eslint-plugin-prettier:
         specifier: 5.5.5
-        version: 5.5.5(@types/eslint@9.6.1)(eslint-config-prettier@10.1.8(eslint@9.39.2(jiti@2.6.1)))(eslint@9.39.2(jiti@2.6.1))(prettier@3.7.4)
+        version: 5.5.5(@types/eslint@9.6.1)(eslint-config-prettier@10.1.8(eslint@9.39.2(jiti@2.6.1)))(eslint@9.39.2(jiti@2.6.1))(prettier@3.8.0)
       lodash-es:
         specifier: 4.17.22
         version: 4.17.22
@@ -279,8 +279,8 @@ importers:
         specifier: 8.53.0
         version: 8.53.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)
       ufo:
-        specifier: 1.6.2
-        version: 1.6.2
+        specifier: 1.6.3
+        version: 1.6.3
 
 packages:
 
@@ -1201,8 +1201,8 @@ packages:
     resolution: {integrity: sha512-su9kRlQAkG+SBP5cufTYmwPnqjur8etZVa2lnR80CgE5JqA0pXwGUF7W08dR/a6T2oDoYPh53/S8O0CGbfx1qg==}
     engines: {node: '>= 16'}
 
-  '@intlify/eslint-plugin-vue-i18n@4.1.0':
-    resolution: {integrity: sha512-MPAr3LGTrkB5CZBHN5eUf4kASUEiSaDM371jADmxNbTL1Ew7IAyCIBGm3+/1sWcvsfVHe4wz8RFoo6FpeQZ4Nw==}
+  '@intlify/eslint-plugin-vue-i18n@4.1.1':
+    resolution: {integrity: sha512-TgeLqdNEwt9wDOxXwJ7lSxw4f2saXd0QfZ4ZM3oCU4m1H1r1tBbuV6nRuhtsy4DwGqC0nlFFhsvKONlEyUxZkg==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       eslint: ^8.0.0 || ^9.0.0-0
@@ -6206,8 +6206,8 @@ packages:
       prettier-plugin-svelte:
         optional: true
 
-  prettier@3.7.4:
-    resolution: {integrity: sha512-v6UNi1+3hSlVvv8fSaoUbggEM5VErKmmpGA7Pl3HF8V6uKY7rvClBOJlH6yNwQtfTueNkGVpOv/mtWL9L4bgRA==}
+  prettier@3.8.0:
+    resolution: {integrity: sha512-yEPsovQfpxYfgWNhCfECjG5AQaO+K3dp6XERmOepyPDVqcJm+bjyCVO3pmU+nAPe0N5dDvekfGezt/EIiRe1TA==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -6989,6 +6989,9 @@ packages:
 
   ufo@1.6.2:
     resolution: {integrity: sha512-heMioaxBcG9+Znsda5Q8sQbWnLJSl98AFDXTO80wELWEzX3hordXsTdxrIfMQoO9IY1MEnoGoPjpoKpMj+Yx0Q==}
+
+  ufo@1.6.3:
+    resolution: {integrity: sha512-yDJTmhydvl5lJzBmy/hyOAA0d+aqCBuwl818haVdYCRrWV84o7YyeVm4QlVHStqNrrJSTb6jKuFAVqAFsr+K3Q==}
 
   uglify-js@3.19.3:
     resolution: {integrity: sha512-v3Xu+yuwBXisp6QYTcH4UbH+xYJXqnq2m/LtQVWKWzYc1iehYnLixoQDN9FH6/j9/oybfd6W9Ghwkl8+UMKTKQ==}
@@ -8406,7 +8409,7 @@ snapshots:
       '@intlify/core-base': 11.2.8
       '@intlify/shared': 11.2.8
 
-  '@intlify/eslint-plugin-vue-i18n@4.1.0(eslint@9.39.2(jiti@2.6.1))(jsonc-eslint-parser@2.4.2)(vue-eslint-parser@10.2.0(eslint@9.39.2(jiti@2.6.1)))(yaml-eslint-parser@1.3.2)':
+  '@intlify/eslint-plugin-vue-i18n@4.1.1(eslint@9.39.2(jiti@2.6.1))(jsonc-eslint-parser@2.4.2)(vue-eslint-parser@10.2.0(eslint@9.39.2(jiti@2.6.1)))(yaml-eslint-parser@1.3.2)':
     dependencies:
       '@eslint/eslintrc': 3.3.3
       '@intlify/core-base': 11.2.8
@@ -8613,7 +8616,7 @@ snapshots:
       srvx: 0.10.0
       std-env: 3.10.0
       tinyexec: 1.0.2
-      ufo: 1.6.2
+      ufo: 1.6.3
       youch: 4.1.0-beta.13
     transitivePeerDependencies:
       - cac
@@ -8815,7 +8818,7 @@ snapshots:
       scule: 1.3.0
       semver: 7.7.3
       tinyglobby: 0.2.15
-      ufo: 1.6.2
+      ufo: 1.6.3
       unctx: 2.5.0
       untyped: 2.0.0
     transitivePeerDependencies:
@@ -8840,7 +8843,7 @@ snapshots:
       scule: 1.3.0
       semver: 7.7.3
       tinyglobby: 0.2.15
-      ufo: 1.6.2
+      ufo: 1.6.3
       unctx: 2.5.0
       untyped: 2.0.0
     transitivePeerDependencies:
@@ -8869,7 +8872,7 @@ snapshots:
       pkg-types: 2.3.0
       radix3: 1.1.2
       std-env: 3.10.0
-      ufo: 1.6.2
+      ufo: 1.6.3
       unctx: 2.5.0
       unstorage: 1.17.3(db0@0.3.4)(ioredis@5.9.1)
       vue: 3.5.26(typescript@5.9.3)
@@ -8962,7 +8965,7 @@ snapshots:
       rollup-plugin-visualizer: 6.0.5(rollup@4.55.1)
       seroval: 1.4.2
       std-env: 3.10.0
-      ufo: 1.6.2
+      ufo: 1.6.3
       unenv: 2.0.0-rc.24
       vite: 7.3.1(@types/node@24.10.8)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.1)(yaml@2.8.2)
       vite-node: 5.2.0(@types/node@24.10.8)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.1)(yaml@2.8.2)
@@ -9011,7 +9014,7 @@ snapshots:
       html-validate: 9.4.2
       knitwork: 1.3.0
       pathe: 2.0.3
-      prettier: 3.7.4
+      prettier: 3.8.0
       std-env: 3.10.0
     transitivePeerDependencies:
       - jest
@@ -9089,7 +9092,7 @@ snapshots:
       pkg-types: 2.3.0
       sirv: 3.0.2
       std-env: 3.10.0
-      ufo: 1.6.2
+      ufo: 1.6.3
     transitivePeerDependencies:
       - magicast
       - vue
@@ -9154,7 +9157,7 @@ snapshots:
       semver: 7.7.3
       sirv: 3.0.2
       std-env: 3.10.0
-      ufo: 1.6.2
+      ufo: 1.6.3
       ultrahtml: 1.6.0
     transitivePeerDependencies:
       - h3
@@ -10222,7 +10225,7 @@ snapshots:
       estree-walker: 3.0.3
       magic-string: 0.30.21
       mlly: 1.8.0
-      ufo: 1.6.2
+      ufo: 1.6.3
       unhead: 2.1.2
       unplugin: 2.3.11
       unplugin-ast: 0.15.4
@@ -10231,7 +10234,7 @@ snapshots:
 
   '@unhead/schema-org@2.1.2(@unhead/vue@2.1.2(vue@3.5.26(typescript@5.9.3)))':
     dependencies:
-      ufo: 1.6.2
+      ufo: 1.6.3
       unhead: 2.1.2
     optionalDependencies:
       '@unhead/vue': 2.1.2(vue@3.5.26(typescript@5.9.3))
@@ -11697,10 +11700,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-prettier@5.5.5(@types/eslint@9.6.1)(eslint-config-prettier@10.1.8(eslint@9.39.2(jiti@2.6.1)))(eslint@9.39.2(jiti@2.6.1))(prettier@3.7.4):
+  eslint-plugin-prettier@5.5.5(@types/eslint@9.6.1)(eslint-config-prettier@10.1.8(eslint@9.39.2(jiti@2.6.1)))(eslint@9.39.2(jiti@2.6.1))(prettier@3.8.0):
     dependencies:
       eslint: 9.39.2(jiti@2.6.1)
-      prettier: 3.7.4
+      prettier: 3.8.0
       prettier-linter-helpers: 1.0.1
       synckit: 0.11.12
     optionalDependencies:
@@ -12395,7 +12398,7 @@ snapshots:
       pathe: 2.0.3
       sharp: 0.34.5
       svgo: 4.0.0
-      ufo: 1.6.2
+      ufo: 1.6.3
       unstorage: 1.17.3(db0@0.3.4)(ioredis@5.9.1)
       xss: 1.0.15
     transitivePeerDependencies:
@@ -12719,7 +12722,7 @@ snapshots:
       node-forge: 1.3.3
       pathe: 1.1.2
       std-env: 3.10.0
-      ufo: 1.6.2
+      ufo: 1.6.3
       untun: 0.1.3
       uqr: 0.1.2
 
@@ -12831,7 +12834,7 @@ snapshots:
       mlly: 1.8.0
       regexp-tree: 0.1.27
       type-level-regexp: 0.1.17
-      ufo: 1.6.2
+      ufo: 1.6.3
       unplugin: 2.3.11
 
   magic-string-ast@1.0.3:
@@ -12949,7 +12952,7 @@ snapshots:
       acorn: 8.15.0
       pathe: 2.0.3
       pkg-types: 1.3.1
-      ufo: 1.6.2
+      ufo: 1.6.3
 
   mocked-exports@0.1.1: {}
 
@@ -13053,7 +13056,7 @@ snapshots:
       serve-static: 2.2.1
       source-map: 0.7.6
       std-env: 3.10.0
-      ufo: 1.6.2
+      ufo: 1.6.3
       ultrahtml: 1.6.0
       uncrypto: 0.1.3
       unctx: 2.5.0
@@ -13192,7 +13195,7 @@ snapshots:
       radix3: 1.1.2
       sirv: 3.0.2
       std-env: 3.10.0
-      ufo: 1.6.2
+      ufo: 1.6.3
       ultrahtml: 1.6.0
       unstorage: 1.17.3(db0@0.3.4)(ioredis@5.9.1)
     transitivePeerDependencies:
@@ -13248,7 +13251,7 @@ snapshots:
       sirv: 3.0.2
       std-env: 3.10.0
       strip-literal: 3.1.0
-      ufo: 1.6.2
+      ufo: 1.6.3
       unplugin: 2.3.11
       unstorage: 1.17.3(db0@0.3.4)(ioredis@5.9.1)
       unwasm: 0.3.11
@@ -13305,7 +13308,7 @@ snapshots:
       pkg-types: 2.3.0
       scule: 1.3.0
       semver: 7.7.3
-      ufo: 1.6.2
+      ufo: 1.6.3
     transitivePeerDependencies:
       - magicast
       - rollup
@@ -13318,7 +13321,7 @@ snapshots:
       pkg-types: 2.3.0
       site-config-stack: 3.2.17(vue@3.5.26(typescript@5.9.3))
       std-env: 3.10.0
-      ufo: 1.6.2
+      ufo: 1.6.3
     transitivePeerDependencies:
       - magicast
       - vue
@@ -13332,7 +13335,7 @@ snapshots:
       pkg-types: 2.3.0
       sirv: 3.0.2
       site-config-stack: 3.2.17(vue@3.5.26(typescript@5.9.3))
-      ufo: 1.6.2
+      ufo: 1.6.3
     transitivePeerDependencies:
       - magicast
       - vue
@@ -13478,7 +13481,7 @@ snapshots:
     dependencies:
       destr: 2.0.5
       node-fetch-native: 1.6.7
-      ufo: 1.6.2
+      ufo: 1.6.3
 
   ohash@2.0.11: {}
 
@@ -14014,11 +14017,11 @@ snapshots:
     dependencies:
       fast-diff: 1.3.0
 
-  prettier-plugin-tailwindcss@0.7.2(prettier@3.7.4):
+  prettier-plugin-tailwindcss@0.7.2(prettier@3.8.0):
     dependencies:
-      prettier: 3.7.4
+      prettier: 3.8.0
 
-  prettier@3.7.4: {}
+  prettier@3.8.0: {}
 
   pretty-bytes@7.1.0: {}
 
@@ -14485,7 +14488,7 @@ snapshots:
 
   site-config-stack@3.2.17(vue@3.5.26(typescript@5.9.3)):
     dependencies:
-      ufo: 1.6.2
+      ufo: 1.6.3
       vue: 3.5.26(typescript@5.9.3)
 
   skin-tone@2.0.0:
@@ -14939,6 +14942,8 @@ snapshots:
 
   ufo@1.6.2: {}
 
+  ufo@1.6.3: {}
+
   uglify-js@3.19.3:
     optional: true
 
@@ -15134,7 +15139,7 @@ snapshots:
       lru-cache: 10.4.3
       node-fetch-native: 1.6.7
       ofetch: 1.5.1
-      ufo: 1.6.2
+      ufo: 1.6.3
     optionalDependencies:
       db0: 0.3.4
       ioredis: 5.9.1
@@ -15295,7 +15300,7 @@ snapshots:
 
   vue-bundle-renderer@2.2.0:
     dependencies:
-      ufo: 1.6.2
+      ufo: 1.6.3
 
   vue-demi@0.13.11(vue@3.5.26(typescript@5.9.3)):
     dependencies:
