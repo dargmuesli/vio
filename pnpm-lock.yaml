@@ -157,8 +157,8 @@ importers:
         specifier: 4.1.0
         version: 4.1.0(magicast@0.5.1)
       nuxt-security:
-        specifier: 2.5.0
-        version: 2.5.0(magicast@0.5.1)(rollup@4.55.1)
+        specifier: 2.5.1
+        version: 2.5.1(magicast@0.5.1)(rollup@4.55.1)
       reka-ui:
         specifier: 2.7.0
         version: 2.7.0(typescript@5.9.3)(vue@3.5.26(typescript@5.9.3))
@@ -5609,8 +5609,8 @@ packages:
       zod:
         optional: true
 
-  nuxt-security@2.5.0:
-    resolution: {integrity: sha512-mfoSXcY1V6DHJwXGVLY99G7W2XnkdGnJ5FgmGe8I2ZkWOb1DVr3rbwl8OgIb1C64CDWTBhwer8eXxgCLCGGLUg==}
+  nuxt-security@2.5.1:
+    resolution: {integrity: sha512-gXUhJiOqgkKkP0FHDAPOuREjoala0p6G/4TIlkti1ZafpJV8TkjjFqCNT6NuiWHxKzVYY00OIR1tbRcZuJ7LmQ==}
     engines: {node: '>=20.0.0'}
 
   nuxt-seo-utils@7.0.19:
@@ -13289,7 +13289,7 @@ snapshots:
       - magicast
       - vue
 
-  nuxt-security@2.5.0(magicast@0.5.1)(rollup@4.55.1):
+  nuxt-security@2.5.1(magicast@0.5.1)(rollup@4.55.1):
     dependencies:
       '@nuxt/kit': 4.2.2(magicast@0.5.1)
       basic-auth: 2.0.1
