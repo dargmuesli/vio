@@ -12,9 +12,9 @@ const constants = await jiti.import('../shared/utils/constants.ts')
 // @ts-ignore
 const POLYFILLS = constants.POLYFILLS
 
-const vueI18nConfiguration = vueI18n.configs['flat/recommended']
+const vueI18nConfiguration = vueI18n.configs.recommended
 const compatConfiguration = eslintPluginCompat.configs['flat/recommended']
-const ymlConfiguration = eslintPluginYml.configs['flat/recommended']
+const ymlConfiguration = eslintPluginYml.configs.recommended
 const prettierConfiguration = eslintPluginPrettierRecommended
 
 export const VIO_ESLINT_CONFIG = [
