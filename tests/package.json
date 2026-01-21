@@ -8,7 +8,7 @@
     "eslint": "9.39.2",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-prettier": "5.5.5",
-    "lodash-es": "4.17.22",
+    "lodash-es": "4.17.23",
     "typescript": "5.9.3",
     "typescript-eslint": "8.53.1",
     "ufo": "1.6.3"
