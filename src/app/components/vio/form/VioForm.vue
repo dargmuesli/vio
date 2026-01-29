@@ -17,12 +17,14 @@
             :class="{
               'animate-shake': form.$error,
             }"
+            :disabled="isLoading"
             type="submit"
             @click="emit('click')"
           >
             {{ submitName || t('submit') }}
             <template #prefix>
-              <slot name="submit-icon" />
+              <VioLoaderIndicatorSpinner v-if="isLoading" class="size-8" />
+              <slot v-else name="submit-icon" />
             </template>
           </VioButtonColored>
           <VioFormInputStateError v-if="form.$error" class="mt-2">
@@ -49,6 +51,7 @@ interface Props {
   form: BaseValidation
   formClass?: string
   isFormSent?: boolean
+  isLoading?: boolean
   submitName?: string
 }
 const props = withDefaults(defineProps<Props>(), {
@@ -56,6 +59,7 @@ const props = withDefaults(defineProps<Props>(), {
   errorsPgIds: undefined,
   formClass: undefined,
   isFormSent: false,
+  isLoading: undefined,
   submitName: undefined,
 })
 
