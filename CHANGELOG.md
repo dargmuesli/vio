@@ -1,3 +1,9 @@
+## [20.2.0](https://github.com/dargmuesli/vio/compare/20.1.6...20.2.0) (2026-01-29)
+
+### Features
+
+* **components:** add loading indicator to form button ([b179dbe](https://github.com/dargmuesli/vio/commit/b179dbe277c4cb8c2a5676bc630ecec33b78eb4a))
+
 ## [20.1.6](https://github.com/dargmuesli/vio/compare/20.1.5...20.1.6) (2026-01-17)
 
 ### Bug Fixes
