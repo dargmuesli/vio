@@ -6,7 +6,8 @@
     "@resvg/resvg-js": "2.6.2",
     "husky": "9.1.7",
     "lint-staged": "16.2.7",
-    "satori": "0.19.1"
+    "satori": "0.19.1",
+    "satori-html": "0.3.2"
   },
   "packageManager": "pnpm@10.28.1",
   "pnpm": {

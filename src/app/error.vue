@@ -27,5 +27,5 @@ useAppLayout()
 useHeadDefault({
   title: `${errorProp.value.status} - ${errorProp.value.message}`,
 })
-defineOgImage('NuxtSeo', {}, {})
+defineOgImage('NuxtSeo.satori', {}, {})
 </script>
