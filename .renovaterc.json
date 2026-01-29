@@ -3,11 +3,11 @@
   "extends": ["github>dargmuesli/renovate-config"],
   "packageRules": [
     {
-      "allowedVersions": "7.4.7",
+      "allowedVersions": "7.6.0",
       "matchPackageNames": ["@nuxtjs/sitemap"]
     },
     {
-      "allowedVersions": "5.1.12",
+      "allowedVersions": "5.1.13",
       "matchPackageNames": ["nuxt-og-image"]
     }
   ]
