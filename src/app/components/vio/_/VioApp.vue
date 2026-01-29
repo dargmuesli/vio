@@ -43,7 +43,7 @@ const isLoading = computed(() => !!loadingIds.value.length)
 onMounted(() => indicateLoadingDone())
 
 // initialization
-defineOgImageComponent(
+defineOgImage(
   props.ogImageComponent || 'NuxtSeo',
   {},
   {

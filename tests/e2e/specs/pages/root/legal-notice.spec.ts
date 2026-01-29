@@ -45,12 +45,12 @@ test.describe('visual regression', () => {
 
   test('generates the open graph image', async ({ page }) => {
     await page.goto(
-      `/__og-image__/${process.env.VIO_SERVER === 'static' ? 'static' : 'image'}/legal-notice/og.png`,
+      `/_og/${process.env.VIO_SERVER === 'static' ? 's' : 'd'}/legal-notice/og.png`,
     )
     await expect(page).toHaveScreenshot({ fullPage: true })
 
     await page.goto(
-      `/__og-image__/${process.env.VIO_SERVER === 'static' ? 'static' : 'image'}/de/legal-notice/og.png`,
+      `/_og/${process.env.VIO_SERVER === 'static' ? 's' : 'd'}/de/legal-notice/og.png`,
     )
     await expect(page).toHaveScreenshot({ fullPage: true })
   })
