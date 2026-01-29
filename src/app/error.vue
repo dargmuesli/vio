@@ -21,9 +21,4 @@ const { error } = defineProps<{
 
 // initialization
 useAppLayout()
-
-useHeadDefault({
-  title: `${error.status} - ${error.statusText}`,
-})
-defineOgImageComponent('NuxtSeo', {}, {})
 </script>

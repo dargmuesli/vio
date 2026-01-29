@@ -63,6 +63,7 @@ export const useAppLayout = () => {
 }
 
 export const useHeadDefault = (input: Parameters<typeof useSeoMeta>[0]) => {
+  const { t } = useI18n({ useScope: 'global' })
   const siteConfig = useSiteConfig()
 
   const description =
@@ -83,6 +84,16 @@ export const useHeadDefault = (input: Parameters<typeof useSeoMeta>[0]) => {
     ...(title ? { title, ogTitle: title, twitterTitle: title } : {}),
     ...input,
   })
+  defineOgImage(
+    'Nuxt.satori',
+    {
+      description,
+      title: toValue(input.title)?.toString() || undefined,
+    },
+    {
+      alt: t('globalSeoOgImageAlt'),
+    },
+  )
 }
 
 const POLYFILLS_URL = `https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=${POLYFILLS.join(

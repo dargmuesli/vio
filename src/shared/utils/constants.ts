@@ -68,7 +68,7 @@ export const VIO_GET_CSP = ({ siteUrl }: { siteUrl: URL }) =>
       // nuxt-og-image
       ...(process.env.NODE_ENV === 'development'
         ? {
-            // 'connect-src': [`${siteUrl}__og-image__/`],
+            // 'connect-src': [`${siteUrl}_og/`],
             'frame-ancestors': ["'self'"],
           }
         : {}),

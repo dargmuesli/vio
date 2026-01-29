@@ -109,12 +109,12 @@ test.describe('visual regression', () => {
 
   test('generates the open graph image', async ({ page }) => {
     await page.goto(
-      `/__og-image__/${process.env.VIO_SERVER === 'static' ? 'static' : 'image'}/og.png`,
+      `/_og/${process.env.VIO_SERVER === 'static' ? 's' : 'd'}/a_Social+Preview+Image+for+a+Vio+webpage.,c_Nuxt.satori,description_Vio+is+@dargmuesli's+Nuxt+layer.,title_Vio+Playground.png`,
     )
     await expect(page).toHaveScreenshot({ fullPage: true })
 
     await page.goto(
-      `/__og-image__/${process.env.VIO_SERVER === 'static' ? 'static' : 'image'}/de/og.png`,
+      `/_og/${process.env.VIO_SERVER === 'static' ? 's' : 'd'}/a_Social+Preview+Image+für+eine+Vio+Webseite.,c_Nuxt.satori,description_Vio+ist+@dargmueslis+Nuxt+layer.,title_Vio+Playground,p_Ii9kZSI.png`,
     )
     await expect(page).toHaveScreenshot({ fullPage: true })
   })
