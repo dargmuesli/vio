@@ -58,10 +58,10 @@ test.describe('visual regression', () => {
   test('generates the open graph image', async ({ page }) => {
     if (process.env.VIO_SERVER === 'static') return
 
-    await page.goto(`/__og-image__/image/does-not-exist/og.png`)
+    await page.goto(`/_og/image/does-not-exist/og.png`)
     await expect(page).toHaveScreenshot({ fullPage: true })
 
-    await page.goto(`/__og-image__/image/de/does-not-exist/og.png`)
+    await page.goto(`/_og/image/de/does-not-exist/og.png`)
     await expect(page).toHaveScreenshot({ fullPage: true })
   })
 })

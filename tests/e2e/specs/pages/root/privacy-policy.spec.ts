@@ -35,12 +35,12 @@ test.describe('visual regression', () => {
 
   test('generates the open graph image', async ({ page }) => {
     await page.goto(
-      `/__og-image__/${process.env.VIO_SERVER === 'static' ? 'static' : 'image'}/privacy-policy/og.png`,
+      `/_og/${process.env.VIO_SERVER === 'static' ? 's' : 'd'}/privacy-policy/og.png`,
     )
     await expect(page).toHaveScreenshot({ fullPage: true })
 
     await page.goto(
-      `/__og-image__/${process.env.VIO_SERVER === 'static' ? 'static' : 'image'}/de/privacy-policy/og.png`,
+      `/_og/${process.env.VIO_SERVER === 'static' ? 's' : 'd'}/de/privacy-policy/og.png`,
     )
     await expect(page).toHaveScreenshot({ fullPage: true })
   })

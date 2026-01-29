@@ -3,8 +3,11 @@
     "@commitlint/cli": "20.3.1",
     "@commitlint/config-conventional": "20.3.1",
     "@dargmuesli/nuxt-vio": "link:src",
+    "@resvg/resvg-js": "2.6.2",
     "husky": "9.1.7",
-    "lint-staged": "16.2.7"
+    "lint-staged": "16.2.7",
+    "satori": "0.19.1",
+    "satori-html": "0.3.2"
   },
   "packageManager": "pnpm@10.28.1",
   "pnpm": {
@@ -17,8 +20,8 @@
       "vue-demi"
     ],
     "overrides": {
-      "@nuxtjs/sitemap": "7.4.7",
-      "nuxt-og-image": "5.1.12"
+      "@nuxtjs/sitemap": "7.6.0",
+      "nuxt-og-image": "6.0.0-beta.8"
     }
   },
   "private": true,

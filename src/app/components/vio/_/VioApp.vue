@@ -10,8 +10,10 @@
 </template>
 
 <script setup lang="ts">
+import type { OgImageComponents } from '#og-image/components'
+
 interface Props {
-  ogImageComponent?: string
+  ogImageComponent?: keyof OgImageComponents
 }
 const props = withDefaults(defineProps<Props>(), {
   ogImageComponent: undefined,
@@ -43,8 +45,8 @@ const isLoading = computed(() => !!loadingIds.value.length)
 onMounted(() => indicateLoadingDone())
 
 // initialization
-defineOgImageComponent(
-  props.ogImageComponent || 'NuxtSeo',
+defineOgImage(
+  props.ogImageComponent || 'NuxtSeo.satori',
   {},
   {
     alt: t('globalSeoOgImageAlt'),
