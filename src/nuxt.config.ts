@@ -54,6 +54,7 @@ export default defineNuxtConfig(
         '@nuxtjs/html-validator',
         '@nuxtjs/i18n',
         '@nuxtjs/seo',
+        '@nuxtjs/turnstile',
         '@pinia/nuxt',
         'nuxt-gtag',
         'shadcn-nuxt',
