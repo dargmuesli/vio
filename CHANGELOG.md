@@ -1,3 +1,9 @@
+## [20.5.1](https://github.com/dargmuesli/vio/compare/20.5.0...20.5.1) (2026-01-30)
+
+### Bug Fixes
+
+* **deps:** include nodemailer types in release ([fcf8dce](https://github.com/dargmuesli/vio/commit/fcf8dceac386173b5e5bbfa3bec09d348eab495b))
+
 ## [20.5.0](https://github.com/dargmuesli/vio/compare/20.4.0...20.5.0) (2026-01-30)
 
 ### Features
