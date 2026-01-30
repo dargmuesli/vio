@@ -1,3 +1,10 @@
+## [20.3.0](https://github.com/dargmuesli/vio/compare/20.2.0...20.3.0) (2026-01-30)
+
+### Features
+
+* **components:** add shared form input captcha component ([dbb483f](https://github.com/dargmuesli/vio/commit/dbb483f17e5786e51ce89490f6272cab739fb66f))
+* **components:** migrate turnstile and contact form to vio ([b0fd70d](https://github.com/dargmuesli/vio/commit/b0fd70d6a850c4a7132e588eb7ad7e5970440a41))
+
 ## [20.2.0](https://github.com/dargmuesli/vio/compare/20.1.6...20.2.0) (2026-01-29)
 
 ### Features
