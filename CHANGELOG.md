@@ -1,3 +1,9 @@
+## [20.4.0](https://github.com/dargmuesli/vio/compare/20.3.0...20.4.0) (2026-01-30)
+
+### Features
+
+* **turnstile:** add ([d39af2b](https://github.com/dargmuesli/vio/commit/d39af2b6d5830ae925fa9fc8e79d21b7681d05c3))
+
 ## [20.3.0](https://github.com/dargmuesli/vio/compare/20.2.0...20.3.0) (2026-01-30)
 
 ### Features
