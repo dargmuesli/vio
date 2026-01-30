@@ -2,8 +2,11 @@ import { DEFAULTS } from '@dargmuesli/nuxt-cookie-control/runtime/types.js'
 import { helpers } from '@vuelidate/validators'
 import { defu } from 'defu'
 
+import { IS_IN_PRODUCTION, IS_IN_STACK } from '../../node'
+
 export const VIO_SITE_NAME = 'Vio'
 
+export const IS_IN_FRONTEND_DEVELOPMENT = !IS_IN_PRODUCTION && !IS_IN_STACK
 export const SITE_URL =
   process.env.SITE_URL ||
   process.env.NUXT_PUBLIC_SITE_URL ||

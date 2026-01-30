@@ -1,3 +1,0 @@
-import { IS_IN_PRODUCTION, IS_IN_STACK } from '../../node'
-
-export const IS_IN_FRONTEND_DEVELOPMENT = !IS_IN_PRODUCTION && !IS_IN_STACK
