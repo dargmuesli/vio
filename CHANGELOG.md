@@ -1,3 +1,9 @@
+## [20.5.0](https://github.com/dargmuesli/vio/compare/20.4.0...20.5.0) (2026-01-30)
+
+### Features
+
+* **email:** add nodemailer ([f03d8c7](https://github.com/dargmuesli/vio/commit/f03d8c76ae33e21337a8dee76cc3da6047a8aae2))
+
 ## [20.4.0](https://github.com/dargmuesli/vio/compare/20.3.0...20.4.0) (2026-01-30)
 
 ### Features
