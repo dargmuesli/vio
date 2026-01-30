@@ -46,6 +46,11 @@ export const VIO_GET_CSP = ({ siteUrl }: { siteUrl: URL }) =>
       'frame-src': ['https://www.googletagmanager.com'],
     },
     {
+      // Cloudflare Turnstile
+      'frame-src': ['https://challenges.cloudflare.com'],
+      'script-src-elem': ['https://challenges.cloudflare.com'],
+    },
+    {
       // vio
       'manifest-src': [`${siteUrl}site.webmanifest`],
       'script-src-elem': [
