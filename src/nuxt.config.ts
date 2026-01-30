@@ -113,6 +113,13 @@ export default defineNuxtConfig(
             isTesting: false,
           },
         },
+        vio: {
+          email: {
+            nodemailer: {
+              transport: undefined,
+            },
+          },
+        },
       },
       typescript: {
         tsConfig: {
