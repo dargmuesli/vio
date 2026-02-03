@@ -1,3 +1,27 @@
+## [21.0.0-beta.3](https://github.com/dargmuesli/vio/compare/21.0.0-beta.2...21.0.0-beta.3) (2026-02-03)
+
+### ⚠ BREAKING CHANGES
+
+* **components:** rework link
+* **i18n:** simplify configuration
+* **components:** remove outdated status properties
+
+### Features
+
+* **components:** add loading indicator to form button ([b179dbe](https://github.com/dargmuesli/vio/commit/b179dbe277c4cb8c2a5676bc630ecec33b78eb4a))
+* **components:** add shared form input captcha component ([dbb483f](https://github.com/dargmuesli/vio/commit/dbb483f17e5786e51ce89490f6272cab739fb66f))
+* **components:** migrate turnstile and contact form to vio ([b0fd70d](https://github.com/dargmuesli/vio/commit/b0fd70d6a850c4a7132e588eb7ad7e5970440a41))
+* **components:** remove outdated status properties ([a4f7349](https://github.com/dargmuesli/vio/commit/a4f734985bf718a3b5445b76de10c3103d3ed648))
+* **components:** rework link ([5afa7e7](https://github.com/dargmuesli/vio/commit/5afa7e7b956601930336af7c1055fbe2da8e184c))
+* **email:** add nodemailer ([f03d8c7](https://github.com/dargmuesli/vio/commit/f03d8c76ae33e21337a8dee76cc3da6047a8aae2))
+* **i18n:** simplify configuration ([c191aff](https://github.com/dargmuesli/vio/commit/c191affd13ad91a6b1e2dbb202ca83dc1677b22f))
+* **turnstile:** add ([d39af2b](https://github.com/dargmuesli/vio/commit/d39af2b6d5830ae925fa9fc8e79d21b7681d05c3))
+
+### Bug Fixes
+
+* **deps:** include nodemailer types in release ([fcf8dce](https://github.com/dargmuesli/vio/commit/fcf8dceac386173b5e5bbfa3bec09d348eab495b))
+* schedule release ([7dedd9e](https://github.com/dargmuesli/vio/commit/7dedd9eff9bb04ff067fe52c762eec7644a978ea))
+
 ## [21.0.0-beta.2](https://github.com/dargmuesli/vio/compare/21.0.0-beta.1...21.0.0-beta.2) (2026-01-07)
 
 ### ⚠ BREAKING CHANGES
