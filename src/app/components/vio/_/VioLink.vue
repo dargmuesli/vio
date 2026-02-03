@@ -1,63 +1,63 @@
 <template>
-  <a
-    v-if="to?.toString().match(/^((ftp|http(s)?):\/\/|(mailto):)/)"
-    :aria-label="ariaLabel"
-    :class="classes"
-    :href="to.toString()"
-    :rel="
-      [...(nofollow ? ['nofollow'] : []), 'noopener', 'noreferrer'].join(' ')
-    "
-    target="_blank"
+  <NuxtLink
+    :aria-label
+    :class="cn(classComputed, classProps)"
+    :disabled="isDisabled"
+    :external="isExternal"
+    :target="targetComputed"
+    :to
     @click="emit('click')"
   >
     <slot />
-  </a>
-  <NuxtLinkLocale
-    v-else
-    :aria-label="ariaLabel"
-    :class="classes"
-    :locale="locale"
-    :to="isToRelative ? append(route.path, to) : to"
-    @click="emit('click')"
-  >
-    <slot />
-  </NuxtLinkLocale>
+  </NuxtLink>
 </template>
 
 <script setup lang="ts">
-import type { Locale } from '@intlify/core-base'
-import type { NuxtLinkProps } from '#app'
+import type { HtmlHTMLAttributes } from 'vue'
+import type { RouteLocationRaw } from 'vue-router'
 
-interface Props {
-  ariaLabel?: string
-  isColored?: boolean
-  isToRelative?: boolean
-  isUnderlined?: boolean
-  locale?: Locale
-  nofollow?: boolean
-  to: NuxtLinkProps['to']
-}
-const props = withDefaults(defineProps<Props>(), {
-  ariaLabel: undefined,
-  isColored: true,
-  isToRelative: false,
-  isUnderlined: false,
-  locale: undefined,
-  nofollow: false,
-})
+import type { NuxtLinkProps } from '#app'
+import { cn } from '@/utils/shadcn'
+
+const {
+  ariaLabel = undefined,
+  class: classProps = undefined,
+  isDisabled,
+  isColored = true,
+  isExternal,
+  isUnderlined,
+  target = undefined,
+  to,
+} = defineProps<
+  {
+    ariaLabel?: string
+    isDisabled?: boolean
+    isColored?: boolean
+    isExternal?: boolean
+    isUnderlined?: boolean
+    target?: NuxtLinkProps['target']
+    to: RouteLocationRaw
+  } & { class?: HtmlHTMLAttributes['class'] }
+>()
 
 const emit = defineEmits<{
   click: []
 }>()
 
-const route = useRoute()
-
 // computations
-const classes = computed(() => {
-  return [
+const classComputed = computed(() =>
+  [
     'rounded-sm',
-    ...(props.isColored ? ['text-link-dark dark:text-link-bright'] : []),
-    ...(props.isUnderlined ? ['underline'] : []),
-  ].join(' ')
-})
+    ...(isColored ? ['text-link-dark dark:text-link-bright'] : []),
+    ...(isDisabled ? ['disabled'] : []),
+    ...(isUnderlined ? ['underline'] : []),
+  ].join(' '),
+)
+const targetComputed = computed(
+  () =>
+    target ||
+    (to.toString().match(/^((ftp|http(s)?):\/\/|(mailto):)/)
+      ? '_blank'
+      : undefined),
+)
 </script>
