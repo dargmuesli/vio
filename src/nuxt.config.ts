@@ -2,6 +2,7 @@ import tailwindcss from '@tailwindcss/vite'
 import { createResolver } from 'nuxt/kit'
 import { defu } from 'defu'
 
+import { IS_IN_STACK } from './node'
 import {
   SITE_URL,
   VIO_SITE_NAME,
@@ -27,7 +28,7 @@ export default defineNuxtConfig(
         },
       },
       compatibilityDate: '2024-04-03',
-      ...(process.env.NUXT_PUBLIC_I18N_BASE_URL
+      ...(IS_IN_STACK
         ? {}
         : {
             devServer: {
@@ -51,6 +52,7 @@ export default defineNuxtConfig(
         '@nuxtjs/html-validator',
         '@nuxtjs/i18n',
         '@nuxtjs/seo',
+        '@nuxtjs/turnstile',
         '@pinia/nuxt',
         'nuxt-gtag',
         'shadcn-nuxt',
@@ -107,6 +109,13 @@ export default defineNuxtConfig(
           },
           vio: {
             isTesting: false,
+          },
+        },
+        vio: {
+          email: {
+            nodemailer: {
+              transport: undefined,
+            },
           },
         },
       },

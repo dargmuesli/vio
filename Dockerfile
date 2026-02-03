@@ -1,15 +1,19 @@
+# syntax=docker/dockerfile:1
+
 #############
 # Create base image.
 
-FROM node:24.12.0-alpine AS base-image
+FROM node:24.13.0-alpine AS base-image
 
 # The `CI` environment variable must be set for pnpm to run in headless mode
 ENV CI=true
 
 WORKDIR /srv/app/
 
-RUN corepack enable \
-  && apk add --no-cache mkcert --repository=https://dl-cdn.alpinelinux.org/alpine/edge/testing
+RUN --mount=type=cache,id=apk-cache,target=/var/cache/apk \
+    apk add --repository=https://dl-cdn.alpinelinux.org/alpine/edge/testing \
+      mkcert \
+    && corepack enable
 
 COPY ./docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
@@ -19,8 +23,20 @@ COPY ./docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
 FROM base-image AS development
 
+ENV CI=false
+
+RUN mkdir \
+        /srv/.pnpm-store \
+        /srv/app/node_modules \
+    && chown node:node \
+        /srv/.pnpm-store \
+        /srv/app/node_modules
+
 VOLUME /srv/.pnpm-store
 VOLUME /srv/app
+VOLUME /srv/app/node_modules
+
+USER node
 
 ENTRYPOINT ["docker-entrypoint.sh"]
 CMD ["pnpm", "run", "--dir", "src", "dev", "--host", "0.0.0.0"]
@@ -36,8 +52,11 @@ EXPOSE 3000
 FROM base-image AS prepare
 
 COPY ./pnpm-lock.yaml ./package.json ./
+# COPY ./patches ./patches
 
-RUN pnpm fetch
+# TODO: evaluate dropping libc arguments by running e2e tests separately
+RUN --mount=type=cache,id=pnpm-store,target=/root/.local/share/pnpm/store \
+    pnpm fetch --libc=musl --libc=glibc
 
 COPY ./ ./
 
@@ -50,7 +69,7 @@ RUN pnpm install --offline
 FROM prepare AS build-node
 
 ENV NODE_ENV=production
-RUN pnpm --dir src run build:node
+RUN pnpm run --dir src build:node
 
 
 ########################
@@ -62,7 +81,15 @@ ARG NUXT_PUBLIC_I18N_BASE_URL=https://localhost:3002
 ENV NUXT_PUBLIC_I18N_BASE_URL=${NUXT_PUBLIC_I18N_BASE_URL}
 
 ENV NODE_ENV=production
-RUN pnpm --dir src run build:static
+RUN pnpm run --dir src build:static
+
+
+########################
+# Build for static e2e test.
+
+FROM prepare AS build-static-test
+
+RUN pnpm run --dir src build:static:test
 
 
 ########################
@@ -84,7 +111,7 @@ RUN pnpm -r run lint
 ########################
 # Nuxt: test (e2e, base-image)
 
-FROM mcr.microsoft.com/playwright:v1.57.0 AS test-e2e-base-image
+FROM mcr.microsoft.com/playwright:v1.58.1 AS test-e2e-base-image
 
 # The `CI` environment variable must be set for pnpm to run in headless mode
 ENV CI=true
@@ -94,8 +121,6 @@ WORKDIR /srv/app/
 
 RUN corepack enable \
   && apt update && apt install mkcert
-
-COPY ./docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
 
 ########################
@@ -111,6 +136,8 @@ RUN groupadd -g $GROUP_ID -o $USER_NAME \
     && useradd -m -l -u $USER_ID -g $GROUP_ID -o -s /bin/bash $USER_NAME \
     && mkdir /srv/app/node_modules \
     && chown $USER_ID:$GROUP_ID /srv/app/node_modules
+
+COPY ./docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
 USER $USER_NAME
 
@@ -128,17 +155,18 @@ FROM test-e2e-base-image AS test-e2e-prepare
 
 COPY --from=prepare /srv/app/ ./
 
-RUN pnpm -r rebuild
-
 
 # ########################
 # # Nuxt: test (e2e, development)
 
 # FROM test-e2e-prepare AS test-e2e-dev
 
+# # a rebuild is necessary because the node image we're pulling dependencies from uses alpine linux while here we use debian
+# RUN pnpm -r rebuild
+
 # ENV NODE_ENV=development
 
-# RUN pnpm --dir tests run test:e2e:server:dev
+# RUN pnpm run --dir tests test:e2e:server:dev
 
 
 ########################
@@ -148,7 +176,7 @@ FROM test-e2e-prepare AS test-e2e-node
 
 COPY --from=build-node /srv/app/src/playground/.output ./src/playground/.output
 
-RUN pnpm --dir tests run test:e2e:server:node
+RUN pnpm run --dir tests test:e2e:server:node
 
 
 ########################
@@ -156,14 +184,9 @@ RUN pnpm --dir tests run test:e2e:server:node
 
 FROM test-e2e-prepare AS test-e2e-static
 
-ARG NUXT_PUBLIC_I18N_BASE_URL=https://localhost:3002
-ENV NUXT_PUBLIC_I18N_BASE_URL=${NUXT_PUBLIC_I18N_BASE_URL}
-ARG PORT=3002
-ENV PORT=${PORT}
+COPY --from=build-static-test /srv/app/src/playground/.output/public ./src/playground/.output/public
 
-COPY --from=build-static /srv/app/src/playground/.output/public ./src/playground/.output/public
-
-RUN pnpm --dir tests run test:e2e:server:static
+RUN pnpm run --dir tests test:e2e:server:static
 
 
 #######################
@@ -171,25 +194,21 @@ RUN pnpm --dir tests run test:e2e:server:static
 
 FROM base-image AS collect
 
-# COPY --from=build-node /srv/app/src/.output ./.output
-# COPY --from=build-node /srv/app/src/playground/.output ./.output
-COPY --from=build-node /srv/app/src/package.json /tmp/package.json
-COPY --from=build-static /srv/app/src/package.json /tmp/package.json
-COPY --from=lint /srv/app/package.json /tmp/package.json
-# COPY --from=test-unit /srv/app/package.json /tmp/package.json
-# COPY --from=test-e2e-dev /srv/app/package.json /tmp/package.json
-COPY --from=test-e2e-node /srv/app/package.json /tmp/package.json
-COPY --from=test-e2e-static /srv/app/package.json /tmp/package.json
+# COPY --from=build-node --chown=node /srv/app/src/.output ./.output
+COPY --from=build-node --chown=node /srv/app/src/package.json ./package.json
+# COPY --from=build-static /srv/app/src/.output/public ./.output/public
+COPY --from=build-static /srv/app/package.json /dev/null
+COPY --from=lint /srv/app/package.json /dev/null
+# COPY --from=test-unit /srv/app/package.json /dev/null
+# COPY --from=test-e2e-dev /srv/app/package.json /dev/null
+COPY --from=test-e2e-node /srv/app/package.json /dev/null
+COPY --from=test-e2e-static /srv/app/package.json /dev/null
 
 
 # #######################
 # # Provide a web server.
 
 # FROM nginx:1.25.2-alpine AS production
-
-# # The `CI` environment variable must be set for pnpm to run in headless mode
-# ENV CI=true
-# ENV NODE_ENV=production
 
 # WORKDIR /usr/share/nginx/html
 
@@ -199,7 +218,7 @@ COPY --from=test-e2e-static /srv/app/package.json /tmp/package.json
 
 # HEALTHCHECK --interval=10s CMD wget -O /dev/null http://localhost:3000/api/healthcheck || exit 1
 # EXPOSE 3000
-# LABEL org.opencontainers.image.source="https://github.com/dargmuesli/jonas-thelemann"
+# LABEL org.opencontainers.image.source="https://github.com/dargmuesli/vio"
 # LABEL org.opencontainers.image.description="A Nuxt layer."
 
 
@@ -219,5 +238,5 @@ COPY --from=test-e2e-static /srv/app/package.json /tmp/package.json
 # CMD ["run", "start:node"]
 # HEALTHCHECK --interval=10s CMD wget -O /dev/null http://localhost:3000/api/healthcheck || exit 1
 # EXPOSE 3000
-# LABEL org.opencontainers.image.source="https://github.com/dargmuesli/jonas-thelemann"
+# LABEL org.opencontainers.image.source="https://github.com/dargmuesli/vio"
 # LABEL org.opencontainers.image.description="A Nuxt layer."

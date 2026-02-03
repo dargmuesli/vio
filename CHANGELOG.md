@@ -31,6 +31,43 @@
 * **composables:** allow for reactive time ([8e9cf57](https://github.com/dargmuesli/vio/commit/8e9cf579c685df573f2801302e8da65d0fa16522))
 * **util:** drop `copyText` ([da0e36f](https://github.com/dargmuesli/vio/commit/da0e36fccca59cec94e4cb19f7ce6b2a1fa92f5d))
 
+## [20.5.1](https://github.com/dargmuesli/vio/compare/20.5.0...20.5.1) (2026-01-30)
+
+### Bug Fixes
+
+* **deps:** include nodemailer types in release ([fcf8dce](https://github.com/dargmuesli/vio/commit/fcf8dceac386173b5e5bbfa3bec09d348eab495b))
+
+## [20.5.0](https://github.com/dargmuesli/vio/compare/20.4.0...20.5.0) (2026-01-30)
+
+### Features
+
+* **email:** add nodemailer ([f03d8c7](https://github.com/dargmuesli/vio/commit/f03d8c76ae33e21337a8dee76cc3da6047a8aae2))
+
+## [20.4.0](https://github.com/dargmuesli/vio/compare/20.3.0...20.4.0) (2026-01-30)
+
+### Features
+
+* **turnstile:** add ([d39af2b](https://github.com/dargmuesli/vio/commit/d39af2b6d5830ae925fa9fc8e79d21b7681d05c3))
+
+## [20.3.0](https://github.com/dargmuesli/vio/compare/20.2.0...20.3.0) (2026-01-30)
+
+### Features
+
+* **components:** add shared form input captcha component ([dbb483f](https://github.com/dargmuesli/vio/commit/dbb483f17e5786e51ce89490f6272cab739fb66f))
+* **components:** migrate turnstile and contact form to vio ([b0fd70d](https://github.com/dargmuesli/vio/commit/b0fd70d6a850c4a7132e588eb7ad7e5970440a41))
+
+## [20.2.0](https://github.com/dargmuesli/vio/compare/20.1.6...20.2.0) (2026-01-29)
+
+### Features
+
+* **components:** add loading indicator to form button ([b179dbe](https://github.com/dargmuesli/vio/commit/b179dbe277c4cb8c2a5676bc630ecec33b78eb4a))
+
+## [20.1.6](https://github.com/dargmuesli/vio/compare/20.1.5...20.1.6) (2026-01-17)
+
+### Bug Fixes
+
+* schedule release ([7dedd9e](https://github.com/dargmuesli/vio/commit/7dedd9eff9bb04ff067fe52c762eec7644a978ea))
+
 ## [20.1.5](https://github.com/dargmuesli/vio/compare/20.1.4...20.1.5) (2026-01-06)
 
 ### Bug Fixes

@@ -2,8 +2,11 @@ import { DEFAULTS } from '@dargmuesli/nuxt-cookie-control/runtime/types.js'
 import { helpers } from '@vuelidate/validators'
 import { defu } from 'defu'
 
+import { IS_IN_PRODUCTION, IS_IN_STACK } from '../../node'
+
 export const VIO_SITE_NAME = 'Vio'
 
+export const IS_IN_FRONTEND_DEVELOPMENT = !IS_IN_PRODUCTION && !IS_IN_STACK
 export const SITE_URL =
   process.env.NUXT_PUBLIC_I18N_BASE_URL ||
   `https://${process.env.HOST || 'localhost'}:${process.env.PORT || '3000'}`
@@ -43,6 +46,11 @@ export const VIO_GET_CSP = ({ siteUrl }: { siteUrl: URL }) =>
     {
       // Google Service Worker (https://developers.google.com/tag-platform/tag-manager/web/csp)
       'frame-src': ['https://www.googletagmanager.com'],
+    },
+    {
+      // Cloudflare Turnstile
+      'frame-src': ['https://challenges.cloudflare.com'],
+      'script-src-elem': ['https://challenges.cloudflare.com'],
     },
     {
       // vio
