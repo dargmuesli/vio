@@ -1,5 +1,7 @@
 import type { defineNuxtConfig } from 'nuxt/config'
 
+import { IS_IN_FRONTEND_DEVELOPMENT } from './'
+
 export const VIO_NUXT_BASE_CONFIG = ({
   siteName,
   stagingHost,
@@ -23,7 +25,20 @@ export const VIO_NUXT_BASE_CONFIG = ({
 
     // modules
     i18n: {
-      ...I18N_MODULE_CONFIG, // `lazy` and `locales` must be configured to extend a layer having lazy-loaded translations (https://i18n.nuxtjs.org/docs/guide/layers#locales)
+      locales: [
+        {
+          code: 'en' as const,
+          file: 'en.json',
+          language: 'en', // could be `en-US` is multiple `en` locales are differentiated
+          name: 'English', // Will be used as catchall locale by default.
+        },
+        {
+          code: 'de' as const,
+          file: 'de.json',
+          language: 'de', // could be `de-DE` is multiple `de` locales are differentiated
+          name: 'Deutsch',
+        },
+      ],
     },
     site: {
       name: siteName,

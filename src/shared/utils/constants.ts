@@ -2,11 +2,10 @@ import { DEFAULTS } from '@dargmuesli/nuxt-cookie-control/runtime/types.js'
 import { helpers } from '@vuelidate/validators'
 import { defu } from 'defu'
 
-import { IS_IN_PRODUCTION, IS_IN_STACK } from '../../node'
+export { IS_IN_FRONTEND_DEVELOPMENT } from '../../node/static'
 
 export const VIO_SITE_NAME = 'Vio'
 
-export const IS_IN_FRONTEND_DEVELOPMENT = !IS_IN_PRODUCTION && !IS_IN_STACK
 export const SITE_URL =
   process.env.NUXT_PUBLIC_I18N_BASE_URL ||
   `https://${process.env.HOST || 'localhost'}:${process.env.PORT || '3000'}`
@@ -136,22 +135,6 @@ export const VIO_GET_CSP = ({ siteUrl }: { siteUrl: URL }) =>
     },
   )
 export const GTAG_COOKIE_ID = 'ga'
-export const I18N_MODULE_CONFIG = {
-  locales: [
-    {
-      code: 'en' as const,
-      file: 'en.json',
-      language: 'en', // could be `en-US` is multiple `en` locales are differentiated
-      name: 'English', // Will be used as catchall locale by default.
-    },
-    {
-      code: 'de' as const,
-      file: 'de.json',
-      language: 'de', // could be `de-DE` is multiple `de` locales are differentiated
-      name: 'Deutsch',
-    },
-  ],
-}
 export const I18N_VUE_CONFIG = {
   fallbackWarn: false, // covered by linting
   missingWarn: false, // covered by linting

@@ -2,15 +2,14 @@ import tailwindcss from '@tailwindcss/vite'
 import { createResolver } from 'nuxt/kit'
 import { defu } from 'defu'
 
-import { IS_IN_STACK } from './node'
+import { IS_IN_STACK, VIO_NUXT_BASE_CONFIG } from './node/static'
 import {
-  SITE_URL,
-  VIO_SITE_NAME,
-  TIMEZONE_COOKIE_NAME,
   GTAG_COOKIE_ID,
+  SITE_URL,
+  TIMEZONE_COOKIE_NAME,
   VIO_GET_CSP,
+  VIO_SITE_NAME,
 } from './shared/utils/constants'
-import { VIO_NUXT_BASE_CONFIG } from './shared/utils/nuxt'
 
 const { resolve } = createResolver(import.meta.url)
 

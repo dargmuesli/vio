@@ -25,6 +25,7 @@
 </template>
 
 <script setup lang="ts">
+import type { Locale } from '@intlify/core-base'
 import type { NuxtLinkProps } from '#app'
 
 interface Props {
@@ -32,7 +33,7 @@ interface Props {
   isColored?: boolean
   isToRelative?: boolean
   isUnderlined?: boolean
-  locale?: I18N_LOCALE_CODE
+  locale?: Locale
   nofollow?: boolean
   to: NuxtLinkProps['to']
 }
