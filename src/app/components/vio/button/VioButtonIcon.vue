@@ -13,17 +13,17 @@
 </template>
 
 <script setup lang="ts">
-interface Props {
+const {
+  ariaLabel,
+  disabled = false,
+  to = undefined,
+  type = 'button',
+} = defineProps<{
   ariaLabel: string
   disabled?: boolean
   to?: string
   type?: 'button' | 'submit' | 'reset'
-}
-withDefaults(defineProps<Props>(), {
-  disabled: false,
-  to: undefined,
-  type: 'button',
-})
+}>()
 
 const emit = defineEmits<{
   click: []

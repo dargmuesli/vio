@@ -60,14 +60,10 @@ export interface Breadcrumb {
   to: string
 }
 
-interface Props {
+const { prefixes = undefined, suffixes = undefined } = defineProps<{
   prefixes?: Breadcrumb[]
   suffixes?: Breadcrumb[]
-}
-withDefaults(defineProps<Props>(), {
-  prefixes: undefined,
-  suffixes: undefined,
-})
+}>()
 
 const localePath = useLocalePath()
 const { t } = useI18n()

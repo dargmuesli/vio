@@ -13,10 +13,9 @@
 </template>
 
 <script setup lang="ts">
-interface Props {
+const { url } = defineProps<{
   url: string
-}
-withDefaults(defineProps<Props>(), {})
+}>()
 
 const { t } = useI18n()
 
