@@ -14,16 +14,12 @@
 <script setup lang="ts">
 interface Props {
   status?: number
-  statusCode?: number
-  statusMessage?: string
   statusText?: string
   description: string
   stack?: string
 }
 const props = withDefaults(defineProps<Props>(), {
   status: undefined,
-  statusCode: undefined,
-  statusMessage: undefined,
   statusText: undefined,
   stack: undefined,
 })
@@ -32,11 +28,9 @@ const runtimeConfig = useRuntimeConfig()
 const { locale, t } = useI18n()
 
 // data
-const title = `${props.status || props.statusCode ? `${props.status || props.statusCode} - ` : ''}${
-  (await import('@http-util/status-i18n')).status(
-    props.status || props.statusCode,
-    locale.value,
-  ) || t('error')
+const title = `${props.status ? `${props.status} - ` : ''}${
+  (await import('@http-util/status-i18n')).status(props.status, locale.value) ||
+  t('error')
 }`
 
 // initialization
