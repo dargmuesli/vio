@@ -7,8 +7,8 @@ import { consola } from 'consola'
 export const assertTurnstileValid = async ({ token }: { token?: string }) => {
   if (!token) {
     throw createError({
-      statusCode: 422,
-      statusMessage: 'Turnstile token not provided.',
+      status: 422,
+      statusText: 'Turnstile token not provided.',
     })
   }
 
@@ -16,8 +16,8 @@ export const assertTurnstileValid = async ({ token }: { token?: string }) => {
 
   if (!result.success) {
     throw createError({
-      statusCode: 403,
-      statusMessage: `Turnstile verification unsuccessful: ${result['error-codes'].join(', ')}`,
+      status: 403,
+      statusText: `Turnstile verification unsuccessful: ${result['error-codes'].join(', ')}`,
     })
   }
 
