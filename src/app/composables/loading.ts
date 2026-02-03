@@ -3,14 +3,14 @@ export const useLoadingDoneIndicator = (id?: string) => {
   const loadingId = id || useId()
 
   if (!loadingId)
-    throw createError({ statusCode: 500, statusMessage: 'Loading id missing!' })
+    throw createError({ status: 500, statusText: 'Loading id missing!' })
 
   const loadingIdToAdd = `${import.meta.server ? 'ssr' : 'csr'}_${loadingId}`
 
   if (loadingIds.value.includes(loadingIdToAdd)) {
     throw createError({
-      statusCode: 500,
-      statusMessage: 'Loading id already exists!',
+      status: 500,
+      statusText: 'Loading id already exists!',
     })
   }
 
