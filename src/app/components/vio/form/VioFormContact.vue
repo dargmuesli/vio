@@ -79,14 +79,9 @@ import { required } from '@vuelidate/validators'
 
 type FormValid = { emailAddress: string; name: string; message: string }
 
-withDefaults(
-  defineProps<{
-    isLoading?: boolean
-  }>(),
-  {
-    isLoading: undefined,
-  },
-)
+const { isLoading = undefined } = defineProps<{
+  isLoading?: boolean
+}>()
 
 const emit = defineEmits<{
   submit: [form: FormValid]

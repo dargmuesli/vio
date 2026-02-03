@@ -45,7 +45,15 @@
 <script setup lang="ts">
 import type { BaseValidation } from '@vuelidate/core'
 
-interface Props {
+const {
+  errors = undefined,
+  errorsPgIds = undefined,
+  form,
+  formClass = undefined,
+  isFormSent: _isFormSent = false,
+  isLoading = undefined,
+  submitName = undefined,
+} = defineProps<{
   errors?: BackendError[]
   errorsPgIds?: Record<string, string>
   form: BaseValidation
@@ -53,15 +61,7 @@ interface Props {
   isFormSent?: boolean
   isLoading?: boolean
   submitName?: string
-}
-const props = withDefaults(defineProps<Props>(), {
-  errors: undefined,
-  errorsPgIds: undefined,
-  formClass: undefined,
-  isFormSent: false,
-  isLoading: undefined,
-  submitName: undefined,
-})
+}>()
 
 const emit = defineEmits<{
   click: []
@@ -72,9 +72,7 @@ const { t } = useI18n()
 
 // computations
 const errorMessages = computed(() =>
-  props.errors
-    ? getCombinedErrorMessages(props.errors, props.errorsPgIds)
-    : undefined,
+  errors ? getCombinedErrorMessages(errors, errorsPgIds) : undefined,
 )
 </script>
 

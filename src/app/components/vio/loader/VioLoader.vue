@@ -16,21 +16,21 @@
 <script setup lang="ts">
 import type { UnwrapRef } from 'vue'
 
-interface Props {
+const {
+  api,
+  errorPgIds = undefined,
+  classes = undefined,
+  indicator = undefined,
+} = defineProps<{
   api: UnwrapRef<ApiData>
   errorPgIds?: Record<string, string>
   classes?: string
   indicator?: string
-}
-const props = withDefaults(defineProps<Props>(), {
-  errorPgIds: undefined,
-  classes: undefined,
-  indicator: undefined,
-})
+}>()
 
 // computations
 const errorMessages = computed(() =>
-  getCombinedErrorMessages(props.api.errors, props.errorPgIds),
+  getCombinedErrorMessages(api.errors, errorPgIds),
 )
 </script>
 

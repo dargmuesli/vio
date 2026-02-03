@@ -442,7 +442,19 @@
 </template>
 
 <script setup lang="ts">
-interface Props {
+const {
+  isEnabled = {
+    summary: {
+      generalNotes: true,
+      dataCollection: {
+        liability: true,
+        method: true,
+        use: true,
+        rights: true,
+      },
+    },
+  },
+} = defineProps<{
   isEnabled?: {
     summary?: {
       generalNotes?: boolean
@@ -496,20 +508,7 @@ interface Props {
       googleReCaptcha?: boolean
     }
   }
-}
-withDefaults(defineProps<Props>(), {
-  isEnabled: () => ({
-    summary: {
-      generalNotes: true,
-      dataCollection: {
-        liability: true,
-        method: true,
-        use: true,
-        rights: true,
-      },
-    },
-  }),
-})
+}>()
 
 const appConfig = useAppConfig()
 const { t } = useI18n()

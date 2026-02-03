@@ -16,10 +16,9 @@
 </template>
 
 <script setup lang="ts">
-interface Props {
+const { title } = defineProps<{
   title?: string // eslint-disable-line vue/require-default-prop
-}
-withDefaults(defineProps<Props>(), {})
+}>()
 
 const { t } = useI18n()
 </script>

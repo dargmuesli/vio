@@ -14,8 +14,7 @@
 </template>
 
 <script setup lang="ts">
-interface Props {
+const { isFullWidth } = defineProps<{
   isFullWidth?: boolean
-}
-withDefaults(defineProps<Props>(), {})
+}>()
 </script>

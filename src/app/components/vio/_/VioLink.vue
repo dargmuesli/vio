@@ -27,7 +27,15 @@
 <script setup lang="ts">
 import type { NuxtLinkProps } from '#app'
 
-interface Props {
+const {
+  ariaLabel = undefined,
+  isColored = true,
+  isToRelative = false,
+  isUnderlined = false,
+  locale = undefined,
+  nofollow = false,
+  to,
+} = defineProps<{
   ariaLabel?: string
   isColored?: boolean
   isToRelative?: boolean
@@ -35,15 +43,7 @@ interface Props {
   locale?: I18N_LOCALE_CODE
   nofollow?: boolean
   to: NuxtLinkProps['to']
-}
-const props = withDefaults(defineProps<Props>(), {
-  ariaLabel: undefined,
-  isColored: true,
-  isToRelative: false,
-  isUnderlined: false,
-  locale: undefined,
-  nofollow: false,
-})
+}>()
 
 const emit = defineEmits<{
   click: []
@@ -55,8 +55,8 @@ const route = useRoute()
 const classes = computed(() => {
   return [
     'rounded-sm',
-    ...(props.isColored ? ['text-link-dark dark:text-link-bright'] : []),
-    ...(props.isUnderlined ? ['underline'] : []),
+    ...(isColored ? ['text-link-dark dark:text-link-bright'] : []),
+    ...(isUnderlined ? ['underline'] : []),
   ].join(' ')
 })
 </script>

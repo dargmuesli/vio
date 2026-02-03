@@ -30,21 +30,21 @@
 </template>
 
 <script setup lang="ts">
-interface Props {
+const {
+  ariaLabel,
+  disabled = false,
+  isPrimary = true,
+  isToRelative = false,
+  to = undefined,
+  type = 'button',
+} = defineProps<{
   ariaLabel: string
   disabled?: boolean
   isPrimary?: boolean
   isToRelative?: boolean
   to?: string
   type?: 'button' | 'reset' | 'submit'
-}
-withDefaults(defineProps<Props>(), {
-  disabled: false,
-  isPrimary: true,
-  isToRelative: false,
-  to: undefined,
-  type: 'button',
-})
+}>()
 
 const emit = defineEmits<{
   click: []

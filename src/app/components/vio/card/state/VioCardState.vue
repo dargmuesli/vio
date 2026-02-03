@@ -9,12 +9,8 @@
 </template>
 
 <script setup lang="ts">
-interface Props {
+const { backgroundColor = undefined, isEdgy = false } = defineProps<{
   backgroundColor?: string
   isEdgy?: boolean
-}
-withDefaults(defineProps<Props>(), {
-  backgroundColor: undefined,
-  isEdgy: false,
-})
+}>()
 </script>

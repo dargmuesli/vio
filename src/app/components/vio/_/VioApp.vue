@@ -10,12 +10,9 @@
 </template>
 
 <script setup lang="ts">
-interface Props {
+const { ogImageComponent = undefined } = defineProps<{
   ogImageComponent?: string
-}
-const props = withDefaults(defineProps<Props>(), {
-  ogImageComponent: undefined,
-})
+}>()
 
 const { t } = useI18n()
 const timeZone = useTimeZone()
@@ -44,7 +41,7 @@ onMounted(() => indicateLoadingDone())
 
 // initialization
 defineOgImageComponent(
-  props.ogImageComponent || 'NuxtSeo',
+  ogImageComponent || 'NuxtSeo',
   {},
   {
     alt: t('globalSeoOgImageAlt'),

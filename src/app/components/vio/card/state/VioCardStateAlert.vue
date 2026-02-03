@@ -5,10 +5,7 @@
 </template>
 
 <script setup lang="ts">
-interface Props {
+const { isEdgy = false } = defineProps<{
   isEdgy?: boolean
-}
-withDefaults(defineProps<Props>(), {
-  isEdgy: false,
-})
+}>()
 </script>

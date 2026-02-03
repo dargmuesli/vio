@@ -12,14 +12,10 @@
 </template>
 
 <script setup lang="ts">
-interface Props {
+const { formKey = undefined, value = undefined } = defineProps<{
   formKey?: string
   value?: boolean
-}
-withDefaults(defineProps<Props>(), {
-  formKey: undefined,
-  value: undefined,
-})
+}>()
 
 const emit = defineEmits<{
   change: [change: boolean]

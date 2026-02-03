@@ -5,12 +5,9 @@
 </template>
 
 <script setup lang="ts">
-interface Props {
-  classes?: string
-  title?: string
-}
-withDefaults(defineProps<Props>(), {
-  classes: 'h-5 md:h-6 w-5 md:w-6 shrink-0',
-  title: undefined,
-})
+const { classes = 'h-5 md:h-6 w-5 md:w-6 shrink-0', title = undefined } =
+  defineProps<{
+    classes?: string
+    title?: string
+  }>()
 </script>

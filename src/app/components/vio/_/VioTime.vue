@@ -1,8 +1,8 @@
 <template>
   <NuxtTime
     v-bind="forwardedProps"
-    :locale="props.options.locale || defaultLocale"
-    :time-zone="props.options.timeZone || defaultTimeZone"
+    :locale="options.locale || defaultLocale"
+    :time-zone="options.timeZone || defaultTimeZone"
   />
 </template>
 
@@ -12,22 +12,20 @@ import type { NuxtTimeProps } from 'nuxt/app'
 const { locale: defaultLocale } = useI18n()
 const defaultTimeZone = useTimeZone()
 
-const props = withDefaults(
-  defineProps<{
-    datetime: NuxtTimeProps['datetime']
-    options?: Omit<NuxtTimeProps, 'datetime'>
-  }>(),
-  {
-    options: () => ({
-      dateStyle: 'medium',
-      timeStyle: 'short',
-    }),
+const {
+  datetime,
+  options = {
+    dateStyle: 'medium',
+    timeStyle: 'short',
   },
-)
+} = defineProps<{
+  datetime: NuxtTimeProps['datetime']
+  options?: Omit<NuxtTimeProps, 'datetime'>
+}>()
 
 const forwardedProps = computed(() => {
-  const { locale, timeZone, ...delegated } = props.options
+  const { locale, timeZone, ...delegated } = options
 
-  return { datetime: props.datetime, ...delegated }
+  return { datetime: datetime, ...delegated }
 })
 </script>

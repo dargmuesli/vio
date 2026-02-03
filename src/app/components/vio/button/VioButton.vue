@@ -28,7 +28,16 @@
 </template>
 
 <script setup lang="ts">
-interface Props {
+const {
+  ariaLabel,
+  classes = undefined,
+  disabled = false,
+  isBlock = false,
+  isLinkColored = false,
+  isToRelative = false,
+  to = undefined,
+  type = 'button',
+} = defineProps<{
   ariaLabel: string
   classes?: string
   disabled?: boolean
@@ -37,16 +46,7 @@ interface Props {
   isToRelative?: boolean
   to?: string
   type?: 'button' | 'submit' | 'reset'
-}
-const props = withDefaults(defineProps<Props>(), {
-  classes: undefined,
-  disabled: false,
-  isBlock: false,
-  isLinkColored: false,
-  isToRelative: false,
-  to: undefined,
-  type: 'button',
-})
+}>()
 
 const emit = defineEmits<{
   click: [event?: MouseEvent]
@@ -55,9 +55,9 @@ const emit = defineEmits<{
 // computations
 const classesComputed = computed(() => {
   return [
-    props.classes,
-    ...(props.isBlock ? ['block'] : ['inline-flex items-center gap-2']),
-    ...(props.isLinkColored ? ['text-link-dark dark:text-link-bright'] : []),
+    classes,
+    ...(isBlock ? ['block'] : ['inline-flex items-center gap-2']),
+    ...(isLinkColored ? ['text-link-dark dark:text-link-bright'] : []),
   ].join(' ')
 })
 </script>
