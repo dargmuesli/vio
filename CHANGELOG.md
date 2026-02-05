@@ -1,3 +1,9 @@
+## [20.6.0](https://github.com/dargmuesli/vio/compare/20.5.2...20.6.0) (2026-02-05)
+
+### Features
+
+* **date-time:** index to 0 for testing ([9bb674f](https://github.com/dargmuesli/vio/commit/9bb674fc6d6f36388ce0d2872ee2d29c8d446c86))
+
 ## [20.5.2](https://github.com/dargmuesli/vio/compare/20.5.1...20.5.2) (2026-02-03)
 
 ### Bug Fixes
