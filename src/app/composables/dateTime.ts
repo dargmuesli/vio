@@ -9,7 +9,11 @@ export const useTimeZone = () =>
     ? Intl.DateTimeFormat().resolvedOptions().timeZone
     : undefined)
 
-export const useNow = () => useState(STATE_KEY_NOW, () => new Date())
+export const useNow = () => {
+  const isTesting = useIsTesting()
+
+  return useState(STATE_KEY_NOW, () => (isTesting ? new Date(0) : new Date()))
+}
 
 export const useFromNow = () => {
   const { locale } = useI18n()

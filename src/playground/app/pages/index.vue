@@ -13,7 +13,7 @@
       </VioLink>
       <br />
       <button type="button" @click="test">
-        <VioTime :datetime="Date.now()" />
+        <VioTime :datetime="now" />
       </button>
     </p>
     <!-- <SBreadcrumb /> -->
@@ -24,6 +24,7 @@
 const { t, locale } = useI18n()
 const router = useRouter()
 const switchLocalePath = useSwitchLocalePath()
+const now = useNow()
 
 useHeadDefault({ title: t('title') })
 
