@@ -5,7 +5,6 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  '@nuxtjs/sitemap': 7.4.7
   nuxt-og-image: 5.1.12
 
 importers:
@@ -65,7 +64,7 @@ importers:
         version: 10.2.1(@vue/compiler-dom@3.5.27)(db0@0.3.4)(eslint@9.39.2(jiti@2.6.1))(ioredis@5.9.2)(magicast@0.5.2)(rollup@4.57.1)(vue@3.5.27(typescript@5.9.3))
       '@nuxtjs/seo':
         specifier: 3.4.0
-        version: 3.4.0(@unhead/vue@2.1.2(vue@3.5.27(typescript@5.9.3)))(db0@0.3.4)(h3@1.15.5)(ioredis@5.9.2)(magicast@0.5.2)(rollup@4.57.1)(unhead@2.1.2)(unstorage@1.17.4(db0@0.3.4)(ioredis@5.9.2))(vite@7.3.1(@types/node@24.10.10)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.46.0)(yaml@2.8.2))(vue@3.5.27(typescript@5.9.3))
+        version: 3.4.0(@unhead/vue@2.1.2(vue@3.5.27(typescript@5.9.3)))(db0@0.3.4)(ioredis@5.9.2)(magicast@0.5.2)(rollup@4.57.1)(unhead@2.1.2)(unstorage@1.17.4(db0@0.3.4)(ioredis@5.9.2))(vite@7.3.1(@types/node@24.10.10)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.46.0)(yaml@2.8.2))(vue@3.5.27(typescript@5.9.3))
       '@nuxtjs/turnstile':
         specifier: 1.1.1
         version: 1.1.1(@nuxt/scripts@0.12.2(@googlemaps/markerclusterer@2.6.2)(@unhead/vue@2.1.2(vue@3.5.27(typescript@5.9.3)))(db0@0.3.4)(ioredis@5.9.2)(magicast@0.5.2)(typescript@5.9.3)(vue@3.5.27(typescript@5.9.3)))(magicast@0.5.2)
@@ -1492,9 +1491,14 @@ packages:
   '@nuxtjs/seo@3.4.0':
     resolution: {integrity: sha512-ZpWhRbRpGvFsarwKANU/S6+AEKZaA34A+e9/GSiAdn9984QWf6+acP+NpqPCccmp+J78XNDQd77rwxIFENDuFw==}
 
-  '@nuxtjs/sitemap@7.4.7':
-    resolution: {integrity: sha512-DUhX92lnCJD6tpghUmfmRIsSIoiXMS2SQ2Yd9Tg1+SnZskiKX+DGwLeAeHX8r0/9Pl/bTDpmYhs1snWcCoIkXA==}
+  '@nuxtjs/sitemap@7.6.0':
+    resolution: {integrity: sha512-JuWwAFn9MDHWFO5C7lpV6DS86ZIrJItGfzCK1kN9WvgvDmTgal3xbfGCADmAaCWOVl2+dcPGHH6BCypQvUX0aQ==}
     engines: {node: '>=18.0.0'}
+    peerDependencies:
+      zod: '>=3'
+    peerDependenciesMeta:
+      zod:
+        optional: true
 
   '@nuxtjs/turnstile@1.1.1':
     resolution: {integrity: sha512-EiS0JgzzSRhTYXhZSmqT7643f6eKOHeB7jouejepsPkcomSdQ/sf7Fkh9AEU8fhDYAfYc+spuK524LQ4u2CLng==}
@@ -4556,11 +4560,6 @@ packages:
   gzip-size@7.0.0:
     resolution: {integrity: sha512-O1Ld7Dr+nqPnmGpdhzLmMTQ4vAsD+rHwMm1NLUmoUFFymBOMKxCCrtDxqdBRYXdeEPEi3SyoR4TizJLQrnKBNA==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
-
-  h3-compression@0.3.2:
-    resolution: {integrity: sha512-B+yCKyDRnO0BXSfjAP4tCXJgJwmnKp3GyH5Yh66mY9KuOCrrGQSPk/gBFG2TgH7OyB/6mvqNZ1X0XNVuy0qRsw==}
-    peerDependencies:
-      h3: ^1.6.0
 
   h3@1.15.5:
     resolution: {integrity: sha512-xEyq3rSl+dhGX2Lm0+eFQIAzlDN6Fs0EcC4f7BNUmzaRX/PTzeuM+Tr2lHB8FoXggsQIeXLj8EDVgs5ywxyxmg==}
@@ -8755,11 +8754,11 @@ snapshots:
       - vite
       - vue
 
-  '@nuxtjs/seo@3.4.0(@unhead/vue@2.1.2(vue@3.5.27(typescript@5.9.3)))(db0@0.3.4)(h3@1.15.5)(ioredis@5.9.2)(magicast@0.5.2)(rollup@4.57.1)(unhead@2.1.2)(unstorage@1.17.4(db0@0.3.4)(ioredis@5.9.2))(vite@7.3.1(@types/node@24.10.10)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.46.0)(yaml@2.8.2))(vue@3.5.27(typescript@5.9.3))':
+  '@nuxtjs/seo@3.4.0(@unhead/vue@2.1.2(vue@3.5.27(typescript@5.9.3)))(db0@0.3.4)(ioredis@5.9.2)(magicast@0.5.2)(rollup@4.57.1)(unhead@2.1.2)(unstorage@1.17.4(db0@0.3.4)(ioredis@5.9.2))(vite@7.3.1(@types/node@24.10.10)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.46.0)(yaml@2.8.2))(vue@3.5.27(typescript@5.9.3))':
     dependencies:
       '@nuxt/kit': 4.3.0(magicast@0.5.2)
       '@nuxtjs/robots': 5.7.0(magicast@0.5.2)(vite@7.3.1(@types/node@24.10.10)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.46.0)(yaml@2.8.2))(vue@3.5.27(typescript@5.9.3))
-      '@nuxtjs/sitemap': 7.4.7(h3@1.15.5)(magicast@0.5.2)(vite@7.3.1(@types/node@24.10.10)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.46.0)(yaml@2.8.2))(vue@3.5.27(typescript@5.9.3))
+      '@nuxtjs/sitemap': 7.6.0(magicast@0.5.2)(vite@7.3.1(@types/node@24.10.10)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.46.0)(yaml@2.8.2))(vue@3.5.27(typescript@5.9.3))
       nuxt-link-checker: 4.3.9(db0@0.3.4)(ioredis@5.9.2)(magicast@0.5.2)(vite@7.3.1(@types/node@24.10.10)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.46.0)(yaml@2.8.2))(vue@3.5.27(typescript@5.9.3))
       nuxt-og-image: 5.1.12(@unhead/vue@2.1.2(vue@3.5.27(typescript@5.9.3)))(magicast@0.5.2)(unstorage@1.17.4(db0@0.3.4)(ioredis@5.9.2))(vite@7.3.1(@types/node@24.10.10)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.46.0)(yaml@2.8.2))(vue@3.5.27(typescript@5.9.3))
       nuxt-schema-org: 5.0.10(@unhead/vue@2.1.2(vue@3.5.27(typescript@5.9.3)))(magicast@0.5.2)(unhead@2.1.2)(vite@7.3.1(@types/node@24.10.10)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.46.0)(yaml@2.8.2))(vue@3.5.27(typescript@5.9.3))
@@ -8786,7 +8785,6 @@ snapshots:
       - '@vercel/kv'
       - aws4fetch
       - db0
-      - h3
       - idb-keyval
       - ioredis
       - magicast
@@ -8799,14 +8797,13 @@ snapshots:
       - vue
       - zod
 
-  '@nuxtjs/sitemap@7.4.7(h3@1.15.5)(magicast@0.5.2)(vite@7.3.1(@types/node@24.10.10)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.46.0)(yaml@2.8.2))(vue@3.5.27(typescript@5.9.3))':
+  '@nuxtjs/sitemap@7.6.0(magicast@0.5.2)(vite@7.3.1(@types/node@24.10.10)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.46.0)(yaml@2.8.2))(vue@3.5.27(typescript@5.9.3))':
     dependencies:
-      '@nuxt/devtools-kit': 2.7.0(magicast@0.5.2)(vite@7.3.1(@types/node@24.10.10)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.46.0)(yaml@2.8.2))
+      '@nuxt/devtools-kit': 3.1.1(magicast@0.5.2)(vite@7.3.1(@types/node@24.10.10)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.46.0)(yaml@2.8.2))
       '@nuxt/kit': 4.3.0(magicast@0.5.2)
       chalk: 5.6.2
       defu: 6.1.4
       fast-xml-parser: 5.3.4
-      h3-compression: 0.3.2(h3@1.15.5)
       nuxt-site-config: 3.2.19(magicast@0.5.2)(vite@7.3.1(@types/node@24.10.10)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.46.0)(yaml@2.8.2))(vue@3.5.27(typescript@5.9.3))
       ofetch: 1.5.1
       pathe: 2.0.3
@@ -8818,7 +8815,6 @@ snapshots:
       ufo: 1.6.3
       ultrahtml: 1.6.0
     transitivePeerDependencies:
-      - h3
       - magicast
       - vite
       - vue
@@ -11538,10 +11534,6 @@ snapshots:
   gzip-size@7.0.0:
     dependencies:
       duplexer: 0.1.2
-
-  h3-compression@0.3.2(h3@1.15.5):
-    dependencies:
-      h3: 1.15.5
 
   h3@1.15.5:
     dependencies:
