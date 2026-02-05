@@ -1,6 +1,7 @@
 import { defineConfig, devices } from '@playwright/test'
 
-import { SITE_URL } from './e2e/utils/constants'
+import { SITE_URL } from '#src/node/static'
+import { TIMEOUT } from '#tests/e2e/utils/constants'
 
 /**
  * Read environment variables from file.
@@ -86,13 +87,13 @@ export default defineConfig({
 
   /* Run your local dev server before starting the tests */
   webServer: {
-    command: `pnpm run --dir ../src start:${process.env.VIO_SERVER || 'dev'}`,
+    command: `pnpm --dir ../src run certificates && pnpm --dir ../src run start:${process.env.VIO_SERVER || 'dev'}`,
     env: {
       NUXT_PUBLIC_VIO_IS_TESTING: 'true',
     },
     ignoreHTTPSErrors: true, // TODO: remove once tests run without it
-    timeout: process.env.NODE_ENV === 'production' ? 10000 : 100000,
-    url: process.env.SITE_URL || SITE_URL,
+    timeout: TIMEOUT,
+    url: SITE_URL,
     reuseExistingServer: !process.env.CI,
   },
 
