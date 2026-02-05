@@ -1,3 +1,9 @@
+## [20.6.1](https://github.com/dargmuesli/vio/compare/20.6.0...20.6.1) (2026-02-05)
+
+### Performance Improvements
+
+* **sitemap:** enable zero runtime mode ([90dbcb6](https://github.com/dargmuesli/vio/commit/90dbcb6eb30ea493ff47fd6af94a19e43dea98dd))
+
 ## [20.6.0](https://github.com/dargmuesli/vio/compare/20.5.2...20.6.0) (2026-02-05)
 
 ### Features
