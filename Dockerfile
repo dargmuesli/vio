@@ -85,14 +85,6 @@ RUN pnpm run --dir src build:static
 
 
 ########################
-# Build for static e2e test.
-
-FROM prepare AS build-static-test
-
-RUN pnpm run --dir src build:static:test
-
-
-########################
 # Nuxt: lint
 
 FROM prepare AS lint
@@ -184,7 +176,7 @@ RUN pnpm run --dir tests test:e2e:server:node
 
 FROM test-e2e-prepare AS test-e2e-static
 
-COPY --from=build-static-test /srv/app/src/playground/.output/public ./src/playground/.output/public
+COPY --from=build-static /srv/app/src/playground/.output/public ./src/playground/.output/public
 
 RUN pnpm run --dir tests test:e2e:server:static
 
