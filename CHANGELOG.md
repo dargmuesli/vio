@@ -1,3 +1,9 @@
+## [20.6.2](https://github.com/dargmuesli/vio/compare/20.6.1...20.6.2) (2026-02-07)
+
+### Bug Fixes
+
+* **package:** correct node export ([4c84ad2](https://github.com/dargmuesli/vio/commit/4c84ad2859711ed2a2fb5ded69e68d3be4055203))
+
 ## [20.6.1](https://github.com/dargmuesli/vio/compare/20.6.0...20.6.1) (2026-02-05)
 
 ### Performance Improvements
