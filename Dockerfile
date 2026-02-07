@@ -15,8 +15,6 @@ RUN --mount=type=cache,id=apk-cache,target=/var/cache/apk \
       mkcert \
     && corepack enable
 
-COPY ./docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
-
 
 #############
 # Serve Nuxt in development mode.
@@ -31,6 +29,8 @@ RUN mkdir \
     && chown node:node \
         /srv/.pnpm-store \
         /srv/app/node_modules
+
+COPY ./docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
 VOLUME /srv/.pnpm-store
 VOLUME /srv/app

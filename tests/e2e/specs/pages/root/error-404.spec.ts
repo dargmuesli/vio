@@ -58,10 +58,14 @@ test.describe('visual regression', () => {
   test('generates the open graph image', async ({ page }) => {
     if (process.env.VIO_SERVER === 'static') return
 
-    await page.goto(`/__og-image__/image/does-not-exist/og.png`)
+    await page.goto(
+      `/_og/d/a_Social+Preview+Image+for+a+Vio+webpage.,c_Nuxt.satori,description_Vio+is+%40dargmuesli's+Nuxt+layer.,title_404+-+Not+Found,q_e30,p_Ii9kb2VzLW5vdC1leGl0Ig.png`,
+    )
     await expect(page).toHaveScreenshot({ fullPage: true })
 
-    await page.goto(`/__og-image__/image/de/does-not-exist/og.png`)
+    await page.goto(
+      `/_og/d/a_Social+Preview+Image+f%C3%BCr+eine+Vio+Webseite.,c_Nuxt.satori,description_Vio+ist+%40dargmueslis+Nuxt+layer.,title_404+-+Nicht+gefunden,q_e30,p_Ii9kZS9kb2VzLW5vdC1leGl0Ig.png`,
+    )
     await expect(page).toHaveScreenshot({ fullPage: true })
   })
 })

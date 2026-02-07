@@ -35,12 +35,12 @@ test.describe('visual regression', () => {
 
   test('generates the open graph image', async ({ page }) => {
     await page.goto(
-      `/__og-image__/${process.env.VIO_SERVER === 'static' ? 'static' : 'image'}/privacy-policy/og.png`,
+      `/_og/${process.env.VIO_SERVER === 'static' ? 's' : 'd'}/a_Social+Preview+Image+for+a+Vio+webpage.,c_Nuxt.satori,description_Vio+is+@dargmuesli's+Nuxt+layer.,title_Privacy+Policy,p_Ii9wcml2YWN5LXBvbGljeSI.png`,
     )
     await expect(page).toHaveScreenshot({ fullPage: true })
 
     await page.goto(
-      `/__og-image__/${process.env.VIO_SERVER === 'static' ? 'static' : 'image'}/de/privacy-policy/og.png`,
+      `/_og/${process.env.VIO_SERVER === 'static' ? 's' : 'd'}/a_Social+Preview+Image+für+eine+Vio+Webseite.,c_Nuxt.satori,description_Vio+ist+@dargmueslis+Nuxt+layer.,title_Datenschutzerklärung,p_Ii9kZS9wcml2YWN5LXBvbGljeSI.png`,
     )
     await expect(page).toHaveScreenshot({ fullPage: true })
   })

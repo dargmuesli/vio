@@ -17,7 +17,7 @@
       "vue-demi"
     ],
     "overrides": {
-      "nuxt-og-image": "5.1.12"
+      "nuxt-og-image": "6.0.0-beta.17"
     }
   },
   "private": true,
