@@ -78,7 +78,7 @@
     "i18n",
     "server",
     "shared",
-    "node.ts",
+    "node",
     "nuxt.config.ts",
     "package.json"
   ],
