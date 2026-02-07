@@ -85,14 +85,6 @@ RUN pnpm run --dir src build:static
 
 
 ########################
-# Build for static e2e test.
-
-FROM prepare AS build-static-test
-
-RUN pnpm run --dir src build:static:test
-
-
-########################
 # Nuxt: lint
 
 FROM prepare AS lint
@@ -111,7 +103,7 @@ RUN pnpm -r run lint
 ########################
 # Nuxt: test (e2e, base-image)
 
-FROM mcr.microsoft.com/playwright:v1.58.1 AS test-e2e-base-image
+FROM mcr.microsoft.com/playwright:v1.58.2 AS test-e2e-base-image
 
 # The `CI` environment variable must be set for pnpm to run in headless mode
 ENV CI=true
@@ -184,7 +176,7 @@ RUN pnpm run --dir tests test:e2e:server:node
 
 FROM test-e2e-prepare AS test-e2e-static
 
-COPY --from=build-static-test /srv/app/src/playground/.output/public ./src/playground/.output/public
+COPY --from=build-static /srv/app/src/playground/.output/public ./src/playground/.output/public
 
 RUN pnpm run --dir tests test:e2e:server:static
 

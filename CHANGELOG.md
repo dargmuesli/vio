@@ -55,6 +55,30 @@
 * **composables:** allow for reactive time ([8e9cf57](https://github.com/dargmuesli/vio/commit/8e9cf579c685df573f2801302e8da65d0fa16522))
 * **util:** drop `copyText` ([da0e36f](https://github.com/dargmuesli/vio/commit/da0e36fccca59cec94e4cb19f7ce6b2a1fa92f5d))
 
+## [20.6.2](https://github.com/dargmuesli/vio/compare/20.6.1...20.6.2) (2026-02-07)
+
+### Bug Fixes
+
+* **package:** correct node export ([4c84ad2](https://github.com/dargmuesli/vio/commit/4c84ad2859711ed2a2fb5ded69e68d3be4055203))
+
+## [20.6.1](https://github.com/dargmuesli/vio/compare/20.6.0...20.6.1) (2026-02-05)
+
+### Performance Improvements
+
+* **sitemap:** enable zero runtime mode ([90dbcb6](https://github.com/dargmuesli/vio/commit/90dbcb6eb30ea493ff47fd6af94a19e43dea98dd))
+
+## [20.6.0](https://github.com/dargmuesli/vio/compare/20.5.2...20.6.0) (2026-02-05)
+
+### Features
+
+* **date-time:** index to 0 for testing ([9bb674f](https://github.com/dargmuesli/vio/commit/9bb674fc6d6f36388ce0d2872ee2d29c8d446c86))
+
+## [20.5.2](https://github.com/dargmuesli/vio/compare/20.5.1...20.5.2) (2026-02-03)
+
+### Bug Fixes
+
+* schedule release ([3e7a7a5](https://github.com/dargmuesli/vio/commit/3e7a7a584809e0e19c0afa4d23014e84928e173b))
+
 ## [20.5.1](https://github.com/dargmuesli/vio/compare/20.5.0...20.5.1) (2026-01-30)
 
 ### Bug Fixes

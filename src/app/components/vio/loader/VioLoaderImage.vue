@@ -19,18 +19,21 @@
 <script setup lang="ts">
 import { debounce } from 'lodash-es'
 
-interface Props {
+const {
+  alt,
+  aspect,
+  classes = undefined,
+  height,
+  src,
+  width,
+} = defineProps<{
   alt: string
   aspect: string
   classes?: string
   height: string
   src: string
   width: string
-}
-const props = withDefaults(defineProps<Props>(), {
-  classes: undefined,
-})
-const srcProp = toRef(() => props.src)
+}>()
 
 const { t } = useI18n()
 
@@ -40,7 +43,7 @@ const isError = ref(false)
 const isLoading = ref(false)
 const loadingId = Math.random()
 const loadingIds = useState('loadingIds', () => [] as number[])
-const srcWhenLoaded = ref<string | undefined>(srcProp.value)
+const srcWhenLoaded = ref<string | undefined>(src)
 
 // methods
 const loadOnClient = () => {
@@ -55,7 +58,7 @@ const loadOnClient = () => {
     loadingStop()
     isError.value = true
   }
-  img.value.src = props.src
+  img.value.src = src
 }
 const loadingStart = () => {
   srcWhenLoaded.value = undefined

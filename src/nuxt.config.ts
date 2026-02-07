@@ -1,11 +1,10 @@
 import tailwindcss from '@tailwindcss/vite'
-import { createResolver } from 'nuxt/kit'
 import { defu } from 'defu'
+import { createResolver } from 'nuxt/kit'
 
-import { IS_IN_STACK, VIO_NUXT_BASE_CONFIG } from './node/static'
+import { IS_IN_STACK, SITE_URL, VIO_NUXT_BASE_CONFIG } from './node/static'
 import {
   GTAG_COOKIE_ID,
-  SITE_URL,
   TIMEZONE_COOKIE_NAME,
   VIO_GET_CSP,
   VIO_SITE_NAME,
@@ -32,8 +31,8 @@ export default defineNuxtConfig(
         : {
             devServer: {
               https: {
-                key: './.config/certificates/ssl.key',
-                cert: './.config/certificates/ssl.crt',
+                key: './.config/certificates/ssl-dev.key',
+                cert: './.config/certificates/ssl-dev.crt',
               },
             },
           }),
@@ -119,6 +118,9 @@ export default defineNuxtConfig(
         },
       },
       typescript: {
+        nodeTsConfig: {
+          include: [resolve('./node')],
+        },
         tsConfig: {
           nodeTsConfig: {
             include: [

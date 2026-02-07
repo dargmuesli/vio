@@ -12,24 +12,24 @@
 </template>
 
 <script setup lang="ts">
-interface Props {
+const {
+  status = undefined,
+  statusText: _statusText = undefined,
+  description,
+  stack = undefined,
+} = defineProps<{
   status?: number
   statusText?: string
   description: string
   stack?: string
-}
-const props = withDefaults(defineProps<Props>(), {
-  status: undefined,
-  statusText: undefined,
-  stack: undefined,
-})
+}>()
 
 const runtimeConfig = useRuntimeConfig()
 const { locale, t } = useI18n()
 
 // data
-const title = `${props.status ? `${props.status} - ` : ''}${
-  (await import('@http-util/status-i18n')).status(props.status, locale.value) ||
+const title = `${status ? `${status} - ` : ''}${
+  (await import('@http-util/status-i18n')).status(status, locale.value) ||
   t('error')
 }`
 

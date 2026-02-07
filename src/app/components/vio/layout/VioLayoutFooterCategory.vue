@@ -10,8 +10,7 @@
 </template>
 
 <script setup lang="ts">
-interface Props {
+const { heading } = defineProps<{
   heading: string
-}
-withDefaults(defineProps<Props>(), {})
+}>()
 </script>

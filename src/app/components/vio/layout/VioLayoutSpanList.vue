@@ -13,8 +13,7 @@
 </template>
 
 <script setup lang="ts">
-interface Props {
+const { span } = defineProps<{
   span: (string | string[])[]
-}
-withDefaults(defineProps<Props>(), {})
+}>()
 </script>

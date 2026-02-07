@@ -3,6 +3,8 @@
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "paths": {
+      "~/*": ["../src/*"],
+      "#src/*": ["../src/*"],
       "#tests/*": ["./*"]
     },
     "target": "ESNext",

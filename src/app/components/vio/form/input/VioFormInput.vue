@@ -119,7 +119,23 @@
 import type { BaseValidation } from '@vuelidate/core'
 import { consola } from 'consola'
 
-interface Props {
+const {
+  idLabel = undefined,
+  isDisabled = false,
+  isOptional = false,
+  isReadonly = false,
+  isRequired = false,
+  isValidatable = false,
+  name = undefined,
+  placeholder = undefined,
+  success = false,
+  title,
+  type = undefined,
+  validationProperty = undefined,
+  value = undefined,
+  valueFormatter = (x?: string) => x,
+  warning = false,
+} = defineProps<{
   idLabel?: string
   isDisabled?: boolean
   isOptional?: boolean
@@ -135,23 +151,7 @@ interface Props {
   value?: BaseValidation
   valueFormatter?: (x?: string) => typeof x | undefined
   warning?: boolean
-}
-const props = withDefaults(defineProps<Props>(), {
-  idLabel: undefined,
-  isDisabled: false,
-  isOptional: false,
-  isReadonly: false,
-  isRequired: false,
-  isValidatable: false,
-  name: undefined,
-  placeholder: undefined,
-  success: false,
-  type: undefined,
-  validationProperty: undefined,
-  value: undefined,
-  valueFormatter: (x?: string) => x,
-  warning: false,
-})
+}>()
 
 const emit = defineEmits<{
   icon: []
@@ -164,16 +164,16 @@ const runtimeConfig = useRuntimeConfig()
 const siteConfig = useSiteConfig()
 
 // data
-const idLabelFull = props.idLabel
+const idLabelFull = idLabel
   ? `${siteConfig.id}-${
       runtimeConfig.public.vio.isInProduction ? 'prod' : 'dev'
-    }-${props.idLabel}`
+    }-${idLabel}`
   : undefined
 
 // initialization
 if (
-  !props.placeholder &&
-  props.type &&
+  !placeholder &&
+  type &&
   ![
     'checkbox',
     'datetime-local',
@@ -182,17 +182,13 @@ if (
     'textarea',
     'tiptap',
     'radio',
-  ].includes(props.type)
+  ].includes(type)
 ) {
-  consola.warn(`placeholder is missing for ${props.idLabel}!`)
+  consola.warn(`placeholder is missing for ${idLabel}!`)
 }
 
-if (
-  !props.value &&
-  props.type &&
-  !['checkbox', 'select'].includes(props.type)
-) {
-  consola.warn(`value is missing for ${props.idLabel}!`)
+if (!value && type && !['checkbox', 'select'].includes(type)) {
+  consola.warn(`value is missing for ${idLabel}!`)
 }
 </script>
 

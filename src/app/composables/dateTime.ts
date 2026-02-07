@@ -13,9 +13,13 @@ export const useTimeZone = () =>
 
 // TODO: evaluate custom scheduler (https://github.com/vueuse/vueuse/pull/5129)
 export const useNow = (options?: { live?: boolean }) => {
+  const isTesting = useIsTesting()
+
   const { live = true } = options || {}
 
-  const nowState = useState(STATE_KEY_NOW, () => new Date())
+  const nowState = useState(STATE_KEY_NOW, () =>
+    isTesting ? new Date(0) : new Date(),
+  )
 
   if (live) {
     const now = useNowVueUse()

@@ -17,7 +17,7 @@
       </VioLink>
       <br />
       <button type="button" @click="test">
-        <VioTime :datetime="Date.now()" />
+        <VioTime :datetime="now" />
       </button>
     </p>
     <!-- <SBreadcrumb /> -->

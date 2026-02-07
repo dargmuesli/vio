@@ -8,12 +8,11 @@
 </template>
 
 <script setup lang="ts">
-interface Props {
+const {
+  backgroundColor = 'bg-background-brighten dark:bg-background-darken',
+  isHigh = false,
+} = defineProps<{
   backgroundColor?: string
   isHigh?: boolean
-}
-withDefaults(defineProps<Props>(), {
-  backgroundColor: 'bg-background-brighten dark:bg-background-darken',
-  isHigh: false,
-})
+}>()
 </script>
