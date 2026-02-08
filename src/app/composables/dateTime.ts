@@ -15,7 +15,7 @@ export const useTimeZone = () =>
 export const useNow = (options?: { live?: boolean }) => {
   const isTesting = useIsTesting()
 
-  const { live = true } = options || {}
+  const { live = true } = isTesting ? { live: false } : options || {}
 
   const nowState = useState(STATE_KEY_NOW, () =>
     isTesting ? new Date(0) : new Date(),

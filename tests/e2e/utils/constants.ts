@@ -1,7 +1,6 @@
 import { expect } from '@playwright/test'
 import type { Page } from 'playwright-core'
 
-export const COOKIE_CONTROL_CONSENT_COOKIE_DEFAULT = 'ctga'
 export const TIMEOUT = 60000
 export const PAGE_READY = async ({
   page,
@@ -21,7 +20,7 @@ export const PAGE_READY = async ({
   }
 
   // if (
-  //   process.env.NODE_ENV === 'development' &&
+  //   process.env.VIO_SERVER === 'dev' &&
   //   (!options || options.devTools !== false)
   // ) {
   //   await expect(
@@ -38,4 +37,4 @@ export const PAGE_READY = async ({
 }
 export const SITE_URL =
   process.env.NUXT_PUBLIC_I18N_BASE_URL ||
-  `https://${process.env.HOST || 'localhost'}:${process.env.PORT || '3000'}`
+  `https://${process.env.HOST || 'app.localhost'}:${process.env.PORT || '3000'}`

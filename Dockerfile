@@ -43,7 +43,7 @@ CMD ["pnpm", "run", "--dir", "src", "dev", "--host", "0.0.0.0"]
 EXPOSE 3000
 
 # TODO: support healthcheck while starting (https://github.com/nuxt/framework/issues/6915)
-# HEALTHCHECK --interval=10s --start-period=60s CMD wget -O /dev/null http://localhost:3000/api/healthcheck || exit 1
+# HEALTHCHECK --interval=10s --start-period=60s CMD wget -O /dev/null https://app.localhost:3000/api/healthcheck || exit 1
 
 
 ########################
@@ -77,7 +77,7 @@ RUN pnpm run --dir src build:node
 
 FROM prepare AS build-static
 
-ARG NUXT_PUBLIC_I18N_BASE_URL=https://localhost:3002
+ARG NUXT_PUBLIC_I18N_BASE_URL=https://app.localhost:3002
 ENV NUXT_PUBLIC_I18N_BASE_URL=${NUXT_PUBLIC_I18N_BASE_URL}
 
 ENV NODE_ENV=production
@@ -126,8 +126,12 @@ ARG GROUP_ID=1000
 
 RUN groupadd -g $GROUP_ID -o $USER_NAME \
     && useradd -m -l -u $USER_ID -g $GROUP_ID -o -s /bin/bash $USER_NAME \
-    && mkdir /srv/app/node_modules \
-    && chown $USER_ID:$GROUP_ID /srv/app/node_modules
+    && mkdir \
+        /srv/.pnpm-store \
+        /srv/app/node_modules \
+    && chown $USER_ID:$GROUP_ID \
+        /srv/.pnpm-store \
+        /srv/app/node_modules
 
 COPY ./docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
@@ -208,7 +212,7 @@ COPY --from=test-e2e-static /srv/app/package.json /dev/null
 
 # COPY --from=collect /srv/app/.output/public/ ./
 
-# HEALTHCHECK --interval=10s CMD wget -O /dev/null http://localhost:3000/api/healthcheck || exit 1
+# HEALTHCHECK --interval=10s CMD wget -O /dev/null https://app.localhost:3000/api/healthcheck || exit 1
 # EXPOSE 3000
 # LABEL org.opencontainers.image.source="https://github.com/dargmuesli/vio"
 # LABEL org.opencontainers.image.description="A Nuxt layer."
@@ -228,7 +232,7 @@ COPY --from=test-e2e-static /srv/app/package.json /dev/null
 
 # ENTRYPOINT ["pnpm"]
 # CMD ["run", "start:node"]
-# HEALTHCHECK --interval=10s CMD wget -O /dev/null http://localhost:3000/api/healthcheck || exit 1
+# HEALTHCHECK --interval=10s CMD wget -O /dev/null https://app.localhost:3000/api/healthcheck || exit 1
 # EXPOSE 3000
 # LABEL org.opencontainers.image.source="https://github.com/dargmuesli/vio"
 # LABEL org.opencontainers.image.description="A Nuxt layer."

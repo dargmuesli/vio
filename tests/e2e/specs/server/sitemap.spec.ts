@@ -1,21 +1,21 @@
-import { test, expect } from '@playwright/test'
-import { escapeRegExp } from 'lodash-es'
+import { expect } from '@playwright/test'
 
+import { vioTest } from '#tests/e2e/fixtures/vioTest'
 import { SITE_URL } from '#tests/e2e/utils/constants'
 
 const path = '/sitemap_index.xml'
 
-test.describe('page load', () => {
-  test('loads the page successfully', async ({ request }) => {
+vioTest.describe('page load', () => {
+  vioTest('loads the page successfully', async ({ request }) => {
     const resp = await request.get(path)
     expect(resp.status()).toBe(200)
   })
 })
 
-test.describe('sitemap', () => {
+vioTest.describe('sitemap', () => {
   const languages = ['en', 'de']
 
-  test('index', async ({ request }) => {
+  vioTest('index', async ({ request }) => {
     const resp = await request.get(path)
     const text = await resp.text()
 
@@ -24,12 +24,12 @@ test.describe('sitemap', () => {
     }
   })
 
-  test('content', async ({ request }) => {
+  vioTest('content', async ({ request }) => {
     for (const language of languages) {
       const resp = await request.get(`/__sitemap__/${language}.xml`)
       const text = (await resp.text())
-        .replace(/\n.+<\/lastmod>/g, '')
-        .replace(new RegExp(escapeRegExp(SITE_URL), 'g'), 'https://example.com')
+        .replaceAll(/\n.+<\/lastmod>/g, '')
+        .replaceAll(SITE_URL, 'https://example.com')
 
       if (process.env.VIO_SERVER === 'static') {
         expect(text)

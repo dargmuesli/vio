@@ -39,6 +39,7 @@ jobs:
     permissions:
       packages: write
     with:
+      BUILD_ADD_HOSTS: app.localhost=127.0.0.1
       PUSH: false
       TAG: ${{ needs.release_semantic_dry.outputs.new_release_version }}
   release_semantic:
