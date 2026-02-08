@@ -1,7 +1,6 @@
 import { expect } from '@playwright/test'
 import type { Page } from 'playwright-core'
 
-export const COOKIE_CONTROL_CONSENT_COOKIE_DEFAULT = 'ctga'
 export const TIMEOUT = 60000
 export const PAGE_READY = async ({
   page,

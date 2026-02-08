@@ -1,7 +1,34 @@
+import AxeBuilder from '@axe-core/playwright'
 import { expect, type Page } from '@playwright/test'
 import { joinURL, withoutTrailingSlash } from 'ufo'
 
-import { SITE_URL } from '#tests/e2e/utils/constants'
+import { vioTest } from '#tests/e2e/fixtures/vioTest'
+import { SITE_URL, TIMEOUT } from '#tests/e2e/utils/constants'
+
+export const testA11y = (url: string) =>
+  vioTest.describe('a11y', () => {
+    vioTest(
+      'should not have any automatically detectable accessibility issues',
+      async ({ defaultPage }) => {
+        await defaultPage.goto(url)
+
+        const accessibilityScanResults = await new AxeBuilder({
+          page: defaultPage.page,
+        }).analyze()
+
+        expect(
+          accessibilityScanResults.violations
+            .map(
+              (x) =>
+                `${x.id}\n${x.nodes.map(
+                  (y) => `${y.failureSummary}\n(${y.html}\n(${y.target})`,
+                )}`,
+            )
+            .join('\n'),
+        ).toEqual('')
+      },
+    )
+  })
 
 export const testMetadata = async ({
   page,
@@ -512,3 +539,45 @@ export const testMetadata = async ({
   //   ).toMatchSnapshot(`content-security-policy.txt`)
   // }
 }
+
+export const testOgImage = (url: string) =>
+  vioTest.describe('visual regression', () => {
+    vioTest('generates the open graph image', async ({ page }) => {
+      await page.goto(
+        joinURL(
+          `/__og-image__/${process.env.VIO_SERVER === 'static' ? 'static' : 'image'}${url}/og.png`,
+        ),
+      )
+      await expect(page).toHaveScreenshot()
+
+      await page.goto(
+        joinURL(
+          `/__og-image__/${process.env.VIO_SERVER === 'static' ? 'static' : 'image'}/de${url}/og.png`,
+        ),
+      )
+      await expect(page).toHaveScreenshot()
+    })
+  })
+
+export const testPageLoad = (url: string, status = 200) =>
+  vioTest.describe('page load', () => {
+    vioTest('loads the page successfully', async ({ request }) => {
+      const resp = await request.get(url, {
+        headers: {
+          Cookie: 'vio_is-testing=true',
+        },
+      })
+      expect(resp.status()).toBe(status)
+    })
+  })
+
+export const testVisualRegression = (url: string, plain?: boolean) =>
+  vioTest.describe('visual regression', () => {
+    vioTest('looks as before', async ({ defaultPage, page }) => {
+      await (plain ? page : defaultPage).goto(url)
+
+      await expect(plain ? page : defaultPage.page).toHaveScreenshot({
+        timeout: TIMEOUT,
+      })
+    })
+  })

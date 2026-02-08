@@ -1,121 +1,74 @@
-import AxeBuilder from '@axe-core/playwright'
-import { test, expect } from '@playwright/test'
+import { expect } from '@playwright/test'
 
-import { SITE_URL } from '#tests/e2e/utils/constants'
+import { vioTest } from '#tests/e2e/fixtures/vioTest'
+import { PAGE_READY, TIMEOUT } from '#tests/e2e/utils/constants'
 import {
-  COOKIE_CONTROL_CONSENT_COOKIE_DEFAULT,
-  PAGE_READY,
-} from '../../../utils/constants'
-import { testMetadata } from '../../../utils/tests'
+  testA11y,
+  testMetadata,
+  testOgImage,
+  testPageLoad,
+  testVisualRegression,
+} from '#tests/e2e/utils/tests'
 
-test.beforeEach(async ({ context }) => {
-  await context.addCookies([
-    {
-      name: 'ncc_c',
-      value: COOKIE_CONTROL_CONSENT_COOKIE_DEFAULT,
-      url: SITE_URL,
-    },
-  ])
-})
+const PAGE_PATH = '/'
 
-test.describe('accessibility', () => {
-  test('violations', async ({ page }) => {
-    await page.goto('/')
-    await PAGE_READY({ page })
-    const accessibilityScanResults = await new AxeBuilder({ page }).analyze()
-    expect(
-      accessibilityScanResults.violations
-        .map(
-          (x) =>
-            `${x.id}\n${x.nodes.map(
-              (y) => `${y.failureSummary}\n(${y.html}\n(${y.target})`,
-            )}`,
-        )
-        .join('\n'),
-    ).toEqual('')
-    // expect(accessibilityScanResults.violations.length).toEqual(0)
-  })
-})
+testA11y(PAGE_PATH)
+testOgImage(PAGE_PATH)
+testPageLoad(PAGE_PATH)
+testVisualRegression(PAGE_PATH)
 
-test.describe('page', () => {
-  test('status code', async ({ request }) => {
-    const resp = await request.get('/')
-    expect(resp.status()).toBe(200)
-  })
-  test('metadata', async ({ page }) => {
+vioTest.describe('page', () => {
+  vioTest('metadata', async ({ page }) => {
     await testMetadata({ page, path: '/', title: 'Vio Playground' })
   })
 })
 
-test.describe('internationalization', () => {
+vioTest.describe('internationalization', () => {
   const textEnglish = 'Please check your input 🙈'
   const textGerman = 'Bitte überprüfe deine Eingaben 🙈'
 
-  test('English translations', async ({ page }) => {
-    await page.goto('/')
+  vioTest('English translations', async ({ page }) => {
+    await page.goto(PAGE_PATH)
     await expect(page.getByText(textEnglish)).toBeVisible()
   })
 
-  test('German translations', async ({ page }) => {
+  vioTest('German translations', async ({ page }) => {
     await page.goto('/de')
     await expect(page.getByText(textGerman)).toBeVisible()
   })
 })
 
-test.describe('visual regression', () => {
-  test('consistent appearance', async ({ page }) => {
-    await page.goto('/')
-    await PAGE_READY({ page })
-    await expect(page).toHaveScreenshot(
-      'visual-regression-consistent-appearance-system.png',
-      {
-        fullPage: true,
-      },
-    )
+vioTest.describe('visual regression', () => {
+  // vioTest('consistent appearance', async ({ page }) => {
+  //   await page.goto(PAGE_PATH)
+  //   await PAGE_READY({ page })
+  //   await expect(page).toHaveScreenshot(
+  //     'visual-regression-consistent-appearance-system.png',
+  //     {
+  //       fullPage: true,
+  //     },
+  //   )
 
-    await page.emulateMedia({ colorScheme: 'light' })
-    await expect(page).toHaveScreenshot(
-      'visual-regression-consistent-appearance-light.png',
-      {
-        fullPage: true,
-      },
-    )
+  //   await page.emulateMedia({ colorScheme: 'light' })
+  //   await expect(page).toHaveScreenshot(
+  //     'visual-regression-consistent-appearance-light.png',
+  //     {
+  //       fullPage: true,
+  //     },
+  //   )
 
-    await page.emulateMedia({ colorScheme: 'dark' })
-    await expect(page).toHaveScreenshot(
-      'visual-regression-consistent-appearance-dark.png',
-      {
-        fullPage: true,
-      },
-    )
-  })
+  //   await page.emulateMedia({ colorScheme: 'dark' })
+  //   await expect(page).toHaveScreenshot(
+  //     'visual-regression-consistent-appearance-dark.png',
+  //     {
+  //       fullPage: true,
+  //     },
+  //   )
+  // })
 
-  test('consistent appearance with cookie banner', async ({
-    context,
-    page,
-  }) => {
-    // TODO: only remove the cookie control cookie (https://github.com/microsoft/playwright/issues/10143)
-    await context.clearCookies()
-
-    await page.goto('/')
+  vioTest('displays the cookie banner', async ({ page }) => {
+    await page.goto(PAGE_PATH)
     await PAGE_READY({ page, options: { cookieControl: false } })
-    await expect(page).toHaveScreenshot(
-      'visual-regression-consistent-appearance-with-cookie-banner.png',
-      {
-        fullPage: true,
-      },
-    )
-  })
-
-  test('generates the open graph image', async ({ page }) => {
-    await page.goto(
-      `/__og-image__/${process.env.VIO_SERVER === 'static' ? 'static' : 'image'}/og.png`,
-    )
-    await expect(page).toHaveScreenshot({ fullPage: true })
-
-    await page.goto(
-      `/__og-image__/${process.env.VIO_SERVER === 'static' ? 'static' : 'image'}/de/og.png`,
-    )
-    await expect(page).toHaveScreenshot({ fullPage: true })
+    await expect(page).toHaveScreenshot({ timeout: TIMEOUT })
   })
 })

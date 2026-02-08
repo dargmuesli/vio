@@ -1,7 +1,9 @@
-import { test, expect } from '@playwright/test'
+import { expect } from '@playwright/test'
 
-test.describe('headers middleware', () => {
-  test('sets the correct security headers', async ({ request }) => {
+import { vioTest } from '#tests/e2e/fixtures/vioTest'
+
+vioTest.describe('headers middleware', () => {
+  vioTest('sets the correct security headers', async ({ request }) => {
     if (process.env.VIO_SERVER === 'static') return // TODO: use single snapshot and all servers
 
     const headers = (await request.get('/')).headers()
