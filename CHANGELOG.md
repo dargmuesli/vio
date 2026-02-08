@@ -1,3 +1,19 @@
+## [21.0.0-beta.4](https://github.com/dargmuesli/vio/compare/21.0.0-beta.3...21.0.0-beta.4) (2026-02-08)
+
+### Features
+
+* **date-time:** index to 0 for testing ([9bb674f](https://github.com/dargmuesli/vio/commit/9bb674fc6d6f36388ce0d2872ee2d29c8d446c86))
+
+### Bug Fixes
+
+* **package:** correct node export ([4c84ad2](https://github.com/dargmuesli/vio/commit/4c84ad2859711ed2a2fb5ded69e68d3be4055203))
+* schedule release ([3e7a7a5](https://github.com/dargmuesli/vio/commit/3e7a7a584809e0e19c0afa4d23014e84928e173b))
+* **test:** correct import path ([119c4a9](https://github.com/dargmuesli/vio/commit/119c4a9487a94d02818ff75fcc2aaefe0feb8781))
+
+### Performance Improvements
+
+* **sitemap:** enable zero runtime mode ([90dbcb6](https://github.com/dargmuesli/vio/commit/90dbcb6eb30ea493ff47fd6af94a19e43dea98dd))
+
 ## [21.0.0-beta.3](https://github.com/dargmuesli/vio/compare/21.0.0-beta.2...21.0.0-beta.3) (2026-02-03)
 
 ### ⚠ BREAKING CHANGES
