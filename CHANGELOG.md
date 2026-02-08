@@ -1,3 +1,9 @@
+## [20.6.4](https://github.com/dargmuesli/vio/compare/20.6.3...20.6.4) (2026-02-08)
+
+### Bug Fixes
+
+* **typescript:** correct import paths ([6604172](https://github.com/dargmuesli/vio/commit/66041726ddd1e5873a6b0c228fd4259a980cf49d))
+
 ## [20.6.3](https://github.com/dargmuesli/vio/compare/20.6.2...20.6.3) (2026-02-08)
 
 ### Bug Fixes
