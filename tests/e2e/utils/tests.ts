@@ -2,9 +2,8 @@ import AxeBuilder from '@axe-core/playwright'
 import { expect, type Page } from '@playwright/test'
 import { joinURL, withoutTrailingSlash } from 'ufo'
 
-// the following imports cannot use the #tests alias because downstream consumers of this package typically cannot resolve that alias
-import { vioTest } from '../fixtures/vioTest'
-import { SITE_URL, TIMEOUT } from '../utils/constants'
+import { vioTest } from '#tests/e2e/fixtures/vioTest'
+import { SITE_URL, TIMEOUT } from '#tests/e2e/utils/constants'
 
 export const testA11y = (url: string) =>
   vioTest.describe('a11y', () => {
