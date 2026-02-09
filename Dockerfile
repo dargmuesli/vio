@@ -85,6 +85,18 @@ RUN pnpm run --dir src build:static
 
 
 ########################
+# Build for static e2e test.
+
+FROM prepare AS build-static-test
+
+ARG NUXT_PUBLIC_SITE_URL=https://localhost:3002
+ENV NUXT_PUBLIC_SITE_URL=${NUXT_PUBLIC_SITE_URL}
+
+ENV NODE_ENV=test
+RUN pnpm run --dir src build:static:test
+
+
+########################
 # Build testing library.
 
 FROM prepare AS build-test
@@ -185,7 +197,7 @@ RUN pnpm run --dir tests test:e2e:server:node
 
 FROM test-e2e-prepare AS test-e2e-static
 
-COPY --from=build-static /srv/app/src/playground/.output/public ./src/playground/.output/public
+COPY --from=build-static-test /srv/app/src/playground/.output/public ./src/playground/.output/public
 
 RUN pnpm run --dir tests test:e2e:server:static
 
