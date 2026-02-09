@@ -1,3 +1,9 @@
+## [20.7.1](https://github.com/dargmuesli/vio/compare/20.7.0...20.7.1) (2026-02-09)
+
+### Bug Fixes
+
+* **typescript:** use path aliases ([c43f6ae](https://github.com/dargmuesli/vio/commit/c43f6aeafe07d78729bbf4d6f4a609e83eb228ea))
+
 ## [20.7.0](https://github.com/dargmuesli/vio/compare/20.6.7...20.7.0) (2026-02-09)
 
 ### Features
