@@ -117,5 +117,5 @@
     "start:static": "node node/server/static.mjs"
   },
   "type": "module",
-  "version": "20.6.7"
+  "version": "20.7.0"
 }

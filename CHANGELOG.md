@@ -1,3 +1,9 @@
+## [20.7.0](https://github.com/dargmuesli/vio/compare/20.6.7...20.7.0) (2026-02-09)
+
+### Features
+
+* **tests:** compile ([2440d4c](https://github.com/dargmuesli/vio/commit/2440d4c36bdfcc38e836013c75fe447c9b8b7edd))
+
 ## [20.6.7](https://github.com/dargmuesli/vio/compare/20.6.6...20.6.7) (2026-02-09)
 
 ### Bug Fixes
