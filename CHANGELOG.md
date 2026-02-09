@@ -1,3 +1,9 @@
+## [20.6.5](https://github.com/dargmuesli/vio/compare/20.6.4...20.6.5) (2026-02-09)
+
+### Bug Fixes
+
+* **test:** correct import path ([6eab10b](https://github.com/dargmuesli/vio/commit/6eab10b425180c71113c1631d91abb45e6cd0e7f))
+
 ## [20.6.4](https://github.com/dargmuesli/vio/compare/20.6.3...20.6.4) (2026-02-08)
 
 ### Bug Fixes
