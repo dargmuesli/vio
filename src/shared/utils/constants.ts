@@ -129,6 +129,7 @@ export const VIO_GET_CSP = ({ siteUrl }: { siteUrl: URL }) =>
         "'unsafe-inline'", // TODO: replace with "'nonce-{{nonce}}'" once vue-sonner supports it
         "'self'", // TODO: `${siteUrl}_nuxt/`, // bundle
       ], // TODO: use `style-src-elem` once Playwright WebKit supports it
+      'upgrade-insecure-requests': true,
     },
   )
 export const GTAG_COOKIE_ID = 'ga'
