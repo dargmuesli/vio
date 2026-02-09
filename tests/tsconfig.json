@@ -5,6 +5,10 @@
     "paths": {
       "#tests/*": ["./*"]
     },
-    "target": "ESNext",
-  }
+    "target": "ESNext"
+  },
+  "exclude": [
+    "dist",
+    "tsdown.config.ts"
+  ]
 }

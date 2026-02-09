@@ -12,6 +12,7 @@ src/node_modules/
 src/.env
 src/.eslintcache
 src/.stylelintcache
+tests/dist/
 tests/e2e/report/
 tests/e2e/results/
 Dockerfile
