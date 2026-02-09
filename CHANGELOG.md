@@ -1,3 +1,9 @@
+## [21.0.0-beta.5](https://github.com/dargmuesli/vio/compare/21.0.0-beta.4...21.0.0-beta.5) (2026-02-09)
+
+### Features
+
+* **csp:** upgrade insecure requests ([b9609aa](https://github.com/dargmuesli/vio/commit/b9609aab3c3e1d8ae61806abd1868a37ea355fc3))
+
 ## [21.0.0-beta.4](https://github.com/dargmuesli/vio/compare/21.0.0-beta.3...21.0.0-beta.4) (2026-02-08)
 
 ### Features
