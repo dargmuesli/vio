@@ -293,9 +293,6 @@ export default defineNuxtConfig(
         prefix: '',
         componentDir: resolve('./app/components/scn'),
       },
-      site: {
-        url: SITE_URL,
-      },
       sitemap: {
         credits: false,
         zeroRuntime: true,
