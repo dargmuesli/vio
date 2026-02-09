@@ -1,3 +1,9 @@
+## [20.6.7](https://github.com/dargmuesli/vio/compare/20.6.6...20.6.7) (2026-02-09)
+
+### Bug Fixes
+
+* **node:** improve scripts export ([78678b4](https://github.com/dargmuesli/vio/commit/78678b442fd171caedb834971ad845de2e019a94))
+
 ## [20.6.6](https://github.com/dargmuesli/vio/compare/20.6.5...20.6.6) (2026-02-09)
 
 ### Bug Fixes

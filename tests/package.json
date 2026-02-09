@@ -54,5 +54,5 @@
     "test:e2e:server:static": "cross-env NODE_ENV=production PORT=\"${PORT:-3002}\" NUXT_PUBLIC_SITE_URL=\"${NUXT_PUBLIC_SITE_URL:-https://localhost:3002}\" VIO_SERVER=static pnpm run test:e2e"
   },
   "type": "module",
-  "version": "20.6.6"
+  "version": "20.6.7"
 }
