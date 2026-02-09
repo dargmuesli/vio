@@ -118,5 +118,5 @@
     "start:static": "node scripts/server/static.mjs"
   },
   "type": "module",
-  "version": "20.6.5"
+  "version": "20.6.6"
 }

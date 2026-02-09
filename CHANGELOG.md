@@ -1,3 +1,10 @@
+## [20.6.6](https://github.com/dargmuesli/vio/compare/20.6.5...20.6.6) (2026-02-09)
+
+### Bug Fixes
+
+* **docker:** correct user and ground id passing ([54545c0](https://github.com/dargmuesli/vio/commit/54545c0def3cc8dc3ec84cec07fa073a9fbed541))
+* **package:** release scripts ([e1fbeb5](https://github.com/dargmuesli/vio/commit/e1fbeb5ff1a1ddd3610e2c3d2e492b6888eba1bc))
+
 ## [20.6.5](https://github.com/dargmuesli/vio/compare/20.6.4...20.6.5) (2026-02-09)
 
 ### Bug Fixes
