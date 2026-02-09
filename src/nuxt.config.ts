@@ -103,7 +103,7 @@ export default defineNuxtConfig(
             baseUrl: SITE_URL,
           },
           site: {
-            url: SITE_URL,
+            url: SITE_URL, // TODO: evaluate removal for static builds in favor of i18n.baseUrl
           },
           vio: {
             isTesting: false,
