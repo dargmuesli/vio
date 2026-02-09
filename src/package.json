@@ -76,9 +76,10 @@
     ".config",
     "app",
     "i18n",
+    "node",
+    "scripts",
     "server",
     "shared",
-    "node",
     "nuxt.config.ts",
     "package.json"
   ],
