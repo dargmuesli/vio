@@ -77,7 +77,6 @@
     "app",
     "i18n",
     "node",
-    "scripts",
     "server",
     "shared",
     "nuxt.config.ts",
@@ -114,8 +113,8 @@
     "preview": "nuxt preview playground",
     "start": "pnpm run start:node",
     "start:dev": "pnpm run certificates && NODE_EXTRA_CA_CERTS=\"$(mkcert -CAROOT)/rootCA.pem\" nuxt dev playground",
-    "start:node": "node scripts/server/node.mjs",
-    "start:static": "node scripts/server/static.mjs"
+    "start:node": "node node/server/node.mjs",
+    "start:static": "node node/server/static.mjs"
   },
   "type": "module",
   "version": "20.6.6"
