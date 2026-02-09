@@ -22,7 +22,7 @@
   },
   "private": true,
   "scripts": {
-    "build": "pnpm run --dir src build",
+    "build": "pnpm -r run build",
     "build:node": "pnpm run --dir src build:node",
     "build:static": "pnpm run --dir src build:static",
     "build:static:test": "pnpm run --dir src build:static:test",

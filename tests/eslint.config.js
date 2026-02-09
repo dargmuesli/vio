@@ -18,6 +18,9 @@ export default pluginTypescript.config(
 
   // general
   {
+    ignores: ['dist'],
+  },
+  {
     rules: {
       'no-console': 'error',
     },

@@ -85,6 +85,15 @@ RUN pnpm run --dir src build:static
 
 
 ########################
+# Build testing library.
+
+FROM prepare AS build-test
+
+ENV NODE_ENV=production
+RUN pnpm run --dir tests build
+
+
+########################
 # Nuxt: lint
 
 FROM prepare AS lint
@@ -190,6 +199,7 @@ FROM base-image AS collect
 COPY --from=build-node --chown=node /srv/app/src/package.json ./package.json
 # COPY --from=build-static /srv/app/src/.output/public ./.output/public
 COPY --from=build-static /srv/app/package.json /dev/null
+COPY --from=build-test /srv/app/package.json /dev/null
 COPY --from=lint /srv/app/package.json /dev/null
 # COPY --from=test-unit /srv/app/package.json /dev/null
 # COPY --from=test-e2e-dev /srv/app/package.json /dev/null
