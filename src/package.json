@@ -67,7 +67,7 @@
     "stylelint-no-unsupported-browser-features": "8.1.1",
     "tailwindcss": "4.2.0",
     "vue": "3.5.28",
-    "vue-router": "4.6.4"
+    "vue-router": "5.0.2"
   },
   "engines": {
     "node": "24"
@@ -87,7 +87,7 @@
   "peerDependencies": {
     "nuxt": "^4.1.0",
     "vue": "^3.5.21",
-    "vue-router": "^4.5.1"
+    "vue-router": "^4.5.1 || ^5.0.0"
   },
   "publishConfig": {
     "access": "public"
