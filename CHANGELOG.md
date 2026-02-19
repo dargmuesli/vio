@@ -1,3 +1,9 @@
+## [20.7.2](https://github.com/dargmuesli/vio/compare/20.7.1...20.7.2) (2026-02-19)
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([2dcb195](https://github.com/dargmuesli/vio/commit/2dcb195831f4ec9bdb33174504cbbf9588b8c472))
+
 ## [20.7.1](https://github.com/dargmuesli/vio/compare/20.7.0...20.7.1) (2026-02-09)
 
 ### Bug Fixes
