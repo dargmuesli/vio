@@ -1,3 +1,9 @@
+## [20.7.4](https://github.com/dargmuesli/vio/compare/20.7.3...20.7.4) (2026-02-22)
+
+### Bug Fixes
+
+* **ci:** upgrade to dargmuesli/github-actions v5.0.0-beta.1 ([9a209a6](https://github.com/dargmuesli/vio/commit/9a209a65f20bcb1a42903ecc578789c8d0f40278))
+
 ## [20.7.3](https://github.com/dargmuesli/vio/compare/20.7.2...20.7.3) (2026-02-22)
 
 ### Bug Fixes
