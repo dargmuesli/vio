@@ -1,3 +1,9 @@
+## [20.7.5](https://github.com/dargmuesli/vio/compare/20.7.4...20.7.5) (2026-02-22)
+
+### Bug Fixes
+
+* schedule release ([9a95fa0](https://github.com/dargmuesli/vio/commit/9a95fa0e13e88e8697027a868b0c6f24ff4f6a13))
+
 ## [20.7.4](https://github.com/dargmuesli/vio/compare/20.7.3...20.7.4) (2026-02-22)
 
 ### Bug Fixes
