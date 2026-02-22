@@ -1,3 +1,9 @@
+## [20.7.3](https://github.com/dargmuesli/vio/compare/20.7.2...20.7.3) (2026-02-22)
+
+### Bug Fixes
+
+* **deps:** lockfile maintenance ([b023895](https://github.com/dargmuesli/vio/commit/b0238951de4616e958c099d343daccadb9a41883))
+
 ## [20.7.2](https://github.com/dargmuesli/vio/compare/20.7.1...20.7.2) (2026-02-19)
 
 ### Bug Fixes
