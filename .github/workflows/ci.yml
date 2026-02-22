@@ -15,26 +15,27 @@ on:
 jobs:
   ci-optimization:
     name: CI optimization
-    uses: dargmuesli/github-actions/.github/workflows/ci-optimization.yml@fe4c07f0a11b8b6cfed7e157e33bcc21e275bdad # 4.0.8
+    uses: dargmuesli/github-actions/.github/workflows/ci-optimization.yml@59b73f336e9966ee1654310effd53cef6d6f1d70 # 5.0.0-beta.1
     permissions:
       pull-requests: read
   release_semantic_dry:
     needs: ci-optimization
     if: contains(fromJSON('["beta", "alpha"]'), github.ref_name) || needs.ci-optimization.outputs.continue == 'true'
     name: Release (semantic, dry)
-    uses: dargmuesli/github-actions/.github/workflows/release-semantic.yml@fe4c07f0a11b8b6cfed7e157e33bcc21e275bdad # 4.0.8
+    uses: dargmuesli/github-actions/.github/workflows/release-semantic.yml@59b73f336e9966ee1654310effd53cef6d6f1d70 # 5.0.0-beta.1
     permissions:
       contents: write
       id-token: write
     secrets:
-      PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+      GH_APP_PRIVATE_KEY: ${{ secrets.GH_APP_PRIVATE_KEY }}
     with:
       APT_PACKAGES: mkcert
       DRY_RUN: true
+      GH_APP_ID: ${{ vars.GH_APP_ID }}
       INSTALL_NODE_DEPENDENCIES: true
   build:
     name: Build
-    uses: dargmuesli/github-actions/.github/workflows/docker.yml@fe4c07f0a11b8b6cfed7e157e33bcc21e275bdad # 4.0.8
+    uses: dargmuesli/github-actions/.github/workflows/docker.yml@59b73f336e9966ee1654310effd53cef6d6f1d70 # 5.0.0-beta.1
     needs: release_semantic_dry
     permissions:
       packages: write
@@ -44,12 +45,13 @@ jobs:
   release_semantic:
     needs: build
     name: Release (semantic)
-    uses: dargmuesli/github-actions/.github/workflows/release-semantic.yml@fe4c07f0a11b8b6cfed7e157e33bcc21e275bdad # 4.0.8
+    uses: dargmuesli/github-actions/.github/workflows/release-semantic.yml@59b73f336e9966ee1654310effd53cef6d6f1d70 # 5.0.0-beta.1
     permissions:
       contents: write
       id-token: write
     secrets:
-      PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+      GH_APP_PRIVATE_KEY: ${{ secrets.GH_APP_PRIVATE_KEY }}
     with:
       APT_PACKAGES: mkcert
+      GH_APP_ID: ${{ vars.GH_APP_ID }}
       INSTALL_NODE_DEPENDENCIES: true
