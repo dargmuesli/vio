@@ -117,8 +117,8 @@ importers:
         specifier: 10.1.8
         version: 10.1.8(eslint@10.0.2(jiti@2.6.1))
       eslint-plugin-compat:
-        specifier: 6.2.0
-        version: 6.2.0(eslint@10.0.2(jiti@2.6.1))
+        specifier: 6.2.1
+        version: 6.2.1(eslint@10.0.2(jiti@2.6.1))
       eslint-plugin-prettier:
         specifier: 5.5.5
         version: 5.5.5(@types/eslint@9.6.1)(eslint-config-prettier@10.1.8(eslint@10.0.2(jiti@2.6.1)))(eslint@10.0.2(jiti@2.6.1))(prettier@3.8.1)
@@ -4336,8 +4336,8 @@ packages:
     peerDependencies:
       eslint: '*'
 
-  eslint-plugin-compat@6.2.0:
-    resolution: {integrity: sha512-Ihz4zAeHKzyksDDUTObrYQxaqnV/pFlAiZoWkMuWM9XGf4O191ReQFYv516zcs9QVJ2vX+MMpqr1yEfTkXVETQ==}
+  eslint-plugin-compat@6.2.1:
+    resolution: {integrity: sha512-gLKqUH+lQcCL+HzsROUjBDvakc5Zaga51Y4ZAkPCXc41pzKBfyluqTr2j8zOx8QQQb7zyglu1LVoL5aSNWf2SQ==}
     engines: {node: '>=18.x'}
     peerDependencies:
       eslint: ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0
@@ -11392,12 +11392,11 @@ snapshots:
     dependencies:
       eslint: 10.0.2(jiti@2.6.1)
 
-  eslint-plugin-compat@6.2.0(eslint@10.0.2(jiti@2.6.1)):
+  eslint-plugin-compat@6.2.1(eslint@10.0.2(jiti@2.6.1)):
     dependencies:
       '@mdn/browser-compat-data': 6.1.5
       ast-metadata-inferer: 0.8.1
       browserslist: 4.28.1
-      caniuse-lite: 1.0.30001774
       eslint: 10.0.2(jiti@2.6.1)
       find-up: 5.0.0
       globals: 15.15.0
