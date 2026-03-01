@@ -89,8 +89,8 @@ RUN pnpm run --dir src build:static
 
 FROM prepare AS build-static-test
 
-ARG NUXT_PUBLIC_SITE_URL=https://app.localhost:3002
-ENV NUXT_PUBLIC_SITE_URL=${NUXT_PUBLIC_SITE_URL}
+ARG NUXT_PUBLIC_I18N_BASE_URL=https://app.localhost:3002
+ENV NUXT_PUBLIC_I18N_BASE_URL=${NUXT_PUBLIC_I18N_BASE_URL}
 
 ENV NODE_ENV=test
 RUN pnpm run --dir src build:static:test
