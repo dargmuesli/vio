@@ -1,3 +1,28 @@
+## [21.0.0-beta.6](https://github.com/dargmuesli/vio/compare/21.0.0-beta.5...21.0.0-beta.6) (2026-03-01)
+
+### ⚠ BREAKING CHANGES
+
+* **router:** remove `append` utility
+
+### Features
+
+* **nuxt:** enable experimental typed pages ([f350de7](https://github.com/dargmuesli/vio/commit/f350de7c852764a39e550aee38f847c2f53f0f96))
+* **router:** remove `append` utility ([3008746](https://github.com/dargmuesli/vio/commit/3008746b4e58ddeedaac1d6b6caea365d5a1dfda))
+* **tests:** compile ([2440d4c](https://github.com/dargmuesli/vio/commit/2440d4c36bdfcc38e836013c75fe447c9b8b7edd))
+
+### Bug Fixes
+
+* **ci:** upgrade to dargmuesli/github-actions v5.0.0-beta.1 ([9a209a6](https://github.com/dargmuesli/vio/commit/9a209a65f20bcb1a42903ecc578789c8d0f40278))
+* **deps:** lockfile maintenance ([b023895](https://github.com/dargmuesli/vio/commit/b0238951de4616e958c099d343daccadb9a41883))
+* **deps:** update all non-major dependencies ([2dcb195](https://github.com/dargmuesli/vio/commit/2dcb195831f4ec9bdb33174504cbbf9588b8c472))
+* **docker:** correct user and ground id passing ([54545c0](https://github.com/dargmuesli/vio/commit/54545c0def3cc8dc3ec84cec07fa073a9fbed541))
+* **node:** improve scripts export ([78678b4](https://github.com/dargmuesli/vio/commit/78678b442fd171caedb834971ad845de2e019a94))
+* **package:** release scripts ([e1fbeb5](https://github.com/dargmuesli/vio/commit/e1fbeb5ff1a1ddd3610e2c3d2e492b6888eba1bc))
+* schedule release ([9a95fa0](https://github.com/dargmuesli/vio/commit/9a95fa0e13e88e8697027a868b0c6f24ff4f6a13))
+* **test:** correct import path ([6eab10b](https://github.com/dargmuesli/vio/commit/6eab10b425180c71113c1631d91abb45e6cd0e7f))
+* **typescript:** correct import paths ([6604172](https://github.com/dargmuesli/vio/commit/66041726ddd1e5873a6b0c228fd4259a980cf49d))
+* **typescript:** use path aliases ([c43f6ae](https://github.com/dargmuesli/vio/commit/c43f6aeafe07d78729bbf4d6f4a609e83eb228ea))
+
 ## [21.0.0-beta.5](https://github.com/dargmuesli/vio/compare/21.0.0-beta.4...21.0.0-beta.5) (2026-02-09)
 
 ### Features
