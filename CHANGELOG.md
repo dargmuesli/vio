@@ -1,3 +1,9 @@
+## [21.0.0-beta.7](https://github.com/dargmuesli/vio/compare/21.0.0-beta.6...21.0.0-beta.7) (2026-03-01)
+
+### Features
+
+* **nuxt:** use `app.localhost` as development server host ([52e5ebb](https://github.com/dargmuesli/vio/commit/52e5ebb94b3ff5d311895f2af2223f3ce4fce19c))
+
 ## [21.0.0-beta.6](https://github.com/dargmuesli/vio/compare/21.0.0-beta.5...21.0.0-beta.6) (2026-03-01)
 
 ### ⚠ BREAKING CHANGES
