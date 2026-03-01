@@ -1,6 +1,6 @@
 import { defineConfig, devices } from '@playwright/test'
 
-import { SITE_URL, TIMEOUT } from '#tests/e2e/utils/constants' // importing from `src` does not work with the test module release
+import { SITE_URL, TIMEOUT } from '#tests/e2e/utils/constants'
 
 /**
  * Read environment variables from file.

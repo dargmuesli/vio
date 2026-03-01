@@ -1,12 +1,12 @@
 {
   "devDependencies": {
-    "@commitlint/cli": "20.4.1",
-    "@commitlint/config-conventional": "20.4.1",
+    "@commitlint/cli": "20.4.2",
+    "@commitlint/config-conventional": "20.4.2",
     "@dargmuesli/nuxt-vio": "link:src",
     "husky": "9.1.7",
     "lint-staged": "16.2.7"
   },
-  "packageManager": "pnpm@10.29.1",
+  "packageManager": "pnpm@10.30.2",
   "pnpm": {
     "ignoredBuiltDependencies": [
       "@parcel/watcher",
@@ -22,7 +22,7 @@
   },
   "private": true,
   "scripts": {
-    "build": "pnpm run --dir src build",
+    "build": "pnpm -r run build",
     "build:node": "pnpm run --dir src build:node",
     "build:static": "pnpm run --dir src build:static",
     "build:static:test": "pnpm run --dir src build:static:test",

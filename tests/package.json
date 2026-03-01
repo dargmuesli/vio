@@ -1,31 +1,51 @@
 {
   "devDependencies": {
     "@axe-core/playwright": "4.11.1",
-    "@eslint/js": "9.39.2",
+    "@eslint/js": "10.0.1",
     "@playwright/test": "1.58.2",
-    "@types/node": "24.10.12",
+    "@types/node": "24.10.14",
     "cross-env": "10.1.0",
-    "eslint": "9.39.2",
+    "eslint": "10.0.2",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-prettier": "5.5.5",
     "lodash-es": "4.17.23",
+    "playwright-core": "1.58.2",
+    "tsdown": "0.20.3",
     "typescript": "5.9.3",
-    "typescript-eslint": "8.54.0",
+    "typescript-eslint": "8.56.1",
     "ufo": "1.6.3"
   },
   "engines": {
     "node": "24"
   },
+  "exports": {
+    "./e2e/fixtures/vioTest": {
+      "default": "./dist/e2e/fixtures/vioTest.mjs",
+      "types": "./dist/e2e/fixtures/vioTest.d.mts"
+    },
+    "./e2e/utils/constants": {
+      "default": "./dist/e2e/utils/constants.mjs",
+      "types": "./dist/e2e/utils/constants.d.mts"
+    },
+    "./e2e/utils/tests": {
+      "default": "./dist/e2e/utils/tests.mjs",
+      "types": "./dist/e2e/utils/tests.d.mts"
+    },
+    "./playwright.config": {
+      "default": "./dist/playwright.config.mjs",
+      "types": "./dist/playwright.config.d.mts"
+    }
+  },
   "files": [
-    "e2e/fixtures",
-    "e2e/utils",
-    "package.json",
-    "playwright.config.ts",
-    "tsconfig.json"
+    "dist"
   ],
   "name": "@dargmuesli/nuxt-vio-testing",
   "peerDependencies": {
-    "playwright-core": "1.58.2"
+    "@axe-core/playwright": "^4.11.1",
+    "@playwright/test": "^1.58.2",
+    "lodash-es": "^4.17.23",
+    "playwright-core": "^1.58.2",
+    "ufo": "^1.6.3"
   },
   "publishConfig": {
     "access": "public"
@@ -35,10 +55,13 @@
     "url": "git+https://github.com/dargmuesli/vio.git"
   },
   "scripts": {
+    "build": "tsdown",
+    "build:watch": "tsdown --watch",
     "lint": "pnpm run lint:js && pnpm run lint:ts",
     "lint:fix": "pnpm run lint:js --fix",
     "lint:js": "eslint --cache",
     "lint:ts": "tsc --noEmit",
+    "prepublishOnly": "pnpm run build",
     "test:e2e": "playwright test",
     "test:e2e:docker:br": "pnpm run test:e2e:docker:build && pnpm run test:e2e:docker:run",
     "test:e2e:docker:build": "sudo docker build -t test-e2e_development --build-arg USER_ID=$(id -u) --build-arg GROUP_ID=$(id -g) --target test-e2e_development ..",
