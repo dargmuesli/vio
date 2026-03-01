@@ -95,6 +95,7 @@ export default defineNuxtConfig(
         compressPublicAssets: true,
         experimental: {
           asyncContext: true,
+          typedPages: true,
         },
       },
       runtimeConfig: {
