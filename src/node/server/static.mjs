@@ -1,4 +1,5 @@
 import { spawn } from 'node:child_process'
+import fs from 'node:fs'
 import path from 'node:path'
 
 const root = process.argv[2] || process.cwd()
@@ -9,7 +10,12 @@ const keyPath = path.join(root, `.config/certificates/ssl${certSuffix}.key`)
 
 const serveProcess = spawn(
   'serve',
-  ['playground/.output/public', '--ssl-cert', certPath, '--ssl-key', keyPath],
+  [
+    'playground/.output/public',
+    ...(fs.existsSync(certPath) && fs.existsSync(keyPath)
+      ? ['--ssl-cert', certPath, '--ssl-key', keyPath]
+      : []),
+  ],
   {
     stdio: 'inherit',
     cwd: root,
