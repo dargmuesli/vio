@@ -29,8 +29,8 @@ export default defineNuxtConfig(
       ...(IS_IN_STACK
         ? {}
         : {
-            host: 'app.localhost',
             devServer: {
+              host: 'app.localhost',
               https: {
                 key: './.config/certificates/ssl-dev.key',
                 cert: './.config/certificates/ssl-dev.crt',
