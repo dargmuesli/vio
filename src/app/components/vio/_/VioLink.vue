@@ -17,7 +17,7 @@ import type { HtmlHTMLAttributes } from 'vue'
 import type { RouteLocationRaw } from 'vue-router'
 
 import type { NuxtLinkProps } from '#app'
-import { cn } from '@/utils/shadcn'
+import { cn } from '../../../utils/shadcn'
 
 const {
   ariaLabel = undefined,
