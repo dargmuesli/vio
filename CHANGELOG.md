@@ -1,3 +1,9 @@
+## [21.0.0-beta.9](https://github.com/dargmuesli/vio/compare/21.0.0-beta.8...21.0.0-beta.9) (2026-03-02)
+
+### Bug Fixes
+
+* **typescript:** use relative import path for shadcn ([496d617](https://github.com/dargmuesli/vio/commit/496d617427ee6fd7bc3b985aca99ca1b8adc8c6e))
+
 ## [21.0.0-beta.8](https://github.com/dargmuesli/vio/compare/21.0.0-beta.7...21.0.0-beta.8) (2026-03-02)
 
 ### Bug Fixes
