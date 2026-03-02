@@ -1,3 +1,9 @@
+## [21.0.0-beta.8](https://github.com/dargmuesli/vio/compare/21.0.0-beta.7...21.0.0-beta.8) (2026-03-02)
+
+### Bug Fixes
+
+* **nuxt:** correct development server host key placement ([d0b8d98](https://github.com/dargmuesli/vio/commit/d0b8d98b947289a908f83795308188f475097cfc))
+
 ## [21.0.0-beta.7](https://github.com/dargmuesli/vio/compare/21.0.0-beta.6...21.0.0-beta.7) (2026-03-01)
 
 ### Features

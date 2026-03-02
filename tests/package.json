@@ -77,5 +77,5 @@
     "test:e2e:server:static": "cross-env NUXT_PUBLIC_I18N_BASE_URL=https://app.localhost:3002 PORT=3002 VIO_SERVER=static pnpm run test:e2e"
   },
   "type": "module",
-  "version": "21.0.0-beta.7"
+  "version": "21.0.0-beta.8"
 }
