@@ -1,3 +1,13 @@
+## [21.0.0-beta.10](https://github.com/dargmuesli/vio/compare/21.0.0-beta.9...21.0.0-beta.10) (2026-03-04)
+
+### Features
+
+* **seo:** allow to configure open graph image in app configuration ([23329e4](https://github.com/dargmuesli/vio/commit/23329e42eaf3cb07203f65cd0832322819650126))
+
+### Bug Fixes
+
+* **seo:** correct open graph image title ([4e67bbd](https://github.com/dargmuesli/vio/commit/4e67bbd7d73425b07ad547c66cfc5b5cb2a5880f))
+
 ## [21.0.0-beta.9](https://github.com/dargmuesli/vio/compare/21.0.0-beta.8...21.0.0-beta.9) (2026-03-02)
 
 ### Bug Fixes
