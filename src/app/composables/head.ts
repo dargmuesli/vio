@@ -92,7 +92,7 @@ export const useHeadDefault = (input: Parameters<typeof useSeoMeta>[0]) => {
       'Nuxt.satori',
     {
       description,
-      title: toValue(input.title)?.toString() || undefined,
+      title: title.split(' · ')[0],
     },
     {
       alt: t('globalSeoOgImageAlt'),
