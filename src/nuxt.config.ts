@@ -250,9 +250,6 @@ export default defineNuxtConfig(
       linkChecker: {
         failOnError: true,
       },
-      ogImage: {
-        tailwindCss: resolve('./app/assets/css/vio.css'),
-      },
       robots: {
         credits: false,
       },

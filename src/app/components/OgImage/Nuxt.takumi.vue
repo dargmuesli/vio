@@ -81,7 +81,7 @@ const titleComputedLineClamp = lineClampStyle(titleComputed, 2)
       </defs>
     </svg>
 
-    <div class="max-w-175 pl-6 lg:pl-25">
+    <div class="flex max-w-175 flex-col pl-6 lg:pl-25">
       <p
         v-if="headline"
         class="mb-4 text-[24px] font-bold text-[#00DC82] uppercase"

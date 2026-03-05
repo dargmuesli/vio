@@ -539,19 +539,22 @@ export const testMetadata = async ({
   // }
 }
 
-export const testOgImage = (paths: Record<string, string>) =>
+export const testOgImage = (paths: {
+  static?: Record<string, string>
+  dynamic?: Record<string, string>
+}) =>
   vioTest.describe('visual regression', () => {
     vioTest('generates the open graph image', async ({ page }) => {
       await page.goto(
         joinURL(
-          `/_og/${process.env.VIO_SERVER === 'static' ? 's' : 'd'}/${paths.en}`,
+          `/_og/${process.env.VIO_SERVER === 'static' ? `s/${paths.static.en}` : `d/${paths.dynamic.en}`}`,
         ),
       )
       await expect(page).toHaveScreenshot()
 
       await page.goto(
         joinURL(
-          `/_og/${process.env.VIO_SERVER === 'static' ? 's' : 'd'}/${paths.de}`,
+          `/_og/${process.env.VIO_SERVER === 'static' ? `s/${paths.static.de}` : `d/${paths.dynamic.de}`}`,
         ),
       )
       await expect(page).toHaveScreenshot()
