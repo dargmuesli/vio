@@ -117,8 +117,8 @@ importers:
         specifier: 10.1.8
         version: 10.1.8(eslint@10.0.2(jiti@2.6.1))
       eslint-plugin-compat:
-        specifier: 7.0.0
-        version: 7.0.0(eslint@10.0.2(jiti@2.6.1))
+        specifier: 7.0.1
+        version: 7.0.1(eslint@10.0.2(jiti@2.6.1))
       eslint-plugin-prettier:
         specifier: 5.5.5
         version: 5.5.5(@types/eslint@9.6.1)(eslint-config-prettier@10.1.8(eslint@10.0.2(jiti@2.6.1)))(eslint@10.0.2(jiti@2.6.1))(prettier@3.8.1)
@@ -4385,8 +4385,8 @@ packages:
     peerDependencies:
       eslint: '*'
 
-  eslint-plugin-compat@7.0.0:
-    resolution: {integrity: sha512-P5AKzirW/Z6T5XzN+4N7O2HKVyFwfDD9NaUdBNrG9c4652Ef2W77whXDtzJXxPuRXppljJavzBvTLcYpcY0UXw==}
+  eslint-plugin-compat@7.0.1:
+    resolution: {integrity: sha512-wDID2fVIAfxV9R1uSkCn5HscnNu8yMxDF1IaQGyD1C6XuWwJbuaDgMOSkVgOom0LzY8z0fXXXCy7AQQTERQUvQ==}
     engines: {node: '>=18.x'}
     peerDependencies:
       eslint: ^9.0.0 || ^10.0.0
@@ -11460,7 +11460,7 @@ snapshots:
     dependencies:
       eslint: 10.0.2(jiti@2.6.1)
 
-  eslint-plugin-compat@7.0.0(eslint@10.0.2(jiti@2.6.1)):
+  eslint-plugin-compat@7.0.1(eslint@10.0.2(jiti@2.6.1)):
     dependencies:
       '@mdn/browser-compat-data': 6.1.5
       ast-metadata-inferer: 0.8.1
