@@ -72,16 +72,16 @@ ENV NODE_ENV=production
 RUN pnpm run --dir src build:node
 
 
-########################
-# Build for static deployment.
+# ########################
+# # Build for static deployment.
 
-FROM prepare AS build-static
+# FROM prepare AS build-static
 
-ARG NUXT_PUBLIC_I18N_BASE_URL=https://app.localhost:3002
-ENV NUXT_PUBLIC_I18N_BASE_URL=${NUXT_PUBLIC_I18N_BASE_URL}
+# ARG NUXT_PUBLIC_I18N_BASE_URL=https://app.localhost:3002
+# ENV NUXT_PUBLIC_I18N_BASE_URL=${NUXT_PUBLIC_I18N_BASE_URL}
 
-ENV NODE_ENV=production
-RUN pnpm run --dir src build:static
+# ENV NODE_ENV=production
+# RUN pnpm run --dir src build:static
 
 
 ########################
@@ -215,7 +215,7 @@ FROM base-image AS collect
 # COPY --from=build-node --chown=node /srv/app/src/node/server/node.mjs ./node/server/node.mjs
 COPY --from=build-node --chown=node /srv/app/src/package.json ./package.json
 # COPY --from=build-static /srv/app/src/.output/public ./.output/public
-COPY --from=build-static /srv/app/package.json /dev/null
+# COPY --from=build-static /srv/app/package.json /dev/null
 COPY --from=build-test /srv/app/package.json /dev/null
 COPY --from=lint /srv/app/package.json /dev/null
 # COPY --from=test-unit /srv/app/package.json /dev/null
