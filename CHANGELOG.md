@@ -1,3 +1,13 @@
+## [21.0.0-beta.11](https://github.com/dargmuesli/vio/compare/21.0.0-beta.10...21.0.0-beta.11) (2026-03-05)
+
+### ⚠ BREAKING CHANGES
+
+* **seo:** switch from satori to takumi
+
+### Features
+
+* **seo:** switch from satori to takumi ([1aa80ef](https://github.com/dargmuesli/vio/commit/1aa80ef30718eb990ab9b9f23ac62bfb041cb846))
+
 ## [21.0.0-beta.10](https://github.com/dargmuesli/vio/compare/21.0.0-beta.9...21.0.0-beta.10) (2026-03-04)
 
 ### Features
