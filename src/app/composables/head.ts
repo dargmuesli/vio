@@ -89,7 +89,7 @@ export const useHeadDefault = (input: Parameters<typeof useSeoMeta>[0]) => {
   })
   defineOgImage(
     (appConfig.vio.seo?.ogImage?.defaultComponent as keyof OgImageComponents) ||
-      'Nuxt.satori',
+      'Nuxt.takumi',
     {
       description,
       title: title.split(' · ')[0],
