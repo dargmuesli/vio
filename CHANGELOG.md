@@ -1,3 +1,9 @@
+## [20.7.6](https://github.com/dargmuesli/vio/compare/20.7.5...20.7.6) (2026-03-12)
+
+### Bug Fixes
+
+* **head:** unblock manifest link ([374a427](https://github.com/dargmuesli/vio/commit/374a427277c235f04712f2abf6be662e9ab90505))
+
 ## [20.7.5](https://github.com/dargmuesli/vio/compare/20.7.4...20.7.5) (2026-02-22)
 
 ### Bug Fixes
