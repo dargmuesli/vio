@@ -13,8 +13,8 @@ testOgImage({
     en: `a_Social+Preview+Image+for+a+Vio+webpage.,c_Nuxt.satori,description_Vio+is+@dargmuesli's+Nuxt+layer.,title_Legal+notice,p_Ii9sZWdhbC1ub3RpY2Ui.png`,
   },
   static: {
-    de: 'o_7tgx9a.png',
-    en: `o_qa1zy1.png`,
+    de: 'a_~U29jaWFsIFByZXZpZXcgSW1hZ2UgZsO8ciBlaW5lIFZpbyBXZWJzZWl0ZS4,c_Nuxt.takumi,description_~VmlvIGlzdCBAZGFyZ211ZXNsaXMgTnV4dCBsYXllci4,title_Impressum,p_Ii9kZS9sZWdhbC1ub3RpY2Ui.png',
+    en: `a_Social+Preview+Image+for+a+Vio+webpage.,c_Nuxt.takumi,description_~VmlvIGlzIEBkYXJnbXVlc2xpJ3MgTnV4dCBsYXllci4,title_Legal+notice,p_Ii9sZWdhbC1ub3RpY2Ui.png`,
   },
 })
 testVisualRegression(PAGE_PATH)
