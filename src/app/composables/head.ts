@@ -6,21 +6,14 @@ export const useAppLayout = () => {
   const siteConfig = useSiteConfig()
 
   if (import.meta.server) {
-    // style
     useHeadSafe({
+      // style
       bodyAttrs: {
         class:
           'bg-background-bright dark:bg-background-dark text-text-dark dark:text-text-bright',
       },
-    })
-
-    // favicon (https://vite-pwa-org.netlify.app/assets-generator/)
-    useHeadSafe({
+      // favicon (https://vite-pwa-org.netlify.app/assets-generator/)
       link: [
-        {
-          href: `/site.webmanifest?v=${CACHE_VERSION}`,
-          rel: 'manifest',
-        },
         {
           href: `/favicon.ico?v=${CACHE_VERSION}`,
           rel: 'icon',
@@ -41,6 +34,16 @@ export const useAppLayout = () => {
 
     // i18n
     useHeadSafe(useLocaleHead().value)
+
+    // pwa
+    useHead({
+      link: [
+        {
+          href: `/site.webmanifest?v=${CACHE_VERSION}`,
+          rel: 'manifest',
+        },
+      ],
+    })
   }
 
   if (import.meta.client) {

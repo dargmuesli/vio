@@ -1,14 +1,11 @@
 {
   "compilerOptions": {
-    "module": "ESNext",
     "moduleResolution": "Bundler",
     "paths": {
       "#tests/*": ["./*"]
     },
-    "target": "ESNext"
+    "target": "ESNext",
+    "types": ["node"]
   },
-  "exclude": [
-    "dist",
-    "tsdown.config.ts"
-  ]
+  "exclude": ["dist", "tsdown.config.ts"]
 }

@@ -140,6 +140,24 @@
 * **composables:** allow for reactive time ([8e9cf57](https://github.com/dargmuesli/vio/commit/8e9cf579c685df573f2801302e8da65d0fa16522))
 * **util:** drop `copyText` ([da0e36f](https://github.com/dargmuesli/vio/commit/da0e36fccca59cec94e4cb19f7ce6b2a1fa92f5d))
 
+## [20.7.8](https://github.com/dargmuesli/vio/compare/20.7.7...20.7.8) (2026-03-30)
+
+### Bug Fixes
+
+* schedule release ([ff71dab](https://github.com/dargmuesli/vio/commit/ff71dab40d5fb126f1bb3c6c19abfc0ba0de38f9))
+
+## [20.7.7](https://github.com/dargmuesli/vio/compare/20.7.6...20.7.7) (2026-03-21)
+
+### Bug Fixes
+
+* schedule release ([9a88e85](https://github.com/dargmuesli/vio/commit/9a88e855b58a345d54b414577383d231fa5d1109))
+
+## [20.7.6](https://github.com/dargmuesli/vio/compare/20.7.5...20.7.6) (2026-03-12)
+
+### Bug Fixes
+
+* **head:** unblock manifest link ([374a427](https://github.com/dargmuesli/vio/commit/374a427277c235f04712f2abf6be662e9ab90505))
+
 ## [20.7.5](https://github.com/dargmuesli/vio/compare/20.7.4...20.7.5) (2026-02-22)
 
 ### Bug Fixes
