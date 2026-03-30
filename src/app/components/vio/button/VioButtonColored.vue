@@ -1,6 +1,5 @@
 <template>
   <VioButton
-    :is-to-relative="isToRelative"
     :aria-label="ariaLabel"
     class="justify-center rounded-md border px-4 py-2 font-medium"
     :class="
@@ -34,14 +33,12 @@ const {
   ariaLabel,
   disabled = false,
   isPrimary = true,
-  isToRelative = false,
   to = undefined,
   type = 'button',
 } = defineProps<{
   ariaLabel: string
   disabled?: boolean
   isPrimary?: boolean
-  isToRelative?: boolean
   to?: string
   type?: 'button' | 'reset' | 'submit'
 }>()

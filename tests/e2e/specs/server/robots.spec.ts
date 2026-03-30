@@ -1,5 +1,4 @@
 import { expect } from '@playwright/test'
-import { escapeRegExp } from 'lodash-es'
 
 import { vioTest } from '#tests/e2e/fixtures/vioTest'
 import { SITE_URL } from '#tests/e2e/utils/constants'
@@ -17,13 +16,10 @@ vioTest.describe('robots.txt', () => {
   vioTest('content', async ({ request }) => {
     const resp = await request.get(path)
     expect(
-      (await resp.text()).replace(
-        new RegExp(escapeRegExp(SITE_URL), 'g'),
-        'https://example.com',
-      ),
+      (await resp.text()).replaceAll(SITE_URL, 'https://example.com'),
     ).toMatchSnapshot(
       `robots-txt-content-${
-        process.env.NODE_ENV === 'production' ? 'production' : 'development'
+        process.env.VIO_SERVER === 'dev' ? 'development' : 'production'
       }.txt`,
     )
   })

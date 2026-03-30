@@ -1,3 +1,159 @@
+## [21.0.0-beta.12](https://github.com/dargmuesli/vio/compare/21.0.0-beta.11...21.0.0-beta.12) (2026-03-30)
+
+### Bug Fixes
+
+* **head:** unblock manifest link ([374a427](https://github.com/dargmuesli/vio/commit/374a427277c235f04712f2abf6be662e9ab90505))
+* schedule release ([ff71dab](https://github.com/dargmuesli/vio/commit/ff71dab40d5fb126f1bb3c6c19abfc0ba0de38f9))
+* schedule release ([9a88e85](https://github.com/dargmuesli/vio/commit/9a88e855b58a345d54b414577383d231fa5d1109))
+
+## [21.0.0-beta.11](https://github.com/dargmuesli/vio/compare/21.0.0-beta.10...21.0.0-beta.11) (2026-03-05)
+
+### ⚠ BREAKING CHANGES
+
+* **seo:** switch from satori to takumi
+
+### Features
+
+* **seo:** switch from satori to takumi ([1aa80ef](https://github.com/dargmuesli/vio/commit/1aa80ef30718eb990ab9b9f23ac62bfb041cb846))
+
+## [21.0.0-beta.10](https://github.com/dargmuesli/vio/compare/21.0.0-beta.9...21.0.0-beta.10) (2026-03-04)
+
+### Features
+
+* **seo:** allow to configure open graph image in app configuration ([23329e4](https://github.com/dargmuesli/vio/commit/23329e42eaf3cb07203f65cd0832322819650126))
+
+### Bug Fixes
+
+* **seo:** correct open graph image title ([4e67bbd](https://github.com/dargmuesli/vio/commit/4e67bbd7d73425b07ad547c66cfc5b5cb2a5880f))
+
+## [21.0.0-beta.9](https://github.com/dargmuesli/vio/compare/21.0.0-beta.8...21.0.0-beta.9) (2026-03-02)
+
+### Bug Fixes
+
+* **typescript:** use relative import path for shadcn ([496d617](https://github.com/dargmuesli/vio/commit/496d617427ee6fd7bc3b985aca99ca1b8adc8c6e))
+
+## [21.0.0-beta.8](https://github.com/dargmuesli/vio/compare/21.0.0-beta.7...21.0.0-beta.8) (2026-03-02)
+
+### Bug Fixes
+
+* **nuxt:** correct development server host key placement ([d0b8d98](https://github.com/dargmuesli/vio/commit/d0b8d98b947289a908f83795308188f475097cfc))
+
+## [21.0.0-beta.7](https://github.com/dargmuesli/vio/compare/21.0.0-beta.6...21.0.0-beta.7) (2026-03-01)
+
+### Features
+
+* **nuxt:** use `app.localhost` as development server host ([52e5ebb](https://github.com/dargmuesli/vio/commit/52e5ebb94b3ff5d311895f2af2223f3ce4fce19c))
+
+## [21.0.0-beta.6](https://github.com/dargmuesli/vio/compare/21.0.0-beta.5...21.0.0-beta.6) (2026-03-01)
+
+### ⚠ BREAKING CHANGES
+
+* **router:** remove `append` utility
+
+### Features
+
+* **nuxt:** enable experimental typed pages ([f350de7](https://github.com/dargmuesli/vio/commit/f350de7c852764a39e550aee38f847c2f53f0f96))
+* **router:** remove `append` utility ([3008746](https://github.com/dargmuesli/vio/commit/3008746b4e58ddeedaac1d6b6caea365d5a1dfda))
+* **tests:** compile ([2440d4c](https://github.com/dargmuesli/vio/commit/2440d4c36bdfcc38e836013c75fe447c9b8b7edd))
+
+### Bug Fixes
+
+* **ci:** upgrade to dargmuesli/github-actions v5.0.0-beta.1 ([9a209a6](https://github.com/dargmuesli/vio/commit/9a209a65f20bcb1a42903ecc578789c8d0f40278))
+* **deps:** lockfile maintenance ([b023895](https://github.com/dargmuesli/vio/commit/b0238951de4616e958c099d343daccadb9a41883))
+* **deps:** update all non-major dependencies ([2dcb195](https://github.com/dargmuesli/vio/commit/2dcb195831f4ec9bdb33174504cbbf9588b8c472))
+* **docker:** correct user and ground id passing ([54545c0](https://github.com/dargmuesli/vio/commit/54545c0def3cc8dc3ec84cec07fa073a9fbed541))
+* **node:** improve scripts export ([78678b4](https://github.com/dargmuesli/vio/commit/78678b442fd171caedb834971ad845de2e019a94))
+* **package:** release scripts ([e1fbeb5](https://github.com/dargmuesli/vio/commit/e1fbeb5ff1a1ddd3610e2c3d2e492b6888eba1bc))
+* schedule release ([9a95fa0](https://github.com/dargmuesli/vio/commit/9a95fa0e13e88e8697027a868b0c6f24ff4f6a13))
+* **test:** correct import path ([6eab10b](https://github.com/dargmuesli/vio/commit/6eab10b425180c71113c1631d91abb45e6cd0e7f))
+* **typescript:** correct import paths ([6604172](https://github.com/dargmuesli/vio/commit/66041726ddd1e5873a6b0c228fd4259a980cf49d))
+* **typescript:** use path aliases ([c43f6ae](https://github.com/dargmuesli/vio/commit/c43f6aeafe07d78729bbf4d6f4a609e83eb228ea))
+
+## [21.0.0-beta.5](https://github.com/dargmuesli/vio/compare/21.0.0-beta.4...21.0.0-beta.5) (2026-02-09)
+
+### Features
+
+* **csp:** upgrade insecure requests ([b9609aa](https://github.com/dargmuesli/vio/commit/b9609aab3c3e1d8ae61806abd1868a37ea355fc3))
+
+## [21.0.0-beta.4](https://github.com/dargmuesli/vio/compare/21.0.0-beta.3...21.0.0-beta.4) (2026-02-08)
+
+### Features
+
+* **date-time:** index to 0 for testing ([9bb674f](https://github.com/dargmuesli/vio/commit/9bb674fc6d6f36388ce0d2872ee2d29c8d446c86))
+
+### Bug Fixes
+
+* **package:** correct node export ([4c84ad2](https://github.com/dargmuesli/vio/commit/4c84ad2859711ed2a2fb5ded69e68d3be4055203))
+* schedule release ([3e7a7a5](https://github.com/dargmuesli/vio/commit/3e7a7a584809e0e19c0afa4d23014e84928e173b))
+* **test:** correct import path ([119c4a9](https://github.com/dargmuesli/vio/commit/119c4a9487a94d02818ff75fcc2aaefe0feb8781))
+
+### Performance Improvements
+
+* **sitemap:** enable zero runtime mode ([90dbcb6](https://github.com/dargmuesli/vio/commit/90dbcb6eb30ea493ff47fd6af94a19e43dea98dd))
+
+## [21.0.0-beta.3](https://github.com/dargmuesli/vio/compare/21.0.0-beta.2...21.0.0-beta.3) (2026-02-03)
+
+### ⚠ BREAKING CHANGES
+
+* **components:** rework link
+* **i18n:** simplify configuration
+* **components:** remove outdated status properties
+
+### Features
+
+* **components:** add loading indicator to form button ([b179dbe](https://github.com/dargmuesli/vio/commit/b179dbe277c4cb8c2a5676bc630ecec33b78eb4a))
+* **components:** add shared form input captcha component ([dbb483f](https://github.com/dargmuesli/vio/commit/dbb483f17e5786e51ce89490f6272cab739fb66f))
+* **components:** migrate turnstile and contact form to vio ([b0fd70d](https://github.com/dargmuesli/vio/commit/b0fd70d6a850c4a7132e588eb7ad7e5970440a41))
+* **components:** remove outdated status properties ([a4f7349](https://github.com/dargmuesli/vio/commit/a4f734985bf718a3b5445b76de10c3103d3ed648))
+* **components:** rework link ([5afa7e7](https://github.com/dargmuesli/vio/commit/5afa7e7b956601930336af7c1055fbe2da8e184c))
+* **email:** add nodemailer ([f03d8c7](https://github.com/dargmuesli/vio/commit/f03d8c76ae33e21337a8dee76cc3da6047a8aae2))
+* **i18n:** simplify configuration ([c191aff](https://github.com/dargmuesli/vio/commit/c191affd13ad91a6b1e2dbb202ca83dc1677b22f))
+* **turnstile:** add ([d39af2b](https://github.com/dargmuesli/vio/commit/d39af2b6d5830ae925fa9fc8e79d21b7681d05c3))
+
+### Bug Fixes
+
+* **deps:** include nodemailer types in release ([fcf8dce](https://github.com/dargmuesli/vio/commit/fcf8dceac386173b5e5bbfa3bec09d348eab495b))
+* schedule release ([7dedd9e](https://github.com/dargmuesli/vio/commit/7dedd9eff9bb04ff067fe52c762eec7644a978ea))
+
+## [21.0.0-beta.2](https://github.com/dargmuesli/vio/compare/21.0.0-beta.1...21.0.0-beta.2) (2026-01-07)
+
+### ⚠ BREAKING CHANGES
+
+* **site:** use i18n base url
+* **site:** unify url
+
+### Bug Fixes
+
+* **deps:** pin nuxt-og-image to v5.1.12 ([cb34c21](https://github.com/dargmuesli/vio/commit/cb34c21ad6edf78120bd65259c71557bb0479343))
+* **deps:** unpin @nuxtjs/sitemap ([0fa0900](https://github.com/dargmuesli/vio/commit/0fa0900ef274e93a2c9e9cfd3ec2a2798fa4b955))
+* **nitro:** correct experimental async context availability ([66c81aa](https://github.com/dargmuesli/vio/commit/66c81aa76315a71380ede9f4b4e5efdc3007b659))
+* schedule release ([b8b730e](https://github.com/dargmuesli/vio/commit/b8b730e83100b597462486e978f65fe120e419a3))
+* schedule release ([503f8c6](https://github.com/dargmuesli/vio/commit/503f8c61cb2b93f216d0bcaee68a3df4a3aa5ec9))
+
+### Code Refactoring
+
+* **site:** unify url ([0b792d9](https://github.com/dargmuesli/vio/commit/0b792d96f8a75e05693f45c2f086479344a6a113))
+* **site:** use i18n base url ([88f9246](https://github.com/dargmuesli/vio/commit/88f92461ed857769323a5a47c770b79cb56ff086))
+
+## [21.0.0-beta.1](https://github.com/dargmuesli/vio/compare/20.0.0...21.0.0-beta.1) (2025-11-28)
+
+### ⚠ BREAKING CHANGES
+
+* **composables:** allow for reactive time
+* **util:** drop `copyText`
+
+### Features
+
+* **composables:** add `useCopy` ([1d916ff](https://github.com/dargmuesli/vio/commit/1d916ffc6cb0494af22a27998aab1f4679673f1d))
+* **composables:** allow for reactive time ([8e9cf57](https://github.com/dargmuesli/vio/commit/8e9cf579c685df573f2801302e8da65d0fa16522))
+* **util:** drop `copyText` ([da0e36f](https://github.com/dargmuesli/vio/commit/da0e36fccca59cec94e4cb19f7ce6b2a1fa92f5d))
+
+## [20.7.8](https://github.com/dargmuesli/vio/compare/20.7.7...20.7.8) (2026-03-30)
+
+### Bug Fixes
+
+* schedule release ([ff71dab](https://github.com/dargmuesli/vio/commit/ff71dab40d5fb126f1bb3c6c19abfc0ba0de38f9))
+
 ## [20.7.7](https://github.com/dargmuesli/vio/compare/20.7.6...20.7.7) (2026-03-21)
 
 ### Bug Fixes

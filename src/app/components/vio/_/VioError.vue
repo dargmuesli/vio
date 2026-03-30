@@ -14,15 +14,11 @@
 <script setup lang="ts">
 const {
   status = undefined,
-  statusCode = undefined,
-  statusMessage: _statusMessage = undefined,
   statusText: _statusText = undefined,
   description,
   stack = undefined,
 } = defineProps<{
   status?: number
-  statusCode?: number
-  statusMessage?: string
   statusText?: string
   description: string
   stack?: string
@@ -32,11 +28,9 @@ const runtimeConfig = useRuntimeConfig()
 const { locale, t } = useI18n()
 
 // data
-const title = `${status || statusCode ? `${status || statusCode} - ` : ''}${
-  (await import('@http-util/status-i18n')).status(
-    status || statusCode,
-    locale.value,
-  ) || t('error')
+const title = `${status ? `${status} - ` : ''}${
+  (await import('@http-util/status-i18n')).status(status, locale.value) ||
+  t('error')
 }`
 
 // initialization

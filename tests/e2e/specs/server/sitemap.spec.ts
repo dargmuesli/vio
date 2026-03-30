@@ -1,5 +1,4 @@
 import { expect } from '@playwright/test'
-import { escapeRegExp } from 'lodash-es'
 
 import { vioTest } from '#tests/e2e/fixtures/vioTest'
 import { SITE_URL } from '#tests/e2e/utils/constants'
@@ -29,8 +28,8 @@ vioTest.describe('sitemap', () => {
     for (const language of languages) {
       const resp = await request.get(`/__sitemap__/${language}.xml`)
       const text = (await resp.text())
-        .replace(/\n.+<\/lastmod>/g, '')
-        .replace(new RegExp(escapeRegExp(SITE_URL), 'g'), 'https://example.com')
+        .replaceAll(/\n.+<\/lastmod>/g, '')
+        .replaceAll(SITE_URL, 'https://example.com')
 
       if (process.env.VIO_SERVER === 'static') {
         expect(text)

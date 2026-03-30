@@ -1,3 +1,5 @@
+import type { OgImageComponents } from '#og-image/components'
+
 export const useAppLayout = () => {
   const appConfig = useAppConfig()
   const colorMode = useColorMode()
@@ -66,7 +68,9 @@ export const useAppLayout = () => {
 }
 
 export const useHeadDefault = (input: Parameters<typeof useSeoMeta>[0]) => {
+  const { t } = useI18n({ useScope: 'global' })
   const siteConfig = useSiteConfig()
+  const appConfig = useAppConfig()
 
   const description =
     toValue(input.description) || (siteConfig.description as string)
@@ -86,6 +90,17 @@ export const useHeadDefault = (input: Parameters<typeof useSeoMeta>[0]) => {
     ...(title ? { title, ogTitle: title, twitterTitle: title } : {}),
     ...input,
   })
+  defineOgImage(
+    (appConfig.vio.seo?.ogImage?.defaultComponent as keyof OgImageComponents) ||
+      'Nuxt.takumi',
+    {
+      description,
+      title: title.split(' · ')[0],
+    },
+    {
+      alt: t('globalSeoOgImageAlt'),
+    },
+  )
 }
 
 const POLYFILLS_URL = `https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=${POLYFILLS.join(

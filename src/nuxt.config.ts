@@ -2,14 +2,13 @@ import tailwindcss from '@tailwindcss/vite'
 import { defu } from 'defu'
 import { createResolver } from 'nuxt/kit'
 
-import { IS_IN_STACK, SITE_URL } from './node/static'
+import { IS_IN_STACK, SITE_URL, VIO_NUXT_BASE_CONFIG } from './node/static'
 import {
-  VIO_SITE_NAME,
-  TIMEZONE_COOKIE_NAME,
   GTAG_COOKIE_ID,
+  TIMEZONE_COOKIE_NAME,
   VIO_GET_CSP,
+  VIO_SITE_NAME,
 } from './shared/utils/constants'
-import { VIO_NUXT_BASE_CONFIG } from './shared/utils/nuxt'
 
 const { resolve } = createResolver(import.meta.url)
 
@@ -31,6 +30,7 @@ export default defineNuxtConfig(
         ? {}
         : {
             devServer: {
+              host: 'app.localhost',
               https: {
                 key: './.config/certificates/ssl-dev.key',
                 cert: './.config/certificates/ssl-dev.crt',
@@ -96,6 +96,7 @@ export default defineNuxtConfig(
         compressPublicAssets: true,
         experimental: {
           asyncContext: true,
+          typedPages: true,
         },
       },
       runtimeConfig: {
@@ -104,7 +105,7 @@ export default defineNuxtConfig(
             baseUrl: SITE_URL,
           },
           site: {
-            url: SITE_URL,
+            url: SITE_URL, // TODO: evaluate removal for static builds in favor of i18n.baseUrl
           },
           vio: {
             isTesting: false,
@@ -123,6 +124,13 @@ export default defineNuxtConfig(
           include: [resolve('./node')],
         },
         tsConfig: {
+          nodeTsConfig: {
+            include: [
+              resolve('../.config'),
+              resolve('../node'),
+              // resolve('../sentry.server.config.ts'),
+            ],
+          },
           vueCompilerOptions: {
             htmlAttributes: [], // https://github.com/johnsoncodehk/volar/issues/1970#issuecomment-1276994634
           },
@@ -270,7 +278,7 @@ export default defineNuxtConfig(
             'style-src': false as const,
             'style-src-attr': false as const,
             'style-src-elem': false as const,
-            'upgrade-insecure-requests': false, // TODO: set to `process.env.NODE_ENV === 'production'` or `true` when tests run on https
+            'upgrade-insecure-requests': false,
             'worker-src': false as const,
           },
           xXSSProtection: '1; mode=block', // TODO: set back to `0` once CSP does not use `unsafe-*` anymore (https://github.com/maevsi/maevsi/issues/1047)
@@ -284,11 +292,9 @@ export default defineNuxtConfig(
         prefix: '',
         componentDir: resolve('./app/components/scn'),
       },
-      site: {
-        url: SITE_URL,
-      },
       sitemap: {
         credits: false,
+        zeroRuntime: true,
       },
 
       // environments

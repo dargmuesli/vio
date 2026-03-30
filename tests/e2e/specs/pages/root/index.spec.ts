@@ -13,7 +13,16 @@ import {
 const PAGE_PATH = '/'
 
 testA11y(PAGE_PATH)
-testOgImage(PAGE_PATH)
+testOgImage({
+  dynamic: {
+    de: 'a_Social+Preview+Image+für+eine+Vio+Webseite.,c_Nuxt.satori,description_Vio+ist+@dargmueslis+Nuxt+layer.,title_Vio+Playground,p_Ii9kZSI.png',
+    en: `a_Social+Preview+Image+for+a+Vio+webpage.,c_Nuxt.satori,description_Vio+is+@dargmuesli's+Nuxt+layer.,title_Vio+Playground.png`,
+  },
+  static: {
+    de: 'o_r6r7r4.png',
+    en: `o_a99a87.png`,
+  },
+})
 testPageLoad(PAGE_PATH)
 testVisualRegression(PAGE_PATH)
 

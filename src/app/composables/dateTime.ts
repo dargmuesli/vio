@@ -1,3 +1,5 @@
+import { useNow as useNowVueUse, syncRef } from '@vueuse/core'
+
 export const useTimeZone = () =>
   useNuxtApp().ssrContext?.event.context.$timeZone ||
   useCookie(TIMEZONE_COOKIE_NAME, {
@@ -9,19 +11,51 @@ export const useTimeZone = () =>
     ? Intl.DateTimeFormat().resolvedOptions().timeZone
     : undefined)
 
-export const useNow = () => {
+// TODO: evaluate custom scheduler (https://github.com/vueuse/vueuse/pull/5129)
+export const useNow = (options?: { live?: boolean }) => {
   const isTesting = useIsTesting()
 
-  return useState(STATE_KEY_NOW, () => (isTesting ? new Date(0) : new Date()))
+  const { live = true } = isTesting ? { live: false } : options || {}
+
+  const nowState = useState(STATE_KEY_NOW, () =>
+    isTesting ? new Date(0) : new Date(),
+  )
+
+  if (live) {
+    const now = useNowVueUse()
+    syncRef(now, nowState, { direction: 'ltr', immediate: false })
+  }
+
+  return nowState
 }
 
-export const useFromNow = () => {
-  const { locale } = useI18n()
-  const now = useNow()
+// TODO: import from vueuse once reactive locale can be passed in (no issue or PR created yet)
+export const useTimeAgoIntl = (options: {
+  live?: boolean
+  to: MaybeRef<Date>
+}) => {
+  const { live = true, to } = options
 
-  const formatter = new Intl.RelativeTimeFormat(locale.value, {
-    numeric: 'auto',
-  })
+  const { locale } = useI18n({ useScope: 'global' })
+  const now = useNow({ live })
 
-  return (to: Date) => getFromTo(now.value, to, formatter)
+  const formatter = computed(
+    () =>
+      new Intl.RelativeTimeFormat(locale.value, {
+        numeric: 'auto',
+      }),
+  )
+
+  const toAsRef = toRef(to)
+  const fromTo = computed(() =>
+    getFromTo(now.value, toAsRef.value, formatter.value),
+  )
+
+  const fromToState = useState(STATE_KEY_FROM_TO, () => fromTo)
+
+  if (live) {
+    syncRef(fromTo, fromToState, { direction: 'ltr', immediate: false })
+  }
+
+  return fromToState
 }
