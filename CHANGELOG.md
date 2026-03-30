@@ -1,3 +1,11 @@
+## [21.0.0-beta.12](https://github.com/dargmuesli/vio/compare/21.0.0-beta.11...21.0.0-beta.12) (2026-03-30)
+
+### Bug Fixes
+
+* **head:** unblock manifest link ([374a427](https://github.com/dargmuesli/vio/commit/374a427277c235f04712f2abf6be662e9ab90505))
+* schedule release ([ff71dab](https://github.com/dargmuesli/vio/commit/ff71dab40d5fb126f1bb3c6c19abfc0ba0de38f9))
+* schedule release ([9a88e85](https://github.com/dargmuesli/vio/commit/9a88e855b58a345d54b414577383d231fa5d1109))
+
 ## [21.0.0-beta.11](https://github.com/dargmuesli/vio/compare/21.0.0-beta.10...21.0.0-beta.11) (2026-03-05)
 
 ### ⚠ BREAKING CHANGES
