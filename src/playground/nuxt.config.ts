@@ -13,10 +13,10 @@ export default defineNuxtConfig(
           include: [
             '@dargmuesli/nuxt-cookie-control/runtime/types.js',
             '@http-util/status-i18n',
+            '@lucide/vue',
             '@vuelidate/validators',
             '@vueuse/core',
             'clsx',
-            'lucide-vue-next',
             'reka-ui',
             'tailwind-merge',
             'vue-sonner',
