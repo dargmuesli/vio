@@ -19,8 +19,8 @@ testOgImage({
     en: `a_Social+Preview+Image+for+a+Vio+webpage.,c_Nuxt.satori,description_Vio+is+@dargmuesli's+Nuxt+layer.,title_Vio+Playground.png`,
   },
   static: {
-    de: 'o_r6r7r4.png',
-    en: `o_a99a87.png`,
+    de: 'a_~U29jaWFsIFByZXZpZXcgSW1hZ2UgZsO8ciBlaW5lIFZpbyBXZWJzZWl0ZS4,c_Nuxt.takumi,description_~VmlvIGlzdCBAZGFyZ211ZXNsaXMgTnV4dCBsYXllci4,title_Vio+Playground,p_Ii9kZSI.png',
+    en: `a_Social+Preview+Image+for+a+Vio+webpage.,c_Nuxt.takumi,description_~VmlvIGlzIEBkYXJnbXVlc2xpJ3MgTnV4dCBsYXllci4,title_Vio+Playground.png`,
   },
 })
 testPageLoad(PAGE_PATH)
