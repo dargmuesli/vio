@@ -545,18 +545,23 @@ export const testOgImage = (paths: {
 }) =>
   vioTest.describe('visual regression', () => {
     vioTest('generates the open graph image', async ({ page }) => {
-      await page.goto(
-        joinURL(
-          `/_og/${process.env.VIO_SERVER === 'static' ? `s/${paths.static.en}` : `d/${paths.dynamic.en}`}`,
-        ),
-      )
+      const isStaticServer = process.env.VIO_SERVER === 'static'
+      const serverPaths = isStaticServer ? paths.static : paths.dynamic
+
+      if (!serverPaths) {
+        throw new Error(
+          isStaticServer
+            ? 'Static paths must be provided for static server tests'
+            : 'Dynamic paths must be provided for dynamic server tests',
+        )
+      }
+
+      const serverPrefix = isStaticServer ? 's' : 'd'
+
+      await page.goto(joinURL(`/_og/${serverPrefix}/${serverPaths.en}`))
       await expect(page).toHaveScreenshot()
 
-      await page.goto(
-        joinURL(
-          `/_og/${process.env.VIO_SERVER === 'static' ? `s/${paths.static.de}` : `d/${paths.dynamic.de}`}`,
-        ),
-      )
+      await page.goto(joinURL(`/_og/${serverPrefix}/${serverPaths.de}`))
       await expect(page).toHaveScreenshot()
     })
   })
