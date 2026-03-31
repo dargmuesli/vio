@@ -288,6 +288,9 @@ export default defineNuxtConfig(
         },
         strict: true,
       },
+      seo: {
+        minify: false, // TODO: enable (https://github.com/harlan-zw/nuxt-seo-utils/issues/103)
+      },
       shadcn: {
         prefix: '',
         componentDir: resolve('./app/components/scn'),
