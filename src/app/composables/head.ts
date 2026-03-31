@@ -67,7 +67,10 @@ export const useAppLayout = () => {
   })
 }
 
-export const useHeadDefault = (input: Parameters<typeof useSeoMeta>[0]) => {
+export const useHeadDefault = (
+  input: Parameters<typeof useSeoMeta>[0],
+  ogImageProps?: Parameters<typeof defineOgImage>[1],
+) => {
   const { t } = useI18n({ useScope: 'global' })
   const siteConfig = useSiteConfig()
   const appConfig = useAppConfig()
@@ -96,6 +99,7 @@ export const useHeadDefault = (input: Parameters<typeof useSeoMeta>[0]) => {
     {
       description,
       title: title.split(' · ')[0],
+      ...ogImageProps,
     },
     {
       alt: t('globalSeoOgImageAlt'),
