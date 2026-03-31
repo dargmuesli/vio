@@ -2,11 +2,10 @@ import { DEFAULTS } from '@dargmuesli/nuxt-cookie-control/runtime/types.js'
 import { helpers } from '@vuelidate/validators'
 import { defu } from 'defu'
 
-import { IS_IN_PRODUCTION, IS_IN_STACK } from '../../node/static'
+export { IS_IN_FRONTEND_DEVELOPMENT } from '../../node/static'
 
 export const VIO_SITE_NAME = 'Vio'
 
-export const IS_IN_FRONTEND_DEVELOPMENT = !IS_IN_PRODUCTION && !IS_IN_STACK
 export const CACHE_VERSION = 'zeMtipb6C9'
 export const COOKIE_CONTROL_CONSENT_COOKIE_NAME =
   DEFAULTS.cookieNameIsConsentGiven
@@ -68,7 +67,7 @@ export const VIO_GET_CSP = ({ siteUrl }: { siteUrl: URL }) =>
       // nuxt-og-image
       ...(process.env.NODE_ENV === 'development'
         ? {
-            // 'connect-src': [`${siteUrl}__og-image__/`],
+            // 'connect-src': [`${siteUrl}_og/`],
             'frame-ancestors': ["'self'"],
           }
         : {}),
@@ -130,25 +129,10 @@ export const VIO_GET_CSP = ({ siteUrl }: { siteUrl: URL }) =>
         "'unsafe-inline'", // TODO: replace with "'nonce-{{nonce}}'" once vue-sonner supports it
         "'self'", // TODO: `${siteUrl}_nuxt/`, // bundle
       ], // TODO: use `style-src-elem` once Playwright WebKit supports it
+      'upgrade-insecure-requests': true,
     },
   )
 export const GTAG_COOKIE_ID = 'ga'
-export const I18N_MODULE_CONFIG = {
-  locales: [
-    {
-      code: 'en' as const,
-      file: 'en.json',
-      language: 'en', // could be `en-US` is multiple `en` locales are differentiated
-      name: 'English', // Will be used as catchall locale by default.
-    },
-    {
-      code: 'de' as const,
-      file: 'de.json',
-      language: 'de', // could be `de-DE` is multiple `de` locales are differentiated
-      name: 'Deutsch',
-    },
-  ],
-}
 export const I18N_VUE_CONFIG = {
   fallbackWarn: false, // covered by linting
   missingWarn: false, // covered by linting
@@ -161,6 +145,7 @@ export const POLYFILLS = [
 export const REGEX_UUID =
   /^[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}$/
 export const STATE_KEY_NOW = 'dateTimeNow'
+export const STATE_KEY_FROM_TO = 'dateTimeFromTo'
 export const TESTING_COOKIE_NAME = 'vio_is-testing'
 export const TIMEZONE_COOKIE_NAME = [COOKIE_PREFIX, 'tz'].join(COOKIE_SEPARATOR)
 export const TIMEZONE_HEADER_KEY = `X-${VIO_SITE_NAME}-Timezone`

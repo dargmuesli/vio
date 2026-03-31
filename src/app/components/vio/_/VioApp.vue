@@ -10,11 +10,6 @@
 </template>
 
 <script setup lang="ts">
-const { ogImageComponent = undefined } = defineProps<{
-  ogImageComponent?: string
-}>()
-
-const { t } = useI18n()
 const timeZone = useTimeZone()
 
 const { loadingIds, indicateLoadingDone } = useLoadingDoneIndicator('app')
@@ -40,13 +35,6 @@ const isLoading = computed(() => !!loadingIds.value.length)
 onMounted(() => indicateLoadingDone())
 
 // initialization
-defineOgImageComponent(
-  ogImageComponent || 'NuxtSeo',
-  {},
-  {
-    alt: t('globalSeoOgImageAlt'),
-  },
-)
 useAppLayout()
 usePolyfills()
 useSchemaOrg([defineWebSite()])

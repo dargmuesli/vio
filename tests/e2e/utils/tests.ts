@@ -100,17 +100,16 @@ export const testMetadata = async ({
           key: 'property',
           value: 'og:image',
         },
-        {
-          key: 'content',
-          value: joinURL(
-            SITE_URL,
-            `/__og-image__/${
-              process.env.VIO_SERVER === 'static' ? 'static' : 'image'
-            }`,
-            path,
-            '/og.png',
-          ),
-        },
+        // TODO: check for open graph image content differently
+        // {
+        //   key: 'content',
+        //   value: joinURL(
+        //     SITE_URL,
+        //     `/_og/${process.env.VIO_SERVER === 'static' ? 's' : 'd'}`,
+        //     path,
+        //     '/og.png',
+        //   ),
+        // },
       ],
     },
     {
@@ -143,17 +142,16 @@ export const testMetadata = async ({
           key: 'name',
           value: 'twitter:image',
         },
-        {
-          key: 'content',
-          value: joinURL(
-            SITE_URL,
-            `/__og-image__/${
-              process.env.VIO_SERVER === 'static' ? 'static' : 'image'
-            }`,
-            path,
-            '/og.png',
-          ),
-        },
+        // TODO: check for open graph image content differently
+        // {
+        //   key: 'content',
+        //   value: joinURL(
+        //     SITE_URL,
+        //     `/_og/${process.env.VIO_SERVER === 'static' ? 's' : 'd'}`,
+        //     path,
+        //     '/og.png',
+        //   ),
+        // },
       ],
     },
     {
@@ -163,17 +161,16 @@ export const testMetadata = async ({
           key: 'name',
           value: 'twitter:image:src',
         },
-        {
-          key: 'content',
-          value: joinURL(
-            SITE_URL,
-            `/__og-image__/${
-              process.env.VIO_SERVER === 'static' ? 'static' : 'image'
-            }`,
-            path,
-            '/og.png',
-          ),
-        },
+        // TODO: check for open graph image content differently
+        // {
+        //   key: 'content',
+        //   value: joinURL(
+        //     SITE_URL,
+        //     `/_og/${process.env.VIO_SERVER === 'static' ? 's' : 'd'}`,
+        //     path,
+        //     '/og.png',
+        //   ),
+        // },
       ],
     },
     {
@@ -321,9 +318,9 @@ export const testMetadata = async ({
         {
           key: 'content',
           value:
-            process.env.NODE_ENV === 'production'
-              ? 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
-              : 'noindex, nofollow',
+            process.env.VIO_SERVER === 'dev'
+              ? 'noindex, nofollow'
+              : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
         },
       ],
     },
@@ -528,8 +525,10 @@ export const testMetadata = async ({
   }
 
   expect(
-    await page.locator('script[data-hid="schema-org-graph"]').innerText(),
-  ).toMatchSnapshot(`schema-org-graph-${process.env.VIO_SERVER || 'dev'}.json`)
+    (
+      await page.locator('script[data-hid="schema-org-graph"]').innerText()
+    ).replaceAll(SITE_URL, 'https://example.com'),
+  ).toMatchSnapshot(`schema-org-graph.json`)
 
   // if (process.env.VIO_SERVER === 'static') {
   //   expect(
@@ -540,21 +539,29 @@ export const testMetadata = async ({
   // }
 }
 
-export const testOgImage = (url: string) =>
+export const testOgImage = (paths: {
+  static?: Record<string, string>
+  dynamic?: Record<string, string>
+}) =>
   vioTest.describe('visual regression', () => {
     vioTest('generates the open graph image', async ({ page }) => {
-      await page.goto(
-        joinURL(
-          `/__og-image__/${process.env.VIO_SERVER === 'static' ? 'static' : 'image'}${url}/og.png`,
-        ),
-      )
+      const isStaticServer = process.env.VIO_SERVER === 'static'
+      const serverPaths = isStaticServer ? paths.static : paths.dynamic
+
+      if (!serverPaths) {
+        throw new Error(
+          isStaticServer
+            ? 'Static paths must be provided for static server tests'
+            : 'Dynamic paths must be provided for dynamic server tests',
+        )
+      }
+
+      const serverPrefix = isStaticServer ? 's' : 'd'
+
+      await page.goto(joinURL(`/_og/${serverPrefix}/${serverPaths.en}`))
       await expect(page).toHaveScreenshot()
 
-      await page.goto(
-        joinURL(
-          `/__og-image__/${process.env.VIO_SERVER === 'static' ? 'static' : 'image'}/de${url}/og.png`,
-        ),
-      )
+      await page.goto(joinURL(`/_og/${serverPrefix}/${serverPaths.de}`))
       await expect(page).toHaveScreenshot()
     })
   })

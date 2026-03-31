@@ -5,7 +5,6 @@
     :class="classesComputed"
     :disabled="disabled"
     :is-colored="false"
-    :is-to-relative="isToRelative"
     :to="to"
     @click="emit('click')"
   >
@@ -34,7 +33,6 @@ const {
   disabled = false,
   isBlock = false,
   isLinkColored = false,
-  isToRelative = false,
   to = undefined,
   type = 'button',
 } = defineProps<{
@@ -43,7 +41,6 @@ const {
   disabled?: boolean
   isBlock?: boolean
   isLinkColored?: boolean
-  isToRelative?: boolean
   to?: string
   type?: 'button' | 'submit' | 'reset'
 }>()

@@ -1,5 +1,4 @@
 import { expect } from '@playwright/test'
-import { escapeRegExp } from 'lodash-es'
 
 import { vioTest } from '#tests/e2e/fixtures/vioTest'
 import { SITE_URL } from '#tests/e2e/utils/constants'
@@ -29,8 +28,8 @@ vioTest.describe('sitemap', () => {
     for (const language of languages) {
       const resp = await request.get(`/__sitemap__/${language}.xml`)
       const text = (await resp.text())
-        .replace(/\n.+<\/lastmod>/g, '')
-        .replace(new RegExp(escapeRegExp(SITE_URL), 'g'), 'https://example.com')
+        .replaceAll(/\n.+<\/lastmod>/g, '')
+        .replaceAll(SITE_URL, 'https://example.com')
 
       if (process.env.VIO_SERVER === 'static') {
         expect(text)
@@ -38,33 +37,33 @@ vioTest.describe('sitemap', () => {
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`)
         expect(text).toContain(`<url>
         <loc>https://example.com${language === 'en' ? '/' : `/${language}`}</loc>
-        <xhtml:link rel="alternate" href="https://example.com/" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://example.com/" hreflang="en" />
-        <xhtml:link rel="alternate" href="https://example.com/de" hreflang="de" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://example.com/" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://example.com/de" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://example.com/" />
     </url>`)
         expect(text).toContain(
           `<loc>https://example.com${language === 'en' ? '' : `/${language}`}/legal-notice</loc>`,
         )
         expect(text).toContain(
-          '<xhtml:link rel="alternate" href="https://example.com/legal-notice" hreflang="x-default" />',
+          '<xhtml:link rel="alternate" hreflang="x-default" href="https://example.com/legal-notice" />',
         )
         expect(text).toContain(
-          '<xhtml:link rel="alternate" href="https://example.com/legal-notice" hreflang="en" />',
+          '<xhtml:link rel="alternate" hreflang="en" href="https://example.com/legal-notice" />',
         )
         expect(text).toContain(
-          '<xhtml:link rel="alternate" href="https://example.com/de/legal-notice" hreflang="de" />',
+          '<xhtml:link rel="alternate" hreflang="de" href="https://example.com/de/legal-notice" />',
         )
         expect(text).toContain(
           `<loc>https://example.com${language === 'en' ? '' : `/${language}`}/privacy-policy</loc>`,
         )
         expect(text).toContain(
-          '<xhtml:link rel="alternate" href="https://example.com/privacy-policy" hreflang="x-default" />',
+          '<xhtml:link rel="alternate" hreflang="x-default" href="https://example.com/privacy-policy" />',
         )
         expect(text).toContain(
-          '<xhtml:link rel="alternate" href="https://example.com/privacy-policy" hreflang="en" />',
+          '<xhtml:link rel="alternate" hreflang="en" href="https://example.com/privacy-policy" />',
         )
         expect(text).toContain(
-          '<xhtml:link rel="alternate" href="https://example.com/de/privacy-policy" hreflang="de" />',
+          '<xhtml:link rel="alternate" hreflang="de" href="https://example.com/de/privacy-policy" />',
         )
       } else {
         expect(text).toMatchSnapshot(`sitemap-content-${language}.txt`)

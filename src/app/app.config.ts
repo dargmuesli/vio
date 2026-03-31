@@ -8,6 +8,11 @@ export default defineAppConfig({
 declare module 'nuxt/schema' {
   interface AppConfig {
     vio: {
+      seo?: {
+        ogImage?: {
+          defaultComponent: string // TODO: keyof OgImageComponents
+        }
+      }
       pages?: {
         legalNotice?: {
           contact: {

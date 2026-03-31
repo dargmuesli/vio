@@ -35,19 +35,19 @@ export const vioTest = test.extend<{
   defaultPage: async ({ page, context }, use) => {
     await context.addCookies([
       {
-        domain: 'localhost',
+        domain: 'app.localhost',
         name: 'vio_is-testing',
         path: '/',
         value: 'true',
       },
       {
-        domain: 'localhost',
+        domain: 'app.localhost',
         name: 'vio_tz',
         path: '/',
         value: 'Europe/Berlin',
       },
       {
-        domain: 'localhost',
+        domain: 'app.localhost',
         name: 'ncc_c',
         path: '/',
         value: 'ctga',
