@@ -1,3 +1,9 @@
+## [21.0.1](https://github.com/dargmuesli/vio/compare/21.0.0...21.0.1) (2026-03-31)
+
+### Bug Fixes
+
+* **seo:** allow og image properties to be set ([7a68422](https://github.com/dargmuesli/vio/commit/7a6842288d63a456ca24f5e6f1db9a9eea6e532f))
+
 ## [21.0.0](https://github.com/dargmuesli/vio/compare/20.7.8...21.0.0) (2026-03-31)
 
 ### ⚠ BREAKING CHANGES
