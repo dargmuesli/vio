@@ -1,3 +1,13 @@
+## [21.0.0-beta.14](https://github.com/dargmuesli/vio/compare/21.0.0-beta.13...21.0.0-beta.14) (2026-03-31)
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** update dependency @nuxtjs/seo to v5
+
+### Miscellaneous Chores
+
+* **deps:** update dependency @nuxtjs/seo to v5 ([adc44ce](https://github.com/dargmuesli/vio/commit/adc44cedb15ef713f52a707a68f50f67cd705d53))
+
 ## [21.0.0-beta.13](https://github.com/dargmuesli/vio/compare/21.0.0-beta.12...21.0.0-beta.13) (2026-03-31)
 
 ### Bug Fixes
