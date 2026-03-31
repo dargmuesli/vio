@@ -37,9 +37,6 @@ export default defineNuxtConfig(
       site: {
         twitter: '@dargmuesli',
       },
-      sitemap: {
-        zeroRuntime: true,
-      },
     },
     VIO_NUXT_BASE_CONFIG({
       siteName: SITE_NAME,
