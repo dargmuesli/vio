@@ -1,3 +1,48 @@
+## [21.0.0](https://github.com/dargmuesli/vio/compare/20.7.8...21.0.0) (2026-03-31)
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** update dependency @nuxtjs/seo to v5
+* **seo:** switch from satori to takumi
+* **router:** remove `append` utility
+* **components:** rework link
+* **i18n:** simplify configuration
+* **components:** remove outdated status properties
+* **site:** use i18n base url
+* **site:** unify url
+* **composables:** allow for reactive time
+* **util:** drop `copyText`
+
+### Features
+
+* **components:** remove outdated status properties ([a4f7349](https://github.com/dargmuesli/vio/commit/a4f734985bf718a3b5445b76de10c3103d3ed648))
+* **components:** rework link ([5afa7e7](https://github.com/dargmuesli/vio/commit/5afa7e7b956601930336af7c1055fbe2da8e184c))
+* **composables:** allow for reactive time ([8e9cf57](https://github.com/dargmuesli/vio/commit/8e9cf579c685df573f2801302e8da65d0fa16522))
+* **csp:** upgrade insecure requests ([b9609aa](https://github.com/dargmuesli/vio/commit/b9609aab3c3e1d8ae61806abd1868a37ea355fc3))
+* **i18n:** simplify configuration ([c191aff](https://github.com/dargmuesli/vio/commit/c191affd13ad91a6b1e2dbb202ca83dc1677b22f))
+* **nuxt:** enable experimental typed pages ([f350de7](https://github.com/dargmuesli/vio/commit/f350de7c852764a39e550aee38f847c2f53f0f96))
+* **nuxt:** use `app.localhost` as development server host ([52e5ebb](https://github.com/dargmuesli/vio/commit/52e5ebb94b3ff5d311895f2af2223f3ce4fce19c))
+* **router:** remove `append` utility ([3008746](https://github.com/dargmuesli/vio/commit/3008746b4e58ddeedaac1d6b6caea365d5a1dfda))
+* **seo:** allow to configure open graph image in app configuration ([23329e4](https://github.com/dargmuesli/vio/commit/23329e42eaf3cb07203f65cd0832322819650126))
+* **seo:** switch from satori to takumi ([1aa80ef](https://github.com/dargmuesli/vio/commit/1aa80ef30718eb990ab9b9f23ac62bfb041cb846))
+* **util:** drop `copyText` ([da0e36f](https://github.com/dargmuesli/vio/commit/da0e36fccca59cec94e4cb19f7ce6b2a1fa92f5d))
+
+### Bug Fixes
+
+* **nuxt:** correct development server host key placement ([d0b8d98](https://github.com/dargmuesli/vio/commit/d0b8d98b947289a908f83795308188f475097cfc))
+* schedule release ([3cb1ea0](https://github.com/dargmuesli/vio/commit/3cb1ea0be9738781bde4fef9ce1801ce3cfd6bb7))
+* **seo:** correct open graph image title ([4e67bbd](https://github.com/dargmuesli/vio/commit/4e67bbd7d73425b07ad547c66cfc5b5cb2a5880f))
+* **typescript:** use relative import path for shadcn ([496d617](https://github.com/dargmuesli/vio/commit/496d617427ee6fd7bc3b985aca99ca1b8adc8c6e))
+
+### Miscellaneous Chores
+
+* **deps:** update dependency @nuxtjs/seo to v5 ([adc44ce](https://github.com/dargmuesli/vio/commit/adc44cedb15ef713f52a707a68f50f67cd705d53))
+
+### Code Refactoring
+
+* **site:** unify url ([0b792d9](https://github.com/dargmuesli/vio/commit/0b792d96f8a75e05693f45c2f086479344a6a113))
+* **site:** use i18n base url ([88f9246](https://github.com/dargmuesli/vio/commit/88f92461ed857769323a5a47c770b79cb56ff086))
+
 ## [21.0.0-beta.14](https://github.com/dargmuesli/vio/compare/21.0.0-beta.13...21.0.0-beta.14) (2026-03-31)
 
 ### ⚠ BREAKING CHANGES
