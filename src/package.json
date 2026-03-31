@@ -18,7 +18,7 @@
     "@tailwindcss/forms": "0.5.11",
     "@tailwindcss/typography": "0.5.19",
     "@tailwindcss/vite": "4.2.2",
-    "@takumi-rs/core": "0.70.4",
+    "@takumi-rs/core": "0.73.1",
     "@types/lodash-es": "4.17.12",
     "@types/nodemailer": "7.0.11",
     "@urql/core": "6.0.1",
