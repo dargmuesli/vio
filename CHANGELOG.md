@@ -1,3 +1,9 @@
+## [21.0.2](https://github.com/dargmuesli/vio/compare/21.0.1...21.0.2) (2026-04-02)
+
+### Bug Fixes
+
+* **deps:** lock file maintenance ([d3c74b9](https://github.com/dargmuesli/vio/commit/d3c74b96f4e66a03a53908de3f5a93b9dfd178a4))
+
 ## [21.0.1](https://github.com/dargmuesli/vio/compare/21.0.0...21.0.1) (2026-03-31)
 
 ### Bug Fixes
