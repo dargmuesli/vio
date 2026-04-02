@@ -1,8 +1,11 @@
 import { spawn } from 'node:child_process'
 import fs from 'node:fs'
 import path from 'node:path'
+import { fileURLToPath } from 'node:url'
 
-const root = process.argv[2] || process.cwd()
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+const root = path.resolve(__dirname, '../..')
 
 const certSuffix = process.env.CI ? '-ci' : '-dev'
 const certPath = path.join(root, `.config/certificates/ssl${certSuffix}.crt`)
@@ -11,7 +14,7 @@ const keyPath = path.join(root, `.config/certificates/ssl${certSuffix}.key`)
 const serveProcess = spawn(
   'serve',
   [
-    'playground/.output/public',
+    path.join(root, 'playground/.output/public'),
     ...(fs.existsSync(certPath) && fs.existsSync(keyPath)
       ? ['--ssl-cert', certPath, '--ssl-key', keyPath]
       : []),
