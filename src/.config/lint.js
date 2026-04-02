@@ -9,7 +9,7 @@ import { createJiti } from 'jiti'
 
 const jiti = createJiti(import.meta.url)
 const constants = await jiti.import('../shared/utils/constants.ts')
-// @ts-ignore
+// @ts-expect-error jiti import is untyped
 const POLYFILLS = constants.POLYFILLS
 
 const vueI18nConfiguration = vueI18n.configs.recommended
