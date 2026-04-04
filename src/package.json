@@ -52,7 +52,7 @@
     "@urql/exchange-graphcache": "9.0.0",
     "@vueuse/core": "14.2.1",
     "consola": "3.4.2",
-    "defu": "6.1.4",
+    "defu": "6.1.5",
     "h3": "1.15.10",
     "lodash-es": "4.18.1",
     "nuxt": "4.4.2",
