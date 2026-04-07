@@ -20,7 +20,7 @@
     "@tailwindcss/vite": "4.2.2",
     "@takumi-rs/core": "0.73.1",
     "@types/lodash-es": "4.17.12",
-    "@types/nodemailer": "7.0.11",
+    "@types/nodemailer": "8.0.0",
     "@urql/core": "6.0.1",
     "@urql/vue": "2.1.0",
     "@vuelidate/core": "2.0.3",
