@@ -144,11 +144,11 @@ importers:
         specifier: 2.5.1
         version: 2.5.1(magicast@0.5.2)(rollup@4.60.1)
       reka-ui:
-        specifier: 2.9.3
-        version: 2.9.3(vue@3.5.32(typescript@6.0.2))
+        specifier: 2.9.4
+        version: 2.9.4(vue@3.5.32(typescript@6.0.2))
       shadcn-nuxt:
-        specifier: 2.5.1
-        version: 2.5.1(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(magicast@0.5.2)
+        specifier: 2.5.2
+        version: 2.5.2(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(magicast@0.5.2)
       tailwind-merge:
         specifier: 3.5.0
         version: 3.5.0
@@ -7045,6 +7045,11 @@ packages:
     peerDependencies:
       vue: '>= 3.4.0'
 
+  reka-ui@2.9.4:
+    resolution: {integrity: sha512-Xz8yKl+5SwhzZU6lxTX9uCWydsv9+4zyYFv/LL+paa+sqnYZohdFqgkFxtroEy75fdoyFIlCXZK1VtSF9YVESA==}
+    peerDependencies:
+      vue: '>= 3.4.0'
+
   require-directory@2.1.1:
     resolution: {integrity: sha512-fGxEI7+wsG9xrvdjsrlmL22OMTTiHRwAMroiEeMgq8gzoLC/PQr7RsRDSTLUg/bZAZtF+TVIkHc6/4RIKrui+Q==}
     engines: {node: '>=0.10.0'}
@@ -7199,8 +7204,8 @@ packages:
   setprototypeof@1.2.0:
     resolution: {integrity: sha512-E5LDX7Wrp85Kil5bhZv46j8jOeboKq5JMmYM3gVGdGH8xFpPWXUMsNrlODCrkoxMEeNi/XZIwuRvY4XNwYMJpw==}
 
-  shadcn-nuxt@2.5.1:
-    resolution: {integrity: sha512-SrCUv/KZSRe/Pqz+Pq/luQFUt+YbQtWkN9pxiMQs+s5YrfrWlBd4mRQM9AwiR0hqZCw7H6UhwQ++Kk6cGS2KUQ==}
+  shadcn-nuxt@2.5.2:
+    resolution: {integrity: sha512-V6Olu6g149BrTfc4MFDtrAEPaBRgAsfUGZKce8kDuQWJO2E2O9HhQJ1nJYyxMV7tQIiNkm5OQ4N4j3720rPy1g==}
 
   sharp@0.34.5:
     resolution: {integrity: sha512-Ou9I5Ft9WNcCbXrU9cMgPBcCK8LiwLqcbywW3t4oDV37n1pzpuNLsYiAV8eODnjbtQlSDwZ2cUEeQz4E54Hltg==}
@@ -15935,6 +15940,22 @@ snapshots:
     transitivePeerDependencies:
       - '@vue/composition-api'
 
+  reka-ui@2.9.4(vue@3.5.32(typescript@6.0.2)):
+    dependencies:
+      '@floating-ui/dom': 1.7.6
+      '@floating-ui/vue': 1.1.11(vue@3.5.32(typescript@6.0.2))
+      '@internationalized/date': 3.12.0
+      '@internationalized/number': 3.6.5
+      '@tanstack/vue-virtual': 3.13.23(vue@3.5.32(typescript@6.0.2))
+      '@vueuse/core': 14.2.1(vue@3.5.32(typescript@6.0.2))
+      '@vueuse/shared': 14.2.1(vue@3.5.32(typescript@6.0.2))
+      aria-hidden: 1.2.6
+      defu: 6.1.6
+      ohash: 2.0.11
+      vue: 3.5.32(typescript@6.0.2)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+
   require-directory@2.1.1: {}
 
   require-from-string@2.0.2: {}
@@ -16142,7 +16163,7 @@ snapshots:
 
   setprototypeof@1.2.0: {}
 
-  shadcn-nuxt@2.5.1(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(magicast@0.5.2):
+  shadcn-nuxt@2.5.2(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(magicast@0.5.2):
     dependencies:
       '@nuxt/kit': 3.21.2(magicast@0.5.2)
       oxc-parser: 0.102.0(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)
