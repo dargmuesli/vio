@@ -1,3 +1,9 @@
+## [21.0.3](https://github.com/dargmuesli/vio/compare/21.0.2...21.0.3) (2026-04-11)
+
+### Bug Fixes
+
+* schedule release ([c2aa5ad](https://github.com/dargmuesli/vio/commit/c2aa5ad4cb1e707fa93e25a0cd1f8ab776e2935b))
+
 ## [21.0.2](https://github.com/dargmuesli/vio/compare/21.0.1...21.0.2) (2026-04-02)
 
 ### Bug Fixes
