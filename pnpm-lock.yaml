@@ -147,8 +147,8 @@ importers:
         specifier: 2.9.5
         version: 2.9.5(vue@3.5.32(typescript@6.0.2))
       shadcn-nuxt:
-        specifier: 2.5.3
-        version: 2.5.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(magicast@0.5.2)
+        specifier: 2.6.0
+        version: 2.6.0(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(magicast@0.5.2)
       tailwind-merge:
         specifier: 3.5.0
         version: 3.5.0
@@ -7283,8 +7283,8 @@ packages:
   setprototypeof@1.2.0:
     resolution: {integrity: sha512-E5LDX7Wrp85Kil5bhZv46j8jOeboKq5JMmYM3gVGdGH8xFpPWXUMsNrlODCrkoxMEeNi/XZIwuRvY4XNwYMJpw==}
 
-  shadcn-nuxt@2.5.3:
-    resolution: {integrity: sha512-zQIF2Spfb89kEamAHixdhhv0iARSrNN5BcqtfgBe4NX1ViWLM2qQaKfWBLTCKpt8gW/DSDE3R35TNFrfSzfASg==}
+  shadcn-nuxt@2.6.0:
+    resolution: {integrity: sha512-c0colL3U8EiAIO6I8NZ/+Rzc8qc4mrqgWQvPORqUwsjgRl6yu8bXFmXpbpKB9A2vHj2ZeeT4irQCWQd/ks2dZA==}
 
   sharp@0.34.5:
     resolution: {integrity: sha512-Ou9I5Ft9WNcCbXrU9cMgPBcCK8LiwLqcbywW3t4oDV37n1pzpuNLsYiAV8eODnjbtQlSDwZ2cUEeQz4E54Hltg==}
@@ -9726,7 +9726,7 @@ snapshots:
       rc9: 3.0.1
       scule: 1.3.0
       semver: 7.7.4
-      tinyglobby: 0.2.15
+      tinyglobby: 0.2.16
       ufo: 1.6.3
       unctx: 2.5.0
       untyped: 2.0.0
@@ -9948,7 +9948,7 @@ snapshots:
       tailwind-merge: 3.5.0
       tailwind-variants: 3.2.2(tailwind-merge@3.5.0)(tailwindcss@4.2.2)
       tailwindcss: 4.2.2
-      tinyglobby: 0.2.15
+      tinyglobby: 0.2.16
       typescript: 6.0.2
       ufo: 1.6.3
       unplugin: 3.0.0
@@ -11753,7 +11753,7 @@ snapshots:
       debug: 4.4.3
       minimatch: 10.2.5
       semver: 7.7.4
-      tinyglobby: 0.2.15
+      tinyglobby: 0.2.16
       ts-api-utils: 2.5.0(typescript@6.0.2)
       typescript: 6.0.2
     transitivePeerDependencies:
@@ -16197,7 +16197,7 @@ snapshots:
 
   setprototypeof@1.2.0: {}
 
-  shadcn-nuxt@2.5.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(magicast@0.5.2):
+  shadcn-nuxt@2.6.0(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(magicast@0.5.2):
     dependencies:
       '@nuxt/kit': 3.21.2(magicast@0.5.2)
       oxc-parser: 0.102.0(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)
@@ -17041,7 +17041,7 @@ snapshots:
       picocolors: 1.1.1
       picomatch: 4.0.4
       tiny-invariant: 1.3.3
-      tinyglobby: 0.2.15
+      tinyglobby: 0.2.16
       vite: 7.3.2(@types/node@24.12.2)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.1)(yaml@2.8.3)
       vscode-uri: 3.1.0
     optionalDependencies:
@@ -17086,7 +17086,7 @@ snapshots:
       picomatch: 4.0.4
       postcss: 8.5.8
       rollup: 4.60.1
-      tinyglobby: 0.2.15
+      tinyglobby: 0.2.16
     optionalDependencies:
       '@types/node': 24.12.2
       fsevents: 2.3.3
