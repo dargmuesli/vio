@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "@commitlint/cli": "20.5.0",
+    "@commitlint/cli": "20.5.2",
     "@commitlint/config-conventional": "20.5.0",
     "@dargmuesli/nuxt-vio": "link:src",
     "husky": "9.1.7",
