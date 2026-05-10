@@ -62,6 +62,8 @@ export default defineNuxtConfig(
         },
         // nuxt-security: remove invalid `'none'`s and duplicates
         (_options, nuxt) => {
+          if (typeof nuxt.options.security == 'boolean') return
+
           const nuxtConfigSecurityHeaders = nuxt.options.security.headers
 
           if (
