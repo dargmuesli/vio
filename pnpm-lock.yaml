@@ -18,8 +18,8 @@ importers:
         specifier: 9.1.22
         version: 9.1.22(magicast@0.5.2)(webpack@5.106.2(esbuild@0.27.7)(lightningcss@1.32.0)(postcss@8.5.14))
       '@eslint/compat':
-        specifier: 2.0.5
-        version: 2.0.5(eslint@10.3.0(jiti@2.7.0))
+        specifier: 2.1.0
+        version: 2.1.0(eslint@10.3.0(jiti@2.7.0))
       '@heroicons/vue':
         specifier: 2.2.0
         version: 2.2.0(vue@3.5.34(typescript@6.0.3))
@@ -1034,6 +1034,15 @@ packages:
 
   '@eslint/compat@2.0.5':
     resolution: {integrity: sha512-IbHDbHJfkVNv6xjlET8AIVo/K1NQt7YT4Rp6ok/clyBGcpRx1l6gv0Rq3vBvYfPJIZt6ODf66Zq08FJNDpnzgg==}
+    engines: {node: ^20.19.0 || ^22.13.0 || >=24}
+    peerDependencies:
+      eslint: ^8.40 || 9 || 10
+    peerDependenciesMeta:
+      eslint:
+        optional: true
+
+  '@eslint/compat@2.1.0':
+    resolution: {integrity: sha512-LgaSCymEpw7tF53xvDw9SNsraPb1IBHxpdABIOM0hW8UAlP8znrjYtuxfR58FSJ3L9BhwD+FaPRFQpZq84Nh6g==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
     peerDependencies:
       eslint: ^8.40 || 9 || 10
@@ -9065,6 +9074,12 @@ snapshots:
   '@eslint-community/regexpp@4.12.2': {}
 
   '@eslint/compat@2.0.5(eslint@10.3.0(jiti@2.7.0))':
+    dependencies:
+      '@eslint/core': 1.2.1
+    optionalDependencies:
+      eslint: 10.3.0(jiti@2.7.0)
+
+  '@eslint/compat@2.1.0(eslint@10.3.0(jiti@2.7.0))':
     dependencies:
       '@eslint/core': 1.2.1
     optionalDependencies:
