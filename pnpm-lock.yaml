@@ -15,8 +15,8 @@ importers:
   src:
     dependencies:
       '@dargmuesli/nuxt-cookie-control':
-        specifier: 9.1.24
-        version: 9.1.24(magicast@0.5.3)(webpack@5.106.2(esbuild@0.27.7)(lightningcss@1.32.0)(postcss@8.5.15))
+        specifier: 9.1.25
+        version: 9.1.25(magicast@0.5.3)(webpack@5.106.2(esbuild@0.27.7)(lightningcss@1.32.0)(postcss@8.5.15))
       '@eslint/compat':
         specifier: 2.1.0
         version: 2.1.0(eslint@10.4.0(jiti@2.7.0))
@@ -518,8 +518,8 @@ packages:
     peerDependencies:
       postcss-selector-parser: ^7.1.1
 
-  '@dargmuesli/nuxt-cookie-control@9.1.24':
-    resolution: {integrity: sha512-ZI6Qmjs8Kpmbrk1NWuurqMCQs8bsnmaMeqUvr+a3zDwCUNB/mrUrTVD8ROLpeaKcNzReZrliiBVp/p4qUcl4pQ==}
+  '@dargmuesli/nuxt-cookie-control@9.1.25':
+    resolution: {integrity: sha512-OAapwE/tvtrLeKqPwVf7qOj0MxpWUETWuLyX0CA236hyWBeHiZPgmSbA10d9ch2djXIYBo0vObaeBpUZkFcdCA==}
     engines: {node: '>=16'}
 
   '@dxup/nuxt@0.4.1':
@@ -8994,7 +8994,7 @@ snapshots:
     dependencies:
       postcss-selector-parser: 7.1.1
 
-  '@dargmuesli/nuxt-cookie-control@9.1.24(magicast@0.5.3)(webpack@5.106.2(esbuild@0.27.7)(lightningcss@1.32.0)(postcss@8.5.15))':
+  '@dargmuesli/nuxt-cookie-control@9.1.25(magicast@0.5.3)(webpack@5.106.2(esbuild@0.27.7)(lightningcss@1.32.0)(postcss@8.5.15))':
     dependencies:
       '@nuxt/kit': 4.4.6(magicast@0.5.3)
       css-vars-ponyfill: 2.4.9
