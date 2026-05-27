@@ -4,10 +4,12 @@
     <div>
       {{ description }}
     </div>
-    <div
+    <pre
       v-if="stack && !runtimeConfig.public.vio.isInProduction"
-      v-html="stack"
-    />
+      class="overflow-auto wrap-break-word whitespace-pre-wrap"
+    >
+      {{ stack }}
+    </pre>
   </div>
 </template>
 
