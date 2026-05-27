@@ -1,3 +1,9 @@
+## [21.0.8](https://github.com/dargmuesli/vio/compare/21.0.7...21.0.8) (2026-05-27)
+
+### Bug Fixes
+
+* **deps:** update ([d8b9781](https://github.com/dargmuesli/vio/commit/d8b9781b7474e430de38df872899decf0bc990dc))
+
 ## [21.0.7](https://github.com/dargmuesli/vio/compare/21.0.6...21.0.7) (2026-05-23)
 
 ### Bug Fixes
