@@ -1,3 +1,9 @@
+## [21.0.9](https://github.com/dargmuesli/vio/compare/21.0.8...21.0.9) (2026-05-28)
+
+### Bug Fixes
+
+* **components:** show stacktrace as plain text ([646474d](https://github.com/dargmuesli/vio/commit/646474df3e9930dc1cdae745d82db9b7256c83f1))
+
 ## [21.0.8](https://github.com/dargmuesli/vio/compare/21.0.7...21.0.8) (2026-05-27)
 
 ### Bug Fixes
