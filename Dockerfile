@@ -30,15 +30,13 @@ RUN mkdir \
         /srv/.pnpm-store \
         /srv/app/node_modules
 
-COPY ./docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
-
 VOLUME /srv/.pnpm-store
 VOLUME /srv/app
 VOLUME /srv/app/node_modules
 
 USER node
 
-ENTRYPOINT ["docker-entrypoint.sh"]
+ENTRYPOINT ["/srv/app/docker-entrypoint.sh"]
 CMD ["pnpm", "run", "--dir", "src", "dev", "--host", "0.0.0.0"]
 EXPOSE 3000
 
@@ -154,15 +152,13 @@ RUN groupadd -g $GROUP_ID -o $USER_NAME \
         /srv/.pnpm-store \
         /srv/app/node_modules
 
-COPY ./docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
-
 USER $USER_NAME
 
 VOLUME /srv/.pnpm-store
 VOLUME /srv/app
 VOLUME /srv/app/node_modules
 
-ENTRYPOINT ["docker-entrypoint.sh"]
+ENTRYPOINT ["/srv/app/docker-entrypoint.sh"]
 
 
 ########################
