@@ -16,15 +16,17 @@
     ],
     "@semantic-release/changelog",
     [
-      "@semantic-release/npm",
+      "@semantic-release/exec",
       {
-        "pkgRoot": "./src"
+        "prepareCmd": "pnpm --dir src version ${nextRelease.version} --git-tag-version=false --no-git-checks",
+        "publishCmd": "pnpm --dir src publish --no-git-checks"
       }
     ],
     [
-      "@semantic-release/npm",
+      "@semantic-release/exec",
       {
-        "pkgRoot": "./tests"
+        "prepareCmd": "pnpm --dir tests version ${nextRelease.version} --git-tag-version=false --no-git-checks",
+        "publishCmd": "pnpm --dir tests publish --no-git-checks"
       }
     ],
     "@semantic-release/github",
