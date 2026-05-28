@@ -1,3 +1,9 @@
+## [21.0.10](https://github.com/dargmuesli/vio/compare/21.0.9...21.0.10) (2026-05-28)
+
+### Bug Fixes
+
+* **ci:** release using pnpm ([b15ee0d](https://github.com/dargmuesli/vio/commit/b15ee0d9d2c69c3b703b820b2d5ea0c43fe04fa2))
+
 ## [21.0.9](https://github.com/dargmuesli/vio/compare/21.0.8...21.0.9) (2026-05-28)
 
 ### Bug Fixes
