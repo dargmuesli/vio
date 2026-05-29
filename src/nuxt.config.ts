@@ -143,7 +143,7 @@ export default defineNuxtConfig(
       },
       vite: {
         plugins: [
-          tailwindcss() as never, // TODO: remove typecast once tailwindcss fixes the plugin type
+          tailwindcss(),
           {
             // This plugin suppresses false-positive sourcemap warnings from Tailwind's Vite plugin
             // TODO: remove once tailwind generates sourcemaps for their transforms (https://github.com/tailwindlabs/tailwindcss/discussions/16119)
