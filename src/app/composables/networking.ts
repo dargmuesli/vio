@@ -33,3 +33,13 @@ export const useHost = () => {
 
   return host
 }
+
+export const useServiceFetch = (
+  options: Parameters<ReturnType<typeof useGetServiceHref>>[0],
+) => {
+  const getServiceHref = useGetServiceHref()
+
+  return $fetch.create({
+    baseURL: getServiceHref(options),
+  })
+}
