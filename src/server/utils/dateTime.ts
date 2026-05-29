@@ -1,28 +1,41 @@
 import type { H3Event } from 'h3'
 
-export const getTimezone = async (event: H3Event) => {
-  const timezoneBySsr = event.context.$timezone
+export const getTimeZone = async ({
+  event,
+  isTesting,
+}: {
+  event: H3Event
+  isTesting?: boolean
+}) => {
+  const timeZoneBySsr = event.context.$timeZone
 
-  if (timezoneBySsr) return timezoneBySsr
+  if (timeZoneBySsr) return timeZoneBySsr
 
-  const timezoneByCookie = getCookie(event, TIMEZONE_COOKIE_NAME)
+  const timeZoneByCookie = getCookie(event, TIMEZONE_COOKIE_NAME)
 
-  if (timezoneByCookie) return timezoneByCookie
+  if (timeZoneByCookie) return timeZoneByCookie
 
-  const ip = getRequestIP(event, { xForwardedFor: true })
+  if (!isTesting) {
+    const ip = getRequestIP(event, { xForwardedFor: true })
 
-  if (ip) {
-    const timezoneByIpApi = await getTimezoneByIpApi(ip)
+    if (ip) {
+      const timeZoneByIpApi = await getTimeZoneByIpApi({ ip })
 
-    if (timezoneByIpApi) return timezoneByIpApi
+      if (timeZoneByIpApi) return timeZoneByIpApi
+    }
   }
 }
 
-export const getTimezoneByIpApi = async (ip: string) => {
-  if (isTestingServer()) return // TODO: mock
+export const useTimeZone = async () => {
+  const event = useEvent()
+  const isTesting = useIsTesting()
 
+  return await getTimeZone({ event, isTesting })
+}
+
+export const getTimeZoneByIpApi = async ({ ip }: { ip: string }) => {
   const ipApiResult = await $fetch<{ timezone: string }>(
-    `http://ip-api.com/json/${ip}`,
+    `http://geoip:8080/${ip}`,
   ).catch(() => {})
 
   if (ipApiResult) {

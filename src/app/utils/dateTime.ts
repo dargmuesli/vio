@@ -1,5 +1,5 @@
-export const getTimezone = () =>
-  useNuxtApp().ssrContext?.event.context.$timezone ||
+export const getTimeZone = () =>
+  useNuxtApp().ssrContext?.event.context.$timeZone ||
   useCookie(TIMEZONE_COOKIE_NAME, {
     httpOnly: false,
     sameSite: 'strict',
