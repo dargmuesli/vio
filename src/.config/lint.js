@@ -24,7 +24,7 @@ export const VIO_ESLINT_CONFIG = [
   prettierConfiguration, // must be last
 
   {
-    files: ['.config/**/*', 'server/**/*'],
+    files: ['.config/**/*', 'node/**/*', 'server/**/*'],
     rules: {
       'compat/compat': 'off',
     },

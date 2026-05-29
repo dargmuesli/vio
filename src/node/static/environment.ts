@@ -5,3 +5,4 @@ export const IS_IN_FRONTEND_DEVELOPMENT = !IS_IN_PRODUCTION && !IS_IN_STACK
 export const SITE_URL =
   process.env.NUXT_PUBLIC_I18N_BASE_URL ||
   `https://${process.env.HOST || 'app.localhost'}:${process.env.PORT || '3000'}`
+export const SITE_URL_TYPED = new URL(SITE_URL)

@@ -1,6 +1,7 @@
 export const useGetServiceHref = () => {
   const host = useHost()
   const runtimeConfig = useRuntimeConfig()
+  const isTesting = useIsTesting()
 
   return ({
     isSsr = true,
@@ -8,12 +9,13 @@ export const useGetServiceHref = () => {
     port,
   }: {
     isSsr?: boolean
-    name?: string
+    name: string
     port?: number
   }) =>
     getServiceHref({
       host,
       isSsr,
+      isTesting,
       name,
       port,
       stagingHost: runtimeConfig.public.vio.stagingHost,

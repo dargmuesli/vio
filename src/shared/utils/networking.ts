@@ -3,6 +3,7 @@ import type { H3Event } from 'h3'
 import { computed, reactive } from 'vue'
 import type { Ref } from 'vue'
 
+import { SITE_URL_TYPED } from '../../node/static'
 import type { ApiData, BackendError } from '../types/api'
 
 export const getApiDataDefault = (): ApiData =>
@@ -87,25 +88,38 @@ export const getHost = (event: H3Event) => {
 export const getServiceHref = ({
   host,
   isSsr = true,
+  isTesting,
   name,
   port,
   stagingHost,
 }: {
-  host: string
+  host?: string
   isSsr?: boolean
-  name?: string
+  isTesting?: boolean
+  name: string
   port?: number
   stagingHost?: string
 }) => {
-  const nameSubdomain = name?.replaceAll('_', '-')
+  const nameSubdomain =
+    name !== VIO_SITE_NAME ? name?.replaceAll('_', '-') : undefined
   const nameSubdomainString = nameSubdomain ? `${nameSubdomain}.` : ''
   const portString = port ? `:${port}` : ''
 
+  if (isTesting) {
+    return `${SITE_URL_TYPED.protocol}//${nameSubdomainString}${SITE_URL_TYPED.host}`
+  }
+
   if (stagingHost) {
     return `https://${nameSubdomainString}${stagingHost}`
-  } else if (isSsr && import.meta.server) {
-    return `http://${name}${portString}`
-  } else {
-    return `https://${nameSubdomainString}${getRootHost(host)}`
   }
+
+  if (import.meta.server && isSsr) {
+    return `http://${name}${portString}`
+  }
+
+  if (host) {
+    return `https://${nameSubdomainString}${host}`
+  }
+
+  throw new Error('Could not get service href!')
 }
