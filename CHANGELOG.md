@@ -1,3 +1,16 @@
+## [22.0.0-beta.2](https://github.com/dargmuesli/vio/compare/22.0.0-beta.1...22.0.0-beta.2) (2026-05-29)
+
+### ⚠ BREAKING CHANGES
+
+* **strapi:** use default name
+
+### Features
+
+* **dargstack:** add unset secret constant ([822f58f](https://github.com/dargmuesli/vio/commit/822f58fdd35607b3b9727d04f08624cf97d38713))
+* **networking:** add path to service href ([3f51f5a](https://github.com/dargmuesli/vio/commit/3f51f5acbc7aa32909eb97d5aed254dd14a1dc7c))
+* **networking:** add service fetch ([972d95c](https://github.com/dargmuesli/vio/commit/972d95cb9efb06a6a4d140897af08b8b649f7aa0))
+* **strapi:** use default name ([9bcb983](https://github.com/dargmuesli/vio/commit/9bcb983f43e611e2718c4a78bec7111eb71d54bb))
+
 ## [22.0.0-beta.1](https://github.com/dargmuesli/vio/compare/21.0.10...22.0.0-beta.1) (2026-05-29)
 
 ### ⚠ BREAKING CHANGES
