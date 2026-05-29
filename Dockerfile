@@ -28,6 +28,7 @@ RUN mkdir \
         /srv/app/node_modules \
     && chown node:node \
         /srv/.pnpm-store \
+        /srv/app \
         /srv/app/node_modules
 
 VOLUME /srv/.pnpm-store
