@@ -6,10 +6,12 @@ export const useGetServiceHref = () => {
   return ({
     isSsr = true,
     name,
+    path,
     port,
   }: {
     isSsr?: boolean
     name: string
+    path?: string
     port?: number
   }) =>
     getServiceHref({
@@ -17,6 +19,7 @@ export const useGetServiceHref = () => {
       isSsr,
       isTesting,
       name,
+      path,
       port,
       stagingHost: runtimeConfig.public.vio.stagingHost,
     })
@@ -29,4 +32,14 @@ export const useHost = () => {
   if (!host) throw new Error('Host is not given!')
 
   return host
+}
+
+export const useServiceFetch = (
+  options: Parameters<ReturnType<typeof useGetServiceHref>>[0],
+) => {
+  const getServiceHref = useGetServiceHref()
+
+  return $fetch.create({
+    baseURL: getServiceHref(options),
+  })
 }

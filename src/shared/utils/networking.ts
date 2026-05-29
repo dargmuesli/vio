@@ -90,6 +90,7 @@ export const getServiceHref = ({
   isSsr = true,
   isTesting,
   name,
+  path,
   port,
   stagingHost,
 }: {
@@ -97,6 +98,7 @@ export const getServiceHref = ({
   isSsr?: boolean
   isTesting?: boolean
   name: string
+  path?: string
   port?: number
   stagingHost?: string
 }) => {
@@ -104,21 +106,22 @@ export const getServiceHref = ({
     name !== VIO_SITE_NAME ? name?.replaceAll('_', '-') : undefined
   const nameSubdomainString = nameSubdomain ? `${nameSubdomain}.` : ''
   const portString = port ? `:${port}` : ''
+  const pathString = path ? `/${path.replace(/^\/+/, '')}` : ''
 
   if (isTesting) {
-    return `${SITE_URL_TYPED.protocol}//${nameSubdomainString}${SITE_URL_TYPED.host}`
+    return `${SITE_URL_TYPED.protocol}//${nameSubdomainString}${SITE_URL_TYPED.host}${pathString}`
   }
 
   if (stagingHost) {
-    return `https://${nameSubdomainString}${stagingHost}`
+    return `https://${nameSubdomainString}${stagingHost}${pathString}`
   }
 
   if (import.meta.server && isSsr) {
-    return `http://${name}${portString}`
+    return `http://${name}${portString}${pathString}`
   }
 
   if (host) {
-    return `https://${nameSubdomainString}${host}`
+    return `https://${nameSubdomainString}${host}${pathString}`
   }
 
   throw new Error('Could not get service href!')
