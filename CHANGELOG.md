@@ -1,3 +1,17 @@
+## [22.0.0-beta.3](https://github.com/dargmuesli/vio/compare/22.0.0-beta.2...22.0.0-beta.3) (2026-06-11)
+
+### ⚠ BREAKING CHANGES
+
+* **vue:** lint alphabetical attribute sorting
+
+### Bug Fixes
+
+* schedule release ([11d4575](https://github.com/dargmuesli/vio/commit/11d457583d9b8e4ac2b595f5ba55b684aea4e5da))
+
+### Code Refactoring
+
+* **vue:** lint alphabetical attribute sorting ([5e078f5](https://github.com/dargmuesli/vio/commit/5e078f58e62d016e388940ec048c79d120639679))
+
 ## [22.0.0-beta.2](https://github.com/dargmuesli/vio/compare/22.0.0-beta.1...22.0.0-beta.2) (2026-05-29)
 
 ### ⚠ BREAKING CHANGES
