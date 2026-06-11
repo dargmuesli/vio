@@ -1,9 +1,9 @@
 <template>
   <VioFormInput
     v-if="formInput"
+    :id-label="`input-${id}`"
     :is-optional="isOptional"
     :is-required="isRequired"
-    :id-label="`input-${id}`"
     :placeholder="t('globalPlaceholderEmailAddress')"
     :title="title || t('emailAddress')"
     type="email"
