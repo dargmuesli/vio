@@ -72,4 +72,9 @@ export const VIO_ESLINT_CONFIG = [
       '@intlify/vue-i18n/no-unused-keys': 'off',
     },
   }, // TODO: remove once `@intlify/eslint-plugin-vue-i18n` accounts for translation usage in composables]
+  {
+    rules: {
+      'vue/attributes-order': ['error', { alphabetical: true }],
+    },
+  },
 ]
