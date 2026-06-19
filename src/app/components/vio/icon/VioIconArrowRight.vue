@@ -1,15 +1,15 @@
 <template>
   <VioIconContainer
     fill="none"
-    viewBox="0 0 24 24"
     stroke="currentColor"
     stroke-width="1.5"
     :title="title || t('title')"
+    viewBox="0 0 24 24"
   >
     <path
+      d="M14 5l7 7m0 0l-7 7m7-7H3"
       stroke-linecap="round"
       stroke-linejoin="round"
-      d="M14 5l7 7m0 0l-7 7m7-7H3"
     />
   </VioIconContainer>
 </template>

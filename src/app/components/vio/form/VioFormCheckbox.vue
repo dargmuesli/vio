@@ -2,9 +2,9 @@
   <div>
     <input
       :id="`input-${formKey}`"
+      :checked="value"
       class="rounded-sm"
       type="checkbox"
-      :checked="value"
       @change="emit('change', ($event.target as HTMLInputElement).checked)"
     />
     <label class="pl-2" :for="`input-${formKey}`"><slot /></label>

@@ -1,7 +1,8 @@
-export const useStrapiFetch = () => {
-  const getServiceHref = useGetServiceHref()
-
-  return $fetch.create({
-    baseURL: getServiceHref({ name: 'creal_strapi', port: 1337 }) + '/api',
+export const useStrapiFetch = (
+  options?: Parameters<ReturnType<typeof useGetServiceHref>>[0],
+) =>
+  useServiceFetch({
+    ...(options ? options : {}),
+    name: options?.name || 'strapi',
+    path: options?.path || '/api',
   })
-}
