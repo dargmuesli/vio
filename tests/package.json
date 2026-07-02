@@ -13,7 +13,7 @@
     "playwright-core": "1.61.1",
     "tsdown": "0.22.3",
     "typescript": "6.0.3",
-    "typescript-eslint": "8.62.0",
+    "typescript-eslint": "8.62.1",
     "ufo": "1.6.4"
   },
   "engines": {
