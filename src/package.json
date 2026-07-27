@@ -56,7 +56,7 @@
     "defu": "6.1.7",
     "h3": "1.15.11",
     "lodash-es": "4.18.1",
-    "nuxt": "4.5.0",
+    "nuxt": "4.5.1",
     "pinia": "4.0.2",
     "prettier": "3.9.6",
     "prettier-plugin-tailwindcss": "0.8.1",
