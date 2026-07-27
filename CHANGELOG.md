@@ -1,3 +1,5 @@
+## [22.0.0-beta.4](https://github.com/dargmuesli/vio/compare/22.0.0-beta.3...22.0.0-beta.4) (2026-07-27)
+
 ## [22.0.0-beta.3](https://github.com/dargmuesli/vio/compare/22.0.0-beta.2...22.0.0-beta.3) (2026-06-11)
 
 ### ⚠ BREAKING CHANGES
