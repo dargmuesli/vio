@@ -100,16 +100,6 @@ export const testMetadata = async ({
           key: 'property',
           value: 'og:image',
         },
-        // TODO: check for open graph image content differently
-        // {
-        //   key: 'content',
-        //   value: joinURL(
-        //     SITE_URL,
-        //     `/_og/${process.env.VIO_SERVER === 'static' ? 's' : 'd'}`,
-        //     path,
-        //     '/og.png',
-        //   ),
-        // },
       ],
     },
     {
@@ -142,16 +132,6 @@ export const testMetadata = async ({
           key: 'name',
           value: 'twitter:image',
         },
-        // TODO: check for open graph image content differently
-        // {
-        //   key: 'content',
-        //   value: joinURL(
-        //     SITE_URL,
-        //     `/_og/${process.env.VIO_SERVER === 'static' ? 's' : 'd'}`,
-        //     path,
-        //     '/og.png',
-        //   ),
-        // },
       ],
     },
     {
@@ -161,16 +141,6 @@ export const testMetadata = async ({
           key: 'name',
           value: 'twitter:image:src',
         },
-        // TODO: check for open graph image content differently
-        // {
-        //   key: 'content',
-        //   value: joinURL(
-        //     SITE_URL,
-        //     `/_og/${process.env.VIO_SERVER === 'static' ? 's' : 'd'}`,
-        //     path,
-        //     '/og.png',
-        //   ),
-        // },
       ],
     },
     {
@@ -528,7 +498,7 @@ export const testMetadata = async ({
     (
       await page.locator('script[data-hid="schema-org-graph"]').innerText()
     ).replaceAll(SITE_URL, 'https://example.com'),
-  ).toMatchSnapshot(`schema-org-graph.json`)
+  ).toMatchSnapshot(`schema-org-graph-${process.env.VIO_SERVER}.json`)
 
   // if (process.env.VIO_SERVER === 'static') {
   //   expect(

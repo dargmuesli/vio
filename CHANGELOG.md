@@ -39,6 +39,18 @@
 * **networking:** align ([b21d191](https://github.com/dargmuesli/vio/commit/b21d191c5952b7aea90b57730be127e48338e914))
 * **testing:** align ([d44b025](https://github.com/dargmuesli/vio/commit/d44b025b1874ba5525e470e900f0dc0309e8839d))
 
+## [21.0.15](https://github.com/dargmuesli/vio/compare/21.0.14...21.0.15) (2026-07-25)
+
+## [21.0.14](https://github.com/dargmuesli/vio/compare/21.0.13...21.0.14) (2026-07-11)
+
+## [21.0.13](https://github.com/dargmuesli/vio/compare/21.0.12...21.0.13) (2026-06-30)
+
+## [21.0.12](https://github.com/dargmuesli/vio/compare/21.0.11...21.0.12) (2026-06-20)
+
+### Bug Fixes
+
+* schedule release ([14954f6](https://github.com/dargmuesli/vio/commit/14954f626b4e6e2e2cb52eb8767ce1913fd434c2))
+
 ## [21.0.11](https://github.com/dargmuesli/vio/compare/21.0.10...21.0.11) (2026-06-06)
 
 ### Bug Fixes
