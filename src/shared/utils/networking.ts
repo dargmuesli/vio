@@ -121,7 +121,7 @@ export const getServiceHref = ({
   }
 
   if (host) {
-    return `https://${nameSubdomainString}${host}${pathString}`
+    return `https://${nameSubdomainString}${getRootHost(host)}${pathString}`
   }
 
   throw new Error('Could not get service href!')
