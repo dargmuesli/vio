@@ -43,6 +43,8 @@
 * **networking:** align ([b21d191](https://github.com/dargmuesli/vio/commit/b21d191c5952b7aea90b57730be127e48338e914))
 * **testing:** align ([d44b025](https://github.com/dargmuesli/vio/commit/d44b025b1874ba5525e470e900f0dc0309e8839d))
 
+## [21.0.16](https://github.com/dargmuesli/vio/compare/21.0.15...21.0.16) (2026-07-28)
+
 ## [21.0.15](https://github.com/dargmuesli/vio/compare/21.0.14...21.0.15) (2026-07-25)
 
 ## [21.0.14](https://github.com/dargmuesli/vio/compare/21.0.13...21.0.14) (2026-07-11)

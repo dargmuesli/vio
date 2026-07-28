@@ -15,8 +15,8 @@ const PAGE_PATH = '/'
 testA11y(PAGE_PATH)
 testOgImage({
   dynamic: {
-    de: 'a_~U29jaWFsIFByZXZpZXcgSW1hZ2UgZsO8ciBlaW5lIFZpbyBXZWJzZWl0ZS4,c_Nuxt.takumi,description_~VmlvIGlzdCBAZGFyZ211ZXNsaXMgTnV4dCBsYXllci4,title_Vio+Playground,p_Ii9kZSI,s_M7l6ceU7DO6vkH4C.png',
-    en: `a_Social+Preview+Image+for+a+Vio+webpage.,c_Nuxt.takumi,description_~VmlvIGlzIEBkYXJnbXVlc2xpJ3MgTnV4dCBsYXllci4,title_Vio+Playground,s_YLbLI6BqMIAg7kwT.png`,
+    de: 'a_~U29jaWFsIFByZXZpZXcgSW1hZ2UgZsO8ciBlaW5lIFZpbyBXZWJzZWl0ZS4,c_Nuxt.takumi,description_~VmlvIGlzdCBAZGFyZ211ZXNsaXMgTnV4dCBsYXllci4,title_Vio+Playground,p_Ii9kZS8i,s_z2kAL6EsMza71_W4.png',
+    en: `a_Social+Preview+Image+for+a+Vio+webpage.,c_Nuxt.takumi,description_~VmlvIGlzIEBkYXJnbXVlc2xpJ3MgTnV4dCBsYXllci4,title_Vio+Playground,s_XIIA50Cjd--fAucZ.png`,
   },
   static: {
     de: 'a_~U29jaWFsIFByZXZpZXcgSW1hZ2UgZsO8ciBlaW5lIFZpbyBXZWJzZWl0ZS4,c_Nuxt.takumi,description_~VmlvIGlzdCBAZGFyZ211ZXNsaXMgTnV4dCBsYXllci4,title_Vio+Playground,p_Ii9kZSI.png',
