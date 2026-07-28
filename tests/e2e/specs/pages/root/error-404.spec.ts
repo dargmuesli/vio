@@ -34,12 +34,12 @@ vioTest.describe('visual regression', () => {
     if (process.env.VIO_SERVER === 'static') return
 
     await page.goto(
-      `/_og/d/a_Social+Preview+Image+for+a+Vio+webpage.,c_Nuxt.takumi,description_~VmlvIGlzIEBkYXJnbXVlc2xpJ3MgTnV4dCBsYXllci4,title_404+-+Not+Found,p_Ii9sZWdhbC1ub3RpY2VlIg,s_agnPBpX-UgzSzeo6.png`,
+      `/_og/d/a_Social+Preview+Image+for+a+Vio+webpage.,c_Nuxt.takumi,description_~VmlvIGlzIEBkYXJnbXVlc2xpJ3MgTnV4dCBsYXllci4,title_404+-+Not+Found,p_Ii9sZWdhbC1ub3RpY2VlIg,s_Nf4uZ_v3OM_1ckSp.png`,
     )
     await expect(page).toHaveScreenshot()
 
     await page.goto(
-      `/_og/d/a_~U29jaWFsIFByZXZpZXcgSW1hZ2UgZsO8ciBlaW5lIFZpbyBXZWJzZWl0ZS4,c_Nuxt.takumi,description_~VmlvIGlzdCBAZGFyZ211ZXNsaXMgTnV4dCBsYXllci4,title_404+-+Nicht+gefunden,p_Ii9kZS9sZWdhbC1ub3RpY2VlIg,s_3dOTe14EV6Nh-jc0.png`,
+      `/_og/d/a_~U29jaWFsIFByZXZpZXcgSW1hZ2UgZsO8ciBlaW5lIFZpbyBXZWJzZWl0ZS4,c_Nuxt.takumi,description_~VmlvIGlzdCBAZGFyZ211ZXNsaXMgTnV4dCBsYXllci4,title_404+-+Nicht+gefunden,p_Ii9kZS9sZWdhbC1ub3RpY2VlIg,s_kP2SBFJ91bnnAerV.png`,
     )
     await expect(page).toHaveScreenshot()
   })
