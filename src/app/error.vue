@@ -3,10 +3,10 @@
     <!-- `NuxtLayout` can't be the root element (https://github.com/nuxt/nuxt/issues/25214) -->
     <NuxtLayout>
       <VioError
-        :status="error.status"
-        :status-text="error.statusText"
         :description="error.message"
         :stack="error.stack"
+        :status="error.status"
+        :status-text="error.statusText"
       />
     </NuxtLayout>
   </div>

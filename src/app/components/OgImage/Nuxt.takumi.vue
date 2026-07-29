@@ -44,10 +44,10 @@ const titleComputedLineClamp = lineClampStyle(titleComputed, 2)
   <div class="flex h-full w-full flex-col justify-center bg-[#020420]">
     <svg
       class="absolute top-0 right-0"
-      width="629"
+      fill="none"
       height="593"
       viewBox="0 0 629 593"
-      fill="none"
+      width="629"
       xmlns="http://www.w3.org/2000/svg"
     >
       <g filter="url(#filter0_f_199_94966)">
@@ -59,23 +59,23 @@ const titleComputedLineClamp = lineClampStyle(titleComputed, 2)
       <defs>
         <filter
           id="filter0_f_199_94966"
+          color-interpolation-filters="sRGB"
+          filterUnits="userSpaceOnUse"
+          height="1251.52"
+          width="1255.25"
           x="0.873535"
           y="-659"
-          width="1255.25"
-          height="1251.52"
-          filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
         >
           <feFlood flood-opacity="0" result="BackgroundImageFix" />
           <feBlend
-            mode="normal"
             in="SourceGraphic"
             in2="BackgroundImageFix"
+            mode="normal"
             result="shape"
           />
           <feGaussianBlur
-            stdDeviation="40.5"
             result="effect1_foregroundBlur_199_94966"
+            stdDeviation="40.5"
           />
         </filter>
       </defs>
@@ -105,10 +105,10 @@ const titleComputedLineClamp = lineClampStyle(titleComputed, 2)
     </div>
     <svg
       class="absolute top-40 right-22.5 hidden lg:flex"
-      width="340"
+      fill="none"
       height="340"
       viewBox="0 0 340 340"
-      fill="none"
+      width="340"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -169,32 +169,32 @@ const titleComputedLineClamp = lineClampStyle(titleComputed, 2)
       <defs>
         <filter
           id="filter0_f_199_94959"
+          color-interpolation-filters="sRGB"
+          filterUnits="userSpaceOnUse"
+          height="67.3485"
+          width="91.6485"
           x="124.176"
           y="130.551"
-          width="91.6485"
-          height="67.3485"
-          filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
         >
           <feFlood flood-opacity="0" result="BackgroundImageFix" />
           <feBlend
-            mode="normal"
             in="SourceGraphic"
             in2="BackgroundImageFix"
+            mode="normal"
             result="shape"
           />
           <feGaussianBlur
-            stdDeviation="3.78713"
             result="effect1_foregroundBlur_199_94959"
+            stdDeviation="3.78713"
           />
         </filter>
         <linearGradient
           id="paint0_linear_199_94959"
-          x1="167.875"
-          y1="74.375"
-          x2="88"
-          y2="261"
           gradientUnits="userSpaceOnUse"
+          x1="167.875"
+          x2="88"
+          y1="74.375"
+          y2="261"
         >
           <stop stop-color="#0F172A" />
           <stop offset="1" stop-color="#0F172A" stop-opacity="0" />
@@ -203,31 +203,31 @@ const titleComputedLineClamp = lineClampStyle(titleComputed, 2)
           id="paint1_radial_199_94959"
           cx="0"
           cy="0"
-          r="1"
-          gradientUnits="userSpaceOnUse"
           gradientTransform="translate(167.875 167.875) rotate(-90) scale(100.596 107.502)"
+          gradientUnits="userSpaceOnUse"
+          r="1"
         >
           <stop stop-color="white" />
           <stop offset="1" stop-opacity="0" />
         </radialGradient>
         <linearGradient
           id="paint2_linear_199_94959"
-          x1="247.183"
-          y1="96.4978"
-          x2="194.172"
-          y2="229.234"
           gradientUnits="userSpaceOnUse"
+          x1="247.183"
+          x2="194.172"
+          y1="96.4978"
+          y2="229.234"
         >
           <stop stop-color="white" />
           <stop offset="1" stop-opacity="0" />
         </linearGradient>
         <linearGradient
           id="paint3_linear_199_94959"
-          x1="267.01"
-          y1="78.6537"
-          x2="200.746"
-          y2="244.574"
           gradientUnits="userSpaceOnUse"
+          x1="267.01"
+          x2="200.746"
+          y1="78.6537"
+          y2="244.574"
         >
           <stop stop-color="#00DC82" />
           <stop offset="1" stop-opacity="0" />
@@ -235,44 +235,44 @@ const titleComputedLineClamp = lineClampStyle(titleComputed, 2)
         </linearGradient>
         <linearGradient
           id="paint4_linear_199_94959"
-          x1="292.405"
-          y1="57.8159"
-          x2="209.877"
-          y2="264.463"
           gradientUnits="userSpaceOnUse"
+          x1="292.405"
+          x2="209.877"
+          y1="57.8159"
+          y2="264.463"
         >
           <stop stop-color="#00DC82" />
           <stop offset="1" stop-opacity="0" />
         </linearGradient>
         <linearGradient
           id="paint5_linear_199_94959"
-          x1="314.196"
-          y1="40.2232"
-          x2="217.813"
-          y2="281.562"
           gradientUnits="userSpaceOnUse"
+          x1="314.196"
+          x2="217.813"
+          y1="40.2232"
+          y2="281.562"
         >
           <stop stop-color="#00DC82" />
           <stop offset="1" stop-opacity="0" />
         </linearGradient>
         <linearGradient
           id="paint6_linear_199_94959"
-          x1="202.444"
-          y1="144.3"
-          x2="191.546"
-          y2="184.293"
           gradientUnits="userSpaceOnUse"
+          x1="202.444"
+          x2="191.546"
+          y1="144.3"
+          y2="184.293"
         >
           <stop stop-color="white" />
           <stop offset="1" stop-opacity="0" />
         </linearGradient>
         <linearGradient
           id="paint7_linear_199_94959"
-          x1="202.444"
-          y1="144.3"
-          x2="191.546"
-          y2="184.293"
           gradientUnits="userSpaceOnUse"
+          x1="202.444"
+          x2="191.546"
+          y1="144.3"
+          y2="184.293"
         >
           <stop stop-color="white" />
           <stop offset="1" stop-opacity="0" />

@@ -1,9 +1,9 @@
 <template>
   <svg
-    xmlns="http://www.w3.org/2000/svg"
     :class="classes"
-    viewBox="0 0 20 20"
     fill="currentColor"
+    viewBox="0 0 20 20"
+    xmlns="http://www.w3.org/2000/svg"
   >
     <path
       d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"

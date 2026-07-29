@@ -1,11 +1,11 @@
 <template>
   <VioForm
     :form="v$"
-    :is-loading="isLoading"
     :is-form-sent="isFormSent"
+    :is-loading="isLoading"
     @submit.prevent="submit"
   >
-    <input type="hidden" name="static-form-name" value="contact" />
+    <input name="static-form-name" type="hidden" value="contact" />
     <VioFormInput
       id-label="input-name"
       :placeholder="t('placeholderName')"

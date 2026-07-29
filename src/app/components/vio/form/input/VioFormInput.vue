@@ -1,12 +1,12 @@
 <template>
   <div>
     <div
+      class="flex-wrap md:flex md:items-center"
       :class="{
         'form-input-success': success,
         'form-input-warning': warning,
         'form-input-error': value?.$error,
       }"
-      class="flex-wrap md:flex md:items-center"
     >
       <div class="mb-1 md:mb-0 md:w-1/3 md:pr-4 md:text-right">
         <label
@@ -42,13 +42,13 @@
               'rounded-r-none': $slots.icon,
             }"
             :disabled="isDisabled"
-            :placeholder="placeholder"
             :name="name || idLabelFull"
+            :placeholder="placeholder"
             :readonly="isReadonly"
             :type="type"
             :value="valueFormatter(value?.$model as string)"
-            @input="emit('input', ($event.target as HTMLInputElement)?.value)"
             @click="emit('click')"
+            @input="emit('input', ($event.target as HTMLInputElement)?.value)"
           />
           <div v-if="validationProperty && isValidatable">
             <VioFormInputIconWrapper v-if="validationProperty.$pending">

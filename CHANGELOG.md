@@ -1,3 +1,50 @@
+## [22.0.0-beta.6](https://github.com/dargmuesli/vio/compare/22.0.0-beta.5...22.0.0-beta.6) (2026-07-28)
+
+## [22.0.0-beta.5](https://github.com/dargmuesli/vio/compare/22.0.0-beta.4...22.0.0-beta.5) (2026-07-27)
+
+## [22.0.0-beta.4](https://github.com/dargmuesli/vio/compare/22.0.0-beta.3...22.0.0-beta.4) (2026-07-27)
+
+## [22.0.0-beta.3](https://github.com/dargmuesli/vio/compare/22.0.0-beta.2...22.0.0-beta.3) (2026-06-11)
+
+### ⚠ BREAKING CHANGES
+
+* **vue:** lint alphabetical attribute sorting
+
+### Bug Fixes
+
+* schedule release ([11d4575](https://github.com/dargmuesli/vio/commit/11d457583d9b8e4ac2b595f5ba55b684aea4e5da))
+
+### Code Refactoring
+
+* **vue:** lint alphabetical attribute sorting ([5e078f5](https://github.com/dargmuesli/vio/commit/5e078f58e62d016e388940ec048c79d120639679))
+
+## [22.0.0-beta.2](https://github.com/dargmuesli/vio/compare/22.0.0-beta.1...22.0.0-beta.2) (2026-05-29)
+
+### ⚠ BREAKING CHANGES
+
+* **strapi:** use default name
+
+### Features
+
+* **dargstack:** add unset secret constant ([822f58f](https://github.com/dargmuesli/vio/commit/822f58fdd35607b3b9727d04f08624cf97d38713))
+* **networking:** add path to service href ([3f51f5a](https://github.com/dargmuesli/vio/commit/3f51f5acbc7aa32909eb97d5aed254dd14a1dc7c))
+* **networking:** add service fetch ([972d95c](https://github.com/dargmuesli/vio/commit/972d95cb9efb06a6a4d140897af08b8b649f7aa0))
+* **strapi:** use default name ([9bcb983](https://github.com/dargmuesli/vio/commit/9bcb983f43e611e2718c4a78bec7111eb71d54bb))
+
+## [22.0.0-beta.1](https://github.com/dargmuesli/vio/compare/21.0.10...22.0.0-beta.1) (2026-05-29)
+
+### ⚠ BREAKING CHANGES
+
+* **date-time:** align
+* **networking:** align
+* **testing:** align
+
+### Features
+
+* **date-time:** align ([9d8015d](https://github.com/dargmuesli/vio/commit/9d8015d4575b85eed2e81472444b41fdea23dffb))
+* **networking:** align ([b21d191](https://github.com/dargmuesli/vio/commit/b21d191c5952b7aea90b57730be127e48338e914))
+* **testing:** align ([d44b025](https://github.com/dargmuesli/vio/commit/d44b025b1874ba5525e470e900f0dc0309e8839d))
+
 ## [21.0.16](https://github.com/dargmuesli/vio/compare/21.0.15...21.0.16) (2026-07-28)
 
 ## [21.0.15](https://github.com/dargmuesli/vio/compare/21.0.14...21.0.15) (2026-07-25)

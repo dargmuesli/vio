@@ -1,8 +1,8 @@
 <template>
   <VioFormInput
     v-if="formInput"
-    :is-optional="isOptional"
     :id-label="`input-${id}`"
+    :is-optional="isOptional"
     :placeholder="t('globalPlaceholderUrl')"
     :title="t('url')"
     type="url"
