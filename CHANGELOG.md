@@ -1,3 +1,5 @@
+## [22.0.2](https://github.com/dargmuesli/vio/compare/22.0.1...22.0.2) (2026-07-31)
+
 ## [22.0.1](https://github.com/dargmuesli/vio/compare/22.0.0...22.0.1) (2026-07-31)
 
 ## [22.0.0](https://github.com/dargmuesli/vio/compare/21.0.16...22.0.0) (2026-07-29)
