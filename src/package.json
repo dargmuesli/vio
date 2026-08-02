@@ -35,7 +35,7 @@
     "eslint-plugin-yml": "3.6.0",
     "globals": "17.8.0",
     "jiti": "2.7.0",
-    "jose": "6.2.4",
+    "jose": "6.2.5",
     "nodemailer": "9.0.3",
     "nuxt-gtag": "4.1.0",
     "nuxt-security": "2.6.0",
