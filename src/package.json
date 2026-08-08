@@ -121,5 +121,5 @@
     "start:static": "node node/server/static.mjs"
   },
   "type": "module",
-  "version": "22.0.2"
+  "version": "22.0.3"
 }
