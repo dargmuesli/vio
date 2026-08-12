@@ -2,8 +2,11 @@ import AxeBuilder from '@axe-core/playwright'
 import { expect, type Page } from '@playwright/test'
 import { joinURL, withoutTrailingSlash } from 'ufo'
 
-import { vioTest } from '#tests/e2e/fixtures/vioTest'
-import { SITE_URL, TIMEOUT } from '#tests/e2e/utils/constants'
+import { vioTest } from '@dargmuesli/nuxt-vio-testing/e2e/fixtures/vioTest'
+import {
+  SITE_URL,
+  TIMEOUT,
+} from '@dargmuesli/nuxt-vio-testing/e2e/utils/constants'
 
 export const testA11y = (url: string) =>
   vioTest.describe('a11y', () => {

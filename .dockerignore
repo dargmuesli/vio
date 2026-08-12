@@ -14,4 +14,5 @@ src/.eslintcache
 src/.stylelintcache
 tests/e2e/report/
 tests/e2e/results/
+tests/node_modules/
 Dockerfile

@@ -3,17 +3,15 @@
 #############
 # Create base image.
 
-FROM node:24.13.0-alpine AS base-image
+FROM oven/bun:1.3.9-alpine AS base-image
 
-# The `CI` environment variable must be set for pnpm to run in headless mode
 ENV CI=true
 
 WORKDIR /srv/app/
 
 RUN --mount=type=cache,id=apk-cache,target=/var/cache/apk \
     apk add --repository=https://dl-cdn.alpinelinux.org/alpine/edge/testing \
-      mkcert \
-    && corepack enable
+      mkcert
 
 
 #############
@@ -24,22 +22,22 @@ FROM base-image AS development
 ENV CI=false
 
 RUN mkdir \
-        /srv/.pnpm-store \
+        /srv/.bun/install/cache \
         /srv/app/node_modules \
     && chown node:node \
-        /srv/.pnpm-store \
+        /srv/.bun/install/cache \
         /srv/app/node_modules
 
 COPY ./docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
-VOLUME /srv/.pnpm-store
+VOLUME /srv/.bun/install/cache
 VOLUME /srv/app
 VOLUME /srv/app/node_modules
 
 USER node
 
 ENTRYPOINT ["docker-entrypoint.sh"]
-CMD ["pnpm", "run", "--dir", "src", "dev", "--host", "0.0.0.0"]
+CMD ["bun", "run", "--cwd", "src", "dev", "--host", "0.0.0.0"]
 EXPOSE 3000
 
 # TODO: support healthcheck while starting (https://github.com/nuxt/framework/issues/6915)
@@ -51,16 +49,10 @@ EXPOSE 3000
 
 FROM base-image AS prepare
 
-COPY ./pnpm-lock.yaml ./package.json ./
-# COPY ./patches ./patches
-
-# TODO: evaluate dropping libc arguments by running e2e tests separately
-RUN --mount=type=cache,id=pnpm-store,target=/root/.local/share/pnpm/store \
-    pnpm fetch --libc=musl --libc=glibc
-
 COPY ./ ./
 
-RUN pnpm install --offline
+RUN --mount=type=cache,id=bun-store,target=/root/.bun/install/cache \
+    bun install --frozen-lockfile
 
 
 ########################
@@ -69,7 +61,7 @@ RUN pnpm install --offline
 FROM prepare AS build-node
 
 ENV NODE_ENV=production
-RUN pnpm run --dir src build:node
+RUN bun run --cwd src build:node
 
 
 ########################
@@ -81,7 +73,7 @@ ARG NUXT_PUBLIC_I18N_BASE_URL=https://app.localhost:3002
 ENV NUXT_PUBLIC_I18N_BASE_URL=${NUXT_PUBLIC_I18N_BASE_URL}
 
 ENV NODE_ENV=production
-RUN pnpm run --dir src build:static
+RUN bun run --cwd src build:static
 
 
 ########################
@@ -89,7 +81,7 @@ RUN pnpm run --dir src build:static
 
 FROM prepare AS lint
 
-RUN pnpm -r run lint
+RUN bun run lint
 
 
 # ########################
@@ -97,7 +89,7 @@ RUN pnpm -r run lint
 
 # FROM prepare AS test-unit
 
-# RUN pnpm -r run test
+# RUN bun --workspaces run test
 
 
 ########################
@@ -105,14 +97,12 @@ RUN pnpm -r run lint
 
 FROM mcr.microsoft.com/playwright:v1.58.2 AS test-e2e-base-image
 
-# The `CI` environment variable must be set for pnpm to run in headless mode
 ENV CI=true
 ENV PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1
 
 WORKDIR /srv/app/
 
-RUN corepack enable \
-  && apt update && apt install mkcert
+RUN apt update && apt install mkcert
 
 
 ########################
@@ -127,17 +117,17 @@ ARG GROUP_ID=1000
 RUN groupadd -g $GROUP_ID -o $USER_NAME \
     && useradd -m -l -u $USER_ID -g $GROUP_ID -o -s /bin/bash $USER_NAME \
     && mkdir \
-        /srv/.pnpm-store \
+        /srv/.bun/install/cache \
         /srv/app/node_modules \
     && chown $USER_ID:$GROUP_ID \
-        /srv/.pnpm-store \
+        /srv/.bun/install/cache \
         /srv/app/node_modules
 
 COPY ./docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
 USER $USER_NAME
 
-VOLUME /srv/.pnpm-store
+VOLUME /srv/.bun/install/cache
 VOLUME /srv/app
 VOLUME /srv/app/node_modules
 
@@ -158,11 +148,11 @@ COPY --from=prepare /srv/app/ ./
 # FROM test-e2e-prepare AS test-e2e-dev
 
 # # a rebuild is necessary because the node image we're pulling dependencies from uses alpine linux while here we use debian
-# RUN pnpm -r rebuild
+# RUN bun --workspaces rebuild
 
 # ENV NODE_ENV=development
 
-# RUN pnpm run --dir tests test:e2e:server:dev
+# RUN bun run --cwd tests test:e2e:server:dev
 
 
 ########################
@@ -172,7 +162,7 @@ FROM test-e2e-prepare AS test-e2e-node
 
 COPY --from=build-node /srv/app/src/playground/.output ./src/playground/.output
 
-RUN pnpm run --dir tests test:e2e:server:node
+RUN bun run --cwd tests test:e2e:server:node
 
 
 ########################
@@ -182,7 +172,7 @@ FROM test-e2e-prepare AS test-e2e-static
 
 COPY --from=build-static /srv/app/src/playground/.output/public ./src/playground/.output/public
 
-RUN pnpm run --dir tests test:e2e:server:static
+RUN bun run --cwd tests test:e2e:server:static
 
 
 #######################
@@ -230,7 +220,7 @@ COPY --from=test-e2e-static /srv/app/package.json /dev/null
 # RUN apk update \
 #     && apk upgrade --no-cache
 
-# ENTRYPOINT ["pnpm"]
+# ENTRYPOINT ["bun"]
 # CMD ["run", "start:node"]
 # HEALTHCHECK --interval=10s CMD wget -O /dev/null https://app.localhost:3000/api/healthcheck || exit 1
 # EXPOSE 3000
