@@ -31,6 +31,7 @@ export const getServiceHref = ({
   isTesting,
   name,
   path,
+  protocol = SITE_URL_TYPED.protocol,
   stagingHost,
 }: {
   allowInternal?: boolean
@@ -39,6 +40,7 @@ export const getServiceHref = ({
   isTesting?: boolean
   name: ServiceName
   path?: string
+  protocol?: string
   stagingHost?: string
 }) => {
   const { hasSubdomain, port } = SERVICES[name]
@@ -53,13 +55,13 @@ export const getServiceHref = ({
   if (isTesting) {
     assertHasSubdomain()
 
-    return `${SITE_URL_TYPED.protocol}//${nameSubdomainString}${SITE_URL_TYPED.host}${pathString}`
+    return `${protocol}//${nameSubdomainString}${SITE_URL_TYPED.host}${pathString}`
   }
 
   if (stagingHost) {
     assertHasSubdomain()
 
-    return `https://${nameSubdomainString}${stagingHost}${pathString}`
+    return `${protocol}//${nameSubdomainString}${stagingHost}${pathString}`
   }
 
   if (isServer && allowInternal) {
@@ -69,7 +71,7 @@ export const getServiceHref = ({
   if (host) {
     assertHasSubdomain()
 
-    return `https://${nameSubdomainString}${getRootHost(host)}${pathString}`
+    return `${protocol}//${nameSubdomainString}${getRootHost(host)}${pathString}`
   }
 
   throw new Error('Could not get service href!')
