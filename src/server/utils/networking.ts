@@ -18,6 +18,7 @@ export const useGetServiceHref = ({ event }: { event?: H3Event } = {}) => {
   }) =>
     getServiceHref({
       host,
+      isServer: import.meta.server,
       isSsr,
       isTesting,
       name,

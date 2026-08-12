@@ -87,6 +87,7 @@ export const getHost = (event: H3Event) => {
 
 export const getServiceHref = ({
   host,
+  isServer,
   isSsr = true,
   isTesting,
   name,
@@ -95,6 +96,7 @@ export const getServiceHref = ({
   stagingHost,
 }: {
   host?: string
+  isServer: boolean
   isSsr?: boolean
   isTesting?: boolean
   name: string
@@ -116,7 +118,7 @@ export const getServiceHref = ({
     return `https://${nameSubdomainString}${stagingHost}${pathString}`
   }
 
-  if (import.meta.server && isSsr) {
+  if (isServer && isSsr) {
     return `http://${name}${portString}${pathString}`
   }
 
