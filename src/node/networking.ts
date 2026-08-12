@@ -31,6 +31,7 @@ export const getServiceHref = ({
   isTesting,
   name,
   path,
+  protocol = SITE_URL_TYPED.protocol,
   stagingHost,
 }: {
   allowInternal?: boolean
@@ -39,6 +40,7 @@ export const getServiceHref = ({
   isTesting?: boolean
   name: ServiceName
   path?: string
+  protocol?: string
   stagingHost?: string
 }) => {
   const { hasSubdomain, port } = SERVICES[name]
@@ -46,11 +48,11 @@ export const getServiceHref = ({
   const pathString = path ? `/${path.replace(/^\/+/, '')}` : ''
 
   if (isTesting) {
-    return `${SITE_URL_TYPED.protocol}//${nameSubdomainString}${SITE_URL_TYPED.host}${pathString}`
+    return `${protocol}//${nameSubdomainString}${SITE_URL_TYPED.host}${pathString}`
   }
 
   if (stagingHost) {
-    return `https://${nameSubdomainString}${stagingHost}${pathString}`
+    return `${protocol}//${nameSubdomainString}${getRootHost(stagingHost)}${pathString}`
   }
 
   if (isServer && allowInternal) {
@@ -61,7 +63,7 @@ export const getServiceHref = ({
     if (!hasSubdomain)
       throw new Error(`Service "${name}" has no public subdomain!`)
 
-    return `https://${nameSubdomainString}${getRootHost(host)}${pathString}`
+    return `${protocol}//${nameSubdomainString}${getRootHost(host)}${pathString}`
   }
 
   throw new Error('Could not get service href!')
