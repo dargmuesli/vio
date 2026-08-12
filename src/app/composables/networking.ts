@@ -16,6 +16,7 @@ export const useGetServiceHref = () => {
   }) =>
     getServiceHref({
       host,
+      isServer: import.meta.server,
       isSsr,
       isTesting,
       name,
