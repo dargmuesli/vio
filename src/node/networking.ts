@@ -1,6 +1,7 @@
 import type { H3Event } from 'h3'
 
-import { VIO_SITE_NAME } from '../shared/utils/constants'
+import { SERVICES } from './services'
+import type { ServiceName } from './services'
 import { SITE_URL_TYPED } from './static'
 
 export const getHost = (event: H3Event) => {
@@ -24,43 +25,50 @@ export const getRootHost = (host: string) => {
 }
 
 export const getServiceHref = ({
+  allowInternal = true,
   host,
   isServer,
-  isSsr = true,
   isTesting,
   name,
   path,
-  port,
   stagingHost,
 }: {
+  allowInternal?: boolean
   host?: string
   isServer: boolean
-  isSsr?: boolean
   isTesting?: boolean
-  name: string
+  name: ServiceName
   path?: string
-  port?: number
   stagingHost?: string
 }) => {
-  const nameSubdomain =
-    name !== VIO_SITE_NAME ? name?.replaceAll('_', '-') : undefined
-  const nameSubdomainString = nameSubdomain ? `${nameSubdomain}.` : ''
-  const portString = port ? `:${port}` : ''
+  const { hasSubdomain, port } = SERVICES[name]
+  const nameSubdomainString = `${name.replaceAll('_', '-')}.`
   const pathString = path ? `/${path.replace(/^\/+/, '')}` : ''
 
+  const assertHasSubdomain = () => {
+    if (!hasSubdomain)
+      throw new Error(`Service "${name}" has no public subdomain!`)
+  }
+
   if (isTesting) {
+    assertHasSubdomain()
+
     return `${SITE_URL_TYPED.protocol}//${nameSubdomainString}${SITE_URL_TYPED.host}${pathString}`
   }
 
   if (stagingHost) {
+    assertHasSubdomain()
+
     return `https://${nameSubdomainString}${stagingHost}${pathString}`
   }
 
-  if (isServer && isSsr) {
-    return `http://${name}${portString}${pathString}`
+  if (isServer && allowInternal) {
+    return `http://${name}:${port}${pathString}`
   }
 
   if (host) {
+    assertHasSubdomain()
+
     return `https://${nameSubdomainString}${getRootHost(host)}${pathString}`
   }
 

@@ -4,24 +4,21 @@ export const useGetServiceHref = () => {
   const isTesting = useIsTesting()
 
   return ({
-    isSsr = true,
+    allowInternal = true,
     name,
     path,
-    port,
   }: {
-    isSsr?: boolean
-    name: string
+    allowInternal?: boolean
+    name: ServiceName
     path?: string
-    port?: number
   }) =>
     getServiceHref({
+      allowInternal,
       host,
       isServer: import.meta.server,
-      isSsr,
       isTesting,
       name,
       path,
-      port,
       stagingHost: runtimeConfig.public.vio.stagingHost,
     })
 }
