@@ -19,14 +19,14 @@
       "@semantic-release/exec",
       {
         "prepareCmd": "pnpm --dir src version ${nextRelease.version} --git-tag-version=false --no-git-checks",
-        "publishCmd": "pnpm --dir src publish --no-git-checks"
+        "publishCmd": "pnpm --dir src publish --no-git-checks --tag ${nextRelease.channel || 'latest'}"
       }
     ],
     [
       "@semantic-release/exec",
       {
         "prepareCmd": "pnpm --dir tests version ${nextRelease.version} --git-tag-version=false --no-git-checks",
-        "publishCmd": "pnpm --dir tests publish --no-git-checks"
+        "publishCmd": "pnpm --dir tests publish --no-git-checks --tag ${nextRelease.channel || 'latest'}"
       }
     ],
     "@semantic-release/github",
