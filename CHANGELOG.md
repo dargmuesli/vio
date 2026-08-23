@@ -1,3 +1,13 @@
+## [23.0.0-beta.1](https://github.com/dargmuesli/vio/compare/22.0.4...23.0.0-beta.1) (2026-08-23)
+
+### ⚠ BREAKING CHANGES
+
+* **networking:** extensible SERVICES map with fixed subdomain/staging-host handling (#448)
+
+### Code Refactoring
+
+* **networking:** extensible SERVICES map with fixed subdomain/staging-host handling ([#448](https://github.com/dargmuesli/vio/issues/448)) ([5ece556](https://github.com/dargmuesli/vio/commit/5ece556bc0f9e03b4692269361af5319362f0d22))
+
 ## [22.0.4](https://github.com/dargmuesli/vio/compare/22.0.3...22.0.4) (2026-08-22)
 
 ### Bug Fixes
