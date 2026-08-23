@@ -5,5 +5,4 @@ export const useStrapiFetch = (
     ...(options ? options : {}),
     name: options?.name || 'strapi',
     path: options?.path || '/api',
-    port: options?.port || 1337,
   })
