@@ -21,6 +21,7 @@ export const useGetServiceHref = ({ event }: { event?: H3Event } = {}) => {
       isTesting,
       name,
       path,
+      services: runtimeConfig.public.vio.services,
       stagingHost: runtimeConfig.public.vio.stagingHost,
     })
 }

@@ -1,11 +1,15 @@
 import type { defineNuxtConfig } from 'nuxt/config'
 
+import type { Service } from '../services'
+import { SERVICES } from '../services'
 import { IS_IN_FRONTEND_DEVELOPMENT } from './'
 
 export const VIO_NUXT_BASE_CONFIG = ({
+  services,
   siteName,
   stagingHost,
 }: {
+  services?: Record<string, Service>
   siteName: string
   stagingHost?: string
 }) =>
@@ -18,6 +22,7 @@ export const VIO_NUXT_BASE_CONFIG = ({
     runtimeConfig: {
       public: {
         vio: {
+          services: { ...SERVICES, ...services },
           stagingHost: IS_IN_FRONTEND_DEVELOPMENT ? stagingHost : undefined,
         },
       },

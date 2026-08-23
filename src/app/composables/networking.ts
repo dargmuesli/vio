@@ -19,6 +19,7 @@ export const useGetServiceHref = () => {
       isTesting,
       name,
       path,
+      services: runtimeConfig.public.vio.services,
       stagingHost: runtimeConfig.public.vio.stagingHost,
     })
 }

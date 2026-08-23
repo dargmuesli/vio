@@ -1,7 +1,7 @@
 import type { H3Event } from 'h3'
 
 import { SERVICES } from './services'
-import type { ServiceName } from './services'
+import type { Service, ServiceName } from './services'
 import { SITE_URL_TYPED } from './static'
 
 export const getHost = (event: H3Event) => {
@@ -32,6 +32,7 @@ export const getServiceHref = ({
   name,
   path,
   protocol = SITE_URL_TYPED.protocol,
+  services = SERVICES,
   stagingHost,
 }: {
   allowInternal?: boolean
@@ -41,9 +42,14 @@ export const getServiceHref = ({
   name: ServiceName
   path?: string
   protocol?: string
+  services?: Record<string, Service>
   stagingHost?: string
 }) => {
-  const { hasSubdomain, port } = SERVICES[name]
+  const service = services[name]
+
+  if (!service) throw new Error(`Service "${name}" is not registered!`)
+
+  const { hasSubdomain, port } = service
   const nameSubdomainString = `${name.replaceAll('_', '-')}.`
   const pathString = path ? `/${path.replace(/^\/+/, '')}` : ''
 
