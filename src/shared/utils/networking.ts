@@ -69,10 +69,15 @@ export const getRootHost = (host: string) => {
   const hostParts = host.split('.')
   const hostPartsLast = hostParts[hostParts.length - 1]
 
-  if (hostPartsLast && /^localhost(:[0-9]+)?$/.test(hostPartsLast))
-    return hostPartsLast
-
   if (hostParts.length === 1) return hostParts[0]
+
+  // only a single subdomain directly on bare localhost collapses to the root; e.g. app.localhost must keep its "app" label
+  if (
+    hostParts.length === 2 &&
+    hostPartsLast &&
+    /^localhost(:[0-9]+)?$/.test(hostPartsLast)
+  )
+    return hostPartsLast
 
   return `${hostParts[hostParts.length - 2]}.${hostPartsLast}`
 }
