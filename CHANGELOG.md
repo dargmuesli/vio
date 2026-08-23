@@ -1,3 +1,9 @@
+## [22.0.6](https://github.com/dargmuesli/vio/compare/22.0.5...22.0.6) (2026-08-23)
+
+### Bug Fixes
+
+* **networking:** keep multi-label localhost roots in getRootHost ([#451](https://github.com/dargmuesli/vio/issues/451)) ([a8105e1](https://github.com/dargmuesli/vio/commit/a8105e16fbad51f5b6ee2dbcc5da126bf2989ceb))
+
 ## [22.0.5](https://github.com/dargmuesli/vio/compare/22.0.4...22.0.5) (2026-08-23)
 
 ### Bug Fixes
