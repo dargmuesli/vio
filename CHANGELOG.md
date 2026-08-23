@@ -1,3 +1,9 @@
+## [22.0.5](https://github.com/dargmuesli/vio/compare/22.0.4...22.0.5) (2026-08-23)
+
+### Bug Fixes
+
+* **release:** tag npm publishes with the release channel ([#450](https://github.com/dargmuesli/vio/issues/450)) ([091695e](https://github.com/dargmuesli/vio/commit/091695e8701c29dc69f3e48808e3a8f0f3f18331))
+
 ## [22.0.4](https://github.com/dargmuesli/vio/compare/22.0.3...22.0.4) (2026-08-22)
 
 ### Bug Fixes
