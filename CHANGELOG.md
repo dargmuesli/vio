@@ -1,3 +1,10 @@
+## [23.0.0-beta.2](https://github.com/dargmuesli/vio/compare/23.0.0-beta.1...23.0.0-beta.2) (2026-08-23)
+
+### Bug Fixes
+
+* **networking:** keep multi-label localhost roots in getRootHost ([#451](https://github.com/dargmuesli/vio/issues/451)) ([a8105e1](https://github.com/dargmuesli/vio/commit/a8105e16fbad51f5b6ee2dbcc5da126bf2989ceb))
+* **release:** tag npm publishes with the release channel ([#450](https://github.com/dargmuesli/vio/issues/450)) ([091695e](https://github.com/dargmuesli/vio/commit/091695e8701c29dc69f3e48808e3a8f0f3f18331))
+
 ## [23.0.0-beta.1](https://github.com/dargmuesli/vio/compare/22.0.4...23.0.0-beta.1) (2026-08-23)
 
 ### ⚠ BREAKING CHANGES
