@@ -1,3 +1,13 @@
+## [23.0.0-beta.3](https://github.com/dargmuesli/vio/compare/23.0.0-beta.2...23.0.0-beta.3) (2026-08-25)
+
+### ⚠ BREAKING CHANGES
+
+* **sentry:** add configurable Sentry integration (#452)
+
+### Features
+
+* **sentry:** add configurable Sentry integration ([#452](https://github.com/dargmuesli/vio/issues/452)) ([e95956b](https://github.com/dargmuesli/vio/commit/e95956b87b5e7e5aa057cd0b17a7b3369b91c7f5))
+
 ## [23.0.0-beta.2](https://github.com/dargmuesli/vio/compare/23.0.0-beta.1...23.0.0-beta.2) (2026-08-23)
 
 ### Bug Fixes
