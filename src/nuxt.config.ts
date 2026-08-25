@@ -345,8 +345,7 @@ export default defineNuxtConfig(
           disable: !process.env.SENTRY_AUTH_TOKEN,
         },
         telemetry: false,
-        // `org`, `project` and `authToken` are read from the `SENTRY_ORG`, `SENTRY_PROJECT`
-        // and `SENTRY_AUTH_TOKEN` environment variables by the module itself.
+        // `org`, `project` and `authToken` are read from the `SENTRY_ORG`, `SENTRY_PROJECT` and `SENTRY_AUTH_TOKEN` environment variables by the module itself.
       },
       seo: {
         minify: false, // TODO: enable (https://github.com/harlan-zw/nuxt-seo-utils/issues/103)
