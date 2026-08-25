@@ -2,7 +2,17 @@ import tailwindcss from '@tailwindcss/vite'
 import { defu } from 'defu'
 import { createResolver } from 'nuxt/kit'
 
-import { IS_IN_STACK, SITE_URL, VIO_NUXT_BASE_CONFIG } from './node/static'
+import {
+  IS_IN_STACK,
+  NUXT_PUBLIC_SENTRY_ENVIRONMENT,
+  NUXT_PUBLIC_SENTRY_HOST,
+  NUXT_PUBLIC_SENTRY_LOGS_ENABLE,
+  NUXT_PUBLIC_SENTRY_PROJECT_ID,
+  NUXT_PUBLIC_SENTRY_PROJECT_PUBLIC_KEY,
+  NUXT_PUBLIC_SENTRY_RELEASE,
+  SITE_URL,
+  VIO_NUXT_BASE_CONFIG,
+} from './node/static'
 import {
   GTAG_COOKIE_ID,
   TIMEZONE_COOKIE_NAME,
@@ -53,6 +63,7 @@ export default defineNuxtConfig(
         '@nuxtjs/seo',
         '@nuxtjs/turnstile',
         '@pinia/nuxt',
+        '@sentry/nuxt/module',
         'nuxt-gtag',
         'shadcn-nuxt',
         (_options, nuxt) => {
@@ -72,7 +83,16 @@ export default defineNuxtConfig(
           ) {
             if (nuxt.options.nitro.static) {
               nuxtConfigSecurityHeaders.contentSecurityPolicy = defu(
-                VIO_GET_CSP({ siteUrl: new URL(SITE_URL) }),
+                VIO_GET_CSP({
+                  sentry:
+                    NUXT_PUBLIC_SENTRY_HOST && NUXT_PUBLIC_SENTRY_PROJECT_ID
+                      ? {
+                          host: NUXT_PUBLIC_SENTRY_HOST,
+                          projectId: NUXT_PUBLIC_SENTRY_PROJECT_ID,
+                        }
+                      : undefined,
+                  siteUrl: new URL(SITE_URL),
+                }),
                 nuxtConfigSecurityHeaders.contentSecurityPolicy,
               )
             }
@@ -106,6 +126,37 @@ export default defineNuxtConfig(
           i18n: {
             baseUrl: SITE_URL,
           },
+          sentry: {
+            environment: NUXT_PUBLIC_SENTRY_ENVIRONMENT,
+            features: {
+              consoleCapture: true,
+              pinia: true,
+              profiling: true,
+              replay: true,
+              securityHeaders: true,
+              userTracking: true,
+            },
+            host: NUXT_PUBLIC_SENTRY_HOST,
+            logs: {
+              enable: NUXT_PUBLIC_SENTRY_LOGS_ENABLE,
+            },
+            profiles: {
+              sampleRate: 1.0,
+            },
+            project: {
+              id: NUXT_PUBLIC_SENTRY_PROJECT_ID,
+              publicKey: NUXT_PUBLIC_SENTRY_PROJECT_PUBLIC_KEY,
+            },
+            release: NUXT_PUBLIC_SENTRY_RELEASE,
+            replays: {
+              onError: {
+                sampleRate: 1.0,
+              },
+              session: {
+                sampleRate: 0.0,
+              },
+            },
+          },
           site: {
             url: SITE_URL, // TODO: evaluate removal for static builds in favor of i18n.baseUrl
           },
@@ -127,11 +178,7 @@ export default defineNuxtConfig(
         },
         tsConfig: {
           nodeTsConfig: {
-            include: [
-              resolve('../.config'),
-              resolve('../node'),
-              // resolve('../sentry.server.config.ts'),
-            ],
+            include: [resolve('../.config'), resolve('../node')],
           },
           vueCompilerOptions: {
             htmlAttributes: [], // https://github.com/johnsoncodehk/volar/issues/1970#issuecomment-1276994634
@@ -290,6 +337,17 @@ export default defineNuxtConfig(
         },
         strict: true,
       },
+      sentry: {
+        release: {
+          name: process.env.RELEASE_NAME || undefined,
+        },
+        sourcemaps: {
+          disable: !process.env.SENTRY_AUTH_TOKEN,
+        },
+        telemetry: false,
+        // `org`, `project` and `authToken` are read from the `SENTRY_ORG`, `SENTRY_PROJECT`
+        // and `SENTRY_AUTH_TOKEN` environment variables by the module itself.
+      },
       seo: {
         minify: false, // TODO: enable (https://github.com/harlan-zw/nuxt-seo-utils/issues/103)
       },
@@ -325,6 +383,9 @@ export default defineNuxtConfig(
           headers: {
             strictTransportSecurity: false, // prevent endless reload in Chrome
           },
+        },
+        sentry: {
+          enabled: false,
         },
         site: {
           debug: true,

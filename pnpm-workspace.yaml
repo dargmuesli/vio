@@ -1,5 +1,6 @@
 allowBuilds:
   '@parcel/watcher': false
+  '@sentry/cli': true
   esbuild: false
   sharp: false
   unrs-resolver: false
