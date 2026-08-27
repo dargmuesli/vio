@@ -1,3 +1,9 @@
+## [23.0.0-beta.4](https://github.com/dargmuesli/vio/compare/23.0.0-beta.3...23.0.0-beta.4) (2026-08-27)
+
+### Bug Fixes
+
+* **sentry:** use a relative import for the layer-safe config ([#454](https://github.com/dargmuesli/vio/issues/454)) ([92f6ef4](https://github.com/dargmuesli/vio/commit/92f6ef453af571dc2bf0eeabe6b6eb5e7c6c6178))
+
 ## [23.0.0-beta.3](https://github.com/dargmuesli/vio/compare/23.0.0-beta.2...23.0.0-beta.3) (2026-08-25)
 
 ### ⚠ BREAKING CHANGES
