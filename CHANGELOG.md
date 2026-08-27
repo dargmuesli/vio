@@ -1,3 +1,9 @@
+## [23.0.0-beta.5](https://github.com/dargmuesli/vio/compare/23.0.0-beta.4...23.0.0-beta.5) (2026-08-27)
+
+### Bug Fixes
+
+* **testing:** tolerate a missing request context in useIsTesting ([#455](https://github.com/dargmuesli/vio/issues/455)) ([27b0e08](https://github.com/dargmuesli/vio/commit/27b0e082243bca7991d7d09e29a74f9b305316fd))
+
 ## [23.0.0-beta.4](https://github.com/dargmuesli/vio/compare/23.0.0-beta.3...23.0.0-beta.4) (2026-08-27)
 
 ### Bug Fixes
