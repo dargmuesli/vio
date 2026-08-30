@@ -36,7 +36,7 @@
     "globals": "17.11.0",
     "jiti": "2.7.0",
     "jose": "6.2.10",
-    "nodemailer": "9.0.5",
+    "nodemailer": "9.0.6",
     "nuxt-gtag": "5.0.0",
     "nuxt-security": "2.6.0",
     "reka-ui": "2.10.4",
