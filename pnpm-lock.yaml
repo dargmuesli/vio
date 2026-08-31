@@ -229,8 +229,8 @@ importers:
         specifier: 4.5.1
         version: 4.5.1(eslint@10.9.1(jiti@2.7.0))(jsonc-eslint-parser@2.4.2)(vue-eslint-parser@10.4.1(eslint@10.9.1(jiti@2.7.0)))(yaml-eslint-parser@2.1.0)
       '@lucide/vue':
-        specifier: 1.34.0
-        version: 1.34.0(vue@3.5.42(typescript@6.0.3))
+        specifier: 1.35.0
+        version: 1.35.0(vue@3.5.42(typescript@6.0.3))
       '@nuxt/devtools':
         specifier: 3.4.2
         version: 3.4.2(db0@0.3.4)(ioredis@5.11.1)(magic-string@1.2.3)(oxc-parser@0.143.0)(rolldown@1.2.6)(unplugin@3.3.0(esbuild@0.28.2)(rolldown@1.2.6)(rollup@4.63.1)(vite@8.2.2(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.0))(webpack@5.110.1(esbuild@0.28.2)(lightningcss@1.33.0)(postcss@8.5.26)))(vite@8.2.2(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.0))(vue@3.5.42(typescript@6.0.3))
@@ -1464,8 +1464,8 @@ packages:
   '@kwsites/promise-deferred@1.1.1':
     resolution: {integrity: sha512-GaHYm+c0O9MjZRu0ongGBRbinu8gVAMd2UZjji6jVmqKtZluZnptXGWhz1E8j8D2HJ3f/yMxKAUC0b+57wncIw==}
 
-  '@lucide/vue@1.34.0':
-    resolution: {integrity: sha512-eB48kx1oe9O6mJAg0gFWgv66y4rhYJYuhfWF8wIz/YBFPDDHWHI7+kRJpkvz/8kePY6ddbwxXIGfP8E54wlGhA==}
+  '@lucide/vue@1.35.0':
+    resolution: {integrity: sha512-HTeJaMU7EUaeRqbZqaHyRg60UjiRdBAGwfWQRzORAspHh/H1rdnM/fdTzYX+SdL0OiUcAw+mM49G9D7zGgHzZg==}
     peerDependencies:
       vue: '>=3.0.1'
 
@@ -8444,7 +8444,7 @@ snapshots:
 
   '@kwsites/promise-deferred@1.1.1': {}
 
-  '@lucide/vue@1.34.0(vue@3.5.42(typescript@6.0.3))':
+  '@lucide/vue@1.35.0(vue@3.5.42(typescript@6.0.3))':
     dependencies:
       vue: 3.5.42(typescript@6.0.3)
 
