@@ -1,3 +1,9 @@
+## [22.0.7](https://github.com/dargmuesli/vio/compare/22.0.6...22.0.7) (2026-09-01)
+
+### Bug Fixes
+
+* **deps:** bump pnpm to 11.25.0 (GHSA-vx52-2968-3vc6) ([ad02c2a](https://github.com/dargmuesli/vio/commit/ad02c2a8e8e8b9984f55c53884c7929d70eb3f05))
+
 ## [22.0.6](https://github.com/dargmuesli/vio/compare/22.0.5...22.0.6) (2026-08-23)
 
 ### Bug Fixes
