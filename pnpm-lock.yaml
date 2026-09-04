@@ -229,8 +229,8 @@ importers:
         specifier: 4.5.1
         version: 4.5.1(eslint@10.9.1(jiti@2.7.0)(supports-color@10.2.2))(jsonc-eslint-parser@2.4.2)(supports-color@10.2.2)(vue-eslint-parser@10.4.1(eslint@10.9.1(jiti@2.7.0)(supports-color@10.2.2))(supports-color@10.2.2))(yaml-eslint-parser@2.1.0)
       '@lucide/vue':
-        specifier: 1.38.0
-        version: 1.38.0(vue@3.5.42(typescript@6.0.3))
+        specifier: 1.39.0
+        version: 1.39.0(vue@3.5.42(typescript@6.0.3))
       '@nuxt/devtools':
         specifier: 3.4.2
         version: 3.4.2(db0@0.3.4)(ioredis@5.11.1(supports-color@10.2.2))(magic-string@1.2.3)(oxc-parser@0.143.0)(rolldown@1.2.6)(supports-color@10.2.2)(unplugin@3.3.0(esbuild@0.28.2)(rolldown@1.2.6)(rollup@4.63.1)(vite@8.2.2(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.0))(webpack@5.110.1(cssnano@8.0.10(postcss@8.5.26))(csso@5.0.5)(esbuild@0.28.2)(lightningcss@1.33.0)(postcss@8.5.26)))(vite@8.2.2(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.0))(vue@3.5.42(typescript@6.0.3))
@@ -251,7 +251,7 @@ importers:
         version: 10.6.0(@vue/compiler-dom@3.5.42)(db0@0.3.4)(esbuild@0.28.2)(eslint@10.9.1(jiti@2.7.0)(supports-color@10.2.2))(ioredis@5.11.1(supports-color@10.2.2))(magicast@0.5.4)(pinia@4.0.3(@vue/devtools-api@8.2.1)(typescript@6.0.3)(vue@3.5.42(typescript@6.0.3)))(rolldown@1.2.6)(rollup@4.63.1)(supports-color@10.2.2)(typescript@6.0.3)(vite@8.2.2(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.0))(vue@3.5.42(typescript@6.0.3))(webpack@5.110.1(cssnano@8.0.10(postcss@8.5.26))(csso@5.0.5)(esbuild@0.28.2)(lightningcss@1.33.0)(postcss@8.5.26))
       '@nuxtjs/seo':
         specifier: 5.3.14
-        version: 5.3.14(6c0bc82ab8116927cdbb8ae46b98b9f2)
+        version: 5.3.14(7fb9a4d1ac9d9bdcc0e35b0ac83b128f)
       '@nuxtjs/turnstile':
         specifier: 1.1.3
         version: 1.1.3(@nuxt/scripts@1.3.8(@oxc-project/types@0.147.0)(@unhead/vue@3.4.0(@oxc-project/types@0.147.0)(esbuild@0.28.2)(lightningcss@1.33.0)(oxc-parser@0.143.0)(rolldown@1.2.6)(rollup@4.63.1)(vite@8.2.2(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.0))(vue@3.5.42(typescript@6.0.3))(webpack@5.110.1(cssnano@8.0.10(postcss@8.5.26))(csso@5.0.5)(esbuild@0.28.2)(lightningcss@1.33.0)(postcss@8.5.26)))(db0@0.3.4)(esbuild@0.28.2)(ioredis@5.11.1(supports-color@10.2.2))(magicast@0.5.4)(rolldown@1.2.6)(rollup@4.63.1)(typescript@6.0.3)(vite@8.2.2(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.0))(vue@3.5.42(typescript@6.0.3))(webpack@5.110.1(cssnano@8.0.10(postcss@8.5.26))(csso@5.0.5)(esbuild@0.28.2)(lightningcss@1.33.0)(postcss@8.5.26)))(magicast@0.5.4)
@@ -268,8 +268,8 @@ importers:
         specifier: 4.3.3
         version: 4.3.3(vite@8.2.2(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.0))
       '@takumi-rs/core':
-        specifier: 2.13.3
-        version: 2.13.3(csstype@3.2.3)
+        specifier: 2.13.4
+        version: 2.13.4(csstype@3.2.3)
       '@types/lodash-es':
         specifier: 4.17.12
         version: 4.17.12
@@ -313,8 +313,8 @@ importers:
         specifier: 3.8.1
         version: 3.8.1(eslint@10.9.1(jiti@2.7.0)(supports-color@10.2.2))
       globals:
-        specifier: 17.11.0
-        version: 17.11.0
+        specifier: 17.12.0
+        version: 17.12.0
       jiti:
         specifier: 2.7.0
         version: 2.7.0
@@ -322,8 +322,8 @@ importers:
         specifier: 6.2.10
         version: 6.2.10
       nodemailer:
-        specifier: 9.1.0
-        version: 9.1.0
+        specifier: 9.1.1
+        version: 9.1.1
       nuxt-gtag:
         specifier: 5.0.0
         version: 5.0.0(magic-string@1.2.3)(magicast@0.5.4)(oxc-parser@0.143.0)(rolldown@1.2.6)(unplugin@3.3.0(esbuild@0.28.2)(rolldown@1.2.6)(rollup@4.63.1)(vite@8.2.2(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.0))(webpack@5.110.1(cssnano@8.0.10(postcss@8.5.26))(csso@5.0.5)(esbuild@0.28.2)(lightningcss@1.33.0)(postcss@8.5.26)))
@@ -1464,8 +1464,8 @@ packages:
   '@kwsites/promise-deferred@1.1.1':
     resolution: {integrity: sha512-GaHYm+c0O9MjZRu0ongGBRbinu8gVAMd2UZjji6jVmqKtZluZnptXGWhz1E8j8D2HJ3f/yMxKAUC0b+57wncIw==}
 
-  '@lucide/vue@1.38.0':
-    resolution: {integrity: sha512-65f+77mbqXaBwi3I33JujaUpyOMvQfBc5sNmKS5NEc7PRbV/cDkuCcWSu/hrp0sEPhv8MDPDUdOVCtag06iDGg==}
+  '@lucide/vue@1.39.0':
+    resolution: {integrity: sha512-dKqoDT4lAY200w+hrzavxw9qqzw1SVuO5ZHBA+F75UgBJD4yNfDk6VuvFr8N09EeSJqVLU+IQ3mCxbV/Zfex/A==}
     peerDependencies:
       vue: '>=3.0.1'
 
@@ -2827,60 +2827,60 @@ packages:
     peerDependencies:
       vite: ^5.2.0 || ^6 || ^7 || ^8
 
-  '@takumi-rs/core-darwin-arm64@2.13.3':
-    resolution: {integrity: sha512-tjaSLf6rSryeT/QNXkgBzzViBiad4BK5fS6drnYyWkIlbX+vc02Pmd/ZGtKuKWDJ6M7rk+kX+ymnTyzqozPlSQ==}
+  '@takumi-rs/core-darwin-arm64@2.13.4':
+    resolution: {integrity: sha512-znfETB7y3x+nLmbVv7tn4rULaQNpaCQ+Ei69UiR/egNKw/3mAdTcnGKi1ba10/BCnIKKFoYTnD/+c/rX/KOE5g==}
     engines: {node: '>=18'}
     cpu: [arm64]
     os: [darwin]
 
-  '@takumi-rs/core-darwin-x64@2.13.3':
-    resolution: {integrity: sha512-3UuW4Jh+8clca2UHyTftHu4GgPUs57Go//A5KYXzJMBNh0/Z5DDqtukGXWhgDztWCRxfxC/MD9G4z3ExN8FwIA==}
+  '@takumi-rs/core-darwin-x64@2.13.4':
+    resolution: {integrity: sha512-YHdOCtyq0fekME3Y76aglwvr1xliDYUkt827cIiNKasVwLyVYp7c2oA2vtOy60AVWSsNaeQZfio/A1+n1yEQvg==}
     engines: {node: '>=18'}
     cpu: [x64]
     os: [darwin]
 
-  '@takumi-rs/core-linux-arm64-gnu@2.13.3':
-    resolution: {integrity: sha512-SMOUHOWA3ZrrOcdzMjBMf/P2ZlSLaYx/AYzgFQqocDKKJHg5PMPq12d0oc855KLgeCP5qF3RO57v1C28VallUQ==}
+  '@takumi-rs/core-linux-arm64-gnu@2.13.4':
+    resolution: {integrity: sha512-enCLLvXIbC/uP84/2MEGnSxtmpiW/WXWxG3EMaGo2Yuukg817N0EOqxR0/pNn5JtSqqYsFjaLSLM7lODyKsz/g==}
     engines: {node: '>=18'}
     cpu: [arm64]
     os: [linux]
     libc: [glibc]
 
-  '@takumi-rs/core-linux-arm64-musl@2.13.3':
-    resolution: {integrity: sha512-Ncq2dbrWr9fsL8Cb4bWwBwYx7gXFy+AaMUx4zU7I0nxBkereCtNC4UMc3RY09OElPfwv1qpKtWYB6A+CJQRW5w==}
+  '@takumi-rs/core-linux-arm64-musl@2.13.4':
+    resolution: {integrity: sha512-PjYuEqZnzOLeltGd33asZyXNFueo/tWhIemuK1EOawMbFIv7ItZ+IPfizEppjiT/9aubbYgAPo7B1RsqJMcjOw==}
     engines: {node: '>=18'}
     cpu: [arm64]
     os: [linux]
     libc: [musl]
 
-  '@takumi-rs/core-linux-x64-gnu@2.13.3':
-    resolution: {integrity: sha512-0K9kKFxDKnSs1R62MZiu2J/kRabkGQ8W8TN/t0fX9/lGS2Lv76aMZ/EYIZFf0wPSazy/706ybavBU05l+gH5zw==}
+  '@takumi-rs/core-linux-x64-gnu@2.13.4':
+    resolution: {integrity: sha512-FslEpRoWcLMpNRKLN6lr9o8GZ412h0FgZMa2fuBNXJaXYN0L6W7RctrTZa+mWo2Wt8V4V4DKwCqYEZwPCkyQ3g==}
     engines: {node: '>=18'}
     cpu: [x64]
     os: [linux]
     libc: [glibc]
 
-  '@takumi-rs/core-linux-x64-musl@2.13.3':
-    resolution: {integrity: sha512-+c7SAdhZe3kgVmyATrwkPmWJEn+taDeV3eLnVjziSF92hhpVrKbe3DTEzCCvyqvoZ8e0C0ibC44Npe1A4FORug==}
+  '@takumi-rs/core-linux-x64-musl@2.13.4':
+    resolution: {integrity: sha512-OYCHAE+5kycXvpPVh0xEZbt6A7OSJAKhteJLqStuZUOSp3fkGVTiUIfvcfCgCcLo3vdfE8aOX5SZTqCPkGMQbg==}
     engines: {node: '>=18'}
     cpu: [x64]
     os: [linux]
     libc: [musl]
 
-  '@takumi-rs/core-win32-arm64-msvc@2.13.3':
-    resolution: {integrity: sha512-jFv8+DT3Rz+9xeduDoMKNGHNB+ZHEwBloJh9iTU6waiaArwG2WoJ0JF2KRoDPECdvk52W9IR+HelbDtR/WIHoQ==}
+  '@takumi-rs/core-win32-arm64-msvc@2.13.4':
+    resolution: {integrity: sha512-bAG2fEEmmfqUTaAERLmUYalpwXCiyNIkZXC/pGUZyFK55YDW2usAoaj7zEJY7JDDvmkNC98y57rTvFy6lW6IAQ==}
     engines: {node: '>=18'}
     cpu: [arm64]
     os: [win32]
 
-  '@takumi-rs/core-win32-x64-msvc@2.13.3':
-    resolution: {integrity: sha512-NehYZvabxyMHCEEKaJGbcq3oLpbQE+Gmo6TcOwmxbBG0k1bR6Q9uka+cqgQWKqA3D7uipBOXrDcir5HqjqvUuQ==}
+  '@takumi-rs/core-win32-x64-msvc@2.13.4':
+    resolution: {integrity: sha512-qyj4BPv6d0wuYfm9qL730X6py6v5agXc6M7D5nYQrBFFZ8kYFMyBwrHOjeOgWeqbzDwJ/x8TzBqGrryIm88LQA==}
     engines: {node: '>=18'}
     cpu: [x64]
     os: [win32]
 
-  '@takumi-rs/core@2.13.3':
-    resolution: {integrity: sha512-b0xSv0e4N7MrG3GoSl12Ewj3UB/JoTB6GwfX/7i1jYKlnGV66+a+9NrSzCxfjcPeUBaSPIzaxQ+C6L1256ClIA==}
+  '@takumi-rs/core@2.13.4':
+    resolution: {integrity: sha512-YL+2FoGdEZ27jf2SBLvPEdO7/FaALyJv1vEZrN7GVT9RDMgOVZvhpiYIdvWX1BJLDdix9uDgG9M+BCmJWHLIgA==}
     engines: {node: '>=18'}
     peerDependencies:
       csstype: '*'
@@ -2888,8 +2888,8 @@ packages:
       csstype:
         optional: true
 
-  '@takumi-rs/helpers@2.13.3':
-    resolution: {integrity: sha512-9ojGETH+sJuszHra6llslChQ0TD8v5MvsTbfkJiIwvxT+ekGOaafi7HEqpqY7diAsYnGE/sBhRyuUIQ6IbvusA==}
+  '@takumi-rs/helpers@2.13.4':
+    resolution: {integrity: sha512-5F60HDcr9FelxiUhgSGMt4C1g3Nt8S9LbTlp43YyhmmZeUnsodiaiansnFc2poR/pCDS232S8fLXCsPj7btwxQ==}
     engines: {node: '>=18'}
     peerDependencies:
       preact: ^10.0.0
@@ -4802,8 +4802,8 @@ packages:
     resolution: {integrity: sha512-7ACyT3wmyp3I61S4fG682L0VA2RGD9otkqGJIwNUMF1SWUombIIk+af1unuDYgMm082aHYwD+mzJvv9Iu8dsgg==}
     engines: {node: '>=18'}
 
-  globals@17.11.0:
-    resolution: {integrity: sha512-Z2I8hM+PbJDXQDq3Icgpzv+mPdwr68iZUU9d5WW4FuXfDUQfkZaZuvjMv42/5crNyw154+9+VWXbYrUgDXbxNw==}
+  globals@17.12.0:
+    resolution: {integrity: sha512-cezEd/DTyyht9cvSSURyygXPfy04GtWO/5e6ZPvH7fCtjKz9PYOmuawphw1Ctd1f6C+5JypXfGD7ahNMXvevBA==}
     engines: {node: '>=18'}
 
   globby@16.2.4:
@@ -5637,8 +5637,8 @@ packages:
     resolution: {integrity: sha512-YHs7BmmcsdAI5Ozuf8JZo6PT0mv2GIWC9vMfvUC3dp65M8hn7Ux8CPL+2oBI7juNuj9d0ndhTcznq2ODBps9cQ==}
     engines: {node: '>=18'}
 
-  nodemailer@9.1.0:
-    resolution: {integrity: sha512-xj1Ri5Sau3qpPffHJwi2bY0oWVVWYq62Ph17l+2v1xXpxjqTls3YPc3L8dub9mcJpxj+1ucNnuYVqLlgh4pmDA==}
+  nodemailer@9.1.1:
+    resolution: {integrity: sha512-izw9mVKFix6YSnC9eLgV6g1opl9DUlRio9ZNcq+Wu9Ujn2UwF+8Nl0B8nz22kEC+CTZCvinkxwJ0DeFbb6NwcQ==}
     engines: {node: '>=6.0.0'}
 
   nopt@8.1.0:
@@ -8388,7 +8388,7 @@ snapshots:
       eslint: 10.9.1(jiti@2.7.0)(supports-color@10.2.2)
       eslint-compat-utils: 0.6.5(eslint@10.9.1(jiti@2.7.0)(supports-color@10.2.2))
       glob: 10.5.0
-      globals: 17.11.0
+      globals: 17.12.0
       ignore: 7.0.6
       import-fresh: 4.0.0
       is-language-code: 3.1.0
@@ -8508,7 +8508,7 @@ snapshots:
 
   '@kwsites/promise-deferred@1.1.1': {}
 
-  '@lucide/vue@1.38.0(vue@3.5.42(typescript@6.0.3))':
+  '@lucide/vue@1.39.0(vue@3.5.42(typescript@6.0.3))':
     dependencies:
       vue: 3.5.42(typescript@6.0.3)
 
@@ -8748,7 +8748,7 @@ snapshots:
       eslint-plugin-unicorn: 73.0.0(eslint@10.9.1(jiti@2.7.0)(supports-color@10.2.2))
       eslint-plugin-vue: 10.10.0(@stylistic/eslint-plugin@5.10.0(eslint@10.9.1(jiti@2.7.0)(supports-color@10.2.2)))(@typescript-eslint/parser@8.68.0(eslint@10.9.1(jiti@2.7.0)(supports-color@10.2.2))(supports-color@10.2.2)(typescript@6.0.3))(eslint@10.9.1(jiti@2.7.0)(supports-color@10.2.2))(vue-eslint-parser@10.4.1(eslint@10.9.1(jiti@2.7.0)(supports-color@10.2.2))(supports-color@10.2.2))
       eslint-processor-vue-blocks: 2.0.0(@vue/compiler-sfc@3.5.42)(eslint@10.9.1(jiti@2.7.0)(supports-color@10.2.2))
-      globals: 17.11.0
+      globals: 17.12.0
       local-pkg: 1.2.1
       pathe: 2.0.3
       vue-eslint-parser: 10.4.1(eslint@10.9.1(jiti@2.7.0)(supports-color@10.2.2))(supports-color@10.2.2)
@@ -9303,14 +9303,14 @@ snapshots:
       - vite
       - vue
 
-  '@nuxtjs/seo@5.3.14(6c0bc82ab8116927cdbb8ae46b98b9f2)':
+  '@nuxtjs/seo@5.3.14(7fb9a4d1ac9d9bdcc0e35b0ac83b128f)':
     dependencies:
       '@nuxt/kit': 4.5.2(magic-string@1.2.3)(magicast@0.5.4)(oxc-parser@0.143.0)(rolldown@1.2.6)(unplugin@3.3.0(esbuild@0.28.2)(rolldown@1.2.6)(rollup@4.63.1)(vite@8.2.2(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.0))(webpack@5.110.1(cssnano@8.0.10(postcss@8.5.26))(csso@5.0.5)(esbuild@0.28.2)(lightningcss@1.33.0)(postcss@8.5.26)))
       '@nuxtjs/robots': 6.2.0(@nuxt/schema@4.5.2)(magic-string@1.2.3)(magicast@0.5.4)(nuxt@4.5.2(bbc4e8a3f172d51f300f6659d0272d90))(oxc-parser@0.143.0)(rolldown@1.2.6)(unplugin@3.3.0(esbuild@0.28.2)(rolldown@1.2.6)(rollup@4.63.1)(vite@8.2.2(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.0))(webpack@5.110.1(cssnano@8.0.10(postcss@8.5.26))(csso@5.0.5)(esbuild@0.28.2)(lightningcss@1.33.0)(postcss@8.5.26)))(vite@8.2.2(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.0))(vue@3.5.42(typescript@6.0.3))
       '@nuxtjs/sitemap': 8.5.0(@nuxt/schema@4.5.2)(magic-string@1.2.3)(magicast@0.5.4)(nuxt@4.5.2(bbc4e8a3f172d51f300f6659d0272d90))(oxc-parser@0.143.0)(rolldown@1.2.6)(unplugin@3.3.0(esbuild@0.28.2)(rolldown@1.2.6)(rollup@4.63.1)(vite@8.2.2(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.0))(webpack@5.110.1(cssnano@8.0.10(postcss@8.5.26))(csso@5.0.5)(esbuild@0.28.2)(lightningcss@1.33.0)(postcss@8.5.26)))(vite@8.2.2(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.0))(vue@3.5.42(typescript@6.0.3))
       nuxt: 4.5.2(bbc4e8a3f172d51f300f6659d0272d90)
       nuxt-link-checker: 5.3.0(@nuxt/schema@4.5.2)(db0@0.3.4)(ioredis@5.11.1(supports-color@10.2.2))(magicast@0.5.4)(nuxt@4.5.2(bbc4e8a3f172d51f300f6659d0272d90))(oxc-parser@0.143.0)(rolldown@1.2.6)(unplugin@3.3.0(esbuild@0.28.2)(rolldown@1.2.6)(rollup@4.63.1)(vite@8.2.2(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.0))(webpack@5.110.1(cssnano@8.0.10(postcss@8.5.26))(csso@5.0.5)(esbuild@0.28.2)(lightningcss@1.33.0)(postcss@8.5.26)))(vite@8.2.2(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.0))(vue@3.5.42(typescript@6.0.3))
-      nuxt-og-image: 6.7.8(c24f438bc37da64634b632d015c55e67)
+      nuxt-og-image: 6.7.8(cdcd17c8553cbdd90ce414aadc91aab9)
       nuxt-schema-org: 6.3.1(8ca0e56468704cc97059ae8e1a6044d0)
       nuxt-seo-utils: 8.4.3(501c6d77f7b37a41c086a6eeb698d1a8)
       nuxt-site-config: 4.2.3(@nuxt/schema@4.5.2)(magic-string@1.2.3)(magicast@0.5.4)(nuxt@4.5.2(bbc4e8a3f172d51f300f6659d0272d90))(oxc-parser@0.143.0)(rolldown@1.2.6)(unplugin@3.3.0(esbuild@0.28.2)(rolldown@1.2.6)(rollup@4.63.1)(vite@8.2.2(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.0))(webpack@5.110.1(cssnano@8.0.10(postcss@8.5.26))(csso@5.0.5)(esbuild@0.28.2)(lightningcss@1.33.0)(postcss@8.5.26)))(vite@8.2.2(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.0))(vue@3.5.42(typescript@6.0.3))
@@ -10067,48 +10067,48 @@ snapshots:
       tailwindcss: 4.3.3
       vite: 8.2.2(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.0)
 
-  '@takumi-rs/core-darwin-arm64@2.13.3':
+  '@takumi-rs/core-darwin-arm64@2.13.4':
     optional: true
 
-  '@takumi-rs/core-darwin-x64@2.13.3':
+  '@takumi-rs/core-darwin-x64@2.13.4':
     optional: true
 
-  '@takumi-rs/core-linux-arm64-gnu@2.13.3':
+  '@takumi-rs/core-linux-arm64-gnu@2.13.4':
     optional: true
 
-  '@takumi-rs/core-linux-arm64-musl@2.13.3':
+  '@takumi-rs/core-linux-arm64-musl@2.13.4':
     optional: true
 
-  '@takumi-rs/core-linux-x64-gnu@2.13.3':
+  '@takumi-rs/core-linux-x64-gnu@2.13.4':
     optional: true
 
-  '@takumi-rs/core-linux-x64-musl@2.13.3':
+  '@takumi-rs/core-linux-x64-musl@2.13.4':
     optional: true
 
-  '@takumi-rs/core-win32-arm64-msvc@2.13.3':
+  '@takumi-rs/core-win32-arm64-msvc@2.13.4':
     optional: true
 
-  '@takumi-rs/core-win32-x64-msvc@2.13.3':
+  '@takumi-rs/core-win32-x64-msvc@2.13.4':
     optional: true
 
-  '@takumi-rs/core@2.13.3(csstype@3.2.3)':
+  '@takumi-rs/core@2.13.4(csstype@3.2.3)':
     dependencies:
-      '@takumi-rs/helpers': 2.13.3
+      '@takumi-rs/helpers': 2.13.4
     optionalDependencies:
-      '@takumi-rs/core-darwin-arm64': 2.13.3
-      '@takumi-rs/core-darwin-x64': 2.13.3
-      '@takumi-rs/core-linux-arm64-gnu': 2.13.3
-      '@takumi-rs/core-linux-arm64-musl': 2.13.3
-      '@takumi-rs/core-linux-x64-gnu': 2.13.3
-      '@takumi-rs/core-linux-x64-musl': 2.13.3
-      '@takumi-rs/core-win32-arm64-msvc': 2.13.3
-      '@takumi-rs/core-win32-x64-msvc': 2.13.3
+      '@takumi-rs/core-darwin-arm64': 2.13.4
+      '@takumi-rs/core-darwin-x64': 2.13.4
+      '@takumi-rs/core-linux-arm64-gnu': 2.13.4
+      '@takumi-rs/core-linux-arm64-musl': 2.13.4
+      '@takumi-rs/core-linux-x64-gnu': 2.13.4
+      '@takumi-rs/core-linux-x64-musl': 2.13.4
+      '@takumi-rs/core-win32-arm64-msvc': 2.13.4
+      '@takumi-rs/core-win32-x64-msvc': 2.13.4
       csstype: 3.2.3
     transitivePeerDependencies:
       - preact
       - react
 
-  '@takumi-rs/helpers@2.13.3': {}
+  '@takumi-rs/helpers@2.13.4': {}
 
   '@tanstack/virtual-core@3.17.8': {}
 
@@ -11725,7 +11725,7 @@ snapshots:
       entities: 4.5.0
       eslint: 10.9.1(jiti@2.7.0)(supports-color@10.2.2)
       find-up-simple: 1.0.1
-      globals: 17.11.0
+      globals: 17.12.0
       indent-string: 5.0.0
       is-builtin-module: 5.0.0
       is-identifier: 1.1.0
@@ -12090,7 +12090,7 @@ snapshots:
 
   globals@15.15.0: {}
 
-  globals@17.11.0: {}
+  globals@17.12.0: {}
 
   globby@16.2.4:
     dependencies:
@@ -12875,7 +12875,7 @@ snapshots:
 
   node-releases@2.0.54: {}
 
-  nodemailer@9.1.0: {}
+  nodemailer@9.1.1: {}
 
   nopt@8.1.0:
     dependencies:
@@ -12978,7 +12978,7 @@ snapshots:
       - vue
       - zod
 
-  nuxt-og-image@6.7.8(c24f438bc37da64634b632d015c55e67):
+  nuxt-og-image@6.7.8(cdcd17c8553cbdd90ce414aadc91aab9):
     dependencies:
       '@clack/prompts': 1.7.0
       '@nuxt/kit': 4.5.2(magic-string@1.2.3)(magicast@0.5.4)(oxc-parser@0.143.0)(rolldown@1.2.6)(unplugin@3.3.0(esbuild@0.28.2)(rolldown@1.2.6)(rollup@4.63.1)(vite@8.2.2(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.0))(webpack@5.110.1(cssnano@8.0.10(postcss@8.5.26))(csso@5.0.5)(esbuild@0.28.2)(lightningcss@1.33.0)(postcss@8.5.26)))
@@ -13013,7 +13013,7 @@ snapshots:
       unplugin: 3.3.0(esbuild@0.28.2)(rolldown@1.2.6)(rollup@4.63.1)(vite@8.2.2(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.0))(webpack@5.110.1(cssnano@8.0.10(postcss@8.5.26))(csso@5.0.5)(esbuild@0.28.2)(lightningcss@1.33.0)(postcss@8.5.26))
       unstorage: 1.17.5(db0@0.3.4)(ioredis@5.11.1(supports-color@10.2.2))
     optionalDependencies:
-      '@takumi-rs/core': 2.13.3(csstype@3.2.3)
+      '@takumi-rs/core': 2.13.4(csstype@3.2.3)
       nitropack: 2.13.4(oxc-parser@0.143.0)(rolldown@1.2.6)(srvx@0.11.22)(supports-color@10.2.2)(vite@8.2.2(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.0))(webpack@5.110.1(cssnano@8.0.10(postcss@8.5.26))(csso@5.0.5)(esbuild@0.28.2)(lightningcss@1.33.0)(postcss@8.5.26))
       playwright-core: 1.62.1
       sharp: 0.35.4(@types/node@24.13.3)
