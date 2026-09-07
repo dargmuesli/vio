@@ -292,6 +292,7 @@ export default defineNuxtConfig(
       },
       seo: {
         minify: false, // TODO: enable (https://github.com/harlan-zw/nuxt-seo-utils/issues/103)
+        validateAppHead: false, // `app.head.htmlAttrs.lang` is only a fallback for the routeless SPA pages, as i18n sets the correct language per locale everywhere else.
       },
       shadcn: {
         prefix: '',
