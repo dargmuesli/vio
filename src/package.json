@@ -36,7 +36,7 @@
     "globals": "17.12.0",
     "jiti": "2.7.0",
     "jose": "6.2.12",
-    "nodemailer": "10.0.1",
+    "nodemailer": "10.0.2",
     "nuxt-gtag": "5.0.0",
     "nuxt-security": "2.6.0",
     "reka-ui": "2.10.4",
@@ -48,7 +48,7 @@
     "vue-tsc": "3.3.11"
   },
   "devDependencies": {
-    "@types/node": "24.13.3",
+    "@types/node": "24.13.4",
     "@urql/devtools": "2.0.3",
     "@urql/exchange-graphcache": "9.0.1",
     "@vueuse/core": "14.4.0",
