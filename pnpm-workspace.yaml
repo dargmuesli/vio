@@ -13,6 +13,7 @@ minimumReleaseAgeExclude:
 packages:
   - src
   - tests
+# TODO: evaluate dropping libc variants by running e2e tests separately
 supportedArchitectures:
   libc:
     - glibc
