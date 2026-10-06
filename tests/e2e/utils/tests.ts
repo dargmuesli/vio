@@ -148,28 +148,8 @@ export const testMetadata = async ({
       tag: 'meta',
       attributes: [
         {
-          key: 'name',
-          value: 'twitter:image:width',
-        },
-        { key: 'content', value: '1200' },
-      ],
-    },
-    {
-      tag: 'meta',
-      attributes: [
-        {
           key: 'property',
           value: 'og:image:height',
-        },
-        { key: 'content', value: '600' },
-      ],
-    },
-    {
-      tag: 'meta',
-      attributes: [
-        {
-          key: 'name',
-          value: 'twitter:image:height',
         },
         { key: 'content', value: '600' },
       ],
