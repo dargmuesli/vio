@@ -53,9 +53,8 @@ FROM base-image AS prepare
 COPY ./pnpm-lock.yaml ./package.json ./pnpm-workspace.yaml ./
 # COPY ./patches ./patches
 
-# TODO: evaluate dropping libc arguments by running e2e tests separately
 RUN --mount=type=cache,id=pnpm-store,target=/root/.local/share/pnpm/store \
-    pnpm fetch --libc=musl --libc=glibc
+    pnpm fetch
 
 COPY ./ ./
 

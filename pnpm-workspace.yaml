@@ -13,3 +13,7 @@ minimumReleaseAgeExclude:
 packages:
   - src
   - tests
+supportedArchitectures:
+  libc:
+    - glibc
+    - musl
