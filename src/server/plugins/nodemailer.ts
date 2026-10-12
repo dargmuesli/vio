@@ -27,20 +27,13 @@ export default defineNitroPlugin((nitroApp) => {
   })
 })
 
-type EmailContext = {
-  nodemailer: {
-    transporter: Transporter
-  }
-}
-
-declare module '@nuxt/schema' {
-  interface RequestEventContext {
-    $email?: EmailContext
-  }
-}
-
+// h3 handlers and `useEvent()` still see h3's context
 declare module 'h3' {
   interface H3EventContext {
-    $email?: EmailContext
+    $email?: {
+      nodemailer: {
+        transporter: Transporter
+      }
+    }
   }
 }
