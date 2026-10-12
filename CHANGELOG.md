@@ -1,3 +1,9 @@
+## [23.0.0-beta.8](https://github.com/dargmuesli/vio/compare/23.0.0-beta.7...23.0.0-beta.8) (2026-10-12)
+
+### Bug Fixes
+
+* **types:** reference shared type augmentations for consumers ([3bb1775](https://github.com/dargmuesli/vio/commit/3bb17754a05963700319d9ec182f6e313d9b32ce))
+
 ## [23.0.0-beta.7](https://github.com/dargmuesli/vio/compare/23.0.0-beta.6...23.0.0-beta.7) (2026-10-12)
 
 ### Bug Fixes
