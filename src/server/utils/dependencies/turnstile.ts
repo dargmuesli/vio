@@ -1,4 +1,6 @@
+import { verifyTurnstileToken } from '@nuxtjs/turnstile/runtime/server/utils/verify'
 import { consola } from 'consola'
+import { createError } from 'nuxt/server'
 
 /**
  * Verifies a Turnstile token from the request body
