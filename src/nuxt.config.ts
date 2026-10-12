@@ -380,6 +380,7 @@ export default defineNuxtConfig(
         credits: false,
         zeroRuntime: true,
       },
+      skewProtection: false, // needs storage that persists across builds (https://nuxtseo.com/docs/skew-protection/guides/storage-configuration), which docker builds in ci do not provide
 
       // environments
       $development: {
