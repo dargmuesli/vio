@@ -6,11 +6,32 @@ allowBuilds:
   unrs-resolver: false
   vue-demi: false
 minimumReleaseAgeExclude:
-  - '@nuxt/kit@4.5.1'
-  - '@nuxt/nitro-server@4.5.1'
-  - '@nuxt/schema@4.5.1'
-  - '@nuxt/vite-builder@4.5.1'
-  - nuxt@4.5.1
+  - '@nuxtjs/robots@7.0.0'
+  - '@nuxtjs/seo@6.0.1'
+  - '@nuxtjs/sitemap@9.0.1'
+  - '@takumi-rs/core-darwin-arm64@2.15.1'
+  - '@takumi-rs/core-darwin-x64@2.15.1'
+  - '@takumi-rs/core-linux-arm64-gnu@2.15.1'
+  - '@takumi-rs/core-linux-arm64-musl@2.15.1'
+  - '@takumi-rs/core-linux-x64-gnu@2.15.1'
+  - '@takumi-rs/core-linux-x64-musl@2.15.1'
+  - '@takumi-rs/core-win32-arm64-msvc@2.15.1'
+  - '@takumi-rs/core-win32-x64-msvc@2.15.1'
+  - '@takumi-rs/core@2.15.1'
+  - '@takumi-rs/helpers@2.15.1'
+  - nuxt-ai-ready@3.0.1
+  - nuxt-link-checker@6.0.0
+  - nuxt-og-image@7.0.1
+  - nuxt-schema-org@7.0.0
+  - nuxt-seo-utils@9.0.0
+  - nuxt-site-config-kit@5.0.1
+  - nuxt-site-config@5.0.1
+  - nuxt-skew-protection@2.0.1
+  - nuxtseo-devtools-host@1.0.1
+  - nuxtseo-layer-devtools@6.0.1
+  - nuxtseo-shared@6.0.1
+  - site-config-stack@5.0.0 || 5.0.1
+  - sitemapd@0.2.3
 packages:
   - src
   - tests

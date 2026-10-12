@@ -86,6 +86,7 @@ export default defineConfig({
   webServer: {
     command: `pnpm run --dir ../src certificates && pnpm run --dir ../src start:${process.env.VIO_SERVER || 'dev'}`,
     env: {
+      NUXT_APP_SECRET: 'vio-testing-app-secret-0123456789', // keeps open graph image url signatures stable
       NUXT_PUBLIC_VIO_IS_TESTING: 'true',
     },
     ignoreHTTPSErrors: true, // TODO: remove once tests run without it

@@ -9,8 +9,8 @@ const PAGE_PATH = '/privacy-policy'
 testPageLoad(PAGE_PATH)
 testOgImage({
   dynamic: {
-    de: 'a_~U29jaWFsIFByZXZpZXcgSW1hZ2UgZsO8ciBlaW5lIFZpbyBXZWJzZWl0ZS4,c_Nuxt.takumi,description_~VmlvIGlzdCBAZGFyZ211ZXNsaXMgTnV4dCBsYXllci4,title_~RGF0ZW5zY2h1dHplcmtsw6RydW5n,p_Ii9kZS9wcml2YWN5LXBvbGljeSI,s_DU5WLSExy6ehILwL.png',
-    en: `a_Social+Preview+Image+for+a+Vio+webpage.,c_Nuxt.takumi,description_~VmlvIGlzIEBkYXJnbXVlc2xpJ3MgTnV4dCBsYXllci4,title_Privacy+Policy,p_Ii9wcml2YWN5LXBvbGljeSI,s_SQUGCYMm7fhf7ebm.png`,
+    de: 'a_~U29jaWFsIFByZXZpZXcgSW1hZ2UgZsO8ciBlaW5lIFZpbyBXZWJzZWl0ZS4,c_Nuxt.takumi,description_~VmlvIGlzdCBAZGFyZ211ZXNsaXMgTnV4dCBsYXllci4,title_~RGF0ZW5zY2h1dHplcmtsw6RydW5n,p_Ii9kZS9wcml2YWN5LXBvbGljeSI,s_owzrQ3eXIsAPBrR5.png',
+    en: `a_Social+Preview+Image+for+a+Vio+webpage.,c_Nuxt.takumi,description_~VmlvIGlzIEBkYXJnbXVlc2xpJ3MgTnV4dCBsYXllci4,title_Privacy+Policy,p_Ii9wcml2YWN5LXBvbGljeSI,s_tYo1ll3o4j4Kjyns.png`,
   },
   static: {
     de: 'o_c55c66c8dde816be.png',
