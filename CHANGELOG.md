@@ -1,3 +1,10 @@
+## [23.0.0-beta.7](https://github.com/dargmuesli/vio/compare/23.0.0-beta.6...23.0.0-beta.7) (2026-10-12)
+
+### Bug Fixes
+
+* **turnstile:** add import extension ([09caa13](https://github.com/dargmuesli/vio/commit/09caa13b5173d4937213e9f981998151d367909f))
+* **turnstile:** import server helpers explicitly ([1186ebd](https://github.com/dargmuesli/vio/commit/1186ebd58876e51634bd155b3773b194ecf66f2b))
+
 ## [23.0.0-beta.6](https://github.com/dargmuesli/vio/compare/23.0.0-beta.5...23.0.0-beta.6) (2026-10-12)
 
 ### ⚠ BREAKING CHANGES
