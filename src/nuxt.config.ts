@@ -21,6 +21,10 @@ import {
 } from './shared/utils/constants'
 
 const { resolve } = createResolver(import.meta.url)
+const SHARED_TYPE_REFERENCES = [
+  { path: resolve('shared/types/app-config.d.ts') },
+  { path: resolve('shared/types/request-event-context.d.ts') },
+]
 
 export default defineNuxtConfig(
   defu(
@@ -59,6 +63,17 @@ export default defineNuxtConfig(
         routeTypedFetch: true,
         strictRouteTypes: true,
         typedPages: true,
+      },
+      hooks: {
+        // consumers' generated tsconfigs exclude `node_modules`, so this layer's type augmentations need explicit references
+        'prepare:types'({ nodeReferences, references, sharedReferences }) {
+          for (const list of [nodeReferences, references, sharedReferences]) {
+            list.push(...SHARED_TYPE_REFERENCES)
+          }
+        },
+        'nitro:prepare:types'({ references }) {
+          references.push(...SHARED_TYPE_REFERENCES)
+        },
       },
       modules: [
         '@dargmuesli/nuxt-cookie-control',
