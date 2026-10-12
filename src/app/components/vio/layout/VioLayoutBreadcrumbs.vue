@@ -4,7 +4,7 @@
       :aria-label="t('home')"
       data-testid="breadcrumb-prefix-/"
       :is-colored="false"
-      :to="localePath('/')"
+      :to="localePath({ path: '/' })"
     >
       <VioIconHome classes="h-6 w-6" />
     </VioLink>
