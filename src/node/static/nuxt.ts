@@ -1,8 +1,8 @@
 import type { defineNuxtConfig } from 'nuxt/config'
 
-import type { Service } from '../services'
-import { SERVICES } from '../services'
-import { IS_IN_FRONTEND_DEVELOPMENT } from './'
+import type { Service } from '../services.ts'
+import { SERVICES } from '../services.ts'
+import { IS_IN_FRONTEND_DEVELOPMENT } from './environment.ts'
 
 export const VIO_NUXT_BASE_CONFIG = ({
   services,

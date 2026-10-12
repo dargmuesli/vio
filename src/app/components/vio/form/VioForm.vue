@@ -45,6 +45,8 @@
 <script setup lang="ts">
 import type { BaseValidation } from '@vuelidate/core'
 
+import type { BackendError } from '../../../../shared/types/api'
+
 const {
   errors = undefined,
   errorsPgIds = undefined,
