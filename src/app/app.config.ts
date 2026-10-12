@@ -5,7 +5,7 @@ export default defineAppConfig({
   },
 })
 
-declare module 'nuxt/schema' {
+declare module '@nuxt/schema' {
   interface AppConfig {
     vio: {
       seo?: {
