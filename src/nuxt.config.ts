@@ -52,6 +52,14 @@ export default defineNuxtConfig(
           enabled: true,
         },
       },
+      experimental: {
+        early404: true,
+        inlineErrorRendering: true,
+        prerenderErrorPages: true,
+        routeTypedFetch: true,
+        strictRouteTypes: true,
+        typedPages: true,
+      },
       modules: [
         '@dargmuesli/nuxt-cookie-control',
         '@nuxt/devtools',
@@ -118,7 +126,6 @@ export default defineNuxtConfig(
         compressPublicAssets: true,
         experimental: {
           asyncContext: true,
-          typedPages: true,
         },
       },
       runtimeConfig: {
@@ -173,20 +180,19 @@ export default defineNuxtConfig(
         },
       },
       typescript: {
-        nodeTsConfig: {
-          include: [resolve('./node')],
-        },
-        tsConfig: {
-          nodeTsConfig: {
-            include: [resolve('../.config'), resolve('../node')],
-          },
+        appTsConfig: {
           vueCompilerOptions: {
             htmlAttributes: [], // https://github.com/johnsoncodehk/volar/issues/1970#issuecomment-1276994634
           },
-          // compilerOptions: {
-          //   noErrorTruncation: true,
-          // },
         },
+        nodeTsConfig: {
+          include: [resolve('./node')],
+        },
+        // tsConfig: {
+        //   compilerOptions: {
+        //     noErrorTruncation: true,
+        //   },
+        // },
       },
       vite: {
         plugins: [

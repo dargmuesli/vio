@@ -1,7 +1,7 @@
 <template>
   <VioButtonColored
     :aria-label="t('home')"
-    :to="localePath('/')"
+    :to="localePath({ path: '/' })"
     @click="emit('click')"
   >
     {{ t('home') }}
