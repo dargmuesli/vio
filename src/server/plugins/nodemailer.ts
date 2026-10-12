@@ -27,12 +27,20 @@ export default defineNitroPlugin((nitroApp) => {
   })
 })
 
+type EmailContext = {
+  nodemailer: {
+    transporter: Transporter
+  }
+}
+
+declare module '@nuxt/schema' {
+  interface RequestEventContext {
+    $email?: EmailContext
+  }
+}
+
 declare module 'h3' {
   interface H3EventContext {
-    $email?: {
-      nodemailer: {
-        transporter: Transporter
-      }
-    }
+    $email?: EmailContext
   }
 }

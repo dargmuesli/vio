@@ -1,7 +1,6 @@
-import { defineEventHandler } from 'h3'
+import { defineEventHandler } from 'nuxt/server'
 
 export default defineEventHandler((event) => {
-  const { res } = event.node
-  res.setHeader('Content-Type', 'text/plain')
-  res.end('OK')
+  event.res.headers.set('Content-Type', 'text/plain')
+  return 'OK'
 })
