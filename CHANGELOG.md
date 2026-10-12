@@ -1,3 +1,21 @@
+## [23.0.0-beta.6](https://github.com/dargmuesli/vio/compare/23.0.0-beta.5...23.0.0-beta.6) (2026-10-12)
+
+### ⚠ BREAKING CHANGES
+
+* **nuxt:** adopt nuxt 4.6 features (#467)
+
+### Features
+
+* **nuxt:** adopt nuxt 4.6 features ([#467](https://github.com/dargmuesli/vio/issues/467)) ([c06259b](https://github.com/dargmuesli/vio/commit/c06259b9b7e8df7d7a7ed35cd01d6bd8004bcc0e))
+
+### Bug Fixes
+
+* **deps:** bump pnpm to 11.25.0 (GHSA-vx52-2968-3vc6) ([ad02c2a](https://github.com/dargmuesli/vio/commit/ad02c2a8e8e8b9984f55c53884c7929d70eb3f05))
+* schedule release ([5fced6f](https://github.com/dargmuesli/vio/commit/5fced6f31021c4cd5669de9f5234ce3618c85cdc))
+* schedule release ([7d34e5c](https://github.com/dargmuesli/vio/commit/7d34e5c913bda5b1839db04c8366878ea76191a3))
+* schedule release ([9a43f5f](https://github.com/dargmuesli/vio/commit/9a43f5f8674a1c86a2c80edcec321bce223c6c95))
+* schedule release ([6027ba7](https://github.com/dargmuesli/vio/commit/6027ba7ce9393e1baa423e35ba1bce954fc75041))
+
 ## [23.0.0-beta.5](https://github.com/dargmuesli/vio/compare/23.0.0-beta.4...23.0.0-beta.5) (2026-08-27)
 
 ### Bug Fixes
