@@ -1,3 +1,9 @@
+## [23.0.0-beta.10](https://github.com/dargmuesli/vio/compare/23.0.0-beta.9...23.0.0-beta.10) (2026-10-12)
+
+### Bug Fixes
+
+* **server:** narrow site url type for consumers ([#471](https://github.com/dargmuesli/vio/issues/471)) ([602c3f4](https://github.com/dargmuesli/vio/commit/602c3f4be6c5b98b61677f0a6b44def91a90b904))
+
 ## [23.0.0-beta.9](https://github.com/dargmuesli/vio/compare/23.0.0-beta.8...23.0.0-beta.9) (2026-10-12)
 
 ### ⚠ BREAKING CHANGES
