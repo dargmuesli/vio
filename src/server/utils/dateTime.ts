@@ -1,5 +1,7 @@
 import { getCookie, getRequestIP, type RequestEvent } from 'nuxt/server'
 
+import { TIMEZONE_COOKIE_NAME } from '../../shared/utils/constants'
+
 export const getTimeZone = async ({
   event,
   isTesting,
@@ -26,15 +28,13 @@ export const getTimeZone = async ({
   }
 }
 
-// the `dateTime` middleware has already resolved the time zone for every request
-export const useTimeZone = async () => useEvent().context.$timeZone
-
 export const getTimeZoneByIpApi = async ({ ip }: { ip: string }) => {
-  const ipApiResult = await $fetch<{ timezone: string }>(
-    `http://geoip:8080/${ip}`,
-  ).catch(() => {})
+  const response = await fetch(`http://geoip:8080/${ip}`).catch(() => {})
 
-  if (ipApiResult) {
-    return ipApiResult.timezone
-  }
+  if (!response?.ok) return
+
+  const ipApiResult = (await response.json().catch(() => {})) as
+    { timezone?: string } | undefined
+
+  return ipApiResult?.timezone
 }

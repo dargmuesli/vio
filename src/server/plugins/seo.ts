@@ -1,3 +1,6 @@
+import { defineNitroPlugin } from 'nitropack/runtime'
+import { useRuntimeConfig } from 'nuxt/server'
+
 export default defineNitroPlugin((_nitroApp) => {
   const runtimeConfig = useRuntimeConfig()
 
