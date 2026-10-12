@@ -12,13 +12,13 @@ import {
   NUXT_PUBLIC_SENTRY_RELEASE,
   SITE_URL,
   VIO_NUXT_BASE_CONFIG,
-} from './node/static'
+} from './node/static/index.ts'
 import {
   GTAG_COOKIE_ID,
   TIMEZONE_COOKIE_NAME,
   VIO_GET_CSP,
   VIO_SITE_NAME,
-} from './shared/utils/constants'
+} from './shared/utils/constants.ts'
 
 const { resolve } = createResolver(import.meta.url)
 
@@ -54,11 +54,13 @@ export default defineNuxtConfig(
       },
       experimental: {
         early404: true,
-        inlineErrorRendering: true,
+        // TODO: remove once a nuxt release includes https://github.com/nuxt/nuxt/pull/36548 (`defineAppConfig` is undefined in nitro otherwise)
+        nitroAutoImports: true,
         prerenderErrorPages: true,
-        routeTypedFetch: true,
         strictRouteTypes: true,
-        typedPages: true,
+      },
+      future: {
+        compatibilityVersion: 5,
       },
       modules: [
         '@dargmuesli/nuxt-cookie-control',
@@ -124,9 +126,6 @@ export default defineNuxtConfig(
       ],
       nitro: {
         compressPublicAssets: true,
-        experimental: {
-          asyncContext: true,
-        },
       },
       runtimeConfig: {
         public: {
@@ -195,32 +194,7 @@ export default defineNuxtConfig(
         // },
       },
       vite: {
-        plugins: [
-          tailwindcss(),
-          {
-            // This plugin suppresses false-positive sourcemap warnings from Tailwind's Vite plugin
-            // TODO: remove once tailwind generates sourcemaps for their transforms (https://github.com/tailwindlabs/tailwindcss/discussions/16119)
-            apply: 'build',
-            name: 'vite-plugin-ignore-sourcemap-warnings',
-            configResolved(config) {
-              const originalOnWarn = config.build.rollupOptions.onwarn
-              config.build.rollupOptions.onwarn = (warning, warn) => {
-                if (
-                  warning.code === 'SOURCEMAP_BROKEN' &&
-                  warning.plugin === '@tailwindcss/vite:generate:build'
-                ) {
-                  return
-                }
-
-                if (originalOnWarn) {
-                  originalOnWarn(warning, warn)
-                } else {
-                  warn(warning)
-                }
-              }
-            },
-          },
-        ],
+        plugins: [tailwindcss()],
       },
 
       // modules

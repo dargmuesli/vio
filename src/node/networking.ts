@@ -1,16 +1,6 @@
-import type { H3Event } from 'h3'
-
-import { SERVICES } from './services'
-import type { Service, ServiceName } from './services'
-import { SITE_URL_TYPED } from './static'
-
-export const getHost = (event: H3Event) => {
-  const host = event.node.req.headers.host
-
-  if (!host) throw new Error('Host header is not given!')
-
-  return host
-}
+import { SERVICES } from './services.ts'
+import type { Service, ServiceName } from './services.ts'
+import { SITE_URL_TYPED } from './static/index.ts'
 
 export const getRootHost = (host: string) => {
   const hostParts = host.split('.')

@@ -1,3 +1,3 @@
-export * from './environment'
-export * from './nuxt'
-export * from './sentry'
+export * from './environment.ts'
+export * from './nuxt.ts'
+export * from './sentry.ts'

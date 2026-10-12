@@ -2,7 +2,7 @@ import { DEFAULTS } from '@dargmuesli/nuxt-cookie-control/runtime/types.js'
 import { helpers } from '@vuelidate/validators'
 import { defu } from 'defu'
 
-export { IS_IN_FRONTEND_DEVELOPMENT } from '../../node/static'
+export { IS_IN_FRONTEND_DEVELOPMENT } from '../../node/static/index.ts'
 
 export const VIO_SITE_NAME = 'Vio'
 

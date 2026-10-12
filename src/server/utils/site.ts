@@ -1,3 +1,5 @@
+import { useRuntimeConfig } from 'nuxt/server'
+
 export const useSiteUrl = () => {
   const runtimeConfig = useRuntimeConfig()
   const siteUrl = runtimeConfig.public.i18n.baseUrl

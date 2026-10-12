@@ -1,5 +1,9 @@
 import { defu } from 'defu'
+import { defineNitroPlugin } from 'nitropack/runtime'
 import type { ModuleOptions } from 'nuxt-security'
+
+import { VIO_GET_CSP } from '../../shared/utils/constants'
+import { useSiteUrl } from '../utils/site'
 
 // remove invalid `'none'`s and duplicates
 export const cleanupCsp = (

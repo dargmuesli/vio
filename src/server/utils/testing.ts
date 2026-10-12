@@ -1,23 +1,14 @@
-import type { H3Event } from 'h3'
+import { getCookie, useRuntimeConfig, type RequestEvent } from 'nuxt/server'
 
-// `useEvent()` throws whenever there is no Nitro request context, which is the case for everything that runs at startup, such as a Nitro plugin's hooks.
-// Testing detection still works there through the runtime config, so fall back to no event rather than letting that error escape.
-const tryUseEvent = () => {
-  try {
-    return useEvent()
-  } catch {
-    return undefined
-  }
-}
+import { TESTING_COOKIE_NAME } from '../../shared/utils/constants'
 
 export const useIsTesting = ({
+  event,
   isCookieEnabled = true,
-}:
-  | {
-      isCookieEnabled?: boolean
-    }
-  | undefined = {}) => {
-  const event = tryUseEvent()
+}: {
+  event?: RequestEvent
+  isCookieEnabled?: boolean
+} = {}) => {
   const runtimeConfig = useRuntimeConfig()
 
   return getIsTesting({ event, isCookieEnabled, runtimeConfig })
@@ -28,7 +19,7 @@ export const getIsTesting = ({
   isCookieEnabled,
   runtimeConfig,
 }: {
-  event?: H3Event
+  event?: RequestEvent
   isCookieEnabled?: boolean
   runtimeConfig: ReturnType<typeof useRuntimeConfig>
 }) => {

@@ -1,4 +1,6 @@
-import { createTransport, type Transporter } from 'nodemailer'
+import { defineNitroPlugin } from 'nitropack/runtime'
+import { createTransport } from 'nodemailer'
+import { useRuntimeConfig } from 'nuxt/server'
 
 export default defineNitroPlugin((nitroApp) => {
   const runtimeConfig = useRuntimeConfig()
@@ -26,14 +28,3 @@ export default defineNitroPlugin((nitroApp) => {
     transporter.close()
   })
 })
-
-// h3 handlers and `useEvent()` still see h3's context
-declare module 'h3' {
-  interface H3EventContext {
-    $email?: {
-      nodemailer: {
-        transporter: Transporter
-      }
-    }
-  }
-}
