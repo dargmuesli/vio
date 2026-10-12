@@ -19,8 +19,8 @@ testOgImage({
     en: `a_Social+Preview+Image+for+a+Vio+webpage.,c_Nuxt.takumi,description_~VmlvIGlzIEBkYXJnbXVlc2xpJ3MgTnV4dCBsYXllci4,title_Vio+Playground,s_XIIA50Cjd--fAucZ.png`,
   },
   static: {
-    de: 'a_~U29jaWFsIFByZXZpZXcgSW1hZ2UgZsO8ciBlaW5lIFZpbyBXZWJzZWl0ZS4,c_Nuxt.takumi,description_~VmlvIGlzdCBAZGFyZ211ZXNsaXMgTnV4dCBsYXllci4,title_Vio+Playground,p_Ii9kZSI.png',
-    en: `a_Social+Preview+Image+for+a+Vio+webpage.,c_Nuxt.takumi,description_~VmlvIGlzIEBkYXJnbXVlc2xpJ3MgTnV4dCBsYXllci4,title_Vio+Playground.png`,
+    de: 'o_e60723303301da5a.png',
+    en: 'o_81343496f82f39b7.png',
   },
 })
 testPageLoad(PAGE_PATH)

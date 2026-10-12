@@ -3,7 +3,7 @@
 #############
 # Create base image.
 
-FROM node:24.19.0-alpine AS base-image
+FROM node:24.21.0-alpine AS base-image
 
 # The `CI` environment variable must be set for pnpm to run in headless mode
 ENV CI=true
@@ -53,9 +53,8 @@ FROM base-image AS prepare
 COPY ./pnpm-lock.yaml ./package.json ./pnpm-workspace.yaml ./
 # COPY ./patches ./patches
 
-# TODO: evaluate dropping libc arguments by running e2e tests separately
 RUN --mount=type=cache,id=pnpm-store,target=/root/.local/share/pnpm/store \
-    pnpm fetch --libc=musl --libc=glibc
+    pnpm fetch
 
 COPY ./ ./
 
@@ -123,7 +122,7 @@ RUN pnpm -r run lint
 ########################
 # Nuxt: test (e2e, base-image)
 
-FROM mcr.microsoft.com/playwright:v1.62.1 AS test-e2e-base-image
+FROM mcr.microsoft.com/playwright:v1.64.0 AS test-e2e-base-image
 
 # The `CI` environment variable must be set for pnpm to run in headless mode
 ENV CI=true

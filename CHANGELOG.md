@@ -37,6 +37,36 @@
 
 * **networking:** extensible SERVICES map with fixed subdomain/staging-host handling ([#448](https://github.com/dargmuesli/vio/issues/448)) ([5ece556](https://github.com/dargmuesli/vio/commit/5ece556bc0f9e03b4692269361af5319362f0d22))
 
+## [22.0.10](https://github.com/dargmuesli/vio/compare/22.0.9...22.0.10) (2026-10-03)
+
+### Bug Fixes
+
+* schedule release ([7d34e5c](https://github.com/dargmuesli/vio/commit/7d34e5c913bda5b1839db04c8366878ea76191a3))
+
+## [22.0.9](https://github.com/dargmuesli/vio/compare/22.0.8...22.0.9) (2026-09-26)
+
+### Bug Fixes
+
+* schedule release ([9a43f5f](https://github.com/dargmuesli/vio/commit/9a43f5f8674a1c86a2c80edcec321bce223c6c95))
+
+## [22.0.8](https://github.com/dargmuesli/vio/compare/22.0.7...22.0.8) (2026-09-12)
+
+### Bug Fixes
+
+* schedule release ([6027ba7](https://github.com/dargmuesli/vio/commit/6027ba7ce9393e1baa423e35ba1bce954fc75041))
+
+## [22.0.7](https://github.com/dargmuesli/vio/compare/22.0.6...22.0.7) (2026-09-01)
+
+### Bug Fixes
+
+* **deps:** bump pnpm to 11.25.0 (GHSA-vx52-2968-3vc6) ([ad02c2a](https://github.com/dargmuesli/vio/commit/ad02c2a8e8e8b9984f55c53884c7929d70eb3f05))
+
+## [22.0.6](https://github.com/dargmuesli/vio/compare/22.0.5...22.0.6) (2026-08-23)
+
+### Bug Fixes
+
+* **networking:** keep multi-label localhost roots in getRootHost ([#451](https://github.com/dargmuesli/vio/issues/451)) ([a8105e1](https://github.com/dargmuesli/vio/commit/a8105e16fbad51f5b6ee2dbcc5da126bf2989ceb))
+
 ## [22.0.5](https://github.com/dargmuesli/vio/compare/22.0.4...22.0.5) (2026-08-23)
 
 ### Bug Fixes
