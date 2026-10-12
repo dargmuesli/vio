@@ -1,3 +1,13 @@
+## [23.0.0-beta.9](https://github.com/dargmuesli/vio/compare/23.0.0-beta.8...23.0.0-beta.9) (2026-10-12)
+
+### ⚠ BREAKING CHANGES
+
+* **seo:** upgrade to v6 (#469)
+
+### Features
+
+* **seo:** upgrade to v6 ([#469](https://github.com/dargmuesli/vio/issues/469)) ([6ebf63c](https://github.com/dargmuesli/vio/commit/6ebf63c1ea0c11afe7dc9303c9ca0a746225445a))
+
 ## [23.0.0-beta.8](https://github.com/dargmuesli/vio/compare/23.0.0-beta.7...23.0.0-beta.8) (2026-10-12)
 
 ### Bug Fixes

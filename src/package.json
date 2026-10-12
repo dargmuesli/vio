@@ -51,13 +51,13 @@
   "devDependencies": {
     "@types/node": "24.19.1",
     "@urql/devtools": "2.0.3",
-    "nuxtseo-devtools-host": "1.0.1",
     "@urql/exchange-graphcache": "9.0.2",
     "@vueuse/core": "15.0.0",
     "consola": "3.4.2",
     "defu": "6.1.7",
     "lodash-es": "4.18.1",
     "nuxt": "4.6.1",
+    "nuxtseo-devtools-host": "1.0.1",
     "pinia": "4.0.3",
     "postcss-html": "2.0.0",
     "prettier": "3.9.9",
@@ -124,5 +124,5 @@
     "start:static": "node node/server/static.mjs"
   },
   "type": "module",
-  "version": "23.0.0-beta.8"
+  "version": "23.0.0-beta.9"
 }
