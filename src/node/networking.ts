@@ -1,11 +1,9 @@
-import type { H3Event } from 'h3'
-
 import { SERVICES } from './services'
 import type { Service, ServiceName } from './services'
 import { SITE_URL_TYPED } from './static'
 
-export const getHost = (event: H3Event) => {
-  const host = event.node.req.headers.host
+export const getHost = (event: { headers: Headers }) => {
+  const host = event.headers.get('host')
 
   if (!host) throw new Error('Host header is not given!')
 
