@@ -8,20 +8,23 @@ if (sharedSentryConfig.dsn) {
 
   Sentry.init({
     ...sharedSentryConfig,
+    dataCollection: {
+      ...sharedSentryConfig.dataCollection,
+      httpHeaders: false, // v10 attached no headers to `httpClientIntegration` events
+    },
     integrations: [
       ...(features.profiling ? [Sentry.browserProfilingIntegration()] : []),
-      ...(features.consoleCapture
-        ? [
-            Sentry.captureConsoleIntegration(),
-            Sentry.consoleLoggingIntegration(),
-          ]
+      ...(features.consoleCapture ? [Sentry.captureConsoleIntegration()] : []),
+      ...(features.consoleCapture && runtimeConfig.public.sentry.logs.enable
+        ? [Sentry.consoleLoggingIntegration()]
         : []),
       Sentry.httpClientIntegration(),
       ...(features.pinia ? [Sentry.piniaIntegration(usePinia())] : []),
       ...(features.replay ? [Sentry.replayIntegration()] : []),
       Sentry.zodErrorsIntegration(),
     ],
-    profilesSampleRate: features.profiling
+    profileLifecycle: 'trace',
+    profileSessionSampleRate: features.profiling
       ? runtimeConfig.public.sentry.profiles.sampleRate
       : undefined,
     replaysOnErrorSampleRate: features.replay
