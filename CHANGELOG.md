@@ -1,3 +1,31 @@
+## [23.0.0](https://github.com/dargmuesli/vio/compare/22.0.11...23.0.0) (2026-10-14)
+
+### ⚠ BREAKING CHANGES
+
+* **seo:** upgrade to v6 (#469)
+* **nuxt:** adopt nuxt 4.6 features (#467)
+* **sentry:** add configurable Sentry integration (#452)
+* **networking:** extensible SERVICES map with fixed subdomain/staging-host handling (#448)
+
+### Features
+
+* **nuxt:** adopt nuxt 4.6 features ([#467](https://github.com/dargmuesli/vio/issues/467)) ([c06259b](https://github.com/dargmuesli/vio/commit/c06259b9b7e8df7d7a7ed35cd01d6bd8004bcc0e))
+* **sentry:** add configurable Sentry integration ([#452](https://github.com/dargmuesli/vio/issues/452)) ([e95956b](https://github.com/dargmuesli/vio/commit/e95956b87b5e7e5aa057cd0b17a7b3369b91c7f5))
+* **seo:** upgrade to v6 ([#469](https://github.com/dargmuesli/vio/issues/469)) ([6ebf63c](https://github.com/dargmuesli/vio/commit/6ebf63c1ea0c11afe7dc9303c9ca0a746225445a))
+
+### Bug Fixes
+
+* **sentry:** use a relative import for the layer-safe config ([#454](https://github.com/dargmuesli/vio/issues/454)) ([92f6ef4](https://github.com/dargmuesli/vio/commit/92f6ef453af571dc2bf0eeabe6b6eb5e7c6c6178))
+* **server:** narrow site url type for consumers ([#471](https://github.com/dargmuesli/vio/issues/471)) ([602c3f4](https://github.com/dargmuesli/vio/commit/602c3f4be6c5b98b61677f0a6b44def91a90b904))
+* **testing:** tolerate a missing request context in useIsTesting ([#455](https://github.com/dargmuesli/vio/issues/455)) ([27b0e08](https://github.com/dargmuesli/vio/commit/27b0e082243bca7991d7d09e29a74f9b305316fd))
+* **turnstile:** add import extension ([09caa13](https://github.com/dargmuesli/vio/commit/09caa13b5173d4937213e9f981998151d367909f))
+* **turnstile:** import server helpers explicitly ([1186ebd](https://github.com/dargmuesli/vio/commit/1186ebd58876e51634bd155b3773b194ecf66f2b))
+* **types:** reference shared type augmentations for consumers ([3bb1775](https://github.com/dargmuesli/vio/commit/3bb17754a05963700319d9ec182f6e313d9b32ce))
+
+### Code Refactoring
+
+* **networking:** extensible SERVICES map with fixed subdomain/staging-host handling ([#448](https://github.com/dargmuesli/vio/issues/448)) ([5ece556](https://github.com/dargmuesli/vio/commit/5ece556bc0f9e03b4692269361af5319362f0d22))
+
 ## [23.0.0-beta.10](https://github.com/dargmuesli/vio/compare/23.0.0-beta.9...23.0.0-beta.10) (2026-10-12)
 
 ### Bug Fixes
