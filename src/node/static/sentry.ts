@@ -12,7 +12,6 @@ export const NUXT_PUBLIC_SENTRY_PROJECT_PUBLIC_KEY =
 export const NUXT_PUBLIC_SENTRY_RELEASE = process.env.RELEASE_NAME
 
 export const getSharedSentryConfig = ({
-  enableLogs,
   environment,
   host,
   isInProduction,
@@ -21,7 +20,6 @@ export const getSharedSentryConfig = ({
   projectPublicKey,
   release,
 }: {
-  enableLogs?: boolean
   environment?: string
   host?: string
   isInProduction: boolean
@@ -34,8 +32,23 @@ export const getSharedSentryConfig = ({
     projectPublicKey && host && projectId
       ? `https://${projectPublicKey}@${host}/${projectId}`
       : undefined,
+  // keeps the v10 defaults, which v11 widened to collect personal data like cookies, bodies and ips
+  dataCollection: {
+    cookies: false,
+    databaseQueryData: false,
+    frameContextLines: 7,
+    genAI: { inputs: false, outputs: false },
+    graphQL: { document: false, variables: false },
+    httpBodies: [],
+    httpHeaders: {
+      request: { deny: ['forwarded', '-ip', 'remote-', 'via', '-user'] },
+      response: { deny: ['forwarded', '-ip', 'remote-', 'via', '-user'] },
+    },
+    queues: false,
+    urlQueryParams: { deny: ['forwarded', '-ip', 'remote-', 'via', '-user'] },
+    userInfo: false, // data set through Sentry's user setter is sent regardless
+  },
   enabled: isInProduction && !isTesting,
-  enableLogs,
   environment,
   release,
   tracesSampleRate: 1.0,

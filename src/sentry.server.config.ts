@@ -12,7 +12,6 @@ import {
 } from './node/static'
 
 const sharedSentryConfig = getSharedSentryConfig({
-  enableLogs: NUXT_PUBLIC_SENTRY_LOGS_ENABLE,
   environment: NUXT_PUBLIC_SENTRY_ENVIRONMENT,
   host: NUXT_PUBLIC_SENTRY_HOST,
   isInProduction: IS_IN_PRODUCTION,
