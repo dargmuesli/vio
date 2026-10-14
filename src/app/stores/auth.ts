@@ -1,9 +1,11 @@
+import * as Sentry from '@sentry/nuxt'
 import { decodeJwt } from 'jose'
 import type { JWTPayload } from 'jose'
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
 
 export const useVioAuthStore = defineStore('vio-auth', () => {
+  const runtimeConfig = useRuntimeConfig()
   const jwt = ref<string>()
   const jwtDecoded = ref<JWTPayload>()
   const signedInUsername = ref<string>()
@@ -21,6 +23,17 @@ export const useVioAuthStore = defineStore('vio-auth', () => {
       jwtDecodedNew.exp > Math.floor(Date.now() / 1000)
         ? (jwtDecodedNew.username as string | undefined)
         : undefined
+
+    if (runtimeConfig.public.sentry.features.userTracking) {
+      Sentry.setUser(
+        signedInUsername.value
+          ? {
+              id: jwtDecodedNew?.sub as string | undefined,
+              username: signedInUsername.value,
+            }
+          : null,
+      )
+    }
   }
 
   return {

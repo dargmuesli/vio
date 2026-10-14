@@ -2,7 +2,17 @@ import tailwindcss from '@tailwindcss/vite'
 import { defu } from 'defu'
 import { createResolver } from 'nuxt/kit'
 
-import { IS_IN_STACK, SITE_URL, VIO_NUXT_BASE_CONFIG } from './node/static'
+import {
+  IS_IN_STACK,
+  NUXT_PUBLIC_SENTRY_ENVIRONMENT,
+  NUXT_PUBLIC_SENTRY_HOST,
+  NUXT_PUBLIC_SENTRY_LOGS_ENABLE,
+  NUXT_PUBLIC_SENTRY_PROJECT_ID,
+  NUXT_PUBLIC_SENTRY_PROJECT_PUBLIC_KEY,
+  NUXT_PUBLIC_SENTRY_RELEASE,
+  SITE_URL,
+  VIO_NUXT_BASE_CONFIG,
+} from './node/static'
 import {
   GTAG_COOKIE_ID,
   TIMEZONE_COOKIE_NAME,
@@ -11,6 +21,10 @@ import {
 } from './shared/utils/constants'
 
 const { resolve } = createResolver(import.meta.url)
+const SHARED_TYPE_REFERENCES = [
+  { path: resolve('shared/types/app-config.d.ts') },
+  { path: resolve('shared/types/request-event-context.d.ts') },
+]
 
 export default defineNuxtConfig(
   defu(
@@ -42,6 +56,25 @@ export default defineNuxtConfig(
           enabled: true,
         },
       },
+      experimental: {
+        early404: true,
+        inlineErrorRendering: true,
+        prerenderErrorPages: true,
+        routeTypedFetch: true,
+        strictRouteTypes: true,
+        typedPages: true,
+      },
+      hooks: {
+        // consumers' generated tsconfigs exclude `node_modules`, so this layer's type augmentations need explicit references
+        'prepare:types'({ nodeReferences, references, sharedReferences }) {
+          for (const list of [nodeReferences, references, sharedReferences]) {
+            list.push(...SHARED_TYPE_REFERENCES)
+          }
+        },
+        'nitro:prepare:types'({ references }) {
+          references.push(...SHARED_TYPE_REFERENCES)
+        },
+      },
       modules: [
         '@dargmuesli/nuxt-cookie-control',
         '@nuxt/devtools',
@@ -53,6 +86,7 @@ export default defineNuxtConfig(
         '@nuxtjs/seo',
         '@nuxtjs/turnstile',
         '@pinia/nuxt',
+        '@sentry/nuxt/module',
         'nuxt-gtag',
         'shadcn-nuxt',
         (_options, nuxt) => {
@@ -72,7 +106,16 @@ export default defineNuxtConfig(
           ) {
             if (nuxt.options.nitro.static) {
               nuxtConfigSecurityHeaders.contentSecurityPolicy = defu(
-                VIO_GET_CSP({ siteUrl: new URL(SITE_URL) }),
+                VIO_GET_CSP({
+                  sentry:
+                    NUXT_PUBLIC_SENTRY_HOST && NUXT_PUBLIC_SENTRY_PROJECT_ID
+                      ? {
+                          host: NUXT_PUBLIC_SENTRY_HOST,
+                          projectId: NUXT_PUBLIC_SENTRY_PROJECT_ID,
+                        }
+                      : undefined,
+                  siteUrl: new URL(SITE_URL),
+                }),
                 nuxtConfigSecurityHeaders.contentSecurityPolicy,
               )
             }
@@ -98,13 +141,43 @@ export default defineNuxtConfig(
         compressPublicAssets: true,
         experimental: {
           asyncContext: true,
-          typedPages: true,
         },
       },
       runtimeConfig: {
         public: {
           i18n: {
             baseUrl: SITE_URL,
+          },
+          sentry: {
+            environment: NUXT_PUBLIC_SENTRY_ENVIRONMENT,
+            features: {
+              consoleCapture: true,
+              pinia: true,
+              profiling: true,
+              replay: true,
+              securityHeaders: true,
+              userTracking: true,
+            },
+            host: NUXT_PUBLIC_SENTRY_HOST,
+            logs: {
+              enable: NUXT_PUBLIC_SENTRY_LOGS_ENABLE,
+            },
+            profiles: {
+              sampleRate: 1.0,
+            },
+            project: {
+              id: NUXT_PUBLIC_SENTRY_PROJECT_ID,
+              publicKey: NUXT_PUBLIC_SENTRY_PROJECT_PUBLIC_KEY,
+            },
+            release: NUXT_PUBLIC_SENTRY_RELEASE,
+            replays: {
+              onError: {
+                sampleRate: 1.0,
+              },
+              session: {
+                sampleRate: 0.0,
+              },
+            },
           },
           site: {
             url: SITE_URL, // TODO: evaluate removal for static builds in favor of i18n.baseUrl
@@ -122,24 +195,19 @@ export default defineNuxtConfig(
         },
       },
       typescript: {
-        nodeTsConfig: {
-          include: [resolve('./node')],
-        },
-        tsConfig: {
-          nodeTsConfig: {
-            include: [
-              resolve('../.config'),
-              resolve('../node'),
-              // resolve('../sentry.server.config.ts'),
-            ],
-          },
+        appTsConfig: {
           vueCompilerOptions: {
             htmlAttributes: [], // https://github.com/johnsoncodehk/volar/issues/1970#issuecomment-1276994634
           },
-          // compilerOptions: {
-          //   noErrorTruncation: true,
-          // },
         },
+        nodeTsConfig: {
+          include: [resolve('./node')],
+        },
+        // tsConfig: {
+        //   compilerOptions: {
+        //     noErrorTruncation: true,
+        //   },
+        // },
       },
       vite: {
         plugins: [
@@ -290,6 +358,16 @@ export default defineNuxtConfig(
         },
         strict: true,
       },
+      sentry: {
+        release: {
+          name: process.env.RELEASE_NAME || undefined,
+        },
+        sourcemaps: {
+          disable: !process.env.SENTRY_AUTH_TOKEN,
+        },
+        telemetry: false,
+        // `org`, `project` and `authToken` are read from the `SENTRY_ORG`, `SENTRY_PROJECT` and `SENTRY_AUTH_TOKEN` environment variables by the module itself.
+      },
       seo: {
         minify: false, // TODO: enable (https://github.com/harlan-zw/nuxt-seo-utils/issues/103)
         validateAppHead: false, // `app.head.htmlAttrs.lang` is only a fallback for the routeless SPA pages, as i18n sets the correct language per locale everywhere else.
@@ -302,6 +380,7 @@ export default defineNuxtConfig(
         credits: false,
         zeroRuntime: true,
       },
+      skewProtection: false, // needs storage that persists across builds (https://nuxtseo.com/docs/skew-protection/guides/storage-configuration), which docker builds in ci do not provide
 
       // environments
       $development: {
@@ -326,6 +405,9 @@ export default defineNuxtConfig(
           headers: {
             strictTransportSecurity: false, // prevent endless reload in Chrome
           },
+        },
+        sentry: {
+          enabled: false,
         },
         site: {
           debug: true,

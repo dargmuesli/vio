@@ -1,3 +1,89 @@
+## [23.0.0-beta.10](https://github.com/dargmuesli/vio/compare/23.0.0-beta.9...23.0.0-beta.10) (2026-10-12)
+
+### Bug Fixes
+
+* **server:** narrow site url type for consumers ([#471](https://github.com/dargmuesli/vio/issues/471)) ([602c3f4](https://github.com/dargmuesli/vio/commit/602c3f4be6c5b98b61677f0a6b44def91a90b904))
+
+## [23.0.0-beta.9](https://github.com/dargmuesli/vio/compare/23.0.0-beta.8...23.0.0-beta.9) (2026-10-12)
+
+### ⚠ BREAKING CHANGES
+
+* **seo:** upgrade to v6 (#469)
+
+### Features
+
+* **seo:** upgrade to v6 ([#469](https://github.com/dargmuesli/vio/issues/469)) ([6ebf63c](https://github.com/dargmuesli/vio/commit/6ebf63c1ea0c11afe7dc9303c9ca0a746225445a))
+
+## [23.0.0-beta.8](https://github.com/dargmuesli/vio/compare/23.0.0-beta.7...23.0.0-beta.8) (2026-10-12)
+
+### Bug Fixes
+
+* **types:** reference shared type augmentations for consumers ([3bb1775](https://github.com/dargmuesli/vio/commit/3bb17754a05963700319d9ec182f6e313d9b32ce))
+
+## [23.0.0-beta.7](https://github.com/dargmuesli/vio/compare/23.0.0-beta.6...23.0.0-beta.7) (2026-10-12)
+
+### Bug Fixes
+
+* **turnstile:** add import extension ([09caa13](https://github.com/dargmuesli/vio/commit/09caa13b5173d4937213e9f981998151d367909f))
+* **turnstile:** import server helpers explicitly ([1186ebd](https://github.com/dargmuesli/vio/commit/1186ebd58876e51634bd155b3773b194ecf66f2b))
+
+## [23.0.0-beta.6](https://github.com/dargmuesli/vio/compare/23.0.0-beta.5...23.0.0-beta.6) (2026-10-12)
+
+### ⚠ BREAKING CHANGES
+
+* **nuxt:** adopt nuxt 4.6 features (#467)
+
+### Features
+
+* **nuxt:** adopt nuxt 4.6 features ([#467](https://github.com/dargmuesli/vio/issues/467)) ([c06259b](https://github.com/dargmuesli/vio/commit/c06259b9b7e8df7d7a7ed35cd01d6bd8004bcc0e))
+
+### Bug Fixes
+
+* **deps:** bump pnpm to 11.25.0 (GHSA-vx52-2968-3vc6) ([ad02c2a](https://github.com/dargmuesli/vio/commit/ad02c2a8e8e8b9984f55c53884c7929d70eb3f05))
+* schedule release ([5fced6f](https://github.com/dargmuesli/vio/commit/5fced6f31021c4cd5669de9f5234ce3618c85cdc))
+* schedule release ([7d34e5c](https://github.com/dargmuesli/vio/commit/7d34e5c913bda5b1839db04c8366878ea76191a3))
+* schedule release ([9a43f5f](https://github.com/dargmuesli/vio/commit/9a43f5f8674a1c86a2c80edcec321bce223c6c95))
+* schedule release ([6027ba7](https://github.com/dargmuesli/vio/commit/6027ba7ce9393e1baa423e35ba1bce954fc75041))
+
+## [23.0.0-beta.5](https://github.com/dargmuesli/vio/compare/23.0.0-beta.4...23.0.0-beta.5) (2026-08-27)
+
+### Bug Fixes
+
+* **testing:** tolerate a missing request context in useIsTesting ([#455](https://github.com/dargmuesli/vio/issues/455)) ([27b0e08](https://github.com/dargmuesli/vio/commit/27b0e082243bca7991d7d09e29a74f9b305316fd))
+
+## [23.0.0-beta.4](https://github.com/dargmuesli/vio/compare/23.0.0-beta.3...23.0.0-beta.4) (2026-08-27)
+
+### Bug Fixes
+
+* **sentry:** use a relative import for the layer-safe config ([#454](https://github.com/dargmuesli/vio/issues/454)) ([92f6ef4](https://github.com/dargmuesli/vio/commit/92f6ef453af571dc2bf0eeabe6b6eb5e7c6c6178))
+
+## [23.0.0-beta.3](https://github.com/dargmuesli/vio/compare/23.0.0-beta.2...23.0.0-beta.3) (2026-08-25)
+
+### ⚠ BREAKING CHANGES
+
+* **sentry:** add configurable Sentry integration (#452)
+
+### Features
+
+* **sentry:** add configurable Sentry integration ([#452](https://github.com/dargmuesli/vio/issues/452)) ([e95956b](https://github.com/dargmuesli/vio/commit/e95956b87b5e7e5aa057cd0b17a7b3369b91c7f5))
+
+## [23.0.0-beta.2](https://github.com/dargmuesli/vio/compare/23.0.0-beta.1...23.0.0-beta.2) (2026-08-23)
+
+### Bug Fixes
+
+* **networking:** keep multi-label localhost roots in getRootHost ([#451](https://github.com/dargmuesli/vio/issues/451)) ([a8105e1](https://github.com/dargmuesli/vio/commit/a8105e16fbad51f5b6ee2dbcc5da126bf2989ceb))
+* **release:** tag npm publishes with the release channel ([#450](https://github.com/dargmuesli/vio/issues/450)) ([091695e](https://github.com/dargmuesli/vio/commit/091695e8701c29dc69f3e48808e3a8f0f3f18331))
+
+## [23.0.0-beta.1](https://github.com/dargmuesli/vio/compare/22.0.4...23.0.0-beta.1) (2026-08-23)
+
+### ⚠ BREAKING CHANGES
+
+* **networking:** extensible SERVICES map with fixed subdomain/staging-host handling (#448)
+
+### Code Refactoring
+
+* **networking:** extensible SERVICES map with fixed subdomain/staging-host handling ([#448](https://github.com/dargmuesli/vio/issues/448)) ([5ece556](https://github.com/dargmuesli/vio/commit/5ece556bc0f9e03b4692269361af5319362f0d22))
+
 ## [22.0.11](https://github.com/dargmuesli/vio/compare/22.0.10...22.0.11) (2026-10-12)
 
 ### Bug Fixes

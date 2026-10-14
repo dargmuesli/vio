@@ -1,9 +1,11 @@
-export default defineEventHandler(async (event) => {
+import { defineEventHandler, useAppConfig } from 'nuxt/server'
+
+export default defineEventHandler((event) => {
   const config = useAppConfig(event)
 
   if (!config.vio.server) return
 
   for (const entry of Object.entries(config.vio.server.middleware.headers)) {
-    appendHeader(event, entry[0], entry[1])
+    event.res.headers.append(entry[0], entry[1])
   }
 })

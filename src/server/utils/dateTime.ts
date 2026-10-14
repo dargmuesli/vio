@@ -1,10 +1,10 @@
-import type { H3Event } from 'h3'
+import { getCookie, getRequestIP, type RequestEvent } from 'nuxt/server'
 
 export const getTimeZone = async ({
   event,
   isTesting,
 }: {
-  event: H3Event
+  event: RequestEvent
   isTesting?: boolean
 }) => {
   const timeZoneBySsr = event.context.$timeZone
@@ -26,12 +26,8 @@ export const getTimeZone = async ({
   }
 }
 
-export const useTimeZone = async () => {
-  const event = useEvent()
-  const isTesting = useIsTesting()
-
-  return await getTimeZone({ event, isTesting })
-}
+// the `dateTime` middleware has already resolved the time zone for every request
+export const useTimeZone = async () => useEvent().context.$timeZone
 
 export const getTimeZoneByIpApi = async ({ ip }: { ip: string }) => {
   const ipApiResult = await $fetch<{ timezone: string }>(

@@ -12,7 +12,13 @@ export const COOKIE_CONTROL_CONSENT_COOKIE_NAME =
 export const COOKIE_PREFIX = VIO_SITE_NAME.toLocaleLowerCase()
 export const COOKIE_SEPARATOR = '_'
 export const FETCH_RETRY_AMOUNT = 3
-export const VIO_GET_CSP = ({ siteUrl }: { siteUrl: URL }) =>
+export const VIO_GET_CSP = ({
+  sentry,
+  siteUrl,
+}: {
+  sentry?: { host: string; projectId: string }
+  siteUrl: URL
+}) =>
   defu(
     {
       // Cloudflare
@@ -23,6 +29,17 @@ export const VIO_GET_CSP = ({ siteUrl }: { siteUrl: URL }) =>
               'https://static.cloudflareinsights.com', // analytics
               `${siteUrl}cdn-cgi/`, // https://developers.cloudflare.com/fundamentals/reference/cdn-cgi-endpoint/
             ],
+          }
+        : {}),
+    },
+    {
+      // Sentry
+      ...(sentry
+        ? {
+            'connect-src': [
+              `https://${sentry.host}/api/${sentry.projectId}/envelope/`,
+            ],
+            'worker-src': ['blob:'],
           }
         : {}),
     },
