@@ -59,10 +59,12 @@ export default defineNuxtConfig(
       experimental: {
         early404: true,
         inlineErrorRendering: true,
+        prefetchPreloadTags: true,
         prerenderErrorPages: true,
         routeTypedFetch: true,
         strictRouteTypes: true,
         typedPages: true,
+        watcher: 'builder',
       },
       hooks: {
         // consumers' generated tsconfigs exclude `node_modules`, so this layer's type augmentations need explicit references
