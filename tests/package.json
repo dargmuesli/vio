@@ -8,7 +8,7 @@
     "cross-env": "10.1.0",
     "eslint": "10.12.0",
     "eslint-config-prettier": "10.1.8",
-    "eslint-plugin-prettier": "5.5.6",
+    "eslint-plugin-prettier": "5.5.7",
     "lodash-es": "4.18.1",
     "playwright-core": "1.64.0",
     "tsdown": "0.23.1",
