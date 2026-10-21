@@ -59,10 +59,12 @@ export default defineNuxtConfig(
       experimental: {
         early404: true,
         inlineErrorRendering: true,
+        prefetchPreloadTags: true,
         prerenderErrorPages: true,
         routeTypedFetch: true,
         strictRouteTypes: true,
         typedPages: true,
+        watcher: 'builder',
       },
       hooks: {
         // consumers' generated tsconfigs exclude `node_modules`, so this layer's type augmentations need explicit references
@@ -210,32 +212,7 @@ export default defineNuxtConfig(
         // },
       },
       vite: {
-        plugins: [
-          tailwindcss(),
-          {
-            // This plugin suppresses false-positive sourcemap warnings from Tailwind's Vite plugin
-            // TODO: remove once tailwind generates sourcemaps for their transforms (https://github.com/tailwindlabs/tailwindcss/discussions/16119)
-            apply: 'build',
-            name: 'vite-plugin-ignore-sourcemap-warnings',
-            configResolved(config) {
-              const originalOnWarn = config.build.rollupOptions.onwarn
-              config.build.rollupOptions.onwarn = (warning, warn) => {
-                if (
-                  warning.code === 'SOURCEMAP_BROKEN' &&
-                  warning.plugin === '@tailwindcss/vite:generate:build'
-                ) {
-                  return
-                }
-
-                if (originalOnWarn) {
-                  originalOnWarn(warning, warn)
-                } else {
-                  warn(warning)
-                }
-              }
-            },
-          },
-        ],
+        plugins: [tailwindcss()],
       },
 
       // modules
