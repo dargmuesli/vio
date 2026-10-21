@@ -335,6 +335,11 @@ export default defineNuxtConfig(
         },
         strict: true,
       },
+      ogImage: {
+        // nuxt-og-image falls back to `seo.automaticTwitterTags` for this; keep it explicit,
+        // because `automaticTwitterTags` is disabled below to stop the conflicting inferred tag.
+        includeTwitter: true,
+      },
       sentry: {
         release: {
           name: process.env.RELEASE_NAME || undefined,
@@ -346,6 +351,10 @@ export default defineNuxtConfig(
         // `org`, `project` and `authToken` are read from the `SENTRY_ORG`, `SENTRY_PROJECT` and `SENTRY_AUTH_TOKEN` environment variables by the module itself.
       },
       seo: {
+        // nuxt-og-image already renders `twitter:card` (`summary_large_image`) per page; seo-utils'
+        // inferred `twitter:card` duplicates it and, with unhead >= 3.4.3, can resolve to `summary`
+        // after hydration, conflicting with the og-image tag.
+        automaticTwitterTags: false,
         minify: false, // TODO: enable (https://github.com/harlan-zw/nuxt-seo-utils/issues/103)
         validateAppHead: false, // `app.head.htmlAttrs.lang` is only a fallback for the routeless SPA pages, as i18n sets the correct language per locale everywhere else.
       },
