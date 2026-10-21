@@ -1,3 +1,9 @@
+## [23.1.0](https://github.com/dargmuesli/vio/compare/23.0.0...23.1.0) (2026-10-21)
+
+### Features
+
+* **nuxt:** adopt nuxt 4.5 opt-ins ([#473](https://github.com/dargmuesli/vio/issues/473)) ([d519498](https://github.com/dargmuesli/vio/commit/d5194989a900f6856646bdf9093969fc3531e279))
+
 ## [23.0.0](https://github.com/dargmuesli/vio/compare/22.0.11...23.0.0) (2026-10-14)
 
 ### ⚠ BREAKING CHANGES
