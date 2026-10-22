@@ -1,3 +1,9 @@
+## [23.1.1](https://github.com/dargmuesli/vio/compare/23.1.0...23.1.1) (2026-10-22)
+
+### Bug Fixes
+
+* **nuxt:** configure the dev server outside stack deploys ([#477](https://github.com/dargmuesli/vio/issues/477)) ([445cc5d](https://github.com/dargmuesli/vio/commit/445cc5d591427a89be1f770e7b74e6729067bd95))
+
 ## [23.1.0](https://github.com/dargmuesli/vio/compare/23.0.0...23.1.0) (2026-10-21)
 
 ### Features
