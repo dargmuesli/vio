@@ -57,6 +57,7 @@
   },
   "scripts": {
     "build": "tsdown",
+    "postbuild": "node -e \"import('node:fs').then(fs=>{fs.mkdirSync('dist/scripts',{recursive:true});fs.copyFileSync('scripts/warm-dev-server.mjs','dist/scripts/warm-dev-server.mjs')})\"",
     "build:watch": "tsdown --watch",
     "lint": "pnpm run lint:js && pnpm run lint:ts",
     "lint:fix": "pnpm run lint:js --fix",
