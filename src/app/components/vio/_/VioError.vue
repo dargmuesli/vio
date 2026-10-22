@@ -5,7 +5,11 @@
       {{ description }}
     </div>
     <pre
-      v-if="stack && !runtimeConfig.public.vio.isInProduction"
+      v-if="
+        stack &&
+        !runtimeConfig.public.vio.isInProduction &&
+        !runtimeConfig.public.vio.isTesting
+      "
       class="overflow-auto wrap-break-word whitespace-pre-wrap"
     >
       {{ stack }}

@@ -21,6 +21,15 @@ import {
 } from './shared/utils/constants'
 
 const { resolve } = createResolver(import.meta.url)
+// mirrors the suffix `mkcert.sh` and the node and static test servers use for the local certificates
+const CERTIFICATE_SUFFIX = process.env.CI ? '-ci' : '-dev'
+// `nuxt dev` serves local HTTPS for direct browser access, as in local development and the
+// e2e test server. A stack deploy also runs `nuxt dev`, but behind traefik, which talks
+// plain HTTP to the backend, so local HTTPS would break it. The stack and the e2e both set
+// `NUXT_PUBLIC_I18N_BASE_URL` (making `IS_IN_STACK` true); only the e2e also sets the
+// testing flag, so that is what separates the two.
+const IS_IN_STACK_DEPLOY =
+  IS_IN_STACK && process.env.NUXT_PUBLIC_VIO_IS_TESTING !== 'true'
 const SHARED_TYPE_REFERENCES = [
   { path: resolve('shared/types/app-config.d.ts') },
   { path: resolve('shared/types/request-event-context.d.ts') },
@@ -40,14 +49,14 @@ export default defineNuxtConfig(
         },
       },
       compatibilityDate: '2024-04-03',
-      ...(IS_IN_STACK
+      ...(IS_IN_STACK_DEPLOY
         ? {}
         : {
             devServer: {
               host: 'app.localhost',
               https: {
-                key: './.config/certificates/ssl-dev.key',
-                cert: './.config/certificates/ssl-dev.crt',
+                key: `./.config/certificates/ssl${CERTIFICATE_SUFFIX}.key`,
+                cert: `./.config/certificates/ssl${CERTIFICATE_SUFFIX}.crt`,
               },
             },
           }),
