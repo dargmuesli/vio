@@ -154,15 +154,27 @@ export default defineNuxtConfig(
           asyncContext: true,
         },
       },
+      routeRules: {
+        '/**': {
+          headers: {
+            'Document-Policy': 'js-profiling', // required by Sentry's browser profiling (Chromium-based browsers)
+          },
+        },
+      },
       runtimeConfig: {
         public: {
           i18n: {
             baseUrl: SITE_URL,
           },
           sentry: {
+            // merged over this layer's data collection floor, so extending projects can relax or
+            // tighten individual categories of collected data
+            dataCollection: {},
             environment: NUXT_PUBLIC_SENTRY_ENVIRONMENT,
             features: {
               consoleCapture: true,
+              // not every extending project uses GraphQL, so this is opt-in
+              graphqlClient: false,
               pinia: true,
               profiling: true,
               replay: true,
