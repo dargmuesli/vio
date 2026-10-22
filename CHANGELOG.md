@@ -1,3 +1,9 @@
+## [23.1.5](https://github.com/dargmuesli/vio/compare/23.1.4...23.1.5) (2026-10-22)
+
+### Bug Fixes
+
+* **sentry:** extend the dataCollection floor for GDPR ([#479](https://github.com/dargmuesli/vio/issues/479)) ([29eca62](https://github.com/dargmuesli/vio/commit/29eca6269e8ed854e65359f1a239eeb58faa144e))
+
 ## [23.1.4](https://github.com/dargmuesli/vio/compare/23.1.3...23.1.4) (2026-10-22)
 
 ### Bug Fixes
