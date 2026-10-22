@@ -1,3 +1,9 @@
+## [23.1.2](https://github.com/dargmuesli/vio/compare/23.1.1...23.1.2) (2026-10-22)
+
+### Bug Fixes
+
+* **tests:** ship the warm-dev-server script in the published package ([c9f7a99](https://github.com/dargmuesli/vio/commit/c9f7a99a76800f8d42332ca87af5d9a73c148ab0))
+
 ## [23.1.1](https://github.com/dargmuesli/vio/compare/23.1.0...23.1.1) (2026-10-22)
 
 ### Bug Fixes
