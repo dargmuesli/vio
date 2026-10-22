@@ -1,3 +1,9 @@
+## [23.1.4](https://github.com/dargmuesli/vio/compare/23.1.3...23.1.4) (2026-10-22)
+
+### Bug Fixes
+
+* **deps:** update dependency @sentry/nuxt to v11 ([#472](https://github.com/dargmuesli/vio/issues/472)) ([12b6ce2](https://github.com/dargmuesli/vio/commit/12b6ce2fd151686d53cb66b902347174db2fe936))
+
 ## [23.1.3](https://github.com/dargmuesli/vio/compare/23.1.2...23.1.3) (2026-10-22)
 
 ### Bug Fixes
