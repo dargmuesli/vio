@@ -1,6 +1,6 @@
 import AxeBuilder from '@axe-core/playwright'
 import { expect, type Page } from '@playwright/test'
-import { joinURL, withoutTrailingSlash } from 'ufo'
+import { withoutTrailingSlash } from 'ufo'
 
 import { vioTest } from '#tests/e2e/fixtures/vioTest'
 import { SITE_URL, TIMEOUT } from '#tests/e2e/utils/constants'
@@ -471,6 +471,13 @@ export const testMetadata = async ({
     ).replaceAll(SITE_URL, 'https://example.com'),
   ).toMatchSnapshot(`schema-org-graph-${process.env.VIO_SERVER}.json`)
 
+  const ogImageContent = await page
+    .locator('meta[property="og:image"]')
+    .getAttribute('content')
+  expect(ogImageContent).toBeTruthy()
+  expect(ogImageContent?.startsWith(SITE_URL)).toBeTruthy()
+  expect(ogImageContent).toMatch(/(\/_og\/[ds]\/).+\.png$/)
+
   // if (process.env.VIO_SERVER === 'static') {
   //   expect(
   //     await page
@@ -480,30 +487,33 @@ export const testMetadata = async ({
   // }
 }
 
-export const testOgImage = (paths: {
-  static?: Record<string, string>
-  dynamic?: Record<string, string>
-}) =>
+// the og image's url is signed with the app secret, so it cannot be hardcoded here - it is read from the page's og:image tag instead
+export const testOgImage = (paths: { en: string; de: string }) =>
   vioTest.describe('visual regression', () => {
     vioTest('generates the open graph image', async ({ page }) => {
-      const isStaticServer = process.env.VIO_SERVER === 'static'
-      const serverPaths = isStaticServer ? paths.static : paths.dynamic
+      const base = new URL(SITE_URL)
 
-      if (!serverPaths) {
-        throw new Error(
-          isStaticServer
-            ? 'Static paths must be provided for static server tests'
-            : 'Dynamic paths must be provided for dynamic server tests',
-        )
+      for (const path of [paths.en, paths.de]) {
+        await page.goto(path)
+
+        const ogImageUrl = await page
+          .locator('meta[property="og:image"]')
+          .getAttribute('content')
+
+        if (!ogImageUrl) throw new Error('The og:image url is not given.')
+
+        // The og:image url's host is the site url, which is baked into the
+        // pre-built node/static output at build time (the production host).
+        // The url is signed with the test app secret, so the production host
+        // would reject it ("Invalid URL signature"). Replace the host with the
+        // test host (SITE_URL) so the test navigates to the test server.
+        const ogImage = new URL(ogImageUrl)
+        ogImage.protocol = base.protocol
+        ogImage.host = base.host
+
+        await page.goto(ogImage.toString())
+        await expect(page).toHaveScreenshot()
       }
-
-      const serverPrefix = isStaticServer ? 's' : 'd'
-
-      await page.goto(joinURL(`/_og/${serverPrefix}/${serverPaths.en}`))
-      await expect(page).toHaveScreenshot()
-
-      await page.goto(joinURL(`/_og/${serverPrefix}/${serverPaths.de}`))
-      await expect(page).toHaveScreenshot()
     })
   })
 

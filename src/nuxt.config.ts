@@ -21,6 +21,19 @@ import {
 } from './shared/utils/constants.ts'
 
 const { resolve } = createResolver(import.meta.url)
+// mirrors the suffix `mkcert.sh` and the node and static test servers use for the local certificates
+const CERTIFICATE_SUFFIX = process.env.CI ? '-ci' : '-dev'
+// `nuxt dev` serves local HTTPS for direct browser access, as in local development and the
+// e2e test server. A stack deploy also runs `nuxt dev`, but behind traefik, which talks
+// plain HTTP to the backend, so local HTTPS would break it. The stack and the e2e both set
+// `NUXT_PUBLIC_I18N_BASE_URL` (making `IS_IN_STACK` true); only the e2e also sets the
+// testing flag, so that is what separates the two.
+const IS_IN_STACK_DEPLOY =
+  IS_IN_STACK && process.env.NUXT_PUBLIC_VIO_IS_TESTING !== 'true'
+const SHARED_TYPE_REFERENCES = [
+  { path: resolve('shared/types/app-config.d.ts') },
+  { path: resolve('shared/types/request-event-context.d.ts') },
+]
 
 export default defineNuxtConfig(
   defu(
@@ -36,14 +49,14 @@ export default defineNuxtConfig(
         },
       },
       compatibilityDate: '2024-04-03',
-      ...(IS_IN_STACK
+      ...(IS_IN_STACK_DEPLOY
         ? {}
         : {
             devServer: {
               host: 'app.localhost',
               https: {
-                key: './.config/certificates/ssl-dev.key',
-                cert: './.config/certificates/ssl-dev.crt',
+                key: `./.config/certificates/ssl${CERTIFICATE_SUFFIX}.key`,
+                cert: `./.config/certificates/ssl${CERTIFICATE_SUFFIX}.crt`,
               },
             },
           }),
@@ -54,13 +67,23 @@ export default defineNuxtConfig(
       },
       experimental: {
         early404: true,
-        // TODO: remove once a nuxt release includes https://github.com/nuxt/nuxt/pull/36548 (`defineAppConfig` is undefined in nitro otherwise)
-        nitroAutoImports: true,
+        prefetchPreloadTags: true,
         prerenderErrorPages: true,
         strictRouteTypes: true,
       },
       future: {
         compatibilityVersion: 5,
+      },
+      hooks: {
+        // consumers' generated tsconfigs exclude `node_modules`, so this layer's type augmentations need explicit references
+        'prepare:types'({ nodeReferences, references, sharedReferences }) {
+          for (const list of [nodeReferences, references, sharedReferences]) {
+            list.push(...SHARED_TYPE_REFERENCES)
+          }
+        },
+        'nitro:prepare:types'({ references }) {
+          references.push(...SHARED_TYPE_REFERENCES)
+        },
       },
       modules: [
         '@dargmuesli/nuxt-cookie-control',
@@ -127,15 +150,27 @@ export default defineNuxtConfig(
       nitro: {
         compressPublicAssets: true,
       },
+      routeRules: {
+        '/**': {
+          headers: {
+            'Document-Policy': 'js-profiling', // required by Sentry's browser profiling (Chromium-based browsers)
+          },
+        },
+      },
       runtimeConfig: {
         public: {
           i18n: {
             baseUrl: SITE_URL,
           },
           sentry: {
+            // merged over this layer's data collection floor, so extending projects can relax or
+            // tighten individual categories of collected data
+            dataCollection: {},
             environment: NUXT_PUBLIC_SENTRY_ENVIRONMENT,
             features: {
               consoleCapture: true,
+              // not every extending project uses GraphQL, so this is opt-in
+              graphqlClient: false,
               pinia: true,
               profiling: true,
               replay: true,
@@ -317,6 +352,11 @@ export default defineNuxtConfig(
         },
         strict: true,
       },
+      ogImage: {
+        // nuxt-og-image falls back to `seo.automaticTwitterTags` for this; keep it explicit,
+        // because `automaticTwitterTags` is disabled below to stop the conflicting inferred tag.
+        includeTwitter: true,
+      },
       sentry: {
         release: {
           name: process.env.RELEASE_NAME || undefined,
@@ -328,6 +368,10 @@ export default defineNuxtConfig(
         // `org`, `project` and `authToken` are read from the `SENTRY_ORG`, `SENTRY_PROJECT` and `SENTRY_AUTH_TOKEN` environment variables by the module itself.
       },
       seo: {
+        // nuxt-og-image already renders `twitter:card` (`summary_large_image`) per page; seo-utils'
+        // inferred `twitter:card` duplicates it and, with unhead >= 3.4.3, can resolve to `summary`
+        // after hydration, conflicting with the og-image tag.
+        automaticTwitterTags: false,
         minify: false, // TODO: enable (https://github.com/harlan-zw/nuxt-seo-utils/issues/103)
         validateAppHead: false, // `app.head.htmlAttrs.lang` is only a fallback for the routeless SPA pages, as i18n sets the correct language per locale everywhere else.
       },
@@ -339,6 +383,7 @@ export default defineNuxtConfig(
         credits: false,
         zeroRuntime: true,
       },
+      skewProtection: false, // needs storage that persists across builds (https://nuxtseo.com/docs/skew-protection/guides/storage-configuration), which docker builds in ci do not provide
 
       // environments
       $development: {

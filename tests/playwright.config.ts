@@ -1,6 +1,16 @@
 import { defineConfig, devices } from '@playwright/test'
+import { fileURLToPath } from 'node:url'
 
 import { SITE_URL, TIMEOUT } from '#tests/e2e/utils/constants'
+
+const VIO_SERVER = process.env.VIO_SERVER || 'dev'
+
+// The warmup script is resolved relative to this config so the published
+// package ships and uses its own copy (dist/scripts/warm-dev-server.mjs)
+// instead of relying on a consumer-local file.
+const WARM_DEV_SERVER_SCRIPT = fileURLToPath(
+  new URL('./scripts/warm-dev-server.mjs', import.meta.url),
+)
 
 /**
  * Read environment variables from file.
@@ -84,8 +94,15 @@ export default defineConfig({
 
   /* Run your local dev server before starting the tests */
   webServer: {
-    command: `pnpm run --dir ../src certificates && pnpm run --dir ../src start:${process.env.VIO_SERVER || 'dev'}`,
+    // the dev server warms up behind a transparent proxy, because a request
+    // reaching nuxt dev during its startup can hang and exhaust the timeout;
+    // see scripts/warm-dev-server.mjs
+    command:
+      VIO_SERVER === 'dev'
+        ? `pnpm run --dir ../src certificates && node ${WARM_DEV_SERVER_SCRIPT}`
+        : `pnpm run --dir ../src certificates && pnpm run --dir ../src start:${VIO_SERVER}`,
     env: {
+      NUXT_APP_SECRET: 'vio-testing-app-secret-0123456789', // nuxt-og-image v7 derives its url signing key from the app secret, so the test server needs a root secret of its own (at least 32 characters)
       NUXT_PUBLIC_VIO_IS_TESTING: 'true',
     },
     ignoreHTTPSErrors: true, // TODO: remove once tests run without it

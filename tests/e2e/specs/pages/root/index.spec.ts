@@ -14,14 +14,8 @@ const PAGE_PATH = '/'
 
 testA11y(PAGE_PATH)
 testOgImage({
-  dynamic: {
-    de: 'a_~U29jaWFsIFByZXZpZXcgSW1hZ2UgZsO8ciBlaW5lIFZpbyBXZWJzZWl0ZS4,c_Nuxt.takumi,description_~VmlvIGlzdCBAZGFyZ211ZXNsaXMgTnV4dCBsYXllci4,title_Vio+Playground,p_Ii9kZS8i,s_z2kAL6EsMza71_W4.png',
-    en: `a_Social+Preview+Image+for+a+Vio+webpage.,c_Nuxt.takumi,description_~VmlvIGlzIEBkYXJnbXVlc2xpJ3MgTnV4dCBsYXllci4,title_Vio+Playground,s_XIIA50Cjd--fAucZ.png`,
-  },
-  static: {
-    de: 'o_e60723303301da5a.png',
-    en: 'o_81343496f82f39b7.png',
-  },
+  de: '/de',
+  en: PAGE_PATH,
 })
 testPageLoad(PAGE_PATH)
 testVisualRegression(PAGE_PATH)

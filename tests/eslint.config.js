@@ -25,4 +25,14 @@ export default pluginTypescript.config(
       'no-console': 'error',
     },
   },
+  // node scripts
+  {
+    files: ['scripts/**/*.mjs'],
+    languageOptions: {
+      globals: {
+        process: 'readonly',
+        setTimeout: 'readonly',
+      },
+    },
+  },
 )

@@ -2,6 +2,37 @@ import { SERVICES } from './services.ts'
 import type { Service, ServiceName } from './services.ts'
 import { SITE_URL_TYPED } from './static/index.ts'
 
+// derives the origins this project itself talks to, so Sentry's trace context is only propagated
+// to its own services and never to third parties
+export const getTracePropagationTargets = ({
+  baseUrl,
+  services = SERVICES,
+}: {
+  baseUrl?: string
+  services?: Record<string, Service>
+}): string[] => {
+  if (!baseUrl) return []
+
+  let base: URL
+  try {
+    base = new URL(baseUrl)
+  } catch {
+    return []
+  }
+
+  const targets = [base.origin]
+
+  for (const [name, service] of Object.entries(services)) {
+    if (!service.hasSubdomain) continue
+
+    targets.push(
+      `${base.protocol}//${name.replaceAll('_', '-')}.${getRootHost(base.hostname)}`,
+    )
+  }
+
+  return targets
+}
+
 export const getRootHost = (host: string) => {
   const hostParts = host.split('.')
   const hostPartsLast = hostParts[hostParts.length - 1]
