@@ -49,6 +49,9 @@ function probe() {
         host,
         path: '/',
         port: internalPort,
+        // talks only to the local dev server we just spawned on an internal, un-exposed
+        // loopback port, with our own mkcert dev cert, so there is no untrusted peer to
+        // authenticate; mirrors the e2e's ignoreHTTPSErrors. We only care that it is up.
         rejectUnauthorized: false,
         timeout: 2500,
       },
