@@ -1,3 +1,9 @@
+## [23.1.3](https://github.com/dargmuesli/vio/compare/23.1.2...23.1.3) (2026-10-22)
+
+### Bug Fixes
+
+* **tests:** target the test server for the og image url in testOgImage ([a020b6f](https://github.com/dargmuesli/vio/commit/a020b6f7d4911041e8f99b18b7151baf943942a9))
+
 ## [23.1.2](https://github.com/dargmuesli/vio/compare/23.1.1...23.1.2) (2026-10-22)
 
 ### Bug Fixes
