@@ -229,9 +229,6 @@ importers:
       '@tailwindcss/vite':
         specifier: 4.3.3
         version: 4.3.3(vite@8.3.4(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))
-      '@takumi-rs/core':
-        specifier: 2.16.3
-        version: 2.16.3(csstype@3.2.3)
       '@types/lodash-es':
         specifier: 4.17.12
         version: 4.17.12
@@ -12048,8 +12045,10 @@ snapshots:
     transitivePeerDependencies:
       - preact
       - react
+    optional: true
 
-  '@takumi-rs/helpers@2.16.3': {}
+  '@takumi-rs/helpers@2.16.3':
+    optional: true
 
   '@tanstack/table-core@8.21.3': {}
 
