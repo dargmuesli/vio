@@ -67,6 +67,10 @@ export default defineNuxtConfig(
       },
       experimental: {
         early404: true,
+        // nuxt 5 disables nitro auto-imports by default, but module server runtimes such as
+        // @nuxtjs/i18n still import helpers like `useRuntimeConfig` from `#imports`;
+        // keep enabled until those modules use explicit imports (@nuxt/image did so in 2.2.0)
+        nitroAutoImports: true,
         prefetchPreloadTags: true,
         prerenderErrorPages: true,
         strictRouteTypes: true,
