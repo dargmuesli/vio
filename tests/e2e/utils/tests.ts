@@ -491,6 +491,8 @@ export const testMetadata = async ({
 export const testOgImage = (paths: { en: string; de: string }) =>
   vioTest.describe('visual regression', () => {
     vioTest('generates the open graph image', async ({ page }) => {
+      const base = new URL(SITE_URL)
+
       for (const path of [paths.en, paths.de]) {
         await page.goto(path)
 
@@ -500,7 +502,16 @@ export const testOgImage = (paths: { en: string; de: string }) =>
 
         if (!ogImageUrl) throw new Error('The og:image url is not given.')
 
-        await page.goto(ogImageUrl)
+        // The og:image url's host is the site url, which is baked into the
+        // pre-built node/static output at build time (the production host).
+        // The url is signed with the test app secret, so the production host
+        // would reject it ("Invalid URL signature"). Replace the host with the
+        // test host (SITE_URL) so the test navigates to the test server.
+        const ogImage = new URL(ogImageUrl)
+        ogImage.protocol = base.protocol
+        ogImage.host = base.host
+
+        await page.goto(ogImage.toString())
         await expect(page).toHaveScreenshot()
       }
     })
