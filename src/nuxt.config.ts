@@ -3,7 +3,6 @@ import { defu } from 'defu'
 import { createResolver } from 'nuxt/kit'
 
 import {
-  IS_IN_STACK,
   NUXT_PUBLIC_SENTRY_ENVIRONMENT,
   NUXT_PUBLIC_SENTRY_HOST,
   NUXT_PUBLIC_SENTRY_LOGS_ENABLE,
@@ -21,6 +20,8 @@ import {
 } from './shared/utils/constants'
 
 const { resolve } = createResolver(import.meta.url)
+// mirrors the suffix `mkcert.sh` and the node and static test servers use for the local certificates
+const CERTIFICATE_SUFFIX = process.env.CI ? '-ci' : '-dev'
 const SHARED_TYPE_REFERENCES = [
   { path: resolve('shared/types/app-config.d.ts') },
   { path: resolve('shared/types/request-event-context.d.ts') },
@@ -40,17 +41,14 @@ export default defineNuxtConfig(
         },
       },
       compatibilityDate: '2024-04-03',
-      ...(IS_IN_STACK
-        ? {}
-        : {
-            devServer: {
-              host: 'app.localhost',
-              https: {
-                key: './.config/certificates/ssl-dev.key',
-                cert: './.config/certificates/ssl-dev.crt',
-              },
-            },
-          }),
+      // only `nuxt dev` reads `devServer`, which does not run in a stack deploy, so it must stay configured also when `NUXT_PUBLIC_I18N_BASE_URL` is set, as in the e2e test server
+      devServer: {
+        host: 'app.localhost',
+        https: {
+          key: `./.config/certificates/ssl${CERTIFICATE_SUFFIX}.key`,
+          cert: `./.config/certificates/ssl${CERTIFICATE_SUFFIX}.crt`,
+        },
+      },
       devtools: {
         timeline: {
           enabled: true,
