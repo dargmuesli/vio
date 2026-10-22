@@ -3,6 +3,7 @@ import { defu } from 'defu'
 import { createResolver } from 'nuxt/kit'
 
 import {
+  IS_IN_STACK,
   NUXT_PUBLIC_SENTRY_ENVIRONMENT,
   NUXT_PUBLIC_SENTRY_HOST,
   NUXT_PUBLIC_SENTRY_LOGS_ENABLE,
@@ -22,6 +23,13 @@ import {
 const { resolve } = createResolver(import.meta.url)
 // mirrors the suffix `mkcert.sh` and the node and static test servers use for the local certificates
 const CERTIFICATE_SUFFIX = process.env.CI ? '-ci' : '-dev'
+// `nuxt dev` serves local HTTPS for direct browser access, as in local development and the
+// e2e test server. A stack deploy also runs `nuxt dev`, but behind traefik, which talks
+// plain HTTP to the backend, so local HTTPS would break it. The stack and the e2e both set
+// `NUXT_PUBLIC_I18N_BASE_URL` (making `IS_IN_STACK` true); only the e2e also sets the
+// testing flag, so that is what separates the two.
+const IS_IN_STACK_DEPLOY =
+  IS_IN_STACK && process.env.NUXT_PUBLIC_VIO_IS_TESTING !== 'true'
 const SHARED_TYPE_REFERENCES = [
   { path: resolve('shared/types/app-config.d.ts') },
   { path: resolve('shared/types/request-event-context.d.ts') },
@@ -41,14 +49,17 @@ export default defineNuxtConfig(
         },
       },
       compatibilityDate: '2024-04-03',
-      // only `nuxt dev` reads `devServer`, which does not run in a stack deploy, so it must stay configured also when `NUXT_PUBLIC_I18N_BASE_URL` is set, as in the e2e test server
-      devServer: {
-        host: 'app.localhost',
-        https: {
-          key: `./.config/certificates/ssl${CERTIFICATE_SUFFIX}.key`,
-          cert: `./.config/certificates/ssl${CERTIFICATE_SUFFIX}.crt`,
-        },
-      },
+      ...(IS_IN_STACK_DEPLOY
+        ? {}
+        : {
+            devServer: {
+              host: 'app.localhost',
+              https: {
+                key: `./.config/certificates/ssl${CERTIFICATE_SUFFIX}.key`,
+                cert: `./.config/certificates/ssl${CERTIFICATE_SUFFIX}.crt`,
+              },
+            },
+          }),
       devtools: {
         timeline: {
           enabled: true,
