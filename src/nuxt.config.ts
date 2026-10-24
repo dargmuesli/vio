@@ -12,13 +12,13 @@ import {
   NUXT_PUBLIC_SENTRY_RELEASE,
   SITE_URL,
   VIO_NUXT_BASE_CONFIG,
-} from './node/static'
+} from './node/static/index.ts'
 import {
   GTAG_COOKIE_ID,
   TIMEZONE_COOKIE_NAME,
   VIO_GET_CSP,
   VIO_SITE_NAME,
-} from './shared/utils/constants'
+} from './shared/utils/constants.ts'
 
 const { resolve } = createResolver(import.meta.url)
 // mirrors the suffix `mkcert.sh` and the node and static test servers use for the local certificates
@@ -67,13 +67,16 @@ export default defineNuxtConfig(
       },
       experimental: {
         early404: true,
-        inlineErrorRendering: true,
+        // nuxt 5 disables nitro auto-imports by default, but module server runtimes such as
+        // @nuxtjs/i18n still import helpers like `useRuntimeConfig` from `#imports`;
+        // keep enabled until those modules use explicit imports (@nuxt/image did so in 2.2.0)
+        nitroAutoImports: true,
         prefetchPreloadTags: true,
         prerenderErrorPages: true,
-        routeTypedFetch: true,
         strictRouteTypes: true,
-        typedPages: true,
-        watcher: 'builder',
+      },
+      future: {
+        compatibilityVersion: 5,
       },
       hooks: {
         // consumers' generated tsconfigs exclude `node_modules`, so this layer's type augmentations need explicit references
@@ -150,9 +153,6 @@ export default defineNuxtConfig(
       ],
       nitro: {
         compressPublicAssets: true,
-        experimental: {
-          asyncContext: true,
-        },
       },
       routeRules: {
         '/**': {

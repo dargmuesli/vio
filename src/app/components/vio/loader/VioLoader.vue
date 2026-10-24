@@ -16,6 +16,8 @@
 <script setup lang="ts">
 import type { UnwrapRef } from 'vue'
 
+import type { ApiData } from '../../../../shared/types/api'
+
 const {
   api,
   errorPgIds = undefined,

@@ -1,14 +1,6 @@
-import { SERVICES } from './services'
-import type { Service, ServiceName } from './services'
-import { SITE_URL_TYPED } from './static'
-
-export const getHost = (event: { headers: Headers }) => {
-  const host = event.headers.get('host')
-
-  if (!host) throw new Error('Host header is not given!')
-
-  return host
-}
+import { SERVICES } from './services.ts'
+import type { Service, ServiceName } from './services.ts'
+import { SITE_URL_TYPED } from './static/index.ts'
 
 // derives the origins this project itself talks to, so Sentry's trace context is only propagated
 // to its own services and never to third parties
