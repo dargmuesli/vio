@@ -40,7 +40,7 @@
     "jose": "6.2.13",
     "nodemailer": "10.2.1",
     "nuxt-gtag": "5.0.0",
-    "nuxt-security": "2.6.0",
+    "nuxt-security": "2.7.0",
     "reka-ui": "2.11.0",
     "shadcn-nuxt": "2.8.2",
     "tailwind-merge": "3.7.0",
