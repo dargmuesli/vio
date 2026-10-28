@@ -76,7 +76,7 @@
     "vue-router": "5.4.0"
   },
   "engines": {
-    "node": "^24.15.0"
+    "node": "^26.0.0"
   },
   "files": [
     ".config",
