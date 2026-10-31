@@ -1,3 +1,9 @@
+## [23.1.6](https://github.com/dargmuesli/vio/compare/23.1.5...23.1.6) (2026-10-31)
+
+### Bug Fixes
+
+* schedule release ([8ed2a15](https://github.com/dargmuesli/vio/commit/8ed2a159224d1d538ecb86b5c8e6c8055d10cefe))
+
 ## [23.1.5](https://github.com/dargmuesli/vio/compare/23.1.4...23.1.5) (2026-10-22)
 
 ### Bug Fixes
