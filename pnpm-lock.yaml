@@ -278,14 +278,14 @@ importers:
         specifier: 3.9.0
         version: 3.9.0(eslint@10.14.0(jiti@2.7.0)(supports-color@10.2.2))
       globals:
-        specifier: 17.13.0
-        version: 17.13.0
+        specifier: 17.14.0
+        version: 17.14.0
       jiti:
         specifier: 2.7.0
         version: 2.7.0
       jose:
-        specifier: 6.2.14
-        version: 6.2.14
+        specifier: 6.2.15
+        version: 6.2.15
       nodemailer:
         specifier: 10.3.1
         version: 10.3.1
@@ -5941,8 +5941,8 @@ packages:
     resolution: {integrity: sha512-7ACyT3wmyp3I61S4fG682L0VA2RGD9otkqGJIwNUMF1SWUombIIk+af1unuDYgMm082aHYwD+mzJvv9Iu8dsgg==}
     engines: {node: '>=18'}
 
-  globals@17.13.0:
-    resolution: {integrity: sha512-RwMTC61u7hrG3ZJMkZQOK4JLJrKS8QtoTii63EmWvFXHqycY9FObBJQCbsLxSO8kjKhWE5kV1GC+Vb1g3RI0Zg==}
+  globals@17.14.0:
+    resolution: {integrity: sha512-UtdkTVyAJePQv0J2M9Xe4L0ruNSDV314XiIJsADI2Zf40bcdAonE/D/OhAU8AT99oij9mhLByb+NvA3QWZYgCg==}
     engines: {node: '>=18'}
 
   globby@16.2.4:
@@ -6262,8 +6262,8 @@ packages:
     resolution: {integrity: sha512-AC/7JofJvZGrrneWNaEnJeOLUx+JlGt7tNa0wZiRPT4MY1wmfKjt2+6O2p2uz2+skll8OZZmJMNqeke7kKbNgQ==}
     hasBin: true
 
-  jose@6.2.14:
-    resolution: {integrity: sha512-3JasLuki1NRLQvY4wCoC37KZk4qxoBx2k2aFqLxT84IezqW0bkJKnNtxnZj/Fu1xsQivoc/lytxaRHJoGLjJ1A==}
+  jose@6.2.15:
+    resolution: {integrity: sha512-qdF6ewcZARtef63fJ9AKKZPgxw+t7USH6HLXYcD4CrdmSvDp79rpJSPFEKc90QBeGS63u1KQtN2MZQHC0yDIzA==}
 
   js-tokens@10.0.0:
     resolution: {integrity: sha512-lM/UBzQmfJRo9ABXbPWemivdCW8V2G8FHaHdypQaIy523snUjog0W71ayWXTjiR+ixeMyVHN2XcpnTd/liPg/Q==}
@@ -9967,7 +9967,7 @@ snapshots:
       eslint: 10.14.0(jiti@2.7.0)(supports-color@10.2.2)
       eslint-compat-utils: 0.6.5(eslint@10.14.0(jiti@2.7.0)(supports-color@10.2.2))
       glob: 10.5.0
-      globals: 17.13.0
+      globals: 17.14.0
       ignore: 7.0.14
       import-fresh: 4.0.1
       is-language-code: 3.1.0
@@ -10157,7 +10157,7 @@ snapshots:
       cross-spawn: 7.0.6
       eventsource: 3.0.7
       eventsource-parser: 3.1.1
-      jose: 6.2.14
+      jose: 6.2.15
       pkce-challenge: 5.0.1
       zod: 4.6.7
 
@@ -10460,7 +10460,7 @@ snapshots:
       eslint-plugin-unicorn: 73.0.0(eslint@10.14.0(jiti@2.7.0)(supports-color@10.2.2))
       eslint-plugin-vue: 10.12.0(@stylistic/eslint-plugin@5.10.0(eslint@10.14.0(jiti@2.7.0)(supports-color@10.2.2)))(@typescript-eslint/parser@8.72.1(eslint@10.14.0(jiti@2.7.0)(supports-color@10.2.2))(supports-color@10.2.2)(typescript@6.0.3))(eslint@10.14.0(jiti@2.7.0)(supports-color@10.2.2))(vue-eslint-parser@10.4.1(eslint@10.14.0(jiti@2.7.0)(supports-color@10.2.2))(supports-color@10.2.2))
       eslint-processor-vue-blocks: 2.0.0(@vue/compiler-sfc@3.5.44)(eslint@10.14.0(jiti@2.7.0)(supports-color@10.2.2))
-      globals: 17.13.0
+      globals: 17.14.0
       local-pkg: 1.2.1
       pathe: 2.0.3
       vue-eslint-parser: 10.4.1(eslint@10.14.0(jiti@2.7.0)(supports-color@10.2.2))(supports-color@10.2.2)
@@ -14276,7 +14276,7 @@ snapshots:
       entities: 4.5.0
       eslint: 10.14.0(jiti@2.7.0)(supports-color@10.2.2)
       find-up-simple: 1.0.1
-      globals: 17.13.0
+      globals: 17.14.0
       indent-string: 5.0.0
       is-builtin-module: 5.0.0
       is-identifier: 1.1.0
@@ -14695,7 +14695,7 @@ snapshots:
 
   globals@15.15.0: {}
 
-  globals@17.13.0: {}
+  globals@17.14.0: {}
 
   globby@16.2.4:
     dependencies:
@@ -14995,7 +14995,7 @@ snapshots:
 
   jiti@2.7.0: {}
 
-  jose@6.2.14: {}
+  jose@6.2.15: {}
 
   js-tokens@10.0.0: {}
 
