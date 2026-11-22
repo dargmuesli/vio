@@ -13,7 +13,7 @@ WORKDIR /srv/app/
 RUN --mount=type=cache,id=apk-cache,target=/var/cache/apk \
     apk add --repository=https://dl-cdn.alpinelinux.org/alpine/edge/testing \
       mkcert \
-    && npm i -g corepack && corepack enable
+    && npm i -g pnpm
 
 
 #############
@@ -130,9 +130,7 @@ ENV PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1
 
 WORKDIR /srv/app/
 
-# The playwright image no longer ships corepack; `--force` overwrites the
-# yarn shims it does still ship, which collide with corepack's own stubs
-RUN npm i -g corepack --force && corepack enable \
+RUN npm i -g pnpm \
   && apt update && apt install mkcert
 
 
