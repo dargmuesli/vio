@@ -1,3 +1,9 @@
+## [23.1.10](https://github.com/dargmuesli/vio/compare/23.1.9...23.1.10) (2026-11-24)
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([f794027](https://github.com/dargmuesli/vio/commit/f7940275e6a563812446ebf1419fa5e4eb6c9e13))
+
 ## [23.1.9](https://github.com/dargmuesli/vio/compare/23.1.8...23.1.9) (2026-11-18)
 
 ### Bug Fixes
