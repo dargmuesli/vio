@@ -61,7 +61,7 @@ export const useAppLayout = () => {
   useSeoMeta({
     titleTemplate: (title) =>
       TITLE_TEMPLATE({
-        siteName: siteConfig.name,
+        siteName: siteConfig.name || '',
         title,
       }),
   })
@@ -78,7 +78,7 @@ export const useHeadDefault = (
   const description =
     toValue(input.description) || (siteConfig.description as string)
   const title = TITLE_TEMPLATE({
-    siteName: siteConfig.name,
+    siteName: siteConfig.name || '',
     title: toValue(input.title)?.toString() || undefined,
   })
 
