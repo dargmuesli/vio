@@ -4,7 +4,7 @@ import type { Ref } from 'vue'
 
 import type { ApiData, BackendError } from '../types/api'
 
-export { getHost, getRootHost, getServiceHref } from '../../node/networking'
+export { getRootHost, getServiceHref } from '../../node/networking'
 
 export const getApiDataDefault = (): ApiData =>
   computed(() =>

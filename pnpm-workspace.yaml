@@ -8,6 +8,7 @@ allowBuilds:
   unrs-resolver: false
   vue-demi: false
 minimumReleaseAgeExclude:
+  - '@nuxtjs/i18n@10.7.0'
   - '@nuxtjs/robots@7.0.0'
   - '@nuxtjs/seo@6.0.1'
   - '@nuxtjs/sitemap@9.0.1'
