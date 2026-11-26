@@ -1,3 +1,13 @@
+## [24.0.0-beta.1](https://github.com/dargmuesli/vio/compare/23.1.10...24.0.0-beta.1) (2026-11-26)
+
+### ⚠ BREAKING CHANGES
+
+* **nuxt:** enable nuxt 5 compatibility (#468)
+
+### Features
+
+* **nuxt:** enable nuxt 5 compatibility ([#468](https://github.com/dargmuesli/vio/issues/468)) ([ef268c9](https://github.com/dargmuesli/vio/commit/ef268c97664881df8d3870abdd5a8c3b00778725))
+
 ## [23.1.10](https://github.com/dargmuesli/vio/compare/23.1.9...23.1.10) (2026-11-24)
 
 ### Bug Fixes

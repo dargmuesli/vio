@@ -125,5 +125,5 @@
     "start:static": "node node/server/static.mjs"
   },
   "type": "module",
-  "version": "23.1.10"
+  "version": "24.0.0-beta.1"
 }
