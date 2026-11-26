@@ -1,9 +1,18 @@
-import type { H3Event } from 'h3'
+import {
+  getRequestHost,
+  useRuntimeConfig,
+  type RequestEvent,
+} from 'nuxt/server'
 
-export const useGetServiceHref = ({ event }: { event?: H3Event } = {}) => {
+import { getServiceHref } from '../../node/networking'
+import type { ServiceName } from '../../node/services'
+import { useSiteUrl } from './site'
+import { useIsTesting } from './testing'
+
+export const useGetServiceHref = ({ event }: { event?: RequestEvent } = {}) => {
   const host = useHost({ event })
   const runtimeConfig = useRuntimeConfig()
-  const isTesting = useIsTesting()
+  const isTesting = useIsTesting({ event })
 
   return ({
     allowInternal = true,
@@ -26,9 +35,9 @@ export const useGetServiceHref = ({ event }: { event?: H3Event } = {}) => {
     })
 }
 
-export const useHost = ({ event }: { event?: H3Event } = {}) => {
+export const useHost = ({ event }: { event?: RequestEvent } = {}) => {
   const { siteUrlTyped: siteUrl } = useSiteUrl()
-  const host = event ? getHost(event) : siteUrl.host
+  const host = event ? getRequestHost(event) : siteUrl.host
 
   if (!host) throw new Error('Host is not given!')
 
