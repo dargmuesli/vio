@@ -1,9 +1,9 @@
-# syntax=docker/dockerfile:1
+# syntax=docker/dockerfile:1@sha256:572cebbc2b15e6f84c077742952674889cb63cd5e9b80abdffcbe587b6f19183
 
 #############
 # Create base image.
 
-FROM node:24.22.1-alpine AS base-image
+FROM node:26.13.1-alpine@sha256:6bd9ab43c0ec0190ca7b2d193906cb8b7edf6e7f4afa43ddeccd6452710bffb5 AS base-image
 
 # The `CI` environment variable must be set for pnpm to run in headless mode
 ENV CI=true
@@ -13,7 +13,7 @@ WORKDIR /srv/app/
 RUN --mount=type=cache,id=apk-cache,target=/var/cache/apk \
     apk add --repository=https://dl-cdn.alpinelinux.org/alpine/edge/testing \
       mkcert \
-    && corepack enable
+    && npm i -g pnpm
 
 
 #############
@@ -122,7 +122,7 @@ RUN pnpm -r run lint
 ########################
 # Nuxt: test (e2e, base-image)
 
-FROM mcr.microsoft.com/playwright:v1.64.1 AS test-e2e-base-image
+FROM mcr.microsoft.com/playwright:v1.65.0 AS test-e2e-base-image
 
 # The `CI` environment variable must be set for pnpm to run in headless mode
 ENV CI=true
@@ -130,7 +130,7 @@ ENV PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1
 
 WORKDIR /srv/app/
 
-RUN corepack enable \
+RUN npm i -g pnpm \
   && apt update && apt install mkcert
 
 

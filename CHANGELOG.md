@@ -1,3 +1,39 @@
+## [23.1.10](https://github.com/dargmuesli/vio/compare/23.1.9...23.1.10) (2026-11-24)
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([f794027](https://github.com/dargmuesli/vio/commit/f7940275e6a563812446ebf1419fa5e4eb6c9e13))
+
+## [23.1.9](https://github.com/dargmuesli/vio/compare/23.1.8...23.1.9) (2026-11-18)
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([8f82640](https://github.com/dargmuesli/vio/commit/8f82640f4dda0f59460582329e8a6146d564dddd))
+
+## [23.1.8](https://github.com/dargmuesli/vio/compare/23.1.7...23.1.8) (2026-11-12)
+
+### Bug Fixes
+
+* schedule release ([cb65906](https://github.com/dargmuesli/vio/commit/cb6590662a0566d0097f8c8276e67008b92eb9ba))
+
+## [23.1.7](https://github.com/dargmuesli/vio/compare/23.1.6...23.1.7) (2026-11-07)
+
+### Bug Fixes
+
+* schedule release ([ae39c15](https://github.com/dargmuesli/vio/commit/ae39c1586aba71f5ac8b20e5855b88199adcd8ec))
+
+## [23.1.6](https://github.com/dargmuesli/vio/compare/23.1.5...23.1.6) (2026-10-31)
+
+### Bug Fixes
+
+* schedule release ([8ed2a15](https://github.com/dargmuesli/vio/commit/8ed2a159224d1d538ecb86b5c8e6c8055d10cefe))
+
+## [23.1.5](https://github.com/dargmuesli/vio/compare/23.1.4...23.1.5) (2026-10-22)
+
+### Bug Fixes
+
+* **sentry:** extend the dataCollection floor for GDPR ([#479](https://github.com/dargmuesli/vio/issues/479)) ([29eca62](https://github.com/dargmuesli/vio/commit/29eca6269e8ed854e65359f1a239eeb58faa144e))
+
 ## [23.1.4](https://github.com/dargmuesli/vio/compare/23.1.3...23.1.4) (2026-10-22)
 
 ### Bug Fixes
